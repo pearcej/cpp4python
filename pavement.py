@@ -40,6 +40,8 @@ if project_name == "<project_name>":
 @cmdopts([
     ('all','a','rebuild everything'),
     ('outputdir=', 'o', 'output static files here')
+    ('masterurl=', 'u', 'override the default master url'),
+    ('masterapp=', 'p', 'override the default master app')
 ])
 def build(options):
     if 'all' in options.build:
