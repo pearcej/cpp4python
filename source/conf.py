@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 #
-# Problem Solving with Algorithms and Data Structures documentation build configuration file, created by
-# sphinx-quickstart on Thu Oct 27 08:17:45 2011.
-#
 # This file is execfile()d with the current directory set to its containing dir.
 #
 # Note that not all possible configuration values are present in this
@@ -259,8 +256,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'problemsolvingwithalgorithmsanddatastructures', u'Problem Solving with Algorithms and Data Structures Documentation',
-     [u'Brad Miller, David Ranum'], 1)
+    ('index', 'javaforpythonprogrammers', u'Java for Python Programmers documentation',
+     [u'Brad Miller'], 1)
 ]
 
 # If true, show URL addresses after external links.
