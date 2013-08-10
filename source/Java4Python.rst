@@ -75,7 +75,7 @@ how objects and variables work is very consistent. Third, you can write
 powerful and interesting programs without a lot of work. However, Python
 is representative of one kind of language, called a dynamic language.
 You might think of Python as being fairly informal. There are other
-languages, Like Java and C++ that are more formal.
+languages, like Java and C++ that are more formal.
 
 These languages have some advantages of their own. First, is speed: For
 very large programs Java and C++ are going to give you the best
@@ -595,7 +595,7 @@ to find them in the next chapter.
              boolean  hasNextDouble()     returns true if the next thing to read is a double 
              Integer        nextInt()           returns the next thing to read as an integer 
                Float      nextFloat()              returns the next thing to read as a float 
-              Double        nextInt()             returns the next thing to read as a Double 
+              Double     nextDouble()             returns the next thing to read as a Double
               String           next()             returns the next thing to read as a String 
 ==================== ================ ====================================================== 
 
@@ -800,7 +800,7 @@ is a new twist to the ``ArrayList`` declaration. Unlike Python where
 lists can contain just about anything, in Java we let the compiler know
 what kind of objects our array list is going to contain. In this case
 the ``ArrayList`` will contain Integers. The syntax we use to declare
-what kind of object the list will contain is the ``<``*Type*``>``
+what kind of object the list will contain is the ``<Type>``
 syntax.
 
 Technically, you don’t *have* to declare what is going to be on an array

@@ -39,7 +39,7 @@ if project_name == "<project_name>":
 @task
 @cmdopts([
     ('all','a','rebuild everything'),
-    ('outputdir=', 'o', 'output static files here')
+    ('outputdir=', 'o', 'output static files here'),
     ('masterurl=', 'u', 'override the default master url'),
     ('masterapp=', 'p', 'override the default master app')
 ])
