@@ -9,11 +9,14 @@ from sphinxcontrib import paverutils
 sys.path.append(os.getcwd())
 
 ######## CHANGE THIS ##########
-project_name = "java4python"
+project_name = "java4pythoni"
 ###############################
-
-master_url = 'http://127.0.0.1:8000'
-master_app = 'runestone'
+try:
+    from paverconfig import master_url, master_app, minify_js
+except:
+    master_url = 'http://127.0.0.1:8000'
+    master_app = 'runestone'
+    minify_js = False
 
 options(
     sphinx = Bunch(docroot=".",),
