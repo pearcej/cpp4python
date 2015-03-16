@@ -1620,8 +1620,9 @@ Our full Fraction class to this point would look like the following. You
 may want to try to compile and run the short test program provided just
 to see what happens.
 
-::
-
+.. livecode:: fraction1
+    :language: java
+    
     public class Fraction {
 
         private Integer numerator;
@@ -2031,8 +2032,7 @@ we have discussed is as follows.
     import java.util.ArrayList;
     import java.util.Collections;
 
-
-    public class Fraction implements Comparable<Fraction> {
+    public class Fraction extends Number implements Comparable<Fraction> {
 
         private Integer numerator;
         private Integer denominator;
