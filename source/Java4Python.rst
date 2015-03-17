@@ -611,8 +611,9 @@ more of a user interface to them than reading and writing from the
 command line. Lets look at a version of our temperature control
 application that uses dialog boxes for input and output.
 
-::
-
+.. livecode:: swing
+    :language: java
+    :sourcefile: TempConvGUI.java
 
     import javax.swing.*;
 
@@ -1131,7 +1132,7 @@ simple example in both Python and Java.
 .. activecode:: pyelif
     :language: python
     
-    grade = input('enter a grade')
+    grade = int(input('enter a grade'))
     if grade < 60:
         print 'F'
     elif grade < 70:
@@ -1152,8 +1153,8 @@ In Java we have a couple of ways to write this
    public class ElseIf {
        public static void main(String args[]) {
         int grade = 85;
-    
-        if (grade < 60>) {
+
+        if (grade < 60) {
             System.out.println('F');
         } else {
             if (grade < 70) {
@@ -1167,7 +1168,10 @@ In Java we have a couple of ways to write this
                     } else {
                         System.out.println('F');
                     }
+                }
+            }
         }
+      }
     }
 
 We can get even closer to the elif statement by taking advantage of the
