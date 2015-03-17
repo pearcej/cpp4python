@@ -150,6 +150,7 @@ Now lets look at the same program written in Java:
 
 .. livecode:: hellojava
     :language: java
+    :sourcefile: Hello.java
     
     public class Hello {
 
@@ -426,6 +427,7 @@ Next, lets look at the Java Equivalent.
 
 .. livecode:: convert1
     :language: java
+    :sourcefile: TempConv.java
     :stdin: 212
 
     import java.util.Scanner;
@@ -756,6 +758,7 @@ Here is the Java code needed to write the exact same program:
 
 .. livecode:: histojava
     :language: java
+    :sourcefile: Histo.java
     :datafile: test.dat
     
     import java.util.Scanner;
@@ -934,6 +937,7 @@ program to use primitive arrays rather than array lists.
 
 .. livecode:: primarrays
     :language: java
+    :sourcefile: HistoArray.java
     :datafile: test.dat
 
     import java.util.Scanner;
@@ -1014,6 +1018,7 @@ histogram program.
 
 .. livecode:: dictjava
     :language: java
+    :sourcefile: HistoMap.java
     :datafile: alice30.txt
 
     import java.util.Scanner;
@@ -1123,8 +1128,10 @@ Java does not have an elif pattern like Python. In Java you can get the
 functionality of an elif statement by nesting if and else. Here is a
 simple example in both Python and Java.
 
-::
-
+.. activecode:: pyelif
+    :language: python
+    
+    grade = input('enter a grade')
     if grade < 60:
         print 'F'
     elif grade < 70:
@@ -1138,68 +1145,89 @@ simple example in both Python and Java.
 
 In Java we have a couple of ways to write this
 
-::
+.. livecode:: javaelif
+   :language: java
+   :sourcefile: ElseIf.java
 
-    if (grade < 60>) {
-        System.out.println('F');
-    } else {
-        if (grade < 70) {
+   public class ElseIf {
+       public static void main(String args[]) {
+        int grade = 85;
+    
+        if (grade < 60>) {
             System.out.println('F');
         } else {
-            if (grade < 80) {
+            if (grade < 70) {
                 System.out.println('F');
             } else {
-                if (grade < 90) {
+                if (grade < 80) {
                     System.out.println('F');
                 } else {
-                    System.out.println('F');
-                }
+                    if (grade < 90) {
+                        System.out.println('F');
+                    } else {
+                        System.out.println('F');
+                    }
+        }
+    }
 
 We can get even closer to the elif statement by taking advantage of the
 Java rule that a single statement does not need to be enclosed in curly
 braces. Since the if is the only statement used in each else we can get
 away with the following.
 
-::
-
-    if (grade < 60) {
-        System.out.println('F');
-    } else if (grade < 70) {
-        System.out.println('D');
-    } else if (grade < 80) {
-        System.out.println('C');
-    } else if (grade < 90) {
-        System.out.println('B');
-    } else  System.out.println('A');
+.. livecode:: javaelif2
+   :language: java
+   :sourcefile: ElseIf.java
+   
+   public class ElseIf {
+       public static void main(String args[]) {
+        int grade = 85;
+        if (grade < 60) {
+            System.out.println('F');
+        } else if (grade < 70) {
+            System.out.println('D');
+        } else if (grade < 80) {
+            System.out.println('C');
+        } else if (grade < 90) {
+            System.out.println('B');
+        } else  System.out.println('A');
+       }
+   }
 
 switch
 ------
-
-{sub:switch}
 
 Java also supports a ``switch`` statement that acts something like the
 elif statement of Python under certain conditions. To write the grade
 program using a switch statement we would use the following:
 
-::
+.. livecode:: javaswitch
+   :language: java
+   :sourcefile: SwitchUp.java
 
-    int tempgrade = grade / 10;
-    switch(tempgrade) {
-    case 10:
-    case 9:
-        System.out.println('A');
-        break;
-    case 8:
-        System.out.println('B');
-        break;
-    case 7:
-        System.out.println('C');
-        break;
-    case 6:
-        System.out.println('A');
-        break;
-    default:
-        System.out.println('F');
+   public class SwitchUp {
+       public static void main(String args[]) {
+        int grade = 85;
+
+        int tempgrade = grade / 10;
+        switch(tempgrade) {
+        case 10:
+        case 9:
+            System.out.println('A');
+            break;
+        case 8:
+            System.out.println('B');
+            break;
+        case 7:
+            System.out.println('C');
+            break;
+        case 6:
+            System.out.println('A');
+            break;
+        default:
+            System.out.println('F');
+        }
+      }
     }
 
 The ``switch`` statement is not used very often, and I recommend you do
@@ -1622,6 +1650,7 @@ to see what happens.
 
 .. livecode:: fraction1
     :language: java
+    :sourcefile: Fraction.java
     
     public class Fraction {
 
@@ -1969,6 +1998,7 @@ In Java we would write this same example using a static declaration.
 
 .. livecode:: studentclass
     :language: java
+    :sourcefile: Student.java
     
     public class Student {
             public static Integer numStudents = 0;
@@ -2028,6 +2058,7 @@ we have discussed is as follows.
 
 .. livecode:: fullfraction
     :language: java
+    :sourcefile: Fraction.java
 
     import java.util.ArrayList;
     import java.util.Collections;
@@ -2145,7 +2176,6 @@ we have discussed is as follows.
 Common Mistakes
 ===============
 
-{sec:common\_mistakes}
 
     -  **Forgetting to declare your variables.**
 
