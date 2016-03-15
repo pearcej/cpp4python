@@ -1286,7 +1286,7 @@ Loops and Iteration
 
 You have already seen a couple of examples of iteration and looping in
 Java. So this section will just serve as a reference for the differences
-in Snytax.
+in Syntax.
 
 Definite Loop
 -------------
