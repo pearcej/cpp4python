@@ -2,62 +2,77 @@ import paver
 from paver.easy import *
 import paver.setuputils
 paver.setuputils.install_distutils_tasks()
-import os, sys
+from os import environ, getcwd
+import os.path
+import sys
+from socket import gethostname
+import pkg_resources
 
-from sphinxcontrib import paverutils
+sys.path.append(getcwd())
+sys.path.append('../modules')
 
-sys.path.append(os.getcwd())
+updateProgressTables = True
+try:
+    from runestone.server.chapternames import populateChapterInfob
+except ImportError:
+    updateProgressTables = False
+
 
 ######## CHANGE THIS ##########
-project_name = "java4pythoni"
+project_name = "java4python"
 ###############################
-try:
-    from paverconfig import master_url, master_app, minify_js
-except:
-    master_url = 'http://127.0.0.1:8000'
-    master_app = 'runestone'
-    minify_js = False
+
+master_url = None
+doctrees = None
+if master_url is None:
+    if gethostname() in ['web608.webfaction.com', 'rsbuilder']:
+        master_url = 'http://interactivepython.org'
+        if os.path.exists('../../custom_courses/{}'.format(project_name)):
+            doctrees = '../../custom_courses/{}/doctrees'.format(project_name)
+        else:
+            doctrees = './build/{}/doctrees'.format(project_name)
+    else:
+        master_url = 'http://127.0.0.1:8000'
+        doctrees = './build/{}/doctrees'.format(project_name)
+
+master_app = 'runestone'
+serving_dir = "./build/java4python"
+dest = "../../static"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="source",
-        sourcedir="source",
-        outdir="../static/"+project_name,
-        confdir="source",
-        template_args={'course_id':project_name,
-                       'login_required':'false',
-                       'appname':master_app,
-                       'loglevel':10,
-                       'course_url':master_url }
+        builddir="./build/"+project_name,
+        sourcedir="./_sources/",
+        outdir="./build/"+project_name,
+        confdir=".",
+        project_name = project_name,
+        doctrees = doctrees,
+        template_args = {
+            'course_id':project_name,
+            'login_required':'false',
+            'appname':master_app,
+            'loglevel':10,
+            'course_url':master_url,
+            'use_services': 'true',
+            'python3': 'true',
+            'dburl': 'postgresql://bmiller@localhost/runestone',
+            'basecourse': 'java4python',
+        }
+
     )
 )
 
 if project_name == "<project_name>":
-  print "Please edit pavement.py and give your project a name"
+  print("Please edit pavement.py and give your project a name")
   exit()
 
+version = pkg_resources.require("runestone")[0].version
+options.build.template_args['runestone_version'] = version
 
-@task
-@cmdopts([
-    ('all','a','rebuild everything'),
-    ('outputdir=', 'o', 'output static files here'),
-    ('masterurl=', 'u', 'override the default master url'),
-    ('masterapp=', 'p', 'override the default master app')
-])
-def build(options):
-    if 'all' in options.build:
-      options['force_all'] = True
-      options['freshenv'] = True
+if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBNAME' in environ:
+    options.build.template_args['dburl'] = 'postgresql://{DBUSER}:{DBPASS}@{DBHOST}/{DBNAME}'.format(**environ)
 
-    bi = sh('git describe --long',capture=True)[:-1]
-    bi = bi.split('-')[0]
-    options.build.template_args["build_info"] = bi
-
-    if 'outputdir' in options.build:
-        options.build.outdir = options.build.outputdir
-    print 'Building into ', options.build.outdir
-    paverutils.run_sphinx(options,'build')
-
-
+from runestone import build
+# build is called implicitly by the paver driver.

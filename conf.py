@@ -9,6 +9,7 @@
 # serve to show the default.
 
 import sys, os
+from runestone import runestone_static_dirs, runestone_extensions
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -23,7 +24,9 @@ sys.path.insert(0, os.path.abspath('../../modules'))
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 
-extensions = ['sphinx.ext.mathjax','luther.sphinx.disqus','luther.sphinx.reveal','luther.sphinx.poll','luther.sphinx.video','luther.sphinx.codelens','luther.sphinx.activecode','luther.sphinx.tabbedStuff', 'luther.sphinx.assess', 'luther.sphinx.animation','luther.sphinx.meta', 'gatech.parsons', 'luther.sphinx.datafile', 'luther.sphinx.livecode']
+extensions = ['sphinx.ext.mathjax'] + runestone_extensions()
+
+templates_path = ['./_sources/_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -136,7 +139,7 @@ html_theme_options = {
 #html_style = "style.css"
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["_templates/plugin_layouts"]
+html_theme_path = ["./_sources/_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
