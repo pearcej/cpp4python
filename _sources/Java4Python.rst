@@ -148,7 +148,7 @@ Now lets look at the same program written in Java:
 .. highlight:: java
    :linenothreshold: 4
 
-.. livecode:: hellojava
+.. activecode:: hellojava
     :language: java
     :sourcefile: Hello.java
     
@@ -425,7 +425,7 @@ temperature to Celsius.
 
 Next, lets look at the Java Equivalent.
 
-.. livecode:: convert1
+.. activecode:: convert1
     :language: java
     :sourcefile: TempConv.java
     :stdin: 212
@@ -611,7 +611,7 @@ more of a user interface to them than reading and writing from the
 command line. Lets look at a version of our temperature control
 application that uses dialog boxes for input and output.
 
-.. livecode:: swing
+.. activecode:: swing
     :language: java
     :sourcefile: TempConvGUI.java
 
@@ -757,7 +757,7 @@ for
 
 Here is the Java code needed to write the exact same program:
 
-.. livecode:: histojava
+.. activecode:: histojava
     :language: java
     :sourcefile: Histo.java
     :datafile: test.dat
@@ -936,7 +936,7 @@ of something called arrays. In fact you have already seen one example of
 an array declared in the ‘Hello World’ program. Lets rewrite this
 program to use primitive arrays rather than array lists.
 
-.. livecode:: primarrays
+.. activecode:: primarrays
     :language: java
     :sourcefile: HistoArray.java
     :datafile: test.dat
@@ -1034,7 +1034,7 @@ for this job could look like this:
 Notice that the structure of the program is very similar to the numeric
 histogram program.
 
-.. livecode:: dictjava
+.. activecode:: dictjava
     :language: java
     :sourcefile: HistoMap.java
     :datafile: alice30.txt
@@ -1166,7 +1166,7 @@ simple example in both Python and Java.
 
 In Java we have a couple of ways to write this
 
-.. livecode:: javaelif
+.. activecode:: javaelif
    :language: java
    :sourcefile: ElseIf.java
 
@@ -1199,7 +1199,7 @@ Java rule that a single statement does not need to be enclosed in curly
 braces. Since the if is the only statement used in each else we can get
 away with the following.
 
-.. livecode:: javaelif2
+.. activecode:: javaelif2
    :language: java
    :sourcefile: ElseIf.java
    
@@ -1225,7 +1225,7 @@ Java also supports a ``switch`` statement that acts something like the
 elif statement of Python under certain conditions. To write the grade
 program using a switch statement we would use the following:
 
-.. livecode:: javaswitch
+.. activecode:: javaswitch
    :language: java
    :sourcefile: SwitchUp.java
 
@@ -1672,7 +1672,7 @@ Our full Fraction class to this point would look like the following. You
 may want to try to compile and run the short test program provided just
 to see what happens.
 
-.. livecode:: fraction1
+.. activecode:: fraction1
     :language: java
     :sourcefile: Fraction.java
     
@@ -2020,7 +2020,7 @@ this as follows:
 
 In Java we would write this same example using a static declaration.
 
-.. livecode:: studentclass
+.. activecode:: studentclass
     :language: java
     :sourcefile: Student.java
     
@@ -2080,7 +2080,7 @@ Full Implementation of the Fraction Class
 A final version of the Fraction class that exercises all of the features
 we have discussed is as follows.
 
-.. livecode:: fullfraction
+.. activecode:: fullfraction
     :language: java
     :sourcefile: Fraction.java
 
