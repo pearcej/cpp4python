@@ -164,8 +164,7 @@ html_short_title ='Java for Python Programmers'
 module_paths = [x.replace('.','/') for x in extensions]
 module_static_js = ['../../modules/%s/js' % x for x in module_paths if os.path.exists('../../modules/%s/js' % x)]
 module_static_css = ['../../modules/%s/css' % x for x in module_paths if os.path.exists('../../modules/%s/css' % x)]
-html_static_path = ['./_static', '../../common/js', '../../common/css',
-                     '../../common/bootstrap', '../../common/images'] + module_static_css + module_static_js
+html_static_path = ['./_sources/_static']  + runestone_static_dirs()
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
