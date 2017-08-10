@@ -2,3 +2,4 @@ build/*
 .idea/*
 *.pyc
 source/doctrees/*
+*~
