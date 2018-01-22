@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. toc_version: 2
+
 Welcome to Java for Python Programmers
 ======================================
 
@@ -11,7 +13,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   Java4Python.rst
+   Java4Python/toctree.rst
 
 
 Indices and tables
@@ -20,4 +22,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
