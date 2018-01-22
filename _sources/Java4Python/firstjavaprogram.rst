@@ -10,7 +10,7 @@ version of hello world for Python:
 ::
 
     def main():
-        print "Hello World!"
+        print("Hello World!")
 
 Remember that we can define this program right at the Python command
 line and then run it:
@@ -239,7 +239,7 @@ something like the following class definition.
     class Hello(object):
         @staticmethod
         def main(args):
-            print "Hello World!"
+            print("Hello World!")
 
 Notice that we used the decorator ``@staticmethod`` to tell the Python
 interpreter that ``main`` is going to be a static method. The impact of

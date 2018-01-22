@@ -14,7 +14,7 @@ in conjunction with the range function. For example:
 ::
 
     for i in range(10):
-       print i
+       print(i)
 
 In Java we would write this as:
 
@@ -51,7 +51,7 @@ Python loop would be written as:
 ::
 
     for i in range(100,-1,-5):
-        print i
+        print(i)
 
 In Java we would write this as:
 
@@ -71,7 +71,7 @@ In Python we can iterate over a list as follows:
 
     l = [1, 1, 2, 3, 5, 8, 13, 21]
     for fib in l:
-       print fib
+       print(fib)
 
 In Java we can iterate over an ArrayList of integers too:
 

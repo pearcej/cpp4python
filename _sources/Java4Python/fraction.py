@@ -15,7 +15,7 @@ class Fraction:
             return str(self.num)+"/"+str(self.den)
 
     def show(self):
-        print self.num,"/",self.den
+        print(self.num,"/",self.den)
 
     def __add__(self,otherfraction):
         # convert to a fraction
@@ -63,7 +63,7 @@ class Fraction:
         elif isinstance(n,Fraction):
             otherfraction = n
         else:
-            print "Error: cannot add a fraction to a ", type(n)
+            print("Error: cannot add a fraction to a ", type(n))
             return None
         return otherfraction
 

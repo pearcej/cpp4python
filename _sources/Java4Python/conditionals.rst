@@ -69,15 +69,15 @@ simple example in both Python and Java.
 
     grade = int(input('enter a grade'))
     if grade < 60:
-        print 'F'
+        print('F')
     elif grade < 70:
-        print 'D'
+        print('D')
     elif grade < 80:
-        print 'C'
+        print('C')
     elif grade < 90:
-        print 'B'
+        print('B')
     else:
-        print 'A'
+        print('A')
 
 In Java we have a couple of ways to write this
 
@@ -176,7 +176,7 @@ integer or enumerated constant. Second it is very easy to forget to put
 in the ``break`` statement. If the break statement is left out then then
 the next alternative will be automatically executed. For example if the
 grade was 95 and the ``break`` was omitted from the ``case 9:``
-alternative then the program would print out both A and B.
+alternative then the program would print(out both A and B.)
 
 Boolean Operators
 -----------------

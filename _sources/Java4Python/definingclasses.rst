@@ -588,7 +588,7 @@ this as follows:
     def main():
         for i in range(10):
             s = Student(i,"Student-"+str(i))
-        print 'The number of students is: ', Student.numStudents
+        print('The number of students is: ', Student.numStudents)
 
     main()
 

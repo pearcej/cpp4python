@@ -42,7 +42,7 @@ temperature to Celsius.
     def main():
         fahr = int(input("Enter the temperature in F: "))
         cel = (fahr - 32) * 5.0/9.0
-        print "the temperature in C is: ", cel
+        print("the temperature in C is: ", cel)
 
     main()
 
@@ -329,7 +329,7 @@ and prints a histogram.
 
         idx = 0
         for num in count:
-            print idx, " occured ", num, " times."
+            print(idx, " occured ", num, " times.")
             idx += 1
 
 Now if we run this program on a data file that looks like this:
@@ -632,7 +632,7 @@ for this job could look like this:
 
        keyList = sorted(count.keys())
        for k in keyList:
-           print "%-20s occurred %4d times"%(k, count[k])
+           print("%-20s occurred %4d times" % (k, count[k]))
 
    main()
 
