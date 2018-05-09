@@ -41,8 +41,7 @@ Why Learn C++? Why not Java or Javascript?
 
     - C++ introduced object-oriented programming. Among other things, C++ supports the four primary features of OOP: abstraction, inheritance, polymorphism and encapsulation.
 
-    - C++ is industrial strength used for large systems by large
-       groups of people
+    - C++ is industrial strength used for large systems by large groups of people.
 
     - C++ is better in interacting directly with the hardware.
 
