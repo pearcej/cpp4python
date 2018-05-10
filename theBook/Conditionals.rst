@@ -80,7 +80,8 @@ simple example in both Python and C++.
         print('A')
 
 In C++ we have a couple of ways to write this
-.. activecode:: C++ elif
+
+.. activecode:: C++elif
    :language: C++
    :sourcefile: ElseIf.cpp
 
@@ -118,7 +119,7 @@ away with the following.
 
 .. activecode:: C++elif2
    :language: C++
-   :sourcefile: ElseIf.Cpp
+   :sourcefile: ElseIf.cpp
 
     #include <iostream>
     using namespace std;
@@ -148,7 +149,7 @@ program using a switch statement we would use the following:
 
 .. activecode:: C++switch
    :language: C++
-   :sourcefile: SwitchUp.C++
+   :sourcefile: SwitchUp.cpp
 
     #include <iostream>
     using namespace std;
