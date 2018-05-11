@@ -13,6 +13,10 @@ that are available. Please feel free to use this book for
 yourself, or if it fits a class you are teaching you are welcome to use
 this as a resource for your own class.
 
+This book was originally written by Dr. Brad MIller as *Java for Python 
+Programmers*. It was translated to the C++ language by Dr. Jan Pearce and 
+a team of excellent students from Berea College.
+
 We have published this little book using a Creative Commons license to
 encourage you to use it, change it, and modify it for your own purposes.
 We would appreciate knowing what you think if you do use this book, and we
