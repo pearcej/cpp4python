@@ -4,7 +4,7 @@ semesters of Python learn the C++ programming language. If you are not
 a part of that audience you may still find this a useful way to learn
 about C++. This book is written using the build on what you know
 philosophy. In order to help you learn C++ we will start with a Python
-example and then implement the example in Java. Along the way we will
+example and then implement the example in C++. Along the way we will
 examine the strengths, weaknesses and differences between those two
 languages.
 
