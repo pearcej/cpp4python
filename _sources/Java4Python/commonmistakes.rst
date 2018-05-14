@@ -1,54 +1,186 @@
 Common Mistakes
 ===============
 
+We will be using the following code for illustration:
 
-    -  **Forgetting to declare your variables.**
 
-       ::
+::
 
-           Histo.java:21: cannot find symbol
-           symbol  : variable count
-           location: class Histo
-                   count = new ArrayList<Integer>(10);
-                   ^
+     #include <iostream>
+     using namespace std;
 
-    -  **Not importing a class**:
+     class calculations {
 
-       ::
+         public:
+           int calculate(int first, int second){
+             return (first * second);
+             }
+      };
 
-            Histo.java:9: cannot find symbol
-            symbol  : class Scanner
-            location: class Histo
-                    Scanner data = null;
-                    ^
+     int main() {
+       int first;
+       int second;
+       calculations x;
 
-    -  **Forgetting to use the new keyword to create an object.** Here’s
-       an example of the error message that occurs when you forget to
-       use the new keyword. Notice that the message is pretty unhelpful.
-       Java *thinks* you are trying to call the Method Scanner, but
-       there are two problems. First Scanner is not really a method it
-       is a constructor.:
+       cout << "Enter your numbers: " << endl;
+       cin >> first >> second;
 
-       ::
+       cout << "The product is: " << x.calculate(first, second) << endl;
+       return 0;
+     }
 
-            Histo.java:14: cannot find symbol
-            symbol  : method Scanner(java.io.File)
-            location: class Histo
-                            data = Scanner(new File("test.dat"));
-                                   ^
 
-    -  **Forgetting a Semicolon**:
 
-       ::
 
-           Histo.java:19:
-           ';' expected
-                       System.exit(0);
-                       ^
+  - **Forgetting to declare your variables.**
 
-    -  Forgetting to declare the kind of object in a container.:
+      ###### calculate(first, second)
 
-       ::
+      Error: 'first' has not been declared
+        calculate(first, second)
+                  ^
 
-             Note: Histo.java uses unchecked or unsafe operations. Note:
-             Recompile with -Xlint:unchecked for details.
+      Error: 'second' has not been declared
+        calculate(first, second)
+                         ^
+
+      Error: calculate has not been declared
+        calculate(first, second)
+        ^
+
+::
+
+    #include <iostream>
+    using namespace std;
+
+     class calculations {
+       public:
+        calculate(first, second){
+         return (first * second);
+         }
+      };
+    int main() {
+     int first;
+     int second;
+     calculations x;
+
+     cout << "Enter your numbers: " << endl;
+     cin >> first >> second;
+
+     cout << "The product is: " << x.calculate(first, second) << endl;
+     return 0;
+    }
+
+  -  **Not importing a class**:
+
+Here the class has been moved to a different file and forgetting to add the following include statement:
+
+    #include "classfile.cpp"
+
+  will result in the following errors.
+
+
+  Error: calculations was not declared in this scope
+
+    calculations x;
+    ^
+
+  Error: expected ';' before 'x'
+
+    calculations x;
+                 ^
+
+  Error: ‘x’ was not declared in this scope
+
+    cout << "The product is: " << x.calculate(first, second) << endl;
+                                        ^
+::
+
+
+     #include <iostream>
+     using namespace std;
+
+     int main() {
+         int first;
+         int second;
+         calculations x;
+         // int calculate();
+
+         cout << "Enter your numbers: " << endl;
+         cin >> first >> second;
+
+         cout << "The product is: " << x.calculate(first, second) << endl;
+       return 0;
+     }
+
+  -  **Forgetting to use the correct arrows for iostream:**
+
+ Here’s
+ an example of the error message that occurs when you forget to
+ use the appropriate arrows for inputting a value into the istream:
+
+           Error: no match for ‘operator<<’ (operand types are ‘std::istream {aka std::basic_istream<char>}’ and ‘int’)
+                 cin << first << second;
+
+     The following code shows the error occurring where the wrong set of arrows used for inputting values into stream.
+
+         #include <iostream>
+         using namespace std;
+
+         class calculations {
+
+             public:
+               int calculate(int first, int second){
+               return (first * second);
+               }
+           };
+
+         int main() {
+         int first;
+         int second;
+         calculations x;
+
+         cout << "Enter your numbers: " << endl;
+         cin << first << second;
+
+         cout << "The product is: " << x.calculate(first, second) << endl;
+         return 0;
+         }
+
+
+  -  **Forgetting a Semicolon**:
+
+
+  This is the type of error you get when you forget to add a semicolon to the
+  end of a line.
+
+  Error: expected ‘;’ before ‘cout’
+
+    cout << "The product is: " << x.calculate(first, second) << endl;
+    ^
+
+
+  ::
+
+         #include <iostream>
+         using namespace std;
+
+         class calculations {
+
+             public:
+               int calculate(int first, int second){
+                 return (first * second);
+                 }
+          };
+
+         int main() {
+           int first;
+           int second;
+           calculations x;
+
+           cout << "Enter your numbers: " << endl;
+           cin >> first >> second
+
+           cout << "The product is: " << x.calculate(first, second) << endl;
+           return 0;
+         }
