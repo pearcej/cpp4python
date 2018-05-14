@@ -269,16 +269,12 @@ common Python string operations to their Java counterparts. For the
 examples shown in the table we will use a string variable called “str”
 
 ========================== ======================== =============================================================
-                    Python                     Java                                                   Description
+                    Python                     C++                                                   Description
 ========================== ======================== =============================================================
-                ``str[3]``        ``str.charAt(3)``                             Return character in 3rd  position
-              ``str[2:4]``   ``str.substring(2,4)``         Return substring from 2nd up to but not including 4th
+                ``str[3]``               ``str[3]``                             Return character in 3rd  position
               ``len(str)``         ``str.length()``                               Return the length of the string
-         ``str.find('x')``     ``str.indexOf('x')``                                Find the first occurrence of x
-           ``str.split()``      ``str.split('\s')``   Split the string on whitespace into a list/array of strings
-        ``str.split(',')``       ``str.split(',')``      Split the string at ``','`` into a list/array of strings
-             ``str + str``      ``str.concat(str)``                              Concatenate two strings together
-           ``str.strip()``           ``str.trim()``                 Remove any whitespace at the beginning or end
+         ``str.find('x')``        ``str.find('x')``                                Find the first occurrence of x
+             ``str + str``            ``str + str``                              Concatenate two strings together
 ========================== ======================== =============================================================
 
 List
