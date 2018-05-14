@@ -61,6 +61,8 @@ at them in the following order:
 
 -  Input/Output
 
+**Needs rewrite**
+
 Import
 ~~~~~~
 
@@ -114,25 +116,24 @@ Declaring Variables
 ~~~~~~~~~~~~~~~~~~~
 
 Here is where we run into one of the most important differences between
-Java and Python. Python is a **dynamically typed** language. In a
+C++ and Python. Python is a **dynamically typed** language. In a
 dynamically typed language a variable can refer to any kind of object at
 any time. When the variable is used, the interpreter figures out what
-kind of object it is. Java is a **statically typed** language. In a
+kind of object it is. C++ is a **statically typed** language. In a
 statically typed language the association between a variable and the
 type of object the variable can refer to is determined when the variable
 is **declared**. Once the declaration is made it is an error for a
 variable to refer to an object of any other type.
 
-In the example above, lines 5—7 contain variable declarations.
+In the example above, lines 5—6 contain variable declarations.
 Specifically we are saying that ``fahr`` and ``cel`` are going to
-reference objects that are of type ``Double``. The variable ``in`` will
-reference a Scanner object. This means that if we were to try an
+reference objects that are of type ``double``. This means that if we were to try an
 assignment like ``fahr = "xyz"`` the compiler would generate an error
 because ``"xyz"`` is a string and ``fahr`` is supposed to be a double.
 
 For Python programmers the following error is likely to be even more
 common. Suppose we forgot the declaration for ``cel`` and instead left
-line 6 blank. What would happen when we type ``javac TempConv.java`` on
+line 6 blank. What would happen when we type ``gcc tempConv.cpp`` on
 the command line?
 
 ::
@@ -151,11 +152,12 @@ difference here is that we see the message before we ever try to test
 our program. More common error messages are discussed in the section
 [sec:common\_mistakes] {Common Mistakes}.
 
-The general rule in Java is that you must decide what kind of an object
+The general rule in C++ is that you must decide what kind of a data type
 your variable is going to reference and then you must declare that
 variable before you use it. There is much more to say about the static
-typing of Java but for now this is enough.
+typing of C++ but for now this is enough.
 
+**Needs Editing**
 Input / Output / Scanner
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -354,43 +356,41 @@ Here is the Java code needed to write the exact same program:
     :sourcefile: Histo.java
     :datafile: test.dat
 
-    import java.util.Scanner;
-    import java.util.ArrayList;
-    import java.io.File;
-    import java.io.IOException;
+    using namespace std;
+    #include <iostream>
+    #include <fstream>
+    #include <string>
 
-    public class Histo {
+    int main() {
+      string line;
+      ifstream myfile("input.txt");
+      int idx;
 
-        public static void main(String[] args) {
-            Scanner data = null;
-            ArrayList<Integer> count;
-            Integer idx;
+      int count[10];
+      for (int i=0;i<10;i++) {
+        count[i]=0;
+      }
 
-            try {
-                    data = new Scanner(new File("test.dat"));
-            }
-            catch ( IOException e) {
-                System.out.println("Sorry but I was unable to open your data file");
-                e.printStackTrace();
-                System.exit(0);
-            }
-
-            count = new ArrayList<Integer>(10);
-            for (Integer i =0; i<10;i++) {
-                count.add(i,0);
-            }
-
-            while(data.hasNextInt()) {
-                idx = data.nextInt();
-                count.set(idx,count.get(idx)+1);
-            }
-
-            idx = 0;
-            for(Integer i : count) {
-                System.out.println(idx + " occured " + i + " times.");
-                idx++;
-            }
+      if (myfile.is_open())
+      {
+        while(getline(myfile, line)) {
+          idx=stoi(line);
+          count[idx]++;
         }
+
+        myfile.close();
+      } else {
+        cout<<"Sorry but I was unable to open your data file"<<endl;
+      }
+
+      idx=0;
+      for (int i:count) {
+        cout<<idx<<" occurred "<<i<<" times."<<endl;
+        idx++;
+      }
+
+
+      return 0;
     }
 
 
@@ -533,38 +533,32 @@ program to use primitive arrays rather than array lists.
     :sourcefile: HistoArray.java
     :datafile: test.dat
 
-    import java.util.Scanner;
-    import java.io.File;
-    import java.io.IOException;
+    using namespace std;
+    #include <fstream>
+    #include <iostream>
+    #include <string>
 
-    public class HistoArray {
-        public static void main(String[] args) {
-            Scanner data = null;
-            Integer[] count = {0,0,0,0,0,0,0,0,0,0};
-            Integer idx;
+    int main() {
+    	int count[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    	int idx;
+    	ifstream data("input.txt");
+    	string line;
 
+    	if (data.is_open()) {
+    		while (getline(data, line)) {
+    			idx = stoi(line);
+    			count[idx]++;
+    		}
+    		data.close();
+    	} else {
+    		cout << "Sorry but I was unable to open your data file" << endl;
+    	}
 
-
-            try {
-                    data = new Scanner(new File("test.dat"));
-            }
-            catch ( IOException e) {
-                System.out.println("Sorry but I was unable to open your data file");
-                e.printStackTrace();
-                System.exit(0);
-            }
-
-            while(data.hasNextInt()) {
-                idx = data.nextInt();
-                count[idx] = count[idx] + 1;
-            }
-
-            idx = 0;
-            for(Integer i : count) {
-                System.out.println(idx + " occured " + i + " times.");
-                idx++;
-            }
-        }
+    	idx = 0;
+    	for (int i : count) {
+    		cout << idx << " occurred " << i << " times." << endl;
+    		idx++;
+    	}
     }
 
 The main difference between this example and the previous example is
