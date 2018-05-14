@@ -18,4 +18,4 @@ In general the Devdocs page contains information about:
 
 -  A library and some examples about Input/Output.
 
--  A library and some examples about Algorithms.
+-  A library and some examples about Classes.
