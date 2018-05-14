@@ -2,7 +2,7 @@ Loops and Iteration
 ===================
 
 You have already seen a couple of examples of iteration and looping in
-C++. So this section will just serve as a reference for the differences
+C++. This section will just serve as a reference for the differences
 in Syntax.
 
 Definite Loop
