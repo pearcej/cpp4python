@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 Naming Conventions
 ==================
-=======
-# Naming Conventions
->>>>>>> abe8e6dd8ed2eb7343186b9d00be35f20a2d734b
+
+{sec:naming\_conventions}
 
 C++ has some very handy naming conventions. It is worth noting that these conventions may not be required and the codes would still be functional but the main goal for the conventions is to standardize the coding in order for other programmers to understand it better.
 
