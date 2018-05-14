@@ -73,26 +73,22 @@ We will be using the following code for illustration:
 
   -  **Not importing a class**:
 
-Here the class has been moved to a different file and forgetting to add the following include statement:
+  Here the class has been moved to a different file and forgetting to add the following include statement:
 
-    #include "classfile.cpp"
+          #include "classfile.cpp"
 
   will result in the following errors.
 
+        Error: calculations was not declared in this scope
+            calculations x;
+            ^
 
-  Error: calculations was not declared in this scope
+        Error: expected ';' before 'x'
+          calculations x;
+                       ^
 
-    calculations x;
-    ^
-
-  Error: expected ';' before 'x'
-
-    calculations x;
-                 ^
-
-  Error: ‘x’ was not declared in this scope
-
-    cout << "The product is: " << x.calculate(first, second) << endl;
+        Error: ‘x’ was not declared in this scope
+          cout << "The product is: " << x.calculate(first, second) << endl;
                                         ^
 ::
 
@@ -150,14 +146,12 @@ Here the class has been moved to a different file and forgetting to add the foll
 
   -  **Forgetting a Semicolon**:
 
-
   This is the type of error you get when you forget to add a semicolon to the
-  end of a line.
+      end of a line.
 
   Error: expected ‘;’ before ‘cout’
-
-    cout << "The product is: " << x.calculate(first, second) << endl;
-    ^
+          cout << "The product is: " << x.calculate(first, second) << endl;
+          ^
 
 
   ::
