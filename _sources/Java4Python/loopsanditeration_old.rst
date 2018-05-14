@@ -2,7 +2,7 @@ Loops and Iteration
 ===================
 
 You have already seen a couple of examples of iteration and looping in
-C++. So this section will just serve as a reference for the differences
+Java. So this section will just serve as a reference for the differences
 in Syntax.
 
 Definite Loop
@@ -16,12 +16,12 @@ in conjunction with the range function. For example:
     for i in range(10):
        print(i)
 
-In C++ we would write this as:
+In Java we would write this as:
 
 ::
 
-    for (int i = 0; i < 10; i++ ) {
-        cout << i <<endl;
+    for (Integer i = 0; i < 10; i++ ) {
+        System.out.println(i);
     }
 
 Recall that the ``range`` function provides you with a wide variety of
@@ -33,7 +33,7 @@ options for controlling the value of the loop variable.
     range(start,stop)
     range(start,stop,step)
 
-The C++ for loop is really analogous to the last option giving you
+The Java for loop is really analogous to the last option giving you
 explicit control over the starting, stopping, and stepping in the three
 clauses inside the parenthesis. You can think of it this way:
 
@@ -53,15 +53,15 @@ Python loop would be written as:
     for i in range(100,-1,-5):
         print(i)
 
-In C++ we would write this as:
+In Java we would write this as:
 
 ::
 
-    for (int i = 100; i >= 0; i -= 5)
-        cout << i << endl;
+    for (Integer i = 100; i >= 0; i -= 5)
+        System.out.println(i);
 
 In Python the for loop can also iterate over any sequence such as a
-list, a string, or a tuple. C++ also provides a variation of its for
+list, a string, or a tuple. Java also provides a variation of its for
 loop that provides the same functionality in its so called ``for each``
 loop.
 
@@ -73,37 +73,40 @@ In Python we can iterate over a list as follows:
     for fib in l:
        print(fib)
 
-In C++ we can iterate over a list of integers too:
+In Java we can iterate over an ArrayList of integers too:
 
 ::
 
-    int l[] = {1, 1, 2, 3};
-    for (int i : l){
-        cout << i << endl;
+    ArrayList<Integer> l = new ArrayList<Integer>();
+    l.add(1); l.add(1); l.add(2); l.add(3);
+    for (Integer i : l) {
+        System.out.println(i)
     }
 
-To iterate over the characters in a string in C++ do the following:
+This example stretches the imagination a bit, and in fact points out one
+area where Java’ s primitive arrays are easier to use than an array
+list. In fact all primitive arrays can be used in a ``for each`` loop.
 
 ::
 
-    #include <iostream>
-    #include <string>  // You need to include string from the standard library
-    using namespace std;
+    int l[] = {1,1,2,3,5,8,13,21};
+    for(int i : l) {
+        System.out.println(i);
+    }
 
-    int main() {
+To iterate over the characters in a string in Java do the following:
 
-      string t = "Hello World";
-      for (char c : t) {
-          cout << c << endl;
-      }
+::
 
-      return 0;
+    String t = "Hello World";
+    for (char c : t.toCharArray()) {
+        System.out.println(c);
     }
 
 Indefinite Loops
 ----------------
 
-Both Python and C++ support the while loop. Recall that in Python the
+Both Python and Java support the while loop. Recall that in Python the
 while loop is written as:
 
 ::
@@ -113,7 +116,7 @@ while loop is written as:
        statement2
        ...
 
-In C++ we add parenthesis and curly braces to get:
+In Java we add parenthesis and curly braces to get:
 
 ::
 
@@ -123,7 +126,7 @@ In C++ we add parenthesis and curly braces to get:
         ...
     }
 
-C++ adds an additional, if seldom used variation of the while loop
+Java adds an additional, if seldom used variation of the while loop
 called the do loop. The do loop is very similar to while except that the
 condition is evaluated at the end of the loop rather than the beginning.
 This ensures that a loop will be executed at least one time. Some
