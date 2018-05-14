@@ -32,24 +32,24 @@ Next, lets look at the C++ Equivalent.
     :sourcefile: tempConv.cpp
     :stdin: 212
 
-    import java.util.Scanner;
+    #include <iostream>
+    using namespace std;
 
-    public class TempConv {
-        public static void main(String[] args) {
-            Double fahr;
-            Double cel;
-            Scanner in;
+    void TempConv() {
+      double fahr;
+      double cel;
 
-            in = new Scanner(System.in);
-            System.out.println("Enter the temperature in F: ");
-            fahr = in.nextDouble();
+      cout<<"Enter the temperature in F: ";
+      cin>>fahr;
 
-            cel = (fahr - 32) * 5.0/9.0;
-            System.out.println("The temperature in C is: " + cel);
+      cel = (fahr - 32) * 5.0/9.0;
+      cout<<"The temperature in C is: "<<cel<<endl;
+    }
 
-            System.exit(0);
-        }
+    int main() {
+      TempConv();
 
+      return 0;
     }
 
 There are several new concepts introduced in this example. We will look
@@ -59,12 +59,12 @@ at them in the following order:
 
 -  Variable Declaration
 
--  Input/Output and the Scanner Class
+-  Input/Output
 
 Import
 ~~~~~~
 
-In Java you can use any class that is available without having to import
+In C++ you can use any class that is available without having to import
 the class subject to two very important conditions:
 
 1. The javac and java must know that the class exists.
@@ -137,17 +137,11 @@ the command line?
 
 ::
 
-    TempConv.java:13: cannot find symbol
-    symbol  : variable cel
-    location: class TempConv
-             cel = (fahr - 32) * 5.0/9.0;
-             ^
-    TempConv.java:14: cannot find symbol
-    symbol  : variable cel
-    location: class TempConv
-             System.out.println("The temperature in C is: " + cel);
-                                                              ^
-    2 errors
+    exit status 1
+    main.cpp: In function 'void TempConv()':
+    main.cpp:11:3: error: 'cel' was not declared in this scope
+    cel = (fahr - 32) * 5.0/9.0;
+    ^~~
 
 When you see the first kind of error, where the symbol is on the left
 side of the equals sign it usually means that you have not declared the
