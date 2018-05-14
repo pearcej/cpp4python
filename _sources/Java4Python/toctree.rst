@@ -1,16 +1,18 @@
-Java for Python Programmers
+C++ for Python Programmers
 :::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Java for Python Programmers
+   :caption: C++ for Python Programmers
    :maxdepth: 2
 
    preface
    introduction
+   whylearncpp
    whylearnjava
    firstjavaprogram
    javadatatypes
    conditionals
+   conditionals_old
    loopsanditeration
    definingclasses
    namingconventions

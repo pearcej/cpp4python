@@ -81,9 +81,9 @@ simple example in both Python and C++.
 
 In C++ we have a couple of ways to write this
 
-.. activecode:: cppelif
-   :language: cpp
-   :sourcefile: elseif.cpp
+.. activecode:: C++elif
+   :language: C++
+   :sourcefile: ElseIf.cpp
 
     #include <iostream>
     using namespace std;
@@ -117,9 +117,9 @@ C++ rule that a single statement does not need to be enclosed in curly
 braces. Since the if is the only statement used in each else we can get
 away with the following.
 
-.. activecode:: cppelif2
-   :language: cpp
-   :sourcefile: elseif2.cpp
+.. activecode:: C++elif2
+   :language: C++
+   :sourcefile: ElseIf.cpp
 
     #include <iostream>
     using namespace std;
@@ -147,9 +147,9 @@ C++ also supports a ``switch`` statement that acts something like the
 elif statement of Python under certain conditions because the statement takes cases and checks the validity of the case against the code. To write the grade
 program using a switch statement we would use the following:
 
-.. activecode:: cppswitch
-   :language: cpp
-   :sourcefile: switchup.cpp
+.. activecode:: C++switch
+   :language: C++
+   :sourcefile: SwitchUp.cpp
 
     #include <iostream>
     using namespace std;
