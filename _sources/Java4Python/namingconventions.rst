@@ -1,18 +1,19 @@
+# Naming Conventions
 
-Naming Conventions
-==================
+{sec:naming_conventions}
 
-{sec:naming\_conventions}
+C++ has some very handy naming conventions. It is worth noting that these conventions may not be required and the codes would still be functional but the main goal for the conventions is to standardize the coding in order for other programmers to understand it better.
 
-Java has some very handy naming conventions.
+* Meaningless abbreviations should always be avoided. They can confuse other programmers as to what the piece of code might actually perform.
 
--  Class names always start with an upper case letter. For example,
-   ``Scanner``, ``System``, ``Hello``
+* Methods should always start with a lower case letter, and use underscore & hyphens to add detail to the names.
+for example: next_value(), my_date_of_birth(), eat_food() and covert-to-binary() etc.
 
--  Method names always start with a lower case letter, and use camelCase
-   to represent multiword method names. for example ``nextInt()``
+* Method names should not start with numbers or underscores.
 
--  Instance variables of a class start with a lower case letter and use
-   camelCase
+* Single variable names are fine for temporary, local purposes such as
 
--  Constants are in all upper case letters. for example ``Math.MAXINT``
+       "for (int i = 0; i < number_s; i++)"
+However for longer chunks of codes, it is advisable that more defined and meaningful variable names may be used.
+
+* It is always helpful to add comments to different parts of the code. 
