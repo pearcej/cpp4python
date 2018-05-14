@@ -1,7 +1,5 @@
 # Naming Conventions
 
-{sec:naming_conventions}
-
 C++ has some very handy naming conventions. It is worth noting that these conventions may not be required and the codes would still be functional but the main goal for the conventions is to standardize the coding in order for other programmers to understand it better.
 
 * Meaningless abbreviations should always be avoided. They can confuse other programmers as to what the piece of code might actually perform.
