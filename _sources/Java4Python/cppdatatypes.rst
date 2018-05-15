@@ -55,7 +55,7 @@ Next, lets look at the C++ Equivalent.
 There are several new concepts introduced in this example. We will look
 at them in the following order:
 
--  Import
+-  Include
 
 -  Variable Declaration
 
@@ -63,33 +63,31 @@ at them in the following order:
 
 **Needs rewrite**
 
-Import
-~~~~~~
+Include
+----
 
 In C++ you can use any class that is available without having to import
 the class subject to two very important conditions:
 
-1. The javac and java must know that the class exists.
+1. The g++(C++ compiler) and C++ must know that the class exists.
 
-2. You must use the full name of the class
+2. You must use the full name of the class.
 
-You first question might be how do the ``java`` and ``javac`` commands
+You first question might be how do the ``C++`` and ``g++`` commands
 know that certain classes exist. The answer is the following:
 
-1. Java knows about all the classes that are defined in .java and .class
-   files in your current working directory.
+1. C++ knows about all the classes that are defined in .cpp
+files in your current working directory.
 
-2. Java knows about all the classes that are shipped with java.
-
-3. Java knows about all the classes that are included in your
+2. C++ knows about all the classes that are included in your
    ``CLASSPATH`` environment variable. Your ``CLASSPATH`` environment
    variable can name two kinds of structures.
 
-   1. A jar file that contains java classes
+   1. A jar file that contains C++ classes.
 
-   2. Another unix directory that contains java class files
+   2. Another unix directory that contains C++ class files.
 
-You can think of the import statement in Java as working a little bit
+You can think of the `#include` statement in C++ as working a little bit
 like the ``from module import xxx`` statement in Python. However, behind
 the scenes the two statements actually do very different things. The
 first important difference to understand is that the class naming system
@@ -113,7 +111,7 @@ Remove the import statement and change the string Scanner to
 compile and run.
 
 Declaring Variables
-~~~~~~~~~~~~~~~~~~~
+-----
 
 Here is where we run into one of the most important differences between
 C++ and Python. Python is a **dynamically typed** language. In a
@@ -158,28 +156,23 @@ variable before you use it. There is much more to say about the static
 typing of C++ but for now this is enough.
 
 **Needs Editing**
-Input / Output / Scanner
-~~~~~~~~~~~~~~~~~~~~~~~~
+Input / Output
+-----
 
-In the previous section you saw that we created a ``Scanner`` object. In
-Java Scanner objects make getting input from the user, a file, or even
+In C++ `cin` makes getting an input from the user, a file, or even
 over the network relatively easy. In our case we simply want to ask the
-user to type in a number at the command line, so in line 9 we construct
-a Scanner by calling the constructor and passing it the ``System.in``
-object. Notice that this Scanner object is assigned to the name ``in``,
-which we declared to be a ``Scanner`` on line 7. ``System.in`` is
-similar to ``System.out`` except of course it is used for input. If you
-are wondering why we must create a Scanner to read data from
-``System.in`` when we can write data directly to ``System.out`` using
-``println``, you are not alone. We will talk about the reasons why this
-is so later when we talk in depth about Java streams. You will also see
-in other examples that we can create a Scanner by passing the Scanner a
-File object. You can think of a scanner as a kind of “adapter” that
+user to type in a number at the command line, so we call the constructor and pass the number to the ``cin``.
+`cin` is similar to ``cout`` except of course it is used for input. We will talk about the reasons why this
+is so later when we talk in depth about C++ streams. You will also see
+in other examples that we can add inputs by passing the `cin` a
+File object. You can think of a input stream `cin` as a kind of “adapter” that
 makes low level objects easier to use.
 
-On line 11 we use the Scanner object to read in a number. Here again we
-see the implications of Java being a strongly typed language. Notice
-that we must call the method ``nextDouble``. Because the variable
+<!---
+
+We also use the `cin` object to read in numbers. We
+see the implications of C++ being a strongly typed language. Take a look at the code **insert place where?????** Notice
+that we must call the method ``nextDouble`` because the variable
 ``fahr`` was declared as a double. So, we must have a function that is
 guaranteed to return each kind of object we might want to read. In this
 case we need to read a Double so we call the function nextDouble. The
@@ -190,6 +183,8 @@ flagged as an error.
 Table 2 shows you some commonly used methods of the scanner class. There
 are many more methods supported by this class and we will talk about how
 to find them in the next chapter.
+
+**Needs rewrite???**
 
 ==================== ================ ======================================================
          Return type      Method name                                            Description
@@ -210,25 +205,26 @@ command line. Lets look at a version of our temperature control
 application that uses dialog boxes for input and output.
 
 .. activecode:: swing
-    :language: java
+    :language: C++
     :sourcefile: TempConvGUI.java
 
     import javax.swing.*;
 
-    public class TempConvGUI {
+    #include <iostream>
+    using namespace std;
 
-        public static void main(String[] args) {
-            String fahrString;
-            Double fahr, cel;
+    int main() {
+        String fahrString;
+        Double fahr, cel;
 
-            fahrString = JOptionPane.showInputDialog("Enter the temperature in F");
-            fahr = new Double(fahrString);
-            cel = (fahr - 32) * 5.0/9.0;
+        cout<<"Enter the temperature in F"<<endl;
+        cin>>fahrString>>endl;
+        fahr = new Double(fahrString);
+        cel = (fahr - 32) * 5.0/9.0;
 
-            JOptionPane.showMessageDialog(null,"The temperature in C is, " + cel);
-        }
-
+        cout<<(null,"The temperature in C is, " + cel)<<endl;
     }
+
 
 This example illustrates a couple of interesting points:
 
@@ -255,19 +251,20 @@ however, all java objects have a method called ``tostring``. The
 is called automatically by the compiler whenever it makes sense to
 convert a Java object to a string.
 
+-->
+
 String
 ------
 
-Strings in Java and Python are quite similar. Like Python, Java strings
-are immutable. However, manipulating strings in Java is not quite as
+Strings in C++ and Python are quite similar. Like Python, C++ strings
+are immutable. However, manipulating strings in C++ is not quite as
 obvious since Strings do not support an indexing or slicing operator.
-That is not to say that you can’t index into a Java string, you can. You
+That is not to say that you can’t index into a C++ string, you can. You
 can also pull out a substring just as you can with slicing. The
-difference is that Java uses method calls where Python uses Operators.
+difference is that C++ uses method calls where Python uses Operators.
 
-In fact this is the first example of another big difference between Java
-and Python. Java does not support any operator overloading. Table 3 maps
-common Python string operations to their Java counterparts. For the
+In fact this is the first example of another big difference between C++
+and Python. Table 3 maps common Python string operations to their C++ counterparts. For the
 examples shown in the table we will use a string variable called “str”
 
 ========================== ======================== =============================================================
@@ -279,7 +276,7 @@ examples shown in the table we will use a string variable called “str”
              ``str + str``            ``str + str``                              Concatenate two strings together
 ========================== ======================== =============================================================
 
-List
+Arrays
 ----
 
 Lets look at another early Python program. We are going to read numbers
@@ -323,18 +320,16 @@ We will get output that looks like this:
     9 occurred 1 times
 
 Lets review what is happening in this little program. In the first line
-we create a list and initialize the first 10 positions in the list to be
-0. Next we open the data file called ‘test.dat’ Third, we have a loop
-that reads each line of the file. As we read each line we convert it to
-an integer and increment the counter at the position in the list
+we create an array and initialize the first 10 positions in the array to be 0. Next we open the data file called ‘test.dat’.
+Third, we have a loop that reads each line of the file. As we read each line we convert it to
+an integer and increment the counter at the position in the array
 indicated by the number on the line we just read. Finally we iterate
-over each element in the list printing out both the position in the list
+over each element in the array printing out both the position in the array
 and the total value stored in that position.
 
-To write the Java version of this program we will have to introduce
-several new Java concepts. First, you will see the Java equivalent of a
-list, called an ``ArrayLlist.`` Next you will see three different kinds
-of loops used in Java. Two of the loops we will use are going to be very
+To write the C++ version of this program we will have to introduce
+several new C++ concepts. You will see three different kinds
+of loops used in C++. Two of the loops we will use are going to be very
 familiar, the third one is different from what you are used to in Python
 but is easy when you understand the syntax:
 
@@ -349,7 +344,7 @@ for
     Used to iterate through a sequence of numbers. This is most similar
     to for ``i in range()``, except the syntax is different.
 
-Here is the Java code needed to write the exact same program:
+Here is the C++ code needed to write the exact same program:
 
 .. activecode:: histojava
     :language: java
@@ -408,41 +403,35 @@ Here is the Java code needed to write the exact same program:
 Before going any further, I suggest you try to compile the above program
 and run it on some test data that you create.
 
-Now, lets look at what is happening in the Java source. As usual we
+Now, lets look at what is happening in the C++ source. As usual we
 declare the variables we are going to use at the beginning of the
-method. In this example we are declaring a Scanner variable called data,
-an integer called idx and an ``ArrayList`` called count. However, there
-is a new twist to the ``ArrayList`` declaration. Unlike Python where
-lists can contain just about anything, in Java we let the compiler know
-what kind of objects our array list is going to contain. In this case
-the ``ArrayList`` will contain Integers. The syntax we use to declare
-what kind of object the list will contain is the ``<Type>``
+method. In this example we are declaring
+an integer called idx and an ``array`` called count. However, there
+is a new twist to the ``array`` declaration. Unlike Python where
+lists can contain just about anything, in C++ we let the compiler know
+what kind of objects our array is going to contain. In this case
+the ``array`` will contain Integers. The syntax we use to declare
+what kind of object the array will contain is the ``<Type>``
 syntax.
 
-Technically, you don’t *have* to declare what is going to be on an array
-list. The compiler will allow you to leave the ``<``*Type*``>`` off the
-declaration. If you don’t tell Java what kind of object is going to be
-on the list Java will give you a warning message like this:
 
-::
+Without the `<Integer>` part of the declaration, C++ gives the following
+error:
 
-    Note: Histo.java uses unchecked or unsafe operations.
-    Note: Recompile with -Xlint:unchecked for details.
+    error: ‘variable’ was not declared in this scope
 
-Without the <Integer> part of the declaration Java simply assumes that
-*any* object can be on the list. However, without resorting to an ugly
-notation called casting, you cannot do anything with the objects on a
-list like this! So, if you forget you will surely see more errors later
-in your code. (Try it and see what you get)
+Lines 11—21 are required to open the file. Why so many lines to open a
+file in C++? The additional code mainly comes form the fact that you
+may want to reckon with the possibility that the file you want to open
+is not going to be there. If you attempt to open a file that does not exist
+using this method, the second block of code will run, but you will not get
+an error.
 
-Lines 13—20 are required to open the file. Why so many lines to open a
-file in Java? The additional code mainly comes form the fact that Java
-forces you to reckon with the possibility that the file you want to open
-is not going to be there. If you attempt to open a file that is not
-there you will get an error. A try/catch construct allows us to try
-things that are risky, and gracefully recover from an error if one
-occurs. The following example shows the general structure of a try catch
-block.
+<!--- Commented out section on Error Handling
+
+try/catch construct allows us to try things that are risky, and
+gracefully recover from an error if one occurs. The following example shows the
+general structure of a try catch block.
 
 ::
 
@@ -458,27 +447,26 @@ Notice that in line 16 we are catching an ``IOException``. In fact we
 will see later that we can have multiple catch blocks to catch different
 types of exceptions. If we want to be lazy and catch any old exception
 we can catch an ``Exception`` which is the parent of all exceptions.
+--->
 
-On line 22 we create our array list and give it an initial size of 10.
-Strictly speaking it is not necessary to give the ``ArrayList`` any
-size. It will grow or shrink dynamically as needed just like a list in
-Python. On line 23 we start the first of three loops. The for loop on
-lines 23–25 serves the same purpose as the Python statement
+On line 11 we create our array and give it an initial size of 10.
+On line 12 we start the first of three loops. The for loop on
+lines 12-14 serves the same purpose as the Python statement
 ``count = [0]*10``, that is it initializes the first 10 positions in the
-``ArrayList`` to hold the value 0.
+``array`` to hold the value 0.
 
 The syntax of this for loop probably looks very strange to you, but in
 fact it is not too different from what happens in Python using range. In
-fact ``for(Integer i = 0; i < 10; i++)`` is exactly equivalent to the
+fact ``for(int i = 0; i < 10; i++)`` is exactly equivalent to the
 Python ``for i in range(10)`` The first statement inside the parenthesis
 declares and initializes a loop variable i. The second statement is a
 Boolean expression that is our exit condition. In other words we will
 keep looping as long as this expression evaluates to true. The third
 clause is used to increment the value of the loop variable at the end of
-iteration through the loop. In fact ``i++`` is Java shorthand for
-``i = i +`` Java also supports the shorthand ``i--`` to decrement the
+iteration through the loop. In fact ``i++`` is C++ shorthand for
+``i = i + 1`` C++ also supports the shorthand ``i--`` to decrement the
 value of i. Like Python you can also write ``i += 2`` as shorthand for
-``i = i + 2`` Try to rewrite the following Python for loops as Java for
+``i = i + 2`` Try to rewrite the following Python for loops as C++ for
 loops:
 
     -  ``for i in range(2,101,2)``
@@ -490,43 +478,30 @@ loops:
     -  ``for x,y in zip(range(10),range(0,20,2))`` [hint, you can
        separate statements in the same clause with a ,]
 
-The next loop (lines 27–30) shows a typical Java pattern for reading
-data from a file. Java while loops and Python while loops are identical
+The next loop (lines 16-25) shows a typical C++ pattern for reading
+data from a file. C++ while loops and Python while loops are identical
 in their logic. In this case we will continue to process the body of the
-loop as long as ``data.hasNextInt()`` returns true.
-
-Line 29 illustrates another important difference between Python and
-Java. Notice that in Java we can not write
-``count[idx] = count[idx] + 1``. This is because in Java there is no
-overloading of operators. Everything except the most basic math and
-logical operations is done using methods. So, to set the value of an
-``ArrayList`` element we use the ``set`` method. The first parameter of
-``set`` indicates the index or position in the ``ArrayList`` we are
-going to change. The next parameter is the value we want to set. Notice
-that once again we cannot use the indexing square bracket operator to
-retrieve a value from the list, but we must use the ``get`` method.
+loop as long as `getline(myfile, line)` returns true.
 
 The last loop in this example is similar to the Python for loop where
-the object of the loop is a Sequence. In Java we can use this kind of
-for loop over all kinds of sequences, which are called Collection
-classes in Java. The for loop on line 33 ``for(Integer i : count)`` is
+the object of the loop is a Sequence. In C++ we can use this kind of
+for loop over all kinds of sequences. The for loop on line 30 ``for(int i : count)`` is
 equivalent to the Python loop ``for i in count:`` This loop iterates
-over all of the elements in the ArrayList called count. Each time
+over all of the elements in the `array` called count. Each time
 through the loop the Integer variable i is bound to the next element of
-the ``ArrayList``. If you tried the experiment of removing the
-``<Integer>`` part of the ``ArrayList`` declaration you probably noticed
-that you had an error on this line. Why?
+the ``array``.
 
+<!---
 Arrays
 ------
 
-As I said at the outset of this Section we are going to use Java
-``ArrayLists`` because they are easier to use and more closely match the
-way that Python lists behave. However, if you look at Java code on the
-internet or even in your Core Java books you are going to see examples
+As I said at the outset of this Section we are going to use C++
+``vectors`` because they are easier to use and more closely match the
+way that Python lists behave. However, if you look at C++ code on the
+internet or even in your C++ books you are going to see examples
 of something called arrays. In fact you have already seen one example of
 an array declared in the ‘Hello World’ program. Lets rewrite this
-program to use primitive arrays rather than array lists.
+program to use primitive arrays.
 
 .. activecode:: primarrays
     :language: java
@@ -567,103 +542,11 @@ short arrays directly using the syntax shown on line 8. Then notice that
 on line 24 we can use the square bracket notation to index into an
 array.
 
-Dictionary
-----------
+-->
 
-Just as Python provides the dictionary when we want to have easy access
-to key, value pairs, Java also provides us a similar mechanism. Rather
-than the dictionary terminology, Java calls these objects Maps. Java
-provides two different implementations of a map, one is called the
-``TreeMap`` and the other is called a ``HashMap``. As you might guess
-the ``TreeMap`` uses a balanced binary tree behind the scenes, and the
-``HashMap`` uses a hash table.
-
-Lets stay with a simple frequency counting example, only this time we
-will count the frequency of words in a document. A simple Python program
-for this job could look like this:
-
-.. activecode:: pywordcount
-   :language: python
-
-   def main():
-       data = open('alice30.txt')
-       wordList = data.read().split()
-       count = {}
-       for w in wordList:
-           w = w.lower()
-           count[w] = count.get(w,0) + 1
-
-       keyList = sorted(count.keys())
-       for k in keyList:
-           print("%-20s occurred %4d times" % (k, count[k]))
-
-   main()
-
-
-.. datafile:: alice30.txt
-
-   Down, down, down.  Would the fall NEVER come to an end!  'I
-   wonder how many miles I've fallen by this time?' she said aloud.
-   'I must be getting somewhere near the centre of the earth.  Let
-   me see:  that would be four thousand miles down, I think--' (for,
-   you see, Alice had learnt several things of this sort in her
-   lessons in the schoolroom, and though this was not a VERY good
-   opportunity for showing off her knowledge, as there was no one to
-   listen to her, still it was good practice to say it over) '--yes,
-   that's about the right distance--but then I wonder what Latitude
-   or Longitude I've got to?'  (Alice had no idea what Latitude was,
-   or Longitude either, but thought they were nice grand words to
-   say.)
-
-
-
-Notice that the structure of the program is very similar to the numeric
-histogram program.
-
-.. activecode:: dictjava
-    :language: java
-    :sourcefile: HistoMap.java
-    :datafile: alice30.txt
-
-    import java.util.Scanner;
-    import java.util.ArrayList;
-    import java.io.File;
-    import java.io.IOException;
-    import java.util.TreeMap;
-
-    public class HistoMap {
-
-        public static void main(String[] args) {
-            Scanner data = null;
-            TreeMap<String,Integer> count;
-            Integer idx;
-            String word;
-            Integer wordCount;
-
-            try {
-                    data = new Scanner(new File("alice30.txt"));
-            }
-            catch ( IOException e) {
-                System.out.println("Sorry but I was unable to open your data file");
-                e.printStackTrace();
-                System.exit(0);
-            }
-
-            count = new TreeMap<String,Integer>();
-
-            while(data.hasNext()) {
-                word = data.next().toLowerCase();
-                wordCount = count.get(word);
-                if (wordCount == null) {
-                    wordCount = 0;
-                }
-                count.put(word,++wordCount);
-            }
-
-            for(String i : count.keySet()) {
-                System.out.printf("%-20s occured %5d times\n", i, count.get(i) );
-            }
-        }
-    }
-
-Improve the program above to remove the punctuation.
+Pointers
+--------
+In Python, all variables are stored as references to locations in memory, and
+the specific address that we are accessing in memory is unknown to us. The
+C++ allows you to use pointers to access the specific location of a variable
+in memory, and gives you the ability to change what is written there.
