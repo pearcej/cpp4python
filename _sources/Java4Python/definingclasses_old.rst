@@ -1,7 +1,8 @@
-Defining Classes in C++
+Defining Classes in Java
 ========================
 
-You have already seen how to define classes in C++. In this section we will look at how we
+You have already seen how to define classes in Java. Its unavoidable for
+even the simplest of programs. In this section we will look at how we
 define classes to create our own data types. Lets start by creating a
 fraction class to extend the set of numeric data types provided by our
 language. The requirements for this new data type are as follows:
@@ -32,25 +33,26 @@ that we will refer to throughout this section:
 The instance variables (data members) we will need for our fraction
 class are the numerator and denominator. Of course in Python we can add
 instance variables to a class at any time by simply assigning a value to
-``objectReferenc.variableName`` In C++ all data members must be
+``objectReferenc.variableName`` In Java all data members must be
 declared up front.
 
 The declarations of instance variables can come at the beginning of the
-class definition. I like them at the
+class definition or the end. Cay Horstman, Author of the *Core Java*
+books puts the declarations at the end of the class. I like them at the
 very beginning so you see the variables that are declared before you
 begin looking at the code that uses them. With that in mind the first
 part of the Fraction class definition is as follows:
 
-.. highlight:: C++
+.. highlight:: java
    :linenothreshold: 5
 
 
 ::
 
-    class Fraction {
-      public:
-      private int numerator;
-      private int denominator;
+    public class Fraction {
+        private Integer numerator;
+        private Integer denominator;
+
 
     }
 
@@ -67,39 +69,39 @@ Direct access to instance variables is not allowed. Therefore if we
 legitimately want to be able to access information such as the numerator
 or denominator for a particular fraction we must have getter functions.
 It is very common programming practice to provide getter and setter
-functions for instance variables in C++.
+functions for instance variables in Java.
 
 ::
 
-    int getNumerator() {
+    public Integer getNumerator() {
         return numerator;
     }
 
-    void setNumerator(Integer numerator) {
+    public void setNumerator(Integer numerator) {
         this.numerator = numerator;
     }
 
-    int getDenominator() {
+    public Integer getDenominator() {
         return denominator;
     }
 
-    void setDenominator(int denominator) {
-        this->denominator = denominator;
+    public void setDenominator(Integer denominator) {
+        this.denominator = denominator;
     }
 
 Writing a constructor
 ---------------------
 
-Once you have identified the instance variables for your class the next
-thing to consider is the constructor. In C++, constructors have the
+Once you have identified the instance variables for you class the next
+thing to consider is the constructor. In Java, constructors have the
 same name as the class and are declared public. They are declared
 without a return type. So any function that is named the same as the
 class and has no return type is a constructor. Our constructor will take
-two parameters, the numerator and the denominator.
+two parameters the numerator and the denominator.
 
 ::
 
-    public Fraction(int top, int bottom) {
+    public Fraction(Integer top, Integer bottom) {
         num = top;
         den = bottom;
     }
@@ -108,9 +110,9 @@ There are a couple of important things to notice here. First, you will
 notice that the constructor does not have a self parameter. You will
 also notice that we can simply refer to the instance variables by name
 without the self prefix, because they have already been declared. This
-allows the C++ compiler to do the work of dereferencing the current
-C++ object. C++ does provide a special variable called ``this`` that
-works like the self variable. In C++, ``this`` is typically only used
+allows the Java compiler to do the work of dereferencing the current
+Java object. Java does provide a special variable called ``this`` that
+works like the self variable. In Java, ``this`` is typically only used
 when it is needed to differentiate between a parameter or local variable
 and an instance variable. For example this alternate definition of the
 the Fraction constructor uses ``this`` to differentiate between
@@ -118,23 +120,24 @@ parameters and instance variables.
 
 ::
 
-    public Fraction(int num, int den) {
-        this->num = num;
-        this->den = den;
+    public Fraction(Integer num, Integer den) {
+        this.num = num;
+        this.den = den;
     }
 
 Methods or Member Functions
 ---------------------------
-**Needs Rewrite**
 
----------------------------
-
-Now we will write member functions to do addition, subtraction, multiplication, and
+Now we come to one of the major differences between Java and Python. The
+Python class definition used the special methods for addition, and
+comparison that have the effect of redefining how the standard operators
+behave. In Java there is **no operator overloading**. So we will have to
+write member functions to do addition, subtraction, multiplication, and
 division. Lets begin with addition.
 
 ::
 
-     Fraction add(Fraction, otherFrac) {
+    public Fraction add(Fraction otherFrac) {
         Integer newNum, newDen, common;
 
         newNum = otherFrac.getDenominator()*this.numerator +
@@ -188,7 +191,7 @@ this case the return value on line 8 must match the declared value on
 line 1.
 
 Method Signatures and Overloading
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Our specification for this project said that we need to be able to add a
 ``Fraction`` to an ``Integer``. In Python we can do this by checking the
@@ -314,9 +317,9 @@ by writing an ``__str__`` method for your class. If you do not then you
 will get the default, which looked something like the above.
 
 The ``Object`` Class
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
-In C++, the equivalent of ``__str__`` is the ``toString`` method. Every
+In Java, the equivalent of ``__str__`` is the ``toString`` method. Every
 object in Java already has a ``toString`` method defined for it because
 every class in Java automatically inherits from the Object class. The
 object class provides default implementations for the following
@@ -348,7 +351,7 @@ class. A simple version of the method is provided below.
 
 ::
 
-    String toString() {
+    public String toString() {
         return numerator.toString() + "/" + denominator.toString();
     }
 
@@ -391,7 +394,7 @@ to see if two objects are equal it does not have any notion of less than
 or greater than. We’ll see more about that shortly.
 
 Abstract Classes and Methods
---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If we want to make our Fraction class behave like Integer, Double, and
 the other numeric classes in Java We need to make a couple of additional
