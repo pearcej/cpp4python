@@ -24,8 +24,13 @@ would love to see any modifications or additions you make.
 
 Jan Pearce `pearcej@berea.edu <mailto://pearcej@Berea.edu>`_ May,
 2018
-<!-- Original Java version by Brad Miller 
-`bmiller@luther.edu <mailto://bmiller@luther.edu>`_ January,2008 -->
+
+<!---
+
+Original Java version by Brad Miller 
+`bmiller@luther.edu <mailto://bmiller@luther.edu>`_ January,2008 
+
+-->
 
     |image|
     This work is licensed under a Creative Commons Attribution 3.0
