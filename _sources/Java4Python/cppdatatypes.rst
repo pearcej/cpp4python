@@ -61,54 +61,25 @@ at them in the following order:
 
 -  Input/Output
 
-**Needs rewrite**
 
 Include
 ----
 
-In C++ you can use any class that is available without having to import
-the class subject to two very important conditions:
+You can think of the `#include` statement in C++ as working a little bit like the ``import...`` statement in Python. Python's `import` statement directly accesses the code written in another file while the `#include` statement in C++ copies the classes and functions from another file.
 
-1. The g++(C++ compiler) and C++ must know that the class exists.
 
-2. You must use the full name of the class.
+In python, an import statement looks like:
 
-You first question might be how do the ``C++`` and ``g++`` commands
-know that certain classes exist. The answer is the following:
+    import classname
 
-1. C++ knows about all the classes that are defined in .cpp
-files in your current working directory.
 
-2. C++ knows about all the classes that are included in your
-   ``CLASSPATH`` environment variable. Your ``CLASSPATH`` environment
-   variable can name two kinds of structures.
+In C++ there is no explicit use of the word "import" however it allows us to import using the keyword `include`.
 
-   1. A jar file that contains C++ classes.
+    #include <iostream>
 
-   2. Another unix directory that contains C++ class files.
+another example is:
 
-You can think of the `#include` statement in C++ as working a little bit
-like the ``from module import xxx`` statement in Python. However, behind
-the scenes the two statements actually do very different things. The
-first important difference to understand is that the class naming system
-in Java is very hierarchical. The *full* name of the Scanner class is
-really ``java.util.Scanner``. You can think of this name as having two
-parts: The first part ``java.util`` is called the **package** and the
-last part is the class. We’ll talk more about the class naming system a
-bit later. The second important difference is that it is the Java class
-loader’s responsibility to load classes into memory, not the import
-statement’s.
-
-So, what exactly does the import statement do? What it does is tell the
-compiler that we are going to use a shortened version of the class’s
-name. In this example we are going to use the class
-``java.util.Scanner`` but we can refer to it as just ``Scanner``. We
-could use the ``java.util.Scanner`` class without any problem and
-without any import statement provided that we always referred to it by
-its full name. As an Experiment you may want to try this yourself.
-Remove the import statement and change the string Scanner to
-``java.util.Scanner`` in the rest of the code. The program should still
-compile and run.
+    #include "math.h"
 
 Declaring Variables
 -----
@@ -155,7 +126,6 @@ your variable is going to reference and then you must declare that
 variable before you use it. There is much more to say about the static
 typing of C++ but for now this is enough.
 
-**Needs Editing**
 Input / Output
 -----
 
@@ -183,8 +153,6 @@ flagged as an error.
 Table 2 shows you some commonly used methods of the scanner class. There
 are many more methods supported by this class and we will talk about how
 to find them in the next chapter.
-
-**Needs rewrite???**
 
 ==================== ================ ======================================================
          Return type      Method name                                            Description
@@ -256,8 +224,8 @@ convert a Java object to a string.
 String
 ------
 
-Strings in C++ and Python are quite similar. Like Python, C++ strings
-are immutable. However, manipulating strings in C++ is not quite as
+String is not supported directly in C++. You have to write `#include <string>` to use strings in C++. However, strings in C++ and Python are quite similar. Like Python, C++ strings
+are immutable. Manipulating strings in C++ is not quite as
 obvious since Strings do not support an indexing or slicing operator.
 That is not to say that you can’t index into a C++ string, you can. You
 can also pull out a substring just as you can with slicing. The
