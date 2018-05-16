@@ -2,7 +2,7 @@ Defining Classes in C++
 ========================
 
 You have already seen how to define classes in C++. In this section we will look at how we
-define classes to create our own data types. Lets start by creating a
+define classes to create our own data types. Let's start by creating a
 fraction class to extend the set of numeric data types provided by our
 language. The requirements for this new data type are as follows:
 
@@ -32,7 +32,7 @@ that we will refer to throughout this section:
 The instance variables (data members) we will need for our fraction
 class are the numerator and denominator. Of course in Python we can add
 instance variables to a class at any time by simply assigning a value to
-``objectReferenc.variableName`` In C++ all data members must be
+``objectReference.variableName`` In C++ all data members must be
 declared up front.
 
 The declarations of instance variables can come at the beginning of the
@@ -47,8 +47,7 @@ part of the Fraction class definition is as follows:
 
 ::
 
-    class Fraction {
-      public:
+    public class Fraction {
       private int numerator;
       private int denominator;
 
@@ -61,7 +60,7 @@ method tries to write code like the following:
 ::
 
     Fraction f = new Fraction(1,2);
-    Integer y = f.numerator * 10;
+    int y = f.numerator * 10;
 
 Direct access to instance variables is not allowed. Therefore if we
 legitimately want to be able to access information such as the numerator
@@ -75,8 +74,8 @@ functions for instance variables in C++.
         return numerator;
     }
 
-    void setNumerator(Integer numerator) {
-        this.numerator = numerator;
+    void setNumerator(int numerator) {
+        this->numerator = numerator;
     }
 
     int getDenominator() {
@@ -130,12 +129,12 @@ Methods or Member Functions
 ---------------------------
 
 Now we will write member functions to do addition, subtraction, multiplication, and
-division. Lets begin with addition.
+division. Let's begin with addition.
 
 ::
 
      Fraction add(Fraction, otherFrac) {
-        Integer newNum, newDen, common;
+        int newNum, newDen, common;
 
         newNum = otherFrac.getDenominator()*this.numerator +
                                  this.denominator*otherFrac.getNumerator();
@@ -167,10 +166,10 @@ also legal Java, but may be somewhat less readable.
 ::
 
     public Fraction add(Fraction otherFrac) {
-        Integer newNum = otherFrac.getDenominator()*numerator +
+        int newNum = otherFrac.getDenominator()*numerator +
                                  denominator*otherFrac.getNumerator();
-        Integer newDen = denominator * otherFrac.getDenominator();
-        Integer common = gcd(newNum,newDen);
+        int newDen = denominator * otherFrac.getDenominator();
+        int common = gcd(newNum,newDen);
         return new Fraction(newNum/common, newDen/common );
     }
 
@@ -198,37 +197,37 @@ indeed an instance of the ``int`` class. See lines 22 and 53—68 of the
 Python version of the Fraction class to see how our Python
 implementation fulfills this requirement.
 
-In Java we can do runtime type checking, but the compiler will not allow
-us to pass an Integer to the add function since the parameter has been
+In C++ we can do runtime type checking, but the compiler will not allow
+us to pass an int to the add function since the parameter has been
 declared to be a Fraction. The way that we solve this problem is by
 writing another ``add`` method with a different set of parameters. In
-Java this practice is legal and common we call this practice
+C++ this practice is legal and common we call this practice
 **overloading**.
 
 This idea of overloading raises a very important difference between
-Python and Java. In Python a method is known by its name only. In Java a
+Python and C++. In Python a method is known by its name only. In C++ a
 method is known by its signature. The signature of a method includes its
 name, and the types of all of its parameters. The name and the types of
-the parameters are enough information for the Java compiler to decide
+the parameters are enough information for the C++ compiler to decide
 which method to call at runtime.
 
-To solve the problem of adding an ``Integer`` and a ``Fraction`` in Java
+To solve the problem of adding an ``int`` and a ``Fraction`` in C++
 we will overload both the constructor and the add function. We will
 overload the constructor so that if it only receives a single
-``Integer`` it will convert the ``Integer`` into a ``Fraction``. We will
-also overload the add method so that if it receives an ``Integer`` as a
+``int`` it will convert the ``int`` into a ``Fraction``. We will
+also overload the add method so that if it receives an ``int`` as a
 parameter it first construct a ``Fraction`` from that integer and then
-add the two ``Fractions`` together. The new methods that accomplish this
+add the two ``Fraction``s together. The new methods that accomplish this
 task are as follows:
 
 ::
 
-    public Fraction(Integer num) {
-        this.numerator = num;
-        this.denominator = 1;
+    public Fraction(int num) {
+        this->numerator = num;
+        this->denominator = 1;
     }
 
-    public Fraction add(Integer other) {
+    public Fraction add(int other) {
         return add(new Fraction(other));
     }
 
@@ -249,10 +248,10 @@ to see what happens.
 
     public class Fraction {
 
-        private Integer numerator;
-        private Integer denominator;
+        private int numerator;
+        private int denominator;
 
-        public Fraction(Integer num, Integer den) {
+        public Fraction(int num, int den) {
             this.numerator = num;
             this.denominator = den;
         }
