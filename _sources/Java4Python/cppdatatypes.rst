@@ -138,7 +138,7 @@ in other examples that we can add inputs by passing the `cin` a
 File object. You can think of a input stream `cin` as a kind of “adapter” that
 makes low level objects easier to use.
 
-<!---
+<!--
 
 We also use the `cin` object to read in numbers. We
 see the implications of C++ being a strongly typed language. Take a look at the code **insert place where?????** Notice
