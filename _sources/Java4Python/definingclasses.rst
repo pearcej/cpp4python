@@ -89,6 +89,8 @@ functions for instance variables in C++.
 Writing a constructor
 ---------------------
 
+***Needs work.. Add `__init__` from python***
+
 Once you have identified the instance variables for your class the next
 thing to consider is the constructor. In C++, constructors have the
 same name as the class and are declared public. They are declared
@@ -124,9 +126,7 @@ parameters and instance variables.
 
 Methods or Member Functions
 ---------------------------
-**Needs Rewrite**
-
----------------------------
+***Needs Rewrite***
 
 Now we will write member functions to do addition, subtraction, multiplication, and
 division. Let's begin with addition.
@@ -188,6 +188,8 @@ line 1.
 
 Method Signatures and Overloading
 ---------------------------------
+
+***Needs Rewrite***
 
 Our specification for this project said that we need to be able to add a
 ``Fraction`` to an ``Integer``. In Python we can do this by checking the
@@ -252,17 +254,17 @@ to see what happens.
         private int denominator;
 
         public Fraction(int num, int den) {
-            this.numerator = num;
-            this.denominator = den;
+            this->numerator = num;
+            this->denominator = den;
         }
 
-        public Fraction(Integer num) {
-            this.numerator = num;
-            this.denominator = 1;
+        public Fraction(int num) {
+            this->numerator = num;
+            this->denominator = 1;
         }
 
         public Fraction add(Fraction other) {
-            Integer newNum, newDen, common;
+            int newNum, newDen, common;
 
             newNum = other.getDenominator()*this.numerator + this.denominator*other.getNumerator();
             newDen = this.denominator * other.getDenominator();
@@ -297,6 +299,8 @@ to see what happens.
 Inheritance
 -----------
 
+***Needs Rewrite***
+
 If you ran the program above you probably noticed that the output is not
 very satisfying. Chances are your output looked something like this:
 
@@ -311,6 +315,8 @@ Python, whenever an object is printed by the ``println`` method it must
 be converted to string format. In Python you can control how that looks
 by writing an ``__str__`` method for your class. If you do not then you
 will get the default, which looked something like the above.
+
+<!---
 
 The ``Object`` Class
 --------------------
@@ -766,3 +772,5 @@ we have discussed is as follows.
         }
 
     }
+
+-->
