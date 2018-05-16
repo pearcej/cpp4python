@@ -515,6 +515,48 @@ array.
 Pointers
 --------
 In Python, all variables are stored as references to locations in memory, and
-the specific address that we are accessing in memory is unknown to us. The
-C++ allows you to use pointers to access the specific location of a variable
-in memory, and gives you the ability to change what is written there.
+the specific address that we are accessing in memory is unknown to us. These
+references can be accessed using the id() function.
+
+    int_a = 3
+    int_b = 5
+    ref_a=id(int_a)
+    ref_b=id(int_b)
+
+    print(int_a, "is stored at", id(ref_a))
+    print(int_b, "is stored at", id(ref_b))
+
+The C++ language allows two different ways to store and access variables.
+The first is storing into a variable which is a named memory location
+(Such as the variables int_a and int_b shown below.)
+In the second, you use something called a pointer which stores the memory
+address of the actual place in memory where the variable's value is stored
+(Such as the variables ptr_a and ptr_b shown below.)
+Either technique gives you access the value of the variable.
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+    	int int_a, int_b, *ptr_a, *ptr_b; //Create two ints, and two pointers
+      //declares a pointer, the use of "ptr_" in naming is purely for convenience.
+
+    	int_a = 3;
+    	int_b = 5;
+
+    	//Using & to access the memory address of a variable
+    	ptr_a = &int_a; //Gets the address of the int x and stores it to the pointer a
+    	ptr_b = &int_b; //Gets the address of the int y and stores it to the pointer b
+
+    	cout << int_a << " is stored at " << ptr_a << endl;
+    	cout << int_b << " is stored at " << ptr_b << endl << endl;
+    	
+    	int_a = 10;
+    	*ptr_b = 15; //Dereferencing a pointer using *, accessing the int by it's address
+
+    	cout << int_a << " is stored at " << ptr_a << endl;
+    	cout << int_b << " is stored at " << ptr_b << endl << endl;
+    }
+
+More information about Pointers in C++ and their functionality can be found in the
+section on Pointers.
