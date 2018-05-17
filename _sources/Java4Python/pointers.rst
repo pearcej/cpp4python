@@ -5,16 +5,15 @@ The kind of variables we have already used are really identifiers that refer to 
 
 Let's look at a simple example of storing an integer. The following code declares a variable called varName that has in it a value of 100.
 
-|assign|
-
 ::
 
     // variable declaration for a single integer value
     int varName = 100;
 
 
+The results of this code may look like the diagram to the below:
 
-The results of this code may look like the diagram to the right:
+|assign|
 
 When we want to output the value to the console, we use the variable name to do so:
 
@@ -80,8 +79,6 @@ The syntax is shown below, where varName stores the value, and varPntr stores th
 
 Keep in mind that when declaring a pointer, the pointer needs to be of the same type as the variable or constant to which it points.
 
-|pointer|
-
 ::
 
  **variable declaration for a single integer value**
@@ -92,7 +89,9 @@ Keep in mind that when declaring a pointer, the pointer needs to be of the same 
 
 
 
-The results of this code may look like the diagram to the right.
+The results of this code may look like the diagram below.
+
+|pointer|
 
 *
 
@@ -325,8 +324,6 @@ One way to dynamically allocate a two-dimensional array (often called a matrix) 
 
 Yeah, a mind-bender, is it not?
 
-|double1|
-
 ::
 
     int  variableName;
@@ -344,8 +341,10 @@ To allocate space for this kind of structure, the first step is to declare and a
 
 
 
-This code says "create an array of 100 spots to hold pointers to integers", and is pictorially shown to the right.
-|double2|
+This code says "create an array of 100 spots to hold pointers to integers", and is pictorially shown below.
+
+|double1|
+
  The next stage is to allocate space for each row, which requires a loop of some kind to iterate through the rows and allocate as necessary. Suppose you want each row to have 30 elements. The code can look like:
 
 ::
@@ -356,7 +355,9 @@ This code says "create an array of 100 spots to hold pointers to integers", and 
 
 
 
-This code will create 100 individually allocated rows capable of storing 30 items and is pictorally shown to the right.
+This code will create 100 individually allocated rows capable of storing 30 items and is pictorally shown below.
+
+|double2|
 
 Note that each row is allocated in a potentially great distance from the ones before or after it, which is a difficult concept to come to terms with initially.
 
