@@ -3,7 +3,9 @@ Introduction to Pointers
 
 The kind of variables we have already used are really identifiers that refer to where in memory we store information. We can store things as basic as integers and double precision floating point numbers, or things more complicated as structure and classes. Whenever we want the information, we can simply use the identifier to access it.
 
-Let's look at a simple example of storing an integer. The following code declares a variable called varName that has in it a value of 100. ![assign](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/Assign.gif)
+Let's look at a simple example of storing an integer. The following code declares a variable called varName that has in it a value of 100.
+
+|assign|
 
 ::
 
@@ -78,7 +80,7 @@ The syntax is shown below, where varName stores the value, and varPntr stores th
 
 Keep in mind that when declaring a pointer, the pointer needs to be of the same type as the variable or constant to which it points.
 
-![pointer](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/Pointer.gif)Expanding on the example above where varName has the value of 100.
+|pointer|
 
 ::
 
@@ -162,7 +164,7 @@ The second output sentence is the address of varName, which would most likely be
 This is BAD BAD!
 ----------------
 
-![bad pointer](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/BadPointer.gif) If your compiler does not catch that error (the one for this class may), the first cout instruction outputs
+|badpointer|
 
 ::
 
@@ -286,11 +288,11 @@ Pictorally, it looks like this:
 
 First call to new
 
-![oops 1](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/oops_Allocation1.gif)
+|oops1|
 
 Second call to new
 
-![oops 2](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/oops_Allocation2.gif)
+|oops2|
 
 Once this happens, the block of memory starting at 0xADDRESS is "lost" because the reference to that address is gone. By the way, repeated errors like this (such as in a loop) will result in more and more of memory reserved and not used... too much can crash your machine!
 
@@ -323,7 +325,7 @@ One way to dynamically allocate a two-dimensional array (often called a matrix) 
 
 Yeah, a mind-bender, is it not?
 
-![double](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/doubleAllocStage1.gif) The syntax for a 2D array of integers is:
+|double1|
 
 ::
 
@@ -342,7 +344,9 @@ To allocate space for this kind of structure, the first step is to declare and a
 
 
 
-This code says "create an array of 100 spots to hold pointers to integers", and is pictorially shown to the right.![double](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/doubleAllocStage2.gif) The next stage is to allocate space for each row, which requires a loop of some kind to iterate through the rows and allocate as necessary. Suppose you want each row to have 30 elements. The code can look like:
+This code says "create an array of 100 spots to hold pointers to integers", and is pictorially shown to the right.
+|double2|
+ The next stage is to allocate space for each row, which requires a loop of some kind to iterate through the rows and allocate as necessary. Suppose you want each row to have 30 elements. The code can look like:
 
 ::
 
@@ -395,3 +399,11 @@ Accessing the data in the matrix is exactly the same as with a statically alloca
 
 
 essentially states to go to the 40th element in the first reference, which is a pointer, and then travel down the second pointer to the array itself in memory to find the 25th item in that array.
+
+.. |assign| IMAGE:: images\Assign.gif
+.. |badpointer| IMAGE:: images\BadPointer.gif
+.. |double1| IMAGE:: images\doubleAllocStage1.gif
+.. |double2| IMAGE:: images\doubleAllocStage2.gif
+.. |oops1| IMAGE:: images\oops_Allocation1.gif
+.. |oops2| IMAGE:: images\oops_Allocation2.gif
+.. |pointer| IMAGE:: images\Pointer.gif
