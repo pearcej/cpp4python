@@ -1,10 +1,11 @@
-# Introduction to Pointers
+Introduction to Pointers
+========================
 
 The kind of variables we have already used are really identifiers that refer to where in memory we store information. We can store things as basic as integers and double precision floating point numbers, or things more complicated as structure and classes. Whenever we want the information, we can simply use the identifier to access it.
 
 Let's look at a simple example of storing an integer. The following code declares a variable called varName that has in it a value of 100. ![assign](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/Assign.gif)
 
-
+::
 
     // variable declaration for a single integer value
     int varName = 100;
@@ -15,7 +16,7 @@ The results of this code may look like the diagram to the right:
 
 When we want to output the value to the console, we use the variable name to do so:
 
-
+::
 
     // print out the value we stored to the console, assuming that we
     // included the correct headers that define what cout does
@@ -34,11 +35,11 @@ Once we reserve space to hold data, we store the location of this data in a spec
 
 We will talk about how to declare a variable to be a pointer first and then show pictorially what is happening.
 
-### Pointer Syntax
-
+Pointer Syntax
+--------------
 When declaring a pointer that will "point" to an the memory address of some data type, you use the same rules of declaring variables and data types. The key difference is that there is an asterisk () between the data type and the identifier.
 
-
+::
 
     variableType identifier; // syntax to declare a pointer
     int ptrx; // example of a pointer to an integer
@@ -48,7 +49,7 @@ When declaring a pointer that will "point" to an the memory address of some data
 
 White space in C++ generally does not matter, so the following pointer declarations are identical:
 
-
+::
 
     SOMETYPE variablename;
     SOMETYPE  variablename;
@@ -61,13 +62,14 @@ However, the first declaration is preferable in each case, as it is clear to the
 
 
 
-## The Address Operator: One simple way to get the pointer information into a pointer
+The Address Operator: One simple way to get the pointer information into a pointer
+----------------------------------------------------------------------------------
 
 Ok, now that we know how to declare pointers, how do we give them the address of where the value is going to be stored? One way to do this is to have a pointer refer to another variable by using the address operator, which is denoted by the ampersand symbol, &. The address operator does exactly what it indicates, namely it returns the address of either (1) a variable, (2) a symbolic constant or (3) a element in an array.
 
 The syntax is shown below, where varName stores the value, and varPntr stores the address of where varName is located: >
 
-
+::
 
     variableType value;// a variable to hold the value
     variableType pointer = &value; // a variable to hold the address for varName
@@ -78,7 +80,7 @@ Keep in mind that when declaring a pointer, the pointer needs to be of the same 
 
 ![pointer](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/Pointer.gif)Expanding on the example above where varName has the value of 100.
 
-
+::
 
  **variable declaration for a single integer value**
 
@@ -92,7 +94,8 @@ The results of this code may look like the diagram to the right.
 
 *
 
-## Accessing Values from SIMPLE Pointers
+Accessing Values from SIMPLE Pointers
+-------------------------------------
 
 So, once you have a pointer, how do you access the values associated with that location? You use the asterix before the pointer variable, which dereferences the pointer, meaning that it will find the location of the value stored where the pointer was referencing.
 
@@ -100,7 +103,7 @@ In other words, varName and varPntr (note the asterix in front!) is the same thi
 
 Let's extend the example above to output the value of a variable and its address in memory:
 
-
+::
 
     #include <iostream>
     using namespace std;
@@ -128,25 +131,25 @@ Let's extend the example above to output the value of a variable and its address
 
 Compiling and running the above code will have the program output the value in varName, what is in varPntr (the memory address of varName), and what value is located at that memory location. Thus the output is:
 
+::
 
+     the variable varName has the value: 100
+     varPntr says varName is located at: 0x22ff7c
+     the thing that varPntr is pointing to (varName) has the value: 100
 
- the variable varName has the value: 100
- varPntr says varName is located at: 0x22ff7c
- the thing that varPntr is pointing to (varName) has the value: 100
+     After changing varName, its value is now: 50
+     varPntr is now pointing to a variable that has the value: 50
 
- After changing varName, its value is now: 50
- varPntr is now pointing to a variable that has the value: 50
-
- After changing varPntr, varName now has: 2000
- varPntr is now pointing to a variable that has the value: 2000
+     After changing varPntr, varName now has: 2000
+     varPntr is now pointing to a variable that has the value: 2000
 
 
 
 The second output sentence is the address of varName, which would most likely be different if you run the program on your machine.
 
-<div class="indent">WARNING What happens if you forget the asterix when assigning a value to a pointer and had the following instructions instead?
+**WARNING** What happens if you forget the asterisk when assigning a value to a pointer and had the following instructions instead?
 
-
+::
 
     varPntr = 2000;
     // Notice that I forgot the asterix, so varPntr is now referring
@@ -156,13 +159,14 @@ The second output sentence is the address of varName, which would most likely be
 
 
 
-### This is BAD BAD!
+This is BAD BAD!
+----------------
 
 ![bad pointer](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/BadPointer.gif) If your compiler does not catch that error (the one for this class may), the first cout instruction outputs
 
+::
 
-
- After changing varPntr, varName now has: 50
+    After changing varPntr, varName now has: 50
 
 
 
@@ -172,13 +176,14 @@ The second cout instruction is a disaster because (1) You don't know what is sto
 
 
 
-## The Null pointer; another simple way to get the pointer information into a pointer
+The Null pointer; another simple way to get the pointer information into a pointer
+----------------------------------------------------------------------------------
 
 The null pointer points to nothing and is often denoted by 0 or the keyword null. The null pointer is often used in conditions and/or in logical operations.
 
 The following example demonstrates how the null pointer works. The variable ptrx initially has the address of x when it is declared. On the first iteration of the loop, it is assigned the value of zero (i.e. null) thereby ending the loop:
 
-
+::
 
     #include <iostream>
     using namespace std;
@@ -202,7 +207,8 @@ Helpful Tip: The null pointer becomes very useful when you must test the state o
 
 
 
-## Dynamically Allocated 1D Arrays
+Dynamically Allocated 1D Arrays
+-------------------------------
 
 In other assignments, you have worked with statically allocated arrays. This technique has the advantage that it is easier to implement, but it suffers from the fact that (1) you need to know the size when the program was compiled, which is sometimes a very bad guess, and (2) the size of the array cannot change, which is VERY limiting.
 
@@ -211,7 +217,8 @@ In other assignments, you have worked with statically allocated arrays. This tec
 
 Dynamic memory allocation for arrays enables the program to allocate exactly the amount of space needed when it is needed.
 
-### The new Operator
+The new Operator
+----------------
 
 The key here is that the address operator (the ampersand detailed above) is NOT the only operator that you can use to assign an address to a pointer. In C++, there is the new operator that allocates a block of space in memory for a data type (built-in or user defined) and returns a pointer to that block of data.
 
@@ -221,7 +228,7 @@ Suppose you want to create an integer array of a size that is input from the use
 
 1.  Declare the array as a pointer with no initial address (also the variable to hold the number of elements). Note that the value in array is garbage and invalid:
 
-
+::
 
     int array;
     int size;
@@ -230,7 +237,7 @@ Suppose you want to create an integer array of a size that is input from the use
 
 2.  Get input from the user on the number of elements:
 
-
+::
 
     cout << "Size? ";
     cin >> size;
@@ -240,7 +247,7 @@ Suppose you want to create an integer array of a size that is input from the use
 
 3.  Use the new operator to create the array with size elements:
 
-
+::
 
     array = new int[size];
 
@@ -250,7 +257,7 @@ If the new operator is successful, the value of array is not null. If, on the ot
 
 A common way to check program execution is to include statements that see if allocation succeeds and warns the user or aborts the program when it fails:
 
-
+::
 
     void worked() {
      int array = new int[size];
@@ -268,7 +275,7 @@ WARNING:
 1.  The new operator finds an essentially arbitrary area in memory to hold the allocated array, so you cannot assume to know what the address is, even between two consecutive runs of the program!
 2.  If you invoke the new operator twice on the same pointer variable without storing the value of the address on the first call, the block of data you allocated will be lost:
 
-
+::
 
     array = new int[size]; // array now holds (0xADDRESS), the address of an array
     array = new int[size]; // array now holds (0xHEXNUM), a different address for the array
@@ -287,11 +294,12 @@ Second call to new
 
 Once this happens, the block of memory starting at 0xADDRESS is "lost" because the reference to that address is gone. By the way, repeated errors like this (such as in a loop) will result in more and more of memory reserved and not used... too much can crash your machine!
 
-### Delete Operator
+Delete Operator
+---------------
 
 The natural counterpart to this allocation is "deallocation", where memory that was reserved for the variable is freed and allowed to be used by other programs if necessary. The delete operator is used in front of a pointer to free up the address in memory to which the pointer is pointing:
 
-
+::
 
     delete array;
 
@@ -308,7 +316,8 @@ Therefore, it is a good practice that every time you use the new operator in you
 
 
 
-## Dynamically Allocated 2D (or more dimension) Arrays
+Dynamically Allocated 2D (or more dimension) Arrays
+---------------------------------------------------
 
 One way to dynamically allocate a two-dimensional array (often called a matrix) involves declaring a dynamically allocated array like above, but rather than having the array store integers, it stores pointers to other arrays.
 
@@ -316,7 +325,7 @@ Yeah, a mind-bender, is it not?
 
 ![double](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/doubleAllocStage1.gif) The syntax for a 2D array of integers is:
 
-
+::
 
     int  variableName;
     // Declare a pointer that references an array of pointers.
@@ -325,7 +334,7 @@ Yeah, a mind-bender, is it not?
 
 To allocate space for this kind of structure, the first step is to declare and allocate the array that will eventually contain the pointers:
 
-
+::
 
     int size = 100;
 
@@ -335,7 +344,7 @@ To allocate space for this kind of structure, the first step is to declare and a
 
 This code says "create an array of 100 spots to hold pointers to integers", and is pictorially shown to the right.![double](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/doubleAllocStage2.gif) The next stage is to allocate space for each row, which requires a loop of some kind to iterate through the rows and allocate as necessary. Suppose you want each row to have 30 elements. The code can look like:
 
-
+::
 
     for (int i=0; i<size; i++ ) {
      twoDArray[i] = new int[30];
@@ -353,7 +362,7 @@ Deallocating matrices involves freeing up all the rows individually, followed by
 
 The code to delete the array allocated above is in a sense the opposite operation, in which each row array is deleted before the main one is:
 
-
+::
 
     for (int i=0; i<size; i++ ) {
      delete twoDArray[i];
@@ -362,11 +371,12 @@ The code to delete the array allocated above is in a sense the opposite operatio
 
 
 
-### Accessing Array Elements
+Accessing Array Elements
+------------------------
 
 Suppose that you wanted to output the contents of a dynamically allocated array. The syntax is identical to performing the same task on a static array. In the case of a 1D array, the code to output the contents may look like the following:
 
-
+::
 
     // assuming that the array myArray has been allocated with size
     // elements and populated with values.
@@ -378,7 +388,7 @@ Suppose that you wanted to output the contents of a dynamically allocated array.
 
 Accessing the data in the matrix is exactly the same as with a statically allocated array. The code
 
-
+::
 
     twoDArray[40][25] = 50;
 
