@@ -1,254 +1,387 @@
-Lets look at a Java Program
----------------------------
+# Introduction to Pointers
 
-A time honored tradition in Computer Science is to write a program
-called “hello world.” The “hello world” program is simple and easy.
-There are no logic errors to make, so getting it to run relies only on
-understanding the syntax. To be clear lets look a a “complicated”
-version of hello world for Python:
+The kind of variables we have already used are really identifiers that refer to where in memory we store information. We can store things as basic as integers and double precision floating point numbers, or things more complicated as structure and classes. Whenever we want the information, we can simply use the identifier to access it.
 
-::
+Let's look at a simple example of storing an integer. The following code declares a variable called varName that has in it a value of 100. ![assign](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/Assign.gif)
 
-    def main():
-        print("Hello World!")
 
-Remember that we can define this program right at the Python command
-line and then run it:
 
-::
+    // variable declaration for a single integer value
+    int varName = 100;
 
-    >>> main()
-    "Hello World!"
-    >>>
 
-Now lets look at the same program written in Java:
 
-.. highlight:: java
-   :linenothreshold: 4
+The results of this code may look like the diagram to the right:
 
-.. activecode:: hellojava
-    :language: java
-    :sourcefile: Hello.java
+When we want to output the value to the console, we use the variable name to do so:
 
-    public class Hello {
 
-        public static void main(String[] args) {
-            System.out.println("Hello World!");
-        }
+
+    // print out the value we stored to the console, assuming that we
+    // included the correct headers that define what cout does
+    cout << varName << endl;
+
+
+
+
+An important question is: Is this method of declaring variables sophisticated enough to handle all the problems we want to solve using programs?
+
+The answer to that question is due to the way that arrays are stored in memory. Although the full details are complicated; the simple answer is that each program is given a specific amount of memory space to run. All statically allocated and locally declared variables are stored in this region, as well as all occurrences of the functions as the program is running. There is enough storage room available for simple variables, but arrays can be of arbitrary size, so there is a limit to how large they can be...otherwise they could crowd out the other variables and executable code in the program.
+
+So where do large arrays get stored? In a region of memory called the heap, where space can be allocated when needed and then freed when you are done.
+
+Once we reserve space to hold data, we store the location of this data in a special variable called a pointer.
+
+We will talk about how to declare a variable to be a pointer first and then show pictorially what is happening.
+
+### Pointer Syntax
+
+When declaring a pointer that will "point" to an the memory address of some data type, you use the same rules of declaring variables and data types. The key difference is that there is an asterisk () between the data type and the identifier.
+
+
+
+    variableType identifier; // syntax to declare a pointer
+    int ptrx; // example of a pointer to an integer
+
+
+
+
+White space in C++ generally does not matter, so the following pointer declarations are identical:
+
+
+
+    SOMETYPE variablename;
+    SOMETYPE  variablename;
+    SOMETYPE variablename;
+
+
+
+
+However, the first declaration is preferable in each case, as it is clear to the programmer that the variable is in fact a pointer because the asterisk is closer to the variable name.
+
+
+
+## The Address Operator: One simple way to get the pointer information into a pointer
+
+Ok, now that we know how to declare pointers, how do we give them the address of where the value is going to be stored? One way to do this is to have a pointer refer to another variable by using the address operator, which is denoted by the ampersand symbol, &. The address operator does exactly what it indicates, namely it returns the address of either (1) a variable, (2) a symbolic constant or (3) a element in an array.
+
+The syntax is shown below, where varName stores the value, and varPntr stores the address of where varName is located: >
+
+
+
+    variableType value;// a variable to hold the value
+    variableType pointer = &value; // a variable to hold the address for varName
+
+
+
+Keep in mind that when declaring a pointer, the pointer needs to be of the same type as the variable or constant to which it points.
+
+![pointer](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/Pointer.gif)Expanding on the example above where varName has the value of 100.
+
+
+
+ **variable declaration for a single integer value**
+
+    int varName = 100;
+    int* varPntr;
+    varPntr = &varName;
+
+
+
+The results of this code may look like the diagram to the right.
+
+*
+
+## Accessing Values from SIMPLE Pointers
+
+So, once you have a pointer, how do you access the values associated with that location? You use the asterix before the pointer variable, which dereferences the pointer, meaning that it will find the location of the value stored where the pointer was referencing.
+
+In other words, varName and varPntr (note the asterix in front!) is the same thing in the code above.
+
+Let's extend the example above to output the value of a variable and its address in memory:
+
+
+
+    #include <iostream>
+    using namespace std;
+
+    int main( ) {
+     int varName = 100;
+     int varPntr = &varName;
+
+     cout << "the variable varName has the value: " << varName << endl;
+     cout << "varPntr says varName is located at: " << varPntr << endl;
+     cout << "the thing that varPntr is pointing to (varName) has the value: " << varPntr << "\n\n";
+
+     varName = 50;
+
+     cout << "After changing varName, its value is now: " << varName << endl;
+     cout << "varPntr is now pointing to a variable that has the value: " << varPntr << "\n\n";
+
+     varPntr = 2000;
+     cout << "After changing varPntr, varName now has: " << varName << endl;
+     cout << "varPntr is now pointing to a variable that has the value: " << varPntr << endl;
 
     }
 
-What we see is that at the core there are a few similarities, such as a
-main and the string “Hello World” However there is a lot more stuff
-around the edges that make it harder to see the core of the program. Do
-not worry! An important skill for a computer scientist is to learn what
-to ignore and what to look at carefully. You will soon find that there
-are some elements of Java that will fade into the background as you
-become used to seeing them. One thing that will help you is to learn a
-little bit about Java [sec:naming\_conventions] {Naming Conventions}.
 
-The first question you probably have about this little program is “How
-do I run it?” Running a Java program is not as simple as running a
-Python program. The first thing you need to do with a Java program is
-compile it. The first big difference between Java and Python is that
-Python is an interpreted language. We could run our Python programs in
-the Python **interpreter** and we were quite happy to do that. Java
-makes running programs a two step process. First we must type the hello
-world program into a file and save that file using the name
-``Hello.java`` The file name must be the same as the public class you
-define in the file. Once we have saved the file we **compile** it from
-the command line as follows:
 
-::
+Compiling and running the above code will have the program output the value in varName, what is in varPntr (the memory address of varName), and what value is located at that memory location. Thus the output is:
 
-    $ javac Hello.java
-    $ ls -l Hello.*
-    -rw-r--r--   1 bmiller  bmiller  391 Jul 19 17:47 Hello.class
-    -rw-r--r--   1 bmiller  bmiller  117 Jul 19 17:46 Hello.java
 
-The command ``javac`` compiles our java source code into compiled byte
-code and saves it in a file called ``Hello.class``. ``Hello.class`` is a
-binary file so you won’t learn much if you try to examine the class file
-with an editor. Hopefully you didn’t make any mistakes, but if you did
-you may want to consult the [sec:common\_mistakes] {Common Mistakes}
-section for helpful hints on compiler errors.
 
-Now that we have compiled our java source code we can run the compiled
-code using the ``java`` command.
+ the variable varName has the value: 100
+ varPntr says varName is located at: 0x22ff7c
+ the thing that varPntr is pointing to (varName) has the value: 100
 
-::
+ After changing varName, its value is now: 50
+ varPntr is now pointing to a variable that has the value: 50
 
-    $ java Hello
-    Hello World!
-    $
+ After changing varPntr, varName now has: 2000
+ varPntr is now pointing to a variable that has the value: 2000
 
-Now you may be wondering what good is that extra step? What does
-compiling do for us? There are a couple of important benefits we get
-from compiling:
 
--  Early detection of errors
 
--  Faster Program Execution
+The second output sentence is the address of varName, which would most likely be different if you run the program on your machine.
 
-The job of the compiler is to turn your java code into language that the
-Java Virtual Machine (JVM) can understand. We call the code that the JVM
-understands **byte code**. The JVM interprets the byte code much like
-the Python interpreter interprets your Python. However since byte code
-is much closer to the native language of the computer it can run faster.
+<div class="indent">WARNING What happens if you forget the asterix when assigning a value to a pointer and had the following instructions instead?
 
-When the compiler does the translation it can find many different kinds
-of errors. For example if you make a typo the compiler will find the
-typo and point it out to you before you ever run the program. We will
-look at some examples of compiler errors shortly. Chances are you will
-create some on your own very soon too.
 
-Now that we have run our hello world program, lets go back and look at
-it carefully to see what we can learn about the Java language. This
-simple example illustrates a few very important rules:
 
-1. Every Java program must define a class, all code is inside a class.
+    varPntr = 2000;
+    // Notice that I forgot the asterix, so varPntr is now referring
+    // to position 2000 in memory, whatever happens to be there
+    cout << "After changing varPntr, varName now has: " << varName << endl;
+    cout << "varPntr is now pointing to a variable that has the value: " << varPntr << endl;
 
-2. Everything in Java must have a type
 
-3. Every Java program must have a function called
-   ``public static void main(String[] args)``
 
-Lets take the hello world example a line at a time to see how these
-rules are applied. On line 1 we see that we are declaring a class called
-Hello. As rule 1 says all Java code resides inside a class. Unlike
-Python where a program can simply be a bunch of statements in a file,
-Java programs must be inside a class. So, we define a class, ``Hello``
-is not a very useful class it has no instance variables, and only one
-method. You will also notice the curly brace ``{`` In Java blocks of
-code are identified by pairs of curly braces. The block starts with a
-``{`` and ends with a ``}``. You will notice that I indented my code
-that followed the left brace, but in Java this is only done by
-convention it is not enforced.
+### This is BAD BAD!
 
-On the next line we start our method definition. The name of this method
-is:
+![bad pointer](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/BadPointer.gif) If your compiler does not catch that error (the one for this class may), the first cout instruction outputs
 
-::
 
-        public static void main(String[] args)!
 
-Everything on this line is significant, and helps in the identification
-of this method. For example the following lines look similar but are in
-fact treated by Java as completely different methods:
+ After changing varPntr, varName now has: 50
 
-    -  ``public void main(String[] args)``
 
-    -  ``public static void main(String args)``
 
-    -  ``public static void main()``
+which is expected because you changed where varPntr pointing to and NOT the contents of where it is pointing.
 
-    -  ``void main(String args)``
+The second cout instruction is a disaster because (1) You don't know what is stored in location 2000 in memory, and (2) that location is outside of your segment (area in memory reserved for your program), so the operating system will jump in with a message about a "segmentation fault". Although such an error message looks bad, a "seg fault" is in fact a helpful error because unlike the elusive logical errors, the reason is fairly localized.
 
-Just digging in to this one line will take us deep into the world of
-Java, so we are going to start digging but we are not going to dig too
-deeply right away. Much of what could be revealed by this one line is
-better understood through other examples, so be patient.
 
-The first word, **public** indicates to the Java compiler that this is a
-method that anyone can call. We will see that Java enforces several
-levels of security on the methods we write, including **public**,
-**protected**, and **private** methods.
 
-The next word, **static** tells Java that this is a method that is part
-of the class, but is not a method for any one instance of the class. The
-kind of methods we typically wrote in Python required an instance in
-order for the method to be called. With a static method, the object to
-the left of the . is a class, not an instance of the class. For example
-the way that we would call the ``main`` method directly is:
-``Hello.main(parameter1)``. For now you can think of static methods the
-same way you think of methods in Python modules that don’t require an
-instance, for example the math module contains many methods: sin, cos,
-etc. You probably evaluated these methods using the names
-``math.cos(90)`` or ``math.sin(60)``.
+## The Null pointer; another simple way to get the pointer information into a pointer
 
-The next word, ``void`` tells the Java compiler that the method ``main``
-will not return a value. This is roughly analogous to omitting the
-return statement in a Python method. In other words the method will run
-to completion and exit but will not return a value that you can use in
-an assignment statement. As we look at other examples we will see that
-every Java function must tell the compiler what kind of an object it
-will return. This is in keeping with the rule that says everything in
-Java must have a type. In this case we use the special type called
-``void`` which means no type.
+The null pointer points to nothing and is often denoted by 0 or the keyword null. The null pointer is often used in conditions and/or in logical operations.
 
-Next we have the proper name for the method: ``main``. The rules for
-names in Java are similar to the rules in Python. Names can include
-letters, numbers, and the ``_``. Names in Java must start with a letter.
+The following example demonstrates how the null pointer works. The variable ptrx initially has the address of x when it is declared. On the first iteration of the loop, it is assigned the value of zero (i.e. null) thereby ending the loop:
 
-Finally we have the parameter list for the method. In this example we
-have one parameter. The name of the parameter is ``args`` however,
-because everything in Java must have a type we also have to tell the
-compiler that the value of ``args`` is an array of strings. For the
-moment You can just think of an array as being the same thing as a list
-in Python. The practical benefit of declaring that the method main must
-accept one parameter and the parameter must be a an array of strings is
-that if you call ``main`` somewhere else in your code and and pass it an
-array of integers or even a single string, the compiler will flag it as
-an error.
 
-That is a lot of new material to digest in only a single line of Java.
-Lets press on and look at the next line:
-``System.out.println("Hello World!");``. This line should look a bit
-more familiar to you. Python and Java both use the dot notation for
-finding names. In this example we start with ``System``. System is a
-class. Within the system class we find the object named ``out``. The
-``out`` object is the standard output stream for this program. Having
-located the ``out`` object Java will now call the method named
-``println(String s)`` on that object. The ``println`` method prints a
-string and adds a newline character at the end. Anywhere in Python that
-you used the ``print`` function you will use the ``System.out.println``
-method in Java.
 
-Now there is one more character on this line that is significant and
-that is the ``;`` at the end. In Java the ``;`` signifies the end of a
-statement. Unlike Python where statements are almost always only one
-line long java statements can spread across many lines. The compiler
-knows it has reached the end of a statement when it encounters a ``;``.
-This is a very important difference to remember. In Java the following
-statements are all legal and equivalent. I would not encourage you to
-write your code like this, but you should know that it is legal.
+    #include <iostream>
+    using namespace std;
 
-::
+    int main( ) {
+     int x = 12345;
+     int ptrx = &x;
 
-        System.out.println("Hello World");
-        System.out.println("Hello World")
-        ;
-        System.out.println
-            (
-             "Hello World"
-            )     ;
-        System.
-          out.
-            println("Hello World")
-            ;
+     while( ptrx ) {
+     cout << "Pointer ptrx points to something\n";
+     ptrx = 0;
+     }
 
-The last two lines of the hello world program simply close the two
-blocks. The first or outer block is the class definition. The second or
-inner block is the function definition.
+     cout << "Pointer ptrx points to nothing!\n";
+    }
 
-If we wanted to translate the Java back to Python we would have
-something like the following class definition.
 
-::
 
-    class Hello(object):
-        @staticmethod
-        def main(args):
-            print("Hello World!")
 
-Notice that we used the decorator ``@staticmethod`` to tell the Python
-interpreter that ``main`` is going to be a static method. The impact of
-this is that we don’t have to, indeed we should not, use ``self`` as the
-first parameter of the main method! Using this definition we can call
-the main method in a Python session like this:
+Helpful Tip: The null pointer becomes very useful when you must test the state of a pointer, such as whether the assignment to an address was valid or not.
 
-::
 
-    >>> Hello.main("")
-    Hello World!
-    >>>
+
+## Dynamically Allocated 1D Arrays
+
+In other assignments, you have worked with statically allocated arrays. This technique has the advantage that it is easier to implement, but it suffers from the fact that (1) you need to know the size when the program was compiled, which is sometimes a very bad guess, and (2) the size of the array cannot change, which is VERY limiting.
+
+   If your program does not use all the space you saved for an array, it is wasting space.
+   If the array needs to be larger, you are out of luck.
+
+Dynamic memory allocation for arrays enables the program to allocate exactly the amount of space needed when it is needed.
+
+### The new Operator
+
+The key here is that the address operator (the ampersand detailed above) is NOT the only operator that you can use to assign an address to a pointer. In C++, there is the new operator that allocates a block of space in memory for a data type (built-in or user defined) and returns a pointer to that block of data.
+
+If the new operator is for a pointer to an array, the returned address is to the first element. The rest of the array can be accessed using indexing as in the case with statically allocated arrays.
+
+Suppose you want to create an integer array of a size that is input from the user. A sample sequence of instructions could be as follows:
+
+1.  Declare the array as a pointer with no initial address (also the variable to hold the number of elements). Note that the value in array is garbage and invalid:
+
+
+
+    int array;
+    int size;
+
+
+
+2.  Get input from the user on the number of elements:
+
+
+
+    cout << "Size? ";
+    cin >> size;
+
+
+
+
+3.  Use the new operator to create the array with size elements:
+
+
+
+    array = new int[size];
+
+
+
+If the new operator is successful, the value of array is not null. If, on the other hand, something went wrong, then array would have the value null.
+
+A common way to check program execution is to include statements that see if allocation succeeds and warns the user or aborts the program when it fails:
+
+
+
+    void worked() {
+     int array = new int[size];
+     if( array == NULL ) {
+     cout << "new operator for array failed!\n";
+     exit(1);
+     }
+    }
+
+
+
+
+WARNING:
+
+1.  The new operator finds an essentially arbitrary area in memory to hold the allocated array, so you cannot assume to know what the address is, even between two consecutive runs of the program!
+2.  If you invoke the new operator twice on the same pointer variable without storing the value of the address on the first call, the block of data you allocated will be lost:
+
+
+
+    array = new int[size]; // array now holds (0xADDRESS), the address of an array
+    array = new int[size]; // array now holds (0xHEXNUM), a different address for the array
+
+
+
+Pictorally, it looks like this:
+
+First call to new
+
+![oops 1](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/oops_Allocation1.gif)
+
+Second call to new
+
+![oops 2](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/oops_Allocation2.gif)
+
+Once this happens, the block of memory starting at 0xADDRESS is "lost" because the reference to that address is gone. By the way, repeated errors like this (such as in a loop) will result in more and more of memory reserved and not used... too much can crash your machine!
+
+### Delete Operator
+
+The natural counterpart to this allocation is "deallocation", where memory that was reserved for the variable is freed and allowed to be used by other programs if necessary. The delete operator is used in front of a pointer to free up the address in memory to which the pointer is pointing:
+
+
+
+    delete array;
+
+
+
+Why is the delete operator needed? Any allocation of memory needs to be properly deallocated or a phenomena called a **memory leak** may occur. When your program ends without deleting dynamically allocated variables, the computer still will think that the memory taken up by these variables is still used. Because your program is no longer running, however, this occupied space is used by no one, so it "leaked" and it lost. When you run your program again and it attempts to allocate space for variables, it will take space from the memory that is left.
+
+If either the variable takes a lot of space or you run your program many times, it is possible run out of free space, again, crashing your computer.
+
+Therefore, it is a good practice that every time you use the new operator in your program to allocated space for a variable, use the delete operator to free that memory before the program ends. POINTERS:
+
+1.  The delete operator can be used to both "delete" a pointer to an address returned by a call to the new operator and to "delete" a null pointer. Depending on how the compiler was designed, trying to delete the pointer to the same address location more than once can result in a runtime error. This implementation protects the programmer from making a common mistake of telling the computer to "delete" something that does not exist.
+2.  The new and delete operators do not have to be used in conjunction with each other within the same function or block of code. A good practice to start now is to define separate member functions of a class using dynamically allocated variables to perform these operations. The destructor of the class is a typical place to put the delete statements.
+
+
+
+## Dynamically Allocated 2D (or more dimension) Arrays
+
+One way to dynamically allocate a two-dimensional array (often called a matrix) involves declaring a dynamically allocated array like above, but rather than having the array store integers, it stores pointers to other arrays.
+
+Yeah, a mind-bender, is it not?
+
+![double](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/doubleAllocStage1.gif) The syntax for a 2D array of integers is:
+
+
+
+    int  variableName;
+    // Declare a pointer that references an array of pointers.
+
+
+
+To allocate space for this kind of structure, the first step is to declare and allocate the array that will eventually contain the pointers:
+
+
+
+    int size = 100;
+
+    int twoDArray = new int [size];
+
+
+
+This code says "create an array of 100 spots to hold pointers to integers", and is pictorially shown to the right.![double](http://faculty.berea.edu/nakazawam/csc236/assignments/Images/doubleAllocStage2.gif) The next stage is to allocate space for each row, which requires a loop of some kind to iterate through the rows and allocate as necessary. Suppose you want each row to have 30 elements. The code can look like:
+
+
+
+    for (int i=0; i<size; i++ ) {
+     twoDArray[i] = new int[30];
+    }
+
+
+
+This code will create 100 individually allocated rows capable of storing 30 items and is pictorally shown to the right.
+
+Note that each row is allocated in a potentially great distance from the ones before or after it, which is a difficult concept to come to terms with initially.
+
+### Deleting 2D Arrays
+
+Deallocating matrices involves freeing up all the rows individually, followed by freeing up the array that holds the rows in the first place.
+
+The code to delete the array allocated above is in a sense the opposite operation, in which each row array is deleted before the main one is:
+
+
+
+    for (int i=0; i<size; i++ ) {
+     delete twoDArray[i];
+    }
+    delete twoDArray[]; // now, delete the array of pointers
+
+
+
+### Accessing Array Elements
+
+Suppose that you wanted to output the contents of a dynamically allocated array. The syntax is identical to performing the same task on a static array. In the case of a 1D array, the code to output the contents may look like the following:
+
+
+
+    // assuming that the array myArray has been allocated with size
+    // elements and populated with values.
+    for( int i=0; i<size; i++ );
+     cout << myArray[i] << endl;
+    }
+
+
+
+Accessing the data in the matrix is exactly the same as with a statically allocated array. The code
+
+
+
+    twoDArray[40][25] = 50;
+
+
+
+essentially states to go to the 40th element in the first reference, which is a pointer, and then travel down the second pointer to the array itself in memory to find the 25th item in that array.
