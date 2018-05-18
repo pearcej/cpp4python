@@ -64,6 +64,7 @@ at them in the following order:
 
 Include
 ----
+Preprocessor directives in C++ appear as statements preceded by the hash sign #. These tell the preprocessor which file, header or library to make available to the compiler. For example, #include <iostream> will make sure that the iostream library is available at compile time. Here, the term header is used for a type of C++ file that contains definitions of functions and variables, but not the function implementations.
 
 You can think of the `#include` statement in C++ as working a little bit like the ``import...`` statement in Python. Python's `import` statement directly accesses the code written in another file while the `#include` statement in C++ copies the classes and functions from another file.
 
@@ -73,13 +74,12 @@ In python, an import statement looks like:
     import classname
 
 
-In C++ there is no explicit use of the word "import" however it allows us to import using the keyword `include`.
+There are two ways to use #include in C++:
 
-    #include <iostream>
+    #include <...>
+    #include "..."
 
-another example is:
-
-    #include "math.h"
+Angle-brackets are used to include libraries or headers provided by the implementation, such as the headers in the standard library (iostream, string, etc.), and quotes are used for headers and files not provided by the implementation.
 
 Declaring Variables
 -----
@@ -550,7 +550,7 @@ Either technique gives you access the value of the variable.
 
     	cout << int_a << " is stored at " << ptr_a << endl;
     	cout << int_b << " is stored at " << ptr_b << endl << endl;
-    	
+
     	int_a = 10;
     	*ptr_b = 15; //Dereferencing a pointer using *, accessing the int by it's address
 
