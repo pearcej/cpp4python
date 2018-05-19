@@ -8,15 +8,13 @@ C++ for Python Programmers
    preface
    introduction
    whylearncpp
-   whylearnjava
    firstjavaprogram
-   javadatatypes
+   firstcppprogram
+   cppdatatypes
    conditionals
-   conditionals_old
    loopsanditeration
    definingclasses
    namingconventions
    commonmistakes
    moredocumentation
    backmatter
-   
