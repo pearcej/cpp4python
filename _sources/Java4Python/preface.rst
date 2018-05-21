@@ -12,7 +12,7 @@ examine the strengths, weaknesses and differences between those two
 languages.
 
 This book does not attempt to replace the many good C++ reference books
-that are available, in fact at Berea College we use this in our Data Structures course 
+that are available, in fact at Berea College we use this in our Data Structures course
 along with other C++ resources. Please feel free to use this book for
 yourself, or if it fits a class you are teaching you are welcome to use
 this as a resource for your own class.
@@ -27,26 +27,34 @@ Jan Pearce `pearcej@berea.edu <mailto://pearcej@berea.edu>`_ May, 2018.
 Licensing
 =========
 
-The original Java version of this book by Brad Miller was licensed under a
-
-|image|
-Creative Commons Attribution 3.0
-United States License. See http://creativecommons.org
-
-.. |image| IMAGE:: somerights20.png
-
 .. raw:: html
 
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-  <img alt="Creative Commons License" style="border-width:0"
-  src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
-  <br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
-  This version,
-  <em>Problem Solving with Algorithms and Data Structures using C++</em>
-  </span>, by Brad Miller and Jan Pearce is licensed under a
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-  Creative Commons Attribution-ShareAlike 4.0 International
-  License</a>.
+   <div style="width: 500px; margin-left: auto; margin-right: auto;">
+   <a rel="license" href="https://creativecommons.org/licenses/by/3.0/">
+   <img alt="Creative Commons License" style="border-width:0; display:block; margin-left:
+   auto; margin-right:auto;" src="https://licensebuttons.net/l/by/3.0/88x31.png" /></a>
+   <br />
+   The original Java version of this book
+   <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
+   property="dct:title" rel="dct:type">Java for Python Programmers</span> by
+   <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
+   Bradley N. Miller </span> was licensed under a
+   <a rel="license" href="https://creativecommons.org/licenses/by/3.0/">
+   Creative Commons Attribution 3.0 License</a>.
+   <hr></div>
+
+
+   <div style="width: 500px; margin-left: auto; margin-right: auto;">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"">
+   <img alt="Creative Commons License" style="border-width:0; display:block; margin-left:
+   auto; margin-right:auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+   <br /> This C++ version <span xmlns:dct="http://purl.org/dc/terms/"
+   href="http://purl.org/dc/dcmitype/InteractiveResource"
+   property="dct:title" rel="dct:type">C++ for Python Programmers</span> by
+   <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
+   Bradley N. Miller and Janice L Pearce</span> is licensed under a
+   <a rel="license" href="https://creativecommons.org/licenses/by/3.0/">
+   Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
 
   <!---
 
