@@ -8,11 +8,12 @@ C++ for Python Programmers
    preface
    introduction
    whylearncpp
-   firstjavaprogram
    firstcppprogram
-   cppdatatypes
+   cppprimdatatypes
    conditionals
    loopsanditeration
+   cppcompdatatypes
+   filehandling
    definingclasses
    namingconventions
    commonmistakes

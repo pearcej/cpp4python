@@ -36,7 +36,7 @@ Licensing
    <br />
    The original Java version of this book
    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
-   property="dct:title" rel="dct:type">Java for Python Programmers</span> by
+   property="dct:title" rel="dct:type"><em>Java for Python Programmers</em></span> by
    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
    Bradley N. Miller </span> was licensed under a
    <a rel="license" href="https://creativecommons.org/licenses/by/3.0/">
@@ -45,12 +45,12 @@ Licensing
 
 
    <div style="width: 500px; margin-left: auto; margin-right: auto;">
-   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
    <img alt="Creative Commons License" style="border-width:0; display:block; margin-left:
    auto; margin-right:auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
    <br /> This C++ version <span xmlns:dct="http://purl.org/dc/terms/"
    href="http://purl.org/dc/dcmitype/InteractiveResource"
-   property="dct:title" rel="dct:type">C++ for Python Programmers</span> by
+   property="dct:title" rel="dct:type"><em>C++ for Python Programmers</em></span> by
    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
    Bradley N. Miller and Janice L Pearce</span> is licensed under a
    <a rel="license" href="https://creativecommons.org/licenses/by/3.0/">
