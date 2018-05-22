@@ -38,8 +38,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Java for Python Programmers'
-copyright = u'2013 Brad Miller'
+project = u'C++ for Python Programmers'
+copyright = u'2018 Janice L Pearce'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -97,7 +97,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Java for Python Programmers",
+    'navbar_title': "C++ for Python Programmers",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Chapters",
@@ -143,10 +143,10 @@ html_theme_path = ["./_sources/_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Java for Python Programmers'
+html_title = 'C++ for Python Programmers'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='Java for Python Programmers'
+html_short_title ='C++ for Python Programmers'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -208,7 +208,7 @@ html_show_sphinx = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'JavaforPythonProgrammersdoc'
+htmlhelp_basename = 'CppForPythonProgrammersdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -227,8 +227,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'JavaForPythonProgrammers.tex', u'Java for Python Programmers Documentation',
-   u'Brad Miller', 'manual'),
+  ('index', 'CppForPythonProgrammers.tex', u'C++ for Python Programmers Documentation',
+   u'Jan Pearce and Brad Miller', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -257,8 +257,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'javaforpythonprogrammers', u'Java for Python Programmers documentation',
-     [u'Brad Miller'], 1)
+    ('index', 'CppForPythonprogrammers', u'C++ for Python Programmers documentation',
+     [u'Jan Pearce and Brad Miller'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -273,7 +273,7 @@ man_pages = [
 texinfo_documents = [
   ('index', 'PythonCourseware',
    u'Python Courseware Project',
-   u'Brad Miller, David Ranum',
+   u'Jan Pearce, Brad Miller, David Ranum',
    'PythonCoursewareProject', 'One line description of project.', 'Miscellaneous'),
 ]
 
