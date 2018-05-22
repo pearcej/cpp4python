@@ -1,5 +1,5 @@
-Lets look at a C++ program
----------------------------
+Let's look at a C++ program
+==========================
 
 A time honored tradition in Computer Science is to write a program
 called “hello world.” The “hello world” program is simple and easy.
@@ -93,7 +93,7 @@ of errors. For example if you make a typo or forget to declar a variable
 look at some examples of compiler errors shortly. Chances are you may
 create some on your own very soon too.
 
-Using libraries
+Using headers and libraries
 ----
 Preprocessor directives in C++ appear as statements preceded by the hash sign #.
 These tell the preprocessor which file, header or library to make available to the compiler.
@@ -172,7 +172,7 @@ input device (usually the keyboard) relatively easy. In our case we simply want 
 user to type in a number at the command line, so we call the constructor and pass the number to the ``cin``.
 The command `cin` is similar to ``cout`` except of course it is used for input.
 We will talk about the reasons why this
-is so later when we talk in depth about C++ streams.
+is the case later when we talk in more depth about C++ streams and file handling.
 
 
 
