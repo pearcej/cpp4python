@@ -19,7 +19,7 @@ except ImportError:
 
 
 ######## CHANGE THIS ##########
-project_name = "java4python"
+project_name = "cpp4python"
 ###############################
 
 master_url = None
@@ -36,7 +36,7 @@ if master_url is None:
         doctrees = './build/{}/doctrees'.format(project_name)
 
 master_app = 'runestone'
-serving_dir = "./build/java4python"
+serving_dir = "./build/cpp4python"
 dest = "../../static"
 
 options(
@@ -58,7 +58,10 @@ options(
             'use_services': 'true',
             'python3': 'true',
             'dburl': 'postgresql://bmiller@localhost/runestone',
-            'basecourse': 'java4python',
+            'basecourse': 'cpp4python',
+            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
+            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
+            'proxy_uri_files': '/jobe/index.php/restapi/files/'
         }
 
     )
