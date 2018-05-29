@@ -1,18 +1,26 @@
 Let's look at a C++ program
-==========================
+===========================
 
 A time honored tradition in Computer Science is to write a program
 called “hello world.” The “hello world” program is simple and easy.
 There are no logic errors to make, so getting it to run relies only on
-understanding the syntax. To be clear lets look at a “complicated”
-version of the hello world program in Python:
+understanding the syntax. Let's look at an easy version of "hello world"
+in Python:
 
-.. activecode:: hellopy
+.. activecode:: hellopysimp
   :language: python
 
-    def main():
-        print("Hello World!")
-    main()
+  print("Hello World!")
+
+Now, lets look at a more “complicated”
+version of the "hello world" program in Python:
+
+.. activecode:: hellopycomp
+  :language: python
+
+  def main():
+      print("Hello World!")
+  main()
 
 Remember that we can define this program right at the Python command
 line and then run it:
@@ -30,12 +38,12 @@ Now lets look at the same program written in C++:
 
     #include <iostream>
 
-    int main() {
-      std::cout << "Hello World!\n";
-      return 0;
+    int main(){
+        std::cout << "Hello World!\n";
+        return 0;
     }
 
-This can alternatively be written as to allow
+This can alternatively be written as follows to allow
 better facilitate standard input and output:
 
 .. activecode:: hellocpp
@@ -44,19 +52,19 @@ better facilitate standard input and output:
     #include <iostream>
     using namespace std;
 
-    int main() {
-      cout << "Hello World!\n";
-      return 0;
+    int main(){
+        cout << "Hello World!\n";
+        return 0;
     }
 
 What we see is that at the core there are a few similarities, such as the
 main function and the string “Hello World” However there is a lot more
-stuff  around the edges that make it harder to see the core of the program. Do
+stuff around the edges that make it harder to see the core of the program. Do
 not worry! An important skill for a computer scientist is to learn what
 to ignore and what to look at carefully. You will soon find that there
-are some elements of Java that will fade into the background as you
+are some elements of C++ that will fade into the background as you
 become used to seeing them. One thing that will help you is to learn a
-little bit about C++.
+little bit more about C++.
 
 [//]: # (TODO: Add link to section on Naming Conventions)
 
@@ -65,8 +73,10 @@ do I run it?” Running a C++ program is not as simple as running a
 Python program. The first thing you need to do with a C++ program is
 compile it. The first big difference between C++ and Python is that
 Python is an interpreted language. We could run our Python programs in
-the Python **interpreter** and we were quite happy to do that. C++
-makes running programs a two step process. First we must type the hello
+the Python **interpreter**, and we were often quite happy to do that. C++
+makes running programs a two step process.
+
+First, we must type the hello
 world program into a file and save that file using a name like
 ``hello.cpp`` Once we have saved the file we **compile** it either from
 the command line or from an IDE.
@@ -77,7 +87,7 @@ from compiling:
 
 -  Early detection of errors
 
--  Faster Program Execution
+-  Faster program execution
 
 The job of the compiler is to turn your C++ code into language that your
 machine can understand. We call the code that the computer
@@ -87,50 +97,58 @@ However, since machine code is much closer to the native language of the
 computer, it can run faster.
 
 When the compiler does the translation it can find many different kinds
-of errors. For example if you make a typo or forget to declar a variable
- the compiler will find these and point them out to you before you ever
- run the program. We will
-look at some examples of compiler errors shortly. Chances are you may
-create some on your own very soon too.
+of errors. For example if you make a typo or forget to declare a variable
+the compiler will find these and point them out to you before you ever
+run the program. We will look at some examples of compiler errors shortly.
+Chances are you may create some on your own very soon too.
 
 Using headers and libraries
-----
+---------------------------
+
 Preprocessor directives in C++ appear as statements preceded by the hash sign #.
 These tell the preprocessor which file, header or library to make available to the compiler.
-For example, #include <iostream> will make sure that the iostream library is available at compile time.
-Here, the term header is used for a type of C++ file that contains definitions of functions and variables,
+For example, #include <iostream> will make sure that the iostream library is available
+at compile time.
+Here, the term header is used for a type of C++ file that contains definitions
+of functions and variables,
 but not the function implementations.
 
-You can think of the `#include` statement in C++ as working a little bit like the ``import...``
-statement in Python. Python's `import` statement directly accesses the code written in another file
-while the `#include` statement in C++ copies the classes and functions from another file.
+You can think of the `#include` statement in C++ as working a little bit like
+the ``import ...`` statement in Python.
+Python's `import` statement directly accesses the code written in another file
+while the ``#include`` statement in C++ copies classes and functions from another file.
 
 In Python, an import statement looks like:
 
-    import classname
+::
 
-There are two ways to use #include in C++:
+  import classname
 
-    #include <...>
+There are two ways to use ``#include`` in C++:
 
-    #include "..."
+::
 
-Angle-brackets are used to include libraries or headers provided by the implementation, such as the
-headers in the standard library (iostream, string, etc.), and quotes are used for headers and files
-not provided by the implementation.
+  #include <libraryname>
+
+  #include "filename"
+
+Angle-brackets are used to include libraries or headers provided by the implementation,
+such as the
+headers in the standard library (iostream, string, etc.), and quotes are used for
+headers and files not provided by the implementation.
 
 Declaring Variables
------
+-------------------
 
 Here is where we run into one of the most important differences between
 C++ and Python. Python is a **dynamically typed** language. In a
-dynamically typed language a named variable can refer to any kind of object at
+dynamically typed language, a named variable can refer to any kind of object at
 any time. When the name  is used, the interpreter figures out what
 kind of object it is. C++ is a **statically typed** language. In a
 statically typed language the association between a variable and the
 type of object the variable can refer to is determined when the variable
-is **declared**. Once the declaration is made it is an error for a
-variable to refer to an object of any other type.
+is **declared**. Once the variable declaration is made, it is an error for a
+variable to try to use that variable to reference anything of any other type.
 
 In the example above, lines 5 and 6 contain variable declarations.
 Specifically we are saying that ``fahr`` and ``cel`` are going to
@@ -165,27 +183,28 @@ variable before you use it. There is much more to say about the static
 typing of C++, but for now, this is enough.
 
 Standard Input and Output
------
+-------------------------
 
-In C++ `cin`, which stands for console in, makes getting an input from the standard
+In C++ ``cin``, which stands for "console input", makes getting an input from the standard
 input device (usually the keyboard) relatively easy. In our case we simply want to ask the
-user to type in a number at the command line, so we call the constructor and pass the number to the ``cin``.
-The command `cin` is similar to ``cout`` except of course it is used for input.
+user to type in a number, so we call the constructor and
+pass the number to the ``cin``.
+The command ``cin`` is similar to ``cout`` except of course it is used for input.
 We will talk about the reasons why this
 is the case later when we talk in more depth about C++ streams and file handling.
 
-
-
-
-
 Summary
-------
+-------
 
 Now that we have run our hello world program, lets go back and look at
 it carefully to see what we can learn about the C++ language. This
 simple example illustrates a few very important rules:
 
-1. Everything in C++ must be declared with a specific type.
+  #. Everything in C++ must be declared as a specific type of object or variable.
 
-2. Every C++ program must have a function which begins as ``int main()``
-and returns 0 when sucessfully completed.
+  #. Every C++ program must have a function which begins as ``int main()``
+  and returns 0 when sucessfully completed.
+
+  #. White space is moslty meaningless in C++, but all C++ Code blocks must be
+  surrounded by curly brackets {}, rather than using indentation to delineate
+  blocks as in Python.

@@ -1,9 +1,14 @@
-.pngIntroduction to Pointers
+Introduction to Pointers
 ========================
 
-The kind of variables we have already used are really identifiers that refer to where in memory we store information. We can store things as basic as integers and double precision floating point numbers, or things more complicated as structure and classes. Whenever we want the information, we can simply use the identifier to access it.
+The kind of variables we have already used are really identifiers that refer to
+where in memory we store information. We can store things as basic as integers
+and double precision floating point numbers, or things more complicated as structure
+and classes. Whenever we want the information, we can simply use the identifier
+to access it.
 
-Let's look at a simple example of storing an integer. The following code declares a variable called varName that has in it a value of 100.
+Let's look at a simple example of storing an integer. The following code declares
+a variable called varName that has in it a value of 100.
 
 ::
 
@@ -26,19 +31,32 @@ When we want to output the value to the console, we use the variable name to do 
 
 
 
-An important question is: Is this method of declaring variables sophisticated enough to handle all the problems we want to solve using programs?
+An important question is: Is this method of declaring variables sophisticated
+enough to handle all the problems we want to solve using programs?
 
-The answer to that question is due to the way that arrays are stored in memory. Although the full details are complicated; the simple answer is that each program is given a specific amount of memory space to run. All statically allocated and locally declared variables are stored in this region, as well as all occurrences of the functions as the program is running. There is enough storage room available for simple variables, but arrays can be of arbitrary size, so there is a limit to how large they can be...otherwise they could crowd out the other variables and executable code in the program.
+The answer to that question is due to the way that arrays are stored in memory.
+Although the full details are complicated; the simple answer is that each program
+is given a specific amount of memory space to run. All statically allocated and
+locally declared variables are stored in this region, as well as all occurrences
+of the functions as the program is running. There is enough storage room available
+for simple variables, but arrays can be of arbitrary size, so there is a limit to
+how large they can be...otherwise they could crowd out the other variables and
+executable code in the program.
 
-So where do large arrays get stored? In a region of memory called the heap, where space can be allocated when needed and then freed when you are done.
+So where do large arrays get stored? In a region of memory called the heap, where
+space can be allocated when needed and then freed when you are done.
 
-Once we reserve space to hold data, we store the location of this data in a special variable called a pointer.
+Once we reserve space to hold data, we store the location of this data in a special
+variable called a pointer.
 
-We will talk about how to declare a variable to be a pointer first and then show pictorially what is happening.
+We will talk about how to declare a variable to be a pointer first and then show
+pictorially what is happening.
 
 Pointer Syntax
 --------------
-When declaring a pointer that will "point" to an the memory address of some data type, you use the same rules of declaring variables and data types. The key difference is that there is an asterisk () between the data type and the identifier.
+When declaring a pointer that will "point" to an the memory address of some data
+type, you use the same rules of declaring variables and data types. The key
+difference is that there is an asterisk () between the data type and the identifier.
 
 ::
 
@@ -46,20 +64,22 @@ When declaring a pointer that will "point" to an the memory address of some data
     int ptrx; // example of a pointer to an integer
 
 
-
-
-White space in C++ generally does not matter, so the following pointer declarations are identical:
+White space in C++ generally does not matter, so the following pointer declarations
+are identical:
 
 ::
 
     SOMETYPE variablename;
+
     SOMETYPE  variablename;
-    SOMETYPE variablename;
+    
+    SOMETYPE
+    variablename;
 
 
-
-
-However, the first declaration is preferable in each case, as it is clear to the programmer that the variable is in fact a pointer because the asterisk is closer to the variable name.
+However, the first declaration is preferable in each case, as it is clear to the
+programmer that the variable is in fact a pointer because the asterisk is closer
+to the variable name.
 
 
 
