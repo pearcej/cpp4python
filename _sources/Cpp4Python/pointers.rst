@@ -72,7 +72,7 @@ are identical:
     SOMETYPE variablename;
 
     SOMETYPE  variablename;
-    
+
     SOMETYPE
     variablename;
 
@@ -421,10 +421,10 @@ Accessing the data in the matrix is exactly the same as with a statically alloca
 
 essentially states to go to the 40th element in the first reference, which is a pointer, and then travel down the second pointer to the array itself in memory to find the 25th item in that array.
 
-.. |assign| IMAGE:: images\Assign.png
-.. |badpointer| IMAGE:: images\BadPointer.png
-.. |double1| IMAGE:: images\doubleAllocStage1.png
-.. |double2| IMAGE:: images\doubleAllocStage2.png
-.. |oops1| IMAGE:: images\oops_Allocation1.png
-.. |oops2| IMAGE:: images\oops_Allocation2.png
-.. |pointer| IMAGE:: images\Pointer.png
+.. |assign| IMAGE:: images\\Assign.png
+.. |badpointer| IMAGE:: images\\BadPointer.png
+.. |double1| IMAGE:: images\\doubleAllocStage1.png
+.. |double2| IMAGE:: images\\doubleAllocStage2.png
+.. |oops1| IMAGE:: images\\oops_Allocation1.png
+.. |oops2| IMAGE:: images\\oops_Allocation2.png
+.. |pointer| IMAGE:: images\\Pointer.png

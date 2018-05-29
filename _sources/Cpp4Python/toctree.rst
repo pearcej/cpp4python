@@ -1,5 +1,5 @@
 C++ for Python Programmers
-:::::::::::::::::::::::::::
+::::::::::::::::::::::::::
 
 .. toctree::
    :caption: C++ for Python Programmers
@@ -13,6 +13,7 @@ C++ for Python Programmers
    conditionals
    loopsanditeration
    cppcompdatatypes
+   pointers
    filehandling
    definingclasses
    namingconventions

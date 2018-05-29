@@ -33,7 +33,7 @@ line and then run it:
 
 Now lets look at the same program written in C++:
 
-.. activecode:: hellocpp
+.. activecode:: hellocppstd
     :language: cpp
 
     #include <iostream>
@@ -46,7 +46,7 @@ Now lets look at the same program written in C++:
 This can alternatively be written as follows to allow
 better facilitate standard input and output:
 
-.. activecode:: hellocpp
+.. activecode:: hellocppnamespace
     :language: cpp
 
     #include <iostream>
