@@ -1,5 +1,5 @@
 C++ Basic Data Types
-===============
+====================
 
 One of the great things about Python is that all of the basic data types
 are objects. Integers are objects, floating point numbers are objects,
@@ -12,7 +12,7 @@ Let's go back in time and look at another of our very early Python
 programs. Here is a simple Python function to convert a Fahrenheit
 temperature to Celsius.
 
-.. activecode:: tcpython
+.. activecode:: convertpy
     :language: python
 
     def TempConv():
@@ -24,7 +24,7 @@ temperature to Celsius.
 
 Next, lets look at the C++ Equivalent.
 
-.. activecode:: convert1
+.. activecode:: convertcpp
     :language: cpp
     :sourcefile: tempConv.cpp
     :stdin: 212
@@ -45,15 +45,52 @@ Next, lets look at the C++ Equivalent.
 
     int main() {
       TempConv();
-
       return 0;
     }
 
-There are several new concepts introduced in this example. We will look
-at them in the following order:
 
--  #include
 
--  Variable declaration
+Declaring Variables
+-------------------
 
--  Input/Output
+Here is where we run into one of the most important differences between
+C++ and Python. Python is a **dynamically typed** language. In a
+dynamically typed language, a named variable can refer to any kind of object at
+any time. When the name  is used, the interpreter figures out what
+kind of object it is. C++ is a **statically typed** language. In a
+statically typed language the association between a variable and the
+type of object the variable can refer to is determined when the variable
+is **declared**. Once the variable declaration is made, it is an error for a
+variable to try to use that variable to reference anything of any other type.
+
+In the C++ example above, lines 5 and 6 contain variable declarations.
+Specifically we are saying that ``fahr`` and ``cel`` are going to
+reference objects that are of type ``double``. This means that if we were to try an
+assignment like ``fahr = "xyz"`` the compiler would generate an error
+because ``"xyz"`` is a string and ``fahr`` is supposed to be a double.
+
+For Python programmers the following error is likely to be even more
+common. Suppose we forgot the declaration for ``cel`` and instead left
+line 6 blank. What would happen when we type ``gcc tempConv.cpp`` on
+the command line? We would get an error such as:
+
+::
+
+    exit status 1
+    main.cpp: In function 'void TempConv()':
+    main.cpp:11:3: error: 'cel' was not declared in this scope
+    cel = (fahr - 32.0) * 5.0/9.0;
+    ^~~
+
+When you see the first kind of error, where the symbol is on the left
+side of the equals sign it usually means that you have not declared the
+variable. If you have ever tried to use a Python variable that you have
+not initialized, the second error message will be familiar to you. The
+difference here is that we see the message before we ever try to test
+our program. More common error messages are discussed in the section
+[sec:common\_mistakes] {Common Mistakes}.
+
+The general rule in C++ is that you must decide what kind of a data type
+your variable is going to reference and then you must declare that
+variable before you use it. There is much more to say about the static
+typing of C++, but for now, this is enough.

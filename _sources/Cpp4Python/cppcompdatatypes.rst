@@ -1,59 +1,52 @@
 C++ Compound Data Types
-===============
-
-Strings
-------
-
-Strings are not supported directly in C++. You have to use the standard string
-header library, accessed by using:
-
- `#include <string>`
-
-However, with this library, strings in C++ and Python have many similarities.
-In Python, strings can be enclosed by either double or single quotes.
-In C++, double quotes must be used for strings, while single quotes are reserved for chars.
-Like Python, C++ strings
-are immutable. Manipulating strings in C++ is not quite as
-obvious since strings do not support indexing or slicing operators.
-That is not to say that you can’t index into a C++ string, you can. You
-can also pull out a substring just as you can with slicing. The
-difference is that C++ uses method calls where Python uses operators.
-
-THe following, table maps common Python string operations to their C++ counterparts. For the
-examples shown in the table we use a string variables called “str1” and “str2”.
-
-========================== ======================== =============================================================
-                    Python                     C++                                                   Description
-========================== ======================== =============================================================
-              ``str1[3]``               ``str1[3]``                             Return character in 3rd  position
-            ``len(str1)``         ``str1.length()``                               Return the length of the string
-       ``str1.find('x')``        ``str1.find('x')``                                Find the first occurrence of x
-          ``str1 + str2``           ``str1 + str2``                              Concatenate two strings together
-========================== ======================== =============================================================
+=======================
 
 Python Lists and C++ Arrays
 ----
 
 The primary compound structure for storing a mutable sequence of values in
-Python is the Python list. A Python list has flexibly size, so can be expanded
-and/or contracted as needed. C++ offers a similarly flexible data structure in the
+Python is the Python list. A Python list can be lengthened or shorened as needed.
+++ offers a similarly flexible data structure in the
 Standard Template Library called the vector. However, both the Python list and the
-C++ vector are implemented via underlying arrays.
+C++ vector are implemented via an underlying underlyingdata structure called an array.
 
 An array is a contiguous set of memory locations used to store a sequence of homogeneous data.
 i.e. the data in an array must all of the same data type.
-And, unless you choose to make your array dynamically allocated (more on that later),
-the size of the C++ array must be fixed when the array is declared. Arrays are important because they are designed to be fast.
+And, in C++ unless you choose to make your array dynamically allocated (more on that later),
+the size of the C++ array must be fixed when the array is declared.
+Arrays are important data structures because they are designed to be fast.
 
-C++ arrays use indexing similar to in Python. Indices begin at 0 and use square [] brackets.
+C++ arrays use indexing similar to in Python. Indices begin at 0 and access to each
+a given element uses square [] brackets.
 
 [//]: # (TODO: Rework following section using C++ specifics and no files)
 
 Lets look at another early Python program. We are going to read numbers
-from a file and produce a histogram that shows the frequency of the
-various numbers. The data file we will use has one number between 0 and
-9 on each line of the file. Here is a simple Python program that creates
+from the keyboard and produce a histogram that shows the frequency of the
+various numbers. Here is a simple Python program that creates
 and prints a histogram.
+
+.. activecode:: histopy
+    :language: python
+
+    def main():
+        count = [0]*10
+        data = open('test.dat')
+
+        for line in data:
+            count[int(line)] = count[int(line)] + 1
+
+        idx = 0
+        for num in count:
+            print(idx, " occured ", num, " times.")
+            idx += 1
+
+    9 8 4 5 3 5 2 1 5
+
+We will get output that looks like this:
+
+::
+
 
 .. activecode:: histopy
     :language: python
@@ -360,3 +353,46 @@ Either technique gives you access the value of the variable.
 
 More information about Pointers in C++ and their functionality can be found in the
 section on Pointers.
+
+
+Strings
+-------
+
+C++ supports two different types of strings. C-style strings, which are inherited from
+the C language, must be used for file names, and a more modern style of string, using
+the standard ``string`` header library has a lot more flexibility.
+
+A C-style string is sometimes called a null-terminated string because it is simply
+an array of characters that uses a null terminator (``\0`` or ASCII code 0).
+The null terminator is used to indicate the end of the actual string inside of a
+possibly longer ``char`` array.
+
+TODO: show usage or reference file-handling.
+
+Strings as we have come to know them in Python are not supported directly in C++.
+However, with the ``string`` header library, strings in C++ and Python have many
+similarities. Just use:
+
+  ``#include <string>``
+
+
+In Python, strings can be enclosed by either double or single quotes.
+In C++, double quotes must be used for strings, while single quotes are reserved for chars.
+Like Python, C++ strings
+are immutable. Manipulating strings in C++ is not quite as
+straightfoward as in Python since strings do not support indexing or slicing operators.
+That is not to say that you can’t index into a C++ string, you can. You
+can also pull out a substring just as you can with slicing. The
+difference is that C++ uses method calls where Python uses operators.
+
+THe following, table maps common Python string operations to their C++ counterparts. For the
+examples shown in the table we use a string variables called “str1” and “str2”.
+
+========================== ======================== =============================================================
+                    Python                     C++                                                   Description
+========================== ======================== =============================================================
+              ``str1[3]``               ``str1[3]``                             Return character in 3rd  position
+            ``len(str1)``         ``str1.length()``                               Return the length of the string
+       ``str1.find('x')``        ``str1.find('x')``                                Find the first occurrence of x
+          ``str1 + str2``           ``str1 + str2``                              Concatenate two strings together
+========================== ======================== =============================================================
