@@ -1,7 +1,7 @@
 Let's look at a C++ program
 ===========================
 
-A time honored tradition in Computer Science is to write a program
+A time honored tradition in computer science is to write a program
 called “hello world.” The “hello world” program is simple and easy.
 No logic errors are possible to make, so getting it to run relies only on
 understanding the syntax. Let's look at an easy version of "hello world"
@@ -50,7 +50,7 @@ better facilitate standard input and output:
     }
 
 What we see is that at the core there are a few similarities with the
-complicated Python version, such as the main() function and the string “Hello world”.
+complicated Python version, such as the ``main()`` function and the string “Hello world”.
 However, in C++ there is a lot more
 stuff around the edges that make it harder to see the core of the program. Do
 not worry! An important skill for a computer scientist is to learn what
@@ -123,10 +123,10 @@ There are two ways to use ``#include`` in C++:
   #include <libraryname>
   #include "filename"
 
-Here the angle-brackets <> are used to include libraries or headers provided by
+Here the angle-brackets ``<>`` are used to include libraries or headers provided by
 the implementation, such as the
 headers in the standard library (``iostream``, ``string``, etc.). The double
-quotes are used for headers and files not provided by the implementation.
+quotes ``"`` are used for headers and files not provided by the implementation.
 
 The main() function
 -------------------
@@ -134,20 +134,20 @@ The main() function
 Unlike Python, every C++ program **must** have a ``main()`` function which begins
 with ``int main()``.
 Here the ``int`` indicates that the return type of the ``main`` function will be
-an integer. The final line of the main C++ function is typically ``return 0``.
-Here the 0 (zero) is used to indicate successful completion of the ``main()``
-function. In case you are wondering why the integer 0 is returned, if you do error
+an integer. The final line of the ``main()`` C++ function is typically ``return 0``.
+Here the integer zero is used to indicate successful completion of the ``main()``
+function. In case you are wondering why an integer is returned, if you do error
 handling in C++, you can alternatively return an integer error code representing
 a specific error when it occurs.
 
-C++ functions and other C++ code blocks are grouped together using the curly {}
+C++ functions and other C++ code blocks are grouped together using the curly ``{}``
 brackets. These curly brackets are used much like tabbing is used in Python.
 Many people also use tabbing in C++ to indicate blocks, but tabs and other
 whitespace (mostly) have no inherent meaning in C++.
-Instead, the semi-colon (;) must be used to conclude most statements in C++.
+Instead, the semi-colon (``;``) must be used to conclude most statements in C++.
 
 In fact, the following program will run perfectly
-even though it is more difficult for humans to read.
+even though the lack of meaningful spacing is more difficult for humans to read.
 
 
 .. activecode:: hellocppugly
@@ -159,7 +159,7 @@ even though it is more difficult for humans to read.
 
 As you program in C++, we strongly recommend you continue to use
 the kind of human-readable formatting you have become used to in Python.
-You will appreciate this when you are debugging.
+You will likely learn to appreciate this when you are debugging.
 
 
 Standard Input and Output
@@ -167,7 +167,7 @@ Standard Input and Output
 
 In C++ ``cout`` stands for "console output".
 Much like the Python ``print`` statement, ``cout`` is used to
-print to the standard output, which is typically your screen.
+print to the standard output device, which is typically your screen.
 When ``cout`` is used, you will also see ``<<`` used.
 When this odd set of symbols are used together, they are called the "output operator".
 The output operator is used to direct output to the designated output device or file.
@@ -186,27 +186,27 @@ Comments in C++
 
 Python supports three different types of comments, while C++ supports only two types of comments.
 
-Python's single line comment begins with a hash (#).
-In C++, the equivalent is two forward slashes (//)
+Python's single line comment begins with a hash (``#``).
+In C++, the equivalent is two forward slashes (``//``)
 In each case the rest of the line is treated as a comment and ignored by the
 interpreter or compiler.
 
 Python has two types of multiline comments. Like Python, C++ also supports multi-line comments
 beginning with
-/\*
-and end with
-\*/.
+``/\*``
+and ending with
+``\*/``.
 
 There is no equivalent in the C++ standard to the triple-quoted docstring in C++.
 However, the symbol groups
-/\*\*
+``/\*\*``
 and
-\*/
+``\*/``
 are often used to indicate documentation blocks
 at the beginning of a class, program, or function,
-which is legal because the second asterisk is simply treated as part of the
+which is legal because the second asterisk ``*``  is simply treated as part of the
 multi-line comment.
-Certain libraries will process the text between these symbol groups,
+Certain libraries will also automatically process the text between these symbol groups,
 as a docstring for the documentation.
 
 ::
@@ -220,7 +220,7 @@ as a docstring for the documentation.
 Summary
 -------
 
-Now that we have run our hello world program, lets go back and look at
+Now that we have run our "hello world" program, lets go back and look at
 it carefully to see what we can learn about the C++ language.
 
 .. activecode:: hellocommented
