@@ -7,7 +7,7 @@
 .. toc_version: 2
 
 Welcome to C++ for Python Programmers
-======================================
+=====================================
 
 Contents:
 

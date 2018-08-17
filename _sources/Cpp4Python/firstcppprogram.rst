@@ -233,9 +233,9 @@ it carefully to see what we can learn about the C++ language.
     #include <iostream>
     using namespace std;
 
-    int main(){         # main() must exist & return an int
+    int main(){         \\ main() must exist & return an int
         cout << "Hello World!\n";
-        return 0;       # 0 indicates program ended correctly.
+        return 0;       \\ 0 indicates program ended correctly.
     }
 
 This simple example illustrates a few very important rules:

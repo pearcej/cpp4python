@@ -3,10 +3,10 @@ C++ Basic Data Types
 
 One of the great things about Python is that all of the basic data types
 are objects. Integers are objects, floating point numbers are objects,
-lists are objects,.. everything is an object. In C++ that is not the case. In C++
-some of the most basic data types like integers and floating point
+lists are objects,... everything is an object. In C++ that is not the case.
+In C++ some of the most basic data types like integers and floating point
 numbers are not objects. The benefit of having these primitive data
-types be non-objects is that operations on the primitives are fast.
+types be non-objects is that operations on C++ primitives are fast.
 
 Let's go back in time and look at another of our very early Python
 programs. Here is a simple Python function to convert a Fahrenheit
@@ -33,19 +33,19 @@ Next, lets look at the C++ Equivalent.
     using namespace std;
 
     void TempConv() {
-      double fahr;
-      double cel;
+        double fahr;
+        double cel;
 
-      cout<<"Enter the temperature in F: ";
-      cin>>fahr;
+        cout << "Enter the temperature in F: ";
+        cin >> fahr;
 
-      cel = (fahr - 32.0) * 5.0/9.0;
-      cout<<"The temperature in C is: "<<cel<<endl;
+        cel = (fahr - 32.0) * 5.0/9.0;
+        cout<<"The temperature in C is: "<<cel<<endl;
     }
 
     int main() {
-      TempConv();
-      return 0;
+        TempConv();
+        return 0;
     }
 
 
@@ -53,7 +53,7 @@ Next, lets look at the C++ Equivalent.
 Declaring Variables
 -------------------
 
-Here is where we run into one of the most important differences between
+Here is where we run into one of the most obvious differences between
 C++ and Python. Python is a **dynamically typed** language. In a
 dynamically typed language, a named variable can refer to any kind of object at
 any time. When the name  is used, the interpreter figures out what
@@ -71,8 +71,8 @@ because ``"xyz"`` is a string and ``fahr`` is supposed to be a double.
 
 For Python programmers the following error is likely to be even more
 common. Suppose we forgot the declaration for ``cel`` and instead left
-line 6 blank. What would happen when we type ``gcc tempConv.cpp`` on
-the command line? We would get an error such as:
+line 6 blank. What would happen when we compile our program?
+We would get an error such as:
 
 ::
 
