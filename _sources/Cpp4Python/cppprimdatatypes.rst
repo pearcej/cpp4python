@@ -20,7 +20,9 @@ temperature to Celsius.
         cel = (fahr - 32.0) * 5.0/9.0
         print("the temperature in C is: ", cel)
 
-    TempConv()
+    def main():
+      TempConv()
+    main()
 
 Next, lets look at the C++ Equivalent.
 
@@ -32,19 +34,18 @@ Next, lets look at the C++ Equivalent.
     #include <iostream>
     using namespace std;
 
-    void TempConv() {
-        double fahr;
+    void TempConv(double fah) {
         double cel;
 
-        cout << "Enter the temperature in F: ";
-        cin >> fahr;
-
-        cel = (fahr - 32.0) * 5.0/9.0;
+        cel = (fah - 32.0) * 5.0/9.0;
         cout<<"The temperature in C is: "<<cel<<endl;
     }
 
     int main() {
-        TempConv();
+        double fahr;
+        cout << "Enter the temperature in F: ";
+        cin >> fahr;
+        TempConv(fahr);
         return 0;
     }
 
