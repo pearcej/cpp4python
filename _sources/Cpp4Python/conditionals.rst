@@ -156,25 +156,24 @@ program using a switch statement we would use the following:
 
     int main() {
 
-      int grade = 85;
+      int grade = 80;
 
       int tempgrade = grade / 10;
       switch(tempgrade) {
-      case 10:
-      case 9:
-          cout<<'A'<<endl;
+      case 1:
+          cout<<"The tempgrade is 1" <<endl;
+          break;
+      case 3:
+          cout<<"The tempgrade is 3"<<endl;
+          break;
+      case 5:
+          cout<<"The tempgrade is 5"<<endl;
           break;
       case 8:
-          cout<<'B'<<endl;
-          break;
-      case 7:
-          cout<<'C'<<endl;
-          break;
-      case 6:
-          cout<<'A'<<endl;
+          cout<<"The tempgrade is 8"<<endl;
           break;
       default:
-          cout<<'F'<<endl;
+          cout<<"Tempgrade for this case is not available"<<endl;
       }
 
       return 0;
