@@ -2,12 +2,14 @@ C++ for Python Programmers
 ::::::::::::::::::::::::::
 
 .. toctree::
+   :numbered:
    :caption: C++ for Python Programmers
-   :maxdepth: 2
+   :maxdepth: 3
 
    preface
    introduction
    whylearncpp
+   x
    firstcppprogram
    cppprimdatatypes
    conditionals

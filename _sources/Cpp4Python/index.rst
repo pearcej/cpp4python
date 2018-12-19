@@ -10,7 +10,7 @@
 .. toc_version: 2
 
 =============================================================
- C++ for Python Programmers
+Problem Solving with Algorithms and Data Structures using C++
 =============================================================
 
 By Brad Miller and David Ranum, Luther College,
@@ -27,9 +27,7 @@ and Jan Pearce, Berea College
    :maxdepth: 3
 
    IntroC++/toctree.rst
-   Data_Types_and_Operators/toctree.rst
-   Control_Structures/toctree.rst
-   Classes_in_C++/toctree.rst
+
 
 Acknowledgements
 ::::::::::::::::
