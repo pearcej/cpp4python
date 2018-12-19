@@ -1,7 +1,6 @@
 For Loops
 ============
-
-Even though this type of construct is very useful in a wide variety of
+ Even though while type of construct is very useful in a wide variety of
 situations, another iterative structure, the ``for`` statement, can be
 used to iterate across a range of values easily. However, you must first find
 the length of your container. For vectors, you can simply call the ``.length()`` function.
@@ -11,14 +10,14 @@ the array using the same ``sizeof()`` function. Because all elements in C++ arra
 the same type, they take the same amount of space and that can be used to find the number
 of elements the Array contains!
 
-.. activecode:: arrayIteration
+.. activecode:: arrayIteration1
    :language: cpp
    :sourcefile: ArrayIteration.cpp
 
-  #include <iostream>
-  using namespace std;
+   #include <iostream>
+   using namespace std;
 
-  int main() {
+   int main() {
   	int nums[] = {1,3,6,2,5};
 
       int numsSize = sizeof(nums)/sizeof(nums[0]); // Get size of the nums array
@@ -35,7 +34,7 @@ of elements the Array contains!
       // }
 
   	return 0;
-  }
+   }
 
 An optional secondary version of the ``for`` loop has been commented out of the above code.
 You can try running this in your version of C++ to see if it works, but in some older versions of C++,
@@ -47,19 +46,19 @@ The above loop assigns the variable ``index`` to be each successive value from 0
 A common use of the ``for`` statement is to implement definite iteration
 over a range of values. The statement
 
-.. activecode:: rangeForLoop
+.. activecode:: rangeForLoop1
    :language: cpp
 
-  #include <iostream>
-  using namespace std;
+   #include <iostream>
+   using namespace std;
 
-  int main() {
+   int main() {
   	for (int i=0; i<5; i++) {
           cout<<i*i<<endl;
       }
 
   	return 0;
-  }
+   }
 
 will perform the ``print`` function five times. The ``range`` function
 will return a range object representing the sequence 0,1,2,3,4 and each
@@ -72,14 +71,14 @@ over a list of strings and for each string processes each character by
 appending it to a list. The result is a list of all the letters in all
 of the words.
 
-.. activecode:: intro_8
+.. activecode:: intro_81
    :language: cpp
 
 
 
-    #include <iostream>
-    #include <string>
-    using namespace std;
+   #include <iostream>
+   #include <string>
+   using namespace std;
 
     int main() {
     	string wordList[] = {"cat", "dog", "rabbit"};
