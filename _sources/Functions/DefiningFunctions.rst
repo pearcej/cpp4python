@@ -13,7 +13,8 @@ value you pass into it.
 
 ::
 
-    int timesTwo(int num) {
+    int timesTwo(int num) {  /*return type int which indicates
+                              that an integer is being returned*/
         return num*2;
     }
 
@@ -37,11 +38,13 @@ passed to another invocation.
     #include <iostream>
     using namespace std;
 
-    int timesTwo(int num) {
+    int timesTwo(int num) { /*return type int which indicates
+                            that an integer is being returned*/
         return num*2;
     }
 
-    int main() {
+    int main() {  /*return type int which indicates that
+                    an integer is being returned*/
         cout<<timesTwo(5)<<endl;
 
         return 0;
@@ -77,7 +80,8 @@ marker. Any characters that follow the // on a line are ignored.
   #include <iostream>
   using namespace std;
 
-  double squareroot(double n) {
+  double squareroot(double n) { /*return type int which indicates
+                                  that a decimal is being returned*/
   	double root = n / 2;
 
   	for (int i = 0; i < 20; i++) {
@@ -104,14 +108,16 @@ Consider the following two function definitions:
 
 ::
 
-    void functionExample( int inputVar ) {
+    void functionExample( int inputVar ) { /*return type void which indicates that
+                                             nothing is being returned*/
         int nextVar = inputVar * 2;
         inputVar = 4;
 
         cout << "nextVar = " << nextVar << " inputVar = " << inputVar;
     }
 
-    void callingFunction() {
+    void callingFunction() { /*return type int which indicates
+                                 that nothing is being returned*/
         int myVar = 10;
 
         functionExample( myVar );
@@ -190,7 +196,7 @@ The following example function returns the average hours worked over the array o
 ::
 
     double average( int list[], int length ) {	// It is correct     syntax to omit the array length on the array itself.
-        double total = 0;
+        double total = 0;                       //return type double which indicates that a decimal is being returned
         int count;
         for( count = 0; count < length; count++ )
             total += double(list[count]);
@@ -203,7 +209,7 @@ After a call to the following function, each element in the third array argument
 
 ::
 
-    void add_lists( int first[], int second[], int total[], int length ) {
+    void add_lists( int first[], int second[], int total[], int length ) { //return type int which indicates that nothing is returned
         int count;
         for( count = 0; count < length; count++ )
             total[count] = first[count] + second[count];
@@ -213,7 +219,7 @@ Upon further examination, we can see that the first two arrays do not change val
 
 ::
 
-    void add_lists( const int first[], const int second[], int total[], int length ) {
+    void add_lists( const int first[], const int second[], int total[], int length ) { //return type int which indicates that nothing is returned
         int count;
         for( count = 0; count < length; count++ )
             total[count] = first[count] + second[count];

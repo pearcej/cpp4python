@@ -12,7 +12,8 @@ as long as a condition is true. For example,
 ::
 
     int counter = 1;
-    while (counter <= 5) {
+    while (counter <= 5) {          /*Use of an interactive method until the  
+                                     the loop ends   */
         cout<<"Hello, world"<<endl;
         counter = counter + 1;
     }

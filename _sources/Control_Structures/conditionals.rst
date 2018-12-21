@@ -70,7 +70,9 @@ simple example in both Python and C++.
     :language: python
 
     grade = int(input('enter a grade'))
-    if grade < 60:
+
+    if grade < 60:  /* if, elif, and else statement allows for
+                     multiple options according to the value of grade */
         print('F')
     elif grade < 70:
         print('D')
@@ -95,7 +97,8 @@ In C++ we have a couple of ways to write this
 
       if (grade < 60) {
           cout<<'F'<< endl;
-      } else {
+      } else {      /* if, elif, and else statement can be used
+                        inside of themselves to allow for sub options */
           if (grade < 70) {
               cout<<'D'<< endl;
           } else {
@@ -162,7 +165,8 @@ program using a switch statement we would use the following:
       int grade = 80;
 
       int tempgrade = grade / 10;
-      switch(tempgrade) {
+      switch(tempgrade) {  /*switch cases allow for different options based on
+                           the value of temp grade similar to if statements*/
       case 1:
           cout<<"The tempgrade is 1" <<endl;
           break;
