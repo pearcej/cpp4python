@@ -8,14 +8,30 @@ Defining Functions
 In general, we can hide the details of any computation by defining
 a function. A function definition requires a name, a group of
 parameters, a return type, and a body. It may either return a variable, value, or nothing (specified by the keyword void). For
-example, the simple function defined below returns the double of the
+example, the simple function defined below returns an integer which is the double of the
 value you pass into it.
 
-::
+.. _lst_timesTwo:
 
-    int timesTwo(int num) {  /*return type int which indicates
-                              that an integer is being returned*/
+  .. activecode:: timesTwo
+    :language: cpp
+    :caption: Implementation of the timesTwo function
+
+    #include <iostream>
+    using namespace std;
+
+    int timesTwo(int num) {
+        /* return type int which indicates
+           that an integer is being returned */
         return num*2;
+    }
+
+    int main() {
+        /* return type int which indicates that
+           an integer is being returned */
+        cout<<timesTwo(5)<<endl;
+
+        return 0;
     }
 
 The syntax for this function definition includes the name, ``timesTwo``,
@@ -28,27 +44,36 @@ evaluate it, passing an actual parameter value, in this case, ``3``.
 Note that the call to ``timesTwo`` returns an integer that can in turn be
 passed to another invocation.
 
+Let us look at a similar function.
 
-.. _lst_timesTwo:
 
-  .. activecode:: timesTwo
+.. _lst_timesTwoVoid:
+
+  .. activecode:: timesTwoVoid
     :language: cpp
-    :caption: Implementation of the timesTwo function
+    :caption: Implementation of the timesTwoVoid function
 
     #include <iostream>
     using namespace std;
 
-    int timesTwo(int num) { /*return type int which indicates
-                            that an integer is being returned*/
-        return num*2;
+    void timesTwoVoid(int num) {
+      /* return type void which indicates
+         that an nothing is being returned */
+      cout<< num*2<<endl;
     }
 
-    int main() {  /*return type int which indicates that
-                    an integer is being returned*/
-        cout<<timesTwo(5)<<endl;
+    int main() {
+        /* return type int which indicates that
+           an integer is being returned */
+        timesTwoVoid(5);
 
         return 0;
     }
+
+``timesTwoVoid`` behave very similarly to ``timesTwo``. However, there is one key
+difference between them. Instead of the ``int`` in ``timesTwo``, ``timesTwoVoid`` has a
+``void`` in front of its function definition. Unlike ``timesTwo``, ``timesTwoVoid`` is a non-fruitful
+function meaning it does not return a value even though it can still print something out.
 
 We could go a step further and implement our own square root function by using a well-known
 technique called “Newton’s Method.” Newton’s Method for approximating
