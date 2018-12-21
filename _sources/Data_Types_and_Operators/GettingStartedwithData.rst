@@ -203,7 +203,8 @@ variable can hold only one type of data.
    Figure 3: Variables Hold Data Objects
 
 Introduction to Pointers
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 The kind of variables we have already used are really identifiers that refer to where in memory we store information. We can store things as basic as integers and double precision floating point numbers, or things more complicated as structure and classes. Whenever we want the information, we can simply use the identifier to access it.
 
@@ -403,10 +404,23 @@ are ordered collections that are very similar in general structure but
 have specific differences that must be understood for them to be used
 properly. Sets and hash tables are unordered collections.
 
+**What is an Array?**
+
 An **array** is an ordered collection of zero or more C++ data objects of similar type.
 Arrays are written as comma-delimited values enclosed in
 curly brackets. Arrays are homogeneous, meaning that the data objects all need to be from the
 same class and the collection can be assigned to a variable as below.
+
+**Why use an Array?**
+
+Although we have already seen how to store large amounts of data in files, we have as yet no convenient way to manipulate such data from within programs.
+For example, we might want to write a program that inputs and then ranks or sorts a long list of numbers.
+C++ provides a structured data type called an array to facilitate this kind of task.
+The use of arrays permits us to set aside an ordered list of memory locations that we can then manipulate as a single entity, but that at the same time gives us direct access to any individual component.
+You can think of arrays conceptually as just a list of variables that all of the same data type (int, char or whatever). You can directly access an item in the array, such as the first, second, or last one.
+
+
+
 The following fragment shows a variety of C++ data objects in an array.
 
 ::
@@ -459,12 +473,61 @@ methods, some of which are shown in :ref:`Table 4<tab_stringmethods>`.
                     ``find``           ``astring.find(item)``         Returns the index of the first occurrence of ``item``
     ======================== ================================ =============================================================
 
+A major difference between arrays and strings is that arrays can be
+modified while strings cannot. This is referred to as **mutability**.
+arrays are mutable; strings are immutable. For example, you can change an
+item in a list by using indexing and assignment. With a string that
+change is not allowed.
+
+**C Strings and C++ String Objects**
+
+Both the C and C++ cstring library functions are available to C++ programs. However, do not overlook the fact that these two function libraries are very different, and the functions of the first library have a different notion of what a string is from the corresponding notion held by the functions of the second library. There are two further complications: first, though a function from one of the libraries may have a counterpart in the other library (i.e., a function in the other library designed to perform the same operation), the functions may not be used in the same way, and may not even have the same name; second, because of backward compatibility many functions from the C++ String library can be expected to work fine and do the expected thing with C strings, but not the other way around.
+The last statement above might seem to suggest we should use C++ Strings and forget about C-strings altogether, and it is certainly t rue that there is a wider variety of more intuitive operations available for C++ Strings. However, C-strings are more primitive, you may therefore find them simpler to use (provided you remember a few simple rules, such as the fact that the null character must always terminate such strings), and certainly if you read other, older programs you will see lots of C-strings. You should thus use whichever you find more convenient, but remember that they are very different; if you occasionally need to mix the two for some reason, be extra careful. Finally, there are certain situations in which C Strings must be used as in the use of filenames as we have seen.
+
+
+.. _tab_stringmethods2:
+
+.. table:: **Table 5: Methods Provided by Strings in Python**
+
+    ====================================== ================================================= ================================
+                            **Categories**                     **C Strings**                    **C++ Strings**
+    ====================================== ================================================= ================================
+                             Import Syntax                             ``#include<cstring>``             ``#include<string>``
+                            Declare Syntax             ``char str[10]``;//can store <=9chars ``string str;``//Unlimitedlength
+                       Initializing Syntax                 ``char str1[11] = "Call home!";``   ``string str1("Call home!");``
+                                                            ``char str2[] = "Send money!";`` ``string str2 = "Send money!";``
+                                                         ``char str3[] = {'O', 'K', '\0'};``           ``string str3("OK");``
+                                                            // which has the same effect as:        ``string str4(10, 'x');``
+                                                                     ``char str3[] = "OK";``
+            Concatenating/Combining Syntax                           ``strcat(str1, str2);``           ``str = str1 + str2;``
+
+
+                          Comparing Syntax                   ``if(strcmp(str1, str2) < 0 )``            ``if( str1 < str2):``
+                                                              ``cout<< "str1 comes first."``  ``cout<< "str1 comes first.";``
+                                                            ``if(strstrcmp(str1, str2)==0)``            ``if( str1 == str2)``
+                                                                 ``cout<< "Equal Strings."``    ``cout << "Equal strings.";``
+                                                             ``if(strstrcmp(str1, str2)>0)``           ``if( str1 > str2 ):``
+                                                          ``cout<< "String 2 comes first."``   ``cout<<"str2 comes first.";``
+
+
+
+
+
+
+
+
+    ====================================== ================================================= ================================
+
 
 A major difference between arrays and strings is that arrays can be
 modified while strings cannot. This is referred to as **mutability**.
 arrays are mutable; strings are immutable. For example, you can change an
 item in a list by using indexing and assignment. With a string that
 change is not allowed.
+
+
+
+
 
 **Tuples** are very similar to arrays in that they are sequential containers.
 We can get a tuple from the Standard template library with
