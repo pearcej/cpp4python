@@ -32,7 +32,6 @@ and Jan Pearce, Berea College
    Control_Structures/toctree.rst
    Exception_Handling/ExceptionHandling.rst
    Functions/toctree.rst
-   Classes_in_C++/toctree.rst
 
 Acknowledgements
 ::::::::::::::::
