@@ -5,14 +5,14 @@ structures: iteration and selection. Both of these are supported by
 Python in various forms. The programmer can choose the statement that is
 most useful for the given circumstance.
 
-For iteration, Python provides a standard ``while`` statement and a very
+For iteration, C++ provides a standard ``while`` statement and a very
 powerful ``for`` statement. The while statement repeats a body of code
 as long as a condition is true. For example,
 
 ::
 
     int counter = 1;
-    while (counter <= 5) {          /*Use of an interactive method until the  
+    while (counter <= 5) {          /*Use of an interactive method until the
                                      the loop ends   */
         cout<<"Hello, world"<<endl;
         counter = counter + 1;
@@ -35,14 +35,14 @@ compound condition will control the iteration. A fragment such as
 
 ::
 
-    while (counter <= 10 && not done):
+    while (counter <= 10 && not done) {
     ...
 
 would cause the body of the statement to be executed only in the case
 where both parts of the condition are satisfied due to the and operator (``&&``). The value of the
 variable ``counter`` would need to be less than or equal to 10 and the
-value of the variable ``done`` would need to be ``False`` (``not False``
-is ``True``) so that ``True and True`` results in ``True``.
+value of the variable ``done`` would need to be ``false`` (``not false``
+is ``true``) so that ``true and true`` results in ``true``.
 
 Here are some of the logical operators that are useful for true-false boolean statements in C++.
 

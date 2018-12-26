@@ -6,7 +6,7 @@ have three patterns:
 
 Simple if
 ------------------
-
+In Python, we write a simple if statement in the following way:
 
 ::
 
@@ -27,11 +27,12 @@ In C++ this same pattern is simply written as:
 
 Once again you can see that in C++ the curly braces define a block
 rather than indentation. In C++ the parenthesis around the condition
-are required because if is technically a function that evaluates to True
-or False.
+are required because ``if`` is technically a function that evaluates to ``true``
+or ``false``.
 
 if else
 -------
+The if-else statement in Python looks like this:
 
 ::
 
@@ -198,8 +199,6 @@ alternative then the program would print out both (A and B.)
 Boolean Operators
 ------------------
 
-{sub:boolean\_operators}
-
 The conditionals used in the if statement can be boolean variables,
 simple comparisons, and compound boolean expressions.
 
@@ -209,6 +208,6 @@ test a condition as part of an assignment statement. For example
 ``a = a % 2 == 0 ? a*a : 3*x -1`` In the previous assignment statement
 the expression ``a%2 ==0`` is first checked. If it is true then a is
 assigned the value ``a * a`` if it is false then a is assigned the value
-of ``3*x-1``. Of course all of this could have been accomplished using a
+of ``3*x-1``. The ``?:`` operator is also known as the ternary operator. Of course all of this could have been accomplished using a
 regular if else statement, but sometimes the convenience of a single
 statement is too much to resist.

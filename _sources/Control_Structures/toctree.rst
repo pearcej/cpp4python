@@ -4,6 +4,6 @@ Control Structures
 .. toctree::
     :maxdepth: 2
 
-    while_loop.rst
     conditionals.rst
+    while_loop.rst
     for_loop.rst
