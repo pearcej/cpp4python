@@ -125,50 +125,50 @@ the user for a filename, and can catch if that file does not exist, or the defau
     using namespace std;
 
     void printFile(char filename[32]) {
-      ifstream in_stream;
-      in_stream.open(filename);
+        ifstream in_stream;
+        in_stream.open(filename);
 
-      if (!in_stream.good()) {
-      // Throws an error
-          in_stream.close();
+        if (!in_stream.good()) {
+            // Throws an error
+                in_stream.close();
 
-      throw "\nA file by that name does not exist!";
-      }
+            throw "\nA file by that name does not exist!";
+        }
 
-      char ch;
+        char ch;
 
-      cout<<endl;
-      while (!in_stream.eof()) {
-        cout << ch;
-        ch = in_stream.get();
-      }
-      cout << endl;
+        cout<<endl;
+        while (!in_stream.eof()) {
+            cout << ch;
+            ch = in_stream.get();
+        }
+        cout << endl;
 
-      in_stream.close();
+        in_stream.close();
     }
 
     int main() {
-      char filename[32];
-      cout << "Filename: ";
-      cin >> filename;
+        char filename[32];
+        cout << "Filename: ";
+        cin >> filename;
 
-      try {
-        // Tries to print the file
-        printFile(filename);
-      } catch (const char *msg) {
-        // Runs if error is thrown
-        cerr << msg << endl;
-
-        // Uses default file to print instead
         try {
-          char defaultFile[32] = "file.txt";
-          printFile(defaultFile);
+            // Tries to print the file
+            printFile(filename);
         } catch (const char *msg) {
-          cerr << "Default file not found!" << endl;
-        }
-      }
+            // Runs if error is thrown
+            cerr << msg << endl;
 
-      return 0;
+            // Uses default file to print instead
+            try {
+                char defaultFile[32] = "file.txt";
+                printFile(defaultFile);
+            } catch (const char *msg) {
+                cerr << "Default file not found!" << endl;
+            }
+        }
+
+        return 0;
     }
 
 
