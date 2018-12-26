@@ -48,6 +48,7 @@ Once connected, the program can read from that file. Pictorially, this is what h
 
 .. figure:: Figures/Read_Open.jpg
   :align: center
+  :alt: image
 
 the ``ostream`` class also has an ``open(filename)`` member function, but it is defined differently. Consider the following statement:
 
@@ -61,6 +62,7 @@ Pictorally, we get a stream of data flowing out of the program:
 
 .. figure:: Figures/Write_Open.jpg
   :align: center
+  :alt: image
 
 Because out_stream is an object of type ``ostream``, connecting it to the file named "anotherFile.txt" will create that file if it does not exist. If the file "anotherFile.txt" already exists, it will be wiped and replaced with whatever is fed into the output stream.
 

@@ -31,7 +31,7 @@ and Jan Pearce, Berea College
    Control_Structures/toctree.rst
    Functions/toctree.rst
    Input_and_Output/toctree.rst
-   Exception_Handling/ExceptionHandling.rst
+   Exception_Handling/toctree.rst
 
 Acknowledgements
 ::::::::::::::::

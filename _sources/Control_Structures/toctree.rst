@@ -1,5 +1,5 @@
 Control Structures
-::::::::
+::::::::::::::::::
 
 .. toctree::
     :maxdepth: 2
