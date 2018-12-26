@@ -2,33 +2,8 @@
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Input and Output
-~~~~~~~~~~~~~~~~
-
-``(In the following code snippets, press the icon on the left that looks like a piece of paper to see the multiple files being used)``
-
-We often have a need to interact with users,
-either to get data or to provide some sort of result. The C++ ``<iostream>`` library provides us with the functionality to get information as console input and to output information to the console. This input and output is handled in what is known as a ``stream``.
-
-A ``stream`` is essentially a channel in which data flows from the source to a destination.
-Input streams direct data from a source, such as the keyboard or a file. The standard input stream, ``cin``, is an input stream from the keyboard. Output streams send data out, and the standard output stream ``cout`` sends data to the screen.
-
-.. raw :: html
-
-    <div>
-    <iframe height="600px" width="100%" src="https://repl.it/@CodyWMitchell/Stream-Code?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-    </div>
-
-Now whatever the user types will be stored in the
-``num`` variable. Using the cout function, we can easily write
-instructions that will prompt the user to enter data and then
-incorporate that data into further processing. For example, in the code above, the integer input is doubled and then displayed!
-
-It is important to note that the value returned from the ``cin``
-function is dependent on the data type of the variable that it is stored in. If you want this input a specific type, you must declare the variable used in cin as that type.
-
 File Handling
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 File handling in C++ also uses a ``stream`` in a similar way to the cout and cin functions of ``<iostream>``. The library that allows for input and output of files is ``<fstream>``.
 

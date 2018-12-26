@@ -28,10 +28,10 @@ and Jan Pearce, Berea College
 
    IntroC++/toctree.rst
    Data_Types_and_Operators/toctree.rst
-   Input_and_Output/toctree.rst
    Control_Structures/toctree.rst
-   Exception_Handling/ExceptionHandling.rst
    Functions/toctree.rst
+   Input_and_Output/toctree.rst
+   Exception_Handling/ExceptionHandling.rst
 
 Acknowledgements
 ::::::::::::::::
