@@ -2,11 +2,12 @@ Introduction
 ============
 
 This book assumes that you are already familiar with the
-`Python <http://www.python.org>`_ programming language. We will use
-Python as a starting point for our journey into C++. We will begin by
-looking at a very simple C++ program to see what the language
-looks like and how we get a C++ program to run. Next, we will look at the
-main constructs that are common to most programming languages:
+`Python <http://www.python.org>`_ programming language because
+Python will be the starting point for our journey into C++. We will begin by
+looking at a very simple C++ program to see how the C++ language
+looks, and we will discuss how we get a C++ program to run. 
+Next, we will look at the primary constructs that are common 
+to most programming languages:
 
     -  Using code libraries
     
@@ -33,5 +34,5 @@ features of C++ that are both unique and powerful.
 
     -  Exception handling
 
-Please note that this book is a work in progress. We will continue to
-update and post new versions.
+Please note that this book is a work in progress. 
+Updates and new versions are likely to be forthcoming.
