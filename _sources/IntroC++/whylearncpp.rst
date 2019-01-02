@@ -1,4 +1,4 @@
-Why Learn another programming Language?
+Why Learn Another Programming Language?
 =======================================
 
 Python is a great language for beginning programming for several reasons.
