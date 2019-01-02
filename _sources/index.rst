@@ -1,11 +1,11 @@
-.. Problem Solving with Algorithms and Data Structures using C++ documentation master file, originally created by
+.. C++ for Python Programmers documentation master file, originally created by
    sphinx-quickstart on Thu Oct 27 08:17:45 2011.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 .. meta::
-   :description: An interactive version of Problem Solving with Algorithms and Data Structures using C++.
-   :keywords: C++, cpp, python, data structures, computer science
+   :description: An interactive book designed to help learners transstion from Python to C++.
+   :keywords: C++, cpp, python, computer science
 
 .. toc_version: 2
 
@@ -13,8 +13,7 @@
  C++ for Python Programmers
 =============================================================
 
-By Brad Miller and David Ranum, Luther College,
-and Jan Pearce, Berea College
+By Jan Pearce, Berea College
 
 .. raw:: html
 
@@ -36,10 +35,8 @@ and Jan Pearce, Berea College
 Acknowledgements
 ::::::::::::::::
 
-We are very grateful to Franklin Beedle Publishers for allowing us to
-make the original Python version of this interactive textbook freely available.
-This online version is dedicated to the memory of our first editor, Jim Leisy,
-who wanted us to "change the world."
+Many thanks to Runestone for creating a very strong framework for open source computing books.
+Many thanks also to Berea College's labor program for making it possible for students to contribute.
 
 Indices and tables
 ::::::::::::::::::
@@ -58,6 +55,6 @@ Indices and tables
    <br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
    property="dct:title" rel="dct:type">Problem Solving with Algorithms and Data Structures using C++</span> by
    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
-   Bradley N. Miller, David L. Ranum, and Janice L. Pearce</span> is licensed under a
+  Janice L. Pearce</span> is licensed under a
    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
