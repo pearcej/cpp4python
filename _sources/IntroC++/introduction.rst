@@ -8,24 +8,30 @@ looking at a very simple C++ program to see what the language
 looks like and how we get a C++ program to run. Next, we will look at the
 main constructs that are common to most programming languages:
 
-    -  Data Types
+    -  Using code libraries
+    
+    -  Documenting with comments 
+    
+    -  The main function
+    
+    -  Writing output to the screen
+    
+    -  Reading input from the keyboard
+   
+    -  Data types and operators
+    
+    -  Conditionals
 
     -  Loops
-
-    -  Reading user input
-
-    -  Conditionals
 
 Once we have the basics of C++ behind us we will move on to look at the
 features of C++ that are both unique and powerful.
 
-    -  Classes
+    -  Functions and their parameters
 
-    -  Interfaces
+    -  File operations
 
-    -  Collections
-
-    -  Generic Programming
+    -  Exception handling
 
 Please note that this book is a work in progress. We will continue to
 update and post new versions.
