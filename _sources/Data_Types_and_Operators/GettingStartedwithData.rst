@@ -1,4 +1,4 @@
-..  Copyright (C)  Jan Pearce and Brad Miller 
+..  Copyright (C)  Jan Pearce and Brad Miller
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
@@ -385,7 +385,7 @@ The following example demonstrates how the null pointer works. The variable ptrx
 Helpful Tip: The null pointer becomes very useful when you must test the state of a pointer, such as whether the assignment to an address was valid or not.
 
 Collection Data Types
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 In addition to the numeric and boolean classes, C++ has a number of
 very powerful built-in collection classes. Arrays, strings, and tuples
@@ -479,7 +479,7 @@ The last statement above might seem to suggest we should use C++ Strings and for
 .. table:: **Table 5: String Methods in C++**
 
     ====================================== ================================================= ================================
-                            **Categories**                     **C-Strings**                         **C++ Strings**         
+                            **Categories**                     **C-Strings**                         **C++ Strings**
     ====================================== ================================================= ================================
                              Import Syntax                             ``#include<cstring>``             ``#include<string>``
                             Declare Syntax             ``char str[10];//can store <=9chars`` ``string str;//Unlimitedlength``
@@ -487,7 +487,7 @@ The last statement above might seem to suggest we should use C++ Strings and for
                                                             ``char str2[] = "Send money!";`` ``string str2 = "Send money!";``
                                                          ``char str3[] = {'O', 'K', '\0'};``           ``string str3("OK");``
                                                         ``// which has the same effect as:``        ``string str4(10, 'x');``
-                                                                     ``char str3[] = "OK";``                                 
+                                                                     ``char str3[] = "OK";``
             Concatenating/Combining Syntax                           ``strcat(str1, str2);``           ``str = str1 + str2;``
                           Comparing Syntax                   ``if(strcmp(str1, str2) < 0 )``            ``if( str1 < str2):``
                                                               ``cout<< "str1 comes first."``  ``cout<< "str1 comes first.";``
