@@ -1,4 +1,4 @@
-Intro to C++
+Introduction to C++ for Python Programmers
 ::::::::
 
 .. toctree::
