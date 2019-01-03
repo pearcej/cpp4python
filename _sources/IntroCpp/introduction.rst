@@ -26,7 +26,7 @@ to most programming languages:
     -  Loops
 
 Once we have the basics of C++ behind us we will move on to look at the
-features of C++ that are both unique and powerful.
+features of C++ that are both unique and powerful:
 
     -  Functions and their parameters
 
