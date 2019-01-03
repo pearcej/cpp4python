@@ -50,17 +50,17 @@ better facilitate standard input and output:
     }
 
 What we see is that at the core there are a few similarities with the
-complicated Python version, such as the ``main()`` function and the string “Hello world”.
-However, in C++ there is a lot more
-stuff around the edges that make it harder to see the core of the program. Do
-not worry! An important skill for a computer scientist is to learn what
+complicated Python version, such as the ``main()`` function and the 
+string “Hello world”. However, in C++ there is a lot more
+stuff around the edges that make it harder to see the core of the program. 
+Do not worry! An important skill for a computer scientist is to learn what
 to ignore and what to look at carefully. You will soon find that there
 are some elements of C++ that will fade into the background as you
 become used to seeing them. One thing that will help you is to learn a
 little bit more about C++.
 
 The first question you probably have about this little program is “How
-do I run it?” Running a C++ program is not as simple as running a
+do I run it on my own machine?” Running a C++ program is not as simple as running a
 Python program. The first thing you need to do with a C++ program is to
 compile it. The first big difference between C++ and Python is that
 Python is an *interpreted language*. We could run our Python programs in
