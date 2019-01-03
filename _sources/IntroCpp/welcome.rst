@@ -1,7 +1,8 @@
-Welcome to *C++ for Python Programmers*. This short ebook is intended
-to help Python programmers or students with at least one 
-term of Python programming experience learn the basics of the C++ programming 
-language. 
+Welcome to *C++ for Python Programmers*
+=======================================
+
+This short ebook is intended to help Python programmers or students with at least one 
+term of Python programming experience learn the basics of the C++ programming language. 
 
 This book is written using the build on what you know
 philosophy. In order to help you learn C++ we will start with a Python
