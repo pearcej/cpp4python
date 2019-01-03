@@ -1,5 +1,5 @@
 Exception Handling
-::::::::
+::::::::::::::::::
 
 .. toctree::
     :maxdepth: 2
