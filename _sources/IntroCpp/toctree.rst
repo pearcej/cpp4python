@@ -1,5 +1,5 @@
 Introduction to C++ for Python Programmers
-::::::::
+::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
     :caption: Introduction to C++ for Python Programmers
