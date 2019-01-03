@@ -13,7 +13,7 @@
  C++ for Python Programmers
 =============================================================
 
-By Jan Pearce, Berea College
+By Jan Pearce, Berea College, and Brad Miller, Runestone
 
 .. raw:: html
 
@@ -25,7 +25,7 @@ By Jan Pearce, Berea College
    :numbered:
    :maxdepth: 3
 
-   IntroC++/toctree.rst
+   IntroCpp/toctree.rst
    Data_Types_and_Operators/toctree.rst
    Control_Structures/toctree.rst
    Functions/toctree.rst
@@ -42,7 +42,6 @@ Indices and tables
 ::::::::::::::::::
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
 
@@ -55,6 +54,6 @@ Indices and tables
    <br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
    property="dct:title" rel="dct:type">C++ for Python Programmers</span> by
    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
-  Janice L. Pearce</span> is licensed under a
+  Janice L. Pearce and Bradley N. Miller</span> is licensed under a
    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
