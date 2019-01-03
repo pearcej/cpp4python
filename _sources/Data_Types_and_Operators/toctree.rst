@@ -1,5 +1,5 @@
 Data Types and Operators
-::::::::
+::::::::::::::::::::::::
 
 .. toctree::
     :maxdepth: 2
