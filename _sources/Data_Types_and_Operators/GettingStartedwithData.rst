@@ -405,7 +405,7 @@ properly. Sets and hash tables are unordered collections.
 
 **What is an Array?**
 
-An **array** is an ordered collection of zero or more C++ data objects of similar type.
+An **array** is an ordered collection of zero or more C++ data objects of identical type.
 Arrays are written as comma-delimited values enclosed in
 curly brackets. Arrays are homogeneous, meaning that the data objects all need to be from the
 same class and the collection can be assigned to a variable as below.
@@ -486,42 +486,25 @@ The last statement above might seem to suggest we should use C++ Strings and for
 
 .. _tab_stringmethods2:
 
-.. table:: **Table 5: Methods Provided by Strings in Python**
+.. table:: **Table 5: String Methods in C++**
 
     ====================================== ================================================= ================================
                             **Categories**                     **C-Strings**                    **C++ Strings**
     ====================================== ================================================= ================================
-    
                              Import Syntax                             ``#include<cstring>``             ``#include<string>``
-                             
                             Declare Syntax             ``char str[10]``;//can store <=9chars ``string str;``//Unlimitedlength
-                            
                        Initializing Syntax                 ``char str1[11] = "Call home!";``   ``string str1("Call home!");``
-                       
                                                             ``char str2[] = "Send money!";`` ``string str2 = "Send money!";``
-                                                            
                                                          ``char str3[] = {'O', 'K', '\0'};``           ``string str3("OK");``
-                                                         
                                                             // which has the same effect as:        ``string str4(10, 'x');``
-                                                            
-                                                                     ``char str3[] = "OK";``
-                                                                     
+                                                                     ``char str3[] = "OK";`
             Concatenating/Combining Syntax                           ``strcat(str1, str2);``           ``str = str1 + str2;``
-
-
                           Comparing Syntax                   ``if(strcmp(str1, str2) < 0 )``            ``if( str1 < str2):``
-                          
                                                               ``cout<< "str1 comes first."``  ``cout<< "str1 comes first.";``
-                                                              
                                                             ``if(strstrcmp(str1, str2)==0)``            ``if( str1 == str2)``
-                                                            
                                                                  ``cout<< "Equal Strings."``    ``cout << "Equal strings.";``
-                                                                 
                                                              ``if(strstrcmp(str1, str2)>0)``           ``if( str1 > str2 ):``
-                                                             
                                                           ``cout<< "String 2 comes first."``   ``cout<<"str2 comes first.";``
-
-
     ====================================== ================================================= ================================
 
 
