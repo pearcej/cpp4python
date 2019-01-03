@@ -481,7 +481,7 @@ change is not allowed.
 **C Strings and C++ String Objects**
 
 Both the C and C++ cstring library functions are available to C++ programs. However, do not overlook the fact that these two function libraries are very different, and the functions of the first library have a different notion of what a string is from the corresponding notion held by the functions of the second library. There are two further complications: first, though a function from one of the libraries may have a counterpart in the other library (i.e., a function in the other library designed to perform the same operation), the functions may not be used in the same way, and may not even have the same name; second, because of backward compatibility many functions from the C++ String library can be expected to work fine and do the expected thing with C strings, but not the other way around.
-The last statement above might seem to suggest we should use C++ Strings and forget about C-strings altogether, and it is certainly t rue that there is a wider variety of more intuitive operations available for C++ Strings. However, C-strings are more primitive, you may therefore find them simpler to use (provided you remember a few simple rules, such as the fact that the null character must always terminate such strings), and certainly if you read other, older programs you will see lots of C-strings. You should thus use whichever you find more convenient, but remember that they are very different; if you occasionally need to mix the two for some reason, be extra careful. Finally, there are certain situations in which C Strings must be used as in the use of filenames as we have seen.
+The last statement above might seem to suggest we should use C++ Strings and forget about C-strings altogether, and it is certainly t rue that there is a wider variety of more intuitive operations available for C++ Strings. However, C-strings are more primitive, you may therefore find them simpler to use (provided you remember a few simple rules, such as the fact that the null character must always terminate such strings), and certainly if you read other, older programs you will see lots of C-strings. You should thus use whichever you find more convenient, but remember that they are very different; if you occasionally need to mix the two for some reason, be extra careful. Finally, there are certain situations in which C-Strings must be used as in the use of filenames as we have seen.
 
 
 .. _tab_stringmethods2:
@@ -489,30 +489,37 @@ The last statement above might seem to suggest we should use C++ Strings and for
 .. table:: **Table 5: Methods Provided by Strings in Python**
 
     ====================================== ================================================= ================================
-                            **Categories**                     **C Strings**                    **C++ Strings**
+                            **Categories**                     **C-Strings**                    **C++ Strings**
     ====================================== ================================================= ================================
+    
                              Import Syntax                             ``#include<cstring>``             ``#include<string>``
+                             
                             Declare Syntax             ``char str[10]``;//can store <=9chars ``string str;``//Unlimitedlength
+                            
                        Initializing Syntax                 ``char str1[11] = "Call home!";``   ``string str1("Call home!");``
+                       
                                                             ``char str2[] = "Send money!";`` ``string str2 = "Send money!";``
+                                                            
                                                          ``char str3[] = {'O', 'K', '\0'};``           ``string str3("OK");``
+                                                         
                                                             // which has the same effect as:        ``string str4(10, 'x');``
+                                                            
                                                                      ``char str3[] = "OK";``
+                                                                     
             Concatenating/Combining Syntax                           ``strcat(str1, str2);``           ``str = str1 + str2;``
 
 
                           Comparing Syntax                   ``if(strcmp(str1, str2) < 0 )``            ``if( str1 < str2):``
+                          
                                                               ``cout<< "str1 comes first."``  ``cout<< "str1 comes first.";``
+                                                              
                                                             ``if(strstrcmp(str1, str2)==0)``            ``if( str1 == str2)``
+                                                            
                                                                  ``cout<< "Equal Strings."``    ``cout << "Equal strings.";``
+                                                                 
                                                              ``if(strstrcmp(str1, str2)>0)``           ``if( str1 > str2 ):``
+                                                             
                                                           ``cout<< "String 2 comes first."``   ``cout<<"str2 comes first.";``
-
-
-
-
-
-
 
 
     ====================================== ================================================= ================================
