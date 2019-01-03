@@ -2,18 +2,8 @@
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Getting Started with Data
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-We stated above that C++ supports the object-oriented programming
-paradigm. This means that C++ considers data to be the focal point of
-the problem-solving process. In C++, as well as in any other
-object-oriented programming language, we define a **class** to be a
-description of what the data look like (the state) and what the data can
-do (the behavior). Classes are analogous to abstract data types because
-a user of a class only sees the state and behavior of a data item. Data
-items are called **objects** in the object-oriented paradigm. An object
-is an instance of a class.
+Using Data in C++
+~~~~~~~~~~~~~~~~~
 
 Built-in Atomic Data Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -136,7 +126,7 @@ and logical operators with examples shown in the session that follows.
 
         int main(){
 
-            cout << (5==10) << endl;
+            cout << (5 == 10) << endl;
             cout << (10 > 5) << endl;
             cout << (5 >= 1 && 5 <= 10) << endl;
 
@@ -150,7 +140,7 @@ and logical operators with examples shown in the session that follows.
 
         def main():
 
-            print(5==10)
+            print(5 == 10)
             print(10 > 5)
             print((5 >= 1) and (5 <= 10))
 
@@ -489,22 +479,22 @@ The last statement above might seem to suggest we should use C++ Strings and for
 .. table:: **Table 5: String Methods in C++**
 
     ====================================== ================================================= ================================
-                            **Categories**                     **C-Strings**                    **C++ Strings**
+                            **Categories**                     **C-Strings**                         **C++ Strings**         
     ====================================== ================================================= ================================
                              Import Syntax                             ``#include<cstring>``             ``#include<string>``
-                            Declare Syntax             ``char str[10]``;//can store <=9chars ``string str;``//Unlimitedlength
+                            Declare Syntax             ``char str[10];//can store <=9chars`` ``string str;//Unlimitedlength``
                        Initializing Syntax                 ``char str1[11] = "Call home!";``   ``string str1("Call home!");``
                                                             ``char str2[] = "Send money!";`` ``string str2 = "Send money!";``
                                                          ``char str3[] = {'O', 'K', '\0'};``           ``string str3("OK");``
-                                                            // which has the same effect as:        ``string str4(10, 'x');``
-                                                                     ``char str3[] = "OK";`
+                                                        ``// which has the same effect as:``        ``string str4(10, 'x');``
+                                                                     ``char str3[] = "OK";``                                 
             Concatenating/Combining Syntax                           ``strcat(str1, str2);``           ``str = str1 + str2;``
                           Comparing Syntax                   ``if(strcmp(str1, str2) < 0 )``            ``if( str1 < str2):``
                                                               ``cout<< "str1 comes first."``  ``cout<< "str1 comes first.";``
                                                             ``if(strstrcmp(str1, str2)==0)``            ``if( str1 == str2)``
                                                                  ``cout<< "Equal Strings."``    ``cout << "Equal strings.";``
                                                              ``if(strstrcmp(str1, str2)>0)``           ``if( str1 > str2 ):``
-                                                          ``cout<< "String 2 comes first."``   ``cout<<"str2 comes first.";``
+                                                              ``cout<< "str2 comes first."``   ``cout<<"str2 comes first.";``
     ====================================== ================================================= ================================
 
 
