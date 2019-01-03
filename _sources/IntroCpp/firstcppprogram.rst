@@ -131,11 +131,12 @@ quotes ``"`` are used for headers and files not provided by the implementation.
 The main() function
 -------------------
 
-Unlike Python, every C++ program **must** have a ``main()`` function which begins
-with ``int main()``.
-Here the ``int`` indicates that the return type of the ``main`` function will be
-an integer. The final line of the ``main()`` C++ function is typically ``return 0``.
-Here the integer zero is used to indicate successful completion of the ``main()``
+Unlike Python, every C++ program **must** have a ``main`` function which begins
+with ``int main()``. This ``main`` function is called implicitly instead of 
+explicitly like we must do in Python when we have a main function.
+The ``int``  in ``int main()`` indicates that the *return type* of the ``main`` function will be
+an integer. The final line of the ``main`` C++ function is typically ``return 0``.
+Here the integer zero is returned to indicate successful completion of the ``main``
 function. In case you are wondering why an integer is returned, if you do error
 handling in C++, you can alternatively return an integer error code representing
 a specific error when it occurs.
@@ -165,8 +166,6 @@ You will likely learn to appreciate this when you are debugging.
 Standard Input and Output
 -------------------------
 
-``(In the following code snippets, press the icon on the left that looks like a piece of paper to see the multiple files being used)``
-
 We often have a need to interact with users,
 either to get data or to provide some sort of result. The C++ ``<iostream>`` library provides us with the functionality to get information as console input and to output information to the console. This input and output is handled in what is known as a ``stream``.
 
@@ -188,6 +187,8 @@ The input operator in C++ is ``>>``.
 We will see ``cin`` in action in the next section on data types,
 and we will talk more about input and output later when we talk in more depth about
 C++ streams and file handling.
+
+In the following code snippets, press the icon on the left that looks like a piece of paper to see the multiple files being used.
 
 .. raw :: html
 
@@ -265,8 +266,10 @@ This simple example illustrates a few very important rules:
 
 1. Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.
 
-2. Every C++ program must have a function which begins as ``int main()``, and ends with the statement ``return 0;`` when successfully completed.
+2. Every C++ program must have a function which begins as ``int main()``, and ends with the statement ``return 0;`` when successfully 
+   completed.
 
 3. C++ statements are ended by a semi-colon.
 
-4. White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using indentation to delineate blocks as is done in Python.
+4. White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using  
+   indentation to delineate blocks as is done in Python.
