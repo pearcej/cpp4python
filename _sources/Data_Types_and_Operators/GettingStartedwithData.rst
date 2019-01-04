@@ -636,3 +636,32 @@ specify a return value instead.
                 ``count``     ``myDict.count(key)``   Returns ``True`` if key is in the   dictionary, ``False`` otherwise
                 ``erase``     ``myDict.erase(key)``                                Removes the entry from the  dictionary
     ===================== ========================= =====================================================================
+
+
+
+Summary
+~~~~~~~~~~~~~~~~~
+1.C++ has four main built in numeric classes int, float, double, and long for implementing integers and
+floating point numbers.
+
+2.int and long, is used for integers, and float, and double, are used depending on the number of decimals.
+
+3.For a boolean datatype, C++ has the boolean class bool.
+
+4.For assignment, and declaration purposes, the numeric or boolean classes need to be included before the variable.
+For instance, ``int sum=0;``, assigns sum to 0, and ``double decimal;``, declares a variable decimal that takes decimals.
+
+5.For large arrays, a datatype called pointer is used to store the location where this data is stored so that it can be deleted to make
+space for other data we want to use.
+
+6.To declare a pointer, an  ``*`` is used before the variable name that is supposed to store the location. For instance, if  ``string name="C++";``, ``string *ptrname=&name;``.Note  ``&`` before name helps to get the address of the variable. And because the pointer, ``*ptrname``, is pointing towards a string,  ``string`` is used before the pointer name.
+
+7.An array is an ordered collection of zero or more C++ data objects of identical type. It is used because it allows for the manipulation of collection of same data objects
+and access of individual data objects within this collection.
+
+8. Strings are  sequential collection of zero or more letters, numbers ,or other symbols. A major difference between a string and array datatype is
+that string cannot be manipulated while an array can be manipulated.
+
+9.An alternative to C++ strings library is C-strings. C++ string does the same things as C Strings but the other way is not true.
+
+10.The use of C-string comes when we want to do simpler tasks with strings as C-strings are more primitive in some cases.
