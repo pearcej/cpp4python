@@ -199,3 +199,13 @@ The following program combines all of the elements above and asks the user for t
     <div>
         <iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
+
+
+Summary
+~~~~~~~~
+1. File handling in C++ uses ``stream`` similar to cout and cin in ``<iosteam>`` library.
+2. The library used in this case is ``<fsream>``.
+3. ``ifstream in_stream`` creates an input stream object, in_stream, that can be used to input text from a file to C++.
+4. ``ofstream out_stream`` creates an output stream object,out_steam, that can be used to write text from C++ to a file.
+5. The filename of the input and output files is always declared as a C-string with a ``char`` variable.
+6. End-of-File or ``.eof()`` is a method for the instance variables of fstream, input and output stream objects, and can be used to carry out a task until a file has ended or do some task after a file has ended.
