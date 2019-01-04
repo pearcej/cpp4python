@@ -50,9 +50,9 @@ better facilitate standard input and output:
     }
 
 What we see is that at the core there are a few similarities with the
-complicated Python version, such as the ``main()`` function and the 
+complicated Python version, such as the ``main()`` function and the
 string “Hello world”. However, in C++ there is a lot more
-stuff around the edges that make it harder to see the core of the program. 
+stuff around the edges that make it harder to see the core of the program.
 Do not worry! An important skill for a computer scientist is to learn what
 to ignore and what to look at carefully. You will soon find that there
 are some elements of C++ that will fade into the background as you
@@ -132,7 +132,7 @@ The main() function
 -------------------
 
 Unlike Python, every C++ program **must** have a ``main`` function which begins
-with ``int main()``. This ``main`` function is called implicitly instead of 
+with ``int main()``. This ``main`` function is called implicitly instead of
 explicitly like we must do in Python when we have a main function.
 The ``int``  in ``int main()`` indicates that the *return type* of the ``main`` function will be
 an integer. The final line of the ``main`` C++ function is typically ``return 0``.
@@ -241,7 +241,7 @@ as a docstring for the documentation.
 
 
 Summary
--------
+=======
 
 Now that we have run our "hello world" program, lets go back and look at
 it carefully to see what we can learn about the C++ language.
@@ -266,10 +266,10 @@ This simple example illustrates a few very important rules:
 
 1. Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.
 
-2. Every C++ program must have a function which begins as ``int main()``, and ends with the statement ``return 0;`` when successfully 
+2. Every C++ program must have a function which begins as ``int main()``, and ends with the statement ``return 0;`` when successfully
    completed.
 
 3. C++ statements are ended by a semi-colon.
 
-4. White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using  
+4. White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using
    indentation to delineate blocks as is done in Python.

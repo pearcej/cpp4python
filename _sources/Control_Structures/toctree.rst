@@ -7,3 +7,4 @@ Control Structures
     conditionals.rst
     while_loop.rst
     for_loop.rst
+    summary.rst
