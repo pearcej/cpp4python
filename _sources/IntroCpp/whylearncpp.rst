@@ -58,7 +58,7 @@ Why Learn C++? Why not Java or Javascript?
 
     - Because C++ is fast, it is currently the language of choice for virtual reality. 
     
-    - Because C++ is fast it is the language of choice of many 2D and 3D game engines.
+    - Also, because C++ is fast, it is the language of choice of many 2D and 3D game engines.
 
     - For all of the above reasons, even though C++ is an older language, 
       it is still one of the top listed in job advertisements.
