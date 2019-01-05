@@ -393,6 +393,9 @@ are ordered collections that are very similar in general structure but
 have specific differences that must be understood for them to be used
 properly. Sets and hash tables are unordered collections.
 
+Arrays
+^^^^^^
+
 **What is an Array?**
 
 An **array** is an ordered collection of zero or more C++ data objects of identical type.
@@ -430,6 +433,8 @@ Sometimes, you will want to initialize an array. For example,
     >>> myList
     [0, 0, 0, 0, 0, 0]
 
+Strings
+^^^^^^^
 **Strings** are sequential collections of zero or more letters, numbers
 and other symbols. We can get strings from the Standard template library with ``#include <string>`` We call these letters, numbers and other symbols
 *characters*. Literal string values are differentiated from identifiers
@@ -468,7 +473,8 @@ arrays are mutable; strings are immutable. For example, you can change an
 item in a list by using indexing and assignment. With a string that
 change is not allowed.
 
-**C Strings and C++ String Objects**
+C Strings and C++ String Objects
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Both the C and C++ cstring library functions are available to C++ programs. However, do not overlook the fact that these two function libraries are very different, and the functions of the first library have a different notion of what a string is from the corresponding notion held by the functions of the second library. There are two further complications: first, though a function from one of the libraries may have a counterpart in the other library (i.e., a function in the other library designed to perform the same operation), the functions may not be used in the same way, and may not even have the same name; second, because of backward compatibility many functions from the C++ String library can be expected to work fine and do the expected thing with C strings, but not the other way around.
 The last statement above might seem to suggest we should use C++ Strings and forget about C-strings altogether, and it is certainly t rue that there is a wider variety of more intuitive operations available for C++ Strings. However, C-strings are more primitive, you may therefore find them simpler to use (provided you remember a few simple rules, such as the fact that the null character must always terminate such strings), and certainly if you read other, older programs you will see lots of C-strings. You should thus use whichever you find more convenient, but remember that they are very different; if you occasionally need to mix the two for some reason, be extra careful. Finally, there are certain situations in which C-Strings must be used as in the use of filenames as we have seen.
@@ -504,9 +510,8 @@ arrays are mutable; strings are immutable. For example, you can change an
 item in a list by using indexing and assignment. With a string that
 change is not allowed.
 
-
-
-
+Tuples
+^^^^^^
 
 **Tuples** are very similar to arrays in that they are sequential containers.
 We can get a tuple from the Standard template library with
@@ -521,6 +526,9 @@ values enclosed in parentheses. For example,
     (2, True, 4.96)
     >>> get<0>(myTuple);
     2
+
+Sets
+^^^^
 
 A **set** is an unordered collection of zero or more immutable C++ data
 objects. We can get a set from the Standard template library with ``#include <set>``. Sets do not allow duplicates and are written as comma-delimited
@@ -551,6 +559,8 @@ provides a summary. Examples of their use follow.
                    ``clear``                  ``aset.clear()``                                Removes all elements from the set
     ======================== ================================= ================================================================
 
+Hash Tables
+^^^^^^^^^^^
 Our final C++ collection is an unordered structure called a
 **Hash Table**. Hash Tables are collections of associated pairs of
 items where each pair consists of a key and a value. This key-value pair
@@ -636,3 +646,32 @@ specify a return value instead.
                 ``count``     ``myDict.count(key)``   Returns ``True`` if key is in the   dictionary, ``False`` otherwise
                 ``erase``     ``myDict.erase(key)``                                Removes the entry from the  dictionary
     ===================== ========================= =====================================================================
+
+
+
+Summary
+~~~~~~~~~~~~~~~~~
+1.C++ has four main built in numeric classes int, float, double, and long for implementing integers and
+floating point numbers.
+
+2.int and long, is used for integers, and float, and double, are used depending on the number of decimals.
+
+3.For a boolean datatype, C++ has the boolean class bool.
+
+4.For assignment, and declaration purposes, the numeric or boolean classes need to be included before the variable.
+For instance, ``int sum=0;``, assigns sum to 0, and ``double decimal;``, declares a variable decimal that takes decimals.
+
+5.For large arrays, a datatype called pointer is used to store the location where this data is stored so that it can be deleted to make
+space for other data we want to use.
+
+6.To declare a pointer, an  ``*`` is used before the variable name that is supposed to store the location. For instance, if  ``string name="C++";``, ``string *ptrname=&name;``.Note  ``&`` before name helps to get the address of the variable. And because the pointer, ``*ptrname``, is pointing towards a string,  ``string`` is used before the pointer name.
+
+7.An array is an ordered collection of zero or more C++ data objects of identical type. It is used because it allows for the manipulation of collection of same data objects
+and access of individual data objects within this collection.
+
+8. Strings are  sequential collection of zero or more letters, numbers ,or other symbols. A major difference between a string and array datatype is
+that string cannot be manipulated while an array can be manipulated.
+
+9.An alternative to C++ strings library is C-strings. C++ string does the same things as C Strings but the other way is not true.
+
+10.The use of C-string comes when we want to do simpler tasks with strings as C-strings are more primitive in some cases.

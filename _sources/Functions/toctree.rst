@@ -5,3 +5,4 @@ Functions
     :maxdepth: 2
 
     DefiningFunctions.rst
+    summary.rst

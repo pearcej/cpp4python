@@ -174,3 +174,14 @@ the user for a filename, and can catch if that file does not exist, or the defau
 There are many kinds of default exceptions that can be used in the C++ standard library.
 See the C++ official documentation for a list
 of all the available exception types and for how to create your own exception type.
+
+Summary
+~~~~~~~~~~~~
+
+1.There are two types of errors that occur while writing programs: 1)Syntax error and 2)Logic Error.
+
+2.Snytax error is an error that occurs due to typing error or wrong statement that is not allowed in a language.This can be easily caught as the program does not run until this is fixed.
+
+3.Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a divison by 0 leading to an undefined value.
+
+4.logic errors can be caught by using ``try`` and ``catch`` which can help pinpoint what is causing the error and avoid confusion about the problem.
