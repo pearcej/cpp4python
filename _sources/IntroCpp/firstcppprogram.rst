@@ -13,7 +13,7 @@ in Python:
   print("Hello World!")
 
 Now, lets look at a more “complicated” version of the "hello world" program with a
-main() function in Python:
+``main`` function in Python:
 
 .. activecode:: hellopymain
   :language: python
@@ -22,7 +22,7 @@ main() function in Python:
       print("Hello World!")
   main()
 
-Now lets look at the same program written in C++:
+Next, lets look at the same program written in C++:
 
 .. activecode:: hellocppstd
     :language: cpp
@@ -35,7 +35,7 @@ Now lets look at the same program written in C++:
         return 0;
     }
 
-This can alternatively be written as follows to allow
+The above program can alternatively be written as follows to allow
 better facilitate standard input and output:
 
 .. activecode:: hellocppnamespace
@@ -50,7 +50,7 @@ better facilitate standard input and output:
     }
 
 What we see is that at the core there are a few similarities with the
-complicated Python version, such as the ``main()`` function and the
+complicated Python version, such as the ``main`` function and the
 string “Hello world”. However, in C++ there is a lot more
 stuff around the edges that make it harder to see the core of the program.
 Do not worry! An important skill for a computer scientist is to learn what
@@ -59,20 +59,23 @@ are some elements of C++ that will fade into the background as you
 become used to seeing them. One thing that will help you is to learn a
 little bit more about C++.
 
-The first question you probably have about this little program is “How
-do I run it on my own machine?” Running a C++ program is not as simple as running a
-Python program. The first thing you need to do with a C++ program is to
-compile it. The first big difference between C++ and Python is that
-Python is an *interpreted language*. We could run our Python programs in
+Compilation
+-----------
+
+A question you may have about this little program is “How would I run it on 
+my own machine?” Running a C++ program is not as simple as running a
+Python program. The first big difference between C++ and Python is that
+Python is an *interpreted language* while C++ is a *compliled language*. 
+We could run our Python programs in
 the Python **interpreter**, and we were often quite happy to do that.
-In C++, running programs is a two step process.
+In C++, running programs is a two step process. 
 
 First, we must type the hello world program into a file and save that file
 using a name like ``hello.cpp`` Once we have saved the file we **compile**
 it either from the command line or from an integrated development environment (IDE).
-Only after it is compiled, can we run it.
+Only after the program is compiled, can we run it.
 
-Now you may be wondering what good is that extra step? What does
+Now you may be wondering what good is this extra step? What does
 compiling do for us? There are a couple of important benefits we get
 from compiling:
 
@@ -97,7 +100,7 @@ but first let's talk about each of the statements in a C++ program.
 Using headers and libraries
 ---------------------------
 
-Preprocessor directives in C++ appear as statements preceded by the hash sign #.
+Preprocessor directives in C++ appear as statements preceded by the hash sign ``#``.
 These tell the preprocessor which file, header or library to make available to
 the compiler. For example, ``#include <iostream>`` will make sure that
 the ``iostream`` library is available at compile time.
@@ -128,18 +131,21 @@ the implementation, such as the
 headers in the standard library (``iostream``, ``string``, etc.). The double
 quotes ``"`` are used for headers and files not provided by the implementation.
 
-The main() function
--------------------
+The main function
+-----------------
 
 Unlike Python, every C++ program **must** have a ``main`` function which begins
 with ``int main()``. This ``main`` function is called implicitly instead of
-explicitly like we must do in Python when we have a main function.
+explicitly like we must do in Python when we have a main function. This is
+why you do not see an explicit function call invoking main.
+
 The ``int``  in ``int main()`` indicates that the *return type* of the ``main`` function will be
-an integer. The final line of the ``main`` C++ function is typically ``return 0``.
-Here the integer zero is returned to indicate successful completion of the ``main``
+an integer. The final line of the ``main`` C++ function is typically ``return 0``,
+so you can see that the program does actually return the integer 0.
+Here zero is returned to indicate successful completion of the ``main``
 function. In case you are wondering why an integer is returned, if you do error
-handling in C++, you can alternatively return an integer error code representing
-a specific error when it occurs.
+handling in C++, instead of 0, you can alternatively return an integer error code representing
+a specific error when and where it occurs.
 
 C++ functions and other C++ code blocks are grouped together using the curly ``{}``
 brackets. These curly brackets are used much like tabbing is used in Python.
@@ -163,47 +169,6 @@ the kind of human-readable formatting you have become used to in Python.
 You will likely learn to appreciate this when you are debugging.
 
 
-Standard Input and Output
--------------------------
-
-We often have a need to interact with users,
-either to get data or to provide some sort of result. The C++ ``<iostream>`` library provides us with the functionality to get information as console input and to output information to the console. This input and output is handled in what is known as a ``stream``.
-
-A ``stream`` is essentially a channel in which data flows from the source to a destination.
-Input streams direct data from a source, such as the keyboard or a file. The standard input stream, ``cin``, is an input stream from the keyboard. Output streams send data out, and the standard output stream ``cout`` sends data to the screen.
-
-In C++ ``cout`` stands for "console output".
-Much like the Python ``print`` statement, ``cout`` is used to
-print to the standard output device, which is typically your screen.
-When ``cout`` is used, you will also see ``<<`` used.
-When this odd set of symbols are used together, they are called the "output operator".
-The output operator is used to direct output to the designated output device or file.
-The output operator can also be used to concatenate output, much like the "+"
-can be used to concatenate in Python.
-
-The command ``cin`` is somewhat similar to ``cout`` except, of course, it is used for input.
-As you might have guessed, ``cin`` stands for "console input" and it makes getting input from the standard input device (usually the keyboard) relatively easy.
-The input operator in C++ is ``>>``.
-We will see ``cin`` in action in the next section on data types,
-and we will talk more about input and output later when we talk in more depth about
-C++ streams and file handling.
-
-In the following code snippets, press the icon on the left that looks like a piece of paper to see the multiple files being used.
-
-.. raw :: html
-
-    <div>
-    <iframe height="600px" width="100%" src="https://repl.it/@CodyWMitchell/Stream-Code?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-    </div>
-
-Now whatever the user types will be stored in the
-``num`` variable. Using the cout function, we can easily write
-instructions that will prompt the user to enter data and then
-incorporate that data into further processing. For example, in the code above, the integer input is doubled and then displayed!
-
-It is important to note that the value returned from the ``cin``
-function is dependent on the data type of the variable that it is stored in. If you want this input a specific type, you must declare the variable used in cin as that type.
-
 Comments in C++
 ---------------
 
@@ -216,21 +181,65 @@ interpreter or compiler.
 
 Python has two types of multiline comments. Like Python, C++ also supports multi-line comments
 beginning with
-``/\*``
+``\*``
 and ending with
-``\*/``.
+``*/``.
 
 There is no equivalent in the C++ standard to the triple-quoted docstring in C++.
 However, the symbol groups
-``/\*\*``
+``\**``
 and
-``\*/``
+``*/``
 are often used to indicate documentation blocks
 at the beginning of a class, program, or function,
 which is legal because the second asterisk ``*``  is simply treated as part of the
 multi-line comment.
 Certain libraries will also automatically process the text between these symbol groups,
 as a docstring for the documentation.
+
+
+Standard Input and Output
+-------------------------
+
+We often have a need to interact with users,either to get data or to provide some sort of result. 
+The C++ ``<iostream>`` library provides us with the functionality to get information 
+as console input and to output information to the console. This input and output is handled in what is known as a ``stream``.
+
+A ``stream`` is essentially a channel in which data flows from the source to a destination.
+ Output streams send data out, and the standard output stream ``cout`` sends data to the screen, also called the console.
+So, ``cout`` stands for "console output".
+Much like the Python ``print`` statement, ``cout`` is used to
+print to the standard output device, which is typically your screen.
+When ``cout`` is used, you will also see ``<<`` used.
+When this odd set of symbols are used together, they are called the "output operator".
+The output operator is used to direct output to the designated output device or file.
+The output operator can also be used to concatenate output, much like the "+"
+can be used to concatenate in Python.
+
+The command ``cin`` is somewhat similar to ``cout`` except, of course, it is used for input.
+Input streams direct data from a source, such as the keyboard or a file. 
+As you might have guessed, ``cin`` stands for "console input" and it makes getting input from the standard input device (usually the keyboard) relatively easy.
+The input operator in C++ is ``>>``.
+
+Here is an example that uses ``cin``:
+
+.. raw :: html
+
+    <div>
+    <iframe height="600px" width="100%" src="https://repl.it/@pearcej/cin-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </div>
+
+Now whatever the user types will be stored in the
+``num`` variable. Using the cout function, we can easily write
+instructions that will prompt the user to enter data and then
+incorporate that data into further processing. For example, in the code above, the integer input is doubled and then displayed!
+
+Just like functions, all variables in C++ need to be declared before use.
+The line ``float num`` tells the compiler to set aside sufficient space for a floating point number.
+We will talk more about type declarations in the section on data types, and 
+we will go into more depth on input and output later when we discuss
+C++ streams and file handling.
+
 
 ::
 
