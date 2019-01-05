@@ -39,7 +39,8 @@ to focus on what is different from the languages you already know.
 Why Learn C++? Why not Java or Javascript?
 ------------------------------------------
 
-    - C++ is an enormous language which is very powerful because it is a high-level language that offers low-level features.
+    - C++ is an enormous language which is very powerful because it is a high-level language that offers low-level features, 
+      but one only needs to learn a small part of the language to write effective code.
     
     - C++ influenced many programming languages such as C#, Java, and other newer versions of C, so by learning C++,
       learning these other languages becomes much easier.
@@ -56,6 +57,8 @@ Why Learn C++? Why not Java or Javascript?
       which can increase control over both memory and performance under certain circumstances.
 
     - Because C++ is fast, it is currently the language of choice for virtual reality. 
+    
+    - Because C++ is fast it is the language of choice of many 2D and 3D game engines.
 
     - For all of the above reasons, even though C++ is an older language, 
       it is still one of the top listed in job advertisements.
