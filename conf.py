@@ -273,7 +273,7 @@ man_pages = [
 texinfo_documents = [
   ('index', 'PythonCourseware',
    u'Python Courseware Project',
-   u'Jan Pearce, Brad Miller, David Ranum',
+   u'Jan Pearce and Brad Miller',
    'PythonCoursewareProject', 'One line description of project.', 'Miscellaneous'),
 ]
 
