@@ -97,6 +97,7 @@ run the program. We will look at some examples of  errors that the compiler
 catches shortly. Chances are you may create some on your own very soon too,
 but first let's talk about each of the statements in a C++ program.
 
+
 Using headers and libraries
 ---------------------------
 
@@ -206,7 +207,7 @@ The C++ ``<iostream>`` library provides us with the functionality to get informa
 as console input and to output information to the console. This input and output is handled in what is known as a ``stream``.
 
 A ``stream`` is essentially a channel in which data flows from the source to a destination.
- Output streams send data out, and the standard output stream ``cout`` sends data to the screen, also called the console.
+Output streams send data out, and the standard output stream ``cout`` sends data to the screen, also called the console.
 So, ``cout`` stands for "console output".
 Much like the Python ``print`` statement, ``cout`` is used to
 print to the standard output device, which is typically your screen.
