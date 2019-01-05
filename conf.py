@@ -39,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'C++ for Python Programmers'
-copyright = u'2018 Janice L Pearce'
+copyright = u'2019 Jan Pearce and Brad Miller'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
