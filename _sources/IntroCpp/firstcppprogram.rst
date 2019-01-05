@@ -230,13 +230,19 @@ Here is an example that uses ``cin``:
     <iframe height="600px" width="100%" src="https://repl.it/@pearcej/cin-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
 
-Now whatever the user types will be stored in the
-``num`` variable. Using the cout function, we can easily write
-instructions that will prompt the user to enter data and then
-incorporate that data into further processing. For example, in the code above, the integer input is doubled and then displayed!
 
+Type Declarations
+-----------------
+
+In this example, you may note the line ``float num`` which declares a new variable called ``num`` of type ``float``.
 Just like functions, all variables in C++ need to be declared before use.
-The line ``float num`` tells the compiler to set aside sufficient space for a floating point number.
+The line ``float num`` essentially tells the compiler to set aside sufficient space for a floating point number, 
+and to name this memory location ``num.``
+Then whatever the user types in will be stored in the ``num`` variable. 
+Using the ``cout`` function, we can write instructions that will prompt the user to enter data and then
+incorporate that data into further processing. 
+For example, in the code above, the integer input is doubled and then displayed!
+
 We will talk more about type declarations in the section on data types, and 
 we will go into more depth on input and output later when we discuss
 C++ streams and file handling.
