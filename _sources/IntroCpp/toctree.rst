@@ -9,3 +9,4 @@ Introduction to C++ for Python Programmers
     introduction.rst
     whylearncpp.rst
     firstcppprogram.rst
+    glossary.rst
