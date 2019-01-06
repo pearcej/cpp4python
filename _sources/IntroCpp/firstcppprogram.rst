@@ -170,22 +170,24 @@ the kind of human-readable formatting you have become used to in Python.
 You will likely learn to appreciate this when you are debugging.
 
 .. parsonsprob:: questionintrocpp_order
-
-   Construct a block of code that correctly implements hello world
-   ---
+   :adaptive:
+   :noindent:
+   
+   Correctly rearrange C++ code to implement hello world
+   -----
    #include <iostream>
-   ---
+   =====
    using namespace std;
-   ---
+   =====
    int main()
-   ---
-   ``{``
-   ---
-   cout << "Hello World!\n";
-   ---
-   return 0;
-   ---
-   \}
+   =====
+   {
+   =====
+       cout << "Hello World!\n";
+   =====
+       return 0;
+   =====
+   }
 
 
 Comments in C++
