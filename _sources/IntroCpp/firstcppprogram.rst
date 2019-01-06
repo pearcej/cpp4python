@@ -169,18 +169,20 @@ As you program in C++, we strongly recommend you continue to use
 the kind of human-readable formatting you have become used to in Python.
 You will likely learn to appreciate this when you are debugging.
 
+Without peeking, see if you can put the following code in the correct order.
+
+
 .. parsonsprob:: questionintrocpp_order
    :adaptive:
    :noindent:
    
    Correctly rearrange C++ code to implement hello world
    -----
-   #include <iostream>
+   include <iostream>
    =====
    using namespace std;
    =====
    int main()
-   =====
    {
    =====
        cout << "Hello World!\n";
@@ -188,6 +190,7 @@ You will likely learn to appreciate this when you are debugging.
        return 0;
    =====
    }
+
 
 
 Comments in C++
