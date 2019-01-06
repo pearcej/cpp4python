@@ -173,10 +173,11 @@ Without peeking, see if you can put the following code in the correct order.
 
 
 .. parsonsprob:: pp_introcpp_order
+   :language: c++
    :adaptive:
    :noindent:
    
-   Correctly rearrange C++ code to implement hello world:
+   Correctly rearrange the code below to implement hello world in C++:
    -----
    &#x22D5include &#x003Ciostream&#x003E
    =====
@@ -234,7 +235,8 @@ Standard Input and Output
 
 We often have a need to interact with users,either to get data or to provide some sort of result. 
 The C++ ``<iostream>`` library provides us with the functionality to get information 
-as console input and to output information to the console. This input and output is handled in what is known as a ``stream``.
+from the console input as well as to output information to the console. This input and output is handled by what 
+is known as a ``stream``.
 
 A ``stream`` is essentially a channel in which data flows from the source to a destination.
 Output streams send data out, and the standard output stream ``cout`` sends data to the screen, also called the console.
