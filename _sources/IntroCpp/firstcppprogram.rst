@@ -172,13 +172,13 @@ You will likely learn to appreciate this when you are debugging.
 Without peeking, see if you can put the following code in the correct order.
 
 
-.. parsonsprob:: questionintrocpp_order
+.. parsonsprob:: pp_introcpp_order
    :adaptive:
    :noindent:
    
    Correctly rearrange C++ code to implement hello world:
    -----
-   ``#``include ``<``iostream``>``
+   &#x22D5include &#x003Ciostream&#x003E
    =====
    using namespace std;
    =====
