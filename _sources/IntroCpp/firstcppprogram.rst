@@ -169,6 +169,24 @@ As you program in C++, we strongly recommend you continue to use
 the kind of human-readable formatting you have become used to in Python.
 You will likely learn to appreciate this when you are debugging.
 
+.. parsonsprob:: questionintrocpp_order
+
+   Construct a block of code that correctly implements hello world
+   -------------------
+   #include <iostream>
+   ===================
+   using namespace std;
+   ===================
+   int main()
+   ===================
+   {
+   ===================
+   cout << "Hello World!\n";
+   ===================
+   return 0;
+   ===================
+   }
+
 
 Comments in C++
 ---------------
@@ -197,6 +215,13 @@ which is legal because the second asterisk ``*``  is simply treated as part of t
 multi-line comment.
 Certain libraries will also automatically process the text between these symbol groups,
 as a docstring for the documentation.
+
+::
+
+  // The remainder of this line is a C++ comment which is ignored by the compiler
+
+  /* This is a multi-line C++ comment that can
+  span many lines, beginning and ending with the given symbols */
 
 
 Standard Input and Output
@@ -246,14 +271,6 @@ For example, in the code above, the integer input is doubled and then displayed!
 We will talk more about type declarations in the section on data types, and 
 we will go into more depth on input and output later when we discuss
 C++ streams and file handling.
-
-
-::
-
-  // The remainder of this line is a C++ comment which is ignored by the compiler
-
-  /* This is a multi-line C++ comment that can
-  span many lines, beginning and ending with the given symbols */
 
 
 Summary
