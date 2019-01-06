@@ -176,9 +176,9 @@ Without peeking, see if you can put the following code in the correct order.
    :adaptive:
    :noindent:
    
-   Correctly rearrange C++ code to implement hello world
+   Correctly rearrange C++ code to implement hello world:
    -----
-   ``include <iostream>``
+   #include `<iostream>`_
    =====
    using namespace std;
    =====
