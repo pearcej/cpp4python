@@ -172,20 +172,20 @@ You will likely learn to appreciate this when you are debugging.
 .. parsonsprob:: questionintrocpp_order
 
    Construct a block of code that correctly implements hello world
-   -------------------
+   ---
    #include <iostream>
-   ===================
+   ---
    using namespace std;
-   ===================
+   ---
    int main()
-   ===================
-   {
-   ===================
+   ---
+   ``{``
+   ---
    cout << "Hello World!\n";
-   ===================
+   ---
    return 0;
-   ===================
-   }
+   ---
+   \}
 
 
 Comments in C++
