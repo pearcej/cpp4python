@@ -362,7 +362,7 @@ Check yourself
 
 .. fillintheblank:: input
 
-   What command is used to produce C++ output?
+   What command is used to accept C++ input?
 
   - :cin: Right!
     :raw_input: That's Python, not C++!
