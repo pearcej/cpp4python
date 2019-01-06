@@ -313,3 +313,61 @@ This simple example illustrates a few very important rules:
 
 4. White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using
    indentation to delineate blocks as is done in Python.
+   
+Check yourself
+==============
+
+.. mchoice:: mc_comment
+   :answer_a: &#x003C!-
+   :answer_b: &#x22D5
+   :answer_c: //
+   :answer_d: @
+   :answer_e: none of the above
+   :correct: c
+   :feedback_a: No, &#x003C!- is used in html to begin comments, but it is not used in C++.
+   :feedback_b: No, &#x22D5 is used in Python for comments, but in C++ it is used for compiler directives such as loading a code library.
+   :feedback_c: Correct!
+   :feedback_d: No, @ is not used in C++.
+   :feedback_e: One of the above is correct.
+
+   What symbol or set of symbols will begin a comment in C++ when the comment extends only to the end of the line?
+
+.. mchoice:: mc_mlcomment
+  :answer_a: True
+  :answer_b: False
+  :correct: a
+  :feedback_a: Right!
+  :feedback_b: Sorry, both languages support multi-line comments beginning with /* and ending with */.
+
+  True or False: Like Python, C++ supports multi-line comments beginning with /* and ending with */.
+
+
+.. fillintheblank:: output
+
+   What command is used to produce C++ output?
+
+   - :cout: Right!
+     :print: That's Python, not C++!
+     :printf: That's C, not C++!
+     :default: Incorrect. Please try again.
+
+.. fillintheblank:: output
+
+   What command is used to produce C++ output?
+
+   - :cout: Right!
+     :print: That's Python, not C++!
+     :printf: That's C, not C++!
+     :default: Incorrect. Please try again.
+
+.. fillintheblank:: input
+
+   What command is used to produce C++ output?
+
+  - :cin: Right!
+    :raw_input: That's Python, not C++!
+    :input: That's Python, not C++!
+    :scanf: That's C, not C++!
+    :default: Incorrect. Please try again.
+
+
