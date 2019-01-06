@@ -6,8 +6,9 @@ This book assumes that you are already familiar with the
 Python will be the starting point for our journey into C++. We will begin by
 looking at a very simple C++ program to see how the C++ language
 looks, and we will discuss how we get a C++ program to run. 
+
 Next, we will look at the primary constructs that are common 
-to most programming languages:
+to nearly all programming languages:
 
     -  Using code libraries
     
@@ -26,7 +27,7 @@ to most programming languages:
     -  Loops
 
 Once we have the basics of C++ behind us we will move on to look at the
-features of C++ that are both unique and powerful:
+additonal useful features of C++ including:
 
     -  Functions and their parameters
 
