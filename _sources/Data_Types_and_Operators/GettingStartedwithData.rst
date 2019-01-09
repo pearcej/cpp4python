@@ -5,17 +5,31 @@
 Using Data in C++
 ~~~~~~~~~~~~~~~~~
 
-Built-in Atomic Data Types
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+C++ requires the users specify the specific data type of each variable before it is used.
+C++ has four main built-in atomic data types: integer (``int``),
+floating point (``float``), Boolean (``bool``), and character (``char``).
 
-We will begin our review by considering the atomic data types. C++
-has four main built-in numeric classes that implement the integer and
-floating point data types. These C++ classes are called ``int``, ``float``, ``double``,
-and ``long``. The standard arithmetic operations, +, -, \*, and /
-(exponentiation can be done using ``pow()`` from the ``cmath`` library) can be used with parentheses forcing the order of
-operations away from normal operator precedence. Other very useful
-operations are the remainder (modulo) operator, %. Note that when two integers are divided, the integer portion of the
-quotient is returned and the fractional portion is removed. To get the whole quotient, you must declare one of the numbers as a float.
+Numeric Atomic Data Types
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Numeric C++ data types that implement integer and
+floating point data types, include ``int`` for integer, ``float``
+for floating point, ``double`` for double precision floating point.
+
+The standard arithmetic operations, +, -, \*, and /
+are used with optional parentheses to force the order of
+operations away from normal operator precedence.
+
+In Python we can use ``//`` to get integer division.
+Similarly, when two integers are divided in C++, the integer portion of the
+quotient is returned and the fractional portion is removed.
+To get the whole quotient, declaring one of the numbers as a float will
+convert the entire result into floating point.
+
+Exponentiation in C++ is done using ``pow()`` from the ``cmath`` library
+and the remainder (modulo) operator is done with ``%``.
+
+Run the following code to see that you understand each result.
 
 .. tabbed:: intro
 
@@ -36,7 +50,7 @@ quotient is returned and the fractional portion is removed. To get the whole quo
             cout << pow(2, 10) << endl;
             cout << float(6)/3 << endl;
             cout << float(7)/3 << endl;
-            cout << 7/3 << endl;
+            cout << 7/3 << endl; //In C++ this is integer division
             cout << 7%3 << endl;
             cout << float(3)/6 << endl;
             cout << 3/6 << endl;
@@ -67,11 +81,23 @@ quotient is returned and the fractional portion is removed. To get the whole quo
 
         main()
 
+When declaring numeric variables in C++,
+modifiers like ``short``, ``long``, and ``unsigned``
+can optionally be used to help
+to ensure space is used as efficiently as possible.
 
-The Boolean data type, implemented as the C++ ``bool`` class, will be
-quite useful for representing truth values. The possible state values
-for a boolean object are ``true`` and ``false``.
+The Boolean Data Type
+^^^^^^^^^^^^^^^^^^^^^
+
+Boolean data types are named after George Boole who was an English mathematician,
+so "Boolean" is capitalized. However,
+the Boolean data type, in C++ uses the keyword ``bool``
+which is not capitalized.
+The possible state values
+for a C++ Boolean are lower case ``true`` and ``false``.
 Be sure to note the difference in capitalization from Python.
+In Python, these same truth values are capitalized, while in C++,
+they are lower case.
 
 C++ uses the standard Boolean operators, but they are represented
 differently than in Python: ``&&`` (and), ``||`` (or), and ``!`` (not).
@@ -129,9 +155,9 @@ and logical operators with examples shown in the session that follows.
           greater than or equal     :math:`>=`                                 Greater than or equal to operator
                           equal     :math:`==`                                                 Equality operator
                       not equal     :math:`!=`                                                Not equal operator
-                    logical and     :math:`&&`                          Both operands True for result to be True
-                     logical or     :math:`||`   One or the other operand is True for the result to be True
-                    logical not      :math:`!`   Negates the truth value, False becomes True, True becomes False
+                    logical and     :math:`&&`                          Both operands true for result to be true
+                     logical or     :math:`||`        One or the other operand is true for the result to be true
+                    logical not      :math:`!`   Negates the truth value, false becomes true, true becomes false
     =========================== ============== =================================================================
 
 
@@ -168,7 +194,7 @@ and logical operators with examples shown in the session that follows.
 
         main()
 
-A C++ variable is created when declared with a type on
+A C++ variable can be created when declared and initialized with a type on
 the left-hand side of an assignment statement. Assignment statements
 provide a way to associate a name with a value. The variable will hold a
 piece of data. Consider the
@@ -198,11 +224,11 @@ following session:
     }
 
 The assignment statement ``int theSum = 0;`` creates a variable called
-``theSum`` and lets it hold the data value of ``0``.
+``theSum`` and initializes it to hold the data value of ``0``.
 As in Python, the right-hand side of the assignment
 statement is evaluated and the resulting data value is
 “assigned” to the variable named on the left-hand side.
-The type of the variable is integer.
+Here the type of the variable is integer.
 In Python, if the type of the data
 changes in the program, so does the type of the variable.
 However, in C++, the data type cannot change.
@@ -214,76 +240,143 @@ Note what happened in the code above.
 Introduction to Pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The kind of variables we have already used are really identifiers that refer to where in memory we store information. We can store things as basic as integers and double precision floating point numbers, or things more complicated as structure and classes. Whenever we want the information, we can simply use the identifier to access it.
+The kind of variables we have already used are really identifiers
+that refer to where in memory we store information. We can store things
+as basic as integers and double precision floating point numbers,
+or more complicated things like a class object.
+Whenever we want the information, we can simply use the identifier to access it.
 
-Let's look at a simple example of storing an integer. The following code declares a variable called *varName* that has in it a value of 100.
+Let's look at simple examples of storing an integer in Python and C++.
+The following code declares a variable called *varName* that has in it a
+value of 100.
+
+Note that Python creates a reference to an object while C++ stores the
+value more directly.
 
 ::
 
-    // variable declaration for a single integer value
+    // Python reference for a single integer value
+    varName = 100
+
+.. _fig_py_reference:
+
+.. figure:: Figures/python_reference.png
+   :align: center
+   :alt: "arrow from varName to box containing 100 object"
+
+   Figure 4: Python reference
+
+::
+
+    // C++ variable declaration an assignment of a single integer value
     int varName = 100;
 
-The results of this code may look like the diagram below:
+In C++ the results of running this code will look like the diagram below:
 
-.. _fig_point1:
+.. _fig_cpp_reference:
 
-.. figure:: Figures/point1.gif
+.. figure:: Figures/cpp_var.png
    :align: center
-   :alt: image
+   :alt: "Box named varName containing value of 100"
 
-   Figure 4: FIXME
+   Figure 4: C++ variable
 
-When we want to output the value to the console, we use the variable name to do so:
+In each case, when we want to output the value to the console, we use the variable name
+to do so. But, we can also identify the memory location of the variable,
+which is sometimes very valuable. In both Python and C++, this address is run dependent.
+In Python we use ``id`` while in C++ we use the *address-of operator*, ``&``.
 
-::
+.. tabbed:: change_this2
 
-    // print out the value we stored to the console, assuming that we
-    // included the correct headers that define what cout does
-    cout << varName << endl;
+  .. tab:: C++
 
-An important question is: Is this method of declaring variables sophisticated enough to handle all the problems we want to solve using programs?
+    .. activecode:: address_cpp
+        :caption: Memory addresses in C++
+        :language: cpp
 
-The answer to that question is due to the way that arrays are stored in memory. Although the full details are complicated, the simple answer is that each program is given a specific amount of memory space to run. All statically allocated and locally declared variables are stored in this region, as well as all occurrences of the functions as the program is running. There is enough storage room available for simple variables, but arrays can be of arbitrary size, so there is a limit to how large they can be...otherwise they could crowd out the other variables and executable code in the program.
+        #include <iostream>
+        using namespace std;
 
-So where do large arrays get stored? In a region of memory called the heap, where space can be allocated when needed and then freed when you are done.
+        int main(){
+            int varName = 101;
+            cout << varName << endl;
+            cout << &varName << endl;
+            return 0;
+        }
 
-Once we reserve space to hold data, we store the location of this data in a special variable called a pointer.
+  .. tab:: Python
 
-We will talk about how to declare a variable to be a pointer first and then show pictorially what is happening.
+    .. activecode:: address_py
+        :caption: Memory identifier in Python
+
+        def main():
+            varName = 101;
+            print(varName)
+            print(id(varName))
+
+        main()
+
+
+In both Python and C++, variables are stored in memory locations which are dependent
+upon the run itself. If you run the above code in either C++ or Python, you will
+see the location change. The memory location you see
+when printing the address in C++ may look strange because it is a base 16 (hexadecimal)
+code like 0x7ffd93f25244, while the Python ``id`` may look less like an address depending
+upon your version of Python.
+
+In Python, it is impossible to store a variable directly. Instead, we must use
+a variable name and a reference to the data object. (Hence the arrow.)
+In C++, variables store values much more directly, which is faster to reference.
+
+If we want to create a analogous reference to a memory location in C++,
+we must use a special syntax called a **pointer**.
 
 Pointer Syntax
 --------------
 
-When declaring a pointer that will "point" to the memory address of some data type, you use the same rules of declaring variables and data types. The key difference is that there is an asterisk (*) between the data type and the identifier.
+When declaring a pointer in C++ that will "point" to the memory address of some
+data type, like all variables do in Python,
+you will use the same rules of declaring variables and data types.
+The key difference is that there must be an asterisk (*) between the data type and the
+identifier.
 
 ::
 
-    variableType *identifier; // syntax to declare a pointer
-    int *ptrx; // example of a pointer to an integer
+    variableType *identifier; // syntax to declare a C++ pointer
+    int *ptrx; // example of a C++ pointer to an integer
 
-White space in C++ generally does not matter, so the following pointer declarations are identical:
+White space in C++ generally does not matter, so the following pointer declarations
+are identical:
 
 ::
 
-    SOMETYPE *variablename;
+    SOMETYPE *variablename; // preferable
     SOMETYPE * variablename;
     SOMETYPE* variablename;
 
-However, the first declaration is preferable in each case, as it is clear to the programmer that the variable is in fact a pointer because the asterisk is closer to the variable name.
+However, the first declaration is preferable because it is clearer to the
+programmer that the variable is in fact a pointer because the asterisk is closer
+to the variable name.
 
-The Address Operator: One simple way to get the pointer information into a pointer
-----------------------------------------------------------------------------------
+The address-of operator, ``&``
+------------------------------
 
-Ok, now that we know how to declare pointers, how do we give them the address of where the value is going to be stored? One way to do this is to have a pointer refer to another variable by using the address operator, which is denoted by the ampersand symbol, &. The address operator does exactly what it indicates, namely it returns the address of either (1) a variable, (2) a symbolic constant or (3) a element in an array.
+Now that we know how to declare pointers, how do we give them the address of
+where the value is going to be stored? One way to do this is to have a pointer
+refer to another variable by using the address-of operator, which is denoted by the
+ampersand symbol, ``&``. The address-of operator ``&`` does exactly what it indicates,
+namely it returns the address.
 
-The syntax is shown below, where varName stores the value, and varPntr stores the address of where varName is located:
+The syntax is shown below, where varName stores the value, and varPntr stores
+the address of where varName is located:
 
 ::
 
     variableType value;  // a variable to hold the value
     variableType *pointer = &value;  // a variable to hold the address for varName
 
-Keep in mind that when declaring a pointer, the pointer needs to be of the same type as the variable or constant to which it points.
+Keep in mind that when declaring a C++ pointer, the pointer needs to be of the same
+type as the variable or constant to which it points.
 
 Expanding on the example above where varName has the value of 100.
 
@@ -291,14 +384,14 @@ Expanding on the example above where varName has the value of 100.
 
     //variable declaration for a single integer value
     int varName = 100;
-    int* varPntr;
+    int *varPntr;
     varPntr = &varName;
 
-The results of this code may look like the diagram below.
+The results of running this C++ code will look like the diagram below.
 
 .. _fig_point2:
 
-.. figure:: Figures/point2.gif
+.. figure:: Figures/point2.png
    :align: center
    :alt: image
 
@@ -307,11 +400,17 @@ The results of this code may look like the diagram below.
 Accessing Values from SIMPLE Pointers
 -------------------------------------
 
-So, once you have a pointer, how do you access the values associated with that location? You use the asterisk before the pointer variable, which dereferences the pointer, meaning that it will find the location of the value stored where the pointer was referencing.
+So, once you have a C++ pointer, how do you access the values associated with that location?
+You use the asterisk before the pointer variable, which
+goes to that address, effectively *dereferencing* the pointer,
+meaning that it will find the location of the value stored where the pointer was
+pointing.
 
-In other words, varName and \*varPntr (note the asterisk in front!) is the __same thing__ in the code above.
+In other words, varName and \*varPntr (note the asterisk in front!) reference the same
+value in the code above.
 
-Let's extend the example above to output the value of a variable and its address in memory:
+Let's extend the example above to output the value of a variable and its address
+in memory:
 
 .. _lst_cppcode1:
 
@@ -325,61 +424,87 @@ Let's extend the example above to output the value of a variable and its address
             int varName = 100;
             int *varPntr = &varName;
 
-            cout << "the variable varName has the value: " << varName << endl;
+            cout << "varName has value: " << varName << endl;
             cout << "varPntr says varName is located at: " << varPntr << endl;
-            cout << "the thing that varPntr is pointing to (varName) has the value: " << *varPntr << "\n\n";
+            cout << "varPntr is pointing to (varName) with the value: "
+                 << *varPntr << "\n\n";
 
             varName = 50;
 
-            cout << "After changing varName, its value is now: " << varName << endl;
-            cout << "varPntr is now pointing to a variable that has the value: " << *varPntr << "\n\n";
+            cout << "Changing varName, to: " << varName << endl;
+            cout << "varPntr now points to memory with the value: "
+                 << *varPntr << "\n\n";
 
             *varPntr = 2000;
-            cout << "After changing *varPntr, varName now has: " << varName << endl;
-            cout << "varPntr is now pointing to a variable that has the value: " << *varPntr << endl;
+            cout << "Changing *varPntr, varName to: " << varName << endl;
+            cout << "varPntr now points to memory with the value: " << *varPntr << endl;
 
             return 0;
         }
 
-Compiling and running the above code will have the program output the value in varName, what is in varPntr (the memory address of varName), and what value is located at that memory location.
+Compiling and running the above code will have the program output the value in varName,
+what is in varPntr (the memory address of varName), and what value is located at that
+memory location.
 
-The second output sentence is the address of varName, which would most likely be different if you run the program on your machine.
+The second output sentence is the address of varName, which would most likely be
+different if you run the program on your machine.
 
-WARNING: What happens if you forget the asterisk when assigning a value to a pointer and had the following instructions instead?
+WARNING: What happens if you forget the asterisk when assigning a value to a pointer
+and had the following instructions instead?
 
-::
+.. _lst_cpperror1:
 
-    varPntr = 2000; // Notice that I forgot the asterisk, so varPntr is now referring
+    .. activecode:: error1cpp
+        :language: cpp
 
-    // to position 2000 in memory, whatever happens to be there
-    cout << "After changing \*varPntr, varName now has: " << varName << endl; cout << "varPntr is now pointing to a variable that has the value: " << \*varPntr << endl;
+        #include <iostream>
+        using namespace std;
+
+        int main( ) {
+             varPntr = 2000; // Notice that I forgot the asterisk,
+                             // so varPntr is now referring position 2000
+                             // in memory, whatever happens to be there!
+             cout << "\*varPntr, varName now has: "
+                  << varName << endl;
+             cout << "varPntr now points to the value: "
+                  << \*varPntr << endl;
+
 
 **This is BAD BAD!**
 
 .. _fig_point3:
 
-.. figure:: Figures/point3.gif
+.. figure:: Figures/point_broken.png
    :align: center
    :alt: image
 
    Figure 6: FIXME3
 
-If your compiler does not catch that error (the one for this class may), the first ``cout`` instruction outputs
+If your compiler does not catch that error (the one for this class may),
+the first ``cout`` instruction outputs
 
 ::
 
     After changing *varPntr, varName now has: 50
 
-which is expected because you changed where varPntr pointing to and NOT the contents of where it is pointing.
+which is expected because you changed where varPntr pointing to and
+NOT the contents of where it is pointing.
 
-The second cout instruction is a disaster because (1) You don't know what is stored in location 2000 in memory, and (2) that location is outside of your segment (area in memory reserved for your program), so the operating system will jump in with a message about a "segmentation fault". Although such an error message looks bad, a "seg fault" is in fact a helpful error because unlike the elusive logical errors, the reason is fairly localized.
+The second ``cout`` instruction is a disaster because
+(1) You don't know what is stored in location 2000 in memory, and
+(2) that location is outside of your segment (area in memory reserved for your program), so the operating system will jump in with a message about a "segmentation fault". Although such an error message looks bad, a "seg fault" is in fact a helpful error because unlike the elusive logical errors, the reason is fairly localized.
 
-The Null pointer; another simple way to get the pointer information into a pointer
-----------------------------------------------------------------------------------
+The null pointer
+----------------
 
-The null pointer points to nothing and is often denoted by 0 or the keyword null. The null pointer is often used in conditions and/or in logical operations.
+Like ``None`` in Python, the null pointer in C++ points to nothing and is often
+denoted by the keyword null or by 0.
+The null pointer is often used in conditions and/or in logical operations.
 
-The following example demonstrates how the null pointer works. The variable ptrx initially has the address of x when it is declared. On the first iteration of the loop, it is assigned the value of zero (i.e. null) thereby ending the loop:
+The following example demonstrates how the null pointer works.
+The variable ptrx initially has the address of x when it is declared.
+On the first iteration of the loop, it is assigned the value of null (i.e. 0)
+thereby ending the loop:
 
 .. _lst_cppcode2:
 
@@ -393,20 +518,21 @@ The following example demonstrates how the null pointer works. The variable ptrx
             int x = 12345;
             int *ptrx = &x;
 
-            while( ptrx ) {
-            cout << "Pointer ptrx points to something\n";
-            ptrx = 0;
+            while (ptrx) {
+                cout << "Pointer ptrx points to " << &ptrx;
+                ptrx = null;
             }
 
             cout << "Pointer ptrx points to nothing!\n";
         }
 
-Helpful Tip: The null pointer becomes very useful when you must test the state of a pointer, such as whether the assignment to an address was valid or not.
+Helpful Tip: The null pointer becomes very useful when you must test the state of
+a pointer, such as whether the assignment to an address was valid or not.
 
 Collection Data Types
 ~~~~~~~~~~~~~~~~~~~~~
 
-In addition to the numeric and boolean classes, C++ has a number of
+In addition to the numeric and Boolean classes, C++ has a number of
 very powerful built-in collection classes. Arrays, strings, and tuples
 are ordered collections that are very similar in general structure but
 have specific differences that must be understood for them to be used
