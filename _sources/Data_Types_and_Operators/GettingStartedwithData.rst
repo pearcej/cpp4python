@@ -68,24 +68,47 @@ quotient is returned and the fractional portion is removed. To get the whole quo
         main()
 
 
-The boolean data type, implemented as the C++ ``bool`` class, will be
+The Boolean data type, implemented as the C++ ``bool`` class, will be
 quite useful for representing truth values. The possible state values
-for a boolean object are ``true`` and ``false`` with the standard
-boolean operators, ``&&`` (and), ``||`` (or), and ``!`` (not). Note that
-output values for ``true`` and ``false`` are ``1`` and ``0`` respectively.
+for a boolean object are ``true`` and ``false``.
+Be sure to note the difference in capitalization from Python.
 
-::
+C++ uses the standard Boolean operators, but they are represented
+differently than in Python: ``&&`` (and), ``||`` (or), and ``!`` (not).
+Note that the output values for ``true`` and ``false`` are ``1``
+and ``0`` respectively.
 
-    >>> true
-    1
-    >>> false
-    0
-    >>> false or true
-    1
-    >>> !(false || true)
-    0
-    >>> true and true
-    1
+.. tabbed:: logical1
+
+  .. tab:: C++
+
+    .. activecode:: logical_1cpp
+        :caption: Logical Operators C++
+        :language: cpp
+
+        #include <iostream>
+        using namespace std;
+
+        int main() {
+          cout << true << endl;
+          cout << false << endl;
+          cout << (true || false) << endl;
+          cout << (true && false) << endl;
+          return 0;
+        }
+
+  .. tab:: Python
+
+        .. activecode:: logical_1py
+            :caption: Logical Operators Python
+
+            def main():
+                print(True)
+                print(False)
+                print(True or False)
+                print(True and False)
+            main()
+
 
 Boolean data objects are also used as results for comparison operators
 such as equality (==) and greater than (:math:`>`). In addition,
@@ -95,7 +118,7 @@ and logical operators with examples shown in the session that follows.
 
 .. _tab_relational:
 
-.. table:: **Table 1: Relational and Logical Operators**
+.. table:: **Table 1: C++ Relational and Logical Operators**
 
     =========================== ============== =================================================================
              **Operation Name**   **Operator**                                                   **Explanation**
@@ -107,7 +130,7 @@ and logical operators with examples shown in the session that follows.
                           equal     :math:`==`                                                 Equality operator
                       not equal     :math:`!=`                                                Not equal operator
                     logical and     :math:`&&`                          Both operands True for result to be True
-                     logical or     :math:`||`        One or the other operand is True for the result to be True
+                     logical or     :math:`||`   One or the other operand is True for the result to be True
                     logical not      :math:`!`   Negates the truth value, False becomes True, True becomes False
     =========================== ============== =================================================================
 
@@ -121,7 +144,6 @@ and logical operators with examples shown in the session that follows.
         :language: cpp
 
         #include <iostream>
-        #include <cmath>
         using namespace std;
 
         int main(){
@@ -146,7 +168,7 @@ and logical operators with examples shown in the session that follows.
 
         main()
 
-A C++ variable is created when a name is used for the first time after declaring a type on
+A C++ variable is created when declared with a type on
 the left-hand side of an assignment statement. Assignment statements
 provide a way to associate a name with a value. The variable will hold a
 piece of data. Consider the
@@ -160,7 +182,7 @@ following session:
 
     int main(){
 
-        int theSum = 0;
+        int theSum = 4;
         cout << theSum << endl;
 
         theSum = theSum + 1;
@@ -169,28 +191,25 @@ following session:
         bool theBool = true;
         cout << theBool << endl;
 
+        theBool = theSum;
+        cout << theBool << endl;
+
         return 0;
     }
 
 The assignment statement ``int theSum = 0;`` creates a variable called
-``theSum`` and lets it hold the data object ``0`` (see
-:ref:`Figure 3 <fig_assignment1>`). In general, the right-hand side of the assignment
-statement is evaluated and the resulting data object is
-“assigned” to the name on the left-hand side. At this point in our
-example, the type of the variable is integer as that is the type of the
-data currently being referred to by ``theSum``. If the type of the data
-changes, as shown above with the boolean
-value ``True``, so does the type of the variable (``theSum`` is now of
-the type boolean). The assignment statement changes value being
-held by the variable. This is a static characteristic of C++. A
-variable can hold only one type of data.
-
-.. _fig_assignment1:
-
-.. figure:: Figures/assignment1.png
-   :align: center
-
-   Figure 3: Variables Hold Data Objects
+``theSum`` and lets it hold the data value of ``0``.
+As in Python, the right-hand side of the assignment
+statement is evaluated and the resulting data value is
+“assigned” to the variable named on the left-hand side.
+The type of the variable is integer.
+In Python, if the type of the data
+changes in the program, so does the type of the variable.
+However, in C++, the data type cannot change.
+This is a characteristic of C++'s static typing. A
+variable can hold ever only one type of data.
+Pitfall: C++ will often simply try to do the assignment you requested.
+Note what happened in the code above.
 
 Introduction to Pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^
