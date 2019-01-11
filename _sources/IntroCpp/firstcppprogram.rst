@@ -62,13 +62,13 @@ little bit more about C++.
 Compilation
 -----------
 
-A question you may have about this little program is “How would I run it on 
+A question you may have about this little program is “How would I run it on
 my own machine?” Running a C++ program is not as simple as running a
 Python program. The first big difference between C++ and Python is that
-Python is an *interpreted language* while C++ is a *compliled language*. 
+Python is an *interpreted language* while C++ is a *compliled language*.
 We could run our Python programs in
 the Python **interpreter**, and we were often quite happy to do that.
-In C++, running programs is a two step process. 
+In C++, running programs is a two step process.
 
 First, we must type the hello world program into a file and save that file
 using a name like ``hello.cpp`` Once we have saved the file we **compile**
@@ -176,7 +176,7 @@ Without peeking, see if you can put the following code in the correct order.
    :language: c++
    :adaptive:
    :noindent:
-   
+
    Correctly rearrange the code below to implement hello world in C++:
    -----
    &#x22D5include &#x003Ciostream&#x003E
@@ -197,22 +197,26 @@ Without peeking, see if you can put the following code in the correct order.
 Comments in C++
 ---------------
 
-Python supports three different types of comments, while C++ supports only two types of comments.
+Python and C++ supports both support comments that are not processed
+by the interpreter or the compiler.
 
 Python's single line comment begins with a hash (``#``).
 In C++, the equivalent is two forward slashes (``//``)
 In each case the rest of the line is treated as a comment and ignored by the
 interpreter or compiler.
 
-Python has two types of multiline comments. Like Python, C++ also supports multi-line comments
+Python supports comments using triple quotes.
+Like Python, C++ also supports multi-line comments
 beginning with
-``\*``
+``/*``
 and ending with
 ``*/``.
 
+The triple quoted docstring in Python is often used for automatically
+processing documentation.
 There is no equivalent in the C++ standard to the triple-quoted docstring in C++.
 However, the symbol groups
-``\**``
+``/**``
 and
 ``*/``
 are often used to indicate documentation blocks
@@ -233,9 +237,9 @@ as a docstring for the documentation.
 Standard Input and Output
 -------------------------
 
-We often have a need to interact with users,either to get data or to provide some sort of result. 
-The C++ ``<iostream>`` library provides us with the functionality to get information 
-from the console input as well as to output information to the console. This input and output is handled by what 
+We often have a need to interact with users, either to get data or to provide some sort of result.
+The C++ ``<iostream>`` library provides us with the functionality to get information
+from the console input as well as to output information to the console. This input and output is handled by what
 is known as a ``stream``.
 
 A ``stream`` is essentially a channel in which data flows from the source to a destination.
@@ -250,7 +254,7 @@ The output operator can also be used to concatenate output, much like the "+"
 can be used to concatenate in Python.
 
 The command ``cin`` is somewhat similar to ``cout`` except, of course, it is used for input.
-Input streams direct data from a source, such as the keyboard or a file. 
+Input streams direct data from a source, such as the keyboard or a file.
 As you might have guessed, ``cin`` stands for "console input" and it makes getting input from the standard input device (usually the keyboard) relatively easy.
 The input operator in C++ is ``>>``.
 
@@ -267,15 +271,16 @@ Type Declarations
 -----------------
 
 In this example, you may note the line ``float num`` which declares a new variable called ``num`` of type ``float``.
-Just like functions, all variables in C++ need to be declared before use.
-The line ``float num`` essentially tells the compiler to set aside sufficient space for a floating point number, 
+Just like functions, all variables in C++ must be declared before use, and
+they cannot change type. This is known as **static typing**.
+The line ``float num`` essentially tells the compiler to set aside sufficient space for a floating point number,
 and to name this memory location ``num.``
-Then whatever the user types in will be stored in the ``num`` variable. 
+Then whatever the user types in will be stored in the ``num`` variable.
 Using the ``cout`` function, we can write instructions that will prompt the user to enter data and then
-incorporate that data into further processing. 
+incorporate that data into further processing.
 For example, in the code above, the integer input is doubled and then displayed!
 
-We will talk more about type declarations in the section on data types, and 
+We will talk more about type declarations in the section on data types, and
 we will go into more depth on input and output later when we discuss
 C++ streams and file handling.
 
@@ -313,7 +318,7 @@ This simple example illustrates a few very important rules:
 
 4. White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using
    indentation to delineate blocks as is done in Python.
-   
+
 Check yourself
 ==============
 
@@ -369,5 +374,3 @@ Check yourself
     :input: That's Python, not C++!
     :scanf: That's C, not C++!
     :default: Incorrect. Please try again.
-
-
