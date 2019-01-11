@@ -102,7 +102,7 @@ Using headers and libraries
 ---------------------------
 
 Preprocessor directives in C++ appear as statements preceded by the hash sign ``#``.
-These tell the preprocessor which file, header or library to make available to
+These tell the preprocessor which file, header, or library to make available to
 the compiler. For example, ``#include <iostream>`` will make sure that
 the ``iostream`` library is available at compile time.
 Here, the term *header* is used for a type of C++ file that contains definitions
@@ -130,7 +130,7 @@ There are two ways to use ``#include`` in C++:
 Here the angle-brackets ``<>`` are used to include libraries or headers provided by
 the implementation, such as the
 headers in the standard library (``iostream``, ``string``, etc.). The double
-quotes ``"`` are used for headers and files not provided by the implementation.
+quotes ``"`` are used for headers and files not provided by the implementation. 
 
 The main function
 -----------------
@@ -337,6 +337,7 @@ Check yourself
 
    What symbol or set of symbols will begin a comment in C++ when the comment extends only to the end of the line?
 
+
 .. mchoice:: mc_mlcomment
   :answer_a: True
   :answer_b: False
@@ -344,32 +345,24 @@ Check yourself
   :feedback_a: Right!
   :feedback_b: Sorry, both languages support multi-line comments beginning with /* and ending with */.
 
-  True or False: Like Python, C++ supports multi-line comments beginning with /* and ending with */.
+  True or False: Like Python, C++ supports multi-line comments. In C++, they begin with ``/*`` and end with ``*/``.
 
 
 .. fillintheblank:: output
 
    What command is used to produce C++ output?
 
-   - :cout: Right!
+   - :cout: Right! Good job! It stands for console output.
      :print: That's Python, not C++!
      :printf: That's C, not C++!
      :default: Incorrect. Please try again.
 
-.. fillintheblank:: output
-
-   What command is used to produce C++ output?
-
-   - :cout: Right!
-     :print: That's Python, not C++!
-     :printf: That's C, not C++!
-     :default: Incorrect. Please try again.
 
 .. fillintheblank:: input
 
    What command is used to accept C++ input?
 
-  - :cin: Right!
+  - :cin: Right! It stands for console input.
     :raw_input: That's Python, not C++!
     :input: That's Python, not C++!
     :scanf: That's C, not C++!
