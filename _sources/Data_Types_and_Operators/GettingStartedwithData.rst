@@ -6,14 +6,14 @@ Using Data in C++
 ~~~~~~~~~~~~~~~~~
 
 C++ requires the users specify the specific data type of each variable before it is used.
-C++ has four main built-in atomic data types: integer (``int``),
-floating point (``float``), Boolean (``bool``), and character (``char``).
+The primary C++ built-in atomic data types are: integer (``int``),
+floating point (``float``), double precision floating point (``double``),
+Boolean (``bool``), and character (``char``).
 
 Numeric Atomic Data Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Numeric C++ data types that implement integer and
-floating point data types, include ``int`` for integer, ``float``
+Numeric C++ data types include ``int`` for integer, ``float``
 for floating point, ``double`` for double precision floating point.
 
 The standard arithmetic operations, +, -, \*, and /
@@ -21,7 +21,8 @@ are used with optional parentheses to force the order of
 operations away from normal operator precedence.
 
 In Python we can use ``//`` to get integer division.
-Similarly, when two integers are divided in C++, the integer portion of the
+In C++, we declare all data types.
+When two integers are divided in C++, the integer portion of the
 quotient is returned and the fractional portion is removed.
 To get the whole quotient, declaring one of the numbers as a float will
 convert the entire result into floating point.
@@ -86,11 +87,41 @@ modifiers like ``short``, ``long``, and ``unsigned``
 can optionally be used to help
 to ensure space is used as efficiently as possible.
 
+.. mchoice:: mc_integer_div
+   :answer_a: 1
+   :answer_b: 1.5
+   :answer_c: 2
+   :answer_d: A run-time error will occur.
+   :answer_e: none of the above
+   :correct: a
+   :feedback_a: Right!  This is like ``3//2`` in Python.
+   :feedback_b: No. Integer division is used. Try again.
+   :feedback_c: No. Integer division is used. Try again.
+   :feedback_d: No, C++ generally will try to do as you ask.
+   :feedback_e: One of the above is correct.
+
+   what is the result of dividing ``3/2`` in C++?
+
+
+.. mchoice:: mc_exponentiation
+  :answer_a: ``4**5``
+  :answer_b: ``5**4``
+  :answer_c: ``4^5``
+  :answer_d: ``pow(4, 5)``
+  :correct: e
+  :feedback_a: No, ``**`` is used in Python, not C++.
+  :feedback_b: No, ``**`` is used in Python, not C++, and the operators are reversed.
+  :feedback_c: No. The ``^`` is a valid operator in C++, but it does something else.
+  :feedback_d: You got it!
+
+  How do I raise 4 to 5th power in C++?
+
+
 The Boolean Data Type
 ^^^^^^^^^^^^^^^^^^^^^
 
 Boolean data types are named after George Boole who was an English mathematician,
-so "Boolean" is capitalized. However,
+so the word "Boolean" should be capitalized. However,
 the Boolean data type, in C++ uses the keyword ``bool``
 which is not capitalized.
 The possible state values
@@ -161,11 +192,11 @@ and logical operators with examples shown in the session that follows.
     =========================== ============== =================================================================
 
 
-.. tabbed:: change_this
+.. tabbed:: basiclogical
 
   .. tab:: C++
 
-    .. activecode:: intro_2cpp
+    .. activecode:: locicalcpp
         :caption: Basic Relational and Logical Operators C++
         :language: cpp
 
@@ -183,7 +214,7 @@ and logical operators with examples shown in the session that follows.
 
   .. tab:: Python
 
-    .. activecode:: intro_2py
+    .. activecode:: logicalpy
         :caption: Basic Relational and Logical Operators Python
 
         def main():
@@ -194,13 +225,14 @@ and logical operators with examples shown in the session that follows.
 
         main()
 
+
 A C++ variable can be created when declared and initialized with a type on
 the left-hand side of an assignment statement. Assignment statements
 provide a way to associate a name with a value. The variable will hold a
 piece of data. Consider the
 following session:
 
-.. activecode:: introcpp
+.. activecode:: booleanpitfall
     :language: cpp
 
     #include <iostream>
@@ -217,7 +249,7 @@ following session:
         bool theBool = true;
         cout << theBool << endl;
 
-        theBool = theSum;
+        theBool = 4;
         cout << theBool << endl;
 
         return 0;
@@ -234,24 +266,97 @@ changes in the program, so does the type of the variable.
 However, in C++, the data type cannot change.
 This is a characteristic of C++'s static typing. A
 variable can hold ever only one type of data.
-Pitfall: C++ will often simply try to do the assignment you requested.
-Note what happened in the code above.
+Pitfall: C++ will often simply try to do the assignment you requested without
+complaining. Note what happened in the code above in the final output.
+
+The Character Data Type
+^^^^^^^^^^^^^^^^^^^^^^^
+
+In Python strings can be created with single or double quotes.
+In C++ single quotes are used for the character (``char``) data type,
+and double quotes are used for the string data type.
+
+Consider the following code.
+
+
+.. tabbed:: basiclogical
+
+  .. tab:: C++
+
+    .. activecode:: charcpp
+        :caption: Considering characters and strings
+        :language: cpp
+
+        #include <iostream>
+        #include <string>
+        using namespace std;
+
+        int main(){
+
+            string strvar = "b";
+            char charvar = 'b';
+
+            cout << ('b' == charvar) << endl;
+            cout << ("b" == strvar) << endl;
+            //cout << ('a' == "a") << endl; // will error!
+
+            return 0;
+        }
+
+  .. tab:: Python
+
+    .. activecode:: charpy
+        :caption: Python strings
+
+        def main():
+
+            strvar = "b"
+            charvar = 'b'
+
+            print('b' == charvar)
+            print("b" == strvar)
+            print('a' == "a")
+
+        main()
+
+.. mchoice:: mc_cpp_strings
+   :answer_a: ' '
+   :answer_b: " "
+   :answer_c: ' ' or " " may be used
+   :answer_d: It depends upon the implementation.
+   :answer_e: none of the above
+   :correct: b
+   :feedback_a: No, single quotes are only used for single characters.
+   :feedback_b: Good job reading!
+   :feedback_c: No. Try again.
+   :feedback_d: No. Try again.
+   :feedback_e: One of the above is indeed correct.
+
+   If I want to create a string in C++, what set of symbols may be used?
+
 
 Introduction to Pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The kind of variables we have already used are really identifiers
-that refer to where in memory we store information. We can store things
-as basic as integers and double precision floating point numbers,
-or more complicated things like a class object.
-Whenever we want the information, we can simply use the identifier to access it.
+We know that variables in a computer program are used to label data with a
+descriptive identifier so that the data can be accessed and used by that
+computer program. However, some differences in how variables are implemented
+in Python and in C++ are worthy of discussion.
 
-Let's look at simple examples of storing an integer in Python and C++.
+Let's look at some examples of storing an integer in Python and C++.
+
+In Python every single thing is stored as an object.
+Hence, a Python variable is actually a reference to an object that is stored in memory.
+Hence, each Python variable requires two memory locations:
+one to store the reference, and the other to store the variable value itself in an object.
+
+In C++ the value of each variable is stored directly in memory without the need
+for either a reference or an object. This makes access faster, but it is one of
+the reasons we need to declare each variable because different types take differing
+amounts of space in memory!
+
 The following code declares a variable called *varName* that has in it a
-value of 100.
-
-Note that Python creates a reference to an object while C++ stores the
-value more directly.
+value of 100:
 
 ::
 
@@ -268,7 +373,7 @@ value more directly.
 
 ::
 
-    // C++ variable declaration an assignment of a single integer value
+    // C++ variable declaration and assignment of an integer value
     int varName = 100;
 
 In C++ the results of running this code will look like the diagram below:
@@ -282,11 +387,21 @@ In C++ the results of running this code will look like the diagram below:
    Figure 4: C++ variable
 
 In each case, when we want to output the value to the console, we use the variable name
-to do so. But, we can also identify the memory location of the variable,
-which is sometimes very valuable. In both Python and C++, this address is run dependent.
-In Python we use ``id`` while in C++ we use the *address-of operator*, ``&``.
+to do so.
 
-.. tabbed:: change_this2
+But, we can also identify the memory location of the variable,
+which is sometimes very valuable. In both Python and C++, this address is
+may change each time the program is run. In C++, this will always look
+odd because it will be the actual memory address written in a hexadecimal code
+which is a base 16 code like 0x7ffd93f25244.
+In Python it is implementation dependent,
+it is sometimes a hexadecimal code and sometimes just a count or another
+way to reference the address.
+
+In Python we use ``id`` to reference the address,
+while in C++ we use the *address-of operator*, ``&``.
+
+.. tabbed:: memory-addresses
 
   .. tab:: C++
 
@@ -318,17 +433,16 @@ In Python we use ``id`` while in C++ we use the *address-of operator*, ``&``.
 
 
 In both Python and C++, variables are stored in memory locations which are dependent
-upon the run itself. If you run the above code in either C++ or Python, you will
-see the location change. The memory location you see
-when printing the address in C++ may look strange because it is a base 16 (hexadecimal)
-code like 0x7ffd93f25244, while the Python ``id`` may look less like an address depending
-upon your version of Python.
+upon the run itself. If you repeatedly run the above code in either C++ or Python, you may
+see the location change.
 
-In Python, it is impossible to store a variable directly. Instead, we must use
-a variable name and a reference to the data object. (Hence the arrow.)
-In C++, variables store values much more directly, which is faster to reference.
+As suggested above, in Python, it is impossible to store a variable directly.
+Instead, we must use a variable name and a reference to the data object.
+(Hence the arrow in the image.)
+In C++, variables store values directly, which is faster to reference.
 
-If we want to create a analogous reference to a memory location in C++,
+References are slower, but they are sometimes useful.
+If in C++, we want to create a analogous reference to a memory location in C++,
 we must use a special syntax called a **pointer**.
 
 Pointer Syntax
@@ -372,11 +486,11 @@ the address of where varName is located:
 
 ::
 
-    variableType value;  // a variable to hold the value
-    variableType *pointer = &value;  // a variable to hold the address for varName
+    variableType varName;  // a variable to hold the value
+    variableType *varPntr = &varName;  // a variable to hold the address for varName
 
-Keep in mind that when declaring a C++ pointer, the pointer needs to be of the same
-type as the variable or constant to which it points.
+Keep in mind that when declaring a C++ pointer, the pointer needs to
+reference the same type as the variable or constant to which it points.
 
 Expanding on the example above where varName has the value of 100.
 
@@ -397,8 +511,8 @@ The results of running this C++ code will look like the diagram below.
 
    Figure 5: FIXME2
 
-Accessing Values from SIMPLE Pointers
--------------------------------------
+Accessing Values from Pointers
+------------------------------
 
 So, once you have a C++ pointer, how do you access the values associated with that location?
 You use the asterisk before the pointer variable, which
@@ -635,17 +749,17 @@ The last statement above might seem to suggest we should use C++ Strings and for
                              Import Syntax                             ``#include<cstring>``             ``#include<string>``
                             Declare Syntax             ``char str[10];//can store <=9chars`` ``string str;//Unlimitedlength``
                        Initializing Syntax                 ``char str1[11] = "Call home!";``   ``string str1("Call home!");``
-                                                            ``char str2[] = "Send money!";`` ``string str2 = "Send money!";``
-                                                         ``char str3[] = {'O', 'K', '\0'};``           ``string str3("OK");``
-                                                        ``// which has the same effect as:``        ``string str4(10, 'x');``
-                                                                     ``char str3[] = "OK";``
+                       Initializing Syntax                  ``char str2[] = "Send money!";`` ``string str2 = "Send money!";``
+                       Initializing Syntax               ``char str3[] = {'O', 'K', '\0'};``           ``string str3("OK");``
+                       Initializing Syntax              ``// which has the same effect as:``        ``string str4(10, 'x');``
+                       Initializing Syntax                           ``char str3[] = "OK";``          ``string str3 = "OK";``
             Concatenating/Combining Syntax                           ``strcat(str1, str2);``           ``str = str1 + str2;``
                           Comparing Syntax                   ``if(strcmp(str1, str2) < 0 )``            ``if( str1 < str2):``
-                                                              ``cout<< "str1 comes first."``  ``cout<< "str1 comes first.";``
-                                                            ``if(strstrcmp(str1, str2)==0)``            ``if( str1 == str2)``
-                                                                 ``cout<< "Equal Strings."``    ``cout << "Equal strings.";``
-                                                             ``if(strstrcmp(str1, str2)>0)``           ``if( str1 > str2 ):``
-                                                              ``cout<< "str2 comes first."``   ``cout<<"str2 comes first.";``
+                          Comparing Syntax                    ``cout<< "str1 comes first."``  ``cout<< "str1 comes first.";``
+                          Comparing Syntax                  ``if(strstrcmp(str1, str2)==0)``            ``if( str1 == str2)``
+                          Comparing Syntax                       ``cout<< "Equal Strings."``    ``cout << "Equal strings.";``
+                          Comparing Syntax                   ``if(strstrcmp(str1, str2)>0)``           ``if( str1 > str2 ):``
+                          Comparing Syntax                    ``cout<< "str2 comes first."``   ``cout<<"str2 comes first.";``
     ====================================== ================================================= ================================
 
 
@@ -799,11 +913,11 @@ Summary
 1.C++ has four main built in numeric classes int, float, double, and long for implementing integers and
 floating point numbers.
 
-2.int and long, is used for integers, and float, and double, are used depending on the number of decimals.
+2.int and long are used for integers, and float and double are used depending on the number of decimals.
 
-3.For a boolean datatype, C++ has the boolean class bool.
+3.For a Boolean datatype, C++ has the Boolean class ``bool``.
 
-4.For assignment, and declaration purposes, the numeric or boolean classes need to be included before the variable.
+4.For assignment, and declaration purposes, the numeric or Boolean classes need to be included before the variable.
 For instance, ``int sum=0;``, assigns sum to 0, and ``double decimal;``, declares a variable decimal that takes decimals.
 
 5.For large arrays, a datatype called pointer is used to store the location where this data is stored so that it can be deleted to make
