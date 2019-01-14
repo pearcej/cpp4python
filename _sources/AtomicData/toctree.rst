@@ -5,3 +5,4 @@ Atomic C++ Data Types
     :maxdepth: 2
 
     AtomicData.rst
+    glossary.rst

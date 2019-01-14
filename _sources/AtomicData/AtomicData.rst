@@ -661,14 +661,58 @@ is valid or not.
 Summary
 ~~~~~~~
 
-1. C++ has four main built in numeric classes int, float, double, and long for implementing integers and
-floating point numbers.
+1. All variables must be declared before use in C++.
 
-2. int and long are used for integers, and float and double are used depending on the number of decimals.
+2. C++ has typical built-in numeric types: ``int`` is for integers and ``float`` and ``double`` are used for floating point depending on the number of digits desired.
 
-3. For a Boolean datatype, C++ has the Boolean class ``bool``.
+3. C++ has the Boolean type ``bool`` that holds ``true`` or ``False``.
 
-4. For assignment, and declaration purposes, the numeric or Boolean classes need to be included before the variable.
-For instance, ``int sum=0;``, assigns sum to 0, and ``double decimal;``, declares a variable decimal that takes decimals.
+4. The character data type ``char`` holds a single character.
 
-6.To declare a pointer, an  ``*`` is used before the variable name that is supposed to store the location. For instance, if  ``string name="C++";``, ``string *ptrname=&name;``.Note  ``&`` before name helps to get the address of the variable. And because the pointer, ``*ptrname``, is pointing towards a string,  ``string`` is used before the pointer name.
+5. Pointers are a type of variable that stores a memory address. To declare a pointer, an  ``*`` is used before the variable name that is supposed to store the location.
+
+
+Check Yourself
+~~~~~~~~~~~~~~
+
+
+.. mchoice:: mc_characters
+   :answer_a: ' '
+   :answer_b: " "
+   :answer_c: ' ' or " " may be used
+   :answer_d: It depends upon the implementation.
+   :answer_e: none of the above
+   :correct: a
+   :feedback_a: Right!
+   :feedback_b: No. Double quotes are only used for strings.
+   :feedback_c: No. Try again.
+   :feedback_d: No. Try again.
+   :feedback_e: One of the above is indeed correct.
+
+   If I want to use the ``char`` type in C++, what set of symbols must be used?
+
+
+.. fillintheblank:: memoryvar
+
+  A/an ``___`` is used to store a memory address in C++?
+
+ - :pointer: Right!
+   :variable: Be more specific!
+   :reference: That's Python, not C++!
+   :default: Incorrect. Please try again
+
+
+.. mchoice:: mc_memory
+  :answer_a: using ``&``
+  :answer_b: using ``*``
+  :answer_c: using ``id``
+  :answer_d: It depends upon the implementation.
+  :answer_e: none of the above
+  :correct: a
+  :feedback_a: Right! ``&`` is the "address-of" operator, used to reference an address.
+  :feedback_b: No. ``int *p;`` defines a pointer to an integer, and ``*p`` would dereference that pointer, i.e. retrieve the data that p points to.
+  :feedback_c: No. This is used in Python.
+  :feedback_d: No. Try again.
+  :feedback_e: One of the above is indeed correct.
+
+  How may one reference a variable's memory address in C++?

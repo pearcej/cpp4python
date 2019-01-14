@@ -27,9 +27,9 @@ By Jan Pearce, Berea College, and Brad Miller, Runestone
 
    IntroCpp/toctree.rst
    AtomicData/toctree.rst
-   CollectionData/toctree.rst
    Control_Structures/toctree.rst
    Functions/toctree.rst
+   CollectionData/toctree.rst
    Input_and_Output/toctree.rst
    Exception_Handling/toctree.rst
 

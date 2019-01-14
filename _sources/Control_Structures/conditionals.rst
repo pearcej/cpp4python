@@ -187,27 +187,15 @@ program using a switch statement we would use the following:
       return 0;
     }
 
-The ``switch`` statement is not used very often, and I recommend you do
-not use it! First, it is not as powerful as the ``else if`` model
+Frankly, the ``switch`` statement is not used very often.
+It is not as powerful as the ``else if`` model
 because the switch variable can only be compared for equality with an
-integer or enumerated constant. Second it is very easy to forget to put
-in the ``break`` statement. If the break statement is left out then then
-the next alternative will be automatically executed. For example if the
+integer or something called an enumerated constant.
+Second it is very easy to forget to put
+in the ``break`` statement.
+If the break statement is left out then then
+the next alternative will be automatically executed.
+For example if the
 grade was 95 and the ``break`` was omitted from the ``case 9:``
 alternative then the program would print out both (A and B.)
-
-Boolean Operators
-------------------
-
-The conditionals used in the if statement can be boolean variables,
-simple comparisons, and compound boolean expressions.
-
-C++ also supports the boolean expression.
-``condition ? trueValue : falseValue`` This expression can be used to
-test a condition as part of an assignment statement. For example
-``a = a % 2 == 0 ? a*a : 3*x -1`` In the previous assignment statement
-the expression ``a%2 ==0`` is first checked. If it is true then a is
-assigned the value ``a * a`` if it is false then a is assigned the value
-of ``3*x-1``. The ``?:`` operator is also known as the ternary operator. Of course all of this could have been accomplished using a
-regular if else statement, but sometimes the convenience of a single
-statement is too much to resist.
+So, you might want to just avoid it and use if...
