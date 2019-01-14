@@ -26,7 +26,8 @@ By Jan Pearce, Berea College, and Brad Miller, Runestone
    :maxdepth: 3
 
    IntroCpp/toctree.rst
-   Data_Types_and_Operators/toctree.rst
+   AtomicData/toctree.rst
+   CollectionData/toctree.rst
    Control_Structures/toctree.rst
    Functions/toctree.rst
    Input_and_Output/toctree.rst
