@@ -4,4 +4,6 @@ Collection Data Types
 .. toctree::
     :maxdepth: 2
 
-    CollectionTypes.rst
+    Arrays.rst
+    Vectors.rst
+    Strings.rst

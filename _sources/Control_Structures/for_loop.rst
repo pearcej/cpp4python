@@ -1,6 +1,6 @@
 For Loops
-============
- Even though while type of construct is very useful in a wide variety of
+=========
+Even though while type of construct is very useful in a wide variety of
 situations, another iterative structure, the ``for`` statement, can be
 used to iterate across a range of values easily. However, you must first find
 the length of your container. For vectors, you can simply call the ``.length()`` function.
@@ -18,23 +18,24 @@ of elements the Array contains!
    using namespace std;
 
    int main() {
-  	int nums[] = {1,3,6,2,5};
+       int nums[] = {1,3,6,2,5};
+       int numsSize = sizeof(nums)/sizeof(nums[0]); // Get size of the nums array
 
-      int numsSize = sizeof(nums)/sizeof(nums[0]); // Get size of the nums array
+       for (int index=0; index<numsSize; index++) {
+           cout << nums[index] << endl;
+       }
 
-      for (int index=0; index<numsSize; index++) {
-          cout<<nums[index]<<endl;
-      }
 
       // Simpler Implementation that may only work in
       // Newer versions of C++
 
       // for (int item:nums) {
-      //     cout<<item<<endl;
+      //     cout << item << endl;
       // }
 
   	return 0;
    }
+
 
 An optional secondary version of the ``for`` loop has been commented out of the above code.
 You can try running this in your version of C++ to see if it works, but in some older versions of C++,

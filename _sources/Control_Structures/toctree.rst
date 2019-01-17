@@ -8,3 +8,4 @@ Control Structures
     while_loop.rst
     for_loop.rst
     summary.rst
+    glossary.rst

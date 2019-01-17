@@ -9,10 +9,12 @@ before it is used.
 The primary C++ built-in atomic data types are: integer (``int``),
 floating point (``float``), double precision floating point (``double``),
 Boolean (``bool``), and character (``char``). There is also a special
-type which holds a memory location called ``pointer``.
+type which holds a memory location called ``pointer``. C++ also has
+collection or compound data types, which will be discussed in a future
+chapter.
 
-Numeric Atomic Data Types
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Numeric Data
+~~~~~~~~~~~~
 
 Numeric C++ data types include ``int`` for integer, ``float``
 for floating point, ``double`` for double precision floating point.
@@ -25,6 +27,7 @@ In Python we can use ``//`` to get integer division.
 In C++, we declare all data types.
 When two integers are divided in C++, the integer portion of the
 quotient is returned and the fractional portion is removed.
+i.e. When two integers are divided, integer division is used.
 To get the whole quotient, declaring one of the numbers as a float will
 convert the entire result into floating point.
 
@@ -113,7 +116,7 @@ to ensure space is used as efficiently as possible.
   :feedback_a: No, ``**`` is used in Python, not C++.
   :feedback_b: No, ``**`` is used in Python, not C++, and the operators are reversed.
   :feedback_c: No. The ``^`` is a valid operator in C++, but it does something else.
-  :feedback_d: You got it!
+  :feedback_d: You got it! Remember the cmath library will need to be included for pow() to work.
 
   How do I raise 4 to 5th power in C++?
 
@@ -132,9 +135,10 @@ In Python, these same truth values are capitalized, while in C++,
 they are lower case.
 
 C++ uses the standard Boolean operators, but they are represented
-differently than in Python: ``&&`` (and), ``||`` (or), and ``!`` (not).
-Note that the output values for ``true`` and ``false`` are ``1``
-and ``0`` respectively.
+differently than in Python: and is given by ``&&`` , or is given by ``||``
+, and not is given by ``!``.
+Note that the internally stored values representing ``true`` and ``false``
+are actually ``1`` and ``0`` respectively. Hence, we see this in output as well.
 
 .. tabbed:: logical1
 
@@ -208,7 +212,7 @@ and logical operators with examples shown in the session that follows.
 
             cout << (5 == 10) << endl;
             cout << (10 > 5) << endl;
-            cout << (5 >= 1 && 5 <= 10) << endl;
+            cout << ((5 >= 1) && (5 <= 10)) << endl;
 
             return 0;
         }
@@ -227,11 +231,12 @@ and logical operators with examples shown in the session that follows.
         main()
 
 
-A C++ variable can be created when declared and initialized with a type on
-the left-hand side of an assignment statement. Assignment statements
-provide a way to associate a name with a value. The variable will hold a
-piece of data. Consider the
-following session:
+When a C++ variable is declared space in memory is set aside to hold
+this type of value.
+A C++ variable can optionally be initialized in the declaration by
+using a combination of a declaration and an assignment statement.
+
+Consider the following session:
 
 .. activecode:: booleanpitfall
     :language: cpp
@@ -256,19 +261,34 @@ following session:
         return 0;
     }
 
-The assignment statement ``int theSum = 0;`` creates a variable called
+The declaration ``int theSum = 0;`` creates a variable called
 ``theSum`` and initializes it to hold the data value of ``0``.
-As in Python, the right-hand side of the assignment
+As in Python, the right-hand side of each assignment
 statement is evaluated and the resulting data value is
 “assigned” to the variable named on the left-hand side.
 Here the type of the variable is integer.
-In Python, if the type of the data
+Because Python is dynamically typed, if the type of the data
 changes in the program, so does the type of the variable.
 However, in C++, the data type cannot change.
 This is a characteristic of C++'s static typing. A
 variable can hold ever only one type of data.
-Pitfall: C++ will often simply try to do the assignment you requested without
+Pitfall: C++ will often simply try to do the assignment you
+requested without
 complaining. Note what happened in the code above in the final output.
+
+.. mchoice:: mc_bool
+   :answer_a: Setting theBool to anything other than true or false is ignored.
+   :answer_b: Setting theBool to anything > 0 will be true and false otherwise.
+   :answer_c: false == 0 and true = !false i.e. anything that is not zero and can be converted to a Boolean is not false, thus it must be true.
+   :answer_d: I have no idea. It makes no sense.
+   :correct: c
+   :feedback_a: No. Try changing the code and setting theBool to 0.
+   :feedback_b: No. Try changing the code and setting theBool to -4.
+   :feedback_c: Correct!
+   :feedback_d: Try again. One of the above is correct. You might try changing the code and rerunning.
+
+   Why did theBool output a value of 1 after being set to 4?
+
 
 Character Data
 ~~~~~~~~~~~~~~
@@ -280,7 +300,24 @@ and double quotes are used for the string data type.
 Consider the following code.
 
 
-.. tabbed:: basiclogical
+.. tabbed:: usingchars
+
+  .. tab:: Python
+
+    .. activecode:: charpy
+        :caption: Python strings
+
+        def main():
+
+            strvar = "b"
+            charvar = 'b'
+
+            print('b' == charvar)
+            print("b" == strvar)
+            print('a' == "a")
+
+        main()
+
 
   .. tab:: C++
 
@@ -304,21 +341,8 @@ Consider the following code.
             return 0;
         }
 
-  .. tab:: Python
 
-    .. activecode:: charpy
-        :caption: Python strings
-
-        def main():
-
-            strvar = "b"
-            charvar = 'b'
-
-            print('b' == charvar)
-            print("b" == strvar)
-            print('a' == "a")
-
-        main()
+Try the following question.
 
 .. mchoice:: mc_cpp_strings
    :answer_a: ' '
@@ -592,6 +616,9 @@ and had the following instructions instead?
              cout << "varPntr points to varName: " << endl;
              cout << "dereference varPntr: " << *varPntr << "\n\n";
 
+             return 0;
+        }
+
 
 **This is BAD, BAD, BAD!**
 
@@ -621,21 +648,21 @@ about a "segmentation fault". Although such an error message looks bad,
 a "seg fault" is in fact a helpful error because unlike the elusive logical
 errors, the reason is fairly localized.
 
-The null pointer
+The NULL pointer
 ^^^^^^^^^^^^^^^^
 
-Like ``None`` in Python, the ``null`` pointer in C++ points to
-nothing and is often denoted by the keyword null or by 0.
-The null pointer is often used in conditions and/or in logical operations.
+Like ``None`` in Python, the ``NULL`` pointer in C++ points to
+nothing and is often denoted by the keyword ``NULL`` (all caps) or by 0.
+The NULL pointer is often used in conditions and/or in logical operations.
 
-The following example demonstrates how the null pointer works.
+The following example demonstrates how the NULL pointer works.
 The variable ptrx initially has the address of x when it is declared.
-On the first iteration of the loop, it is assigned the value of null (i.e. 0)
+On the first iteration of the loop, it is assigned the value of ``NULL`` (i.e. 0)
 thereby ending the loop:
 
 .. _lst_cppcode2:
 
-    .. activecode:: nullexamplecpp
+    .. activecode:: NULLexamplecpp
         :language: cpp
 
         #include <iostream>
@@ -647,13 +674,13 @@ thereby ending the loop:
 
             while (ptrx) {
                 cout << "Pointer ptrx points to " << &ptrx;
-                ptrx = null;
+                ptrx = NULL;
             }
 
             cout << "Pointer ptrx points to nothing!\n";
         }
 
-Helpful Tip: The null pointer becomes very useful when you must test
+Helpful Tip: The NULL pointer becomes very useful when you must test
 the state of a pointer, such as whether the assignment to an address
 is valid or not.
 
@@ -665,9 +692,9 @@ Summary
 
 2. C++ has typical built-in numeric types: ``int`` is for integers and ``float`` and ``double`` are used for floating point depending on the number of digits desired.
 
-3. C++ has the Boolean type ``bool`` that holds ``true`` or ``False``.
+3. C++ has the Boolean type ``bool`` that holds ``true`` or ``false``.
 
-4. The character data type ``char`` holds a single character.
+4. The character data type ``char`` holds a single character which is encased in single quotes.
 
 5. Pointers are a type of variable that stores a memory address. To declare a pointer, an  ``*`` is used before the variable name that is supposed to store the location.
 

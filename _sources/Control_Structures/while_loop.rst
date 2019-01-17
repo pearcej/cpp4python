@@ -14,7 +14,7 @@ as long as a condition is true. For example,
     int counter = 1;
     while (counter <= 5) {          /*Use of an interactive method until the
                                      the loop ends   */
-        cout<<"Hello, world"<<endl;
+        cout << "Hello, world" << endl;
         counter = counter + 1;
     }
 
@@ -24,6 +24,7 @@ as long as a condition is true. For example,
     Hello, world
     Hello, world
     Hello, world
+
 
 prints out the phrase “Hello, world” five times. The condition on the
 ``while`` statement is evaluated at the start of each repetition. If the
@@ -35,8 +36,9 @@ compound condition will control the iteration. A fragment such as
 
 ::
 
-    while (counter <= 10 && not done) {
+    while ((counter <= 10) && (!done)) {
     ...
+
 
 would cause the body of the statement to be executed only in the case
 where both parts of the condition are satisfied due to the and operator (``&&``). The value of the
@@ -65,3 +67,6 @@ Here are some of the logical operators that are useful for true-false boolean st
 
     less than
     or equal to  - <=
+
+
+These are the same as we saw in earlier chapters. 

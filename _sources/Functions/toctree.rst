@@ -6,3 +6,4 @@ Functions
 
     DefiningFunctions.rst
     summary.rst
+    glossary.rst

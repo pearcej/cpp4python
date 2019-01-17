@@ -1,60 +1,11 @@
 ..  Copyright (C)  Jan Pearce and Brad Miller
-    This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+   This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
-
-Collection Data Types
-~~~~~~~~~~~~~~~~~~~~~
-
-In addition to the numeric and Boolean classes, C++ has a number of
-very powerful built-in collection classes. Arrays, strings, and tuples
-are ordered collections that are very similar in general structure but
-have specific differences that must be understood for them to be used
-properly. Sets and hash tables are unordered collections.
-
-Arrays
-^^^^^^
-
-**What is an Array?**
-
-An **array** is an ordered collection of zero or more C++ data objects of identical type.
-Arrays are written as comma-delimited values enclosed in
-curly brackets. Arrays are homogeneous, meaning that the data objects all need to be from the
-same class and the collection can be assigned to a variable as below.
-
-**Why use an Array?**
-
-Although we have already seen how to store large amounts of data in files, we have as yet no convenient way to manipulate such data from within programs.
-For example, we might want to write a program that inputs and then ranks or sorts a long list of numbers.
-C++ provides a structured data type called an array to facilitate this kind of task.
-The use of arrays permits us to set aside an ordered list of memory locations that we can then manipulate as a single entity, but that at the same time gives us direct access to any individual component.
-You can think of arrays conceptually as just a list of variables that all of the same data type (int, char or whatever). You can directly access an item in the array, such as the first, second, or last one.
-
-
-
-The following fragment shows a variety of C++ data objects in an array.
-
-::
-
-    >>> int arr[] = {1, 2, 3, 4};
-    >>> char arr2[] = {'a', 'b', 'c'};
-    >>> string arr3[] = {"this", "is", "an", "array"};
-
-In order to remember the array for later processing, its
-reference needs to be assigned to a variable.
-
-Note that the indices for arrays (sequences) start counting with 0.
-Sometimes, you will want to initialize an array. For example,
-
-::
-
-    >>> int myList[6] = { };
-    >>> myList
-    [0, 0, 0, 0, 0, 0]
 
 Strings
 ^^^^^^^
 **Strings** are sequential collections of zero or more letters, numbers
-and other symbols. We can get strings from the Standard template library with ``#include <string>`` We call these letters, numbers and other symbols
+and other symbols. We can get strings from the library with ``#include <string>`` We call these letters, numbers and other symbols
 *characters*. Literal string values are differentiated from identifiers
 by using double quotation marks.
 
