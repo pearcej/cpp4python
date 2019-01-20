@@ -7,3 +7,4 @@ Collection Data Types
     Arrays.rst
     Vectors.rst
     Strings.rst
+    glossary.rst

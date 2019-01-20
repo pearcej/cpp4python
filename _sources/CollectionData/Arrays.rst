@@ -1,32 +1,40 @@
 ..  Copyright (C)  Jan Pearce and Brad Miller
-    This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+    This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+    To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Collection Data Types
-~~~~~~~~~~~~~~~~~~~~~
+What is a Collection Data Type
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In addition to the numeric, Boolean, and character types,
-C++ has collection classes.
-Arrays are a standard part of the C++ language.
-Multiple types of strings are available.
-Many ordered and unordered collection types are offered
-via a library called the Standard Template Library (STL).
-Vectors, sets, and sets and hash tables are among these useful
-STL collection types.
+C++ also offers built-in collection types.
+A **collection** data type is a grouping of some number of other data items
+(possibly only zero or one) that have some shared significance
+or need to be operated upon together.
+
+Arrays, vectors, strings, sets, and hash tables are among these useful
+C++ collection types.
 
 Arrays
-^^^^^^
+~~~~~~
 
 **What is an Array?**
+An array is a data structure consisting of an ordered collection of data elements,
+of identical type in which each element can be identified by an array index.
 
-A statically allocated C++ **array** is an ordered collection
-of zero or more C++ data values of identical data type
-that is stored in contiguous memory and cannot change size.
-As a Python programmer, you might see it as the ancestor
-of the Python list, and it is similar except that each element
-is of identical type and the number of elements cannot change.
-Like in Python lists, the indices for arrays
-start counting with 0.
+A C++ **array** is always stored in contiguous memory. C++ arrays can be allocated in two different ways:
+1) *statically allocated* in which the array size is fixed at compile-time and cannot change
+and 2) *dynamically allocated* in which pointers are used in the allocation process so the size
+can change at run-time. In modern C++, the statically allocated array is typically used
+in situations when speed is essential or where hardware constraints exist.
+
+As a Python programmer, you might see the array as the ancestor
+of the Python list, and you might remember that Python lists are actually implemented via
+an underlying array consisting of references.
+
+C++ arrays are similar to Python lists except that because C++ stores variables
+directly, each element of a C++ array must be of identical data type.
+Like in Python lists, the indices for arrays start counting with 0.
 
 The use of arrays permits us to utilize an ordered set
 of memory locations that we can then manipulate as a single
@@ -35,37 +43,40 @@ individual component.
 
 **Why use an Array?**
 
-The fact that array elements are stored in memory in contiguous
-memory locations making look-up via index very, very fast.
-
 C++ is a language often used for real-time or low-level processing
 where speed is essential and/or there is only a fixed amount of space
 available.
 
+The fact that array elements are stored in memory in contiguous
+memory locations making look-up via index very, very fast.
+In computing, a **word** is the unit of data used by a particular processor design,
+such as 32 or 64 bits. For example, an array of 100 integer variables, with indices 0 through 99,
+might be stored as 100 words at memory addresses 20000, 20004, 20008, ... 20396.
+The element with index i would be located at the address 20000 + 4 × i.
 
-The following fragment shows a variety of C++ data values
-initialized into arrays at compile time.
-
-::
-
-    >>> int arr[] = {1, 2, 3, 4};
-    >>> char arr2[] = {'a', 'b', 'c'};
-    >>> string arr3[] = {"this", "is", "an", "array"};
-
-
-Sometimes, you may want to initialize an array
-at runtime.
+Statically allocated C++ arrays must be given both a type and a size at compile-time.
 
 ::
 
-    >>> int myarray[6] = { };
-    >>> myarray
-    [0, 0, 0, 0, 0, 0]
+    double darray[4];
+    int iarray[10];
+    char arr2[3000];
+
+
+It is also possible to initialized into statically allocated arrays at compile time,
+in which case the number of items determines the size.
+
+::
+
+    int arr[] = {1, 2, 3, 4};  // This is size 4.
+    char arr2[] = {'a', 'b', 'c'}; // This is size 3.
+    string arr3[] = {"this", "is", "an", "array"}; // This is size 4.
+
 
 
 **Taking Care with Arrays**
 
-The speed and low-level control arrays offer us
+The speed and low-level control that arrays offer us
 as programmers is powerful... and dangerous.
 As a Python programmer, using a C++ array will
 help you better understand the trade-offs of the
@@ -98,13 +109,14 @@ Here are examples of iteration.
         :caption: Iterating a list in Python
 
         def main():
-            mylist = [2,4,6,8]
+            mylist = [2, 4, 6, 8]
             for i in range(8):
                 print(mylist[i])
 
         main()
 
-Protection takes time, and C++ is designed for speed.
+
+But, the protections Python offer takes time, and C++ is designed for speed.
 Python would never let you iterate beyond the end of
 a list. C++ will not only let you iterate beyond either
 end of an array, but it will let you change the values
@@ -151,6 +163,11 @@ generally try to do everything you ask for.
 
 The speed of C++ comes at the cost of minimal to no error checking.
 Sometimes this can have perplexing results such as in the next example.
+
+You should use an array when you have a need for speed
+or you need to work with hardware constraints.
+Otherwise, you may want to consider using another collection data type,
+the *vector*.
 
 .. tabbed:: array_werror
 
@@ -201,6 +218,7 @@ Sometimes this can have perplexing results such as in the next example.
         main()
 
 
+
 .. mchoice:: mc_werror
    :answer_a: Nothing. Everything is fine.
    :answer_b: All data was automatically reinitialized.
@@ -214,9 +232,4 @@ Sometimes this can have perplexing results such as in the next example.
    :feedback_d: Right!
    :feedback_e: One of the above is indeed correct.
 
-  In the above example, what happened to otherdata[] in C++?
-
-You should use arrays when you have a need for speed
-or you need to work with hardware constraints.
-Otherwise, you may want to consider another data type,
-the vector.
+   In the above example, what happened to otherdata[ ] in C++?
