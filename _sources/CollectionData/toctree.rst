@@ -8,4 +8,5 @@ Collection Data Types
     Vectors.rst
     Strings.rst
     HashTables.rst
+    UnorderedSet.rst
     glossary.rst

@@ -89,3 +89,16 @@ methods, some of the most useful of which are shown in :ref:`Table 4<tab_string
             print(str(mystring3.find(mystring2)))
 
         main()
+
+
+Check your understanding by completing the following question.
+
+
+.. dragndrop:: string_types
+   :feedback: Feedback shows incorrect matches.
+   :match_1: char|||'a'
+   :match_2: char array|||{"a"}
+   :match_3: string|||"a"
+
+
+   Drag each data type to its' corresponding C++ initialization syntax.
