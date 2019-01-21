@@ -9,10 +9,28 @@ Glossary
 .. glossary::
 
     array
-        An array is a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.
+        a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.
 
     collection
-        A grouping of a number of data items (possibly only zero or one) that have some shared significance or need to be operated upon together.
+        a grouping of a number of data items (possibly only zero or one) that have some shared significance or need to be operated upon together.
 
-    vectors
-        Vectors are sequence containers that are stored in a dynamically allocated array that can change in size.
+    hash table
+        a collection consisting of key-value pairs with an associated hash function that maps the key to the associated value.
+
+    immutable
+        unable to be modified.
+
+    mutability
+        the ability of an object to be modified.
+
+    set
+        An unordered data structure consisting of unique, immutable data values.
+
+    string
+        A sequential data structure consisting of zero or more characters.
+
+    vector
+        sequence container storing data of a single type that is stored in a dynamically allocated array which can can change in size.
+
+    word
+        unit of data used by a particular processor design.
