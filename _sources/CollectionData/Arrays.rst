@@ -1,10 +1,10 @@
-..  Copyright (C)  Jan Pearce and Brad Miller
+..  Copyright (C)  Jan Pearce
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
     To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-What is a Collection Data Type
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Collections
+~~~~~~~~~~~
 
 In addition to the numeric, Boolean, and character types,
 C++ also offers built-in collection types.
@@ -21,12 +21,15 @@ Arrays
 **What is an Array?**
 An array is a data structure consisting of an ordered collection of data elements,
 of identical type in which each element can be identified by an array index.
+More technically, an array data structure is an ordered arrangement of values
+located at equally spaced addresses in contiguous computer memory.
 
 A C++ **array** is always stored in contiguous memory. C++ arrays can be allocated in two different ways:
 1) *statically allocated* in which the array size is fixed at compile-time and cannot change
 and 2) *dynamically allocated* in which pointers are used in the allocation process so the size
 can change at run-time. In modern C++, the statically allocated array is typically used
-in situations when speed is essential or where hardware constraints exist.
+in situations when speed is essential or where hardware constraints exist, and a data structure
+called a vector is typically used when more flexibility is required.
 
 As a Python programmer, you might see the array as the ancestor
 of the Python list, and you might remember that Python lists are actually implemented via
@@ -34,7 +37,7 @@ an underlying array consisting of references.
 
 C++ arrays are similar to Python lists except that because C++ stores variables
 directly, each element of a C++ array must be of identical data type.
-Like in Python lists, the indices for arrays start counting with 0.
+Like Python lists, the indices for arrays start counting with 0.
 
 The use of arrays permits us to utilize an ordered set
 of memory locations that we can then manipulate as a single
@@ -54,7 +57,7 @@ such as 32 or 64 bits. For example, an array of 100 integer variables, with indi
 might be stored as 100 words at memory addresses 20000, 20004, 20008, ... 20396.
 The element with index i would be located at the address 20000 + 4 × i.
 
-Statically allocated C++ arrays must be given both a type and a size at compile-time.
+Statically allocated C++ arrays must be declared with both a type and a size at compile-time.
 
 ::
 
@@ -63,8 +66,8 @@ Statically allocated C++ arrays must be given both a type and a size at compile-
     char arr2[3000];
 
 
-It is also possible to initialized into statically allocated arrays at compile time,
-in which case the number of items determines the size.
+It is also possible to initialize statically allocated arrays at compile time,
+in which case the number of items determines the array's size.
 
 ::
 
@@ -72,6 +75,14 @@ in which case the number of items determines the size.
     char arr2[] = {'a', 'b', 'c'}; // This is size 3.
     string arr3[] = {"this", "is", "an", "array"}; // This is size 4.
 
+
+Note that an array with a single element is not the same type as the atomic type,
+so the following are not the same.
+
+::
+
+    double darray[] = {1.2};  // must use index to access value
+    double ddouble = 1.2;     // can't use index to access value
 
 
 **Taking Care with Arrays**

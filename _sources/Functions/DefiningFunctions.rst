@@ -1,5 +1,7 @@
-..  Copyright (C)  Brad Miller, David Ranum
-    This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+..  Copyright (C)  Jan Pearce, Brad Miller, and David Ranum
+    This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+    International License. To view a copy of this license,
+    visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
 Defining Functions
@@ -110,15 +112,15 @@ marker. Any characters that follow the // on a line are ignored.
   	double root = n / 2;
 
   	for (int i = 0; i < 20; i++) {
-  		root = (.5) * (root + (n / root));
+  		  root = (.5) * (root + (n / root));
   	}
 
   	return root;
   }
 
   int main() {
-  	cout << squareroot(9) << endl;
-  	cout << squareroot(4563) << endl;
+  	  cout << squareroot(9) << endl;
+  	  cout << squareroot(4563) << endl;
 
   	return 0;
   }
@@ -127,7 +129,14 @@ Functions that Pass by Value versus Pass By Reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-In all of the functions we have written thus far, we have used a function calling mechanism called **pass by value**. The memory location that stores the values of the arguments when a function is called is different from the location referenced by the function parameters. Calling a function by value involves copying the contents of the arguments into the memory locations of the corresponding formal parameters. If the function changes the values in the parameters, the contents in memory referenced by the arguments of the calling function do not change.
+In all of the functions we have written thus far, we have used a function calling
+ mechanism called **pass by value**.
+When we use pass by value, the memory location that stores the values of the arguments
+when a function is called is different from the location referenced by the function parameters.
+Alternatively, calling a function by value involves copying the contents of the arguments
+into the memory locations of the corresponding formal parameters. If the function changes
+the values in the parameters, the contents in memory referenced by the arguments of the calling
+function do not change.
 
 Consider the following two function definitions:
 
@@ -149,13 +158,20 @@ Consider the following two function definitions:
         cout << "myVar = " << myVar;
     }
 
-When the function ``callingFunction()`` executes, it calls ``functionExample(...)`` with the variable *myVar* having the value 10. Within ``functionExample(...)``, the value of 10 is copied from *myVar* to the formal parameter *inputVar*, so the value of *nextVar* is 10x2, or 20. The next statement changes the contents of *inputVar* to 4, so the ``cout`` statement within this function produces the output:
+When the function ``callingFunction()`` executes, it calls ``functionExample(...)``
+with the variable *myVar* having the value 10. Within ``functionExample(...)``,
+the value of 10 is copied from *myVar* to the formal parameter *inputVar*,
+so the value of *nextVar* is 10x2, or 20. The next statement changes the contents of *inputVar* to 4,
+so the ``cout`` statement within this function produces the output:
 
 ::
 
     nextVar = 20 inputVar = 4
 
-Notice what happens when ``functionExample(...)`` ends and execution returns to ``callingFunction()``. The contents of *myVar* is **still the same**, as the location for *myVar* differs from where *inputVar* is stored. Thus, *myVar* still has the value 10, and the ``cout`` statement after the function call will produce the output:
+Notice what happens when ``functionExample(...)`` ends and execution returns to ``callingFunction()``.
+The contents of *myVar* is **still the same**, as the location for *myVar* differs from where *inputVar*
+is stored. Thus, *myVar* still has the value 10, and the ``cout`` statement after the function call will
+produce the output:
 
 ::
 
@@ -167,9 +183,20 @@ In other words, any changes to the variables are local to the function, which is
 
 However, there is a problem.
 
-We have seen examples of C++ functions that return no value or a single value. How about when we want the function to return **more** than one value? We need another function calling mechanism called **pass by reference**. When using this mechanism, the actual location in memory referenced by the arguments are sent rather than the values in that location. To let the compiler know that you intend to use pass by reference, you attach an "&" to the end of the type name in the formal parameter list in the function declaration and header. When you do this, any changes to the values of the parameters will change the value of the arguments as well.
+We have seen examples of C++ functions that return no value or a single value.
+How about when we want the function to return **more** than one value?
+We need another function calling mechanism called **pass by reference**.
+When using this mechanism, the actual location in memory referenced by the arguments are
+sent rather than the values in that location.
+To let the compiler know that you intend to use pass by reference,
+you attach an "&" to the end of the type name in the formal parameter list in the function
+declaration and header. When you do this, any changes to the values of the parameters will
+change the value of the arguments as well.
 
-An example of a function where this is useful is a function that takes two values as input and swaps their order. Consider the following program fragment of a function called ``swap_values(...)`` that swaps its two inputs and the ``main()`` function that calls ``swap_values(...)``.
+An example of a function where this is useful is a function that takes two values
+as input and swaps their order. Consider the following program fragment of a function
+called ``swap_values(...)`` that swaps its two inputs and the ``main()`` function
+that calls ``swap_values(...)``.
 
 .. _lst_swap_inputs:
 

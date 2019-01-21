@@ -8,8 +8,11 @@ Glossary
 
 .. glossary::
 
-  array
+    array
         An array is a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.
 
     collection
         A grouping of a number of data items (possibly only zero or one) that have some shared significance or need to be operated upon together.
+
+    vectors
+        Vectors are sequence containers that are stored in a dynamically allocated array that can change in size.
