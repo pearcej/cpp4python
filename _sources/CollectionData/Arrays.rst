@@ -25,9 +25,11 @@ More technically, an array data structure is an ordered arrangement of values
 located at equally spaced addresses in contiguous computer memory.
 
 A C++ **array** is always stored in contiguous memory. C++ arrays can be allocated in two different ways:
+
 1) *statically allocated* in which the array size is fixed at compile-time and cannot change
-and 2) *dynamically allocated* in which pointers are used in the allocation process so the size
-can change at run-time. In modern C++, the statically allocated array is typically used
+2) *dynamically allocated* in which pointers are used in the allocation process so the size can change at run-time
+
+In modern C++, the statically allocated array is typically used
 in situations when speed is essential or where hardware constraints exist, and a data structure
 called a vector is typically used when more flexibility is required.
 
@@ -76,7 +78,7 @@ in which case the number of items determines the array's size.
     string arr3[] = {"this", "is", "an", "array"}; // This is size 4.
 
 
-Note that an array with a single element is not the same type as the atomic type,
+Note that an array with a single element is not the same type as the **atomic** type,
 so the following are not the same.
 
 ::
@@ -85,7 +87,7 @@ so the following are not the same.
     double ddouble = 1.2;     // can't use index to access value
 
 
-**Taking Care with Arrays**
+**Be Cautious with Arrays**
 
 The speed and low-level control that arrays offer us
 as programmers is powerful... and dangerous.
@@ -127,7 +129,7 @@ Here are examples of iteration.
         main()
 
 
-But, the protections Python offer takes time, and C++ is designed for speed.
+The protections Python offers, however, takes time and C++ is designed for speed.
 Python would never let you iterate beyond the end of
 a list. C++ will not only let you iterate beyond either
 end of an array, but it will let you change the values

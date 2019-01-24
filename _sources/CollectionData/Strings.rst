@@ -17,11 +17,11 @@ an array of ``char`` type. The char type itself is actually distinct from both t
     char cstring[] = {"Hello World!"};    // C-string or char array uses double quotes
 
 
-In older versions of C++, you must use a ``char`` array to work with filenames. However, in modern
-C++ (from C++11 onward), you can just use a more modern C++ string for everything.
-Since they are so much nicer and so much more like Python strings, I would not recommend using C-strings.
+In older versions of C++, you must use a ``char`` array to work with filenames. In modern
+C++ (from C++11 onward), however, you can use a C++ string for everything.
+Since C++ strings are so much nicer and similar to Python strings, I would not recommend using C-strings.
 
-Since strings are sequences, all of the typical sequence operations work as you would expect.
+Because strings are sequences, all of the typical sequence operations work as you would expect.
 In addition, the string library offers a huge number of
 methods, some of the most useful of which are shown in :ref:`Table 4<tab_stringmethods>`.
 
@@ -97,7 +97,7 @@ Check your understanding by completing the following question.
 .. dragndrop:: string_types
    :feedback: Feedback shows incorrect matches.
    :match_1: char|||'a'
-   :match_2: char array|||{"a"}
+   :match_2: char array|||{'a'}
    :match_3: string|||"a"
 
 

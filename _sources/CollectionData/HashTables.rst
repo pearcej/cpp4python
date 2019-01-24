@@ -9,7 +9,7 @@ A **hash table** is a collection of associated pairs of
 items where each pair consists of a *key* and a *value*.
 Hash tables are often called the more general term *map*
 because the associated hash function "maps" the key to the value.
-Nevertheless, it is much better to use the more precise term, *hash table*
+Nevertheless, it is better to use the more precise term, *hash table*
 because other kinds of maps are sometimes implemented with a different underlying data structure.
 
 Each hash table has a *hash function* which
@@ -83,7 +83,7 @@ particular order with respect to the keys. This makes look-up extremely fast.
 Hence, although it is possible to iterate through a hash table in both C++ and Python,
 it is an odd thing to do
 because the data is not typically stored sequentially.
-Iterators of a ``unordered_map`` are
+Iterators of an ``unordered_map`` are
 implemented using pointers to point to elements of the value type as we see in
 the following example.
 
