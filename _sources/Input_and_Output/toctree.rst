@@ -5,3 +5,4 @@ Input and Output
     :maxdepth: 2
 
     InputandOutput.rst
+    glossary.rst
