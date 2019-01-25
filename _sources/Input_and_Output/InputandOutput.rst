@@ -7,7 +7,7 @@ File Handling
 
 File handling in C++ also uses a ``stream`` in a similar way to the cout and cin functions of ``<iostream>``. The library that allows for input and output of files is ``<fstream>``.
 
-You must declare any file streams before you use them to read and write data. For example, the following statements inform the compiler to create a stream called ``in_stream`` that is an input-file-stream object and another called ``out_stream`` that is an output-file-stream object.
+You must declare any file streams before you use them to read and write data. For example, the following statements inform the compiler to create a stream called ``in_stream`` that is an input-file-stream object, ``<ifstream>``, and another called ``out_stream`` that is an output-file-stream object, ``<ofstream>``.
 
 ::
 
@@ -17,7 +17,7 @@ You must declare any file streams before you use them to read and write data. Fo
 Member Functions and Precision
 ------------------------------
 
-A function that is associated with a certain type of object is called a ``member function`` of that object. You have already used member functions ``setf(...)`` and ``precision(...)`` for formatting our output streams using ``cout``. These functions are included briefly below:
+A function that is associated with a certain type of object is called a **member function** of that object. You have already used member functions ``setf(...)`` and ``precision(...)`` for formatting our output streams using ``cout``. These functions are included briefly below:
 
 ::
 
@@ -50,7 +50,7 @@ Once connected, the program can read from that file. Pictorially, this is what h
   :align: center
   :alt: image
 
-the ``ostream`` class also has an ``open(filename)`` member function, but it is defined differently. Consider the following statement:
+the ``<ostream>`` class also has an ``open(filename)`` member function, but it is defined differently. Consider the following statement:
 
 ::
 
@@ -64,9 +64,9 @@ Pictorally, we get a stream of data flowing out of the program:
   :align: center
   :alt: image
 
-Because out_stream is an object of type ``ostream``, connecting it to the file named "anotherFile.txt" will create that file if it does not exist. If the file "anotherFile.txt" already exists, it will be wiped and replaced with whatever is fed into the output stream.
+Because out_stream is an object of type ``<ostream>``, connecting it to the file named "anotherFile.txt" will create that file if it does not exist. If the file "anotherFile.txt" already exists, it will be wiped and replaced with whatever is fed into the output stream.
 
-To disconnect the ``ifstream`` in_stream from whatever file it opened, we use it's ``close`` member function:
+To disconnect the ``ifstream`` in_stream from whatever file it opened, we use it's ``close()`` member function:
 
 ::
 
@@ -87,7 +87,7 @@ File operations, such as opening and closing files, are a notorius source of run
 
     in_stream.fail();
 
-This function returns ``true`` only if the previous stream operation for in_stream was not successful, such as if we tried to open a non-existent file. If a failure has occured, in_stream may be in a corrupted state, and it is best not to attempt any more operations with it.
+This function returns ``true`` only if the previous stream operation for in_stream was not successful, such as if we tried to open a non-existent file. If a failure has occured, in_stream may be in a corrupted state and it is best not to attempt any more operations with it.
 
 The following example code fragment safely quits the program entirely in case an I/O operation fails:
 
@@ -113,7 +113,7 @@ For example, execution of the following statement will write the number 25, a sp
     out_stream << 25 << ' ';
     out_stream << 15 << ' ';
 
-The extra space after the value 25 is important because data in a text file is typically seperated by a space, tab, or newline. Without the space, the value 2515 will be placed in the file, and subsequent read operations on that file would consider 2515 as a single value. For example, suppose that after the previous statement, the program opens the same file with the input stream in_stream. The following statement would put the number 5 into the variable ``inputn``.
+The extra space after the value 25 is important because data in a text file is typically seperated by a space, tab, or newline. Without the space, the value 2515 will be placed in the file, and subsequent read operations on that file would consider 2515 as a single value. For example, suppose that after the previous statement, the program opens the same file with the input stream in_stream. The following statement would put the number 25 into the variable ``inputn``.
 
 ::
 
@@ -185,7 +185,7 @@ This declaration creates a variable called ``filename`` that can hold a string o
         1. The number of characters for a c-string must be one greater than the number of actual characters!
         2. Also, LEN must be an integer number or a declared const int, it cannot be a variable.
 
-c-strings are an older type of string that was inherited from the C language, and people frequently refer to both types as "strings", which can be confusing.
+**c-strings** are an older type of string that was inherited from the C language, and people frequently refer to both types as "strings", which can be confusing.
 
 Typically, `string` from the ``<string>`` library should be used in all other cases when not working with file names.
 
@@ -209,3 +209,52 @@ Summary
 4. ``ofstream out_stream`` creates an output stream object,out_steam, that can be used to write text from C++ to a file.
 5. The filename of the input and output files is always declared as a C-string with a ``char`` variable.
 6. End-of-File or ``.eof()`` is a method for the instance variables of fstream, input and output stream objects, and can be used to carry out a task until a file has ended or do some task after a file has ended.
+
+
+Check Yourself
+~~~~~~~~~~~~~~
+.. fillintheblank:: file_reading
+
+    What is the value of inputn when the following code, with its appropriate include statements, runs?
+    ::
+
+        ifstream in_stream;
+        ofstream out_stream;
+        int inputn;
+
+        out_stream.open("anotherFile.txt");
+        out_stream << 25;
+        out_stream << 15 << ' ';
+        out_stream << 101 << ' ';
+
+        in_stream.open("anotherFile.txt");
+        in_stream >> inputn;
+        cout << inputn;
+        in_stream >> inputn;
+
+    - :101: Is the correct answer!
+      :25: inputn is changed twice.
+      :2515: inputn is changed twice.
+      :15: There is no space between the first 25 and 15!
+      :.*: Observe what numbers are being written to the file!
+
+.. mchoice:: stream_library
+   :multiple_answers:
+   :answer_a: fstream
+   :answer_b: ifstream
+   :answer_c: ofstream
+   :answer_d: iosteam
+   :correct: a,d
+   :feedback_a: Correct!
+   :feedback_b: ifstream is an object type for handling file input.
+   :feedback_c: ifstream is an object type for handling file output.
+   :feedback_d: Correct!
+
+   Which of the following are libraries for I/O? (choose all that are correct)
+
+.. dragndrop:: stream_use
+   :feedback: Think about which library you have been using longer and what you have used it for.
+   :match_1: fstream|||I want to write to a file
+   :match_2: iosteam|||I want to write to the console
+
+   Drag the corresponding library to what you would use it for.
