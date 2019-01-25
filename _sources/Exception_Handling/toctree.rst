@@ -5,3 +5,4 @@ Exception Handling
     :maxdepth: 2
 
     ExceptionHandling.rst
+    glossary.rst
