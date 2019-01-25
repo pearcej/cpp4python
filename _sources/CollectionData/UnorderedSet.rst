@@ -12,7 +12,7 @@ To use unordered_sets, you import ``unordered_set`` from the Standard template l
 
 Unordered_sets allow for fast retrieval of individual elements based on their value.
 In an unordered_set, the value of an element is at the same time its key, that identifies it uniquely.
-``Keys`` are immutable, therefore, the elements in an ``unordered_set`` cannot be modified once in the container -
+``Keys`` are **immutable**, therefore, the elements in an ``unordered_set`` cannot be modified once in the container -
 However, they can be inserted and removed.
 
 
@@ -74,8 +74,8 @@ Check Yourself
    :correct: a
    :feedback_a: Correct!
    :feedback_b: No. hash tables are not ordered.
-   :feedback_c: a string would only work for character data. Try again.
-   :feedback_d: there is a better choice given that the group is fixed length
+   :feedback_c: A string would only work for character data. Try again.
+   :feedback_d: There is a better choice given that the group is fixed length
    :feedback_e: Only of the above is best.
 
    Which C++ structure is the best choice for a group of ordered data of a fixed length?

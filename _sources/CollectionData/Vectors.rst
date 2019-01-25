@@ -5,7 +5,7 @@
 Vectors
 -------
 
-Vectors are much more similar to Python lists than arrays are.
+**Vectors** are much more similar to Python lists than arrays are.
 Vectors use a dynamically allocated array to store their elements,
 so they can change size, and they have other friendly features as well.
 Because they use a dynamically allocated array, they use contiguous storage locations
