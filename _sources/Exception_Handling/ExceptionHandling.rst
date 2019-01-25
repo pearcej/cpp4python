@@ -1,4 +1,4 @@
-..  Copyright (C)  Brad Miller, David Ranum
+..  Copyright (C)  Jan Pearce and Brad Miller
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 Exception Handling
@@ -178,37 +178,42 @@ of all the available exception types and for how to create your own exception ty
 Summary
 ~~~~~~~~~~~~
 
-1.There are two types of errors that occur while writing programs: syntax errors and logic errors
+1. There are two types of errors that occur while writing programs: syntax errors and logic errors
 
-2.A Syntax error is an error that occurs due to typing error or wrong statement that is not allowed in a language. This can be easily caught as the program does not run until this is fixed.
+2. A syntax error is an error that occurs due to typing error or wrong statement that is not allowed in a language. This can be easily caught as the program does not run until this is fixed.
 
-3.Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.
+3. Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.
 
-4.logic errors can be caught by using ``try`` and ``catch`` which can help pinpoint what is causing the error and avoid confusion about the problem.
+4. logic errors can be caught by using ``try`` and ``catch`` which can help pinpoint what is causing the error and avoid confusion about the problem.
 
 
 Check Yourself
 ~~~~~~~~~~~~~~
+
 .. clickablearea:: syntax_error
-    :question: Click on where a syntax error would occur in the following code.
+    :question: There are two errors in the following code. Click on the syntax error.
     :iscode:
     :feedback: Remember, syntax errors occur more for people learning a new language.
 
-    :click-incorrect:int age = 12;:endclick:
+    :click-incorrect:int age;:endclick:
+    :click-incorrect:cout << "age:";:endclick:
+    :click-incorrect:cin >> age;:endclick:
     :click-incorrect:if (age > 18) {:endclick:
     :click-incorrect:cout << "You can vote in the U.S!";}:endclick:
     :click-incorrect:else {:endclick:
-    :click-correct:cout<< You cannot vote in the U.S yet.;:endclick:
+    :click-correct:cout << You cannot vote in the U.S yet.;:endclick:
     }
 
 .. clickablearea:: logic_error
-    :question: Click on where a logic error would occur in the following code.
+    :question: There are two errors in the following code. Click on the logic error.
     :iscode:
     :feedback: If we want the code to say when we can vote, what cases should it say when can and cannot?
 
-    :click-correct:int age = 18;:endclick:
-    :click-incorrect:if (age > 18) {:endclick:
+    :click-incorrect:int age;:endclick:
+    :click-incorrect:cout << "age:";:endclick:
+    :click-incorrect:cin >> age;:endclick:
+    :click-correct:if (age > 18) {:endclick:
     :click-incorrect:cout << "You can vote in the U.S!";}:endclick:
     :click-incorrect:else {:endclick:
-    :click-incorrect:cout<< You cannot vote in the U.S yet.;:endclick:
+    :click-incorrect:cout << You cannot vote in the U.S yet.;:endclick:
     }

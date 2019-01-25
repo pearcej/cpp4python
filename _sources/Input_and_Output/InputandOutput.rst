@@ -81,13 +81,24 @@ To close the file for ``out_stream``, we use its ``close()`` function, which als
 Dealing with I/O Failures
 -------------------------
 
-File operations, such as opening and closing files, are a notorius source of runtime errors for various reasons. Well-written programs always should include Error Checking and Handling routines for possible problems dealing with files. Error checking and handling generally involves the programmer inserting statements in functions that perform I/O to check if any of the operations have failed. In C (the predecessor to C++), the system call to open a file returns a value after the function is called. A negative number means the operation failed for some reason, which the program can check to see if reading from a file is alright. In C++, a simple error checking mechanism is provided by the member function ``fail()``:
+File operations, such as opening and closing files, are often a source of runtime
+errors for various reasons. Well-written programs always should include error checking
+and Handling routines for possible problems dealing with files. Error checking
+and handling generally involves the programmer inserting statements in functions
+that perform I/O to check if any of the operations have failed. In C (the predecessor to C++),
+the system call to open a file returns a value after the function is called.
+A negative number means the operation failed for some reason, which the program can
+check to see if reading from a file is alright. In C++, a simple error checking mechanism
+is provided by the member function ``fail()``:
 
 ::
 
     in_stream.fail();
 
-This function returns ``true`` only if the previous stream operation for in_stream was not successful, such as if we tried to open a non-existent file. If a failure has occured, in_stream may be in a corrupted state and it is best not to attempt any more operations with it.
+This function returns ``true`` only if the previous stream operation for in_stream
+was not successful, such as if we tried to open a non-existent file. If a failure has
+occured, in_stream may be in a corrupted state and it is best not to attempt any more
+operations with it.
 
 The following example code fragment safely quits the program entirely in case an I/O operation fails:
 
@@ -123,11 +134,19 @@ The extra space after the value 25 is important because data in a text file is t
 The End-Of-File (EOF) for Systems that Implement eof()
 ------------------------------------------------------
 
-So far, the assumption was that the programmer knew exactly how much data to read from an open file. However, it is common for a program to keep reading from a file without any idea how much data exists. Most versions of C++ incorporate an end-of-file (EOF) flag at the end of the file to let programs know when to stop. Otherwise, they could read data from a different file that happened to be right after it in the hard drive, which can be disastrous.
+So far, the assumption was that the programmer knew exactly how much data to read from
+an open file. However, it is common for a program to keep reading from a file without
+any idea how much data exists. Most versions of C++ incorporate an end-of-file (EOF)
+flag at the end of the file to let programs know when to stop.
+Otherwise, they could read data from a different file that happened to be
+right after it in the hard drive, which can be disastrous.
 
-Many development environments have I/O libraries that define how the member function eof() works for ifstream variables to test if this flag is set to ``true`` or ``false``. Typically, one would like to know when the EOF has not been reached, so a common way is a negative boolean value. An alternative implementation is to keep reading using the >> operator; if that operation was successful (i.e. there was something in the file that was read), this success is interpreted as a 1 (true).
+Many development environments have I/O libraries that define how the member
+function eof() works for ifstream variables to test if this flag is set to ``true`` or ``false``. Typically, one would like to know when the EOF has not been reached, so a common way is a negative boolean value. An alternative implementation is to keep reading using the >> operator; if that operation was successful (i.e. there was something in the file that was read), this success is interpreted as a 1 (true).
 
-Incidentally, that is why if you forget the second equals sign in a comprison between a variable and a value, you are assigning the value to the variable, which is a successful operation, which means the condition ends up evaluating to ``true``.
+Incidentally, that is why if you forget the second equals sign in a comparison
+between a variable and a value, you are assigning the value to the variable,
+which is a successful operation, which means the condition ends up evaluating to ``true``.
 
 The following two code fragments highlight the possibilities:
 
@@ -150,7 +169,9 @@ Using the >> operator
         // while reads are successful
     }
 
-Here is an example of a program that essentially uses the second technique mentioned above to read all the numbers in a file and output them in a neater format. The ``while`` loop to scan through a file is located in the ``make_neat(...)`` function.
+Here is an example of a program that essentially uses the second technique
+mentioned above to read all the numbers in a file and output them in a neater format.
+The ``while`` loop to scan through a file is located in the ``make_neat(...)`` function.
 
 .. raw :: html
 
@@ -170,7 +191,15 @@ More information about ``pass by reference`` is found in Section 1.12.1 .
 File Names and C-Strings
 ------------------------
 
-The program above will try to open the file called "rawdata.txt" and output its results to a file called "neat.dat" every time it runs, which is not very flexible. Ideally, the user should be able to enter filenames that the program will use instead of the same names. We have previously talked about the ``char`` data type that allows users to store and manipulate a single character at a time. A sequence of characters such as "myFileName.dat" can be stored in a collection of chars called a ``c-string``, which is declared as follows:
+In modern versions of C++, you can use the <string> library for filenames,
+but earlier versions of C++ required the use of C-strings.
+The program above will try to open the file called "rawdata.txt" and
+output its results to a file called "neat.dat" every time it runs,
+which is not very flexible. Ideally, the user should be able to enter
+filenames that the program will use instead of the same names.
+We have previously talked about the ``char`` data type that allows users to store
+and manipulate a single character at a time. A sequence of characters such as "myFileName.dat"
+can be stored in an array of chars called a ``c-string``, which can be declared as follows:
 
 ::
 
@@ -178,16 +207,22 @@ The program above will try to open the file called "rawdata.txt" and output its 
     // Example:
     char filename[16];
 
-This declaration creates a variable called ``filename`` that can hold a string of length up to ``16``-1 characters. The square brackets after the variable name indicate to the compiler the maximum number of character storage that is needed for the variable.
+This declaration creates a variable called ``filename`` that can hold a string of
+length up to ``16``-1 characters.
+The square brackets after the variable name indicate to the compiler the maximum
+number of character storage that is needed for the variable.
+A ``\0`` or ``NULL`` character terminates the C-string, wo the system know how much of
+the array is actually used.
 
 
     Warnings:
         1. The number of characters for a c-string must be one greater than the number of actual characters!
         2. Also, LEN must be an integer number or a declared const int, it cannot be a variable.
 
-**c-strings** are an older type of string that was inherited from the C language, and people frequently refer to both types as "strings", which can be confusing.
+**C-strings** are an older type of string that was inherited from the C language, and people frequently refer to both types as "strings", which can be confusing.
 
-Typically, `string` from the ``<string>`` library should be used in all other cases when not working with file names.
+Typically, `string` from the ``<string>`` library should be used in all other cases when not
+working with file names or when a modern version of C+++ can be used.
 
 Putting it all Together
 -----------------------
@@ -203,58 +238,64 @@ The following program combines all of the elements above and asks the user for t
 
 Summary
 ~~~~~~~~
-1. File handling in C++ uses ``stream`` similar to cout and cin in ``<iosteam>`` library.
-2. The library used in this case is ``<fsream>``.
-3. ``ifstream in_stream`` creates an input stream object, in_stream, that can be used to input text from a file to C++.
-4. ``ofstream out_stream`` creates an output stream object,out_steam, that can be used to write text from C++ to a file.
-5. The filename of the input and output files is always declared as a C-string with a ``char`` variable.
-6. End-of-File or ``.eof()`` is a method for the instance variables of fstream, input and output stream objects, and can be used to carry out a task until a file has ended or do some task after a file has ended.
+1. File handling in C++ uses ``stream`` similar to cout and cin in ``<iosteam>`` library but is ``<fsream>`` for file stream.
+
+2. ``ifstream in_stream`` creates an input stream object, in_stream, that can be used to input text from a file to C++.
+
+3. ``ofstream out_stream`` creates an output stream object,out_steam, that can be used to write text from C++ to a file.
+
+4. End-of-File or ``.eof()`` is a method for the instance variables of fstream, input and output stream objects, and can be used to carry out a task until a file has ended or do some task after a file has ended.
 
 
 Check Yourself
 ~~~~~~~~~~~~~~
-.. fillintheblank:: file_reading
 
-    What is the value of inputn when the following code, with its appropriate include statements, runs?
-    ::
-
-        ifstream in_stream;
-        ofstream out_stream;
-        int inputn;
-
-        out_stream.open("anotherFile.txt");
-        out_stream << 25;
-        out_stream << 15 << ' ';
-        out_stream << 101 << ' ';
-
-        in_stream.open("anotherFile.txt");
-        in_stream >> inputn;
-        cout << inputn;
-        in_stream >> inputn;
-
-    - :101: Is the correct answer!
-      :25: inputn is changed twice.
-      :2515: inputn is changed twice.
-      :15: There is no space between the first 25 and 15!
-      :.*: Observe what numbers are being written to the file!
 
 .. mchoice:: stream_library
    :multiple_answers:
    :answer_a: fstream
    :answer_b: ifstream
    :answer_c: ofstream
-   :answer_d: iosteam
+   :answer_d: iostream
    :correct: a,d
-   :feedback_a: Correct!
-   :feedback_b: ifstream is an object type for handling file input.
-   :feedback_c: ifstream is an object type for handling file output.
-   :feedback_d: Correct!
+   :feedback_a: Yes, fstream is library for handling file input and output.
+   :feedback_b: No, ifstream is an object type for handling input.
+   :feedback_c: No, ofstream is an object type for handling output.
+   :feedback_d: Yes, iostream is a library for handling console input and output.
 
-   Which of the following are libraries for I/O? (choose all that are correct)
+   Which of the following are libraries for C++ input and output? (Choose all that are true.)
 
-.. dragndrop:: stream_use
-   :feedback: Think about which library you have been using longer and what you have used it for.
+
+.. dragndrop:: dnd_streamuse
+   :feedback: Which library is used for which task?
    :match_1: fstream|||I want to write to a file
-   :match_2: iosteam|||I want to write to the console
+   :match_2: iostream|||I want to write to the console
 
    Drag the corresponding library to what you would use it for.
+
+
+
+.. fillintheblank:: file_reading
+
+  Fill in the blank with the value of ``inputn`` when the following code runs.
+  ::
+
+      ifstream in_stream;
+      ofstream out_stream;
+      int inputn;
+
+      out_stream.open("anotherFile.txt");
+      out_stream << 25;
+      out_stream << 15 << ' ';
+      out_stream << 101 << ' ';
+
+      in_stream.open("anotherFile.txt");
+      in_stream >> inputn;
+      cout << inputn;
+      in_stream >> inputn;
+
+  - :101: That is the correct answer! Good job!
+    :25: No. Hint: ``inputn`` is changed twice.
+    :2515: No. Hint: ``inputn`` is changed twice.
+    :15: No. Hint: note that there is no space between the first 25 and 15!
+    :.*: No. Hint: Observe what specific numbers are being written to the file!

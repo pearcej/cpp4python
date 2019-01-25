@@ -8,10 +8,10 @@ Glossary
 .. glossary::
 
     c-string
-        a sequence of characters that ends with a terminating null character
+        An array of characters that ends with a terminating null character. i.e. ``\0``.
 
     member function
-        A function that's associated with a certain type of object; this function is called a member function of that object
+        A function that's associated with a certain type of object; this function is called a member function of that object.
 
     stream
-        an abstraction of something that allows you to send information (bytes)
+        An abstraction that allows you to send or receive an unknown number of bytes in input or output. It is a metaphor for a stream of water.
