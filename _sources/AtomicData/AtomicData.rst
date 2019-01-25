@@ -553,35 +553,35 @@ value in the code above.
 Let's extend the example above to output the value of a variable and its address
 in memory:
 
- _deferencing:
+.. _dereferencing:
 
-    .. activecode:: examplecpp
-        :language: cpp
+  .. activecode:: examplecpp
+      :language: cpp
 
-        #include <iostream>
-        using namespace std;
+      #include <iostream>
+      using namespace std;
 
-        int main( ) {
-            int varName = 100;
-            int *varPntr = &varName;
+      int main( ) {
+          int varName = 100;
+          int *varPntr = &varName;
 
-            cout << "varName value: " << varName << endl;
-            cout << "varPntr location: " << varPntr << endl;
-            cout << "varPntr points to varName: " << endl;
-            cout << "dereference varPntr: " << *varPntr << "\n\n";
+          cout << "varName value: " << varName << endl;
+          cout << "varPntr location: " << varPntr << endl;
+          cout << "varPntr points to varName: " << endl;
+          cout << "dereference varPntr: " << *varPntr << "\n\n";
 
-            varName = 50;
+          varName = 50;
 
-            cout << "varName changed: " << varName << endl;
-            cout << "varPntr still points to varName: " << endl;
-            cout << "dereference varPntr: " << *varPntr << "\n\n";
+          cout << "varName changed: " << varName << endl;
+          cout << "varPntr still points to varName: " << endl;
+          cout << "dereference varPntr: " << *varPntr << "\n\n";
 
-            *varPntr = 2000;
-            cout << "Changed *varPntr, ie varName to: " << endl;
-            cout << "dereference varPntr: " << *varPntr << "\n\n";
+          *varPntr = 2000;
+          cout << "Changed *varPntr, ie varName to: " << endl;
+          cout << "dereference varPntr: " << *varPntr << "\n\n";
 
-            return 0;
-        }
+          return 0;
+      }
 
 Compiling and running the above code will have the program output the
 value in varName,
@@ -637,7 +637,7 @@ the first ``cout`` instruction outputs
 
     After changing *varPntr, varName now has: 50
 
-which is expected because you changed where varPntr pointing to and
+which is expected because you changed where varPntr is pointing to and
 NOT the contents of where it is pointing.
 
 The second ``cout`` instruction is a disaster because
@@ -673,7 +673,7 @@ thereby ending the loop:
             int *ptrx = &x;
 
             while (ptrx) {
-                cout << "Pointer ptrx points to " << &ptrx;
+                cout << "Pointer ptrx points to " << &ptrx << endl;
                 ptrx = NULL;
             }
 
