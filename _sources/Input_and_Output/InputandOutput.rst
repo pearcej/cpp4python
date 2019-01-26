@@ -15,7 +15,7 @@ You must declare any file streams before you use them to read and write data. Fo
     ofstream out_stream;
 
 Member Functions and Precision
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A function that is associated with a certain type of object is called a **member function** of that object. You have already used member functions ``setf(...)`` and ``precision(...)`` for formatting our output streams using ``cout``. These functions are included briefly below:
 
@@ -34,7 +34,7 @@ A function that is associated with a certain type of object is called a **member
     cout.precision(2);
 
 File Operations
----------------
+~~~~~~~~~~~~~~~
 
 Having created a stream with the declaration above, we can connect it to a file (i.e. open the file) using the member function ``open(filename)``. For example, the following statement will allow the C++ program to open the file called "myFile.txt", assuming a file named that exists in the current directory, and connect ``in_stream`` to the beginning of the file:
 
@@ -79,7 +79,7 @@ To close the file for ``out_stream``, we use its ``close()`` function, which als
     out_stream.close();
 
 Dealing with I/O Failures
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 File operations, such as opening and closing files, are often a source of runtime
 errors for various reasons. Well-written programs always should include error checking
@@ -113,7 +113,7 @@ After opening the "myFile.txt" file, the ``if`` conditional checks to see if the
 For more on Error Handling, see section 1.11.
 
 Reading and Writing with File Streams
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As file I/O streams work in a similar way to ``cin`` and ``cout``, the operators ">>" and "<<" perform the same direction of data for files, with the exact same syntax.
 
@@ -132,7 +132,7 @@ The extra space after the value 25 is important because data in a text file is t
     in_stream >> inputn;
 
 The End-Of-File (EOF) for Systems that Implement eof()
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 So far, the assumption was that the programmer knew exactly how much data to read from
 an open file. However, it is common for a program to keep reading from a file without
@@ -182,14 +182,16 @@ The ``while`` loop to scan through a file is located in the ``make_neat(...)`` f
 The input file ``rawdata.txt`` must be in the same directory (folder) as the program in order for it to open successfully. The program will create a file called "neat.dat" to output the results.
 
 Passing Streams as Parameters
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the above program, you see that the input and output streams are passed to the file via ``pass by reference``. This fact may at first seem like a surprising choice until you realize that a stream must be changed in order to read from it or write to it. In other words, as streams "flow", they are changed. For this reason, all streams will always be passed by reference.
-
-More information about ``pass by reference`` is found in Section 1.12.1 .
+In the above program, you see that the input and output streams are passed to the file
+via ``pass by reference``. This fact may at first seem like a surprising choice
+until you realize that a stream must be changed in order to read from it or write to it.
+In other words, as streams "flow", they are changed.
+For this reason, all streams will always be passed by reference.
 
 File Names and C-Strings
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 In modern versions of C++, you can use the <string> library for filenames,
 but earlier versions of C++ required the use of C-strings.
@@ -225,7 +227,7 @@ Typically, `string` from the ``<string>`` library should be used in all other ca
 working with file names or when a modern version of C+++ can be used.
 
 Putting it all Together
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.
 
@@ -237,7 +239,8 @@ The following program combines all of the elements above and asks the user for t
 
 
 Summary
-~~~~~~~~
+~~~~~~~
+
 1. File handling in C++ uses ``stream`` similar to cout and cin in ``<iosteam>`` library but is ``<fsream>`` for file stream.
 
 2. ``ifstream in_stream`` creates an input stream object, in_stream, that can be used to input text from a file to C++.

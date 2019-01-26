@@ -18,7 +18,7 @@ returns the location of the associated value as the output.
 This makes look up fast.
 
 In Python, the dictionary data type represents the implementation of the hash table.
-In C++, the *unordered_map* implements the hash table, andthe ``<unordered_map>``
+In C++, the *unordered_map* implements the hash table, and the ``<unordered_map>``
 library must be included as follows:
 
 ::

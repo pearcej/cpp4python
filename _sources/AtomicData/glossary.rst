@@ -8,22 +8,28 @@ Glossary
 .. glossary::
 
     address-of
-        The address-of operator (``&``) is used to access the address of a C++ variable.
+        the address-of operator (``&``) is used to access the address of a C++ variable.
+
+    atomic data type
+        basic data type that cannot be broken down into any simpler data elements.
 
     ``bool``
-        Keyword for Boolean data type.
+        keyword for Boolean data type.
 
     ``char``
-        Keyword for character data type that stores a single character.
+        keyword for character data type that stores a single character.
+
+     dereference
+        follow a pointer to its referenced memory location and read the data there.
 
     ``float``
-        Keyword for floating point data type.
+        keyword for floating point data type.
 
     ``double``
-        Keyword for double-precision floating point data type.
+        keyword for double-precision floating point data type.
 
     ``int``
-        Keyword for integer data type.
+        keyword for integer data type.
 
     pointer
-        Pointers are variables that can store and manipulate memory addresses.
+        variables that store and manipulate memory addresses.

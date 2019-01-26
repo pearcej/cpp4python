@@ -135,8 +135,8 @@ In Python, these same truth values are capitalized, while in C++,
 they are lower case.
 
 C++ uses the standard Boolean operators, but they are represented
-differently than in Python: and is given by ``&&`` , or is given by ``||``
-, and not is given by ``!``.
+differently than in Python: "and" is given by ``&&`` , "or" is given by ``||``
+, and "not" is given by ``!``.
 Note that the internally stored values representing ``true`` and ``false``
 are actually ``1`` and ``0`` respectively. Hence, we see this in output as well.
 
@@ -417,7 +417,7 @@ In each case, when we want to output the value to the console, we use the variab
 to do so.
 
 But, we can also identify the memory location of the variable,
-which is sometimes very valuable. In both Python and C++, this address is
+which is sometimes very valuable. In both Python and C++, this address
 may change each time the program is run. In C++, this will always look
 odd because it will be the actual memory address written in a hexadecimal code
 which is a base 16 code like 0x7ffd93f25244.
