@@ -130,7 +130,7 @@ There are two ways to use ``#include`` in C++:
 Here the angle-brackets ``<>`` are used to include libraries or headers provided by
 the implementation, such as the
 headers in the standard library (``iostream``, ``string``, etc.). The double
-quotes ``"`` are used for headers and files not provided by the implementation. 
+quotes ``"`` are used for headers and files not provided by the implementation.
 
 The main function
 -----------------
@@ -234,15 +234,15 @@ as a docstring for the documentation.
   span many lines, beginning and ending with the given symbols */
 
 
-Standard Input and Output
--------------------------
+Standard Output
+---------------
 
 We often have a need to interact with users, either to get data or to provide some sort of result.
 The C++ ``<iostream>`` library provides us with the functionality to get information
 from the console input as well as to output information to the console. This input and output is handled by what
 is known as a ``stream``.
 
-A ``stream`` is essentially a channel in which data flows from the source to a destination.
+A ``stream`` is essentially a channel in which data flows from the source to a destination (often called the "sink".)
 Output streams send data out, and the standard output stream ``cout`` sends data to the screen, also called the console.
 So, ``cout`` stands for "console output".
 Much like the Python ``print`` statement, ``cout`` is used to
@@ -253,6 +253,27 @@ The output operator is used to direct output to the designated output device or 
 The output operator can also be used to concatenate output, much like the "+"
 can be used to concatenate in Python.
 
+.. activecode:: hellocppducky
+    :language: cpp
+
+    /* Ever heard of rubber duck debugging?
+        See https://en.wikipedia.org/wiki/Rubber_duck_debugging */
+    #include <iostream>
+    using namespace std;
+
+    int main(){
+      cout << "Ever heard of rubber duck debugging?" << endl;
+      cout << "                __     " << endl;
+      cout << "              <(o )___-" << endl;
+      cout << "               ( .__> /" << endl;
+      cout << "                `----' " << endl;
+    }
+
+
+Standard Input
+--------------
+
+In addition to being able to output to the console, we want to be able to take input from the user.
 The command ``cin`` is somewhat similar to ``cout`` except, of course, it is used for input.
 Input streams direct data from a source, such as the keyboard or a file.
 As you might have guessed, ``cin`` stands for "console input" and it makes getting input from the standard input device (usually the keyboard) relatively easy.

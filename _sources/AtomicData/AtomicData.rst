@@ -363,12 +363,12 @@ Try the following question.
 Pointers
 ~~~~~~~~
 
-A C++ **pointer** is a variable that stores a memory address.
+A C++ **pointer** is a variable that stores a memory address and can be used to indirectly
+access data stored at that memory location. 
 
 We know that variables in a computer program are used to label data with a
 descriptive identifier so that the data can be accessed and used by that
-computer program. However, some differences in how variables are implemented
-in Python and in C++ are worthy of discussion.
+computer program.
 
 Let's look at some examples of storing an integer in Python and C++.
 
@@ -382,26 +382,26 @@ for either a reference or an object. This makes access faster, but it is one of
 the reasons we need to declare each variable because different types take differing
 amounts of space in memory!
 
-The following code declares a variable called *varName* that has in it a
+The following code declares a variable called *varN* that has in it a
 value of 100:
 
 ::
 
     // Python reference for a single integer value
-    varName = 100
+    varN = 100
 
 .. _fig_py_reference:
 
 .. figure:: Figures/python_reference.png
    :align: center
-   :alt: "arrow from varName to box containing 100 object"
+   :alt: "arrow from varN to box containing 100 object"
 
    Figure 4: Python reference
 
 ::
 
     // C++ variable declaration and assignment of an integer value
-    int varName = 100;
+    int varN = 100;
 
 In C++ the results of running this code will look like the diagram below:
 
@@ -409,16 +409,16 @@ In C++ the results of running this code will look like the diagram below:
 
 .. figure:: Figures/cpp_var.png
    :align: center
-   :alt: "Box named varName containing value of 100"
+   :alt: "Location named varN containing value of 100"
 
    Figure 4: C++ variable
 
 In each case, when we want to output the value to the console, we use the variable name
 to do so.
 
-But, we can also identify the memory location of the variable,
-which is sometimes very valuable. In both Python and C++, this address
-may change each time the program is run. In C++, this will always look
+But, we can also identify the memory location of the variable by its address. 
+In both Python and C++, this address
+may change each time the program is run. In C++, the address will always look
 odd because it will be the actual memory address written in a hexadecimal code
 which is a base 16 code like 0x7ffd93f25244.
 In Python it is implementation dependent,
@@ -440,9 +440,9 @@ while in C++ we use the *address-of operator*, ``&``.
         using namespace std;
 
         int main(){
-            int varName = 101;
-            cout << varName << endl;
-            cout << &varName << endl;
+            int varN = 101;
+            cout << varN << endl;
+            cout << &varN << endl;
             return 0;
         }
 
@@ -452,9 +452,9 @@ while in C++ we use the *address-of operator*, ``&``.
         :caption: Memory identifier in Python
 
         def main():
-            varName = 101;
-            print(varName)
-            print(id(varName))
+            varN = 101;
+            print(varN)
+            print(id(varN))
 
         main()
 
@@ -469,14 +469,14 @@ Instead, we must use a variable name and a reference to the data object.
 In C++, variables store values directly, because they are faster to reference.
 
 References are slower, but they are sometimes useful.
-If in C++, we want to create a analogous reference to a memory location in C++,
-we must use a special syntax called a **pointer**.
+If in C++, we want to create a analogous reference to a memory location,
+we must use a special data type called a **pointer**.
 
 Pointer Syntax
 ^^^^^^^^^^^^^^
 
 When declaring a pointer in C++ that will "point" to the memory address of some
-data type, like all variables do in Python,
+data type, 
 you will use the same rules of declaring variables and data types.
 The key difference is that there must be an asterisk (*) between the data type and the
 identifier.
@@ -508,25 +508,25 @@ refer to another variable by using the address-of operator, which is denoted by 
 ampersand symbol, ``&``. The address-of operator ``&`` does exactly what it indicates,
 namely it returns the address.
 
-The syntax is shown below, where varName stores the value, and varPntr stores
-the address of where varName is located:
+The syntax is shown below, where varN stores the value, and ptrN stores
+the address of where varN is located:
 
 ::
 
-    variableType varName;  // a variable to hold the value
-    variableType *varPntr = &varName;  // a variable pointing to the address of varName
+    variableType varN;  // a variable to hold the value
+    variableType *ptrN = &varN;  // a variable pointing to the address of varN
 
 Keep in mind that when declaring a C++ pointer, the pointer needs to
 reference the same type as the variable or constant to which it points.
 
-Expanding on the example above where varName has the value of 100.
+Expanding on the example above where varN has the value of 100.
 
 ::
 
     //variable declaration for a single integer value
-    int varName = 100;
-    int *varPntr;
-    varPntr = &varName;
+    int varN = 100;
+    int *ptrN;
+    ptrN = &varN;
 
 The results of running this C++ code will look like the diagram below.
 
@@ -541,14 +541,13 @@ The results of running this C++ code will look like the diagram below.
 Accessing Values from Pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-So, once you have a C++ pointer, how do you access the values associated with that location?
-You use the asterisk before the pointer variable, which
-goes to that address, effectively *dereferencing* the pointer,
-meaning that it will find the location of the value stored where the pointer was
-pointing.
+Once you have a C++ pointer, you use the asterisk before the pointer variable, 
+to *dereference* the pointer, which means go to the location pointed at by the address.
 
-In other words, varName and \*varPntr (note the asterisk in front!) reference the same
-value in the code above.
+::
+    In other words, varN and \*ptrN (note the asterisk in front!) reference the same
+    value in the code above.
+    
 
 Let's extend the example above to output the value of a variable and its address
 in memory:
@@ -562,34 +561,34 @@ in memory:
       using namespace std;
 
       int main( ) {
-          int varName = 100;
-          int *varPntr = &varName;
+          int varN = 100;
+          int *ptrN = &varN;
 
-          cout << "varName value: " << varName << endl;
-          cout << "varPntr location: " << varPntr << endl;
-          cout << "varPntr points to varName: " << endl;
-          cout << "dereference varPntr: " << *varPntr << "\n\n";
+          cout << "varN value: " << varN << endl;
+          cout << "ptrN location: " << ptrN << endl;
+          cout << "ptrN points to varN: " << endl;
+          cout << "dereference ptrN: " << *ptrN << "\n\n";
 
-          varName = 50;
+          varN = 50;
 
-          cout << "varName changed: " << varName << endl;
-          cout << "varPntr still points to varName: " << endl;
-          cout << "dereference varPntr: " << *varPntr << "\n\n";
+          cout << "varN changed: " << varN << endl;
+          cout << "ptrN still points to varN: " << endl;
+          cout << "dereference ptrN: " << *ptrN << "\n\n";
 
-          *varPntr = 2000;
-          cout << "Changed *varPntr, ie varName to: " << endl;
-          cout << "dereference varPntr: " << *varPntr << "\n\n";
+          *ptrN = 2000;
+          cout << "Changed *ptrN, ie varN to: " << endl;
+          cout << "dereference ptrN: " << *ptrN << "\n\n";
 
           return 0;
       }
 
 Compiling and running the above code will have the program output the
-value in varName,
-what is in varPntr (the memory address of varName),
+value in varN,
+what is in ptrN (the memory address of varN),
 and what value is located at that
 memory location.
 
-The second output sentence is the address of varName, which would most likely be
+The second output sentence is the address of varN, which would most likely be
 different if you run the program on your machine.
 
 WARNING: What happens if you forget the asterisk
@@ -605,16 +604,16 @@ and had the following instructions instead?
         using namespace std;
 
         int main( ) {
-            int varName = 100;
-            int varPntr = varName; // Note no asterisk,
-                // varPntr now refers to memory position 100,
+            int varN = 100;
+            int ptrN = varN; // Note no asterisk,
+                // ptrN now refers to memory position 100,
                 // whatever happens to be there!
                 // You might get an error or you might not!
 
-             cout << "varName value: " << varName << endl;
-             cout << "varPntr location: " << varPntr << endl;
-             cout << "varPntr points to varName: " << endl;
-             cout << "dereference varPntr: " << *varPntr << "\n\n";
+             cout << "varN value: " << varN << endl;
+             cout << "ptrN location: " << ptrN << endl;
+             cout << "ptrN points to varN: " << endl;
+             cout << "dereference ptrN: " << *ptrN << "\n\n";
 
              return 0;
         }
@@ -635,9 +634,9 @@ the first ``cout`` instruction outputs
 
 ::
 
-    After changing *varPntr, varName now has: 50
+    After changing *ptrN, varN now has: 50
 
-which is expected because you changed where varPntr is pointing to and
+which is expected because you changed where ptrN is pointing to and
 NOT the contents of where it is pointing.
 
 The second ``cout`` instruction is a disaster because
