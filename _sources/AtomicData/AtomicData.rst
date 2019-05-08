@@ -566,11 +566,13 @@ in memory:
 
           cout << "varN value: " << varN << endl;
           cout << "ptrN location: " << ptrN << endl;
-          cout << "ptrN points to varN: " << endl;
+         // cout << "ptrN points to varN: " << endl;
           cout << "dereference ptrN: " << *ptrN << "\n\n";
 
+          
           return 0;
       }
+
 
 Check Yourself
 ~~~~~~~~~~~~~~
@@ -588,7 +590,7 @@ Check Yourself
    :feedback_d: No. Try again
    :feedback_e: One of the above is indeed correct.
   
-   If the lines ((varN = 50;) and  (cout << "dereference ptrN: " << \*ptrN << "\n\n ";)) were added to the code above what would it cout? 
+   If the lines ((varN = 50;) and  (cout << \*ptrN << endl;)) were added to the code above what would it cout? 
 
 .. mchoice:: mc_pntrhelp
    :answer_a: dereference varPntr: 3000
@@ -603,7 +605,7 @@ Check Yourself
    :feedback_d: Right!
    :feedback_e: One of the above is indeed correct.
   
-   If the lines ((\*ptrN = 2000;) and  (cout << "dereference ptrN: " << \*ptrN << "\n\n ";)) were added to the code above what would it cout?
+   If the lines ((\*ptrN = 2000;) and  (cout << \*ptrN << endl;)) were added to the code above what would it cout
 
 Compiling and running the above code will have the program output the
 value in varN,
