@@ -569,18 +569,41 @@ in memory:
           cout << "ptrN points to varN: " << endl;
           cout << "dereference ptrN: " << *ptrN << "\n\n";
 
-          varN = 50;
-
-          cout << "varN changed: " << varN << endl;
-          cout << "ptrN still points to varN: " << endl;
-          cout << "dereference ptrN: " << *ptrN << "\n\n";
-
-          *ptrN = 2000;
-          cout << "Changed *ptrN, ie varN to: " << endl;
-          cout << "dereference ptrN: " << *ptrN << "\n\n";
-
           return 0;
       }
+
+Check Yourself
+~~~~~~~~~~~~~~
+
+.. mchoice:: mc_pntrhlp
+   :answer_a: dereference varPntr: 100
+   :answer_b: dereference varPntr: 50
+   :answer_c: dereference varPntr: 51
+   :answer_d: dereference varPntr: 60
+   :answer_e: none of the above
+   :correct: b
+   :feedback_a: No. Try again
+   :feedback_b: Right!
+   :feedback_c: No. Try again
+   :feedback_d: No. Try again
+   :feedback_e: One of the above is indeed correct.
+  
+   If the lines ((varN = 50;) and  (cout << "dereference ptrN: " << \*ptrN << "\n\n ";)) were added to the code above what would it cout? 
+
+.. mchoice:: mc_pntrhelp
+   :answer_a: dereference varPntr: 3000
+   :answer_b: dereference varPntr: 200
+   :answer_c: dereference varPntr: 2001
+   :answer_d: dereference varPntr: 2000
+   :answer_e: none of the above
+   :correct: d
+   :feedback_a: No. Try again
+   :feedback_b: No. Try again
+   :feedback_c: No. Try again
+   :feedback_d: Right!
+   :feedback_e: One of the above is indeed correct.
+  
+   If the lines ((\*ptrN = 2000;) and  (cout << "dereference ptrN: " << \*ptrN << "\n\n ";)) were added to the code above what would it cout?
 
 Compiling and running the above code will have the program output the
 value in varN,
