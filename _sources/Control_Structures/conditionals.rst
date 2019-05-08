@@ -152,6 +152,17 @@ away with the following.
       return 0;
     }
 
+Check Yourself
+~~~~~~~~~~~~~~
+
+.. mchoice:: mc_cpp_elsecond
+   :answer_a: True
+   :answer_b: False 
+   :correct: a
+   :feedback_a: Right!
+   :feedback_b: No. try modifying the code above. 
+
+   T/F: Is is necessary to have an else statement after an if statement? (Hint: Test it out in the code above)
 
 switch
 ------
