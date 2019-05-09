@@ -1,5 +1,8 @@
+# Ignore the following:
+build_info
+*.pyc
+__pycache__/
 build/*
 .idea/*
-*.pyc
 source/doctrees/*
 *~
