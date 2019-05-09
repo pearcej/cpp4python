@@ -158,9 +158,9 @@ Check Yourself
 .. mchoice:: mc_cpp_elsecond
    :answer_a: True
    :answer_b: False 
-   :correct: a
-   :feedback_a: Right!
-   :feedback_b: No. try modifying the code above. 
+   :correct: b
+   :feedback_a: Not quite, try modifying the code above to test it out.
+   :feedback_b: Good job!
 
    T/F: Is is necessary to have an else statement after an if statement? (Hint: Test it out in the code above)
 

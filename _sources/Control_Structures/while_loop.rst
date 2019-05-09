@@ -87,14 +87,14 @@ Check yourself
 
 
 .. mchoice:: mc_whileloop
-  :answer_a: 2
-  :answer_b: 1
-  :answer_c: Infinite 
-  :answer_d: 4
+  :answer_a: Infinitely cout "0"
+  :answer_b: cout "Hello world" 1 time
+  :answer_c: Infinitely cout "Hello world"
+  :answer_d: None of the  above.
   :correct: c
-  :feedback_a: That's not quite right something is missing from this example 
-  :feedback_b: No, try again 
+  :feedback_a: Take a look at the cout line. 
+  :feedback_b: Take a closer look at the while loop
   :feedback_c: Right! because counter is never greater than one, thus making the while loop infinite.
-  :feedback_d: No, try again
+  :feedback_d: Not quite, take another look.
 
-  Using the code above please select the answer that should appear?
+  Using the code above please select the answer that should appear.
