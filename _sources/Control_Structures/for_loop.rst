@@ -99,7 +99,7 @@ of the words.
     }
 
 Check yourself
-~~~~~~~~~~~~~~
+==============
 
 ::
 
@@ -118,14 +118,14 @@ Check yourself
         }
 
 .. mchoice:: mc_forloop
-  :answer_a: 0,2,4,6
-  :answer_b: 0,0,0,0
-  :answer_c: 0,4,6,8
-  :answer_d: 0,1,2,3
+  :answer_a: 0, 2, 4, 6
+  :answer_b: 0, 0, 0, 0
+  :answer_c: Runtime error
+  :answer_d: 0, 1, 2, 3
   :correct: a
   :feedback_a: Good Job!
-  :feedback_b: No, try again 
-  :feedback_c: No, try again
-  :feedback_d: No, pay attention to the cout
+  :feedback_b: Not quite, take another look at the operation happening in the cout line 
+  :feedback_c: Not quite, take another look at the for loop
+  :feedback_d: Not quite, take another look at the operation happening in the cout line 
 
   Using the code above please select the answer that should appear?

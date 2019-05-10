@@ -24,10 +24,12 @@ of identical type in which each element can be identified by an array index.
 More technically, an array data structure is an ordered arrangement of values
 located at equally spaced addresses in contiguous computer memory.
 
-A C++ **array** is always stored in contiguous memory. C++ arrays can be allocated in two different ways:
+NOTE: A C++ **array** is always stored in contiguous memory. C++ arrays can be allocated in two different ways:
 
-1) *statically allocated* in which the array size is fixed at compile-time and cannot change
-2) *dynamically allocated* in which pointers are used in the allocation process so the size can change at run-time
+    1) *statically allocated* in which the array size is fixed at compile-time and cannot change
+    2) *dynamically allocated* in which pointers are used in the allocation process so the size can change at run-time
+
+    
 
 In modern C++, the statically allocated array is typically used
 in situations when speed is essential or where hardware constraints exist, and a data structure
@@ -182,6 +184,7 @@ or you need to work with hardware constraints.
 Otherwise, you may want to consider using another collection data type,
 the *vector*.
 
+
 .. tabbed:: array_werror
 
   .. tab:: C++
@@ -246,3 +249,16 @@ the *vector*.
    :feedback_e: One of the above is indeed correct.
 
    In the above example, what happened to otherdata[ ] in C++?
+
+.. mchoice:: mc_array
+    :answer_a: int myarray(5);
+    :answer_b: myarray[5];
+    :answer_c: int myarray[5];
+    :answer_d: None of the above.
+    :correct: c
+    :feedback_a: Check the characters at the end of the array! Right now that is a function!
+    :feedback_b: You are forgetting something important!
+    :feedback_c: Good work!
+    :feedback_d: Check the characters at the end of the array!
+
+    What is the correct way to declare an array in C++?
