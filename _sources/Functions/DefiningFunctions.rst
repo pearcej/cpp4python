@@ -288,11 +288,14 @@ because the array parameter *list[]* does not include that information):
 
 ::
 
-    double average( int list[], int length ) {	// It is correct     syntax to omit the array length on the array itself.
-        double total = 0;                       //return type double which indicates that a decimal is being returned
+    double average( int list[], int length ) {	
+         // It is correct syntax to omit the array length on the array itself.
+        double total = 0;                     
+         //return type double which indicates that a decimal is being returned
         int count;
-        for( count = 0; count < length; count++ )
+        for( count = 0; count < length; count++ ) {
             total += double(list[count]);
+            };
         return (total / length);
     }
 
@@ -302,21 +305,23 @@ After a call to the following function, each element in the third array argument
 
 ::
 
-    void add_lists( int first[], int second[], int total[], int length ) { //return type void which indicates that nothing is returned
+    void add_lists( int first[], int second[], int total[], int length ) { 
+        //return type void which indicates that nothing is returned
         int count;
-        for( count = 0; count < length; count++ )
+        for( count = 0; count < length; count++ ) { 
             total[count] = first[count] + second[count];
-    }
+    };}
 
 Upon further examination, we can see that the first two arrays do not change values. To prevent ourselves from accidentally modifying any of these arrays, we can add the modifier ``const`` in the function head:
 
 ::
 
-    void add_lists( const int first[], const int second[], int total[], int length ) { //return type void which indicates that nothing is returned
+    void add_lists( const int first[], const int second[], int total[], int length ) { 
+        //return type void which indicates that nothing is returned
         int count;
-        for( count = 0; count < length; count++ )
+        for( count = 0; count < length; count++ ) {
             total[count] = first[count] + second[count];
-    }
+    };}
 
 These changes would ensure that the compiler will then not accept any statements within the function's definition that potentially modify the elements of the arrays *first* or *second*.
 
