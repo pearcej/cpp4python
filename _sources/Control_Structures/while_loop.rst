@@ -71,8 +71,7 @@ Here are some of the logical operators that are useful for true-false boolean st
 
 These are the same as we saw in earlier chapters. 
 
-Check yourself
-~~~~~~~~~~~~~~
+
 
 ::
 

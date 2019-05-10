@@ -571,10 +571,7 @@ in memory:
           
           return 0;
       }
-
-
-Check Yourself
-~~~~~~~~~~~~~~
+      
 
 .. mchoice:: mc_pntrhlp
    :answer_a: varPntr: 100

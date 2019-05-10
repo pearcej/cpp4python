@@ -99,7 +99,7 @@ of the words.
     }
 
 Check yourself
-~~~~~~~~~~~~~~
+==============
 
 ::
 
