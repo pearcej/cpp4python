@@ -51,6 +51,22 @@ Because vectors can change size, vectors typically allocate some extra storage t
 Thus the vector typically has an actual *capacity* greater than the storage *size* strictly needed to contain its elements.
 
 
+Matching
+--------
+.. dragndrop:: matching_vectors
+   :feedback: Feedback shows incorrect matches.
+   :match_1: [ ]|||Accesses value of an element. 
+   :match_2: =||| Assigns value to an element. 
+   :match_3: push_back|||Appends item to the end of the vector.
+   :match_4: pop_back||| Deletes last item of the vector.
+   :match_5: insert|||Injects an item into the vector. 
+   :match_6: pointer|||Variables that store and manipulate memory addresses.
+   :match_7: pointer|||Variables that store and manipulate memory addresses.
+   :match_8: pointer|||Variables that store and manipulate memory addresses.
+   :match_9: pointer|||Variables that store and manipulate memory addresses.
+
+    Match the vector operations with their corresponding explination. 
+
 .. tabbed:: intro_vector
 
   .. tab:: C++
