@@ -33,3 +33,14 @@ Glossary
 
     pointer
         variables that store and manipulate memory addresses.
+
+Matching
+--------
+.. dragndrop:: matching_ADT
+   :feedback: Feedback shows incorrect matches.
+   :match_1: address-of|||(&) is used to access the memory address of a C++ variable.
+   :match_2: atomic data type|||Data type that cannot be broken down into any simpler data elements.
+   :match_3: dereference|||Reads data in a pointers memory location. 
+   :match_4: pointer|||Variables that store and manipulate memory addresses.
+
+   Drag each glossary term to its' corresponding definition. (Note: none of the data types are in this matching, but they are in the glossary)
