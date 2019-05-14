@@ -142,3 +142,16 @@ describes them, and the session shows them in action.
                 ``begin``         ``mymap.begin()``                    An iterator to the first element in ``mymap``
                   ``end``        ``mymap.end(key)``        An iterator pointing to past-the-end element of ``mymap``
     ===================== ========================= ================================================================
+
+
+Matching
+========
+.. dragndrop:: matching_HT
+   :feedback: Feedback shows incorrect matches.
+   :match_1: [ ]|||Returns the value associated with the key, otherwise throws error.
+   :match_2: erase|||Deletes the entry from the hash table.
+   :match_3: count|||Returns true if key is in the hash table, and false otherwise.
+   :match_4: begin|||An iterator to the first element in the hash table.
+   :match_5: end|||An iterator pointing to past-the-end element of the hash table.
+   
+    Match the Hash Table operations with their corresponding explination. 

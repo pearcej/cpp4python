@@ -35,7 +35,7 @@ methods, some of the most useful of which are shown in :ref:`Table 4<tab_string
                 ``[ ]``                  ``astring[i]``                       access value of character at index i
                   ``=``            ``astring[i]=value``                       change value of character at index i
                   ``+``          ``string1 + astring2``                                        concatenate strings
-             ``append``      ``astring.append(string)``                     Append to string the end of the string
+             ``append``      ``astring.append(string)``                  Appends a string to the end of the string
           ``push_back``     ``astring.push_back(char)``               Appends a character to the end of the string
            ``pop_back``          ``astring.pop_back()``      Deletes the last character from the end of the string
              ``insert``   ``astring.insert(i, string)``                       Inserts a string at a specific index
@@ -44,6 +44,24 @@ methods, some of the most useful of which are shown in :ref:`Table 4<tab_string
                ``size``              ``astring.size()``                             Returns the size of the string
     ===================  ==============================  =========================================================
 
+
+
+Matching
+========
+.. dragndrop:: matching_strings
+   :feedback: Feedback shows incorrect matches.
+   :match_1: [ ]|||Accesses value of an element. 
+   :match_2: =||| Assigns value to an element. 
+   :match_3: push_back|||Adjoins a character to the end of the string.
+   :match_4: pop_back|||Removes the last character from the end of the string.
+   :match_5: insert|||Injects a string at a specific index. 
+   :match_6: erase|||Deletes an element from one index to another.
+   :match_7: size|||Returns the capacity of the string.
+   :match_8: +|||connects strings.
+   :match_9: append|||Adjoins a string to the end of the string.
+   :match_10: find||| Returns the index of the first occurrence of item.
+
+    Match the String operations with their corresponding explination. 
 
 .. tabbed:: intro_string
 

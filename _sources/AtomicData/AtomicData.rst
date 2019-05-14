@@ -545,7 +545,8 @@ Once you have a C++ pointer, you use the asterisk before the pointer variable,
 to *dereference* the pointer, which means go to the location pointed at by the address.
 
 ::
-    In other words, varN and \*ptrN (note the asterisk in front!) reference the same
+
+    In other words, varN and *ptrN (note the asterisk in front!) reference the same
     value in the code above.
     
 
@@ -577,7 +578,7 @@ in memory:
    :answer_a: varPntr: 100
    :answer_b: varPntr: 50
    :answer_c: varPntr: 150
-   :answer_d: &x0df520d2
+   :answer_d: 0x7ffeb9ce053c
    :answer_e: none of the above
    :correct: b
    :feedback_a: Not quite, the variable varN no longer equals 100 past line 7!
