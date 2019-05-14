@@ -19,7 +19,7 @@ Glossary
     ``char``
         keyword for character data type that stores a single character.
 
-     dereference
+    dereference
         follow a pointer to its referenced memory location and read the data there.
 
     ``float``

@@ -11,7 +11,7 @@ Glossary
         `cin` stands for "console input". It is the standard input statement in C++.
 
     comment
-        A comment is a programmer-readable explanation  in the source code of a computer program.
+        A comment is a programmer-readable explanation  in the source code of a computer program (``//`` single line comment, ``/**/`` Multiline comment).
 
     compiler
         A compiler generally transforms code written in a high-level programming language like C++ into a low-level programming language like machine code in order to create an executable program.
