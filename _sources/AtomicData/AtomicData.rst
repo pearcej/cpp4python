@@ -648,17 +648,19 @@ about a "segmentation fault". Although such an error message looks bad,
 a "seg fault" is in fact a helpful error because unlike the elusive logical
 errors, the reason is fairly localized.
 
-The NULL pointer
+The null pointer
 ^^^^^^^^^^^^^^^^
 
-Like ``None`` in Python, the ``NULL`` pointer in C++ points to
-nothing and is often denoted by the keyword ``NULL`` (all caps) or by 0.
-The NULL pointer is often used in conditions and/or in logical operations.
+Like ``None`` in Python, the null pointer (``nullptr``) in C++ points to
+nothing.  Older editions of C++ also used ``NULL`` (all caps) or 0,
+but we will use the keyword ``nullptr`` because the compiler can do
+better error handling with the keyword.  The null pointer is often used
+in conditions and/or in logical operations.
 
-The following example demonstrates how the NULL pointer works.
+The following example demonstrates how the null pointer works.
 The variable ptrx initially has the address of x when it is declared.
-On the first iteration of the loop, it is assigned the value of ``NULL`` (i.e. 0)
-thereby ending the loop:
+On the first iteration of the loop, it is assigned the value of
+``nullptr``, which evaluates to a false value; thereby ending the loop:
 
 .. _lst_cppcode2:
 
@@ -674,13 +676,13 @@ thereby ending the loop:
 
             while (ptrx) {
                 cout << "Pointer ptrx points to " << &ptrx << endl;
-                ptrx = NULL;
+                ptrx = nullptr;
             }
 
             cout << "Pointer ptrx points to nothing!\n";
         }
 
-Helpful Tip: The NULL pointer becomes very useful when you must test
+Helpful Tip: The null pointer becomes very useful when you must test
 the state of a pointer, such as whether the assignment to an address
 is valid or not.
 
