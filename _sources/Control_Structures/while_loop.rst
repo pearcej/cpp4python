@@ -1,6 +1,6 @@
 While Loops
 ============
- As we noted earlier, algorithms require two important control
+As we noted earlier, algorithms require two important control
 structures: iteration and selection. Both of these are supported by
 Python in various forms. The programmer can choose the statement that is
 most useful for the given circumstance.
@@ -70,3 +70,30 @@ Here are some of the logical operators that are useful for true-false boolean st
 
 
 These are the same as we saw in earlier chapters. 
+
+
+
+::
+
+    #include <iostream>
+    using namespace std;
+
+    int main(){
+     int counter = 0;
+     while (counter <= 1) {        
+      cout << "Hello, world"<< counter << endl;
+    };
+
+
+.. mchoice:: mc_whileloop
+  :answer_a: Infinitely cout "0"
+  :answer_b: cout "Hello world" 1 time
+  :answer_c: Infinitely cout "Hello world"
+  :answer_d: None of the  above.
+  :correct: c
+  :feedback_a: Take a look at the cout line. 
+  :feedback_b: Take a closer look at the while loop
+  :feedback_c: Right! because counter is never greater than one, thus making the while loop infinite.
+  :feedback_d: Not quite, take another look.
+
+  Using the code above please select the answer that should appear.

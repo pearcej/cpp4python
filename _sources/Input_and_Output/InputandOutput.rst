@@ -22,15 +22,15 @@ A function that is associated with a certain type of object is called a **member
 ::
 
     // Use cout's member function "set flags", called setf
-    // The arguement here means to use a fixed point rather than scientific notation
+    // The argument here means to use a fixed point rather than scientific notation
     cout.setf(ios::fixed);
 
     // Use cout's setf function again, but this time
-    // The arguement tells cout to show the decimal point
+    // The argument tells cout to show the decimal point
     cout.setf(ios::showpoint);
 
     // Use cout's member function, called Precision
-    // The arguement indicated to display 2 digits of precision
+    // The argument indicated to display 2 digits of precision
     cout.precision(2);
 
 File Operations
@@ -121,8 +121,8 @@ For example, execution of the following statement will write the number 25, a sp
 
 ::
 
-    out_stream << 25 << ' ';
-    out_stream << 15 << ' ';
+    out_stream << 25 << endl;
+    out_stream << 15 << endl;
 
 The extra space after the value 25 is important because data in a text file is typically seperated by a space, tab, or newline. Without the space, the value 2515 will be placed in the file, and subsequent read operations on that file would consider 2515 as a single value. For example, suppose that after the previous statement, the program opens the same file with the input stream in_stream. The following statement would put the number 25 into the variable ``inputn``.
 
@@ -181,6 +181,20 @@ The ``while`` loop to scan through a file is located in the ``make_neat(...)`` f
 
 The input file ``rawdata.txt`` must be in the same directory (folder) as the program in order for it to open successfully. The program will create a file called "neat.dat" to output the results.
 
+.. mchoice:: eofFirst
+    :multiple_answers:
+    :answer_a: To keep a program from writing into other files.
+    :answer_b: To keep a program from stopping.
+    :answer_c: To make sure you do not overflow into temporary buffer.
+    :answer_d: To stop an input files stream.
+    :correct: a,c,d
+    :feedback_a: Yes, EOFs are intended to prevent the program from overwriting a file.
+    :feedback_b: Not quite, the point of EOFs is to do the opposite.
+    :feedback_c: Yes, EOFs prevent overflow into temporary buffer.
+    :feedback_d: Yes, EOFs stop input file streams. 
+
+    What are good use cases for EOFs in C++ programming?
+    
 Passing Streams as Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -289,8 +303,8 @@ Check Yourself
 
       out_stream.open("anotherFile.txt");
       out_stream << 25;
-      out_stream << 15 << ' ';
-      out_stream << 101 << ' ';
+      out_stream << 15 << endl;
+      out_stream << 101 << endl;
 
       in_stream.open("anotherFile.txt");
       in_stream >> inputn;
