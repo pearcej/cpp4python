@@ -1,5 +1,6 @@
 While Loops
 ============
+
 As we noted earlier, algorithms require two important control
 structures: iteration and selection. Both of these are supported by
 Python in various forms. The programmer can choose the statement that is
