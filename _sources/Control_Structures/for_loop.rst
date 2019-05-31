@@ -1,6 +1,7 @@
 For Loops
 =========
-Even though while type of construct is very useful in a wide variety of
+
+Even though the ``while`` type of construct is very useful in a wide variety of
 situations, another iterative structure, the ``for`` statement, can be
 used to iterate across a range of values easily. However, you must first find
 the length of your container. For vectors, you can simply call the ``.length()`` function.
@@ -45,7 +46,7 @@ The above loop assigns the variable ``index`` to be each successive value from 0
  Then, the value at that index in the array is printed to the console.
 
 A common use of the ``for`` statement is to implement definite iteration
-over a range of values. The statement
+over a range of values. The code
 
 .. activecode:: rangeForLoop1
    :language: cpp
@@ -61,10 +62,9 @@ over a range of values. The statement
   	return 0;
    }
 
-will perform the ``print`` function five times. The ``range`` function
-will return a range object representing the sequence 0,1,2,3,4 and each
-value will be assigned to the variable ``item``. This value is then
-squared and printed.
+will use ``cout`` five times.  The value of the variable ``i`` will
+start at 0 and go through the full sequence of values 0,1,2,3,4.  This
+value is then squared and printed.
 
 The other very useful version of this iteration structure is used to
 process each character of a string. The following code fragment iterates
@@ -78,20 +78,17 @@ of the words.
 
 
    #include <iostream>
+   #include <vector>
    #include <string>
    using namespace std;
 
     int main() {
-    	string wordList[] = {"cat", "dog", "rabbit"};
-    	int wordListSize = sizeof(wordList) / sizeof(wordList[0]);
+    	vector<string> wordList = {"cat", "dog", "rabbit"};
+    	string letterlist;
 
-    	char letterlist[wordListSize];
-    	int indx = 0;
-
-    	for (int i = 0; i < wordListSize; i++) {
-    		for (unsigned int j = 0; j < wordList[i].size(); j++) {
-    			letterlist[indx] = wordList[i][j];
-    			indx = indx + 1;
+    	for (size_t i = 0; i < wordList.size(); i++) {
+    		for (size_t j = 0; j < wordList[i].size(); j++) {
+                        letterlist.push_back(wordList[i][j]);
     		}
     	}
 

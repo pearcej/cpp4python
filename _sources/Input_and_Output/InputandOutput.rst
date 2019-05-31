@@ -227,7 +227,7 @@ This declaration creates a variable called ``filename`` that can hold a string o
 length up to ``16``-1 characters.
 The square brackets after the variable name indicate to the compiler the maximum
 number of character storage that is needed for the variable.
-A ``\0`` or ``NULL`` character terminates the C-string, wo the system know how much of
+A ``\0`` or ``NUL`` character terminates the C-string, without the system knowing how much of
 the array is actually used.
 
 

@@ -107,7 +107,7 @@ marker. Any characters that follow the // on a line are ignored.
   #include <iostream>
   using namespace std;
 
-  double squareroot(double n) { /*return type int which indicates
+  double squareroot(double n) { /*return type double which indicates
                                   that a decimal is being returned*/
   	double root = n / 2;
 
@@ -184,7 +184,7 @@ Consider the following two function definitions:
         cout << "nextVar = " << nextVar << " inputVar = " << inputVar;
     }
 
-    void callingFunction() { /*return type int which indicates
+    void callingFunction() { /*return type void which indicates
                                  that nothing is being returned*/
         int myVar = 10;
 
