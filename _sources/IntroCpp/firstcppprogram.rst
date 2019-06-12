@@ -97,6 +97,13 @@ run the program. We will look at some examples of  errors that the compiler
 catches shortly. Chances are you may create some on your own very soon too,
 but first let's talk about each of the statements in a C++ program.
 
+.. dragndrop:: interpreterdrag
+    :feedback: This is feedback.
+    :match_1: Compiler|||generally transforms code written in a high-level language into a low-level language in order to create an executable program
+    :match_2: Interpreter|||directly executes statements in a scripting language without requiring them to have been assembled into machine language
+
+    Match Compiler and Interpreter to the correct definition.
+
 
 Using headers and libraries
 ---------------------------
@@ -197,8 +204,7 @@ Without peeking, see if you can put the following code in the correct order.
 Comments in C++
 ---------------
 
-Python and C++ supports both support comments that are not processed
-by the interpreter or the compiler.
+Python and C++ both support comments that are not processed by the interpreter or compiler.
 
 Python's single line comment begins with a hash (``#``).
 In C++, the equivalent is two forward slashes (``//``)
@@ -214,7 +220,7 @@ and ending with
 
 The triple quoted docstring in Python is often used for automatically
 processing documentation.
-There is no equivalent in the C++ standard to the triple-quoted docstring in C++.
+There is no equivalent in the C++ standard to the triple-quoted docstring in Python.
 However, the symbol groups
 ``/**``
 and

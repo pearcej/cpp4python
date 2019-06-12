@@ -45,7 +45,7 @@ Why Learn C++? Why not Java or Javascript?
     - C++ influenced many programming languages such as C#, Java, and other newer versions of C, so by learning C++,
       learning these other languages becomes much easier.
     
-    - C++ is industrial strength and is very often used today for large systems by large groups of people.
+    - C++ is an industrial strength programming language and is very often used today for large systems by large groups of people.
 
     - C++ is particularly good at interacting directly with computer hardware, making execution very fast.
 
