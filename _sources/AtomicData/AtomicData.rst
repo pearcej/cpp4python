@@ -566,7 +566,7 @@ in memory:
           int *ptrN = &varN; // ptrN points to varN address
 
           cout << "varN value: " << varN << endl;
-          cout << "ptrN location: " << ptrN << endl;
+          cout << "varN location: " << ptrN << endl;
           cout << "dereference ptrN: " << *ptrN << "endl";
 
           
