@@ -162,7 +162,7 @@ Check Yourself
    :feedback_a: Not quite, try modifying the code above to test it out.
    :feedback_b: Good job!
 
-   T/F: Is is necessary to have an else statement after an if statement? (Hint: Test it out in the code above)
+   T/F: It is necessary to have an else statement after an if statement? (Hint: Test it out in the code above)
 
 switch
 ------
@@ -248,7 +248,7 @@ Check Yourself
   :answer_b: Using break
   :answer_c: Enclosing each cases with { }
   :answer_d: Setting a default case
-  :correct: c
+  :correct: b
   :feedback_a: No. This is always needed.
   :feedback_b: Good job!
   :feedback_c: No. Try again.
