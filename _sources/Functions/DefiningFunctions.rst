@@ -119,8 +119,8 @@ marker. Any characters that follow the // on a line are ignored.
   }
 
   int main() {
-  	  cout << squareroot(9) << endl;
-  	  cout << squareroot(4563) << endl;
+  	cout << squareroot(9) << endl;
+  	cout << squareroot(4563) << endl;
 
   	return 0;
   }
@@ -134,28 +134,25 @@ marker. Any characters that follow the // on a line are ignored.
         #include <iostream>
         using namespace std;
 
-        dog walk(int steps){
-        
+        void dogWalk(int steps){
             for (int step = 0; step < steps; step++){
                 cout << "dog walked "<< step << " steps!"<< endl;
-
-            };
-
             }
+        }
+
         int main() {
-        walk(11);
-        
+            dogWalk(11);
         }
 
 .. mchoice:: dog_walker
     :answer_a: void
     :answer_b: int
     :answer_c: dog
-    :answer_d: walk
-    :correct: c
-    :feedback_a: Not quite, check the value preceding the name of the function!
+    :answer_d: dogWalk
+    :correct: a
+    :feedback_a: Correct, nothing is returned!
     :feedback_b: Not quite, check the value preceding the name of the function!
-    :feedback_c: Correct! The type of the function walk is dog!
+    :feedback_c: Not quite, dog is not even a data type!
     :feedback_d: Not quite, that is the name of the function itself!
 
     What is the correct return type of the function above **int main()**?
@@ -268,7 +265,7 @@ that calls ``swap_values(...)``.
 
 For this program :ref:`Swap Inputs <lst_swap_inputs>` to reverse the order of the integers the users types in, the function ``swap_values(...)`` must be able to change the values of the arguments. Try removing one or both of the "&" 's in this code to see what happens.
 
-Analyze the two similar programs that involve parameter passing below:
+Analyze the program and answer the question that involves parameter passing below:
 
 ..  activecode:: questionexample1
     :coach:
@@ -277,52 +274,50 @@ Analyze the two similar programs that involve parameter passing below:
     #include <iostream>
     using namespace std;
 
-    int func(int &var1, int &var2){
+    void func1(int var1, int var2){
         int temp;
         temp = var1;
         var1 = var2;
         var2 = temp;
-        return 0;
+    }
+
+    void func2(int &var1, int &var2){
+        int temp;
+        temp = var1;
+        var1 = var2;
+        var2 = temp;
     }
 
     int main(){
         int num1 = 2;
         int num2 = 3;
         
-        func(num1, num2);
-        cout << num1 << ", " << num2 << endl;
-        
-        return 0;
-    }
-
-..  activecode:: questionexample2
-    :coach:
-    :language: cpp
-
-    #include <iostream>
-    using namespace std;
-
-    int func(int var1, int var2){
-        int temp;
-        temp = var1;
-        var1 = var2;
-        var2 = temp;
-        return 0;
-    }
-
-    int main(){
-        int num1 = 2;
-        int num2 = 3;
-        
-        func(num1, num2);
-        cout << num1 << ", " << num2 << endl;
-        
+        func1(num1, num2);
+        cout << "results of func1:" << endl;
+        cout << "num1: " << num1 << ", num2: " << num2 << endl;
+        func2(num1, num2);
+        cout << "results of func2:" << endl;
+        cout << "num1: " << num1 << ", num2: " << num2 << endl;
         return 0;
     }
 
 .. mchoice:: question1_1
+    :multiple_answers:
+    :answer_a: func2 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.
+    :answer_b: func1 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.
+    :answer_c: func1 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.
+    :answer_d: func2 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.
+    :correct: a, c
+    :feedback_a: Correct!
+    :feedback_b: No, func1 is simply using copies of the original variables as input because it is not using "&."
+    :feedback_c: Correct!
+    :feedback_d: No, func2 is using the direct memory references of the original variables because its input parameters are using "&."
+
+    What is the difference between **func1** and **func2**?
+
+.. mchoice:: question1_2
    :answer_a: The "&" forces variables to change in the global scope, resulting in the two variables not exclusively changing inside of the function.
-   :answer_b: The "&" references the location in memory of the two variables, resulting in the two variables switching memory references.
+   :answer_b: The "&" passes the location where the two variables are stored, resulting in the two variables switching memory references.
    :answer_c: The "&" in this function is incorrectly used, resulting in an overlapping memory reference.  
    :answer_d: None of the above
    :correct: b
