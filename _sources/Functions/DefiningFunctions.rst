@@ -360,7 +360,7 @@ because the array parameter *list[]* does not include that information):
         return (total / length);
     }
 
-Array parameters look like pass by value, but they are effectively like call by reference parameters. When they execute, the functions with these parameters do not make private copies of the arrays they are passed because doing so this could potentially be very expensive in terms of memory. Arrays can therefore always be permanently changed when passed as arguments to functions.
+Array parameters look like *pass by value*, but they are effectively similar to *pass by reference* parameters. When they execute, the functions with these parameters do not make private copies of the arrays. Instead, the reference is passed to reduce the impact on memory. Arrays can therefore always be permanently changed when passed as arguments to functions.
 
 After a call to the following function, each element in the third array argument is equal to the sum of the corresponding two elements in the first and second arguments:
 
