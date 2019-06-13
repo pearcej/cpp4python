@@ -130,7 +130,6 @@ marker. Any characters that follow the // on a line are ignored.
     Take a look at the code below:
 
     ::
-
         #include <iostream>
         using namespace std;
 
@@ -142,6 +141,8 @@ marker. Any characters that follow the // on a line are ignored.
 
         int main() {
             dogWalk(11);
+            
+            return 0;
         }
 
 .. mchoice:: dog_walker
@@ -313,7 +314,7 @@ Analyze the program and answer the question that involves parameter passing belo
     :feedback_c: Correct!
     :feedback_d: No, func2 is using the direct memory references of the original variables because its input parameters are using "&."
 
-    What is the difference between **func1** and **func2**?
+    What is the difference between **func1** and **func2**? Check all that apply.
 
 .. mchoice:: question1_2
    :answer_a: The "&" forces variables to change in the global scope, resulting in the two variables not exclusively changing inside of the function.
