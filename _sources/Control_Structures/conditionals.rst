@@ -52,7 +52,8 @@ In C++ this is written as:
         statement1
         statement2
         ...
-    } else {
+    } 
+    else {
         statement1
         statement2
         ...
@@ -97,27 +98,31 @@ In C++ we have a couple of ways to write this
 
     int main() {
 
-      int grade = 85;
+        int grade = 85;
 
-      if (grade < 60) {
+        if (grade < 60) {
           cout<<'F'<< endl;
-      } else {      /* if, elif, and else statement can be used
+        } 
+        else {      /* if, elif, and else statement can be used
                         inside of themselves to allow for sub options */
-          if (grade < 70) {
-              cout<<'D'<< endl;
-          } else {
-              if (grade < 80) {
-                  cout<<'C'<< endl;
-              } else {
-                  if (grade < 90) {
-                      cout<<'B'<< endl;
-                  } else {
-                      cout<<'A'<< endl;
-                  }
-              }
-           }
-      }
-      return 0;
+            if (grade < 70) {
+                cout<<'D'<< endl;
+            } 
+            else {
+                if (grade < 80) {
+                    cout<<'C'<< endl;
+                } 
+                else {
+                    if (grade < 90) {
+                        cout<<'B'<< endl;
+                    } 
+                    else {
+                        cout<<'A'<< endl;
+                    }
+                }
+            }
+        }
+        return 0;
     }
 
 
@@ -137,19 +142,23 @@ away with the following.
 
     int main() {
 
-      int grade = 85;
+        int grade = 85;
 
-      if (grade < 60) {
-          cout<<'F'<<endl;
-      } else if (grade < 70) {
-          cout<<'D'<<endl;
-      } else if (grade < 80) {
-          cout<<'C'<<endl;
-      } else if (grade < 90) {
-          cout<<'B'<<endl;
-      } else  cout<<'A'<<endl;
+        if (grade < 60) {
+            cout<<'F'<<endl;
+        } 
+        else if (grade < 70) {
+            cout<<'D'<<endl;
+        } 
+        else if (grade < 80) {
+            cout<<'C'<<endl;
+        } 
+        else if (grade < 90) {
+            cout<<'B'<<endl;
+        } 
+        else  cout<<'A'<<endl;
 
-      return 0;
+        return 0;
     }
 
 Check Yourself
@@ -162,7 +171,7 @@ Check Yourself
    :feedback_a: Not quite, try modifying the code above to test it out.
    :feedback_b: Good job!
 
-   T/F: Is is necessary to have an else statement after an if statement? (Hint: Test it out in the code above)
+   T/F: It is necessary to have an else statement after an if statement? (Hint: Test it out in the code above)
 
 switch
 ------
@@ -186,29 +195,29 @@ program using a switch statement we would use the following:
 
     int main() {
 
-      int grade = 85;
+        int grade = 85;
 
-      int tempgrade = grade/10;
-      switch(tempgrade) {  /*switch cases allow for different options based on
-                           the value of temp grade similar to if statements*/
-      case 10:
-      case 9:
-          cout << "The grade is A" << endl;
-          break;
-      case 8:
-          cout << "The grade is B" << endl;
-          break;
-      case 7:
-          cout << "The grade is C" << endl;
-          break;
-      case 6:
-          cout << "The grade is D" << endl;
-          break;
-      default:
-          cout << "The grade is F" << endl;
-      }
+        int tempgrade = grade/10;
+        switch(tempgrade) {  /*switch cases allow for different options based on
+                            the value of temp grade similar to if statements*/
+        case 10:
+        case 9:
+            cout << "The grade is A" << endl;
+            break;
+        case 8:
+            cout << "The grade is B" << endl;
+            break;
+        case 7:
+            cout << "The grade is C" << endl;
+            break;
+        case 6:
+            cout << "The grade is D" << endl;
+            break;
+        default:
+            cout << "The grade is F" << endl;
+        }
 
-      return 0;
+        return 0;
     }
 
 Frankly, the ``switch`` statement is not used very often.
@@ -248,7 +257,7 @@ Check Yourself
   :answer_b: Using break
   :answer_c: Enclosing each cases with { }
   :answer_d: Setting a default case
-  :correct: c
+  :correct: b
   :feedback_a: No. This is always needed.
   :feedback_b: Good job!
   :feedback_c: No. Try again.

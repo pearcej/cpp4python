@@ -119,8 +119,8 @@ marker. Any characters that follow the // on a line are ignored.
   }
 
   int main() {
-  	  cout << squareroot(9) << endl;
-  	  cout << squareroot(4563) << endl;
+  	cout << squareroot(9) << endl;
+  	cout << squareroot(4563) << endl;
 
   	return 0;
   }
@@ -130,32 +130,30 @@ marker. Any characters that follow the // on a line are ignored.
     Take a look at the code below:
 
     ::
-
         #include <iostream>
         using namespace std;
 
-        dog walk(int steps){
-        
+        void dogWalk(int steps){
             for (int step = 0; step < steps; step++){
                 cout << "dog walked "<< step << " steps!"<< endl;
-
-            };
-
             }
+        }
+
         int main() {
-        walk(11);
-        
+            dogWalk(11);
+            
+            return 0;
         }
 
 .. mchoice:: dog_walker
     :answer_a: void
     :answer_b: int
     :answer_c: dog
-    :answer_d: walk
-    :correct: c
-    :feedback_a: Not quite, check the value preceding the name of the function!
+    :answer_d: dogWalk
+    :correct: a
+    :feedback_a: Correct, nothing is returned!
     :feedback_b: Not quite, check the value preceding the name of the function!
-    :feedback_c: Correct! The type of the function walk is dog!
+    :feedback_c: Not quite, dog is not even a data type!
     :feedback_d: Not quite, that is the name of the function itself!
 
     What is the correct return type of the function above **int main()**?
@@ -268,6 +266,69 @@ that calls ``swap_values(...)``.
 
 For this program :ref:`Swap Inputs <lst_swap_inputs>` to reverse the order of the integers the users types in, the function ``swap_values(...)`` must be able to change the values of the arguments. Try removing one or both of the "&" 's in this code to see what happens.
 
+Analyze the program and answer the question that involves parameter passing below:
+
+..  activecode:: questionexample1
+    :coach:
+    :language: cpp
+
+    #include <iostream>
+    using namespace std;
+
+    void func1(int var1, int var2){
+        int temp;
+        temp = var1;
+        var1 = var2;
+        var2 = temp;
+    }
+
+    void func2(int &var1, int &var2){
+        int temp;
+        temp = var1;
+        var1 = var2;
+        var2 = temp;
+    }
+
+    int main(){
+        int num1 = 2;
+        int num2 = 3;
+        
+        func1(num1, num2);
+        cout << "results of func1:" << endl;
+        cout << "num1: " << num1 << ", num2: " << num2 << endl;
+        func2(num1, num2);
+        cout << "results of func2:" << endl;
+        cout << "num1: " << num1 << ", num2: " << num2 << endl;
+        return 0;
+    }
+
+.. mchoice:: question1_1
+    :multiple_answers:
+    :answer_a: func2 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.
+    :answer_b: func1 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.
+    :answer_c: func1 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.
+    :answer_d: func2 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.
+    :correct: a, c
+    :feedback_a: Correct!
+    :feedback_b: No, func1 is simply using copies of the original variables as input because it is not using "&."
+    :feedback_c: Correct!
+    :feedback_d: No, func2 is using the direct memory references of the original variables because its input parameters are using "&."
+
+    What is the difference between **func1** and **func2**? Check all that apply.
+
+.. mchoice:: question1_2
+   :answer_a: The "&" forces variables to change in the global scope, resulting in the two variables not exclusively changing inside of the function.
+   :answer_b: The "&" passes the location where the two variables are stored, resulting in the two variables switching memory references.
+   :answer_c: The "&" in this function is incorrectly used, resulting in an overlapping memory reference.  
+   :answer_d: None of the above
+   :correct: b
+   :feedback_a: No, "&" has nothing to do with altering integers in the global scope.
+   :feedback_b: Correct!
+   :feedback_c: No, the use of "&" here is correct. Read over the active code 4 example earlier in the section.
+   :feedback_d: No, one of the above is definitely true.
+
+   Why does adding the "&" to parameters in the **func** function cause the output to be a different result?
+
 -----------------------------------------------------------------
 
 Arrays as Parameters in Functions
@@ -299,7 +360,7 @@ because the array parameter *list[]* does not include that information):
         return (total / length);
     }
 
-Array parameters look like pass by value, but they are effectively like call by reference parameters. When they execute, the functions with these parameters do not make private copies of the arrays they are passed because doing so this could potentially be very expensive in terms of memory. Arrays can therefore always be permanently changed when passed as arguments to functions.
+Array parameters look like *pass by value*, but they are effectively similar to *pass by reference* parameters. When they execute, the functions with these parameters do not make private copies of the arrays. Instead, the reference is passed to reduce the impact on memory. Arrays can therefore always be permanently changed when passed as arguments to functions.
 
 After a call to the following function, each element in the third array argument is equal to the sum of the corresponding two elements in the first and second arguments:
 
