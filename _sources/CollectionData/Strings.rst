@@ -21,6 +21,19 @@ In older versions of C++, you must use a ``char`` array to work with filenames. 
 C++ (from C++11 onward), however, you can use a C++ string for everything.
 Since C++ strings are so much nicer and similar to Python strings, I would not recommend using C-strings.
 
+.. mchoice:: cstringquestion1_1
+    :answer_a: An array of characters that ends with a terminating null character. i.e. \0
+    :answer_b: A sequential data structure consisting of zero or more characters
+    :answer_c: A data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.
+    :answer_d: sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.
+    :correct: a
+    :feedback_a: Correct! a c-string is different from a string
+    :feedback_b: Close, but that is the definition of a string, not a c-string
+    :feedback_c: Sorry, thats not a string or a c-string
+    :feedback_d: No, that's a vector
+
+    What is the correct definition of c-strings?
+
 Because strings are sequences, all of the typical sequence operations work as you would expect.
 In addition, the string library offers a huge number of
 methods, some of the most useful of which are shown in :ref:`Table 4<tab_stringmethods>`.

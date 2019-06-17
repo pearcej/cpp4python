@@ -87,14 +87,15 @@ in the code below:
     int main() {
         // Get input from the user
     	float firstNum=10;
-      float secondNum=0;
+        float secondNum=0;
 
     	try {
     		// Attempt to divide the two numbers
     		double result = div(firstNum, secondNum);
     		cout << "result of division: " << result << endl;
 
-    	} catch (const char *err) {
+    	} 
+        catch (const char *err) {
     		// If an error is thrown, print it
     		cout << err;
     	}
@@ -154,16 +155,18 @@ the user for a filename and can catch if that file does not exist or the default
         try {
             // Tries to print the file
             printFile(filename);
-        } catch (const char *msg) {
+        } 
+        catch (const char *msg) {
             // Runs if error is thrown
-            cerr << msg << endl;
+            cerr << msg << endl; //cerr is used to output errors similar to cout.
 
             // Uses default file to print instead
             try {
                 char defaultFile[32] = "file.txt";
                 printFile(defaultFile);
-            } catch (const char *msg) {
-                cerr << "Default file not found!" << endl;
+            } 
+            catch (const char *msg) {
+                cerr << "Default file not found!" << endl; //cerr is used to output errors similar to cout.
             }
         }
 
@@ -191,7 +194,7 @@ Check Yourself
 ~~~~~~~~~~~~~~
 
 .. clickablearea:: syntax_error
-    :question: There are two errors in the following code. Click on the syntax error.
+    :question: Click on the syntax error.
     :iscode:
     :feedback: Remember, syntax errors occur more for people learning a new language.
 
@@ -205,7 +208,7 @@ Check Yourself
     }
 
 .. clickablearea:: logic_error
-    :question: There are two errors in the following code. Click on the logic error.
+    :question: Click on the logic error.
     :iscode:
     :feedback: If we want the code to say when we can vote, what cases should it say when can and cannot?
 

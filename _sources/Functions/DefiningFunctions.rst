@@ -299,6 +299,7 @@ Analyze the program and answer the question that involves parameter passing belo
         func2(num1, num2);
         cout << "results of func2:" << endl;
         cout << "num1: " << num1 << ", num2: " << num2 << endl;
+        
         return 0;
     }
 
@@ -356,7 +357,7 @@ because the array parameter *list[]* does not include that information):
         int count;
         for( count = 0; count < length; count++ ) {
             total += double(list[count]);
-            };
+        };
         return (total / length);
     }
 

@@ -78,6 +78,22 @@ To close the file for ``out_stream``, we use its ``close()`` function, which als
 
     out_stream.close();
 
+Answer the question below concerning the use of the ``fstream`` library:
+
+.. mchoice:: stream_library
+   :answer_a: Yes, ofstream is required to edit the file.
+   :answer_b: Yes, using ifstream will wipe the file clean without using ofstream first.
+   :answer_c: No, using ofstream on a file that already has information on it will clear the entire file.
+   :answer_d: No, ofstream is exclusively used for reading files.
+   :correct: c
+   :feedback_a: Wrong! Even though it is required for editing files, using ofstream first will cause problems when it opens a file that has previous work saved on it.
+   :feedback_b: Wrong! ifstream is only used to read files, therefore it will never edit the contents of one.
+   :feedback_c: Correct!
+   :feedback_d: Wrong! ifstream is used to read files instead.
+
+   Say you wanted to add some text to a file that already has important information on it. 
+   Would it be a good idea to first use ``ofstream`` to open the file?
+
 Dealing with I/O Failures
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -238,7 +254,7 @@ the array is actually used.
 **C-strings** are an older type of string that was inherited from the C language, and people frequently refer to both types as "strings", which can be confusing.
 
 Typically, `string` from the ``<string>`` library should be used in all other cases when not
-working with file names or when a modern version of C+++ can be used.
+working with file names or when a modern version of C++ can be used.
 
 Putting it all Together
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -255,7 +271,7 @@ The following program combines all of the elements above and asks the user for t
 Summary
 ~~~~~~~
 
-1. File handling in C++ uses ``stream`` similar to cout and cin in ``<iosteam>`` library but is ``<fsream>`` for file stream.
+1. File handling in C++ uses ``stream`` similar to cout and cin in ``<iosteam>`` library but is ``<fstream>`` for file stream.
 
 2. ``ifstream in_stream`` creates an input stream object, in_stream, that can be used to input text from a file to C++.
 
@@ -297,19 +313,26 @@ Check Yourself
   Fill in the blank with the value of ``inputn`` when the following code runs.
   ::
 
-      ifstream in_stream;
-      ofstream out_stream;
-      int inputn;
+      #include <fstream>
+      #include <cstdlib>
+      #include <iostream>
+      using namespace std;
+      
+      main(){
+        ifstream in_stream;
+        ofstream out_stream;
+        int inputn;
 
-      out_stream.open("anotherFile.txt");
-      out_stream << 25;
-      out_stream << 15 << endl;
-      out_stream << 101 << endl;
+        out_stream.open("anotherFile.txt");
+        out_stream << 25;
+        out_stream << 15 << endl;
+        out_stream << 101 << endl;
 
-      in_stream.open("anotherFile.txt");
-      in_stream >> inputn;
-      cout << inputn;
-      in_stream >> inputn;
+        in_stream.open("anotherFile.txt");
+        in_stream >> inputn;
+        cout << inputn;
+        in_stream >> inputn;
+      }
 
   - :101: That is the correct answer! Good job!
     :25: No. Hint: ``inputn`` is changed twice.

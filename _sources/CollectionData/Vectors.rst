@@ -161,7 +161,8 @@ we will likely not be surprised by the following:
             }
 
             for (int i=0; i<=10; i++){
-                cout << "intvector[" << i << "]="<<intvector[i] << endl;
+                cout << "intvector[" << i << "]="
+                <<intvector[i] << endl;
             }
 
             return 0;
@@ -190,7 +191,7 @@ we will likely not be surprised by the following:
    :answer_c: Vectors don't use contiguous memory, so elements can be inserted.
    :answer_d: more than one of the above
    :answer_e: none of the above
-   :correct: b
+   :correct: a
    :feedback_a: Right! Good job!
    :feedback_b: Not all of the protections of lists are offered by vectors; one can still iterate off of either end.
    :feedback_c: No. Although elements can be inserted in vectors, they do require contiguous memory.
