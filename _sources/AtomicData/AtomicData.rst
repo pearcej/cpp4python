@@ -620,7 +620,7 @@ and had the following instructions instead?
              cout << "varN value: " << varN << endl;
              cout << "ptrN location: " << ptrN << endl;
              cout << "ptrN points to varN: " << endl;
-             cout << "dereference ptrN: " << *ptrN << "endl";
+             cout << "dereference ptrN: " << *ptrN << endl;
 
              return 0;
         }
