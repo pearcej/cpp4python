@@ -567,7 +567,7 @@ in memory:
 
           cout << "varN value: " << varN << endl;
           cout << "varN location: " << ptrN << endl;
-          cout << "dereference ptrN: " << *ptrN << "endl";
+          cout << "dereference ptrN: " << *ptrN << endl;
 
           
           return 0;
