@@ -54,13 +54,13 @@ over a range of values. The code
    #include <iostream>
    using namespace std;
 
-   int main() {
-  	for (int i=0; i<5; i++) {
-          cout<<i*i<<endl;
-      }
+    int main() {
+        for (int i=0; i<5; i++) {
+            cout<<i*i<<endl;
+        }
 
-  	return 0;
-   }
+        return 0;
+    }
 
 will use ``cout`` five times.  The value of the variable ``i`` will
 start at 0 and go through the full sequence of values 0,1,2,3,4.  This
@@ -111,8 +111,6 @@ Check yourself
 
         return 0;
     }
-
-        }
 
 .. mchoice:: mc_forloop
   :answer_a: 0, 2, 4, 6

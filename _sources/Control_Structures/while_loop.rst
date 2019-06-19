@@ -80,9 +80,10 @@ These are the same as we saw in earlier chapters.
     using namespace std;
 
     int main(){
-     int counter = 0;
-     while (counter <= 1) {        
-      cout << "Hello, world"<< counter << endl;
+        int counter = 0;
+        while (counter <= 1) {        
+            cout << "Hello, world"<< counter << endl;
+        }
     };
 
 

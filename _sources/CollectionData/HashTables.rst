@@ -106,6 +106,10 @@ the following example.
                 spnumbers = {{"one","uno"},{"two","dos"},{"three","tres"},{"four","cuatro"},{"five","cinco"}};
 
                 for (auto i=spnumbers.begin(); i!=spnumbers.end(); i++ ){
+                    //auto is used to automatically detect the data type when
+                    //a variable is declared. Use this ONLY when declaring complex
+                    //variables.
+                    
                     cout << i->first << ":";
                     cout << i->second << endl;
                 }

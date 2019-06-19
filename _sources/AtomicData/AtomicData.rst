@@ -112,7 +112,7 @@ to ensure space is used as efficiently as possible.
   :answer_b: ``5**4``
   :answer_c: ``4^5``
   :answer_d: ``pow(4, 5)``
-  :correct: e
+  :correct: d
   :feedback_a: No, ``**`` is used in Python, not C++.
   :feedback_b: No, ``**`` is used in Python, not C++, and the operators are reversed.
   :feedback_c: No. The ``^`` is a valid operator in C++, but it does something else.

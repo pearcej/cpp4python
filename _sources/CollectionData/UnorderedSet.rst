@@ -45,6 +45,39 @@ provides a summary. Examples of their use follow.
                    ``clear``                  ``aset.clear()``                                Removes all elements from the set
     ======================== ================================= ================================================================
 
+The code below is an example of a program that can detect if a specific char is in an unordered set.
+
+.. activecode:: Unordered_set_example
+    :language: cpp
+    
+    #include <iostream>
+    #include <unordered_set>
+    using namespace std;
+
+    void checker(unordered_set<char> set, char letter){
+        if(set.find(letter) == set.end()){
+            cout << "letter " << letter << " is not in the set." << endl;
+        }
+        else{
+            cout << "letter " << letter << " is in the set." << endl;
+        }
+    }
+
+    int main(){
+    unordered_set<char> charSet = {'d', 'c', 'b', 'a'};
+
+    char letter = 'e';
+    checker(charSet, letter);
+    charSet.insert('e');
+    checker(charSet, letter);
+    return 0;
+    }
+
+the ``find`` method used for a conditional in ``Checker`` compares 
+each item in the set with the given parameter until there is a match. the
+``set.find(letter) == set.end()`` section means that if ``find`` cannot
+find the ``letter`` before reaching the end of the set, then ``letter`` 
+is not contained in the set.
 
 Matching
 ========
