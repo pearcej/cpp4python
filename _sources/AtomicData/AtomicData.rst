@@ -280,7 +280,7 @@ complaining. Note what happened in the code above in the final output.
    :answer_a: Setting theBool to anything other than true or false is ignored.
    :answer_b: Setting theBool to anything > 0 will be true and false otherwise.
    :answer_c: false == 0 and true = !false i.e. anything that is not zero and can be converted to a Boolean is not false, thus it must be true.
-   :answer_d: I have no idea. It makes no sense.
+   :answer_d: None of the above.
    :correct: c
    :feedback_a: No. Try changing the code and setting theBool to 0.
    :feedback_b: No. Try changing the code and setting theBool to -4.
@@ -353,8 +353,8 @@ Try the following question.
    :correct: b
    :feedback_a: No, single quotes are only used for single characters.
    :feedback_b: Good job reading!
-   :feedback_c: No. Try again.
-   :feedback_d: No. Try again.
+   :feedback_c: No. Only one set of symbols may be used.
+   :feedback_d: No. The implementation is consistent.
    :feedback_e: One of the above is indeed correct.
 
    If I want to create a string in C++, what set of symbols may be used?
@@ -720,8 +720,8 @@ Check Yourself
    :correct: a
    :feedback_a: Right!
    :feedback_b: No. Double quotes are only used for strings.
-   :feedback_c: No. Try again.
-   :feedback_d: No. Try again.
+   :feedback_c: No. Only one set of symbols may be used.
+   :feedback_d: No. The implementation is consistent.
    :feedback_e: One of the above is indeed correct.
 
    If I want to use the ``char`` type in C++, what set of symbols must be used?
