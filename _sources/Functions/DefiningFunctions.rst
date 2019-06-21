@@ -125,25 +125,23 @@ marker. Any characters that follow the // on a line are ignored.
   	return 0;
   }
 
-.. admonition:: Self Check
+.. activecode:: dogwalk
+    :language: cpp
 
-    Take a look at the code below:
+    #include <iostream>
+    using namespace std;
 
-    ::
-        #include <iostream>
-        using namespace std;
-
-        void dogWalk(int steps){
-            for (int step = 0; step < steps; step++){
-                cout << "dog walked "<< step << " steps!"<< endl;
-            }
+    void dogWalk(int steps){
+        for (int step = 0; step < steps; step++){
+            cout << "dog walked "<< step << " steps!"<< endl;
         }
+    }
 
-        int main() {
-            dogWalk(11);
-            
-            return 0;
-        }
+    int main() {
+        dogWalk(11);
+        
+        return 0;
+    }
 
 .. mchoice:: dog_walker
     :answer_a: void

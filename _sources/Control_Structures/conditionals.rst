@@ -254,7 +254,7 @@ Check Yourself
 
 .. mchoice:: mc_cpp_switch
   :answer_a: Ending statements with ;
-  :answer_b: Using break
+  :answer_b: Using a break statement
   :answer_c: Enclosing each cases with { }
   :answer_d: Setting a default case
   :correct: b
