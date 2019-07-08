@@ -70,6 +70,7 @@ simple example in both Python and C++.
 .. activecode:: pyelif
     :language: python
 
+    # demonstrates if,elif, and else statements in python
     def main():
         grade = 85
 
@@ -93,6 +94,7 @@ In C++ we have a couple of ways to write this
    :language: cpp
    :sourcefile: elseif.cpp
 
+    // Shows how to use conditional statements
     #include <iostream>
     using namespace std;
 
@@ -137,6 +139,8 @@ away with the following.
    :language: cpp
    :sourcefile: elseif2.cpp
 
+    //Shows how to put conditional statements together,
+    //specfically putting "else if" after an "if" statement.
     #include <iostream>
     using namespace std;
 
@@ -189,6 +193,8 @@ program using a switch statement we would use the following:
 .. activecode:: cppswitch
    :language: cpp
    :sourcefile: switchup.cpp
+
+    // Shows how to use a Switch statement.
 
     #include <iostream>
     using namespace std;
