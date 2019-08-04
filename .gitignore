@@ -3,6 +3,9 @@ build_info
 *.pyc
 __pycache__/
 build/*
+published
 .idea/*
 source/doctrees/*
 *~
+sphinx-enki-info.txt
+sphinx_settings.json

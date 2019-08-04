@@ -7,6 +7,8 @@ import os.path
 import sys
 from socket import gethostname
 import pkg_resources
+from runestone import get_master_url
+
 
 sys.path.append(getcwd())
 sys.path.append('../modules')
@@ -23,21 +25,18 @@ project_name = "cpp4python"
 ###############################
 
 master_url = None
-doctrees = None
-if master_url is None:
-    if gethostname() in ['runestone.academy', 'runestone-deploy', 'rsbuilder']:
-        master_url = 'https://runestone.academy'
-        if os.path.exists('../../custom_courses/{}'.format(project_name)):
-            doctrees = '../../custom_courses/{}/doctrees'.format(project_name)
-        else:
-            doctrees = './build/{}/doctrees'.format(project_name)
-    else:
-        master_url = 'http://127.0.0.1:8000'
-        doctrees = './build/{}/doctrees'.format(project_name)
+if not master_url:
+    master_url = get_master_url()
 
 master_app = 'runestone'
 serving_dir = "./build/cpp4python"
-dest = "../../static"
+dynamic_pages = True
+if dynamic_pages:
+    dest = './published'
+else:
+    dest = "../../static"
+
+doctrees = './build/{}/doctrees'.format(project_name)
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -52,6 +51,9 @@ options(
         template_args = {
             'course_id':project_name,
             'login_required':'false',
+            'course_title': project_name,
+            'default_ac_lang': 'cpp',
+            'dynamic_pages': dynamic_pages,
             'appname':master_app,
             'loglevel':10,
             'course_url':master_url,
@@ -59,9 +61,12 @@ options(
             'python3': 'true',
             'dburl': 'postgresql://bmiller@localhost/runestone',
             'basecourse': 'cpp4python',
-            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
-            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
-            'proxy_uri_files': '/jobe/index.php/restapi/files/'
+            'downloads_enabled': 'false',
+            'enable_chatcodes': 'false',
+            'allow_pairs': 'false',
+#            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
+#            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
+#            'proxy_uri_files': '/jobe/index.php/restapi/files/'
         }
 
     )
