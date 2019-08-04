@@ -59,9 +59,9 @@ options(
             'python3': 'true',
             'dburl': 'postgresql://bmiller@localhost/runestone',
             'basecourse': 'cpp4python',
-            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
-            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
-            'proxy_uri_files': '/jobe/index.php/restapi/files/'
+#            'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
+#            'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
+#            'proxy_uri_files': '/jobe/index.php/restapi/files/'
         }
 
     )
