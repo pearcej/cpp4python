@@ -50,6 +50,8 @@ The code below is an example of a program that can detect if a specific char is 
 .. activecode:: Unordered_set_example
     :language: cpp
     
+    // Function that checks to see if a char 
+    // is in the unorderd set
     #include <iostream>
     #include <unordered_set>
     using namespace std;

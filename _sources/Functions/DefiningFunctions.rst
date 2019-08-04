@@ -22,7 +22,8 @@ value you pass into it.
     #include <iostream>
     using namespace std;
 
-    int timesTwo(int num) {
+    // function that multiplies a number by 2
+        int timesTwo(int num) {
         /* return type int which indicates
            that an integer is being returned */
         return num*2;
@@ -58,6 +59,8 @@ Let us look at a similar function.
     #include <iostream>
     using namespace std;
 
+    // function that multiplies a number by 2
+    // except it does not anything it only outputs to the console
     void timesTwoVoid(int num) {
       /* return type void which indicates
          that an nothing is being returned */
@@ -104,6 +107,7 @@ marker. Any characters that follow the // on a line are ignored.
   :language: cpp
   :caption: Newton's Method for finding Square Root
 
+  // returns the square root of a number as a double
   #include <iostream>
   using namespace std;
 
@@ -128,6 +132,7 @@ marker. Any characters that follow the // on a line are ignored.
 .. activecode:: dogwalk
     :language: cpp
 
+    // function that retuns outputs number of steps wallked 
     #include <iostream>
     using namespace std;
 
@@ -270,6 +275,8 @@ Analyze the program and answer the question that involves parameter passing belo
     :coach:
     :language: cpp
 
+    // demonstrates the difference between pass-by-value
+    // and pass-by-reference functions. 
     #include <iostream>
     using namespace std;
 
@@ -412,6 +419,8 @@ same task.
         :caption: function overloading in C++
         :language: cpp
 
+        // demonstrates how function overloading works
+        // by changing the parameters on the inputs.
         #include <iostream>
         using namespace std;
 
@@ -439,6 +448,7 @@ same task.
     .. activecode:: foverload_py
         :caption: Function Overloading in Python
 
+        """Demonstrates the use of multiple parameters using a single function"""
         def myfunct(n, m=None):
             if m is None:
                 print("1 parameter: " + str(n))

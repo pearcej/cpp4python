@@ -72,6 +72,9 @@ in the code below:
     :caption: Error Handling for Division
     :language: cpp
 
+    // Shows exception handling using try,throw,
+    // and catch in order to output 
+    // an error message to the console 
     #include <iostream>
     using namespace std;
 

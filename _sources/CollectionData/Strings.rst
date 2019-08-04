@@ -84,6 +84,8 @@ Matching
         :caption: Strings in C++
         :language: cpp
 
+        // This function concatenates the string hello World
+        // Then it says where World begins in the concatenated string
         #include <iostream>
         #include <string>
         using namespace std;
@@ -108,6 +110,7 @@ Matching
     .. activecode:: introstring_py
         :caption: Python strings
 
+        """This does the same thing as the C++ function """
         def main():
             mystring1 = "Hello"
             mystring2 = "World!"
