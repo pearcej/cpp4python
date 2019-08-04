@@ -10,6 +10,7 @@
 
 import sys, os
 from runestone import runestone_static_dirs, runestone_extensions
+import pkg_resources
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -26,7 +27,7 @@ sys.path.insert(0, os.path.abspath('../../modules'))
 
 extensions = ['sphinx.ext.mathjax'] + runestone_extensions()
 
-templates_path = ['./_sources/_templates']
+templates_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates')]
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -101,7 +102,7 @@ html_theme_options = {
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Chapters",
-     
+
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
     'globaltoc_depth': 1,
@@ -126,7 +127,7 @@ html_theme_options = {
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
     'source_link_position': "nav",
-    
+
     # Bootswatch (http://bootswatch.com/) theme.
     #
     # Options are nothing with "" (default) or the name of a valid theme
@@ -139,7 +140,7 @@ html_theme_options = {
 #html_style = "style.css"
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["./_sources/_templates/plugin_layouts"]
+html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates/plugin_layouts')]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
