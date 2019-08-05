@@ -49,7 +49,7 @@ The code below is an example of a program that can detect if a specific char is 
 
 .. activecode:: Unordered_set_example
     :language: cpp
-    
+
     #include <iostream>
     #include <unordered_set>
     using namespace std;
@@ -73,10 +73,10 @@ The code below is an example of a program that can detect if a specific char is 
     return 0;
     }
 
-the ``find`` method used for a conditional in ``Checker`` compares 
+the ``find`` method used for a conditional in ``Checker`` compares
 each item in the set with the given parameter until there is a match. the
 ``set.find(letter) == set.end()`` section means that if ``find`` cannot
-find the ``letter`` before reaching the end of the set, then ``letter`` 
+find the ``letter`` before reaching the end of the set, then ``letter``
 is not contained in the set.
 
 Matching
@@ -89,8 +89,8 @@ Matching
    :match_4: add|||Adds item to the set.
    :match_5: remove|||erases item from the set.
    :match_6: clear|||Removes all elements from the set.
-   
-    Match the Unordered Sets operations with their corresponding explination. 
+
+    Match the Unordered Sets operations with their corresponding explination.
 
 
 Summary
@@ -133,6 +133,6 @@ Check Yourself
    :match_1: Array|||{“What”, “am”, “I”, "am"}
    :match_2: Set|||{“What”, “am”, “I”}
    :match_3: String|||“What am I”
-   :match_4: Hash Table|||{{“What”, “am I”}}
+   :match_4: Hash Table|||{​{“What”, “am I”}​}
 
    Drag each data type to its' corresponding C++ initialization syntax.
