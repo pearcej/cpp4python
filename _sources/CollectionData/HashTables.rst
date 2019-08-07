@@ -48,7 +48,7 @@ associated value.
             int main() {
                 unordered_map<string, string> spnumbers;
 
-                spnumbers = {{"one", "uno"}, {"two", "dos"}};
+                spnumbers = { {"one", "uno"}, {"two", "dos"} };
 
                 spnumbers["three"] = "tres";
                 spnumbers["four"] = "cuatro";
@@ -103,13 +103,13 @@ the following example.
             int main() {
                 unordered_map<string, string> spnumbers;
 
-                spnumbers = {{"one","uno"},{"two","dos"},{"three","tres"},{"four","cuatro"},{"five","cinco"}};
+                spnumbers = { {"one","uno"},{"two","dos"},{"three","tres"},{"four","cuatro"},{"five","cinco"} };
 
                 for (auto i=spnumbers.begin(); i!=spnumbers.end(); i++ ){
                     //auto is used to automatically detect the data type when
                     //a variable is declared. Use this ONLY when declaring complex
                     //variables.
-                    
+
                     cout << i->first << ":";
                     cout << i->second << endl;
                 }
@@ -157,5 +157,5 @@ Matching
    :match_3: count|||Returns true if key is in the hash table, and false otherwise.
    :match_4: begin|||An iterator to the first element in the hash table.
    :match_5: end|||An iterator pointing to past-the-end element of the hash table.
-   
-    Match the Hash Table operations with their corresponding explination. 
+
+    Match the Hash Table operations with their corresponding explination.
