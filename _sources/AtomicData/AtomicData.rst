@@ -408,7 +408,7 @@ value of 100:
    :align: center
    :alt: "arrow from varN to box containing 100 object"
 
-   Figure 4: Python reference
+   Figure 2.1: Python reference
 
 ::
 
@@ -423,7 +423,7 @@ In C++ the results of running this code will look like the diagram below:
    :align: center
    :alt: "Location named varN containing value of 100"
 
-   Figure 4: C++ variable
+   Figure 2.2: C++ variable
 
 In each case, when we want to output the value to the console, we use the variable name
 to do so.
@@ -553,7 +553,7 @@ The results of running this C++ code will look like the diagram below.
    :align: center
    :alt: image
 
-   Figure 5: FIXME2
+   Figure 2.3: View into memory with pointers
 
 Accessing Values from Pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -652,7 +652,7 @@ and had the following instructions instead?
    :align: center
    :alt: image
 
-   Figure 6: FIXME3
+   Figure 2.4: dangling pointer reference
 
 If your compiler does not catch that error (the one for this class may),
 the first ``cout`` instruction outputs
