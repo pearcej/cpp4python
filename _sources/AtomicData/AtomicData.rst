@@ -48,6 +48,7 @@ Run the following code to see that you understand each result.
         #include <cmath>
         using namespace std;
 
+        // Function that perfoms various math operations
         int main(){
 
             cout << (2+3*4) << endl;
@@ -70,6 +71,7 @@ Run the following code to see that you understand each result.
     .. activecode:: intro_1py
         :caption: Basic Arithmetic Operators Python
 
+        # Function that performs a variety of math operations.
         def main():
 
             print(2+3*4)
@@ -151,6 +153,7 @@ are actually ``1`` and ``0`` respectively. Hence, we see this in output as well.
         #include <iostream>
         using namespace std;
 
+        // function that demonstrates logical operators 
         int main() {
           cout << true << endl;
           cout << false << endl;
@@ -163,7 +166,8 @@ are actually ``1`` and ``0`` respectively. Hence, we see this in output as well.
 
         .. activecode:: logical_1py
             :caption: Logical Operators Python
-
+            
+            # Function that demonstrates logical operators.
             def main():
                 print(True)
                 print(False)
@@ -207,7 +211,8 @@ and logical operators with examples shown in the session that follows.
 
         #include <iostream>
         using namespace std;
-
+        
+        // function that demonstrates relational operators. 
         int main(){
 
             cout << (5 == 10) << endl;
@@ -221,7 +226,8 @@ and logical operators with examples shown in the session that follows.
 
     .. activecode:: logicalpy
         :caption: Basic Relational and Logical Operators Python
-
+        
+        # Function that demonstrates relational operators.
         def main():
 
             print(5 == 10)
@@ -231,7 +237,7 @@ and logical operators with examples shown in the session that follows.
         main()
 
 
-When a C++ variable is declared space in memory is set aside to hold
+When a C++ variable is declared, space in memory is set aside to hold
 this type of value.
 A C++ variable can optionally be initialized in the declaration by
 using a combination of a declaration and an assignment statement.
@@ -244,6 +250,9 @@ Consider the following session:
     #include <iostream>
     using namespace std;
 
+    //  Demonstrates how to use variables in C++
+    //  moreover, we assign an integer to a boolean variable,
+    //  showing the static typing of C++.
     int main(){
 
         int theSum = 4;
@@ -307,6 +316,7 @@ Consider the following code.
     .. activecode:: charpy
         :caption: Python strings
 
+        # Shows direct comparison of both Strings & Characters in Python
         def main():
 
             strvar = "b"
@@ -329,6 +339,8 @@ Consider the following code.
         #include <string>
         using namespace std;
 
+        // Demonstrates how chars and strings can not be 
+        // directly compared. 
         int main(){
 
             string strvar = "b";
@@ -396,7 +408,7 @@ value of 100:
    :align: center
    :alt: "arrow from varN to box containing 100 object"
 
-   Figure 4: Python reference
+   Figure 2.1: Python reference
 
 ::
 
@@ -411,7 +423,7 @@ In C++ the results of running this code will look like the diagram below:
    :align: center
    :alt: "Location named varN containing value of 100"
 
-   Figure 4: C++ variable
+   Figure 2.2: C++ variable
 
 In each case, when we want to output the value to the console, we use the variable name
 to do so.
@@ -439,10 +451,13 @@ while in C++ we use the *address-of operator*, ``&``.
         #include <iostream>
         using namespace std;
 
+
+        // outputs the value of a variable
+        // as well as the memory address in C++. 
         int main(){
             int varN = 101;
             cout << varN << endl;
-            cout << &varN << endl;
+            cout << &varN << endl; //outputs the memory address of variable varN
             return 0;
         }
 
@@ -451,10 +466,12 @@ while in C++ we use the *address-of operator*, ``&``.
     .. activecode:: address_py
         :caption: Memory identifier in Python
 
+        # Outputs the value & memory address of
+        # variable titled varN.
         def main():
             varN = 101;
             print(varN)
-            print(id(varN))
+            print(id(varN)) # ID function returns the memory address in Python.
 
         main()
 
@@ -536,13 +553,13 @@ The results of running this C++ code will look like the diagram below.
    :align: center
    :alt: image
 
-   Figure 5: FIXME2
+   Figure 2.3: View into memory with pointers
 
 Accessing Values from Pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have a C++ pointer, you use the asterisk before the pointer variable, 
-to *dereference* the pointer, which means go to the location pointed at by the address.
+to *dereference* the pointer, which means go to the location pointed at by the 3.
 
 ::
 
@@ -560,7 +577,8 @@ in memory:
 
       #include <iostream>
       using namespace std;
-
+      
+      // demonstrates what happens when you dereference a pointer 
       int main( ) {
           int varN = 100;
           int *ptrN = &varN; // ptrN points to varN address
@@ -634,7 +652,7 @@ and had the following instructions instead?
    :align: center
    :alt: image
 
-   Figure 6: FIXME3
+   Figure 2.4: dangling pointer reference
 
 If your compiler does not catch that error (the one for this class may),
 the first ``cout`` instruction outputs
@@ -676,6 +694,7 @@ On the first iteration of the loop, it is assigned the value of
         #include <iostream>
         using namespace std;
 
+        //Shows the use of a Null pointer to represent "nothing".
         int main( ) {
             int x = 12345;
             int *ptrx = &x;

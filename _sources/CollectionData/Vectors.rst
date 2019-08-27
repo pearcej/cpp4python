@@ -75,6 +75,9 @@ Matching
         :caption: Using a vector in C++
         :language: cpp
 
+        // function that uses a vector to square 
+        // every number from 0 to 49 
+        // uses the reserve operation to save space in memory
         #include <iostream>
         #include <vector>
         using namespace std;
@@ -96,6 +99,8 @@ Matching
     .. activecode:: introvector_py
         :caption: Using a Python list
 
+        """Uses a list to square every 
+        number from 0 to 49 """
         def main():
             intlist=[]
             for i in range(50):
@@ -118,6 +123,10 @@ example that follows.
     :caption: With use of ``reserve``
     :language: cpp
 
+    // function that uses a vector to square 
+    // every number from 0 to 49 
+    // and does not use reserve. 
+    // shows amount of space used  
     #include <iostream>
     #include <vector>
     using namespace std;
@@ -147,6 +156,10 @@ we will likely not be surprised by the following:
         :caption: Vectors out of bounds
         :language: cpp
 
+        // Note: counting always starts at 0 
+        // This demonstrates what happens when 
+        // accessing datat outside of your vector
+
         #include <iostream>
         #include <vector>
         using namespace std;
@@ -173,6 +186,8 @@ we will likely not be surprised by the following:
     .. activecode:: vector_errors_py
         :caption: Python list out of bounds
 
+        """Demonstrates python's protections 
+        against iterating outside of a list"""
         def main():
             intlist=[]
             for i in range(10):

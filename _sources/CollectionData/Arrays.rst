@@ -86,7 +86,7 @@ so the following are not the same.
 ::
 
     double darray[] = {1.2};  // must use index to access value
-    double ddouble = 1.2;     // can't use index to access value
+    double ddouble = 1.2;     // cannot use index to access value
 
 
 **Be Cautious with Arrays**
@@ -107,6 +107,8 @@ Here are examples of iteration.
         :caption: Iterating an array in C++
         :language: cpp
 
+        // outputs all elements in the array 
+        //to the console
         #include <iostream>
         using namespace std;
 
@@ -122,6 +124,9 @@ Here are examples of iteration.
 
     .. activecode:: listarray_py
         :caption: Iterating a list in Python
+
+        """Demonstrates how python protects from 
+        iterating past the end of a list"""
 
         def main():
             mylist = [2, 4, 6, 8]
@@ -153,6 +158,9 @@ generally try to do everything you ask for.
         #include <iostream>
         using namespace std;
 
+        // demonstrates what happens when iterating 
+        // outside of an array in C++, 
+        //also outputs the location of the value in memory
         int main(){
             int myarray[] = {2,4,6,8};
             for (int i=0; i<=8; i++){
@@ -167,6 +175,9 @@ generally try to do everything you ask for.
     .. activecode:: array_error_py
         :caption: Iterating a list in Python
 
+        """Demonstrates how python protects from 
+        iterating past the end of a list,
+         and shows the use of Id as the location in memory"""
         def main():
             mylist = [2,4,6,8]
             print(mylist)
@@ -196,6 +207,8 @@ the *vector*.
         #include <iostream>
         using namespace std;
 
+        // Demonstrates how in iterating outside 
+        // of an arry in C++, can change data in other places 
         int main(){
             int myarray[] = {2, 4};
             int otherdata[]={777, 777};
@@ -220,6 +233,9 @@ the *vector*.
     .. activecode:: array_werror_py
         :caption: Write error in Python
 
+        """Demonstrates how python protects from 
+        iterating past the end of a list 
+        and changing any other data""" 
         def main():
             mylist = [2, 4]
             otherdata = [777, 777]

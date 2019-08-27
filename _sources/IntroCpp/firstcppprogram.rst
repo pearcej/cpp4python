@@ -65,7 +65,7 @@ Compilation
 A question you may have about this little program is “How would I run it on
 my own machine?” Running a C++ program is not as simple as running a
 Python program. The first big difference between C++ and Python is that
-Python is an *interpreted language* while C++ is a *compliled language*.
+Python is an *interpreted language* while C++ is a *compiled language*.
 We could run our Python programs in
 the Python **interpreter**, and we were often quite happy to do that.
 In C++, running programs is a two step process.

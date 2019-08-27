@@ -40,6 +40,10 @@ associated value.
             :caption: Using a Hash Table C++
             :language: cpp
 
+            // Creates a hash table that maches 
+            // the english letter to it's spanish 
+            // equivalent, and outputs the size of
+            // the table to the console
             #include <iostream>
             #include <unordered_map>
             #include <string>
@@ -64,6 +68,8 @@ associated value.
         .. activecode:: hashtable1_py
             :caption: Using a Dictionary
 
+            """Python equivalent 
+            of the C++ code """
             def main():
                 spnumbers = {"one":"uno","two":"dos"}
 
@@ -95,6 +101,10 @@ the following example.
             :caption: Iterating a Hash Table C++
             :language: cpp
 
+            // Creates a hash table that maches 
+            // the english letter to it's spanish 
+            // equivalent, and outputs every item 
+            // in the table to the console
             #include <iostream>
             #include <unordered_map>
             #include <string>
@@ -120,6 +130,8 @@ the following example.
         .. activecode:: hashtable2_py
             :caption: Iterating a Dictionary
 
+            """Python equivalent 
+            of the C++ code """
             def main():
                 spnumbers = {"one":"uno","two":"dos","three":"tres","four":"cuatro","five":"cinco" }
 

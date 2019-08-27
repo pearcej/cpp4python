@@ -20,6 +20,8 @@ of elements the Array contains!
 
    int main() {
        int nums[] = {1,3,6,2,5};
+       //Divide the size of the array (in bytes) by the size of a single element (in bytes)
+       // to get the total number of elements in the array.
        int numsSize = sizeof(nums)/sizeof(nums[0]); // Get size of the nums array
 
        for (int index=0; index<numsSize; index++) {
@@ -53,7 +55,9 @@ over a range of values. The code
 
    #include <iostream>
    using namespace std;
-
+    
+    // squares the numebers in range 5
+    // ex. 0*0, 1*1, 2*2 ... 
     int main() {
         for (int i=0; i<5; i++) {
             cout<<i*i<<endl;
@@ -64,7 +68,7 @@ over a range of values. The code
 
 will use ``cout`` five times.  The value of the variable ``i`` will
 start at 0 and go through the full sequence of values 0,1,2,3,4.  This
-value is then squared and printed.
+valu e is then squared and printed.
 
 The other very useful version of this iteration structure is used to
 process each character of a string. The following code fragment iterates
@@ -75,8 +79,8 @@ of the words.
 .. activecode:: intro_81
    :language: cpp
 
-
-
+   // Concatenates every character from a vector of strings
+   // to another string, then prints it.
    #include <iostream>
    #include <vector>
    #include <string>

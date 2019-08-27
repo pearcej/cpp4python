@@ -22,7 +22,8 @@ value you pass into it.
     #include <iostream>
     using namespace std;
 
-    int timesTwo(int num) {
+    // function that multiplies a number by 2
+        int timesTwo(int num) {
         /* return type int which indicates
            that an integer is being returned */
         return num*2;
@@ -58,6 +59,8 @@ Let us look at a similar function.
     #include <iostream>
     using namespace std;
 
+    // function that multiplies a number by 2
+    // except it does not anything it only outputs to the console
     void timesTwoVoid(int num) {
       /* return type void which indicates
          that an nothing is being returned */
@@ -72,7 +75,7 @@ Let us look at a similar function.
         return 0;
     }
 
-``timesTwoVoid`` behave very similarly to ``timesTwo``. However, there is one key
+The ``timesTwoVoid`` function behaves very similarly to ``timesTwo``. However, there is one key
 difference between them. Instead of the ``int`` in ``timesTwo``, ``timesTwoVoid`` has a
 ``void`` in front of its function definition. Unlike ``timesTwo``, ``timesTwoVoid`` is a non-fruitful
 function meaning it does not return a value even though it can still print something out.
@@ -104,6 +107,7 @@ marker. Any characters that follow the // on a line are ignored.
   :language: cpp
   :caption: Newton's Method for finding Square Root
 
+  // returns the square root of a number as a double
   #include <iostream>
   using namespace std;
 
@@ -128,6 +132,7 @@ marker. Any characters that follow the // on a line are ignored.
 .. activecode:: dogwalk
     :language: cpp
 
+    // function that retuns outputs number of steps wallked 
     #include <iostream>
     using namespace std;
 
@@ -270,6 +275,8 @@ Analyze the program and answer the question that involves parameter passing belo
     :coach:
     :language: cpp
 
+    // demonstrates the difference between pass-by-value
+    // and pass-by-reference functions. 
     #include <iostream>
     using namespace std;
 
@@ -412,6 +419,8 @@ same task.
         :caption: function overloading in C++
         :language: cpp
 
+        // demonstrates how function overloading works
+        // by changing the parameters on the inputs.
         #include <iostream>
         using namespace std;
 
@@ -439,6 +448,7 @@ same task.
     .. activecode:: foverload_py
         :caption: Function Overloading in Python
 
+        """Demonstrates the use of multiple parameters using a single function"""
         def myfunct(n, m=None):
             if m is None:
                 print("1 parameter: " + str(n))
@@ -454,15 +464,16 @@ same task.
         main()
 
 .. mchoice:: foverloading
+    :multiple_answers:
     :answer_a: Helps keep consintency in the way your functions are named across your program.
     :answer_b: Functions that do similar tasks differ based on parameters rather than by name.
     :answer_c: A function in essence can fulfill multiple tasks depending on the parameters.
-    :answer_d: All of the above.
-    :correct: d
+    :answer_d: Removes the limit on how many parameters can be written or passed.
+    :correct: a, b, c
     :feedback_a: Take a look at the other answers as well...
     :feedback_b: Take a look at the other answers as well...
     :feedback_c: Take a look at the other answers as well...
-    :feedback_d: Correct! There are many more benefits for overloading!
+    :feedback_d: Wrong! Function overloading has nothing to do with removing the limit of parameters.
 
     What are benefits of function overloading?
 
