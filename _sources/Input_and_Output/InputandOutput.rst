@@ -80,7 +80,7 @@ To close the file for ``out_stream``, we use its ``close()`` function, which als
 
 Answer the question below concerning the use of the ``fstream`` library:
 
-.. mchoice:: stream_library
+.. mchoice:: stream_library_1
    :answer_a: Yes, ofstream is required to edit the file.
    :answer_b: Yes, using ifstream will wipe the file clean without using ofstream first.
    :answer_c: No, using ofstream on a file that already has information on it will clear the entire file.
@@ -284,7 +284,7 @@ Check Yourself
 ~~~~~~~~~~~~~~
 
 
-.. mchoice:: stream_library
+.. mchoice:: stream_library_2
    :multiple_answers:
    :answer_a: fstream
    :answer_b: ifstream
