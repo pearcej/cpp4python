@@ -189,6 +189,100 @@ Here is an example of a program that essentially uses the second technique
 mentioned above to read all the numbers in a file and output them in a neater format.
 The ``while`` loop to scan through a file is located in the ``make_neat(...)`` function.
 
+::
+
+    // Illustrates output formatting instructions.
+    // Read all the numbers in the file rawdata.dat and write the numbers
+    // to the screen and to the file neat.dat in a neatly formatted way.
+
+    #include <cstdlib>  // for the exit function
+    #include <fstream>  // for I/O member functions
+    #include <iomanip>  // for the setw function
+    #include <iostream> // for cout
+    using namespace std;
+    void make_neat(
+        ifstream &messy_file,
+        ofstream &neat_file,
+        int number_after_decimalpoint,
+        int field_width);
+
+    int main() {
+        ifstream fin;
+        ofstream fout;
+
+        fin.open("rawdata.txt");
+        if (fin.fail()) { // oops the file did not exist for reading?
+            cout << "Input file opening failed." << endl;
+            exit(1);
+        }
+
+        fout.open("neat.txt");
+        if (fout.fail()) { // oops the output file open failed!
+            cout << "Output file opening failed.\n";
+            exit(1);
+        }
+        make_neat(fin, fout, 5, 12);
+
+        fin.close();
+        fout.close();
+        cout << "End of program." << endl;
+        return 0;
+    }
+    // Uses iostreams, streams to the screen, and iomanip:
+    void make_neat(
+        ifstream &messy_file,
+        ofstream &neat_file,
+        int number_after_decimalpoint,
+        int field_width) {
+        // set the format for the neater output file.
+        neat_file.setf(ios::fixed);
+        neat_file.setf(ios::showpoint);
+        neat_file.setf(ios::showpos);
+        neat_file.precision(number_after_decimalpoint);
+        // set the format for the output to the screen too.
+        cout.setf(ios::fixed);
+        cout.setf(ios::showpoint);
+        cout.setf(ios::showpos);
+        cout.precision(number_after_decimalpoint);
+        double next;
+        while (messy_file >> next) { // while there is still stuff to read
+            cout << setw(field_width) << next << endl;
+            neat_file << setw(field_width) << next << endl;
+        }
+    }
+
+    // Code by Jan Pearce
+    
+This is the ``rawdata.txt`` inputed into the ``make_neat(...)``.
+
+::
+
+    10 -20 30 -40
+    500 300 -100 1000
+    -20 2 1 2
+    10 -20 30 -40
+
+And this is the expected output
+
+::
+
+       +10.00000
+       -20.00000
+       +30.00000
+       -40.00000
+      +500.00000
+      +300.00000
+      -100.00000
+     +1000.00000
+       -20.00000
+        +2.00000
+        +1.00000
+        +2.00000
+       +10.00000
+       -20.00000
+       +30.00000
+       -40.00000
+
 .. raw :: html
 
     <div>
@@ -260,6 +354,59 @@ Putting it all Together
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.
+
+::
+
+    #include <cstdlib>  // for the exit function
+    #include <fstream>  // for I/O member functions
+    #include <iostream> // for cout
+    using namespace std;
+
+    int main() {
+        char in_file_name[16],
+            out_file_name[16]; // the filenames can have at most 15 chars
+        ifstream in_stream;
+        ofstream out_stream;
+
+        cout << "This program will sum three numbers taken from an input\n"
+             << "file and write the sum to an output file." << endl;
+        cout << "Enter the input file name (maximum of 15 characters):\n";
+        cin >> in_file_name;
+        cout << "\nEnter the output file name (maximum of 15 characters):\n";
+        cin >> out_file_name;
+        cout << endl;
+
+        // Condensed input and output file opening and checking.
+        in_stream.open(in_file_name);
+        out_stream.open(out_file_name);
+
+        if (in_stream.fail() || out_stream.fail()) {
+            cout << "Input or output file opening failed.\n";
+            exit(1);
+        }
+
+        double firstn, secondn, thirdn, sum = 0.0;
+        cout << "Reading numbers from the file " << in_file_name << endl;
+        in_stream >> firstn >> secondn >> thirdn;
+        sum = firstn + secondn + thirdn;
+
+        // The following set of lines will write to the screen
+        cout << "The sum of the first 3 numbers from " << in_file_name << " is "
+             << sum << endl;
+
+        cout << "Placing the sum into the file " << out_file_name << endl;
+
+        // The following set of lines will write to the output file
+        out_stream << "The sum of the first 3 numbers from " << in_file_name
+                   << " is " << sum << endl;
+
+        in_stream.close();
+        out_stream.close();
+
+        cout << "End of Program." << endl;
+
+        return 0;
+    }
 
 .. raw :: html
 
