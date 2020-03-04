@@ -6,9 +6,8 @@ structures: iteration and selection. Both of these are supported by
 Python in various forms. The programmer can choose the statement that is
 most useful for the given circumstance.
 
-For iteration, C++ provides a standard ``while`` statement and a very
-powerful ``for`` statement. The while statement repeats a body of code
-as long as a condition is true. For example,
+For repeating a block of code, C++ provides a standard ``while`` and ``for`` constructs.
+The ``while`` construct repeats a body of code as long as a condition is true. For example,
 
 ::
 
@@ -70,7 +69,7 @@ Here are some of the logical operators that are useful for true-false boolean st
     or equal to  - <=
 
 
-These are the same as we saw in earlier chapters. 
+These are the same as we saw in earlier chapters.
 
 
 
@@ -81,7 +80,7 @@ These are the same as we saw in earlier chapters.
 
     int main(){
         int counter = 0;
-        while (counter <= 1) {        
+        while (counter <= 1) {
             cout << "Hello, world"<< counter << endl;
         }
     };
@@ -93,7 +92,7 @@ These are the same as we saw in earlier chapters.
   :answer_c: Infinitely cout "Hello world"
   :answer_d: None of the  above.
   :correct: c
-  :feedback_a: Take a look at the cout line. 
+  :feedback_a: Take a look at the cout line.
   :feedback_b: Take a closer look at the while loop
   :feedback_c: Right! because counter is never greater than one, thus making the while loop infinite.
   :feedback_d: Not quite, take another look.
