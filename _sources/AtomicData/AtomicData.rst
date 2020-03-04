@@ -536,12 +536,12 @@ the address of where varN is located:
 Keep in mind that when declaring a C++ pointer, the pointer needs to
 reference the same type as the variable or constant to which it points.
 
-Expanding on the example above where varN has the value of 100.
+Expanding on the example above where varN has the value of 9.
 
 ::
 
     //variable declaration for a single integer value
-    int varN = 100;
+    int varN = 9;
     int *ptrN;
     ptrN = &varN;
 
@@ -580,7 +580,7 @@ in memory:
 
       // demonstrates what happens when you dereference a pointer
       int main( ) {
-          int varN = 100;
+          int varN = 9;
           int *ptrN = &varN; // ptrN points to varN address
 
           cout << "varN value: " << varN << endl;
@@ -593,7 +593,7 @@ in memory:
 
 
 .. mchoice:: mc_pntrhlp
-   :answer_a: varPntr: 100
+   :answer_a: varPntr: 9
    :answer_b: varPntr: 50
    :answer_c: varPntr: 150
    :answer_d: 0x7ffeb9ce053c

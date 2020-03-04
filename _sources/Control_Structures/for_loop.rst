@@ -2,8 +2,9 @@ For Loops
 =========
 
 Even though the ``while`` type of construct is very useful in a wide variety of
-situations, another iterative structure, the ``for`` construct, can be
-used to repeat a block of code a specific number of times. For instance,
+situations, another iterative structure, the ``for`` statement, can be
+used to iterate across a range of values easily.
+A ``for`` statement allows us to write a loop that is executed a specific number of times.
 
 .. activecode:: ForLoopIterations
    :language: cpp
@@ -14,9 +15,10 @@ used to repeat a block of code a specific number of times. For instance,
 
    int main() {
       for (int i = 0; i < 10; i++){
-            cout<< i << " Hello world! "<<endl;
+            cout<< i<< "hello world"<<endl;
        }
     }
+
 
 
 In the example above, the **hello world!** statement is executed 10 times.
@@ -41,10 +43,9 @@ over a range of values.
     }
 
 
-The above code will use ``cout`` five times.  The value of the code of `i` starts with
-0 and goes through the full sequence of values 0 1 2 3 4. Then each value gets squared and printed out.
-
-
+The code will use ``cout`` five times.  The value of the variable ``i`` will
+start at 0 and go through the full sequence of values 0,1,2,3,4.  This
+value is then squared and printed.
 
 
 Check yourself
