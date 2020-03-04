@@ -21,7 +21,7 @@ used to repeat a block of code a specific number of times. For instance,
 
 In the example above, the **hello world!** statement is executed 10 times.
 
-A common use of the ``for`` construct is to implement **certain** number of times
+A common use of the ``for`` construct is to implement **certain** repetition  
 over a range of values.
 
 .. activecode:: rangeForLoop1
