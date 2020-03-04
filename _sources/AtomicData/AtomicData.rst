@@ -153,7 +153,7 @@ are actually ``1`` and ``0`` respectively. Hence, we see this in output as well.
         #include <iostream>
         using namespace std;
 
-        // function that demonstrates logical operators 
+        // function that demonstrates logical operators
         int main() {
           cout << true << endl;
           cout << false << endl;
@@ -166,7 +166,7 @@ are actually ``1`` and ``0`` respectively. Hence, we see this in output as well.
 
         .. activecode:: logical_1py
             :caption: Logical Operators Python
-            
+
             # Function that demonstrates logical operators.
             def main():
                 print(True)
@@ -211,8 +211,8 @@ and logical operators with examples shown in the session that follows.
 
         #include <iostream>
         using namespace std;
-        
-        // function that demonstrates relational operators. 
+
+        // function that demonstrates relational operators.
         int main(){
 
             cout << (5 == 10) << endl;
@@ -226,7 +226,7 @@ and logical operators with examples shown in the session that follows.
 
     .. activecode:: logicalpy
         :caption: Basic Relational and Logical Operators Python
-        
+
         # Function that demonstrates relational operators.
         def main():
 
@@ -339,8 +339,8 @@ Consider the following code.
         #include <string>
         using namespace std;
 
-        // Demonstrates how chars and strings can not be 
-        // directly compared. 
+        // Demonstrates how chars and strings can not be
+        // directly compared.
         int main(){
 
             string strvar = "b";
@@ -376,7 +376,7 @@ Pointers
 ~~~~~~~~
 
 A C++ **pointer** is a variable that stores a memory address and can be used to indirectly
-access data stored at that memory location. 
+access data stored at that memory location.
 
 We know that variables in a computer program are used to label data with a
 descriptive identifier so that the data can be accessed and used by that
@@ -428,7 +428,7 @@ In C++ the results of running this code will look like the diagram below:
 In each case, when we want to output the value to the console, we use the variable name
 to do so.
 
-But, we can also identify the memory location of the variable by its address. 
+But, we can also identify the memory location of the variable by its address.
 In both Python and C++, this address
 may change each time the program is run. In C++, the address will always look
 odd because it will be the actual memory address written in a hexadecimal code
@@ -453,7 +453,7 @@ while in C++ we use the *address-of operator*, ``&``.
 
 
         // outputs the value of a variable
-        // as well as the memory address in C++. 
+        // as well as the memory address in C++.
         int main(){
             int varN = 101;
             cout << varN << endl;
@@ -493,7 +493,7 @@ Pointer Syntax
 ^^^^^^^^^^^^^^
 
 When declaring a pointer in C++ that will "point" to the memory address of some
-data type, 
+data type,
 you will use the same rules of declaring variables and data types.
 The key difference is that there must be an asterisk (*) between the data type and the
 identifier.
@@ -523,6 +523,7 @@ Now that we know how to declare pointers, how do we give them the address of
 where the value is going to be stored? One way to do this is to have a pointer
 refer to another variable by using the address-of operator, which is denoted by the
 ampersand symbol, ``&``. The address-of operator ``&`` does exactly what it indicates,
+variableType varN;  // a variable to hold the value
 namely it returns the address.
 
 The syntax is shown below, where varN stores the value, and ptrN stores
@@ -530,18 +531,17 @@ the address of where varN is located:
 
 ::
 
-    variableType varN;  // a variable to hold the value
     variableType *ptrN = &varN;  // a variable pointing to the address of varN
 
 Keep in mind that when declaring a C++ pointer, the pointer needs to
 reference the same type as the variable or constant to which it points.
 
-Expanding on the example above where varN has the value of 100.
+Expanding on the example above where varN has the value of 9.
 
 ::
 
     //variable declaration for a single integer value
-    int varN = 100;
+    int varN = 9;
     int *ptrN;
     ptrN = &varN;
 
@@ -558,14 +558,14 @@ The results of running this C++ code will look like the diagram below.
 Accessing Values from Pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once you have a C++ pointer, you use the asterisk before the pointer variable, 
+Once you have a C++ pointer, you use the asterisk before the pointer variable,
 to *dereference* the pointer, which means go to the location pointed at by the 3.
 
 ::
 
     In other words, varN and *ptrN (note the asterisk in front!) reference the same
     value in the code above.
-    
+
 
 Let's extend the example above to output the value of a variable and its address
 in memory:
@@ -577,23 +577,23 @@ in memory:
 
       #include <iostream>
       using namespace std;
-      
-      // demonstrates what happens when you dereference a pointer 
+
+      // demonstrates what happens when you dereference a pointer
       int main( ) {
-          int varN = 100;
+          int varN = 9;
           int *ptrN = &varN; // ptrN points to varN address
 
           cout << "varN value: " << varN << endl;
           cout << "varN location: " << ptrN << endl;
           cout << "dereference ptrN: " << *ptrN << endl;
 
-          
+
           return 0;
       }
-      
+
 
 .. mchoice:: mc_pntrhlp
-   :answer_a: varPntr: 100
+   :answer_a: varPntr: 9
    :answer_b: varPntr: 50
    :answer_c: varPntr: 150
    :answer_d: 0x7ffeb9ce053c
@@ -604,8 +604,8 @@ in memory:
    :feedback_c: No, the values do not add together!
    :feedback_d: We are dereferencing the pointer, so you would not get the address of varN. Try again!
    :feedback_e: One of the above is indeed correct.
-  
-   If the lines (varN = 50;) and  (cout << \*ptrN << endl;) were inserted into line 7-8, what would it cout? 
+
+   If the lines (varN = 50;) and  (cout << \*ptrN << endl;) were inserted into line 7-8, what would it cout?
 
 Compiling and running the above code will have the program output the
 value in varN,

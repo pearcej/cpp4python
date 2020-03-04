@@ -51,21 +51,68 @@ Because vectors can change size, vectors typically allocate some extra storage t
 Thus the vector typically has an actual *capacity* greater than the storage *size* strictly needed to contain its elements.
 
 
+Iterating through Vectors
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When iterating vectors, you must first find the length of your container. You can simply call the ``.length()`` function.
+For arrays, the number of elements can be found by getting the size in memory of the array
+by using the ``sizeof()`` function, and then dividing it by the size of the first element of
+the array using the same ``sizeof()`` function. Because all elements in C++ arrays are
+the same type, they take the same amount of space and that can be used to find the number
+of elements the Array contains!
+
+.. activecode:: vectorIteration1
+   :language: cpp
+   :sourcefile: ArrayIteration.cpp
+
+   #include <iostream>
+   using namespace std;
+
+   int main() {
+       int nums[] = {1,3,6,2,5};
+       //Divide the size of the array (in bytes) by the size of a single element (in bytes)
+       // to get the total number of elements in the array.
+       int numsSize = sizeof(nums)/sizeof(nums[0]); // Get size of the nums array
+
+       for (int index=0; index<numsSize; index++) {
+           cout << nums[index] << endl;
+       }
+
+
+      // Simpler Implementation that may only work in
+      // Newer versions of C++
+
+      // for (int item:nums) {
+      //     cout << item << endl;
+      // }
+
+  	return 0;
+   }
+
+
+An optional secondary version of the ``for`` loop has been commented out of the above code.
+You can try running this in your version of C++ to see if it works, but in some older versions of C++,
+such as C++98, it does not.
+
+The above loop assigns the variable ``index`` to be each successive value from 0 to numsSize.
+ Then, the value at that index in the array is printed to the console.
+    
+
 Matching
 ^^^^^^^^
 .. dragndrop:: matching_vectors
    :feedback: Feedback shows incorrect matches.
-   :match_1: [ ]|||Accesses value of an element. 
-   :match_2: =||| Assigns value to an element. 
+   :match_1: [ ]|||Accesses value of an element.
+   :match_2: =||| Assigns value to an element.
    :match_3: push_back|||Appends item to the end of the vector.
    :match_4: pop_back||| Deletes last item of the vector.
-   :match_5: insert|||Injects an item into the vector. 
+   :match_5: insert|||Injects an item into the vector.
    :match_6: erase|||Deletes an element from the choosen index.
    :match_7: size|||Returns the actual capacity used by elements.
    :match_8: capacity|||Returns the ammount of allocated storage space.
    :match_9: reserve||| Request a change in space to amount
 
-    Match the Vector operations with their corresponding explination. 
+    Match the Vector operations with their corresponding explination.
 
 .. tabbed:: intro_vector
 
@@ -75,8 +122,8 @@ Matching
         :caption: Using a vector in C++
         :language: cpp
 
-        // function that uses a vector to square 
-        // every number from 0 to 49 
+        // function that uses a vector to square
+        // every number from 0 to 49
         // uses the reserve operation to save space in memory
         #include <iostream>
         #include <vector>
@@ -99,7 +146,7 @@ Matching
     .. activecode:: introvector_py
         :caption: Using a Python list
 
-        """Uses a list to square every 
+        """Uses a list to square every
         number from 0 to 49 """
         def main():
             intlist=[]
@@ -123,10 +170,10 @@ example that follows.
     :caption: With use of ``reserve``
     :language: cpp
 
-    // function that uses a vector to square 
-    // every number from 0 to 49 
-    // and does not use reserve. 
-    // shows amount of space used  
+    // function that uses a vector to square
+    // every number from 0 to 49
+    // and does not use reserve.
+    // shows amount of space used
     #include <iostream>
     #include <vector>
     using namespace std;
@@ -156,8 +203,8 @@ we will likely not be surprised by the following:
         :caption: Vectors out of bounds
         :language: cpp
 
-        // Note: counting always starts at 0 
-        // This demonstrates what happens when 
+        // Note: counting always starts at 0
+        // This demonstrates what happens when
         // accessing datat outside of your vector
 
         #include <iostream>
@@ -186,7 +233,7 @@ we will likely not be surprised by the following:
     .. activecode:: vector_errors_py
         :caption: Python list out of bounds
 
-        """Demonstrates python's protections 
+        """Demonstrates python's protections
         against iterating outside of a list"""
         def main():
             intlist=[]
