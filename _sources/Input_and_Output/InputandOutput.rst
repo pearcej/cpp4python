@@ -253,6 +253,36 @@ The ``while`` loop to scan through a file is located in the ``make_neat(...)`` f
 
     // Code by Jan Pearce
     
+This is the ``rawdata.txt`` inputed into the ``make_neat(...)``.
+
+::
+
+    10 -20 30 -40
+    500 300 -100 1000
+    -20 2 1 2
+    10 -20 30 -40
+
+And this is the expected output
+
+::
+
+       +10.00000
+       -20.00000
+       +30.00000
+       -40.00000
+      +500.00000
+      +300.00000
+      -100.00000
+     +1000.00000
+       -20.00000
+        +2.00000
+        +1.00000
+        +2.00000
+       +10.00000
+       -20.00000
+       +30.00000
+       -40.00000
+
 .. raw :: html
 
     <div>
