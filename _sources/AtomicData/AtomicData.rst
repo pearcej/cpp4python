@@ -549,7 +549,7 @@ The results of running this C++ code will look like the diagram below.
 
 .. _fig_point2:
 
-.. figure:: Figures/new_point2.png
+.. figure:: Figures/new_new_point2.png
    :align: center
    :alt: image
 
@@ -630,7 +630,7 @@ and had the following instructions instead?
 
         int main( ) {
             int varN = 100;
-            int ptrN = varN; // Note no asterisk,
+            int *ptrN = varN; // Note no asterisk,
                 // ptrN now refers to memory position 100,
                 // whatever happens to be there!
                 // You might get an error or you might not!
@@ -648,7 +648,7 @@ and had the following instructions instead?
 
 .. _fig_point3:
 
-.. figure:: Figures/point_broken.png
+.. figure:: Figures/new_point_broken.png
    :align: center
    :alt: image
 
