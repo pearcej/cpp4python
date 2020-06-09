@@ -32,6 +32,7 @@ By Jan Pearce, Berea College, and Brad Miller, Runestone
    CollectionData/toctree.rst
    Input_and_Output/toctree.rst
    Exception_Handling/toctree.rst
+   Turtles/toctree.rst
 
 Acknowledgements
 ::::::::::::::::
