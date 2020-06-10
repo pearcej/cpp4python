@@ -9,7 +9,7 @@ which is very well suited for educational purposes because it offers live, inter
 and visual representations of your code as you write it.
 
 Visual representations afford students an opportunity to observe a facet of computer science
-from a point of view that makes sense: rather than waiting anxiously for the print statement
+from an alternative point of view: rather than waiting anxiously for the print statement
 to come around after your program churns, you get a visual representation of the concept itself.
 This is particularly useful for abstract concepts such as recursion and iteration.
 
@@ -18,7 +18,8 @@ It acts as a close replacement to provide easy to use graphics to C++, while mai
 the objects and commands you might be used to in Python. It was developed by Jesse Walker
 at Berea College during the summer of 2019.
 
-Below is a side-by-side comparison of the two versions, which do the same thing.
+Below is a side-by-side comparison of the two versions, C++ and Python, which should do
+the same thing.
 
 .. tabbed:: cturtle_compare_1
 
@@ -30,7 +31,7 @@ Below is a side-by-side comparison of the two versions, which do the same thing.
             #include <CTurtle.hpp>
             namespace ct = cturtle;
 
-            int main(int argc, char** argv) {
+            int main() {
                 ct::TurtleScreen scr;
                 ct::Turtle turtle(scr);
                 turtle.speed(ct::TS_SLOWEST);
@@ -75,3 +76,26 @@ Below is a side-by-side comparison of the two versions, which do the same thing.
     :feedback_d: Correct!
 
     How might students benefit from having a visual representation such as C-Turtle? Check all that apply.
+
+.. parsonsprob:: cturtle_question_2
+
+    Construct a program that draws an empty square using turtles.
+    -----
+    #include <CTurtle.hpp>
+    namespace ct = cturtle;
+    =====
+    int main(){
+    =====
+        ct::TurtleScreen scr;
+        ct::Turtle turtle(scr);
+    =====
+        for(int i = 0; i < 4; i++){
+    =====
+            turtle.forward(50);
+            turtle.right(90);
+    =====
+        }
+        scr.bye();
+    =====
+        return 0;
+    }
