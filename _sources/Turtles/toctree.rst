@@ -7,3 +7,4 @@ Introduction to Turtles for C++
 
     why_turtles.rst
     overview_intro.rst
+    pattern_application.rst

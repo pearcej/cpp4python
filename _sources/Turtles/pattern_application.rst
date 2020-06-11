@@ -19,30 +19,118 @@ a mosaic-like tessellating image using turtles.
 
 Consider the following example.
 
-<insert example here>
+.. tabbed:: cturtle_example_tabs
+
+    .. tab:: C++
+
+        .. activecode:: cturtle_practical_example_cpp
+            :language: cpp
+        
+            #include <CTurtle.hpp>
+            namespace ct = cturtle;
+
+            int main(int argc, char** argv) {
+                const int SQUARE_SIZE = 40;
+
+                ct::TurtleScreen scr;
+                scr.tracer(40);
+                ct::Turtle turtle(scr);
+                turtle.speed(ct::TS_FASTEST);
+                turtle.penup();
+
+                bool is_blue = false;
+
+                for(int i = 0; i < 8; i++){
+                    turtle.goTo(-scr.window_width()/2,-scr.window_height()/2+ (i*SQUARE_SIZE));
+
+                    for(int j = 0; j < 8; j++){
+                        ct::Color color;
+
+                        if(is_blue){
+                            color = {"blue"};
+                        }else{
+                            color = {"green"};
+                        }
+
+                        turtle.begin_fill();
+                        turtle.fillcolor(color);
+
+                        for(int i = 0; i < 4; i++){
+                            turtle.forward(SQUARE_SIZE);
+                            turtle.right(90);
+                        }
+
+                        turtle.end_fill();
+
+                        turtle.forward(SQUARE_SIZE);
+                        is_blue = !is_blue;//flip-flop between true and false
+                    }
+                }
+
+                return 0;
+            }
+
+    .. tab:: Python
+
+        .. activecode:: cturtle_practical_example_Python
+            :language: Python
+
+            import turtle
+
+            wn = turtle.Screen()
+            square = turtle.Turtle()
+            square.speed(10)
+            square.pu()
+            square.goto(-turtle.window_width()/2,turtle.window_height()/2);
+            square.pd()
+
+            a = 0
+            b = 0
+            for i in range(8):
+                if(b == 0):
+                    a=1
+                else:
+                    a=0
+                for j in range(8):
+                    square.penup()
+                    square.goto(-turtle.window_width() / 2 + j * 85, turtle.window_height() / 2 - i * 85)
+                    square.pendown()
+                    if(a==0):
+                        square.fillcolor('red')
+                        a=1
+                    else:
+                        square.fillcolor('blue')
+                        a=0
+                    square.begin_fill()
+                    for k in range(4):
+                        square.forward(85)
+                        square.right(90)
+                    square.end_fill()
+                if(b==0):
+                    b=1
+                else:
+                    b=0
+            wn.exitonclick()
+
 
 You must create a similar image with the following criteria:
-There must be more than four edges per shape
-There must be no more than two colors for the shapes in the image.
+- There must be more than four edges per shape
+- There must be no more than two colors for the shapes in the image.
 
-<insert activecode prompt here>
+.. activecode:: cturtle_practical_prompt
+    :language: cpp
 
+    #include <CTurtle.hpp>
+    namespace ct = cturtle;
 
-Introduction -
-    Description of mosaics - trace back to sumerians, clay tiles for decorative features
-        Eqyptians, persians, romans, chinese, etc. with different variations
-    Segway into tesselation under historical context
-        "when a geometric shape is repeated over and over again resulting in a tile with no gaps"
-    Introduce example code for chess board pattern?
-    Talk about limitations (more than 4 edges per shape, maximum of two fill colors)
-    Prompt for activecode
-        basic skeleton for CTurtle usage to start with?
+    int main(int argc, char** argv) {
+        ct::TurtleScreen scr;
+        scr.tracer(40);
+        ct::Turtle turtle(scr);
+        
+        //Your code here
+        
+        scr.bye();
+        return 0;
+    }
 
-
-Tessellating pattern 
-    Historical context - mosaics
-    More than four edges per shape
-    Two colors only for shapes
-    Encourage experimentation        
-    Example pattern   
-    Simple example, chess grid?
