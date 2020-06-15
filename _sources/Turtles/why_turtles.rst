@@ -91,26 +91,3 @@ the same thing.
     :feedback_d: Correct!
 
     How might students benefit from having a visual representation such as C-Turtle? Check all that apply.
-
-.. parsonsprob:: cturtle_question_2
-
-    Construct a program that draws an empty square using turtles.
-    -----
-    #include <CTurtle.hpp>
-    namespace ct = cturtle;
-    =====
-    int main(){
-    =====
-        ct::TurtleScreen scr;
-        ct::Turtle turtle(scr);
-    =====
-        for(int i = 0; i < 4; i++){
-    =====
-            turtle.forward(50);
-            turtle.right(90);
-    =====
-        }
-        scr.bye();
-    =====
-        return 0;
-    }
