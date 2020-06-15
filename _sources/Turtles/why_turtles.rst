@@ -1,3 +1,18 @@
+What are Turtles?
+=======================
+Turtle graphics are a popular and simple way for introducing programming to beginners. 
+It was part of the original Logo programming language developed by 
+Wally Feurzeig, Seymour Papert and Cynthia Solomon in 1967.
+
+Imagine Turtles as being a digital marker used for drawing various shapes, images, and designs.
+Drawing with Turtles can be as basic as a simple triangle and as complex as a highly detailed fractal image.
+Nealry all commands used when drawing with Turtles are as simple as telling your Turtle to move forward, backward,
+left, and right in as few or many steps as desired.
+
+Turtles are a common known library in Python, but for the purposes of this class, we will be laearning to use a custom made
+Turtle library ported to C++.
+
+
 Introduction to Turtles in C++
 =======================================
 
