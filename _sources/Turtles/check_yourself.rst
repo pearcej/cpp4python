@@ -37,8 +37,7 @@ Check Yourself
 
    How large would the undo queue be for the above code example?
 
-.. activecode:: turtle_checkyourself_ac_2:
-    :language: cpp
+.. code-block:: cpp
 
     #include <CTurtle.hpp>
     namespace ct = cturtle;
@@ -76,4 +75,4 @@ Check Yourself
   :feedback_a: Correct!
   :feedback_b: Incorrect!
 
-  Can you have more than one turtle on one screen?
+  You can have more than one turtle on one screen.

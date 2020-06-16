@@ -3,7 +3,22 @@ Advanced Features
 
 Turtles are a large tool, and thus have a lot of options dictating how they function.
 Some features and functionality are more complicated than others, relating to the inner workings
-of turtles themselves. A couple of these include the :code:`tracer` and :code:`undo` methods.
+of turtles themselves. A few of these include the :code:`tracer` and :code:`undo` methods, and also screen modes.
+
+Screen modes dictate the direction of angle measurements. This means that, depending on which mode a :code:`TurtleScreen`
+object is in, positive angles could represent clockwise rotations or counterclockwise rotations. The :code:`mode` method
+for :code:`TurtleScreen` allows you to set which mode a screen is in.
+
+=========== ================ ================
+    Mode    Default Rotation Positive Angles
+=========== ================ ================
+SM_STANDARD       East       Counterclockwise
+  SM_LOGO         North         Clockwise
+=========== ================ ================
+
+Regarding angles, Turtles can use both *degrees* and *radians* for their rotations. You can choose between the two using the
+:code:`radians` and :code:`degrees` methods for the Turtle object. By default, all angles are measured in *degrees*. This option
+only effects methods regarding rotation, such as :code:`left` and :code:`right`.
 
 The :code:`tracer` method is used to control how fast and how many times the Turtle is actually
 drawn on the screen. Using it can significantly speed up the drawing of complicated figures and
@@ -78,7 +93,7 @@ last points for each of these shapes.
 
 ======== ===================== ========== ========
 Triangle   Indented Triangle     Square    Arrow
--------- --------------------- ---------- --------
+======== ===================== ========== ========
 (0, 0)          (0, 0)          (-5, -5)   (0, 0)
 (-5, 5)        (-5, 10)          (-5, 5)  (-5, 5)      
 (5, 5)          (0, 8)           (5, 5)   (-3, 5)
