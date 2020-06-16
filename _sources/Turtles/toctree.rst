@@ -9,5 +9,6 @@ Introduction to Turtles for C++
     overview_intro.rst
     advanced_features.rst
     pattern_application.rst
+    Geometry_Shapes_Stamps.rst
     Glossary
     check_yourself.rst
