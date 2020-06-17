@@ -6,12 +6,11 @@ Wally Feurzeig, Seymour Papert and Cynthia Solomon in 1967.
 
 Imagine Turtles as being a digital marker used for drawing various shapes, images, and designs.
 Drawing with Turtles can be as basic as a simple triangle and as complex as a highly detailed fractal image.
-Nealry all commands used when drawing with Turtles are as simple as telling your Turtle to move forward, backward,
+Nearly all commands used when drawing with Turtles are as simple as telling your Turtle to move forward, backward,
 left, and right in as few or many steps as desired.
 
-Turtles are a common known library in Python, but for the purposes of this class, we will be laearning to use a custom made
-Turtle library ported to C++.
-
+Turtles are a commonly used library in Python. This chapter will cover a close analog for Turtles between Python and C++,
+the CTurtle library.
 
 Introduction to Turtles in C++
 =======================================
@@ -21,7 +20,7 @@ wide array of built in tools and good documentation. These things are particular
 lacking in regards to C++, as many of the built-in tools require complicated syntax
 and deep understanding of the language itself. One of these tools is Turtles,
 which is very well suited for educational purposes because it offers live, interactive,
-and visual representations of your code as you write it.
+and visual representations of your code.
 
 Visual representations afford students an opportunity to observe a facet of computer science
 from an alternative point of view: rather than waiting anxiously for the print statement
@@ -30,7 +29,7 @@ This is particularly useful for abstract concepts such as recursion and iteratio
 
 For C++, a library titled C-Turtle is used to provide an equivalent of Python's Turtles.
 It acts as a close replacement to provide easy to use graphics to C++, while maintaining
-the objects and commands you might be used to in Python. It was developed by Jesse Walker
+the objects and commands you might be used to in Python. It was developed by Jesse Walker-Schadler
 at Berea College during the summer of 2019.
 
 Below is a side-by-side comparison of the two versions, C++ and Python, which should do

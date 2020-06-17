@@ -1,9 +1,10 @@
 Geometry, Shapes, and Stamps
 ============================
-Every shape is a set of coordinates. Within the CTurtle library we have the 
-choice of choosing between a select few shapes that we can turn our Turtle into.
+
+Every basic shape in CTurtle is a set of coordinates. Within the CTurtle library we have the 
+choice of a select few shapes that we can me our Turtles inhabit.
 To change the appearance of your Turtle, you can use :code:`shape` to set your Turtle to 
-one of four default shapes. CTurtle features four default shapes, :code:`triangle`,
+one of four default shapes, or a custom shape. CTurtle features four default shapes, :code:`triangle`,
 :code:`indented_triangle`, :code:`square`, and :code:`arrow`.
 
 The following code example shows how to set the shape of a turtle by giving it the name of a shape.
@@ -11,14 +12,15 @@ The following code example shows how to set the shape of a turtle by giving it t
 .. code-block:: cpp
 
   turtle.shape("square");
-  
 
 Given that all primitive shapes are defined as a collection of points, all of the default shapes are also defined this way.
 Polygons, for custom and default shapes, must have their points defined in counter-clockwise order to appear correctly.
 This is due to the mathematics behind filling arbitrary shapes, and is a limitation almost all computer graphics need to
 abide by. Consider the order of their points in the following table, and how they could be considered "counter-clockwise".
 They are in order from top to bottom, and one edge exists between the first last points for each of these shapes. Please note
-that positive Y coordinates are *lower* on the screen, while negative Y coordinates are *higher* on the screen.
+that positive Y coordinates are *lower* on the screen, while negative Y coordinates are *higher* on the screen. Coordinates at
+the origin-- that is, coordinate 0x, 0y-- is at the "point" or "tip" of the turtle. This is why most of the default shapes
+have their first coordinate there.
 
 ======== ===================== ========== ========
 triangle   indented_triangle     square    arrow
@@ -55,7 +57,7 @@ the coordinates of the polygon, you might surprise yourself with what shape you 
 
 .. activecode:: cturtle_geometry_ac_1
     :language: cpp
-
+    
     #include <CTurtle.hpp>
     namespace ct = cturtle;
 
@@ -103,15 +105,17 @@ The following code is a full example showing how to combine custom shapes with s
 
         turtle.shape(upside_down_triangle);
         
+        //Draw a square where each edge is 50 units long.
         for(int i = 0; i < 4; i++){
+            //Stamp at the corner of the square.
             int corner_stamp = turtle.stamp();
 
             turtle.forward(25);
-            turtle.stamp();
+            turtle.stamp(); //Stamp half-way across the edge of the square.
             turtle.forward(25);
 
             turtle.right(90);
-            
+            //Clear the corner stamp.
             turtle.clearstamp(corner_stamp);
         }
 
@@ -120,4 +124,3 @@ The following code is a full example showing how to combine custom shapes with s
         screen.bye();
         return 0;
     }
-

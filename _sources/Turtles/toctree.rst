@@ -1,14 +1,18 @@
-Introduction to Turtles for C++
+Turtles
 ::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-    :caption: Turtles for C++
+    :caption: Introduction to Turtles for C++
     :maxdepth: 2
 
-    why_turtles.rst
-    overview_intro.rst
+    introduction.rst
+    turtle_and_turtlescreen.rst
+    geometry_shapes_stamps.rst
     advanced_features.rst
+    differences.rst
     pattern_application.rst
-    Geometry_Shapes_Stamps.rst
-    Glossary
+    summary.rst
     check_yourself.rst
+    glossary.rst
+
+..  The glossary page has the matching content as well.

@@ -33,7 +33,7 @@ Consider the following example.
                 const int SQUARE_SIZE = 40;
 
                 ct::TurtleScreen scr;
-                scr.tracer(40);
+                scr.tracer(40);//draw faster
                 ct::Turtle turtle(scr);
                 turtle.speed(ct::TS_FASTEST);
                 turtle.penup();
@@ -114,7 +114,8 @@ Consider the following example.
 
 
 You must create a similar image with the following criteria:
-- There must be more than four edges per shape
+
+- There must not be four edges in your chosen shape, but 3 or 5+ is fine.
 - There must be no more than two colors for the shapes in the image.
 
 .. activecode:: cturtle_practical_prompt

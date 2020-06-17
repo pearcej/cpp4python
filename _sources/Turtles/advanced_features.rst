@@ -20,20 +20,46 @@ Regarding angles, Turtles can use both *degrees* and *radians* for their rotatio
 :code:`radians` and :code:`degrees` methods for the Turtle object. By default, all angles are measured in *degrees*. This option
 only effects methods regarding rotation, such as :code:`left` and :code:`right`.
 
-The :code:`tracer` method is used to control how fast and how many times the Turtle is actually
-drawn on the screen. Using it can significantly speed up the drawing of complicated figures and
-images because it dictates however many frames of animation gets put on
-the screen. It also lets you specify a delay, in milliseconds, between frames of animation.
+.. code-block:: cpp
+
+    turtle.degrees();
+    turtle.right(90);//90-degree turn to the right
+    turtle.radians();
+    turtle.left(1.5708f);//Equivalent rotation in radians to the left.
+
+The :code:`tracer(N)` method is used to control how many times the Turtle is actually
+drawn on the screen. This method belongs to the :code:`TurtleScreen` object, and effects
+all turtles that are on the screen. The :code:`N` in the function represents the input,
+only allowing the :code:`TurtleScreen` to display one frame out every :code:`N`.
+
+.. core-block:: cpp
+
+    screen.tracer(12);
+    //Show one out of every 12 frames of animation.
+
+This can be combined with the :code:`speed` method available to turtles to achieve **very** quickly
+drawn images. The maximum speed a Turtle can have, :code:`TS_FASTEST`, completely disables animation
+for Turtles between movements and rotations. This allows the :code:`tracer` setting to directly relate
+to the total number of actions the turtle makes. The actions the turtle takes happen regardless
+of whether or not they are actually shown on the screen.
+
+.. code-block:: cpp
+
+    screen.tracer(3); //Show one out of every 3 frames of animation.
+    turtle.speed(ct::TS_FASTEST);  //Disables Turtle animation
+
+    turtle.forward(50);//This is not shown on-screen...
+    turtle.right(90);//Neither is this...
+    turtle.forward(50);//But this action is, because it is third out of three.
 
 A frame of animation is added for almost every action a turtle takes, regardless of whether or not
 the turtle is moving or adding something to the screen. This includes methods like
 :code:`begin_fill` and :code:`end_fill`, which don't do anything visually but do
 tell the turtle to start or stop tracking its own movements.
 
-Consider the following example.
+Consider the following example and related questions.
 
-.. activecode:: cturtle_advanced_ac_1
-    :language: cpp
+.. code-block:: cpp
 
     #include <CTurtle.hpp>
     namespace ct = cturtle;
@@ -42,6 +68,7 @@ Consider the following example.
         ct::TurtleScreen screen;
         ct::Turtle turtle(screen);
 
+        turtle.speed(ct::TS_FASTEST);
         screen.tracer(6);
 
         for(int i = 0; i < 3; i++){
@@ -68,9 +95,10 @@ Consider the following example.
    How many frames of animation does the above code create?
 
 Similarly to tracer settings, every action a turtle takes is also added to the *undo queue*. This allows it to keep track
-of actions it is performing over a period of time. The queue is only allowed to grow to a certain size, starting at 100 actions.
+of actions it is performing over a period of time. The queue is only allowed to grow to a certain size, starting at 100 actions total.
 This is modifiable through the :code:`setundobuffer` function that belongs to turtles. Every action is added, even if
-the action doesn't change anything visuall, much like tracer settings.
+the action doesn't change anything visually. This feature is comparable to the "undo" tool available in most text editors.
+Turtles can "undo" their progress with the :code:`undo` method.
 
 .. mchoice:: cturtle_advanced_mchoice_2
     :answer_a: 3
@@ -84,21 +112,3 @@ the action doesn't change anything visuall, much like tracer settings.
     :feedback_d: Incorrect! Consider how many actions the turtle takes in the for loop.
 
     How many actions will be in the turtle's undo queue for the code above?
-
-Polygons, for custom shapes, must have their points defined in counter-clockwise order to appear correctly. This is due to
-the mathematics behind filling arbitrary shapes, and is a limitation almost all computer graphics need to abide by. CTurtle
-features four default shapes, :code:`triangle`, :code:`indented_triangle`, :code:`square`, and :code:`arrow`. Consider
-the construction of their points, and how they could be considered "counter-clockwise". One edge exists between the first
-last points for each of these shapes.
-
-======== ===================== ========== ========
-Triangle   Indented Triangle     Square    Arrow
-======== ===================== ========== ========
-(0, 0)          (0, 0)          (-5, -5)   (0, 0)
-(-5, 5)        (-5, 10)          (-5, 5)  (-5, 5)      
-(5, 5)          (0, 8)           (5, 5)   (-3, 5)
-  .             (5, 10)          (5, 10)  (-3, 10)
-  .               .                .       (3, 10)
-  .               .                .       (3, 5)
-  .               .                .       (5, 5)
-======== ===================== ========== ========

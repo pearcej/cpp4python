@@ -50,9 +50,9 @@ Glossary
 
     write
         Tells the turtle to write text at its current position.
-    
 
-
+Matching
+========
 
 .. dragndrop:: cturtle_dnd_glossary
    :match_1: turn to the left.|||turtle.left
