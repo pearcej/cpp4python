@@ -20,7 +20,7 @@ using the string "random".
     turtle.pencolor({"green"});
     turtle.pencolor({"random"});
 
-Unlike in Python, the :code:`write` function does not allow you to specify a font nor size. This is due to the complex handling
+Unlike in Python, the :code:`write` method does not allow you to specify a font nor size. This is due to the complex handling
 and of Fonts by operating systems that is far more cumbersome to manage in C++. Furthermore, there is no "world" screen mode like
 there is in Python. Normally, this would allow you to specify the "bounds" of your canvas (e.g, specify minimum
 and maximum coordinates for your canvas).

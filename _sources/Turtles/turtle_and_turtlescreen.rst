@@ -10,6 +10,14 @@ Python, as you are required to create your own screen *before* creating a :code:
     ct::Turtle turtle(screen);
     //Notice how the Screen is given to our Turtle when we create it.
 
+Closing a :code:`TurtleScreen` works exactly how it does in Python. For this chapter, only :code:`bye` is used.
+Calling it is not completely necessary, as it is also called automatically if it, or an equivalent method, hasn't been called.
+When working outside of the textbook, the :code:`exitonclick` method is also available.
+
+.. code-block:: cpp
+
+    screen.bye();
+
 Turtles are based on the following premise: "There is a turtle on a canvas with a colored pen
 attached to their tail." In this case, the *canvas* is a :code:`TurtleScreen`. This Turtle will
 follow any command you give it, which consist of telling it to go certain directions, what color
@@ -38,7 +46,7 @@ turtle.write       tells the turtle to write some kind of text.
 Many of these methods are used alongside one-another to create different images. All of the :code:`speed` settings
 you may be familiar with from Python are also available in CTurtle. All speeds are measured on a range of 1 to 10,
 the latter being the fastest and the former being the slowest. The exception is the fastest speed, :code:`TS_FASTEST`,
-which is set to 0.
+which is set to 0 just as it is for Python's equivalent :code:`"fastest"`. The :code:`TS` prefix represents "Turtle Speed".
 
 ============= ============== ==========
  Python Name   CTurtle Name    Speed
@@ -126,7 +134,9 @@ pattern, which must be called in that specified order to actually fill a shape.
         turtle.end_fill();
     =====
         scr.bye();
+    =====
         return 0;
+    =====
     }
 
 There are 14 commonly used methods for Turtles. Many of them have names that indicate what they do. 

@@ -29,7 +29,7 @@ only effects methods regarding rotation, such as :code:`left` and :code:`right`.
 
 The :code:`tracer(N)` method is used to control how many times the Turtle is actually
 drawn on the screen. This method belongs to the :code:`TurtleScreen` object, and effects
-all turtles that are on the screen. The :code:`N` in the function represents the input,
+all turtles that are on the screen. The :code:`N` in the method represents the input,
 only allowing the :code:`TurtleScreen` to display one frame out every :code:`N`.
 
 .. core-block:: cpp
@@ -96,7 +96,7 @@ Consider the following example and related questions.
 
 Similarly to tracer settings, every action a turtle takes is also added to the *undo queue*. This allows it to keep track
 of actions it is performing over a period of time. The queue is only allowed to grow to a certain size, starting at 100 actions total.
-This is modifiable through the :code:`setundobuffer` function that belongs to turtles. Every action is added, even if
+This is modifiable through the :code:`setundobuffer` method that belongs to turtles. Every action is added, even if
 the action doesn't change anything visually. This feature is comparable to the "undo" tool available in most text editors.
 Turtles can "undo" their progress with the :code:`undo` method.
 
