@@ -17,100 +17,94 @@ Turtles are one of many such digital mediums, and are often used to
 create images rich in repetitive features. Your task will be to create
 a mosaic-like tessellating image using turtles.
 
-Consider the following example.
+Consider the following examples.
 
-.. tabbed:: cturtle_example_tabs
+.. activecode:: cturtle_practical_example_cpp
+    :language: cpp
 
-    .. tab:: C++
+    #include <CTurtle.hpp>
+    namespace ct = cturtle;
 
-        .. activecode:: cturtle_practical_example_cpp
-            :language: cpp
-        
-            #include <CTurtle.hpp>
-            namespace ct = cturtle;
+    int main(int argc, char** argv) {
+        const int SQUARE_SIZE = 40;
 
-            int main(int argc, char** argv) {
-                const int SQUARE_SIZE = 40;
+        ct::TurtleScreen scr;
+        scr.tracer(40);//draw faster
+        ct::Turtle turtle(scr);
+        turtle.speed(ct::TS_FASTEST);
+        turtle.penup();
 
-                ct::TurtleScreen scr;
-                scr.tracer(40);//draw faster
-                ct::Turtle turtle(scr);
-                turtle.speed(ct::TS_FASTEST);
-                turtle.penup();
+        bool is_blue = false;
 
-                bool is_blue = false;
+        for(int i = 0; i < 8; i++){
+            turtle.goTo(-scr.window_width()/2,-scr.window_height()/2+ (i*SQUARE_SIZE));
 
-                for(int i = 0; i < 8; i++){
-                    turtle.goTo(-scr.window_width()/2,-scr.window_height()/2+ (i*SQUARE_SIZE));
+            for(int j = 0; j < 8; j++){
+                ct::Color color;
 
-                    for(int j = 0; j < 8; j++){
-                        ct::Color color;
-
-                        if(is_blue){
-                            color = {"blue"};
-                        }else{
-                            color = {"green"};
-                        }
-
-                        turtle.begin_fill();
-                        turtle.fillcolor(color);
-
-                        for(int i = 0; i < 4; i++){
-                            turtle.forward(SQUARE_SIZE);
-                            turtle.right(90);
-                        }
-
-                        turtle.end_fill();
-
-                        turtle.forward(SQUARE_SIZE);
-                        is_blue = !is_blue;//flip-flop between true and false
-                    }
+                if(is_blue){
+                    color = {"blue"};
+                }else{
+                    color = {"orange"};
                 }
 
-                return 0;
+                turtle.begin_fill();
+                turtle.fillcolor(color);
+
+                for(int i = 0; i < 4; i++){
+                    turtle.forward(SQUARE_SIZE);
+                    turtle.right(90);
+                }
+
+                turtle.end_fill();
+
+                turtle.forward(SQUARE_SIZE);
+                is_blue = !is_blue;//flip-flop between true and false
             }
+        }
 
-    .. tab:: Python
+        return 0;
+    }
 
-        .. activecode:: cturtle_practical_example_Python
-            :language: Python
+.. activecode:: cturtle_practical_example_Python
+    :language: Python
 
-            import turtle
+    import turtle
 
-            wn = turtle.Screen()
-            square = turtle.Turtle()
-            square.speed(10)
-            square.pu()
-            square.goto(-turtle.window_width()/2,turtle.window_height()/2);
-            square.pd()
+    wn = turtle.Screen()
+    square = turtle.Turtle()
+    square.speed(10)
+    square.pu()
+    square.goto(-turtle.window_width()/2,turtle.window_height()/2);
+    square.pd()
 
-            a = 0
-            b = 0
-            for i in range(8):
-                if(b == 0):
-                    a=1
-                else:
-                    a=0
-                for j in range(8):
-                    square.penup()
-                    square.goto(-turtle.window_width() / 2 + j * 85, turtle.window_height() / 2 - i * 85)
-                    square.pendown()
-                    if(a==0):
-                        square.fillcolor('red')
-                        a=1
-                    else:
-                        square.fillcolor('blue')
-                        a=0
-                    square.begin_fill()
-                    for k in range(4):
-                        square.forward(85)
-                        square.right(90)
-                    square.end_fill()
-                if(b==0):
-                    b=1
-                else:
-                    b=0
-            wn.exitonclick()
+    a = 0
+    b = 0
+    for i in range(8):
+        if(b == 0):
+            a=1
+        else:
+            a=0
+        for j in range(8):
+            square.penup()
+            square.goto(-turtle.window_width() / 2 + j * 85, turtle.window_height() / 2 - i * 85)
+            square.pendown()
+            if(a==0):
+                square.fillcolor('orange')
+                a=1
+            else:
+                square.fillcolor('blue')
+                a=0
+            square.begin_fill()
+            for k in range(4):
+                square.forward(85)
+                square.right(90)
+            square.end_fill()
+        if(b==0):
+            b=1
+        else:
+            b=0
+    wn.exitonclick()
 
 
 You must create a similar image with the following criteria:

@@ -32,51 +32,45 @@ It acts as a close replacement to provide easy to use graphics to C++, while mai
 the objects and commands you might be used to in Python. It was developed by Jesse Walker-Schadler
 at Berea College during the summer of 2019.
 
-Below is a side-by-side comparison of the two versions, C++ and Python, which should do
-the same thing.
+Below is a comparison of the two versions, C++ and Python, which should do
+the same thing. Try running both and comparing how the code looks between the two versions.
 
-.. tabbed:: cturtle_compare_1
+.. activecode:: cturtle_1
+    :language: cpp
 
-    .. tab:: C++
+    #include <CTurtle.hpp>
+    namespace ct = cturtle;
 
-        .. activecode:: cturtle_1
-            :language: cpp
+    int main() {
+        ct::TurtleScreen scr;
+        ct::Turtle turtle(scr);
+        turtle.speed(ct::TS_SLOWEST);
+        turtle.fillcolor({"purple"});
+        turtle.begin_fill();
+        for (int i = 0; i < 4; i++) {
+            turtle.forward(50);
+            turtle.right(90);
+        }
+        turtle.end_fill();
+        scr.bye();
+        return 0;
+    }
 
-            #include <CTurtle.hpp>
-            namespace ct = cturtle;
+.. activecode:: cturtle_python_1
+    :language: python
 
-            int main() {
-                ct::TurtleScreen scr;
-                ct::Turtle turtle(scr);
-                turtle.speed(ct::TS_SLOWEST);
-                turtle.fillcolor({"purple"});
-                turtle.begin_fill();
-                for (int i = 0; i < 4; i++) {
-                    turtle.forward(50);
-                    turtle.right(90);
-                }
-                turtle.end_fill();
-                scr.bye();
-                return 0;
-            }
+    import turtle
 
-    .. tab:: Python
+    turt = turtle.Turtle()
+    turt.fillcolor("purple")
+    turt.speed("slowest")
 
-        .. activecode:: cturtle_python_1
-            :language: python
-
-            import turtle
-
-            turt = turtle.Turtle()
-            turt.fillcolor("purple")
-            turt.speed("slowest")
-
-            turt.begin_fill()
-            for i in range(4):
-                turt.forward(50)
-                turt.right(90)
-            turt.end_fill()
-            turt.bye()
+    turt.begin_fill()
+    for i in range(4):
+        turt.forward(50)
+        turt.right(90)
+    turt.end_fill()
+    turt.bye()
 
 .. mchoice:: cturtle_question_1
     :answer_a: Students receive instant feedback and gratification for their work.
