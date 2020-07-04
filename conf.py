@@ -9,7 +9,7 @@
 # serve to show the default.
 
 import sys, os
-from runestone import runestone_static_dirs, runestone_extensions
+from runestone import runestone_static_dirs, runestone_extensions, setup
 import pkg_resources
 
 # If extensions (or modules to document with autodoc) are in another directory,
