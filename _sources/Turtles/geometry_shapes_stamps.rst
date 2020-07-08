@@ -38,6 +38,7 @@ Using the default :code:`indented_triangle` shape as an example, Figure 1 shows 
 
 .. figure:: cc_polygon.png
     :align: center
+    :alt: All points must be oriented, in order and in a leftwards direction, relative to the center of the entire shape.
 
     Figure 1: Indented Triangle Definition
 
