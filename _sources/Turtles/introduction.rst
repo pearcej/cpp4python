@@ -1,3 +1,20 @@
+Introduction
+============
+
+C++ is designed with the principal that speed is more important than safety and error-checking.
+This differs from languages like Python, which is considerably more restrictive in regards to
+aspects such as memory allocations and resource management. C++ is translated to "machine language"
+when it is compiled, which is a step skipped by Python. Python skips this step in favor of immediate
+interpretation of the code itself.
+
+This difference is what allows C++ to be as fast as it is, which also makes it particularly good
+for graphically-intensive applications. Graphical applications heavily leverage memory management
+to display every pixel you see on your screen. Python does not allow for the creation of arrays like in
+C++, which are just "chunks" of memory of a fixed size. Furthermore, running directly on the hardware
+allows C++ to communicate better with other components of your computer, such as your graphics processing unit, or "GPU".
+This is one of many reasons C++ is considered an industry standard for high-performance graphics applications, such as
+video games or software used for visual effects in movies.
+
 What are Turtles?
 =======================
 Turtle graphics are a popular and simple way for introducing programming to beginners. 
@@ -12,7 +29,7 @@ left, and right in as few or many steps as desired.
 Turtles are a commonly used library in Python. This chapter will cover a close analog for Turtles between Python and C++,
 the CTurtle library.
 
-Introduction to Turtles in C++
+Turtles in C++
 =======================================
 
 Python is particularly well-suited for educational purposes due to its
