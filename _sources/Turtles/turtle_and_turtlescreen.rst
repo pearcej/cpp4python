@@ -48,15 +48,15 @@ you may be familiar with from Python are also available in CTurtle. All speeds a
 the latter being the fastest and the former being the slowest. The exception is the fastest speed, :code:`TS_FASTEST`,
 which is set to 0 just as it is for Python's equivalent :code:`"fastest"`. The :code:`TS` prefix represents "Turtle Speed".
 
-============= ============== ==========
- Python Name   CTurtle Name    Speed
-============= ============== ==========
-  "fastest"     TS_FASTEST       0
-   "fast"       TS_FAST          10
-  "normal"      TS_NORMAL        6
-   "slow"       TS_SLOW          3
-  "slowest"     TS_SLOWEST       1
-============= ============== ==========
+===================== ============== ==========
+ Python Turtle Name   C-Turtle Name    Speed
+===================== ============== ==========
+       "fastest"       TS_FASTEST       0
+       "fast"          TS_FAST          10
+       "normal"        TS_NORMAL        6
+       "slow"          TS_SLOW          3
+       "slowest"       TS_SLOWEST       1
+===================== ============== ==========
 
 Consider the following annotated example.
 
@@ -116,7 +116,7 @@ pattern, which must be called in that specified order to actually fill a shape.
     -----
     #include <CTurtle.hpp>
     namespace ct = cturtle;
-    ===== 
+    =====
     int main(){
     =====
         ct::TurtleScreen scr;
