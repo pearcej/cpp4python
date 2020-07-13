@@ -62,7 +62,8 @@ Consider the following examples.
                 is_blue = !is_blue;//flip-flop between true and false
             }
         }
-
+        
+        scr.bye();
         return 0;
     }
 
