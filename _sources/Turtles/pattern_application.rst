@@ -25,7 +25,7 @@ Consider the following examples.
     #include <CTurtle.hpp>
     namespace ct = cturtle;
 
-    int main(int argc, char** argv) {
+    int main() {
         const int SQUARE_SIZE = 40;
 
         ct::TurtleScreen scr;
