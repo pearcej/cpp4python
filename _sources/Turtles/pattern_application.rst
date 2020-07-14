@@ -119,7 +119,7 @@ You must create a similar image with the following criteria:
     #include <CTurtle.hpp>
     namespace ct = cturtle;
 
-    int main(int argc, char** argv) {
+    int main() {
         ct::TurtleScreen scr;
         scr.tracer(0);//disable animation
         ct::Turtle turtle(scr);
