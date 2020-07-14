@@ -70,7 +70,6 @@ the same thing. Try running both and comparing how the code looks between the tw
         turt.forward(50)
         turt.right(90)
     turt.end_fill()
-    turt.bye()
 
 .. mchoice:: cturtle_question_1
     :answer_a: Students receive instant feedback and gratification for their work.
