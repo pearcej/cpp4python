@@ -25,20 +25,20 @@ Consider the following examples.
     #include <CTurtle.hpp>
     namespace ct = cturtle;
 
-    int main(int argc, char** argv) {
+    int main() {
         const int SQUARE_SIZE = 40;
 
         ct::TurtleScreen scr;
-        scr.tracer(40);//draw faster
+        scr.tracer(0);//disable animation
         ct::Turtle turtle(scr);
         turtle.speed(ct::TS_FASTEST);
         turtle.penup();
 
-        bool is_blue = false;
-
         for(int i = 0; i < 8; i++){
             turtle.goTo(-scr.window_width()/2,-scr.window_height()/2+ (i*SQUARE_SIZE));
 
+            bool is_blue = i % 2 == 0;//even (true) or odd (false) row?
+            
             for(int j = 0; j < 8; j++){
                 ct::Color color;
 
@@ -62,7 +62,8 @@ Consider the following examples.
                 is_blue = !is_blue;//flip-flop between true and false
             }
         }
-
+        
+        scr.bye();
         return 0;
     }
 
@@ -118,9 +119,9 @@ You must create a similar image with the following criteria:
     #include <CTurtle.hpp>
     namespace ct = cturtle;
 
-    int main(int argc, char** argv) {
+    int main() {
         ct::TurtleScreen scr;
-        scr.tracer(40);
+        scr.tracer(0);//disable animation
         ct::Turtle turtle(scr);
         
         //Your code here
