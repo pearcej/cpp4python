@@ -1,10 +1,10 @@
 Geometry, Shapes, and Stamps
 ============================
 
-Every basic shape in CTurtle is a set of coordinates. Within the CTurtle library we have the 
-choice of a select few shapes that we can me our Turtles inhabit.
+Every basic shape in :code:`C-Turtle` is a set of coordinates. Within the :code:`C-Turtle` library
+we have the choice of a select few shapes that we can me our Turtles inhabit.
 To change the appearance of your Turtle, you can use :code:`shape` to set your Turtle to 
-one of four default shapes, or a custom shape. CTurtle features four default shapes, :code:`triangle`,
+one of four default shapes, or a custom shape. :code:`C-Turtle` features four default shapes, :code:`triangle`,
 :code:`indented_triangle`, :code:`square`, and :code:`arrow`.
 
 The following code example shows how to set the shape of a turtle by giving it the name of a shape.
