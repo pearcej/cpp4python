@@ -1,10 +1,10 @@
-Python Turtles vs C++ Turtles
+Python's turtle vs C-Turtle
 ==========================================
 
-CTurtle varies from Python turtles primarily in syntax. Most of the methods are exactly the same between implementations,
-however there are a few notable differences between the two. Colors, for example, must be surrounded by curly brackets (e.g,
-'{' and '}') when referring to them by a name such as "red", "green", or "blue". You can also ask for a random color by
-using the string "random".
+:code:`C-Turtle` varies from the Python :code:`turtle` library primarily in syntax. Most of the methods
+are exactly the same between implementations, however there are a few notable differences between the two.
+Colors, for example, must be surrounded by curly brackets (e.g, '{' and '}') when referring to them by a
+name such as "red", "green", or "blue". You can also ask for a random color by using the string "random".
 
 .. code-block:: cpp
 
@@ -13,7 +13,7 @@ using the string "random".
     ct::Color blue  = {"blue"};
     ct::Color random = {"random"};
 
-    //This works...
+    //This works due to the variable above...
     turtle.pencolor(red);
 
     //And so do these.
@@ -26,10 +26,10 @@ there is in Python. Normally, this would allow you to specify the "bounds" of yo
 and maximum coordinates for your canvas).
 
 Default shapes are also different and somewhat limited in comparison. Python offers six shapes by default, being "arrow", "circle",
-"turtle", "square", "triangle", and "classic". CTurtle, on the other hand, offers four shapes by default: "arrow", "triangle",
+"turtle", "square", "triangle", and "classic". :code:`C-Turtle`, on the other hand, offers four shapes by default: "arrow", "triangle",
 "indented triangle", and "square".
 
-There are a few utility methods available in CTurtle that are not available in Python, such as :code:`shift` and :code:`middle`.
+There are a few utility methods available in :code:`C-Turtle` that are not available in Python, such as :code:`shift` and :code:`middle`.
 The former of the two, :code:`shift`, simply adds to the X and Y coordinate position of the turtle. If your turtle is at coordinate
 600x, 400y and :code:`shift` is called with coordinate 50x and -50y, the turtle's final position would be 650x, 350y. The latter
 of the two, :code:`middle`, returns the point exactly between two other points. See the examples below.

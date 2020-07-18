@@ -1,24 +1,41 @@
+Introduction
+============
+
+C++ is designed with the principal that speed is more important than safety and error-checking.
+This differs from languages like Python, which is considerably more restrictive in regards to
+aspects such as memory allocations and resource management. C++ is translated to "machine language"
+when it is compiled, which is a step skipped by Python. Python skips this step in favor of immediate
+interpretation of the code itself.
+
+This difference is what allows C++ to be as fast as it is, which also makes it particularly good
+for graphically-intensive applications. Graphical applications heavily leverage memory management
+to display every pixel you see on your screen. Python does not allow for the creation of arrays like in
+C++, which are just "chunks" of memory of a fixed size. Furthermore, running directly on the hardware
+allows C++ to communicate better with other components of your computer, such as your graphics processing unit, or "GPU".
+This is one of many reasons C++ is considered an industry standard for high-performance graphics applications, such as
+video games or software used for visual effects in movies.
+
 What are Turtles?
 =======================
 Turtle graphics are a popular and simple way for introducing programming to beginners. 
 It was part of the original Logo programming language developed by 
-Wally Feurzeig, Seymour Papert and Cynthia Solomon in 1967.
+Wally Feurzeig, Seymour Papert, and Cynthia Solomon in 1967.
 
-Imagine Turtles as being a digital marker used for drawing various shapes, images, and designs.
+Imagine turtles as being a digital marker used for drawing various shapes, images, and designs.
 Drawing with Turtles can be as basic as a simple triangle and as complex as a highly detailed fractal image.
 Nearly all commands used when drawing with Turtles are as simple as telling your Turtle to move forward, backward,
 left, and right in as few or many steps as desired.
 
-Turtles are a commonly used library in Python. This chapter will cover a close analog for Turtles between Python and C++,
-the CTurtle library.
+The :code:`turtle` library is commonly used in Python. This chapter will cover a close analog for turtle graphics between 
+Python and C++, the :code:`C-Turtle` library.
 
-Introduction to Turtles in C++
+Turtles in C++
 =======================================
 
 Python is particularly well-suited for educational purposes due to its
 wide array of built in tools and good documentation. These things are particularly
 lacking in regards to C++, as many of the built-in tools require complicated syntax
-and deep understanding of the language itself. One of these tools is Turtles,
+and deep understanding of the language itself. One of these tools is the :code:`turtle` library,
 which is very well suited for educational purposes because it offers live, interactive,
 and visual representations of your code.
 
@@ -27,12 +44,12 @@ from an alternative point of view: rather than waiting anxiously for the print s
 to come around after your program churns, you get a visual representation of the concept itself.
 This is particularly useful for abstract concepts such as recursion and iteration.
 
-For C++, a library titled C-Turtle is used to provide an equivalent of Python's Turtles.
+For C++, a library called :code:`C-Turtle` is used to provide an equivalent of Python's :code:`turtle`.
 It acts as a close replacement to provide easy to use graphics to C++, while maintaining
 the objects and commands you might be used to in Python. It was developed by Jesse Walker-Schadler
 at Berea College during the summer of 2019.
 
-Below is a comparison of the two versions, C++ and Python, which should do
+Below is a comparison of the two versions, C++ and Python, which do
 the same thing. Try running both and comparing how the code looks between the two versions.
 
 .. activecode:: cturtle_1
@@ -70,7 +87,6 @@ the same thing. Try running both and comparing how the code looks between the tw
         turt.forward(50)
         turt.right(90)
     turt.end_fill()
-    turt.bye()
 
 .. mchoice:: cturtle_question_1
     :answer_a: Students receive instant feedback and gratification for their work.
