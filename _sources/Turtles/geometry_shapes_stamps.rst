@@ -65,6 +65,7 @@ the coordinates of the polygon, you might surprise yourself with what shape you 
     int main(){
         ct::TurtleScreen screen;
         ct::Turtle turtle(screen);
+        screen.tracer(1, 1000);
 
         ct::Polygon upside_down_triangle = {
           {0, 0},   //First point
