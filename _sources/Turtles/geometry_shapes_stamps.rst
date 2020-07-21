@@ -64,8 +64,8 @@ the coordinates of the polygon, you might surprise yourself with what shape you 
 
     int main(){
         ct::TurtleScreen screen;
-        ct::Turtle turtle(screen);
         screen.tracer(1, 1000);
+        ct::Turtle turtle(screen);
 
         ct::Polygon upside_down_triangle = {
           {0, 0},   //First point
@@ -97,6 +97,7 @@ The following code is a full example showing how to combine custom shapes with s
 
     int main(){
         ct::TurtleScreen screen;
+        screen.tracer(1, 1000);
         ct::Turtle turtle(screen);
 
         ct::Polygon upside_down_triangle = {
