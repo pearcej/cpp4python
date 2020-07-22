@@ -14,9 +14,6 @@ Glossary
     ``const``
         keyword that makes a variable or value constant and unchanging.
 
-    friend
-        an operator or function that can access the private data members of a class of which it is designated as a friend.
-
     function
         a section of code that performs a procedure and is usually named.
 
@@ -26,7 +23,7 @@ Glossary
     parameter
         a variable in a function or method definition that accepts data passed from an argument.
 
-    reference
+    pointer
         a value that indicates a place in a computer’s memory.
 
     ``void``
