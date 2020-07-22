@@ -17,10 +17,10 @@ Glossary
     hash table
         a collection consisting of key-value pairs with an associated hash function that maps the key to the associated value.
 
-    immutable
+    const (immutable)
         unable to be modified.
 
-    mutability
+    non-const (mutable)
         the ability of an object to be modified.
 
     set
