@@ -144,7 +144,7 @@ See if you can match each method description with their names!
 
 .. dragndrop:: cturtle_dnd_1
    :match_1: turn to the left.|||turtle.left
-   :match_2: turn to the left.|||turtle.right
+   :match_2: turn to the right.|||turtle.right
    :match_3: pick pen up.|||turtle.penup
    :match_4: put pen down.|||turtle.pendown
    :match_5: what color to fill drawing with.|||turtle.fillcolor
@@ -153,9 +153,5 @@ See if you can match each method description with their names!
    :match_8: change the pen color.|||turtle.pencolor
    :match_9: change the pen size.|||turtle.width
    :match_10: change the speed|||turtle.speed
-   :match_11: move backward.|||turtle.back
-   :match_12: move forward.|||turtle.forward
-   :match_13: move to a specific coordinate.|||turtle.goto
-   :match_14: write some text to the canvas.|||turtle.write
 
    Match the turtle method descriptions to the methods they belong to.

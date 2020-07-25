@@ -26,7 +26,7 @@ Consider the following examples.
     namespace ct = cturtle;
 
     int main() {
-        const int SQUARE_SIZE = 40;
+        const int SQUARE_SIZE = 35;
 
         ct::TurtleScreen scr;
         scr.tracer(0);//disable animation
@@ -35,7 +35,7 @@ Consider the following examples.
         turtle.penup();
 
         for(int i = 0; i < 8; i++){
-            turtle.goTo(-scr.window_width()/2,-scr.window_height()/2+ (i*SQUARE_SIZE));
+            turtle.goTo(-scr.window_width()/2,-scr.window_height()/2+ (i*SQUARE_SIZE)+SQUARE_SIZE);
 
             bool is_blue = i % 2 == 0;//even (true) or odd (false) row?
             
@@ -72,7 +72,10 @@ Consider the following examples.
 
     import turtle
 
+    SQUARE_SIZE = 35
+
     wn = turtle.Screen()
+    wn.tracer(0);
     square = turtle.Turtle()
     square.speed(10)
     square.pu()
@@ -88,7 +91,7 @@ Consider the following examples.
             a=0
         for j in range(8):
             square.penup()
-            square.goto(-turtle.window_width() / 2 + j * 85, turtle.window_height() / 2 - i * 85)
+            square.goto(-turtle.window_width() / 2 + j * SQUARE_SIZE, (-turtle.window_height() / 2) + i * SQUARE_SIZE + SQUARE_SIZE)
             square.pendown()
             if(a==0):
                 square.fillcolor('orange')
@@ -98,14 +101,14 @@ Consider the following examples.
                 a=0
             square.begin_fill()
             for k in range(4):
-                square.forward(85)
+                square.forward(SQUARE_SIZE)
                 square.right(90)
             square.end_fill()
         if(b==0):
             b=1
         else:
             b=0
-    wn.exitonclick()
+    wn.tracer(1)
 
 
 You must create a similar image with the following criteria:

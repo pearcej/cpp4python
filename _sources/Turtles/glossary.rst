@@ -55,18 +55,14 @@ Matching
 ========
 
 .. dragndrop:: cturtle_dnd_glossary
-   :match_1: turn to the left.|||turtle.left
-   :match_2: turn to the left.|||turtle.right
-   :match_3: pick tail up.|||turtle.penup
-   :match_4: put tail down.|||turtle.pendown
-   :match_5: what color to fill drawing with.|||turtle.fillcolor
-   :match_6: start filling the shape.|||turtle.beginfill
-   :match_7: stops filling the shape.|||turtle.endfill
-   :match_8: change the paintbrush color.|||turtle.pencolor
-   :match_9: change the paintbrush size.|||turtle.width
-   :match_10: change the speed|||turtle.speed
-   :match_11: move backward.|||turtle.back
-   :match_12: move forward.|||turtle.forward
-   :match_13: move to a specific coordinate.|||turtle.goto
-   :match_14: write some text to the canvas.|||turtle.write
+   :match_1: what color to fill drawing with.|||turtle.fillcolor
+   :match_2: start filling the shape.|||turtle.beginfill
+   :match_3: stops filling the shape.|||turtle.endfill
+   :match_4: change the paintbrush color.|||turtle.pencolor
+   :match_5: change the paintbrush size.|||turtle.width
+   :match_6: change the speed|||turtle.speed
+   :match_7: move backward.|||turtle.back
+   :match_8: move forward.|||turtle.forward
+   :match_9: move to a specific coordinate.|||turtle.goto
+   :match_10: write some text to the canvas.|||turtle.write
 
