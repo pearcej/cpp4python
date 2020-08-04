@@ -9,7 +9,13 @@ College students in 2018 and early 2019. Other portions of this book began as
 web pages written by Jan Pearce as support for a Berea College C++ programming class.
 Still other sections were newly written by Jan Pearce for this ebook.
 
-We are particularly grateful to Runestone for the excellent framework for
+We are very grateful to Berea College student Jesse Walker-Schadler.
+ In the summer of 2019 Jesse wrote an excellent wrapper
+for the CImg library that would allow graphics in C++ to utilize commands like
+the Turtle library in Python. In the summer of 2020 he led the incorporation into
+this book.
+
+We are also particularly grateful to Runestone for the excellent framework for
 ebooks that facilitate running both C++ and Python in the browser.
 
 Getting Started
