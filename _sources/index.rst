@@ -4,16 +4,16 @@
    contain the root `toctree` directive.
 
 .. meta::
-   :description: An interactive book designed to help learners transstion from Python to C++.
-   :keywords: C++, cpp, python, computer science
+   :description: An interactive book designed to help learners transition from Python to C++.
+   :keywords: C++, cpp, Python, computer science
 
 .. toc_version: 2
 
-=============================================================
+===========================
  C++ for Python Programmers
-=============================================================
+===========================
 
-By Jan Pearce, Berea College, and Brad Miller, Runestone
+By Jan Pearce, Berea College and Brad Miller, Runestone
 
 .. raw:: html
 
@@ -38,10 +38,22 @@ Acknowledgements
 ::::::::::::::::
 
 Many thanks to Runestone for creating a very strong framework for open source computing books.
-Many thanks also to Berea College's labor program for making it possible for students to contribute.
+Many thanks also to Berea College's Labor Program for making it possible for students to
+undergraduate students to receive funding to contribute.
 
-Indices and tables
-::::::::::::::::::
+Some sections of this book were originally written by Dr. Brad Miller as
+*Java for Python Programmers*. These were translated to the C++ language
+by Dr. Jan Pearce and a team of excellent students from Berea College.
+Other sections were originally written as course web pages by Dr. Jan Pearce.
+
+We would like to extend a special note of gratitude to
+.. _Jesse Walker-Schadler: `https://www.linkedin.com/in/jesse-walker-schadler-a4898916b/`_
+who had the vision to create the .. _CTurtle library: `https://github.com/walkerje/C-Turtle`_
+which makes graphing in C++ particularly easy for Python programmers because it used the
+Python Turtle library syntax, and for his excellent work in porting it to Runestone.
+
+Index and Search
+::::::::::::::::
 
 * :ref:`genindex`
 * :ref:`search`
