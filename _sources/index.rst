@@ -47,8 +47,8 @@ by Dr. Jan Pearce and a team of excellent students from Berea College.
 Other sections were originally written as course web pages by Dr. Jan Pearce.
 
 We would like to extend a special note of gratitude to
-.. _Jesse Walker-Schadler: `https://www.linkedin.com/in/jesse-walker-schadler-a4898916b/`_
-who had the vision to create the .. _CTurtle library: `https://github.com/walkerje/C-Turtle`_
+`Jesse Walker-Schadler <https://www.linkedin.com/in/jesse-walker-schadler-a4898916b>`_
+who had the vision to create the `CTurtle library <https://github.com/walkerje/C-Turtle>`_
 which makes graphing in C++ particularly easy for Python programmers because it used the
 Python Turtle library syntax, and for his excellent work in porting it to Runestone.
 
