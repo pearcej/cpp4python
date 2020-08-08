@@ -630,7 +630,7 @@ and had the following instructions instead?
 
         int main( ) {
             int varN = 100;
-            int *ptrN = varN; // Note no asterisk,
+            int *ptrN = varN; // Note no ampersand,
                 // ptrN now refers to memory position 100,
                 // whatever happens to be there!
                 // You might get an error or you might not!
