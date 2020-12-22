@@ -391,7 +391,7 @@ Check yourself
 
 .. fillintheblank:: input
 
-   What command is used to accept C++ input?
+   What keyword from the Standard Library (std) is used in conjunction with the extraction operator to accept C++ input from the keyboard as the standard input?
 
   - :cin: Right! It stands for console input.
     :raw_input: That's Python, not C++!
