@@ -374,14 +374,19 @@ Check yourself
   True or False: Both Python and C++ support multi-line comments. In C++, they begin with ``/*`` and end with ``*/``.
 
 
-.. fillintheblank:: output
 
-   What command is used to produce C++ output?
+.. mchoice:: mc_comment
+   :answer_a: cout x;
+   :answer_b: output x;
+   :answer_c: print x;
+   :answer_d: none of the above
+   :correct: d
+   :feedback_a: Partically right. The object cout stands for console output and you need it, but you will also need to use the insertion operator <<.
+   :feedback_b: No, output is not a C++ command or object.
+   :feedback_c: No, print is a Python command, but is not used in C++.
+   :feedback_d: The correct statement would be "cout << x;" or "std:cout x;" but the insertion operator is certainly needed.
 
-   - :cout: Right! Good job! It stands for console output.
-     :print: That's Python, not C++!
-     :printf: That's C, not C++!
-     :default: Incorrect. Please try again.
+   Given a variable called x. What statement will print the contents of x?
 
 
 .. fillintheblank:: input
