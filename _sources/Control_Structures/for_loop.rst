@@ -59,7 +59,7 @@ Check yourself
     int main() {
 
         for (int counter=0; counter<4; counter++) {
-            cout << counter * 2 << <<" ";
+            cout << counter * 2 << " ";
         }
 
         return 0;
