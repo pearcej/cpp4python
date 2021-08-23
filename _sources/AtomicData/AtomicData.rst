@@ -616,9 +616,9 @@ memory location.
 The second output sentence is the address of varN, which would most likely be
 different if you run the program on your machine.
 
-WARNING: What happens if you forget the asterisk
+WARNING: What happens if you forget the ampersand
 when assigning a value to a pointer
-and had the following instructions instead?
+and have the following instructions instead?
 
 .. _cpp_address_error:
 
