@@ -15,13 +15,13 @@ A ``for`` statement allows us to write a loop that is executed a specific number
 
    int main() {
       for (int i = 0; i < 10; i++){
-            cout<< i<< "hello world"<<endl;
+            cout << i << "hello world" << endl;
        }
     }
 
 
 
-In the example above, the **hello world!** statement is executed 10 times.
+In the example above, the **hello world** statement is executed 10 times.
 
 A common use of the ``for`` construct is to implement **certain** repetition  
 over a range of values.
