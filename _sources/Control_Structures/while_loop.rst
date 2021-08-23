@@ -81,15 +81,15 @@ These are the same as we saw in earlier chapters.
     int main(){
         int counter = 0;
         while (counter <= 1) {
-            cout << "Hello, world"<< counter << endl;
+            cout << "Hello, world!" << endl;
         }
     };
 
 
 .. mchoice:: mc_whileloop
-  :answer_a: Infinitely cout "0"
-  :answer_b: cout "Hello world" 1 time
-  :answer_c: Infinitely cout "Hello world"
+  :answer_a: "0" is written 1 time.
+  :answer_b: "Hello world!" is written 1 time.
+  :answer_c: "Hello world!" is written infinitely many times.
   :answer_d: None of the  above.
   :correct: c
   :feedback_a: Take a look at the cout line.
