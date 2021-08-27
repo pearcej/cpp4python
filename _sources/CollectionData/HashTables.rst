@@ -156,7 +156,7 @@ describes them, and the session shows them in action.
                 ``count``      ``mymap.count(key)``     Returns ``true`` if key is in ``mymap``, ``false`` otherwise
                 ``erase``      ``mymap.erase(key)``                                 Removes the entry from ``mymap``
                 ``begin``         ``mymap.begin()``                    An iterator to the first element in ``mymap``
-                  ``end``        ``mymap.end(key)``        An iterator pointing to past-the-end element of ``mymap``
+                  ``end``           ``mymap.end()``        An iterator pointing to past-the-end element of ``mymap``
     ===================== ========================= ================================================================
 
 
@@ -171,3 +171,4 @@ Matching
    :match_5: end|||An iterator pointing to past-the-end element of the hash table.
 
     Match the Hash Table operations with their corresponding explination.
+ble
