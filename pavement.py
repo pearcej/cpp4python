@@ -24,7 +24,7 @@ except ImportError:
 project_name = "cpp4python"
 ###############################
 
-master_url = None
+master_url = "http://137.184.70.177:8080"
 if not master_url:
     master_url = get_master_url()
 
