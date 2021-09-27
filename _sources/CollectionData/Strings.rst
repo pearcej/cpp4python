@@ -74,7 +74,7 @@ Matching
    :match_9: append|||Adjoins a string to the end of the string.
    :match_10: find||| Returns the index of the first occurrence of item.
 
-    Match the String operations with their corresponding explination. 
+    Match the String operations with their corresponding explanation. 
 
 .. tabbed:: intro_string
 
