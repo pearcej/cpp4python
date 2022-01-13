@@ -245,12 +245,12 @@ Standard Output
 
 We often have a need to interact with users, either to get data or to provide some sort of result.
 The C++ ``<iostream>`` library provides us with the functionality to get information
-from the console input as well as to output information to the console. This input and output is handled by what
+from the standard input as well as to output information to the standard output. This input and output is handled by what
 is known as a ``stream``.
 
 A ``stream`` is essentially a channel in which data flows from the source to a destination (often called the "sink".)
-Output streams send data out, and the standard output stream ``cout`` sends data to the screen, also called the console.
-So, ``cout`` stands for "console output".
+Output streams send data out, and the standard output stream ``cout`` sends character data to the screen.
+So, ``cout`` stands for "character output".
 Much like the Python ``print`` statement, ``cout`` is used to
 print to the standard output device, which is typically your screen.
 When ``cout`` is used, you will also see ``<<`` used.
@@ -279,10 +279,10 @@ can be used to concatenate in Python.
 Standard Input
 --------------
 
-In addition to being able to output to the console, we want to be able to take input from the user.
-The command ``cin`` is somewhat similar to ``cout`` except, of course, it is used for input.
+In addition to being able to output to the standard output, we want to be able to take input from the user.
+The command ``cin`` is somewhat similar to ``cout`` except, of course, it is used for getting character input.
 Input streams direct data from a source, such as the keyboard or a file.
-As you might have guessed, ``cin`` stands for "console input" and it makes getting input from the standard input device (usually the keyboard) relatively easy.
+As you might have guessed, ``cin`` stands for "character input" and it makes getting input from the standard input device (usually the keyboard) relatively easy.
 The input operator in C++ is ``>>``.
 
 Here is an example that uses ``cin``:
