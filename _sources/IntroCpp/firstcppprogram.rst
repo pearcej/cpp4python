@@ -381,7 +381,7 @@ Check yourself
    :answer_c: print x;
    :answer_d: none of the above
    :correct: d
-   :feedback_a: Partically right. The object cout stands for console output and you need it, but you will also need to use the insertion operator <<.
+   :feedback_a: Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator <<.
    :feedback_b: No, output is not a C++ command or object.
    :feedback_c: No, print is a Python command, but is not used in C++.
    :feedback_d: The correct statement would be "cout << x;" or "std:cout x;" but the insertion operator is certainly needed.
@@ -393,7 +393,7 @@ Check yourself
 
    What keyword from the Standard Library (std) is used in conjunction with the extraction operator to accept C++ input from the keyboard as the standard input?
 
-  - :cin: Right! It stands for console input.
+  - :cin: Right! It stands for character input.
     :raw_input: That's Python, not C++!
     :input: That's Python, not C++!
     :scanf: That's C, not C++!
