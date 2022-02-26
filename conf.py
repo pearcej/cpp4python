@@ -43,7 +43,7 @@ project = u'C++ for Python Programmers'
 copyright = u'2019 Jan Pearce and Brad Miller'
 key_words= "Python, C++, transition"
 course_description = "This short ebook is intended to make it easy for anyone who has some background in programming in Python to transition to programming in C++. This ebook also utilizes an optional graphics module that allows graphics in C++ to utilize commands like the Turtle library in Python. "
-shelf_section = "Language Transition Books"
+shelf_section = "Language Transition"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
