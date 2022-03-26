@@ -3,34 +3,21 @@ C++ for Python Programmers
 
 This short ebook is intended to make it easy for anyone with at least some background
 in Python to transition to programming in C++.
+
 Portions of this book began as *Java for Python Programmers* by Brad Miller.
 These sections were translated to C++ by Jan Pearce and a team of excellent Berea
 College students in 2018 and early 2019. Other portions of this book began as
 web pages written by Jan Pearce as support for a Berea College C++ programming class.
 Still other sections were newly written by Jan Pearce for this ebook.
 
-We are very grateful to Berea College student Jesse Walker-Schadler.
- In the summer of 2019 Jesse wrote an excellent wrapper
-for the CImg library that would allow graphics in C++ to utilize commands like
-the Turtle library in Python. In the summer of 2020 he led the incorporation into
-this book.
+Special acknowledgement is due to  `Jesse Walker-Schadler <https://www.linkedin.com/in/jwwschadler/>`_ who while just a student in the Berea College Data Structures course had a vision of making graphics in C++ as easy as they are in Python both in terms of both syntax and installations.  Over the course of two summers, he realized this vision with the creation in `the open source CTurtle library <https://github.com/walkerje/C-Turtle>`_ which provides all of the C++ interactive graphics in this textbook. 
 
-We are also particularly grateful to Runestone for the excellent framework for
-ebooks that facilitate running both C++ and Python in the browser.
+How to use this book
+====================
 
-Getting Started
-===============
-
-We have tried to make it as easy as possible for you to build and use this book.
-
-1. You can see and read this book online at
-   `interactivepython.org <http://interactivepython.org/runestone/static/cpp4py/index.html>`_
-
-2.  You can build it and host it yourself in just a few simple steps:
-
-    1.  ``pip install git+git://github.com/RunestoneInteractive/RunestoneComponents.git``  -- Should install everything you need
-    2.  ``runestone build`` -- will build the html and put it in ``./build/cpp4py``
-    3.  ``runestone serve``   -- will start a webserver and serve the pages locally from ``./build/cpp4py``
+- The generic version of this book is located at `https://runestone.academy/ns/books/published/cpp4python/index.html <https://runestone.academy/ns/books/published/cpp4python/index.html>`_ 
+- Instructors who wish to use this book go to `https://runestone.academy/ <https://runestone.academy/>`_ and make an account using *cpp4python* as the base book.
+- Those wishing to report bugs or suggest improvements can do so at `https://github.com/pearcej/cpp4python/issues <https://github.com/pearcej/cpp4python/issues>`_.
 
 Licensing
 =========
