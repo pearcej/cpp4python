@@ -30,9 +30,7 @@ Glossary
 
     ``int``
         keyword for integer data type.
-
-    pointer
-        variables that store and manipulate memory addresses.
+        
 
 Matching
 --------

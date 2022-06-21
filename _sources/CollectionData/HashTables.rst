@@ -171,4 +171,5 @@ Matching
    :match_5: end|||An iterator pointing to past-the-end element of the hash table.
 
     Match the Hash Table operations with their corresponding explination.
-ble
+
+

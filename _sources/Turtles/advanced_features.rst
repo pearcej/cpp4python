@@ -32,7 +32,7 @@ drawn on the screen. This method belongs to the :code:`TurtleScreen` object, and
 all turtles that are on the screen. The :code:`N` in the method represents the input,
 only allowing the :code:`TurtleScreen` to display one frame out every :code:`N`.
 
-.. core-block:: cpp
+.. code-block:: cpp
 
     screen.tracer(12);
     //Show one out of every 12 frames of animation.
