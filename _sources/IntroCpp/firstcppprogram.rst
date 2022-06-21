@@ -374,8 +374,7 @@ Check yourself
   True or False: Both Python and C++ support multi-line comments. In C++, they begin with ``/*`` and end with ``*/``.
 
 
-
-.. mchoice:: mc_comment
+.. mchoice:: mc_comment_out
    :answer_a: cout x;
    :answer_b: output x;
    :answer_c: print x;
