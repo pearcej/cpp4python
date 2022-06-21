@@ -20,7 +20,7 @@ if master_url is None:
     master_url = get_master_url()
 
 master_app = 'runestone'
-serving_dir = './build/cppds'
+serving_dir = './build/cpp4python'
 dynamic_pages = True
 if dynamic_pages:
     dest = './published'
@@ -47,7 +47,7 @@ options(
             'use_services': 'true',
             'python3': 'true',
             'dburl': 'postgresql://bmiller@localhost/runestone',
-            'basecourse': 'cppds',
+            'basecourse': 'cpp4python',
             'downloads_enabled': 'false',
             'enable_chatcodes': 'false',
             'allow_pairs': 'false'
