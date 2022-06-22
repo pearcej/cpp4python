@@ -287,11 +287,34 @@ The input operator in C++ is ``>>``.
 
 Here is an example that uses ``cin``:
 
-.. raw :: html
 
-    <div>
-    <iframe height="600px" width="100%" src="https://repl.it/@pearcej/cin-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-    </div>
+.. activecode:: cin_user_input
+  :language: cpp
+  :stdin: 12.4
+
+  The active code below is an example of what getting input from the
+  user might look like. Feel free to change 12.4 to other values!
+  ~~~~
+  #include <iostream>
+  using namespace std;
+
+  int main() {
+
+    //declares num as a floating point number variable
+    float num;
+    
+    // Displays this text to the console
+    cout << "Give me a number: ";
+
+    // Takes the user's input and stores it in num
+    cin >> num;
+
+    // Displays to the console
+    cout << "This is your number doubled: " << num*2 << endl;
+
+    return 0;
+  }
+
 
 Type Declarations
 -----------------
@@ -367,12 +390,11 @@ Check yourself
 .. mchoice:: mc_mlcomment
   :answer_a: True
   :answer_b: False
-  :correct: a
-  :feedback_a: Right!
-  :feedback_b: Sorry, both languages do support multi-line comments.Python uses triple quotes while in C++ they begin with /* and end with */.
-
-  True or False: Both Python and C++ support multi-line comments. In C++, they begin with ``/*`` and end with ``*/``.
-
+  :correct: b
+  :feedback_a: Sorry, both languages do support multi-line comments, but they look different.
+  :feedback_b: Right!  Python uses triple quotes while in C++ they begin with /* and end with */.
+  
+   True or False: Both Python and C++ support multi-line comments. In C++, they begin with ``/*`` and end with ``*/``.
 
 .. mchoice:: mc_comment_out
    :answer_a: cout x;
