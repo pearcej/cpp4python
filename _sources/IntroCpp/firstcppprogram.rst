@@ -304,7 +304,7 @@ Here is an example that uses ``cin``:
     float num;
     
     // Displays this text to the console
-    cout << "Give me a number: ";
+    cout << "Give me a number:" << endl;
 
     // Takes the user's input and stores it in num
     cin >> num;
