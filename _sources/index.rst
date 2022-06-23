@@ -34,6 +34,14 @@ By Jan Pearce, Berea College and Brad Miller, Runestone
    Exception_Handling/toctree.rst
    Turtles/toctree.rst
 
+Reporting Typos or Other Problems
+:::::::::::::::::::::::::::::::::
+
+Thank you for your help in improving this text. If you find a typo or other problem, please visit the
+ `issue clue <https://github.com/pearcej/cpp4python/issues>`_ giving as much information as 
+needed to understand the problem. Including the URL of the page where the problem occurred is 
+especially helpful.
+
 Acknowledgements
 ::::::::::::::::
 
