@@ -18,7 +18,7 @@ Glossary
         a section of code that performs a procedure and is usually named.
 
     overloading
-        specifying more than one definition for the same function name or the same operator within the same scope.
+        specifying more than one definition for the same function name within the same scope.
 
     parameter
         a variable in a function or method definition that accepts data passed from an argument.
@@ -37,7 +37,7 @@ Matching
    :match_1: argument|||Data passed to parameter.
    :match_2: const|||indicates a variable or value is unchanging.
    :match_3: function ||| Section of code that performs a procedure and usually is named meaningfully. 
-   :match_4: overloading|||Specifying more than one definition for the same function name or the same operator within the same scope.
+   :match_4: overloading|||Specifying more than one definition for the same function name.
    :match_5: parameter|||Variable in a function or method definition that accepts data passed from an argument.
    :match_6: reference|||Value that indicates an address in a computer’s memory.
    :match_7: void|||indicates a function has no return value.
