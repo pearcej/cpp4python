@@ -133,14 +133,14 @@ Reading and Writing with File Streams
 
 As file I/O streams work in a similar way to ``cin`` and ``cout``, the operators ">>" and "<<" perform the same direction of data for files, with the exact same syntax.
 
-For example, execution of the following statement will write the number 25, a space, the number 15, and another space into the out_stream output stream.
+For example, execution of the following statement will write the number 25, a line break, the number 15, and another line break into the out_stream output stream.
 
 ::
 
     out_stream << 25 << endl;
     out_stream << 15 << endl;
 
-The extra space after the value 25 is important because data in a text file is typically seperated by a space, tab, or newline. Without the space, the value 2515 will be placed in the file, and subsequent read operations on that file would consider 2515 as a single value. For example, suppose that after the previous statement, the program opens the same file with the input stream in_stream. The following statement would put the number 25 into the variable ``inputn``.
+The line break after the value 25 is important because data in a text file is typically seperated by a space, tab, or a line break. Without the line break, the value 2515 will be placed in the file, and subsequent read operations on that file would consider 2515 as a single value. For example, suppose that after the previous statement, the program opens the same file with the input stream in_stream. The following statement would put the number 25 into the variable ``inputn``.
 
 ::
 
