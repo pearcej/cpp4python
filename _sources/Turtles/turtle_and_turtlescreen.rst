@@ -114,7 +114,7 @@ pattern, which must be called in that specified order to actually fill a shape.
     Construct a program that fills a green triangle using begin_fill and end_fill
     using the example code above as a guide.
     -----
-    #include <CTurtle.hpp>
+    #include &#x003C&#x0043&#x0054&#x0075&#x0072&#x0074&#x006C&#x0065.hpp>
     namespace ct = cturtle;
     =====
     int main(){
