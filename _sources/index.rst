@@ -37,14 +37,12 @@ By Jan Pearce, Berea College and Brad Miller, Runestone
 Reporting Typos or Other Problems
 :::::::::::::::::::::::::::::::::
 
-Thank you for your help in improving this text. If you find a typo or other problem, please visit the
- `issue clue <https://github.com/pearcej/cpp4python/issues>`_ giving as much information as 
-needed to understand the problem. Including the URL of the page where the problem occurred is 
-especially helpful.
+Thank you for your help in improving this text. If you find a typo or other problem, you can visit the `Github issue tracker <https://github.com/pearcej/cpp4python/issues>`_ giving as much information as needed to understand the problem. If you include the URL of the page where the problem occurred, this is especially helpful. Alternatively, you can contact the author `Jan Pearce <https://www.berea.edu/csc/faculty-and-staff/dr-jan-pearce/>`_ via email.
+
 
 Acknowledgements
 ::::::::::::::::
-
+https://www.berea.edu/csc/faculty-and-staff/dr-jan-pearce/
 Many thanks to Runestone for creating a very strong framework for open source computing books.
 Many thanks also to Berea College's Labor Program for making it possible for students to
 undergraduate students to receive funding to contribute.
