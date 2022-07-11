@@ -48,7 +48,7 @@ main()
         <p>Boolean data objects are also used as results for comparison operators
             such as equality (==) and greater than (<math>&gt;</math>). In addition,
             relational operators and logical operators can be combined together to
-            form complex logical questions. <xref ref="atomic-data_atomic-data_tab-relational"/> shows the relational
+            form complex logical questions. <xref ref="atomic-data_id1"/> shows the relational
             and logical operators with examples shown in the session that follows.</p>
         
         <table xml:id="atomic-data_id1"><tabular>
