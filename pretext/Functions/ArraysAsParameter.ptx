@@ -1,0 +1,41 @@
+<section xml:id="functions_arrays-as-parameters-in-functions">
+        <title>Arrays as Parameters in Functions</title>
+        <p>An array is a collection data type that is the ancestor of the Python list.
+            We will discuss arrays in more detail in the next chapter.
+            Functions can be used with <term>array parameters</term> to maintain a structured design.
+            However, a formal parameter for an array is neither a call-by-value nor a call-by-reference,
+            but a new type of parameter pass called an array parameter.
+            In a function definition, an array parameter looks like a pass-by-value parameter
+            because there is no ampersand symbol (&amp;), but the variable name is instead followed
+            by a set of square brackets ([ and ]).</p>
+        <p>The following example function returns the average hours worked over the array of
+            integers (note that we need to also pass in the number of elements in that array
+            because the array parameter <em>list[]</em> does not include that information):</p>
+        <pre>double average( int list[], int length ) {
+     // It is correct syntax to omit the array length on the array itself.
+    double total = 0;
+     //return type double which indicates that a decimal is being returned
+    int count;
+    for( count = 0; count &lt; length; count++ ) {
+        total += double(list[count]);
+    };
+    return (total / length);
+}</pre>
+        <p>Array parameters look like <em>pass by value</em>, but they are effectively similar to <em>pass by reference</em> parameters. When they execute, the functions with these parameters do not make private copies of the arrays. Instead, the reference is passed to reduce the impact on memory. Arrays can therefore always be permanently changed when passed as arguments to functions.</p>
+        <p>After a call to the following function, each element in the third array argument is equal to the sum of the corresponding two elements in the first and second arguments:</p>
+        <pre>void add_lists( int first[], int second[], int total[], int length ) {
+    //return type void which indicates that nothing is returned
+    int count;
+    for( count = 0; count &lt; length; count++ ) {
+        total[count] = first[count] + second[count];
+};}</pre>
+        <p>Upon further examination, we can see that the first two arrays do not change values. To prevent ourselves from accidentally modifying any of these arrays, we can add the modifier <c>const</c> in the function head:</p>
+        <pre>void add_lists( const int first[], const int second[], int total[], int length ) {
+    //return type void which indicates that nothing is returned
+    int count;
+    for( count = 0; count &lt; length; count++ ) {
+        total[count] = first[count] + second[count];
+};}</pre>
+        <p>These changes would ensure that the compiler will then not accept any statements within the function's definition that potentially modify the elements of the arrays <em>first</em> or <em>second</em>.</p>
+    </section>
+

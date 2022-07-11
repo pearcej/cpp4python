@@ -1,0 +1,222 @@
+<section xml:id="functions_parameter-passing-by-value-versus-by-reference">
+        <title>Parameter Passing: by Value versus by Reference</title>
+        <p>In all of the functions we have written thus far, we have used a function calling
+            mechanism called <term>pass by value</term>.
+            Calling a function by value involves copying the contents of the arguments
+            into the memory locations of the corresponding formal parameters.
+            If the function changes
+            the values of the parameters, the original contents in the memory referenced
+            by the arguments of the calling function do not change.</p>
+        <p>Consider the following two function definitions:</p>
+        <pre>void functionExample( int inputVar ) { /*return type void which indicates that
+                                         nothing is being returned*/
+    int nextVar = inputVar * 2;
+    inputVar = 4;
+
+    cout &lt;&lt; "nextVar = " &lt;&lt; nextVar &lt;&lt; " inputVar = " &lt;&lt; inputVar;
+}
+
+void callingFunction() { /*return type void which indicates
+                             that nothing is being returned*/
+    int myVar = 10;
+
+    functionExample( myVar );
+    cout &lt;&lt; "myVar = " &lt;&lt; myVar;
+}</pre>
+        <p>When the function <c>callingFunction()</c> executes, it calls <c>functionExample(...)</c>
+            with the variable <em>myVar</em> having the value 10. Within <c>functionExample(...)</c>,
+            the value of 10 is copied from <em>myVar</em> to the formal parameter <em>inputVar</em>,
+            so the value of <em>nextVar</em> is 10x2, or 20. The next statement changes the contents of <em>inputVar</em> to 4,
+            so the <c>cout</c> statement within this function produces the output:</p>
+        <pre>nextVar = 20 inputVar = 4</pre>
+        <p>Notice what happens when <c>functionExample(...)</c> ends and execution returns to <c>callingFunction()</c>.
+            The contents of <em>myVar</em> is <term>still the same</term>, as the location for <em>myVar</em> differs from where <em>inputVar</em>
+            is stored. Thus, <em>myVar</em> still has the value 10, and the <c>cout</c> statement after the function call will
+            produce the output:</p>
+        <pre>myVar = 10</pre>
+        <p>In other words, any changes to the variables are local to the function, which is exactly what we want.</p>
+        <transition/>
+        <p>However, there is a problem.</p>
+        <p>We have seen examples of C++ functions that return no value or a single value.
+            How about when we want the function to return <term>more</term> than one value?
+            We need another function calling mechanism called <term>pass by reference</term>.
+            When using this mechanism, the actual location in memory referenced by the arguments are
+            sent rather than the values in that location.
+            To let the compiler know that you intend to use pass by reference,
+            you attach an <q>&amp;</q> to the end of the type name in the formal parameter list in the function
+            declaration and header. When you do this, any changes to the values of the parameters will
+            change the value of the arguments as well.</p>
+        <p>An example of a function where this is useful is a function that takes two values
+            as input and swaps their order. Consider the following program fragment of a function
+            called <c>swap_values(...)</c> that swaps its two inputs and the <c>main()</c> function
+            that calls <c>swap_values(...)</c>.</p>
+        
+        <blockquote>
+
+    <program xml:id="activepassrefcpp" interactive="activecode" language="cpp">
+        <input>
+#include &lt;iostream&gt;
+using namespace std;
+
+// swap_values() function definition
+// Interchanges the values located by variable1 and variable2.
+
+// Notice that this function does not return anything!
+void swap_values(int &amp;variable1, int &amp;variable2) {
+    int temp;           // temporary storage for swap
+
+    temp = variable1;
+    variable1 = variable2;
+    variable2 = temp;
+}
+
+int main( ) {
+    int first_num, second_num;
+    first_num = 7;
+    second_num = 8;
+
+    cout &lt;&lt; "Two numbers before swap function: 1) " &lt;&lt; first_num &lt;&lt; " 2) " &lt;&lt; second_num &lt;&lt; endl;
+    swap_values(first_num, second_num);
+    cout &lt;&lt; "The numbers after swap function: 1) " &lt;&lt; first_num &lt;&lt; " 2) " &lt;&lt; second_num;
+
+    return 0;
+}
+        </input>
+    </program>
+        </blockquote>
+        <p>For this program <xref ref="lst-swap-inputs"/> to reverse the order of the integers the users types in, the function <c>swap_values(...)</c> must be able to change the values of the arguments. Try removing one or both of the <q>&amp;</q> &#8216;s in this code to see what happens.</p>
+        <p>Analyze the program and answer the question that involves parameter passing below:</p>
+
+    <program xml:id="questionexample1" interactive="activecode" language="cpp">
+        <input>
+// demonstrates the difference between pass-by-value
+// and pass-by-reference functions.
+#include &lt;iostream&gt;
+using namespace std;
+
+void func1(int var1, int var2){
+    int temp;
+    temp = var1;
+    var1 = var2;
+    var2 = temp;
+}
+
+void func2(int &amp;var1, int &amp;var2){
+    int temp;
+    temp = var1;
+    var1 = var2;
+    var2 = temp;
+}
+
+int main(){
+    int num1 = 2;
+    int num2 = 3;
+
+    func1(num1, num2);
+    cout &lt;&lt; "results of func1:" &lt;&lt; endl;
+    cout &lt;&lt; "num1: " &lt;&lt; num1 &lt;&lt; ", num2: " &lt;&lt; num2 &lt;&lt; endl;
+    func2(num1, num2);
+    cout &lt;&lt; "results of func2:" &lt;&lt; endl;
+    cout &lt;&lt; "num1: " &lt;&lt; num1 &lt;&lt; ", num2: " &lt;&lt; num2 &lt;&lt; endl;
+
+    return 0;
+}
+        </input>
+    </program>
+
+    <exercise label="question1_1">
+        <statement>
+
+        <p>Q-3: What is the difference between <term>func1</term> and <term>func2</term>? Check all that apply.</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>func2 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>func1 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.</p>
+                </statement>
+                <feedback>
+                    <p>No, func1 is simply using copies of the original variables as input because it is not using "&amp;."</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>func1 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>func2 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.</p>
+                </statement>
+                <feedback>
+                    <p>No, func2 is using the direct memory references of the original variables because its input parameters are using "&amp;."</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="question1_2">
+        <statement>
+
+        <p>Q-4: Why does adding the <q>&amp;</q> to parameters in the <term>func</term> function cause the output to be a different result?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>The "&amp;" forces variables to change in the global scope, resulting in the two variables not exclusively changing inside of the function.</p>
+                </statement>
+                <feedback>
+                    <p>No, "&amp;" has nothing to do with altering integers in the global scope.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>The "&amp;" passes the location where the two variables are stored, resulting in the two variables switching memory references.</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>The "&amp;" in this function is incorrectly used, resulting in an overlapping memory reference.</p>
+                </statement>
+                <feedback>
+                    <p>No, the use of "&amp;" here is correct. Read over the active code 4 example earlier in the section.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>None of the above</p>
+                </statement>
+                <feedback>
+                    <p>No, one of the above is definitely true.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        <transition/>
+    </section>
+

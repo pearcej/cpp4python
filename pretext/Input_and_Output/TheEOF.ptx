@@ -1,0 +1,164 @@
+<section xml:id="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof">
+        <title>The End-Of-File (EOF) for Systems that Implement eof()</title>
+        <p>So far, the assumption was that the programmer knew exactly how much data to read from
+            an open file. However, it is common for a program to keep reading from a file without
+            any idea how much data exists. Most versions of C++ incorporate an end-of-file (EOF)
+            flag at the end of the file to let programs know when to stop.
+            Otherwise, they could read data from a different file that happened to be
+            right after it in the hard drive, which can be disastrous.</p>
+        <p>Many development environments have I/O libraries that define how the member
+            function eof() works for ifstream variables to test if this flag is set to <c>true</c> or <c>false</c>. Typically, one would like to know when the EOF has not been reached, so a common way is a negative boolean value. An alternative implementation is to keep reading using the &gt;&gt; operator; if that operation was successful (i.e. there was something in the file that was read), this success is interpreted as a 1 (true).</p>
+        <p>Incidentally, that is why if you forget the second equals sign in a comparison
+            between a variable and a value, you are assigning the value to the variable,
+            which is a successful operation, which means the condition ends up evaluating to <c>true</c>.</p>
+        <p>The following two code fragments highlight the possibilities:</p>
+        <p>Using the <c>eof()</c> member function</p>
+        <pre>while(!in_stream.eof()) {
+    // statements to execute
+    // while EOF has not been
+    // reached
+}</pre>
+        <p>Using the &gt;&gt; operator</p>
+        <pre>while(in_stream&gt;&gt;inputn) {
+    // statements to execute
+    // while reads are successful
+}</pre>
+        <p>Here is an example of a program that essentially uses the second technique
+            mentioned above to read all the numbers in a file and output them in a neater format.
+            The <c>while</c> loop to scan through a file is located in the <c>make_neat(...)</c> function.</p>
+        <pre>// Illustrates output formatting instructions.
+// Read all the numbers in the file rawdata.dat and write the numbers
+// to the screen and to the file neat.dat in a neatly formatted way.
+
+#include &lt;cstdlib&gt;  // for the exit function
+#include &lt;fstream&gt;  // for I/O member functions
+#include &lt;iomanip&gt;  // for the setw function
+#include &lt;iostream&gt; // for cout
+using namespace std;
+void make_neat(
+    ifstream &amp;messy_file,
+    ofstream &amp;neat_file,
+    int number_after_decimalpoint,
+    int field_width);
+
+int main() {
+    ifstream fin;
+    ofstream fout;
+
+    fin.open("rawdata.txt");
+    if (fin.fail()) { // oops the file did not exist for reading?
+        cout &lt;&lt; "Input file opening failed." &lt;&lt; endl;
+        exit(1);
+    }
+
+    fout.open("neat.txt");
+    if (fout.fail()) { // oops the output file open failed!
+        cout &lt;&lt; "Output file opening failed.\n";
+        exit(1);
+    }
+    make_neat(fin, fout, 5, 12);
+
+    fin.close();
+    fout.close();
+    cout &lt;&lt; "End of program." &lt;&lt; endl;
+    return 0;
+}
+// Uses iostreams, streams to the screen, and iomanip:
+void make_neat(
+    ifstream &amp;messy_file,
+    ofstream &amp;neat_file,
+    int number_after_decimalpoint,
+    int field_width) {
+    // set the format for the neater output file.
+    neat_file.setf(ios::fixed);
+    neat_file.setf(ios::showpoint);
+    neat_file.setf(ios::showpos);
+    neat_file.precision(number_after_decimalpoint);
+    // set the format for the output to the screen too.
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.setf(ios::showpos);
+    cout.precision(number_after_decimalpoint);
+    double next;
+    while (messy_file &gt;&gt; next) { // while there is still stuff to read
+        cout &lt;&lt; setw(field_width) &lt;&lt; next &lt;&lt; endl;
+        neat_file &lt;&lt; setw(field_width) &lt;&lt; next &lt;&lt; endl;
+    }
+}
+
+// Code by Jan Pearce</pre>
+        <p>This is the <c>rawdata.txt</c> inputed into the <c>make_neat(...)</c>.</p>
+        <pre>10 -20 30 -40
+500 300 -100 1000
+-20 2 1 2
+10 -20 30 -40</pre>
+        <p>And this is the expected output</p>
+        <pre>  +10.00000
+  -20.00000
+  +30.00000
+  -40.00000
+ +500.00000
+ +300.00000
+ -100.00000
++1000.00000
+  -20.00000
+   +2.00000
+   +1.00000
+   +2.00000
+  +10.00000
+  -20.00000
+  +30.00000
+  -40.00000</pre>
+        <raw format="html" xml:space="preserve">&lt;div&gt;
+    &lt;iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</raw>
+        <p>The input file <c>rawdata.txt</c> must be in the same directory (folder) as the program in order for it to open successfully. The program will create a file called <q>neat.dat</q> to output the results.</p>
+
+    <exercise label="eofFirst">
+        <statement>
+
+        <p>Q-1: What are good use cases for EOFs in C++ programming?</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>To keep a program from writing into other files.</p>
+                </statement>
+                <feedback>
+                    <p>Yes, EOFs are intended to prevent the program from overwriting a file.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>To keep a program from stopping.</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, the point of EOFs is to do the opposite.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>To make sure you do not overflow into temporary buffer.</p>
+                </statement>
+                <feedback>
+                    <p>Yes, EOFs prevent overflow into temporary buffer.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>To stop an input files stream.</p>
+                </statement>
+                <feedback>
+                    <p>Yes, EOFs stop input file streams.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    </section>
+

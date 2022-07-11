@@ -1,0 +1,56 @@
+<section xml:id="introcpp_introcpp_intro-cpp_introduction">
+        <title>Introduction</title>
+        <p>This book assumes that you are already familiar with the
+            <url href="http://www.python.org" visual="http://www.python.org">Python</url> programming language because
+            Python will be the starting point for our journey into C++. We will begin by
+            looking at a very simple C++ program to see how the C++ language
+            looks, and we will discuss how we get a C++ program to run.</p>
+        <p>Next, we will look at the primary constructs that are common
+            to nearly all programming languages:</p>
+        <blockquote>
+            <p><ul>
+                <li>
+                    <p>Using code libraries</p>
+                </li>
+                <li>
+                    <p>Documenting with comments</p>
+                </li>
+                <li>
+                    <p>The main function</p>
+                </li>
+                <li>
+                    <p>Writing output to the screen</p>
+                </li>
+                <li>
+                    <p>Reading input from the keyboard</p>
+                </li>
+                <li>
+                    <p>Data types and operators</p>
+                </li>
+                <li>
+                    <p>Conditionals</p>
+                </li>
+                <li>
+                    <p>Loops</p>
+                </li>
+            </ul></p>
+        </blockquote>
+        <p>Once we have the basics of C++ behind us we will move on to look at the
+            additonal useful features of C++ including:</p>
+        <blockquote>
+            <p><ul>
+                <li>
+                    <p>Functions and their parameters</p>
+                </li>
+                <li>
+                    <p>File operations</p>
+                </li>
+                <li>
+                    <p>Exception handling</p>
+                </li>
+            </ul></p>
+        </blockquote>
+        <p>Please note that this book is a work in progress.
+            Updates and new versions are likely to be forthcoming.</p>
+    </section>
+
