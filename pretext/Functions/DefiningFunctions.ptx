@@ -1,0 +1,184 @@
+<section xml:id="functions_defining-c-functions">
+        <title>Defining C++ Functions</title>
+        <p>In general, we can hide the details of any computation by defining
+            a function. A function definition requires a name, a group of
+            parameters, a return type, and a body. It may either return a variable, value, or nothing (specified by the keyword void). For
+            example, the simple function defined below returns an integer which is the double of the
+            value you pass into it.</p>
+        
+        <blockquote>
+
+    <program xml:id="timesTwo" interactive="activecode" language="cpp">
+        <input>
+#include &lt;iostream&gt;
+using namespace std;
+
+// function that multiplies a number by 2
+    int timesTwo(int num) {
+    /* return type int which indicates
+       that an integer is being returned */
+    return num*2;
+}
+
+int main() {
+    /* return type int which indicates that
+       an integer is being returned */
+    cout&lt;&lt;timesTwo(5)&lt;&lt;endl;
+
+    return 0;
+}
+        </input>
+    </program>
+        </blockquote>
+        <p>The syntax for this function definition includes the name, <c>timesTwo</c>,
+            and a parenthesized list of formal parameters and their types. For this function an <c>int</c> named <c>num</c>
+            is the only formal parameter, which suggests that <c>timesTwo</c> needs only
+            one piece of data to do its work. The details, hidden <q>inside the box,</q>
+            simply compute the result of <c>num*2</c> and return it. We can invoke or
+            call the <c>timesTwo</c> function by asking the C++ to
+            evaluate it, passing an actual parameter value, in this case, <c>3</c>.
+            Note that the call to <c>timesTwo</c> returns an integer that can in turn be
+            passed to another invocation.</p>
+        <p>Let us look at a similar function.</p>
+        
+        <blockquote>
+
+    <program xml:id="timesTwoVoid" interactive="activecode" language="cpp">
+        <input>
+#include &lt;iostream&gt;
+using namespace std;
+
+// function that multiplies a number by 2
+// except it does not anything it only outputs to the console
+void timesTwoVoid(int num) {
+  /* return type void which indicates
+     that an nothing is being returned */
+  cout&lt;&lt; num*2&lt;&lt;endl;
+}
+
+int main() {
+    /* return type int which indicates that
+       an integer is being returned */
+    timesTwoVoid(5);
+
+    return 0;
+}
+        </input>
+    </program>
+        </blockquote>
+        <p>The <c>timesTwoVoid</c> function behaves very similarly to <c>timesTwo</c>. However, there is one key
+            difference between them. Instead of the <c>int</c> in <c>timesTwo</c>, <c>timesTwoVoid</c> has a
+            <c>void</c> in front of its function definition. Unlike <c>timesTwo</c>, <c>timesTwoVoid</c> is a non-fruitful
+            function meaning it does not return a value even though it can still print something out.</p>
+        <p>We could go a step further and implement our own square root function by using a well-known
+            technique called <q>Newton's Method.</q> Newton's Method for approximating
+            square roots performs an iterative computation that converges on the
+            correct value. The equation
+            <math>newguess = \frac {1}{2} * (oldguess + \frac {n}{oldguess})</math>
+            takes a value <math>n</math> and repeatedly guesses the square root by
+            making each <math>newguess</math> the <math>oldguess</math> in the subsequent
+            iteration. The initial guess used here is <math>\frac {n}{2}</math>.
+            <xref ref="lst-root"/> shows a function definition that accepts a value
+            <math>n</math> and returns the square root of <math>n</math> after making 20
+            guesses. Again, the details of Newton's Method are hidden inside the
+            function definition and the user does not have to know anything about
+            the implementation to use the function for its intended purpose.
+            <xref ref="lst-root"/> also shows the use of the // characters as a comment
+            marker. Any characters that follow the // on a line are ignored.</p>
+        
+        <p xml:id="functions_lst-root" names="lst_root"><term>Listing 1</term></p>
+
+    <program xml:id="newtonsmethod" interactive="activecode" language="cpp">
+        <input>
+// returns the square root of a number as a double
+#include &lt;iostream&gt;
+using namespace std;
+
+double squareroot(double n) { /*return type double which indicates
+                                that a decimal is being returned*/
+      double root = n / 2;
+
+      for (int i = 0; i &lt; 20; i++) {
+                root = (.5) * (root + (n / root));
+      }
+
+      return root;
+}
+
+int main() {
+      cout &lt;&lt; squareroot(9) &lt;&lt; endl;
+      cout &lt;&lt; squareroot(4563) &lt;&lt; endl;
+
+      return 0;
+}
+        </input>
+    </program>
+
+    <program xml:id="dogwalk" interactive="activecode" language="cpp">
+        <input>
+// function that retuns outputs number of steps wallked
+#include &lt;iostream&gt;
+using namespace std;
+
+void dogWalk(int steps){
+    for (int step = 0; step &lt; steps; step++){
+        cout &lt;&lt; "dog walked "&lt;&lt; step &lt;&lt; " steps!"&lt;&lt; endl;
+    }
+}
+
+int main() {
+    dogWalk(11);
+
+    return 0;
+}
+        </input>
+    </program>
+
+    <exercise label="dog_walker">
+        <statement>
+
+        <p>Q-5: What is the correct return type of the function above <term>int main()</term>?</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>void</p>
+                </statement>
+                <feedback>
+                    <p>Correct, nothing is returned!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>int</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, check the value preceding the name of the function!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>dog</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, dog is not even a data type!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>dogWalk</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, that is the name of the function itself!</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    </section>
+

@@ -1,0 +1,21 @@
+<section xml:id="atomicdata_atomicdata_atomic-data_summary">
+        <title>Summary</title>
+        <p><ol label="1">
+            <li>
+                <p>All variables must be declared before use in C++.</p>
+            </li>
+            <li>
+                <p>C++ has typical built-in numeric types: <c>int</c> is for integers and <c>float</c> and <c>double</c> are used for floating point depending on the number of digits desired.</p>
+            </li>
+            <li>
+                <p>C++ has the Boolean type <c>bool</c> that holds <c>true</c> or <c>false</c>.</p>
+            </li>
+            <li>
+                <p>The character data type <c>char</c> holds a single character which is encased in single quotes.</p>
+            </li>
+            <li>
+                <p>Pointers are a type of variable that stores a memory address. To declare a pointer, an  <c>*</c> is used before the variable name that is supposed to store the location.</p>
+            </li>
+        </ol></p>
+    </section>
+    

@@ -1,0 +1,209 @@
+<section xml:id="turtles_advanced-features">
+        <title>Advanced Features</title>
+        <p>Turtles are a large tool, and thus have a lot of options dictating how they function.
+            Some features and functionality are more complicated than others, relating to the inner workings
+            of turtles themselves. A few of these include the <c classes="code">tracer</c> and <c classes="code">undo</c> methods, and also screen modes.</p>
+        <p>Screen modes dictate the direction of angle measurements. This means that, depending on which mode a <c classes="code">TurtleScreen</c>
+            object is in, positive angles could represent clockwise rotations or counterclockwise rotations. The <c classes="code">mode</c> method
+            for <c classes="code">TurtleScreen</c> allows you to set which mode a screen is in.</p>
+        <table><tabular>
+            
+                
+                
+                
+                
+                    <row header="yes">
+                        <cell>
+                            Mode
+                        </cell>
+                        <cell>
+                            Default Rotation
+                        </cell>
+                        <cell>
+                            Positive Angles
+                        </cell>
+                    </row>
+                
+                
+                    <row>
+                        <cell>
+                            SM_STANDARD
+                        </cell>
+                        <cell>
+                            East
+                        </cell>
+                        <cell>
+                            Counterclockwise
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            SM_LOGO
+                        </cell>
+                        <cell>
+                            North
+                        </cell>
+                        <cell>
+                            Clockwise
+                        </cell>
+                    </row>
+                
+            
+        </tabular></table>
+        <p>Regarding angles, Turtles can use both <em>degrees</em> and <em>radians</em> for their rotations. You can choose between the two using the
+            <c classes="code">radians</c> and <c classes="code">degrees</c> methods for the Turtle object. By default, all angles are measured in <em>degrees</em>. This option
+            only effects methods regarding rotation, such as <c classes="code">left</c> and <c classes="code">right</c>.</p>
+        <program language="cpp"><input>
+turtle.degrees();
+turtle.right(90);//90-degree turn to the right
+turtle.radians();
+turtle.left(1.5708f);//Equivalent rotation in radians to the left.
+</input></program>
+        <p>The <c classes="code">tracer(N)</c> method is used to control how many times the Turtle is actually
+            drawn on the screen. This method belongs to the <c classes="code">TurtleScreen</c> object, and effects
+            all turtles that are on the screen. The <c classes="code">N</c> in the method represents the input,
+            only allowing the <c classes="code">TurtleScreen</c> to display one frame out every <c classes="code">N</c>.</p>
+        <program language="cpp"><input>
+screen.tracer(12);
+//Show one out of every 12 frames of animation.
+</input></program>
+        <p>This can be combined with the <c classes="code">speed</c> method available to turtles to achieve <term>very</term> quickly
+            drawn images. The maximum speed a Turtle can have, <c classes="code">TS_FASTEST</c>, completely disables animation
+            for Turtles between movements and rotations. This allows the <c classes="code">tracer</c> setting to directly relate
+            to the total number of actions the turtle makes. The actions the turtle takes happen regardless
+            of whether or not they are actually shown on the screen.</p>
+        <program language="cpp"><input>
+screen.tracer(3); //Show one out of every 3 frames of animation.
+turtle.speed(ct::TS_FASTEST);  //Disables Turtle animation
+
+turtle.forward(50);//This is not shown on-screen...
+turtle.right(90);//Neither is this...
+turtle.forward(50);//But this action is, because it is third out of three.
+</input></program>
+        <p>A frame of animation is added for almost every action a turtle takes, regardless of whether or not
+            the turtle is moving or adding something to the screen. This includes methods like
+            <c classes="code">begin_fill</c> and <c classes="code">end_fill</c>, which don't do anything visually but do
+            tell the turtle to start or stop tracking its own movements.</p>
+        <p>Consider the following example and related questions.</p>
+        <program language="cpp"><input>
+#include &lt;CTurtle.hpp&gt;
+namespace ct = cturtle;
+
+int main(){
+    ct::TurtleScreen screen;
+    ct::Turtle turtle(screen);
+
+    turtle.speed(ct::TS_FASTEST);
+    screen.tracer(6);
+
+    for(int i = 0; i &lt; 3; i++){
+        turtle.right(60);
+        turtle.forward(50);
+    }
+
+    screen.bye();
+
+    return 0;
+}
+</input></program>
+
+    <exercise label="cturtle_advanced_mchoice_1">
+        <statement>
+
+        <p>Q-1: How many frames of animation does the above code create?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>3</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>6</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider the tracer setting for the screen.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>12</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        <p>Similarly to tracer settings, every action a turtle takes is also added to the <em>undo queue</em>. This allows it to keep track
+            of actions it is performing over a period of time. The queue is only allowed to grow to a certain size, starting at 100 actions total.
+            This is modifiable through the <c classes="code">setundobuffer</c> method that belongs to turtles. Every action is added, even if
+            the action doesn't change anything visually. This feature is comparable to the <q>undo</q> tool available in most text editors.
+            Turtles can <q>undo</q> their progress with the <c classes="code">undo</c> method.</p>
+
+    <exercise label="cturtle_advanced_mchoice_2">
+        <statement>
+
+        <p>Q-2: How many actions will be in the turtle's undo queue for the code above?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>3</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>6</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>12</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    </section>
+

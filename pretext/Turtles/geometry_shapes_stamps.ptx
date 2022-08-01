@@ -1,0 +1,230 @@
+<section xml:id="turtles_geometry-shapes-and-stamps">
+        <title>Geometry, Shapes, and Stamps</title>
+        <p>Every basic shape in <c classes="code">C-Turtle</c> is a set of coordinates. Within the <c classes="code">C-Turtle</c> library
+            we have the choice of a select few shapes that we can me our Turtles inhabit.
+            To change the appearance of your Turtle, you can use <c classes="code">shape</c> to set your Turtle to
+            one of four default shapes, or a custom shape. <c classes="code">C-Turtle</c> features four default shapes, <c classes="code">triangle</c>,
+            <c classes="code">indented_triangle</c>, <c classes="code">square</c>, and <c classes="code">arrow</c>.</p>
+        <p>The following code example shows how to set the shape of a turtle by giving it the name of a shape.</p>
+        <program language="cpp"><input>
+turtle.shape("square");
+</input></program>
+        <p>Given that all primitive shapes are defined as a collection of points, all of the default shapes are also defined this way.
+            Polygons, for custom and default shapes, must have their points defined in counter-clockwise order to appear correctly.
+            This is due to the mathematics behind filling arbitrary shapes, and is a limitation almost all computer graphics need to
+            abide by. Consider the order of their points in the following table, and how they could be considered <q>counter-clockwise</q>.
+            They are in order from top to bottom, and one edge exists between the first last points for each of these shapes. Please note
+            that positive Y coordinates are <em>lower</em> on the screen, while negative Y coordinates are <em>higher</em> on the screen. Coordinates at
+            the origin&#8211; that is, coordinate 0x, 0y&#8211; is at the <q>point</q> or <q>tip</q> of the turtle. This is why most of the default shapes
+            have their first coordinate there.</p>
+        <table><tabular>
+            
+                
+                
+                
+                
+                
+                    <row header="yes">
+                        <cell>
+                            triangle
+                        </cell>
+                        <cell>
+                            indented_triangle
+                        </cell>
+                        <cell>
+                            square
+                        </cell>
+                        <cell>
+                            arrow
+                        </cell>
+                    </row>
+                
+                
+                    <row>
+                        <cell>
+                            (0, 0)
+                        </cell>
+                        <cell>
+                            (0, 0)
+                        </cell>
+                        <cell>
+                            (-5, -5)
+                        </cell>
+                        <cell>
+                            (0, 0)
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            (-5, 5)
+                        </cell>
+                        <cell>
+                            (-5, 10)
+                        </cell>
+                        <cell>
+                            (-5, 5)
+                        </cell>
+                        <cell>
+                            (-5, 5)
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            (5, 5)
+                        </cell>
+                        <cell>
+                            (0, 8)
+                        </cell>
+                        <cell>
+                            (5, 5)
+                        </cell>
+                        <cell>
+                            (-3, 5)
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            (5, 10)
+                        </cell>
+                        <cell>
+                            (5, 10)
+                        </cell>
+                        <cell>
+                            (-3, 10)
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            (3, 10)
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            (3, 5)
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            .
+                        </cell>
+                        <cell>
+                            (5, 5)
+                        </cell>
+                    </row>
+                
+            
+        </tabular></table>
+        <p>Using the default <c classes="code">indented_triangle</c> shape as an example, Figure 1 shows the nature of the counter-clockwise order.</p>
+        <figure align="center" xml:id="id1"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Indented Triangle Definition</caption><image source="Turtles/cc_polygon.png" width="50%" alt="All points must be oriented, in order and in a leftwards direction, relative to the center of the entire shape."/></figure>
+        <p>The example code below illustrates how to create your own shape. We use the <c classes="code">Polygon</c> class to represent our shape.
+            For this example, we take the <c classes="code">triangle</c> default shape and make every Y coordinate negative to make it appear upside-down.</p>
+        <program language="cpp"><input>
+ct::Polygon upside_down_triangle = {
+  {0, 0},   //First point
+  {-5, -5}, //Second point
+  {5, -5}  //and so on.
+};
+</input></program>
+        <p>The following code is a full example for setting your turtle to a custom shape. Feel free to mess around with
+            the coordinates of the polygon, you might surprise yourself with what shape you end up with!</p>
+
+    <program xml:id="cturtle_geometry_ac_1" interactive="activecode" language="cpp">
+        <input>
+#include &lt;CTurtle.hpp&gt;
+namespace ct = cturtle;
+
+int main(){
+    ct::TurtleScreen screen;
+    screen.tracer(1, 1000);
+    ct::Turtle turtle(screen);
+
+    ct::Polygon upside_down_triangle = {
+      {0, 0},   //First point
+      {-5, -5}, //Second point
+      {5, -5}  //and so on.
+    };
+
+    turtle.shape(upside_down_triangle);
+    turtle.forward(50);
+
+    screen.bye();
+    return 0;
+}
+        </input>
+    </program>
+        <p>Stamps provide a way to make several copies of the shape of the turtle across the screen without having to trace each
+            shape individually with the turtle. This can be used for a variety of visual effects, however it is often used as a
+            time-saving utility. Stamps can be placed with the <c classes="code">stamp</c> method of Turtle objects, which returns an integer
+            that acts as the <term>ID</term> of the stamp that has been placed. The <c classes="code">clearstamp</c> method of the Turtle object can
+            be used to delete a single stamp from the screen, while the <c classes="code">clearstamps</c> method is used to delete multiple
+            stamps at once.</p>
+        <p>The following code is a full example showing how to combine custom shapes with stamp placement.</p>
+
+    <program xml:id="cturtle_geometry_ac_2" interactive="activecode" language="cpp">
+        <input>
+#include &lt;CTurtle.hpp&gt;
+namespace ct = cturtle;
+
+int main(){
+    ct::TurtleScreen screen;
+    screen.tracer(1, 1000);
+    ct::Turtle turtle(screen);
+
+    ct::Polygon upside_down_triangle = {
+      {0, 0},   //First point
+      {-5, -5}, //Second point
+      {5, -5}  //and so on.
+    };
+
+    turtle.shape(upside_down_triangle);
+
+    //Draw a square where each edge is 50 units long.
+    for(int i = 0; i &lt; 4; i++){
+        //Stamp at the corner of the square.
+        int corner_stamp = turtle.stamp();
+
+        turtle.forward(25);
+        turtle.stamp(); //Stamp half-way across the edge of the square.
+        turtle.forward(25);
+
+        turtle.right(90);
+        //Clear the corner stamp.
+        turtle.clearstamp(corner_stamp);
+    }
+
+    turtle.clearstamps();
+
+    screen.bye();
+    return 0;
+}
+        </input>
+    </program>
+    </section>
+

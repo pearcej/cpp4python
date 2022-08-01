@@ -1,0 +1,317 @@
+<section xml:id="turtles_turtle-turtlescreen">
+        <title>Turtle &amp; TurtleScreen</title>
+        <p>Turtles must exist on a <c classes="code">TurtleScreen</c> to be used. This is a significant difference from
+            Python, as you are required to create your own screen <em>before</em> creating a <c classes="code">Turtle</c> object.</p>
+        <program language="cpp"><input>
+ct::TurtleScreen screen;
+ct::Turtle turtle(screen);
+//Notice how the Screen is given to our Turtle when we create it.
+</input></program>
+        <p>Closing a <c classes="code">TurtleScreen</c> works exactly how it does in Python. For this chapter, only <c classes="code">bye</c> is used.
+            Calling it is not completely necessary, as it is also called automatically if it, or an equivalent method, hasn't been called.
+            When working outside of the textbook, the <c classes="code">exitonclick</c> method is also available.</p>
+        <program language="cpp"><input>
+screen.bye();
+</input></program>
+        <p>Turtles are based on the following premise: <q>There is a turtle on a canvas with a colored pen
+            attached to their tail.</q> In this case, the <em>canvas</em> is a <c classes="code">TurtleScreen</c>. This Turtle will
+            follow any command you give it, which consist of telling it to go certain directions, what color
+            of pen to use, when to raise or lower its pen, and others. Below is an outline of commonly used
+            methods when working with turtles.</p>
+        <table><tabular>
+            
+                
+                
+                
+                    <row header="yes">
+                        <cell>
+                            Method Name
+                        </cell>
+                        <cell>
+                            Description
+                        </cell>
+                    </row>
+                
+                
+                    <row>
+                        <cell>
+                            turtle.left
+                        </cell>
+                        <cell>
+                            turns the turtle a certain number of units to the left.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.right
+                        </cell>
+                        <cell>
+                            turns the turtle a certain number of units to the right.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.penup
+                        </cell>
+                        <cell>
+                            raises the paint pen on the end of the turtle's tail.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.pendown
+                        </cell>
+                        <cell>
+                            lowers the paint pen on the end of the turtle's tail.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.fillcolor
+                        </cell>
+                        <cell>
+                            tells the turtle what color the inside of the shape will be.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.beginfill
+                        </cell>
+                        <cell>
+                            tells the turtle to begin filling a shape as it moves.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.endfill
+                        </cell>
+                        <cell>
+                            tells the turtle to finish filling the shape it has created as it moved.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.pencolor
+                        </cell>
+                        <cell>
+                            tells the turtle what color it will draw with.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.width
+                        </cell>
+                        <cell>
+                            tells the turtle how large of a paint pen to use.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.speed
+                        </cell>
+                        <cell>
+                            tells the turtle how fast it should go, faster or slower than the hare.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.back
+                        </cell>
+                        <cell>
+                            moves the turtle back a number of units.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.forward
+                        </cell>
+                        <cell>
+                            moves the turtle forward a number of units.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.goto
+                        </cell>
+                        <cell>
+                            tells the turtle to move to a specific coordinate.
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            turtle.write
+                        </cell>
+                        <cell>
+                            tells the turtle to write some kind of text.
+                        </cell>
+                    </row>
+                
+            
+        </tabular></table>
+        <p>Many of these methods are used alongside one-another to create different images. All of the <c classes="code">speed</c> settings
+            you may be familiar with from Python are also available in CTurtle. All speeds are measured on a range of 1 to 10,
+            the latter being the fastest and the former being the slowest. The exception is the fastest speed, <c classes="code">TS_FASTEST</c>,
+            which is set to 0 just as it is for Python's equivalent <c classes="code">"fastest"</c>. The <c classes="code">TS</c> prefix represents <q>Turtle Speed</q>.</p>
+        <table><tabular>
+            
+                
+                
+                
+                
+                    <row header="yes">
+                        <cell>
+                            Python Turtle Name
+                        </cell>
+                        <cell>
+                            C-Turtle Name
+                        </cell>
+                        <cell>
+                            Speed
+                        </cell>
+                    </row>
+                
+                
+                    <row>
+                        <cell>
+                            <q>fastest</q>
+                        </cell>
+                        <cell>
+                            TS_FASTEST
+                        </cell>
+                        <cell>
+                            0
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <q>fast</q>
+                        </cell>
+                        <cell>
+                            TS_FAST
+                        </cell>
+                        <cell>
+                            10
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <q>normal</q>
+                        </cell>
+                        <cell>
+                            TS_NORMAL
+                        </cell>
+                        <cell>
+                            6
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <q>slow</q>
+                        </cell>
+                        <cell>
+                            TS_SLOW
+                        </cell>
+                        <cell>
+                            3
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <q>slowest</q>
+                        </cell>
+                        <cell>
+                            TS_SLOWEST
+                        </cell>
+                        <cell>
+                            1
+                        </cell>
+                    </row>
+                
+            
+        </tabular></table>
+        <p>Consider the following annotated example.</p>
+
+    <program xml:id="cturtle_4" interactive="activecode" language="cpp">
+        <input>
+#include &lt;CTurtle.hpp&gt;
+namespace ct = cturtle;
+
+int main() {
+    //Create a turtle screen, and add our turtle to it.
+    ct::TurtleScreen screen;
+    ct::Turtle turtle(screen);
+
+    //Set the turtle speed to the slowest available option.
+    turtle.speed(ct::TS_SLOWEST);
+    //Any number from 0 to 10 would work as well.
+    //turtle.speed(7);
+
+    //Sets the turtle's fill color to purple.
+    turtle.fillcolor({"purple"});
+
+    //Tells the turtle to begin filling a shape as it moves.
+    turtle.begin_fill();
+
+    //Tells the turtle to make a square.
+    //Iterates once for every corner of the square.
+    for (int i = 0; i &lt; 4; i++) {
+
+        //Tells the turtle to move forward 50 units.
+        turtle.forward(50);
+
+        //Tells the turtle to turn 90 degrees to the right.
+        turtle.right(90);
+    }
+
+    //Tells the turtle to finish filling the shape it has outlined.
+    turtle.end_fill();
+
+    //Closes the turtle screen.
+    screen.bye();
+    return 0;
+}
+        </input>
+    </program>
+        <p>The expected output would be a purple square in the center of the turtle's canvas.
+            If you have experience with Turtles in Python, a lot of what you see in the example should look
+            familiar. If not, don't worry! It will all be covered in this chapter.</p>
+        <p>The order of operations given to a turtle is important, as some actions must be completed
+            one after another. A good example of this is the <c classes="code">begin_fill</c> and <c classes="code">end_fill</c>
+            pattern, which must be called in that specified order to actually fill a shape.</p>
+<exercise label="cturtle_question_3" indent="show" language="python"><statement>
+        <p>Construct a program that fills a green triangle using begin_fill and end_fill
+            using the example code above as a guide.</p>
+</statement>
+<blocks><block order="7">
+<cline>#include &amp;#x003C&amp;#x0043&amp;#x0054&amp;#x0075&amp;#x0072&amp;#x0074&amp;#x006C&amp;#x0065.hpp&gt;</cline>
+<cline>namespace ct = cturtle;</cline>
+</block><block order="5">
+<cline>int main(){</cline>
+</block><block order="8">
+<cline>    ct::TurtleScreen scr;</cline>
+<cline>    ct::Turtle turtle(scr);</cline>
+</block><block order="3">
+<cline>    turtle.fillcolor({"green"});</cline>
+</block><block order="9">
+<cline>    turtle.begin_fill();</cline>
+</block><block order="2">
+<cline>    for(int i = 0; i &lt; 3; i++){</cline>
+<cline>        turtle.forward(50);</cline>
+<cline>        turtle.right(60);</cline>
+<cline>    }</cline>
+</block><block order="6">
+<cline>    turtle.end_fill();</cline>
+</block><block order="4">
+<cline>    scr.bye();</cline>
+</block><block order="1">
+<cline>    return 0;</cline>
+</block><block order="10">
+<cline>}</cline>
+</block></blocks></exercise>        <p>There are 14 commonly used methods for Turtles. Many of them have names that indicate what they do.
+            See if you can match each method description with their names!</p>
+
+<exercise label="cturtle_dnd_1">
+    <statement><p>Match the turtle method descriptions to the methods they belong to.</p></statement>
+    
+<matches><match order="1"><premise>turn to the left.</premise><response>turtle.left</response></match><match order="10"><premise>change the speed</premise><response>turtle.speed</response></match><match order="2"><premise>turn to the right.</premise><response>turtle.right</response></match><match order="3"><premise>pick pen up.</premise><response>turtle.penup</response></match><match order="4"><premise>put pen down.</premise><response>turtle.pendown</response></match><match order="5"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="6"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="7"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="8"><premise>change the pen color.</premise><response>turtle.pencolor</response></match><match order="9"><premise>change the pen size.</premise><response>turtle.width</response></match></matches></exercise>    </section>
+
