@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+  <titlepage xmlns:xi="http://www.w3.org/2001/XInclude">
+    <author>
+      <personname>Jan L. Pearce</personname>
+      <department>Department of Computer Science</department>
+      <institution>Berea College</institution>
+      <email>pearj@berea.edu</email>
+    </author>
+    <author>
+      <personname>Brad Miller</personname>
+      <department>Department of Computer Science</department>
+      <institution>Luther College</institution>
+      <email>bonelake@mac.com</email>
+    </author>
+    <date><today /></date>
+  </titlepage>
