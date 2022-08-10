@@ -5,31 +5,31 @@
                 <gi>
                     <title><c>break</c></title>
                     
-                        <p>Terminates the current block of code and resumes the program outside of it.</p>
+                        <p><idx>break</idx>Terminates the current block of code and resumes the program outside of it.</p>
                     
                 </gi>
                 <gi>
                     <title><c>case</c></title>
                     
-                        <p>A condition in a switch statement for a variable to be tested against.</p>
+                        <p><idx>case</idx>A condition in a switch statement for a variable to be tested against.</p>
                     
                 </gi>
                 <gi>
                     <title>conditional</title>
                     
-                        <p>A statement that tests whether a condition is true or false</p>
+                        <p><idx>conditional</idx>A statement that tests whether a condition is true or false</p>
                     
                 </gi>
                 <gi>
                     <title>loop</title>
                     
-                        <p>A series of instructions repeated infinitely or until a condition is met.</p>
+                        <p><idx>loop</idx>A series of instructions repeated infinitely or until a condition is met.</p>
                     
                 </gi>
                 <gi>
                     <title><c>switch</c></title>
                     
-                        <p>A statement that tests a variable against possible conditions for it.</p>
+                        <p><idx>switch</idx>A statement that tests a variable against possible conditions for it.</p>
                     
                 </gi>
             

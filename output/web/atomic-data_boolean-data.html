@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:17-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Boolean Data</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="C++ For Python Programmers">
+<meta property="book:author" content="Jan L. Pearce">
+<meta property="book:author" content="Brad Miller">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body id="httlacs" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="cpp4python.html"><span class="title">C++ For Python Programmers:</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Jan L. Pearce, Brad Miller</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="atomic-data_numeric-data.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="_character-data.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="atomic-data_numeric-data.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a class="next-button button toolbar-item" href="_character-data.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Reporting Typos or Other Problems</a></li>
+<li><a href="colophon.html" data-scroll="colophon" class="internal">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to C++ for Python Programmers</span></a><ul>
+<li><a href="intro-cpp_welcome-to-c-for-python-programmers.html" data-scroll="intro-cpp_welcome-to-c-for-python-programmers" class="internal">Welcome to <em class="emphasis">C++ for Python Programmers</em></a></li>
+<li><a href="introcpp_introcpp_intro-cpp_introduction.html" data-scroll="introcpp_introcpp_intro-cpp_introduction" class="internal">Introduction</a></li>
+<li><a href="intro-cpp_why-learn-another-programming-language.html" data-scroll="intro-cpp_why-learn-another-programming-language" class="internal">Why Learn Another Programming Language?</a></li>
+<li><a href="intro-cpp_let-s-look-at-a-c-program.html" data-scroll="intro-cpp_let-s-look-at-a-c-program" class="internal">Let's look at a C++ program</a></li>
+<li><a href="introcpp_introcpp_intro-cpp_glossary.html" data-scroll="introcpp_introcpp_intro-cpp_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Atomic C++ Data Types</span></a><ul>
+<li><a href="atomic-data_using-data-in-c.html" data-scroll="atomic-data_using-data-in-c" class="internal">Using Data in C++</a></li>
+<li><a href="atomic-data_numeric-data.html" data-scroll="atomic-data_numeric-data" class="internal">Numeric Data</a></li>
+<li><a href="atomic-data_boolean-data.html" data-scroll="atomic-data_boolean-data" class="active">Boolean Data</a></li>
+<li><a href="_character-data.html" data-scroll="_character-data" class="internal">Character Data</a></li>
+<li><a href="atomic-data_pointers.html" data-scroll="atomic-data_pointers" class="internal">Pointers</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_summary.html" data-scroll="atomicdata_atomicdata_atomic-data_summary" class="internal">Summary</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_glossary.html" data-scroll="atomicdata_atomicdata_atomic-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">Control Structures</span></a><ul>
+<li><a href="control_-structures_conditionals.html" data-scroll="control_-structures_conditionals" class="internal">Conditionals</a></li>
+<li><a href="control_-structures_while-loops.html" data-scroll="control_-structures_while-loops" class="internal">While Loops</a></li>
+<li><a href="control_-structures_for-loops.html" data-scroll="control_-structures_for-loops" class="internal">For Loops</a></li>
+<li><a href="control_structures_control_structures_control_-structures_summary.html" data-scroll="control_structures_control_structures_control_-structures_summary" class="internal">Summary</a></li>
+<li><a href="control_structures_control_structures_control_-structures_glossary.html" data-scroll="control_structures_control_structures_control_-structures_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4" class="internal"><span class="codenumber">4</span> <span class="title">Functions</span></a><ul>
+<li><a href="functions_defining-c-functions.html" data-scroll="functions_defining-c-functions" class="internal">Defining C++ Functions</a></li>
+<li><a href="functions_parameter-passing-by-value-versus-by-reference.html" data-scroll="functions_parameter-passing-by-value-versus-by-reference" class="internal">Parameter Passing: by Value versus by Reference</a></li>
+<li><a href="functions_arrays-as-parameters-in-functions.html" data-scroll="functions_arrays-as-parameters-in-functions" class="internal">Arrays as Parameters in Functions</a></li>
+<li><a href="functions_function-overloading.html" data-scroll="functions_function-overloading" class="internal">Function Overloading</a></li>
+<li><a href="functions_functions_functions_summary.html" data-scroll="functions_functions_functions_summary" class="internal">Summary</a></li>
+<li><a href="functions_functions_functions_glossary.html" data-scroll="functions_functions_functions_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="codenumber">5</span> <span class="title">Collection Data Types</span></a><ul>
+<li><a href="collection-data_collections.html" data-scroll="collection-data_collections" class="internal">Collections</a></li>
+<li><a href="collection-data_arrays.html" data-scroll="collection-data_arrays" class="internal">Arrays</a></li>
+<li><a href="collection-data_vectors.html" data-scroll="collection-data_vectors" class="internal">Vectors</a></li>
+<li><a href="collection-data_strings.html" data-scroll="collection-data_strings" class="internal">Strings</a></li>
+<li><a href="collection-data_hash-tables.html" data-scroll="collection-data_hash-tables" class="internal">Hash Tables</a></li>
+<li><a href="collection-data_unordered-sets.html" data-scroll="collection-data_unordered-sets" class="internal">Unordered Sets</a></li>
+<li><a href="collectiondata_collectiondata_collection-data_glossary.html" data-scroll="collectiondata_collectiondata_collection-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-6.html" data-scroll="chapter-6" class="internal"><span class="codenumber">6</span> <span class="title">Input and Output</span></a><ul>
+<li><a href="input_and_-output_file-handling.html" data-scroll="input_and_-output_file-handling" class="internal">File Handling</a></li>
+<li><a href="input_and_-output_member-functions-and-precision.html" data-scroll="input_and_-output_member-functions-and-precision" class="internal">Member Functions and Precision</a></li>
+<li><a href="input_and_-output_file-operations.html" data-scroll="input_and_-output_file-operations" class="internal">File Operations</a></li>
+<li><a href="input_and_-output_dealing-with-i-o-failures.html" data-scroll="input_and_-output_dealing-with-i-o-failures" class="internal">Dealing with I/O Failures</a></li>
+<li><a href="input_and_-output_reading-and-writing-with-file-streams.html" data-scroll="input_and_-output_reading-and-writing-with-file-streams" class="internal">Reading and Writing with File Streams</a></li>
+<li><a href="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof.html" data-scroll="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof" class="internal">The End-Of-File (EOF) for Systems that Implement eof()</a></li>
+<li><a href="input_and_-output_passing-streams-as-parameters.html" data-scroll="input_and_-output_passing-streams-as-parameters" class="internal">Passing Streams as Parameters</a></li>
+<li><a href="input_and_-output_file-names-and-c-strings.html" data-scroll="input_and_-output_file-names-and-c-strings" class="internal">File Names and C-Strings</a></li>
+<li><a href="input_and_-output_putting-it-all-together.html" data-scroll="input_and_-output_putting-it-all-together" class="internal">Putting it all Together</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_summary.html" data-scroll="input_and_output_input_and_output_input_and_-output_summary" class="internal">Summary</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_glossary.html" data-scroll="input_and_output_input_and_output_input_and_-output_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-7.html" data-scroll="chapter-7" class="internal"><span class="codenumber">7</span> <span class="title">Exception Handling</span></a><ul>
+<li><a href="exception_-handling_exception-handling.html" data-scroll="exception_-handling_exception-handling" class="internal">Exception Handling</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_summary.html" data-scroll="exception_handling_exception_handling_exception_-handling_summary" class="internal">Summary</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_glossary.html" data-scroll="exception_handling_exception_handling_exception_-handling_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-8.html" data-scroll="chapter-8" class="internal"><span class="codenumber">8</span> <span class="title">Graphics in C++</span></a><ul>
+<li><a href="turtles_turtles_turtles_introduction.html" data-scroll="turtles_turtles_turtles_introduction" class="internal">Introduction</a></li>
+<li><a href="turtles_turtle-turtlescreen.html" data-scroll="turtles_turtle-turtlescreen" class="internal">Turtle &amp; TurtleScreen</a></li>
+<li><a href="turtles_geometry-shapes-and-stamps.html" data-scroll="turtles_geometry-shapes-and-stamps" class="internal">Geometry, Shapes, and Stamps</a></li>
+<li><a href="turtles_advanced-features.html" data-scroll="turtles_advanced-features" class="internal">Advanced Features</a></li>
+<li><a href="turtles_python-s-turtle-vs-c-turtle.html" data-scroll="turtles_python-s-turtle-vs-c-turtle" class="internal">Python's turtle vs C-Turtle</a></li>
+<li><a href="turtles_practical-application-tessellation.html" data-scroll="turtles_practical-application-tessellation" class="internal">Practical Application - Tessellation</a></li>
+<li><a href="turtles_turtles_turtles_summary.html" data-scroll="turtles_turtles_turtles_summary" class="internal">Summary</a></li>
+<li><a href="turtles_check-yourself.html" data-scroll="turtles_check-yourself" class="internal">Check Yourself</a></li>
+<li><a href="turtles_turtles_turtles_glossary.html" data-scroll="turtles_turtles_turtles_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="atomic-data_boolean-data"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Boolean Data</span>
+</h2>
+<p id="p-114">Boolean data types are named after George Boole who was an English mathematician, so the word “Boolean” should be capitalized. However, the Boolean data type, in C++ uses the keyword <code class="code-inline tex2jax_ignore">bool</code> which is not capitalized. The possible state values for a C++ Boolean are lower case <code class="code-inline tex2jax_ignore">true</code> and <code class="code-inline tex2jax_ignore">false</code>. Be sure to note the difference in capitalization from Python. In Python, these same truth values are capitalized, while in C++, they are lower case.</p>
+<p id="p-115">C++ uses the standard Boolean operators, but they are represented differently than in Python: “and” is given by <code class="code-inline tex2jax_ignore">&amp;&amp;</code> , “or” is given by <code class="code-inline tex2jax_ignore">||</code> , and “not” is given by <code class="code-inline tex2jax_ignore">!</code>. Note that the internally stored values representing <code class="code-inline tex2jax_ignore">true</code> and <code class="code-inline tex2jax_ignore">false</code> are actually <code class="code-inline tex2jax_ignore">1</code> and <code class="code-inline tex2jax_ignore">0</code> respectively. Hence, we see this in output as well.</p>
+<article class="exercise exercise-like" id="exercise-8"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h3>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+// function that demonstrates logical operators
+int main() {
+  cout &lt;&lt; true &lt;&lt; endl;
+  cout &lt;&lt; false &lt;&lt; endl;
+  cout &lt;&lt; (true || false) &lt;&lt; endl;
+  cout &lt;&lt; (true &amp;&amp; false) &lt;&lt; endl;
+  return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="logical_1py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="logical_1py_editor" data-question_label="" data-codelens="true"># Function that demonstrates logical operators.
+def main():
+    print(True)
+    print(False)
+    print(True or False)
+    print(True and False)
+main()
+</textarea></div></div></div></article><p id="p-116">Boolean data objects are also used as results for comparison operators such as equality (==) and greater than (&gt;). In addition, relational operators and logical operators can be combined together to form complex logical questions. <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "atomic-data_atomic-data_tab-relational" missing or not unique]</code> shows the relational and logical operators with examples shown in the session that follows.</p>
+<figure class="table table-like" id="atomic-data_id1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.3.2<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"><dfn class="terminology">Operation Name</dfn></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines"><dfn class="terminology">Operator</dfn></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines"><dfn class="terminology">Explanation</dfn></th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">less than</td>
+<td class="l m b0 r0 l0 t0 lines">&lt;</td>
+<td class="l m b0 r0 l0 t0 lines">Less than operator</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">greater than</td>
+<td class="l m b0 r0 l0 t0 lines">&gt;</td>
+<td class="l m b0 r0 l0 t0 lines">Greater than operator</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">less than or equal</td>
+<td class="l m b0 r0 l0 t0 lines">&lt;=</td>
+<td class="l m b0 r0 l0 t0 lines">Less than or equal to operator</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">greater than or equal</td>
+<td class="l m b0 r0 l0 t0 lines">&gt;=</td>
+<td class="l m b0 r0 l0 t0 lines">Greater than or equal to operator</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">equal</td>
+<td class="l m b0 r0 l0 t0 lines">==</td>
+<td class="l m b0 r0 l0 t0 lines">Equality operator</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">not equal</td>
+<td class="l m b0 r0 l0 t0 lines">!=</td>
+<td class="l m b0 r0 l0 t0 lines">Not equal operator</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">logical and</td>
+<td class="l m b0 r0 l0 t0 lines">&amp;&amp;</td>
+<td class="l m b0 r0 l0 t0 lines">Both operands true for result to be true</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">logical or</td>
+<td class="l m b0 r0 l0 t0 lines">||</td>
+<td class="l m b0 r0 l0 t0 lines">One or the other operand is true for the result to be true</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">logical not</td>
+<td class="l m b0 r0 l0 t0 lines">!</td>
+<td class="l m b0 r0 l0 t0 lines">Negates the truth value, false becomes true, true becomes false</td>
+</tr>
+</table></div></figure><article class="exercise exercise-like" id="exercise-9"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h3>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+// function that demonstrates relational operators.
+int main(){
+
+    cout &lt;&lt; (5 == 10) &lt;&lt; endl;
+    cout &lt;&lt; (10 &gt; 5) &lt;&lt; endl;
+    cout &lt;&lt; ((5 &gt;= 1) &amp;&amp; (5 &lt;= 10)) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="logicalpy"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="logicalpy_editor" data-question_label="" data-codelens="true"># Function that demonstrates relational operators.
+def main():
+
+    print(5 == 10)
+    print(10 &gt; 5)
+    print((5 &gt;= 1) and (5 &lt;= 10))
+
+main()
+</textarea></div></div></div></article><p id="p-117">When a C++ variable is declared, space in memory is set aside to hold this type of value. A C++ variable can optionally be initialized in the declaration by using a combination of a declaration and an assignment statement.</p>
+<p id="p-118">Consider the following session:</p>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+//  Demonstrates how to use variables in C++
+//  moreover, we assign an integer to a boolean variable,
+//  showing the static typing of C++.
+int main(){
+
+    int theSum = 4;
+    cout &lt;&lt; theSum &lt;&lt; endl;
+
+    theSum = theSum + 1;
+    cout &lt;&lt; theSum &lt;&lt; endl;
+
+    bool theBool = true;
+    cout &lt;&lt; theBool &lt;&lt; endl;
+
+    theBool = 4;
+    cout &lt;&lt; theBool &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<p id="p-119">The declaration <code class="code-inline tex2jax_ignore">int theSum = 0;</code> creates a variable called <code class="code-inline tex2jax_ignore">theSum</code> and initializes it to hold the data value of <code class="code-inline tex2jax_ignore">0</code>. As in Python, the right-hand side of each assignment statement is evaluated and the resulting data value is “assigned” to the variable named on the left-hand side. Here the type of the variable is integer. Because Python is dynamically typed, if the type of the data changes in the program, so does the type of the variable. However, in C++, the data type cannot change. This is a characteristic of C++'s static typing. A variable can hold ever only one type of data. Pitfall: C++ will often simply try to do the assignment you requested without complaining. Note what happened in the code above in the final output.</p>
+<article class="exercise exercise-like" id="mc_bool"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h3>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="mc_bool" data-multipleanswers="false">
+<p id="p-120">Q-6: Why did theBool output a value of 1 after being set to 4?</p>
+<li data-component="answer" id="mc_bool_opt_a"><p id="p-121">Setting theBool to anything other than true or false is ignored.</p></li>
+<li data-component="feedback" id="mc_bool_opt_a"><p id="p-122">No. Try changing the code and setting theBool to 0.</p></li>
+<li data-component="answer" id="mc_bool_opt_b"><p id="p-123">Setting theBool to anything &gt; 0 will be true and false otherwise.</p></li>
+<li data-component="feedback" id="mc_bool_opt_b"><p id="p-124">No. Try changing the code and setting theBool to -4.</p></li>
+<li data-component="answer" id="mc_bool_opt_c" data-correct=""><p id="p-125">false == 0 and true = !false i.e. anything that is not zero and can be converted to a Boolean is not false, thus it must be true.</p></li>
+<li data-component="feedback" id="mc_bool_opt_c"><p id="p-126">Correct!</p></li>
+<li data-component="answer" id="mc_bool_opt_d"><p id="p-127">None of the above.</p></li>
+<li data-component="feedback" id="mc_bool_opt_d"><p id="p-128">Try again. One of the above is correct. You might try changing the code and rerunning.</p></li>
+</ul></div></div></article></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

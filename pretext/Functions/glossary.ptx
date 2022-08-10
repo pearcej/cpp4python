@@ -5,43 +5,43 @@
                 <gi>
                     <title>argument</title>
                     
-                        <p>the data passed to parameter.</p>
+                        <p><idx>argument</idx>the data passed to parameter.</p>
                     
                 </gi>
                 <gi>
                     <title><c>const</c></title>
                     
-                        <p>keyword that makes a variable or value constant and unchanging.</p>
+                        <p><idx>const</idx>keyword that makes a variable or value constant and unchanging.</p>
                     
                 </gi>
                 <gi>
                     <title>function</title>
                     
-                        <p>a section of code that performs a procedure and is usually named.</p>
+                        <p><idx>function</idx>a section of code that performs a procedure and is usually named.</p>
                     
                 </gi>
                 <gi>
                     <title>overloading</title>
                     
-                        <p>specifying more than one definition for the same function name within the same scope.</p>
+                        <p><idx>overloading</idx>specifying more than one definition for the same function name within the same scope.</p>
                     
                 </gi>
                 <gi>
                     <title>parameter</title>
                     
-                        <p>a variable in a function or method definition that accepts data passed from an argument.</p>
+                        <p><idx>parameter</idx>a variable in a function or method definition that accepts data passed from an argument.</p>
                     
                 </gi>
                 <gi>
                     <title>pointer</title>
                     
-                        <p>a value that indicates a place in a computer's memory.</p>
+                        <p><idx>pointer</idx>a value that indicates a place in a computer's memory.</p>
                     
                 </gi>
                 <gi>
                     <title><c>void</c></title>
                     
-                        <p>Keyword indicating a function has no return value.</p>
+                        <p><idx>void</idx>Keyword indicating a function has no return value.</p>
                     
                 </gi>
             

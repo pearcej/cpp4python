@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:17-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Let's look at a C++ program</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="C++ For Python Programmers">
+<meta property="book:author" content="Jan L. Pearce">
+<meta property="book:author" content="Brad Miller">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body id="httlacs" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="cpp4python.html"><span class="title">C++ For Python Programmers:</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Jan L. Pearce, Brad Miller</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="intro-cpp_why-learn-another-programming-language.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="introcpp_introcpp_intro-cpp_glossary.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="intro-cpp_why-learn-another-programming-language.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="introcpp_introcpp_intro-cpp_glossary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Reporting Typos or Other Problems</a></li>
+<li><a href="colophon.html" data-scroll="colophon" class="internal">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to C++ for Python Programmers</span></a><ul>
+<li><a href="intro-cpp_welcome-to-c-for-python-programmers.html" data-scroll="intro-cpp_welcome-to-c-for-python-programmers" class="internal">Welcome to <em class="emphasis">C++ for Python Programmers</em></a></li>
+<li><a href="introcpp_introcpp_intro-cpp_introduction.html" data-scroll="introcpp_introcpp_intro-cpp_introduction" class="internal">Introduction</a></li>
+<li><a href="intro-cpp_why-learn-another-programming-language.html" data-scroll="intro-cpp_why-learn-another-programming-language" class="internal">Why Learn Another Programming Language?</a></li>
+<li><a href="intro-cpp_let-s-look-at-a-c-program.html" data-scroll="intro-cpp_let-s-look-at-a-c-program" class="active">Let's look at a C++ program</a></li>
+<li><a href="introcpp_introcpp_intro-cpp_glossary.html" data-scroll="introcpp_introcpp_intro-cpp_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Atomic C++ Data Types</span></a><ul>
+<li><a href="atomic-data_using-data-in-c.html" data-scroll="atomic-data_using-data-in-c" class="internal">Using Data in C++</a></li>
+<li><a href="atomic-data_numeric-data.html" data-scroll="atomic-data_numeric-data" class="internal">Numeric Data</a></li>
+<li><a href="atomic-data_boolean-data.html" data-scroll="atomic-data_boolean-data" class="internal">Boolean Data</a></li>
+<li><a href="_character-data.html" data-scroll="_character-data" class="internal">Character Data</a></li>
+<li><a href="atomic-data_pointers.html" data-scroll="atomic-data_pointers" class="internal">Pointers</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_summary.html" data-scroll="atomicdata_atomicdata_atomic-data_summary" class="internal">Summary</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_glossary.html" data-scroll="atomicdata_atomicdata_atomic-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">Control Structures</span></a><ul>
+<li><a href="control_-structures_conditionals.html" data-scroll="control_-structures_conditionals" class="internal">Conditionals</a></li>
+<li><a href="control_-structures_while-loops.html" data-scroll="control_-structures_while-loops" class="internal">While Loops</a></li>
+<li><a href="control_-structures_for-loops.html" data-scroll="control_-structures_for-loops" class="internal">For Loops</a></li>
+<li><a href="control_structures_control_structures_control_-structures_summary.html" data-scroll="control_structures_control_structures_control_-structures_summary" class="internal">Summary</a></li>
+<li><a href="control_structures_control_structures_control_-structures_glossary.html" data-scroll="control_structures_control_structures_control_-structures_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4" class="internal"><span class="codenumber">4</span> <span class="title">Functions</span></a><ul>
+<li><a href="functions_defining-c-functions.html" data-scroll="functions_defining-c-functions" class="internal">Defining C++ Functions</a></li>
+<li><a href="functions_parameter-passing-by-value-versus-by-reference.html" data-scroll="functions_parameter-passing-by-value-versus-by-reference" class="internal">Parameter Passing: by Value versus by Reference</a></li>
+<li><a href="functions_arrays-as-parameters-in-functions.html" data-scroll="functions_arrays-as-parameters-in-functions" class="internal">Arrays as Parameters in Functions</a></li>
+<li><a href="functions_function-overloading.html" data-scroll="functions_function-overloading" class="internal">Function Overloading</a></li>
+<li><a href="functions_functions_functions_summary.html" data-scroll="functions_functions_functions_summary" class="internal">Summary</a></li>
+<li><a href="functions_functions_functions_glossary.html" data-scroll="functions_functions_functions_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="codenumber">5</span> <span class="title">Collection Data Types</span></a><ul>
+<li><a href="collection-data_collections.html" data-scroll="collection-data_collections" class="internal">Collections</a></li>
+<li><a href="collection-data_arrays.html" data-scroll="collection-data_arrays" class="internal">Arrays</a></li>
+<li><a href="collection-data_vectors.html" data-scroll="collection-data_vectors" class="internal">Vectors</a></li>
+<li><a href="collection-data_strings.html" data-scroll="collection-data_strings" class="internal">Strings</a></li>
+<li><a href="collection-data_hash-tables.html" data-scroll="collection-data_hash-tables" class="internal">Hash Tables</a></li>
+<li><a href="collection-data_unordered-sets.html" data-scroll="collection-data_unordered-sets" class="internal">Unordered Sets</a></li>
+<li><a href="collectiondata_collectiondata_collection-data_glossary.html" data-scroll="collectiondata_collectiondata_collection-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-6.html" data-scroll="chapter-6" class="internal"><span class="codenumber">6</span> <span class="title">Input and Output</span></a><ul>
+<li><a href="input_and_-output_file-handling.html" data-scroll="input_and_-output_file-handling" class="internal">File Handling</a></li>
+<li><a href="input_and_-output_member-functions-and-precision.html" data-scroll="input_and_-output_member-functions-and-precision" class="internal">Member Functions and Precision</a></li>
+<li><a href="input_and_-output_file-operations.html" data-scroll="input_and_-output_file-operations" class="internal">File Operations</a></li>
+<li><a href="input_and_-output_dealing-with-i-o-failures.html" data-scroll="input_and_-output_dealing-with-i-o-failures" class="internal">Dealing with I/O Failures</a></li>
+<li><a href="input_and_-output_reading-and-writing-with-file-streams.html" data-scroll="input_and_-output_reading-and-writing-with-file-streams" class="internal">Reading and Writing with File Streams</a></li>
+<li><a href="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof.html" data-scroll="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof" class="internal">The End-Of-File (EOF) for Systems that Implement eof()</a></li>
+<li><a href="input_and_-output_passing-streams-as-parameters.html" data-scroll="input_and_-output_passing-streams-as-parameters" class="internal">Passing Streams as Parameters</a></li>
+<li><a href="input_and_-output_file-names-and-c-strings.html" data-scroll="input_and_-output_file-names-and-c-strings" class="internal">File Names and C-Strings</a></li>
+<li><a href="input_and_-output_putting-it-all-together.html" data-scroll="input_and_-output_putting-it-all-together" class="internal">Putting it all Together</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_summary.html" data-scroll="input_and_output_input_and_output_input_and_-output_summary" class="internal">Summary</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_glossary.html" data-scroll="input_and_output_input_and_output_input_and_-output_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-7.html" data-scroll="chapter-7" class="internal"><span class="codenumber">7</span> <span class="title">Exception Handling</span></a><ul>
+<li><a href="exception_-handling_exception-handling.html" data-scroll="exception_-handling_exception-handling" class="internal">Exception Handling</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_summary.html" data-scroll="exception_handling_exception_handling_exception_-handling_summary" class="internal">Summary</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_glossary.html" data-scroll="exception_handling_exception_handling_exception_-handling_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-8.html" data-scroll="chapter-8" class="internal"><span class="codenumber">8</span> <span class="title">Graphics in C++</span></a><ul>
+<li><a href="turtles_turtles_turtles_introduction.html" data-scroll="turtles_turtles_turtles_introduction" class="internal">Introduction</a></li>
+<li><a href="turtles_turtle-turtlescreen.html" data-scroll="turtles_turtle-turtlescreen" class="internal">Turtle &amp; TurtleScreen</a></li>
+<li><a href="turtles_geometry-shapes-and-stamps.html" data-scroll="turtles_geometry-shapes-and-stamps" class="internal">Geometry, Shapes, and Stamps</a></li>
+<li><a href="turtles_advanced-features.html" data-scroll="turtles_advanced-features" class="internal">Advanced Features</a></li>
+<li><a href="turtles_python-s-turtle-vs-c-turtle.html" data-scroll="turtles_python-s-turtle-vs-c-turtle" class="internal">Python's turtle vs C-Turtle</a></li>
+<li><a href="turtles_practical-application-tessellation.html" data-scroll="turtles_practical-application-tessellation" class="internal">Practical Application - Tessellation</a></li>
+<li><a href="turtles_turtles_turtles_summary.html" data-scroll="turtles_turtles_turtles_summary" class="internal">Summary</a></li>
+<li><a href="turtles_check-yourself.html" data-scroll="turtles_check-yourself" class="internal">Check Yourself</a></li>
+<li><a href="turtles_turtles_turtles_glossary.html" data-scroll="turtles_turtles_turtles_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="intro-cpp_let-s-look-at-a-c-program"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Let's look at a C++ program</span>
+</h2>
+<p id="p-37">A time honored tradition in computer science is to write a program called “hello world.” The “hello world” program is simple and easy. No logic errors are possible to make, so getting it to run relies only on understanding the syntax. Let's look at an easy version of “hello world” in Python:</p>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="hellopysimp"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="hellopysimp_editor" data-question_label="" data-codelens="true">print("Hello World!")
+</textarea></div></div></div>
+<p id="p-38">Now, lets look at a more “complicated” version of the “hello world” program with a <code class="code-inline tex2jax_ignore">main</code> function in Python:</p>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="hellopymain"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="hellopymain_editor" data-question_label="" data-codelens="true">def main():
+    print("Hello World!")
+main()
+</textarea></div></div></div>
+<p id="p-39">Next, lets look at the same program written in C++:</p>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+
+int main(){
+
+    std::cout &lt;&lt; "Hello World!\n";
+    return 0;
+}
+</code></pre>
+<p id="p-40">The above program can alternatively be written as follows to allow better facilitate standard input and output:</p>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    cout &lt;&lt; "Hello World!\n";
+    return 0;
+}
+</code></pre>
+<p id="p-41">What we see is that at the core there are a few similarities with the complicated Python version, such as the <code class="code-inline tex2jax_ignore">main</code> function and the string “Hello world”. However, in C++ there is a lot more stuff around the edges that make it harder to see the core of the program. Do not worry! An important skill for a computer scientist is to learn what to ignore and what to look at carefully. You will soon find that there are some elements of C++ that will fade into the background as you become used to seeing them. One thing that will help you is to learn a little bit more about C++.</p>
+<section class="subsection" id="intro-cpp_compilation"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Compilation</span>
+</h3>
+<p id="p-42">A question you may have about this little program is “How would I run it on my own machine?” Running a C++ program is not as simple as running a Python program. The first big difference between C++ and Python is that Python is an <em class="emphasis">interpreted language</em> while C++ is a <em class="emphasis">compiled language</em>. We could run our Python programs in the Python <dfn class="terminology">interpreter</dfn>, and we were often quite happy to do that. In C++, running programs is a two step process.</p>
+<p id="p-43">First, we must type the hello world program into a file and save that file using a name like <code class="code-inline tex2jax_ignore">hello.cpp</code> Once we have saved the file we <dfn class="terminology">compile</dfn> it either from the command line or from an integrated development environment (IDE). Only after the program is compiled, can we run it.</p>
+<p id="p-44">Now you may be wondering what good is this extra step? What does compiling do for us? There are a couple of important benefits we get from compiling:</p>
+<ul id="p-45" class="disc">
+<li id="li-21"><p id="p-46">Early detection of errors</p></li>
+<li id="li-22"><p id="p-47">Faster program execution</p></li>
+</ul>
+<p id="p-48">The job of the compiler is to turn your C++ code into language that your machine can understand. We call the code that the computer understands <dfn class="terminology">machine code</dfn>. The computer interprets the machine code much like the Python interpreter interprets your Python. However, since machine code is much closer to the native language of the computer, it can run faster.</p>
+<p id="p-49">When the compiler does the translation it can find many different kinds of errors. For example if you make a typo or forget to declare a variable the compiler will find these and point them out to you before you ever run the program. We will look at some examples of  errors that the compiler catches shortly. Chances are you may create some on your own very soon too, but first let's talk about each of the statements in a C++ program.</p>
+<article class="exercise exercise-like" id="interpreterdrag"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="interpreterdrag">
+<span data-subcomponent="question"><p id="p-50">Match Compiler and Interpreter to the correct definition.</p></span><span data-subcomponent="feedback"><p id="p-51">This is feedback.</p></span><li data-subcomponent="draggable" id="interpreterdrag_drag1">Compiler</li>
+<li data-subcomponent="dropzone" for="interpreterdrag_drag1">generally transforms code written in a high-level language into a low-level language in order to create an executable program</li>
+<li data-subcomponent="draggable" id="interpreterdrag_drag2">Interpreter</li>
+<li data-subcomponent="dropzone" for="interpreterdrag_drag2">directly executes statements in a scripting language without requiring them to have been assembled into machine language</li>
+</ul></div></div></article></section><section class="subsection" id="intro-cpp_using-headers-and-libraries"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Using headers and libraries</span>
+</h3>
+<p id="p-52">Preprocessor directives in C++ appear as statements preceded by the hash sign <code class="code-inline tex2jax_ignore">#</code>. These tell the preprocessor which file, header, or library to make available to the compiler. For example, <code class="code-inline tex2jax_ignore">#include &lt;iostream&gt;</code> will make sure that the <code class="code-inline tex2jax_ignore">iostream</code> library is available at compile time. Here, the term <em class="emphasis">header</em> is used for a type of C++ file that contains definitions of functions and variables, but not the function implementations.</p>
+<p id="p-53">You can think of the <code class="code-inline tex2jax_ignore">#include ...</code> statement in C++ as working a bit like the <code class="code-inline tex2jax_ignore">import ...</code> statement in Python. Python's <code class="code-inline tex2jax_ignore">import</code> statement directly accesses the code written in another file while the <code class="code-inline tex2jax_ignore">#include</code> statement in C++ copies classes and functions from another file.</p>
+<p id="p-54">In Python, an import statement looks like:</p>
+<pre class="code-block tex2jax_ignore">import classname
+</pre>
+<p id="p-55">There are two ways to use <code class="code-inline tex2jax_ignore">#include</code> in C++:</p>
+<pre class="code-block tex2jax_ignore">#include &lt;libraryname&gt;
+#include "filename"
+</pre>
+<p id="p-56">Here the angle-brackets <code class="code-inline tex2jax_ignore">&lt;&gt;</code> are used to include libraries or headers provided by the implementation, such as the headers in the standard library (<code class="code-inline tex2jax_ignore">iostream</code>, <code class="code-inline tex2jax_ignore">string</code>, etc.). The double quotes <code class="code-inline tex2jax_ignore">"</code> are used for headers and files not provided by the implementation.</p></section><section class="subsection" id="intro-cpp_the-main-function"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">The main function</span>
+</h3>
+<p id="p-57">Unlike Python, every C++ program <dfn class="terminology">must</dfn> have a <code class="code-inline tex2jax_ignore">main</code> function which begins with <code class="code-inline tex2jax_ignore">int main()</code>. This <code class="code-inline tex2jax_ignore">main</code> function is called implicitly instead of explicitly like we must do in Python when we have a main function. This is why you do not see an explicit function call invoking main.</p>
+<p id="p-58">The <code class="code-inline tex2jax_ignore">int</code>  in <code class="code-inline tex2jax_ignore">int main()</code> indicates that the <em class="emphasis">return type</em> of the <code class="code-inline tex2jax_ignore">main</code> function will be an integer. The final line of the <code class="code-inline tex2jax_ignore">main</code> C++ function is typically <code class="code-inline tex2jax_ignore">return 0</code>, so you can see that the program does actually return the integer 0. Here zero is returned to indicate successful completion of the <code class="code-inline tex2jax_ignore">main</code> function. In case you are wondering why an integer is returned, if you do error handling in C++, instead of 0, you can alternatively return an integer error code representing a specific error when and where it occurs.</p>
+<p id="p-59">C++ functions and other C++ code blocks are grouped together using the curly <code class="code-inline tex2jax_ignore">{}</code> brackets. These curly brackets are used much like tabbing is used in Python. Many people also use tabbing in C++ to indicate blocks, but tabs and other whitespace (mostly) have no inherent meaning in C++. Instead, the semi-colon (<code class="code-inline tex2jax_ignore">;</code>) must be used to conclude most statements in C++.</p>
+<p id="p-60">In fact, the following program will run perfectly even though the lack of meaningful spacing is more difficult for humans to read.</p>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
+</code></pre>
+<p id="p-61">As you program in C++, we strongly recommend you continue to use the kind of human-readable formatting you have become used to in Python. You will likely learn to appreciate this when you are debugging.</p>
+<p id="p-62">Without peeking, see if you can put the following code in the correct order.</p>
+<article class="exercise exercise-like" id="pp_introcpp_order"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone" style="max-width: none;"><div data-component="parsons" class="parsons" id="pp_introcpp_order">
+<div class="parsons_question parsons-text"><p id="p-63">Correctly rearrange the code below to implement hello world in C++:</p></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="c++" data-adaptive="true" data-noindent="true">&amp;#x22D5include &amp;#x003Ciostream&amp;#x003E
+---
+using namespace std;
+---
+int main()
+{
+---
+    cout &lt;&lt; "Hello World!\n";
+---
+    return 0;
+---
+}</pre>
+</div></div></div></article></section><section class="subsection" id="intro-cpp_comments-in-c"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.4</span> <span class="title">Comments in C++</span>
+</h3>
+<p id="p-64">Python and C++ both support comments that are not processed by the interpreter or compiler.</p>
+<p id="p-65">Python's single line comment begins with a hash (<code class="code-inline tex2jax_ignore">#</code>). In C++, the equivalent is two forward slashes (<code class="code-inline tex2jax_ignore">//</code>) In each case the rest of the line is treated as a comment and ignored by the interpreter or compiler.</p>
+<p id="p-66">Python supports comments using triple quotes. Like Python, C++ also supports multi-line comments beginning with <code class="code-inline tex2jax_ignore">/*</code> and ending with <code class="code-inline tex2jax_ignore">*/</code>.</p>
+<p id="p-67">The triple quoted docstring in Python is often used for automatically processing documentation. There is no equivalent in the C++ standard to the triple-quoted docstring in Python. However, the symbol groups <code class="code-inline tex2jax_ignore">/**</code> and <code class="code-inline tex2jax_ignore">*/</code> are often used to indicate documentation blocks at the beginning of a class, program, or function, which is legal because the second asterisk <code class="code-inline tex2jax_ignore">*</code>  is simply treated as part of the multi-line comment. Certain libraries will also automatically process the text between these symbol groups, as a docstring for the documentation.</p>
+<pre class="code-block tex2jax_ignore">// The remainder of this line is a C++ comment which is ignored by the compiler
+
+/* This is a multi-line C++ comment that can
+span many lines, beginning and ending with the given symbols */
+</pre></section><section class="subsection" id="intro-cpp_standard-output"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.5</span> <span class="title">Standard Output</span>
+</h3>
+<p id="p-68">We often have a need to interact with users, either to get data or to provide some sort of result. The C++ <code class="code-inline tex2jax_ignore">&lt;iostream&gt;</code> library provides us with the functionality to get information from the standard input as well as to output information to the standard output. This input and output is handled by what is known as a <code class="code-inline tex2jax_ignore">stream</code>.</p>
+<p id="p-69">A <code class="code-inline tex2jax_ignore">stream</code> is essentially a channel in which data flows from the source to a destination (often called the “sink”.) Output streams send data out, and the standard output stream <code class="code-inline tex2jax_ignore">cout</code> sends character data to the screen. So, <code class="code-inline tex2jax_ignore">cout</code> stands for “character output”. Much like the Python <code class="code-inline tex2jax_ignore">print</code> statement, <code class="code-inline tex2jax_ignore">cout</code> is used to print to the standard output device, which is typically your screen. When <code class="code-inline tex2jax_ignore">cout</code> is used, you will also see <code class="code-inline tex2jax_ignore">&lt;&lt;</code> used. When this odd set of symbols are used together, they are called the “output operator”. The output operator is used to direct output to the designated output device or file. The output operator can also be used to concatenate output, much like the “+” can be used to concatenate in Python.</p>
+<pre class="program"><code class="language-cpp">/* Ever heard of rubber duck debugging?
+    See https://en.wikipedia.org/wiki/Rubber_duck_debugging */
+#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+  cout &lt;&lt; "Ever heard of rubber duck debugging?" &lt;&lt; endl;
+  cout &lt;&lt; "                __     " &lt;&lt; endl;
+  cout &lt;&lt; "              &lt;(o )___-" &lt;&lt; endl;
+  cout &lt;&lt; "               ( .__&gt; /" &lt;&lt; endl;
+  cout &lt;&lt; "                `----' " &lt;&lt; endl;
+}
+</code></pre></section><section class="subsection" id="intro-cpp_standard-input"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.6</span> <span class="title">Standard Input</span>
+</h3>
+<p id="p-70">In addition to being able to output to the standard output, we want to be able to take input from the user. The command <code class="code-inline tex2jax_ignore">cin</code> is somewhat similar to <code class="code-inline tex2jax_ignore">cout</code> except, of course, it is used for getting character input. Input streams direct data from a source, such as the keyboard or a file. As you might have guessed, <code class="code-inline tex2jax_ignore">cin</code> stands for “character input” and it makes getting input from the standard input device (usually the keyboard) relatively easy. The input operator in C++ is <code class="code-inline tex2jax_ignore">&gt;&gt;</code>.</p>
+<p id="p-71">Here is an example that uses <code class="code-inline tex2jax_ignore">cin</code>:</p>
+<article class="exercise exercise-like" id="cin_user_input"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
+</h4>
+<p id="p-72">The active code below is an example of what getting input from the user might look like. Feel free to change 12.4 to other values!</p>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+  //declares num as a floating point number variable
+  float num;
+
+  // Displays this text to the console
+  cout &lt;&lt; "Give me a number:" &lt;&lt; endl;
+
+  // Takes the user's input and stores it in num
+  cin &gt;&gt; num;
+
+  // Displays to the console
+  cout &lt;&lt; "This is your number doubled: " &lt;&lt; num*2 &lt;&lt; endl;
+
+  return 0;
+}
+</code></pre></article></section><section class="subsection" id="intro-cpp_type-declarations"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.7</span> <span class="title">Type Declarations</span>
+</h3>
+<p id="p-73">In this example, you may note the line <code class="code-inline tex2jax_ignore">float num</code> which declares a new variable called <code class="code-inline tex2jax_ignore">num</code> of type <code class="code-inline tex2jax_ignore">float</code>. Just like functions, all variables in C++ must be declared before use, and they cannot change type. This is known as <dfn class="terminology">static typing</dfn>. The line <code class="code-inline tex2jax_ignore">float num</code> essentially tells the compiler to set aside sufficient space for a floating point number, and to name this memory location <code class="code-inline tex2jax_ignore">num.</code> Then whatever the user types in will be stored in the <code class="code-inline tex2jax_ignore">num</code> variable. Using the <code class="code-inline tex2jax_ignore">cout</code> function, we can write instructions that will prompt the user to enter data and then incorporate that data into further processing. For example, in the code above, the integer input is doubled and then displayed!</p>
+<p id="p-74">We will talk more about type declarations in the section on data types, and we will go into more depth on input and output later when we discuss C++ streams and file handling.</p></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

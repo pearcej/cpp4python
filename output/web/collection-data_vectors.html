@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:18-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Vectors</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="C++ For Python Programmers">
+<meta property="book:author" content="Jan L. Pearce">
+<meta property="book:author" content="Brad Miller">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body id="httlacs" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="cpp4python.html"><span class="title">C++ For Python Programmers:</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Jan L. Pearce, Brad Miller</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="collection-data_arrays.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-5.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="collection-data_strings.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="collection-data_arrays.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-5.html" title="Up">Up</a><a class="next-button button toolbar-item" href="collection-data_strings.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Reporting Typos or Other Problems</a></li>
+<li><a href="colophon.html" data-scroll="colophon" class="internal">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to C++ for Python Programmers</span></a><ul>
+<li><a href="intro-cpp_welcome-to-c-for-python-programmers.html" data-scroll="intro-cpp_welcome-to-c-for-python-programmers" class="internal">Welcome to <em class="emphasis">C++ for Python Programmers</em></a></li>
+<li><a href="introcpp_introcpp_intro-cpp_introduction.html" data-scroll="introcpp_introcpp_intro-cpp_introduction" class="internal">Introduction</a></li>
+<li><a href="intro-cpp_why-learn-another-programming-language.html" data-scroll="intro-cpp_why-learn-another-programming-language" class="internal">Why Learn Another Programming Language?</a></li>
+<li><a href="intro-cpp_let-s-look-at-a-c-program.html" data-scroll="intro-cpp_let-s-look-at-a-c-program" class="internal">Let's look at a C++ program</a></li>
+<li><a href="introcpp_introcpp_intro-cpp_glossary.html" data-scroll="introcpp_introcpp_intro-cpp_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Atomic C++ Data Types</span></a><ul>
+<li><a href="atomic-data_using-data-in-c.html" data-scroll="atomic-data_using-data-in-c" class="internal">Using Data in C++</a></li>
+<li><a href="atomic-data_numeric-data.html" data-scroll="atomic-data_numeric-data" class="internal">Numeric Data</a></li>
+<li><a href="atomic-data_boolean-data.html" data-scroll="atomic-data_boolean-data" class="internal">Boolean Data</a></li>
+<li><a href="_character-data.html" data-scroll="_character-data" class="internal">Character Data</a></li>
+<li><a href="atomic-data_pointers.html" data-scroll="atomic-data_pointers" class="internal">Pointers</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_summary.html" data-scroll="atomicdata_atomicdata_atomic-data_summary" class="internal">Summary</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_glossary.html" data-scroll="atomicdata_atomicdata_atomic-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">Control Structures</span></a><ul>
+<li><a href="control_-structures_conditionals.html" data-scroll="control_-structures_conditionals" class="internal">Conditionals</a></li>
+<li><a href="control_-structures_while-loops.html" data-scroll="control_-structures_while-loops" class="internal">While Loops</a></li>
+<li><a href="control_-structures_for-loops.html" data-scroll="control_-structures_for-loops" class="internal">For Loops</a></li>
+<li><a href="control_structures_control_structures_control_-structures_summary.html" data-scroll="control_structures_control_structures_control_-structures_summary" class="internal">Summary</a></li>
+<li><a href="control_structures_control_structures_control_-structures_glossary.html" data-scroll="control_structures_control_structures_control_-structures_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4" class="internal"><span class="codenumber">4</span> <span class="title">Functions</span></a><ul>
+<li><a href="functions_defining-c-functions.html" data-scroll="functions_defining-c-functions" class="internal">Defining C++ Functions</a></li>
+<li><a href="functions_parameter-passing-by-value-versus-by-reference.html" data-scroll="functions_parameter-passing-by-value-versus-by-reference" class="internal">Parameter Passing: by Value versus by Reference</a></li>
+<li><a href="functions_arrays-as-parameters-in-functions.html" data-scroll="functions_arrays-as-parameters-in-functions" class="internal">Arrays as Parameters in Functions</a></li>
+<li><a href="functions_function-overloading.html" data-scroll="functions_function-overloading" class="internal">Function Overloading</a></li>
+<li><a href="functions_functions_functions_summary.html" data-scroll="functions_functions_functions_summary" class="internal">Summary</a></li>
+<li><a href="functions_functions_functions_glossary.html" data-scroll="functions_functions_functions_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="codenumber">5</span> <span class="title">Collection Data Types</span></a><ul>
+<li><a href="collection-data_collections.html" data-scroll="collection-data_collections" class="internal">Collections</a></li>
+<li><a href="collection-data_arrays.html" data-scroll="collection-data_arrays" class="internal">Arrays</a></li>
+<li><a href="collection-data_vectors.html" data-scroll="collection-data_vectors" class="active">Vectors</a></li>
+<li><a href="collection-data_strings.html" data-scroll="collection-data_strings" class="internal">Strings</a></li>
+<li><a href="collection-data_hash-tables.html" data-scroll="collection-data_hash-tables" class="internal">Hash Tables</a></li>
+<li><a href="collection-data_unordered-sets.html" data-scroll="collection-data_unordered-sets" class="internal">Unordered Sets</a></li>
+<li><a href="collectiondata_collectiondata_collection-data_glossary.html" data-scroll="collectiondata_collectiondata_collection-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-6.html" data-scroll="chapter-6" class="internal"><span class="codenumber">6</span> <span class="title">Input and Output</span></a><ul>
+<li><a href="input_and_-output_file-handling.html" data-scroll="input_and_-output_file-handling" class="internal">File Handling</a></li>
+<li><a href="input_and_-output_member-functions-and-precision.html" data-scroll="input_and_-output_member-functions-and-precision" class="internal">Member Functions and Precision</a></li>
+<li><a href="input_and_-output_file-operations.html" data-scroll="input_and_-output_file-operations" class="internal">File Operations</a></li>
+<li><a href="input_and_-output_dealing-with-i-o-failures.html" data-scroll="input_and_-output_dealing-with-i-o-failures" class="internal">Dealing with I/O Failures</a></li>
+<li><a href="input_and_-output_reading-and-writing-with-file-streams.html" data-scroll="input_and_-output_reading-and-writing-with-file-streams" class="internal">Reading and Writing with File Streams</a></li>
+<li><a href="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof.html" data-scroll="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof" class="internal">The End-Of-File (EOF) for Systems that Implement eof()</a></li>
+<li><a href="input_and_-output_passing-streams-as-parameters.html" data-scroll="input_and_-output_passing-streams-as-parameters" class="internal">Passing Streams as Parameters</a></li>
+<li><a href="input_and_-output_file-names-and-c-strings.html" data-scroll="input_and_-output_file-names-and-c-strings" class="internal">File Names and C-Strings</a></li>
+<li><a href="input_and_-output_putting-it-all-together.html" data-scroll="input_and_-output_putting-it-all-together" class="internal">Putting it all Together</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_summary.html" data-scroll="input_and_output_input_and_output_input_and_-output_summary" class="internal">Summary</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_glossary.html" data-scroll="input_and_output_input_and_output_input_and_-output_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-7.html" data-scroll="chapter-7" class="internal"><span class="codenumber">7</span> <span class="title">Exception Handling</span></a><ul>
+<li><a href="exception_-handling_exception-handling.html" data-scroll="exception_-handling_exception-handling" class="internal">Exception Handling</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_summary.html" data-scroll="exception_handling_exception_handling_exception_-handling_summary" class="internal">Summary</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_glossary.html" data-scroll="exception_handling_exception_handling_exception_-handling_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-8.html" data-scroll="chapter-8" class="internal"><span class="codenumber">8</span> <span class="title">Graphics in C++</span></a><ul>
+<li><a href="turtles_turtles_turtles_introduction.html" data-scroll="turtles_turtles_turtles_introduction" class="internal">Introduction</a></li>
+<li><a href="turtles_turtle-turtlescreen.html" data-scroll="turtles_turtle-turtlescreen" class="internal">Turtle &amp; TurtleScreen</a></li>
+<li><a href="turtles_geometry-shapes-and-stamps.html" data-scroll="turtles_geometry-shapes-and-stamps" class="internal">Geometry, Shapes, and Stamps</a></li>
+<li><a href="turtles_advanced-features.html" data-scroll="turtles_advanced-features" class="internal">Advanced Features</a></li>
+<li><a href="turtles_python-s-turtle-vs-c-turtle.html" data-scroll="turtles_python-s-turtle-vs-c-turtle" class="internal">Python's turtle vs C-Turtle</a></li>
+<li><a href="turtles_practical-application-tessellation.html" data-scroll="turtles_practical-application-tessellation" class="internal">Practical Application - Tessellation</a></li>
+<li><a href="turtles_turtles_turtles_summary.html" data-scroll="turtles_turtles_turtles_summary" class="internal">Summary</a></li>
+<li><a href="turtles_check-yourself.html" data-scroll="turtles_check-yourself" class="internal">Check Yourself</a></li>
+<li><a href="turtles_turtles_turtles_glossary.html" data-scroll="turtles_turtles_turtles_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="collection-data_vectors"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Vectors</span>
+</h2>
+<p id="p-416"><dfn class="terminology">Vectors</dfn> are much more similar to Python lists than arrays are. Vectors use a dynamically allocated array to store their elements, so they can change size, and they have other friendly features as well. Because they use a dynamically allocated array, they use contiguous storage locations which means that their elements can be accessed and traversed, and they can also be accessed randomly using indexes. However, vectors are dynamically sized, so their size can change automatically. A new element can be inserted into or deleted from any part of a vector, and automatic reallocation for other existing items in the vector will be applied. Unlike Python lists, vectors are homogeneous, so every element in the vector must be of the same type.</p>
+<p id="p-417">Vectors are a class that is available through a library called the Standard Template Library (STL), and one uses a <code class="code-inline tex2jax_ignore">&lt; &gt;</code> notation to indicate the data type of the elements. In order to use vectors, One needs to include the vector library.</p>
+<pre class="code-block tex2jax_ignore">#include &lt;vector&gt;
+</pre>
+<figure class="table table-like" id="collection-data_id1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"><dfn class="terminology">Vector Operation</dfn></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines"><dfn class="terminology">Use</dfn></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines"><dfn class="terminology">Explanation</dfn></th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">[ ]</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvector[i]</code></td>
+<td class="l m b0 r0 l0 t0 lines">access value of element at index i</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">=</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvector[i]=value</code></td>
+<td class="l m b0 r0 l0 t0 lines">assign value to element at index i</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">push_back</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvect.push_back(item)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Appends item to the far end of the vector</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">pop_back</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvect.pop_back()</code></td>
+<td class="l m b0 r0 l0 t0 lines">Deletes last item (from  far end) of the vector</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">insert</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvect.insert(i, item)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Inserts an item at index i</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">erase</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvect.erase(i)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Erases an element from index i</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">size</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvect.size()</code></td>
+<td class="l m b0 r0 l0 t0 lines">Returns the actual size used by elements</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">capacity</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvect.capacity()</code></td>
+<td class="l m b0 r0 l0 t0 lines">Returns the size of allocated storage capacity</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">reserve</code></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">myvect.reserve(amount)</code></td>
+<td class="l m b0 r0 l0 t0 lines">Request a change in capacity to amount</td>
+</tr>
+</table></div></figure><p id="p-418">A very common programming task is to grow a vector using the <code class="code-inline tex2jax_ignore">push_back()</code> method to append to the vector as we see in the next example. Because vectors can change size, vectors typically allocate some extra storage to accommodate for possible growth. Thus the vector typically has an actual <em class="emphasis">capacity</em> greater than the storage <em class="emphasis">size</em> strictly needed to contain its elements.</p>
+<section class="subsection" id="collection-data_iterating-through-vectors"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3.1</span> <span class="title">Iterating through Vectors</span>
+</h3>
+<p id="p-419">When iterating vectors, you must first find the length of your container. You can simply call the <code class="code-inline tex2jax_ignore">.length()</code> function. For arrays, the number of elements can be found by getting the size in memory of the array by using the <code class="code-inline tex2jax_ignore">sizeof()</code> function, and then dividing it by the size of the first element of the array using the same <code class="code-inline tex2jax_ignore">sizeof()</code> function. Because all elements in C++ arrays are the same type, they take the same amount of space and that can be used to find the number of elements the Array contains!</p>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int nums[] = {1,3,6,2,5};
+    //Divide the size of the array (in bytes) by the size of a single element (in bytes)
+    // to get the total number of elements in the array.
+    int numsSize = sizeof(nums)/sizeof(nums[0]); // Get size of the nums array
+
+    for (int index=0; index&lt;numsSize; index++) {
+        cout &lt;&lt; nums[index] &lt;&lt; endl;
+    }
+
+
+   // Simpler Implementation that may only work in
+   // Newer versions of C++
+
+   // for (int item:nums) {
+   //     cout &lt;&lt; item &lt;&lt; endl;
+   // }
+
+     return 0;
+}
+</code></pre>
+<p id="p-420">An optional secondary version of the <code class="code-inline tex2jax_ignore">for</code> loop has been commented out of the above code. You can try running this in your version of C++ to see if it works, but in some older versions of C++, such as C++98, it does not.</p>
+<dl class="description-list">
+<dt id="li-40">The above loop assigns the variable <code class="code-inline tex2jax_ignore">index</code> to be each successive value from 0 to numsSize.</dt>
+<dd><p id="p-421">Then, the value at that index in the array is printed to the console.</p></dd>
+</dl>
+<section class="subsubsection" id="collection-data_matching"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">5.3.1.1</span> <span class="title">Matching</span>
+</h4>
+<article class="exercise exercise-like" id="matching_vectors"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="matching_vectors">
+<span data-subcomponent="question"><p id="p-422">Match the Vector operations with their corresponding explination.</p></span><span data-subcomponent="feedback"><p id="p-423">Feedback shows incorrect matches.</p></span><li data-subcomponent="draggable" id="matching_vectors_drag1">[ ]</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag1">Accesses value of an element.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag2">=</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag2">Assigns value to an element.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag3">push_back</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag3">Appends item to the end of the vector.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag4">pop_back</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag4">Deletes last item of the vector.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag5">insert</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag5">Injects an item into the vector.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag6">erase</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag6">Deletes an element from the choosen index.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag7">size</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag7">Returns the actual capacity used by elements.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag8">capacity</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag8">Returns the ammount of allocated storage space.</li>
+<li data-subcomponent="draggable" id="matching_vectors_drag9">reserve</li>
+<li data-subcomponent="dropzone" for="matching_vectors_drag9">Request a change in space to amount</li>
+</ul></div></div></article><article class="exercise exercise-like" id="exercise-34"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span>
+</h5>
+<pre class="program"><code class="language-cpp">// function that uses a vector to square
+// every number from 0 to 49
+// uses the reserve operation to save space in memory
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main(){
+
+    vector&lt;int&gt; intvector;
+    intvector.reserve(50);
+
+    for (int i=0; i&lt;50; i++){
+        intvector.push_back(i*i);
+        cout &lt;&lt; intvector[i] &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="introvector_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="introvector_py_editor" data-question_label="" data-codelens="true">"""Uses a list to square every
+number from 0 to 49 """
+def main():
+    intlist=[]
+    for i in range(50):
+        intlist.append(i*i)
+        print(intlist[i])
+
+main()
+</textarea></div></div></div></article><p id="p-424">In the above example, the use of <code class="code-inline tex2jax_ignore">reserve</code> was optional. However, it is a good idea to use it before growing a vector in this way because it will save time. Because vectors are stored in underlying arrays which require contiguous memory, every time the vector's size gets too large for the capacity, the entire vector must be moved to a larger location in memory, and all that copying takes time. In a typical implementation, the capacity is doubled each time. as in the example that follows.</p>
+<pre class="program"><code class="language-cpp">// function that uses a vector to square
+// every number from 0 to 49
+// and does not use reserve.
+// shows amount of space used
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main(){
+
+    vector&lt;int&gt; intvector;
+    // without intvector.reserve(50);
+
+    for (int i=0; i&lt;50; i++){
+        intvector.push_back(i*i);
+        cout &lt;&lt; intvector[i] &lt;&lt; endl;
+        cout &lt;&lt; "capacity: " &lt;&lt; intvector.capacity() &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+<p id="p-425">Remembering that C++ is designed for speed, not protection, we will likely not be surprised by the following:</p>
+<article class="exercise exercise-like" id="exercise-35"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span>
+</h5>
+<pre class="program"><code class="language-cpp">// Note: counting always starts at 0
+// This demonstrates what happens when
+// accessing datat outside of your vector
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main(){
+
+    vector&lt;int&gt; intvector;
+    intvector.reserve(10);
+
+    for (int i=0; i&lt;10; i++){
+        intvector.push_back(i);
+    }
+
+    for (int i=0; i&lt;=10; i++){
+        cout &lt;&lt; "intvector[" &lt;&lt; i &lt;&lt; "]="
+        &lt;&lt;intvector[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="vector_errors_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="vector_errors_py_editor" data-question_label="" data-codelens="true">"""Demonstrates python's protections
+against iterating outside of a list"""
+def main():
+    intlist=[]
+    for i in range(10):
+        intlist.append(i)
+
+    for i in range(11):
+        print("intlist[" + str(i) + "]=" + str(intlist[i]))
+
+main()
+</textarea></div></div></div></article><article class="exercise exercise-like" id="mc_array_vector"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="mc_array_vector" data-multipleanswers="false">
+<p id="p-426">Q-8: Which of the following is the biggest difference between a C++ array and a C++ vector?</p>
+<li data-component="answer" id="mc_array_vector_opt_a" data-correct=""><p id="p-427">Vectors can change size.</p></li>
+<li data-component="feedback" id="mc_array_vector_opt_a"><p id="p-428">Right! Good job!</p></li>
+<li data-component="answer" id="mc_array_vector_opt_b"><p id="p-429">Vectors offer all of the features and protections of Python lists</p></li>
+<li data-component="feedback" id="mc_array_vector_opt_b"><p id="p-430">Not all of the protections of lists are offered by vectors; one can still iterate off of either end.</p></li>
+<li data-component="answer" id="mc_array_vector_opt_c"><p id="p-431">Vectors don't use contiguous memory, so elements can be inserted.</p></li>
+<li data-component="feedback" id="mc_array_vector_opt_c"><p id="p-432">No. Although elements can be inserted in vectors, they do require contiguous memory.</p></li>
+<li data-component="answer" id="mc_array_vector_opt_d"><p id="p-433">more than one of the above</p></li>
+<li data-component="feedback" id="mc_array_vector_opt_d"><p id="p-434">No. Only one of the above is correct.</p></li>
+<li data-component="answer" id="mc_array_vector_opt_e"><p id="p-435">none of the above</p></li>
+<li data-component="feedback" id="mc_array_vector_opt_e"><p id="p-436">One of the above is indeed correct.</p></li>
+</ul></div></div></article><article class="exercise exercise-like" id="mc_vector1"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="mc_vector1" data-multipleanswers="false">
+<p id="p-437">Q-9: What good is the <code class="code-inline tex2jax_ignore">reserve</code> method in a vector?</p>
+<li data-component="answer" id="mc_vector1_opt_a"><p id="p-438">Nothing. It is completely optional.</p></li>
+<li data-component="feedback" id="mc_vector1_opt_a"><p id="p-439">It is optional but it does serve a purpose. Try again.</p></li>
+<li data-component="answer" id="mc_vector1_opt_b" data-correct=""><p id="p-440">Using it will save time if you know the maximum size needed.</p></li>
+<li data-component="feedback" id="mc_vector1_opt_b"><p id="p-441">Right!</p></li>
+<li data-component="answer" id="mc_vector1_opt_c"><p id="p-442">It is required so memory can be allocated.</p></li>
+<li data-component="feedback" id="mc_vector1_opt_c"><p id="p-443">It is not required.</p></li>
+<li data-component="answer" id="mc_vector1_opt_d"><p id="p-444">none of the above</p></li>
+<li data-component="feedback" id="mc_vector1_opt_d"><p id="p-445">One of the above is indeed correct.</p></li>
+</ul></div></div></article></section></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

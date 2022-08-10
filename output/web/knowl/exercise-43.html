@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:19-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span>
+</h3>
+<pre class="program"><code class="language-cpp">// Creates a hash table that maches
+// the english letter to it's spanish
+// equivalent, and outputs every item
+// in the table to the console
+#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    unordered_map&lt;string, string&gt; spnumbers;
+
+    spnumbers = { {"one","uno"},{"two","dos"},{"three","tres"},{"four","cuatro"},{"five","cinco"} };
+
+    for (auto i=spnumbers.begin(); i!=spnumbers.end(); i++ ){
+        //auto is used to automatically detect the data type when
+        //a variable is declared. Use this ONLY when declaring complex
+        //variables.
+
+        cout &lt;&lt; i-&gt;first &lt;&lt; ":";
+        cout &lt;&lt; i-&gt;second &lt;&lt; endl;
+    }
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="hashtable2_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="hashtable2_py_editor" data-question_label="" data-codelens="true">"""Python equivalent
+of the C++ code """
+def main():
+    spnumbers = {"one":"uno","two":"dos","three":"tres","four":"cuatro","five":"cinco" }
+
+    for key in spnumbers:
+        print(key, end=":")
+        print(spnumbers[key])
+
+main()
+</textarea></div></div></div></article><span class="incontext"><a href="collection-data_hash-tables.html#exercise-43" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:19-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span>
+</h5>
+<pre class="program"><code class="language-cpp">// Note: counting always starts at 0
+// This demonstrates what happens when
+// accessing datat outside of your vector
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main(){
+
+    vector&lt;int&gt; intvector;
+    intvector.reserve(10);
+
+    for (int i=0; i&lt;10; i++){
+        intvector.push_back(i);
+    }
+
+    for (int i=0; i&lt;=10; i++){
+        cout &lt;&lt; "intvector[" &lt;&lt; i &lt;&lt; "]="
+        &lt;&lt;intvector[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="vector_errors_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="vector_errors_py_editor" data-question_label="" data-codelens="true">"""Demonstrates python's protections
+against iterating outside of a list"""
+def main():
+    intlist=[]
+    for i in range(10):
+        intlist.append(i)
+
+    for i in range(11):
+        print("intlist[" + str(i) + "]=" + str(intlist[i]))
+
+main()
+</textarea></div></div></div></article><span class="incontext"><a href="collection-data_vectors.html#exercise-35" class="internal">in-context</a></span>
+</body>
+</html>

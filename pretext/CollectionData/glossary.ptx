@@ -5,55 +5,55 @@
                 <gi>
                     <title>array</title>
                     
-                        <p>a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.</p>
+                        <p><idx>array</idx>a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.</p>
                     
                 </gi>
                 <gi>
                     <title>collection</title>
                     
-                        <p>a grouping of a number of data items (possibly only zero or one) that have some shared significance or need to be operated upon together.</p>
+                        <p><idx>collection</idx>a grouping of a number of data items (possibly only zero or one) that have some shared significance or need to be operated upon together.</p>
                     
                 </gi>
                 <gi>
                     <title>hash table</title>
                     
-                        <p>a collection consisting of key-value pairs with an associated hash function that maps the key to the associated value.</p>
+                        <p><idx>hash table</idx>a collection consisting of key-value pairs with an associated hash function that maps the key to the associated value.</p>
                     
                 </gi>
                 <gi>
                     <title>const (immutable)</title>
                     
-                        <p>unable to be modified.</p>
+                        <p><idx>const (immutable)</idx>unable to be modified.</p>
                     
                 </gi>
                 <gi>
                     <title>non-const (mutable)</title>
                     
-                        <p>the ability of an object to be modified.</p>
+                        <p><idx>non-const (mutable)</idx>the ability of an object to be modified.</p>
                     
                 </gi>
                 <gi>
                     <title>set</title>
                     
-                        <p>An unordered data structure consisting of unique, immutable data values.</p>
+                        <p><idx>set</idx>An unordered data structure consisting of unique, immutable data values.</p>
                     
                 </gi>
                 <gi>
                     <title>string</title>
                     
-                        <p>A sequential data structure consisting of zero or more characters.</p>
+                        <p><idx>string</idx>A sequential data structure consisting of zero or more characters.</p>
                     
                 </gi>
                 <gi>
-                    <title>vector</title>
+                    <title></title>
                     
-                        <p>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</p>
+                        <p><idx>vector</idx>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</p>
                     
                 </gi>
                 <gi>
                     <title>word</title>
                     
-                        <p>unit of data used by a particular processor design.</p>
+                        <p><idx>word</idx>unit of data used by a particular processor design.</p>
                     
                 </gi>
             

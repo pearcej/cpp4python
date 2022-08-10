@@ -1,0 +1,2 @@
+/home/moise/runestone/RunestoneServer/books/cpp4python/pretext/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element include there
+/home/moise/runestone/RunestoneServer/books/cpp4python/pretext/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element pretext has extra content: include

@@ -5,49 +5,49 @@
                 <gi>
                     <title>address-of</title>
                     
-                        <p>the address-of operator (<c>&amp;</c>) is used to access the address of a C++ variable.</p>
+                        <p><idx>address-of</idx> the address-of operator (<c>&amp;</c>) is used to access the address of a C++ variable.</p>
                     
                 </gi>
                 <gi>
                     <title>atomic data type</title>
                     
-                        <p>basic data type that cannot be broken down into any simpler data elements.</p>
+                        <p><idx>atomic data type</idx>basic data type that cannot be broken down into any simpler data elements.</p>
                     
                 </gi>
                 <gi>
                     <title><c>bool</c></title>
                     
-                        <p>keyword for Boolean data type.</p>
+                        <p><idx>bool</idx>keyword for Boolean data type.</p>
                     
                 </gi>
                 <gi>
                     <title><c>char</c></title>
                     
-                        <p>keyword for character data type that stores a single character.</p>
+                        <p><idx>char</idx>keyword for character data type that stores a single character.</p>
                     
                 </gi>
                 <gi>
                     <title>dereference</title>
                     
-                        <p>follow a pointer to its referenced memory location and read the data there.</p>
+                        <p><idx>dereference</idx>follow a pointer to its referenced memory location and read the data there.</p>
                     
                 </gi>
                 <gi>
                     <title><c>float</c></title>
                     
-                        <p>keyword for floating point data type.</p>
+                        <p><idx>float</idx>keyword for floating point data type.</p>
                     
                 </gi>
                 <gi>
                     <title><c>double</c></title>
                     
-                        <p>keyword for double-precision floating point data type.</p>
+                        <p><idx>double</idx>keyword for double-precision floating point data type.</p>
                     
                 </gi>
                 <gi>
                     <title><c>int</c></title>
                     
-                        <p>keyword for integer data type.</p>
+                        <p><idx>int</idx>keyword for integer data type.</p>
                     
                 </gi>
             

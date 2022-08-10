@@ -5,25 +5,25 @@
                 <gi>
                     <title>c-string</title>
                     
-                        <p>An array of characters that ends with a terminating null character. i.e. <c>\0</c>.</p>
+                        <p><idx>c-string</idx>An array of characters that ends with a terminating null character. i.e. <c>\0</c>.</p>
                     
                 </gi>
                 <gi>
                     <title>member function</title>
                     
-                        <p>A function that's associated with a certain type of object; this function is called a member function of that object.</p>
+                        <p><idx>member function</idx>A function that's associated with a certain type of object; this function is called a member function of that object.</p>
                     
                 </gi>
                 <gi>
                     <title>stream</title>
                     
-                        <p>An abstraction that allows you to send or receive an unknown number of bytes in input or output. It is a metaphor for a stream of water.</p>
+                        <p><idx>stream</idx>An abstraction that allows you to send or receive an unknown number of bytes in input or output. It is a metaphor for a stream of water.</p>
                     
                 </gi>
                 <gi>
                     <title>End-Of-File(EOF)</title>
                     
-                        <p>A flag at the end of the file to let programs know when to stop.</p>
+                        <p><idx>End-Of-File(EOF)</idx>A flag at the end of the file to let programs know when to stop.</p>
                     
                 </gi>
             

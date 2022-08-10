@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:18-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Introduction</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="C++ For Python Programmers">
+<meta property="book:author" content="Jan L. Pearce">
+<meta property="book:author" content="Brad Miller">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body id="httlacs" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="cpp4python.html"><span class="title">C++ For Python Programmers:</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Jan L. Pearce, Brad Miller</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-8.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-8.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="turtles_turtle-turtlescreen.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-8.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-8.html" title="Up">Up</a><a class="next-button button toolbar-item" href="turtles_turtle-turtlescreen.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Reporting Typos or Other Problems</a></li>
+<li><a href="colophon.html" data-scroll="colophon" class="internal">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to C++ for Python Programmers</span></a><ul>
+<li><a href="intro-cpp_welcome-to-c-for-python-programmers.html" data-scroll="intro-cpp_welcome-to-c-for-python-programmers" class="internal">Welcome to <em class="emphasis">C++ for Python Programmers</em></a></li>
+<li><a href="introcpp_introcpp_intro-cpp_introduction.html" data-scroll="introcpp_introcpp_intro-cpp_introduction" class="internal">Introduction</a></li>
+<li><a href="intro-cpp_why-learn-another-programming-language.html" data-scroll="intro-cpp_why-learn-another-programming-language" class="internal">Why Learn Another Programming Language?</a></li>
+<li><a href="intro-cpp_let-s-look-at-a-c-program.html" data-scroll="intro-cpp_let-s-look-at-a-c-program" class="internal">Let's look at a C++ program</a></li>
+<li><a href="introcpp_introcpp_intro-cpp_glossary.html" data-scroll="introcpp_introcpp_intro-cpp_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Atomic C++ Data Types</span></a><ul>
+<li><a href="atomic-data_using-data-in-c.html" data-scroll="atomic-data_using-data-in-c" class="internal">Using Data in C++</a></li>
+<li><a href="atomic-data_numeric-data.html" data-scroll="atomic-data_numeric-data" class="internal">Numeric Data</a></li>
+<li><a href="atomic-data_boolean-data.html" data-scroll="atomic-data_boolean-data" class="internal">Boolean Data</a></li>
+<li><a href="_character-data.html" data-scroll="_character-data" class="internal">Character Data</a></li>
+<li><a href="atomic-data_pointers.html" data-scroll="atomic-data_pointers" class="internal">Pointers</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_summary.html" data-scroll="atomicdata_atomicdata_atomic-data_summary" class="internal">Summary</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_glossary.html" data-scroll="atomicdata_atomicdata_atomic-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">Control Structures</span></a><ul>
+<li><a href="control_-structures_conditionals.html" data-scroll="control_-structures_conditionals" class="internal">Conditionals</a></li>
+<li><a href="control_-structures_while-loops.html" data-scroll="control_-structures_while-loops" class="internal">While Loops</a></li>
+<li><a href="control_-structures_for-loops.html" data-scroll="control_-structures_for-loops" class="internal">For Loops</a></li>
+<li><a href="control_structures_control_structures_control_-structures_summary.html" data-scroll="control_structures_control_structures_control_-structures_summary" class="internal">Summary</a></li>
+<li><a href="control_structures_control_structures_control_-structures_glossary.html" data-scroll="control_structures_control_structures_control_-structures_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4" class="internal"><span class="codenumber">4</span> <span class="title">Functions</span></a><ul>
+<li><a href="functions_defining-c-functions.html" data-scroll="functions_defining-c-functions" class="internal">Defining C++ Functions</a></li>
+<li><a href="functions_parameter-passing-by-value-versus-by-reference.html" data-scroll="functions_parameter-passing-by-value-versus-by-reference" class="internal">Parameter Passing: by Value versus by Reference</a></li>
+<li><a href="functions_arrays-as-parameters-in-functions.html" data-scroll="functions_arrays-as-parameters-in-functions" class="internal">Arrays as Parameters in Functions</a></li>
+<li><a href="functions_function-overloading.html" data-scroll="functions_function-overloading" class="internal">Function Overloading</a></li>
+<li><a href="functions_functions_functions_summary.html" data-scroll="functions_functions_functions_summary" class="internal">Summary</a></li>
+<li><a href="functions_functions_functions_glossary.html" data-scroll="functions_functions_functions_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="codenumber">5</span> <span class="title">Collection Data Types</span></a><ul>
+<li><a href="collection-data_collections.html" data-scroll="collection-data_collections" class="internal">Collections</a></li>
+<li><a href="collection-data_arrays.html" data-scroll="collection-data_arrays" class="internal">Arrays</a></li>
+<li><a href="collection-data_vectors.html" data-scroll="collection-data_vectors" class="internal">Vectors</a></li>
+<li><a href="collection-data_strings.html" data-scroll="collection-data_strings" class="internal">Strings</a></li>
+<li><a href="collection-data_hash-tables.html" data-scroll="collection-data_hash-tables" class="internal">Hash Tables</a></li>
+<li><a href="collection-data_unordered-sets.html" data-scroll="collection-data_unordered-sets" class="internal">Unordered Sets</a></li>
+<li><a href="collectiondata_collectiondata_collection-data_glossary.html" data-scroll="collectiondata_collectiondata_collection-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-6.html" data-scroll="chapter-6" class="internal"><span class="codenumber">6</span> <span class="title">Input and Output</span></a><ul>
+<li><a href="input_and_-output_file-handling.html" data-scroll="input_and_-output_file-handling" class="internal">File Handling</a></li>
+<li><a href="input_and_-output_member-functions-and-precision.html" data-scroll="input_and_-output_member-functions-and-precision" class="internal">Member Functions and Precision</a></li>
+<li><a href="input_and_-output_file-operations.html" data-scroll="input_and_-output_file-operations" class="internal">File Operations</a></li>
+<li><a href="input_and_-output_dealing-with-i-o-failures.html" data-scroll="input_and_-output_dealing-with-i-o-failures" class="internal">Dealing with I/O Failures</a></li>
+<li><a href="input_and_-output_reading-and-writing-with-file-streams.html" data-scroll="input_and_-output_reading-and-writing-with-file-streams" class="internal">Reading and Writing with File Streams</a></li>
+<li><a href="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof.html" data-scroll="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof" class="internal">The End-Of-File (EOF) for Systems that Implement eof()</a></li>
+<li><a href="input_and_-output_passing-streams-as-parameters.html" data-scroll="input_and_-output_passing-streams-as-parameters" class="internal">Passing Streams as Parameters</a></li>
+<li><a href="input_and_-output_file-names-and-c-strings.html" data-scroll="input_and_-output_file-names-and-c-strings" class="internal">File Names and C-Strings</a></li>
+<li><a href="input_and_-output_putting-it-all-together.html" data-scroll="input_and_-output_putting-it-all-together" class="internal">Putting it all Together</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_summary.html" data-scroll="input_and_output_input_and_output_input_and_-output_summary" class="internal">Summary</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_glossary.html" data-scroll="input_and_output_input_and_output_input_and_-output_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-7.html" data-scroll="chapter-7" class="internal"><span class="codenumber">7</span> <span class="title">Exception Handling</span></a><ul>
+<li><a href="exception_-handling_exception-handling.html" data-scroll="exception_-handling_exception-handling" class="internal">Exception Handling</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_summary.html" data-scroll="exception_handling_exception_handling_exception_-handling_summary" class="internal">Summary</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_glossary.html" data-scroll="exception_handling_exception_handling_exception_-handling_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-8.html" data-scroll="chapter-8" class="internal"><span class="codenumber">8</span> <span class="title">Graphics in C++</span></a><ul>
+<li><a href="turtles_turtles_turtles_introduction.html" data-scroll="turtles_turtles_turtles_introduction" class="active">Introduction</a></li>
+<li><a href="turtles_turtle-turtlescreen.html" data-scroll="turtles_turtle-turtlescreen" class="internal">Turtle &amp; TurtleScreen</a></li>
+<li><a href="turtles_geometry-shapes-and-stamps.html" data-scroll="turtles_geometry-shapes-and-stamps" class="internal">Geometry, Shapes, and Stamps</a></li>
+<li><a href="turtles_advanced-features.html" data-scroll="turtles_advanced-features" class="internal">Advanced Features</a></li>
+<li><a href="turtles_python-s-turtle-vs-c-turtle.html" data-scroll="turtles_python-s-turtle-vs-c-turtle" class="internal">Python's turtle vs C-Turtle</a></li>
+<li><a href="turtles_practical-application-tessellation.html" data-scroll="turtles_practical-application-tessellation" class="internal">Practical Application - Tessellation</a></li>
+<li><a href="turtles_turtles_turtles_summary.html" data-scroll="turtles_turtles_turtles_summary" class="internal">Summary</a></li>
+<li><a href="turtles_check-yourself.html" data-scroll="turtles_check-yourself" class="internal">Check Yourself</a></li>
+<li><a href="turtles_turtles_turtles_glossary.html" data-scroll="turtles_turtles_turtles_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="turtles_turtles_turtles_introduction"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.1</span> <span class="title">Introduction</span>
+</h2>
+<p id="p-594">C++ is designed with the principal that speed is more important than safety and error-checking. This differs from languages like Python, which is considerably more restrictive in regards to aspects such as memory allocations and resource management. C++ is translated to “machine language” when it is compiled, which is a step skipped by Python. Python skips this step in favor of immediate interpretation of the code itself.</p>
+<p id="p-595">This difference is what allows C++ to be as fast as it is, which also makes it particularly good for graphically-intensive applications. Graphical applications heavily leverage memory management to display every pixel you see on your screen. Python does not allow for the creation of arrays like in C++, which are just “chunks” of memory of a fixed size. Furthermore, running directly on the hardware allows C++ to communicate better with other components of your computer, such as your graphics processing unit, or “GPU”. This is one of many reasons C++ is considered an industry standard for high-performance graphics applications, such as video games or software used for visual effects in movies.</p>
+<section class="subsection" id="turtles_what-are-turtles"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.1.1</span> <span class="title">What are Turtles?</span>
+</h3>
+<p id="p-596">Turtle graphics are a popular and simple way for introducing programming to beginners. It was part of the original Logo programming language developed by Wally Feurzeig, Seymour Papert, and Cynthia Solomon in 1967.</p>
+<p id="p-597">Imagine turtles as being a digital marker used for drawing various shapes, images, and designs. Drawing with Turtles can be as basic as a simple triangle and as complex as a highly detailed fractal image. Nearly all commands used when drawing with Turtles are as simple as telling your Turtle to move forward, backward, left, and right in as few or many steps as desired.</p>
+<p id="p-598">The <code class="code-inline tex2jax_ignore">turtle</code> library is commonly used in Python. This chapter will cover a close analog for turtle graphics between Python and C++, the <code class="code-inline tex2jax_ignore">C-Turtle</code> library.</p></section><section class="subsection" id="turtles_turtles-in-c"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.1.2</span> <span class="title">Turtles in C++</span>
+</h3>
+<p id="p-599">Python is particularly well-suited for educational purposes due to its wide array of built in tools and good documentation. These things are particularly lacking in regards to C++, as many of the built-in tools require complicated syntax and deep understanding of the language itself. One of these tools is the <code class="code-inline tex2jax_ignore">turtle</code> library, which is very well suited for educational purposes because it offers live, interactive, and visual representations of your code.</p>
+<p id="p-600">Visual representations afford students an opportunity to observe a facet of computer science from an alternative point of view: rather than waiting anxiously for the print statement to come around after your program churns, you get a visual representation of the concept itself. This is particularly useful for abstract concepts such as recursion and iteration.</p>
+<p id="p-601">For C++, a library called <code class="code-inline tex2jax_ignore">C-Turtle</code> is used to provide an equivalent of Python's <code class="code-inline tex2jax_ignore">turtle</code>. It acts as a close replacement to provide easy to use graphics to C++, while maintaining the objects and commands you might be used to in Python. It was developed by Jesse Walker-Schadler at Berea College during the summer of 2019, and can be found on GitHub here: <a class="external" href="https://github.com/walkerje/C-Turtle" target="_blank">https://github.com/walkerje/C-Turtle</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 1 </sup></a></p>
+<p id="p-602">Below is a comparison of the two versions, C++ and Python, which do the same thing. Try running both and comparing how the code looks between the two versions.</p>
+<pre class="program"><code class="language-cpp">#include &lt;CTurtle.hpp&gt;
+namespace ct = cturtle;
+
+int main() {
+    ct::TurtleScreen scr;
+    ct::Turtle turtle(scr);
+    turtle.speed(ct::TS_SLOWEST);
+    turtle.fillcolor({"purple"});
+    turtle.begin_fill();
+    for (int i = 0; i &lt; 4; i++) {
+        turtle.forward(50);
+        turtle.right(90);
+    }
+    turtle.end_fill();
+    scr.bye();
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="cturtle_python_1"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="cturtle_python_1_editor" data-question_label="" data-codelens="true">import turtle
+
+turt = turtle.Turtle()
+turt.fillcolor("purple")
+turt.speed("slowest")
+
+turt.begin_fill()
+for i in range(4):
+    turt.forward(50)
+    turt.right(90)
+turt.end_fill()
+</textarea></div></div></div>
+<article class="exercise exercise-like" id="cturtle_question_1"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">8.1.1</span><span class="period">.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="cturtle_question_1" data-multipleanswers="true">
+<p id="p-603">Q-3: How might students benefit from having a visual representation such as C-Turtle? Check all that apply.</p>
+<li data-component="answer" id="cturtle_question_1_opt_a" data-correct=""><p id="p-604">Students receive instant feedback and gratification for their work.</p></li>
+<li data-component="feedback" id="cturtle_question_1_opt_a"><p id="p-605">Correct!</p></li>
+<li data-component="answer" id="cturtle_question_1_opt_b"><p id="p-606">Students will pay less attention to how their code works, and more attention to its end result.</p></li>
+<li data-component="feedback" id="cturtle_question_1_opt_b"><p id="p-607">Incorrect, because equal thought must be put into the usage of Turtles as well as the outcome.</p></li>
+<li data-component="answer" id="cturtle_question_1_opt_c"><p id="p-608">Students get more acquainted with RGB values common in web development.</p></li>
+<li data-component="feedback" id="cturtle_question_1_opt_c"><p id="p-609">Incorrect, because RGB values are not the focus or reason behind using Turtles.</p></li>
+<li data-component="answer" id="cturtle_question_1_opt_d" data-correct=""><p id="p-610">Students will be more comfortable working with concepts they are used to, such as Turtles.</p></li>
+<li data-component="feedback" id="cturtle_question_1_opt_d"><p id="p-611">Correct!</p></li>
+</ul></div></div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">https://github.com/walkerje/C-Turtle</code></div></div>
+</div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
