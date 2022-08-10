@@ -28,7 +28,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <document-id edition="2">httlacs</document-id>
 
     <!-- Prefix to enhance Sage notebook contents -->
-    <initialism>SB</initialism>
+    <initialism></initialism>
     <blurb shelf="introcs">The original open source intro to computer science textbook.  Great for students of all ages.</blurb>
     <!-- Math-related macros from "macros.tex" in previous LaTeX version -->
     <!-- \notdivide replaces \notmid to avoid conflict with tikz - TWJ 5/6/2010 -->
