@@ -5,7 +5,7 @@
                 <gi>
                     <title>back</title>
                     
-                        <p>Moves the turtle backwards a specified number of units.</p>
+                        <p><idx>back</idx>Moves the turtle backwards a specified number of units.</p>
                     
                 </gi>
                 <gi>
