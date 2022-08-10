@@ -2,9 +2,10 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
     <xi:include href="./bookinfo.ptx"/>
 
-    <book xml:id="thinkcspy" permid="tcs">
-        <title>How to Think Like a Computer Scientist</title>
+    <book xml:id="cpp4python" permid="cpp4p">
+        <title>C++ For Python Programmers</title>
         <subtitle>The PreTeXt Interactive Edition</subtitle>
+        <subsubsection>By Jan Pearce, Berea College and Brad Miller, Runestone </subsubsection>
         <xi:include href="./IntroCpp/toctree.ptx"/>
         <xi:include href="./AtomicData/toctree.ptx"/>
         <xi:include href="./Control_Structures/toctree.ptx"/>
