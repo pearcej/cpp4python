@@ -119,7 +119,7 @@ int main(){
             <p>Here the angle-brackets <c>&lt;&gt;</c> are used to include libraries or headers provided by
                 the implementation, such as the
                 headers in the standard library (<c>iostream</c>, <c>string</c>, etc.). The double
-                quotes <c>"</c> are used for headers and files not provided by the implementation.</p>
+                quotes <c></c> are used for headers and files not provided by the implementation.</p>
         </subsection>
         <subsection xml:id="intro-cpp_the-main-function">
             <title>The main function</title>
