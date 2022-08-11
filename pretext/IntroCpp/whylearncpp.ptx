@@ -33,7 +33,6 @@
             to focus on what is different from the languages you already know.</p>
         <subsection xml:id="intro-cpp_why-learn-c-why-not-java-or-javascript">
             <title>Why Learn C++? Why not Java or Javascript?</title>
-            <blockquote>
                 <p><ul>
                     <li>
                         <p>C++ is an enormous language which is very powerful because it is a high-level language that offers low-level features,
@@ -69,7 +68,6 @@
                             it is still one of the top listed in job advertisements.</p>
                     </li>
                 </ul></p>
-            </blockquote>
         </subsection>
     </section>
 

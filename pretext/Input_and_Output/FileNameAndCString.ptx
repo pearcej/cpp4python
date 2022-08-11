@@ -18,7 +18,6 @@ char filename[16];</pre>
             number of character storage that is needed for the variable.
             A <c>\0</c> or <c>NULL</c> character terminates the C-string, without the system knowing how much of
             the array is actually used.</p>
-        <blockquote>
             <dl>
                 <li>
                     <title>Warnings:</title>
@@ -34,7 +33,6 @@ char filename[16];</pre>
                     
                 </li>
             </dl>
-        </blockquote>
         <p><term>C-strings</term> are an older type of string that was inherited from the C language, and people frequently refer to both types as <q>strings</q>, which can be confusing.</p>
         <p>Typically, <title_reference>string</title_reference> from the <c>&lt;string&gt;</c> library should be used in all other cases when not
             working with file names or when a modern version of C++ can be used.</p>
