@@ -38,6 +38,9 @@
         <title>
             Colophon
         </title>
+        <image source="cc.jpg" width="30%"> 
+            <description>Creative Commons logo </description>
+        </image>
         <copyright>
             <year>2019</year>
             <holder>Janice L. Pearce, Bradley N. Miller</holder>
