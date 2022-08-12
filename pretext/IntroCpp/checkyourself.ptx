@@ -1,0 +1,138 @@
+<section xml:id="intro-cpp_check-yourself">
+        <title>Check yourself</title>
+
+    <exercise label="mc_comment">
+        <statement>
+
+        <p>Q-1: What symbol or set of symbols will begin a comment in C++ when the comment extends only to the end of the line?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>&amp;#x003C!-</p>
+                </statement>
+                <feedback>
+                    <p>No, &amp;#x003C!- is used in html to begin comments, but it is not used in C++.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>&amp;#x22D5</p>
+                </statement>
+                <feedback>
+                    <p>No, &amp;#x22D5 is used in Python for comments, but in C++ it is used for compiler directives such as loading a code library.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>//</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>@</p>
+                </statement>
+                <feedback>
+                    <p>No, @ is not used in C++.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>none of the above</p>
+                </statement>
+                <feedback>
+                    <p>One of the above is correct.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="mc_mlcomment">
+        <statement>
+
+        <p>Q-2:  True or False: Both Python and C++ support multi-line comments. In C++, they begin with <c>/*</c> and end with <c>*/</c>.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>True</p>
+                </statement>
+                <feedback>
+                    <p>Sorry, both languages do support multi-line comments, but they look different.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>False</p>
+                </statement>
+                <feedback>
+                    <p>Right!  Python uses triple quotes while in C++ they begin with /* and end with */.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="mc_comment_out">
+        <statement>
+
+        <p>Q-3: Given a variable called x. What statement will print the contents of x?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>cout x;</p>
+                </statement>
+                <feedback>
+                    <p>Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator &lt;&lt;.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>output x;</p>
+                </statement>
+                <feedback>
+                    <p>No, output is not a C++ command or object.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>print x;</p>
+                </statement>
+                <feedback>
+                    <p>No, print is a Python command, but is not used in C++.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>none of the above</p>
+                </statement>
+                <feedback>
+                    <p>The correct statement would be "cout &lt;&lt; x;" or "std:cout x;" but the insertion operator is certainly needed.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+        <exercise>
+            <statement>
+    <p>Q-4:  What keyword from the Standard Library (std) is used in conjunction with the extraction operator to accept C++ input from the keyboard as the standard input? <var/>  </p></statement><setup><var><condition string="^\s*cin\s*$"><feedback><p>Right! It stands for character input.</p></feedback></condition><condition string="^\s*raw_input\s*$"><feedback><p>That&#8217;s Python, not C++!</p></feedback></condition><condition string="^\s*input\s*$"><feedback><p>That&#8217;s Python, not C++!</p></feedback></condition><condition string="^\s*scanf\s*$"><feedback><p>That&#8217;s C, not C++!</p></feedback></condition><condition string="^\s*default\s*$"><feedback><p>Incorrect. Please try again.</p></feedback></condition></var></setup></exercise>    </section>
