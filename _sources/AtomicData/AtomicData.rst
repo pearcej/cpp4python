@@ -700,7 +700,7 @@ On the first iteration of the loop, it is assigned the value of
             int *ptrx = &x;
 
             while (ptrx) {
-                cout << "Pointer ptrx points to " << &ptrx << endl;
+                cout << "Pointer ptrx points to " << ptrx << endl;
                 ptrx = nullptr;
             }
 
