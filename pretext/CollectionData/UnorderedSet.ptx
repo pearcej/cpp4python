@@ -1,114 +1,108 @@
+<?xml version="1.0"?>
 <section xml:id="collection-data_unordered-sets">
-        <title>Unordered Sets</title>
-        <p>An <term>unordered_set</term> is an unordered collection of zero or more unique C++ data values
+  <title>Unordered Sets</title>
+  <p>An <term>unordered_set</term> is an unordered collection of zero or more unique C++ data values
             of a particular type.
             To use unordered_sets, you import <c>unordered_set</c> from the Standard template library with
             <c>#include &lt;unorderd_set&gt;</c>.</p>
-        <p>Unordered_sets allow for fast retrieval of individual elements based on their value.
+  <p>Unordered_sets allow for fast retrieval of individual elements based on their value.
             In an unordered_set, the value of an element is at the same time its key, that identifies it uniquely.
             <c>Keys</c> are <term>immutable</term>, therefore, the elements in an <c>unordered_set</c> cannot be modified once in the container -
             However, they can be inserted and removed.</p>
-        <p>Unordered sets do not allow duplicates and are initialized using comma-delimited
+  <p>Unordered sets do not allow duplicates and are initialized using comma-delimited
             values enclosed in curly braces. The collection can be assigned to
             a variable as shown below.</p>
-        <pre>set&lt;int&gt; mySet = {3, 6, 4, 78, 10}</pre>
-        <p>Unordered sets support a number of methods that should be familiar to those who
+  <pre>set&lt;int&gt; mySet = {3, 6, 4, 78, 10}</pre>
+  <p>Unordered sets support a number of methods that should be familiar to those who
             have worked with sets in a mathematics setting. <xref ref="collection-data_collection-data_tab-setmethods"/>
             provides a summary. Examples of their use follow.</p>
-        
-        <table xml:id="collection-data_id1"><tabular>
-            <title><term>Table 6: Methods Provided by Sets in C++</term></title>
-            
-                
-                
-                
-                
-                    <row header="yes">
-                        <cell>
-                            <term>Method Name</term>
-                        </cell>
-                        <cell>
-                            <term>Use</term>
-                        </cell>
-                        <cell>
-                            <term>Explanation</term>
-                        </cell>
-                    </row>
-                
-                
-                    <row>
-                        <cell>
-                            <c>union</c>
-                        </cell>
-                        <cell>
-                            <c>set_union()</c>
-                        </cell>
-                        <cell>
+  <table xml:id="collection-data_id1">
+    <tabular>
+      <title>
+        <term>Table 6: Methods Provided by Sets in C++</term>
+      </title>
+      <row header="yes">
+        <cell>
+          <term>Method Name</term>
+        </cell>
+        <cell>
+          <term>Use</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>union</c>
+        </cell>
+        <cell>
+          <c>set_union()</c>
+        </cell>
+        <cell>
                             Returns a new set with all elements from both sets
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>intersection</c>
-                        </cell>
-                        <cell>
-                            <c>set_intersection()</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>intersection</c>
+        </cell>
+        <cell>
+          <c>set_intersection()</c>
+        </cell>
+        <cell>
                             Returns a new set with only those elements common to both sets
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>difference</c>
-                        </cell>
-                        <cell>
-                            <c>set_difference()</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>difference</c>
+        </cell>
+        <cell>
+          <c>set_difference()</c>
+        </cell>
+        <cell>
                             Returns a new set with all items from first set not in second
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>add</c>
-                        </cell>
-                        <cell>
-                            <c>aset.insert(item)</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>add</c>
+        </cell>
+        <cell>
+          <c>aset.insert(item)</c>
+        </cell>
+        <cell>
                             Adds item to the set
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>remove</c>
-                        </cell>
-                        <cell>
-                            <c>aset.erase(item)</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>remove</c>
+        </cell>
+        <cell>
+          <c>aset.erase(item)</c>
+        </cell>
+        <cell>
                             Removes item from the set
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>clear</c>
-                        </cell>
-                        <cell>
-                            <c>aset.clear()</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>clear</c>
+        </cell>
+        <cell>
+          <c>aset.clear()</c>
+        </cell>
+        <cell>
                             Removes all elements from the set
                         </cell>
-                    </row>
-                
-            
-        </tabular></table>
-        <p>The code below is an example of a program that can detect if a specific char is in an unordered set.</p>
-
-    <program xml:id="Unordered_set_example" interactive="activecode" language="cpp">
-        <input>
+      </row>
+    </tabular>
+  </table>
+  <p>The code below is an example of a program that can detect if a specific char is in an unordered set.</p>
+  <program xml:id="Unordered_set_example" interactive="activecode" language="cpp">
+    <input>
 // Function that checks to see if a char
 // is in the unorderd set
 #include &lt;iostream&gt;
@@ -134,18 +128,47 @@ checker(charSet, letter);
 return 0;
 }
         </input>
-    </program>
-        <p>the <c>find</c> method used for a conditional in <c>Checker</c> compares
+  </program>
+  <p>the <c>find</c> method used for a conditional in <c>Checker</c> compares
             each item in the set with the given parameter until there is a match. the
             <c>set.find(letter) == set.end()</c> section means that if <c>find</c> cannot
             find the <c>letter</c> before reaching the end of the set, then <c>letter</c>
             is not contained in the set.</p>
-        <subsection xml:id="collection-data_matching">
-            <title>Matching</title>
-
-<exercise label="matching_us">
-    <statement><p> Match the Unordered Sets operations with their corresponding explination.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>union</premise><response>Returns a new set with all elements from both sets.</response></match><match order="2"><premise>intersection</premise><response>Returns a new set with only those elements common to both sets.</response></match><match order="3"><premise>difference</premise><response> Returns a new set with all items from first set not in second.</response></match><match order="4"><premise>add</premise><response>Adds item to the set.</response></match><match order="5"><premise>remove</premise><response>erases item from the set.</response></match><match order="6"><premise>clear</premise><response>Removes all elements from the set.</response></match></matches></exercise>        </subsection>
-    </section>
-    
+  <subsection xml:id="collection-data_matching">
+    <title>Matching</title>
+    <exercise label="matching_us">
+      <statement>
+        <p> Match the Unordered Sets operations with their corresponding explination.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>union</premise>
+          <response>Returns a new set with all elements from both sets.</response>
+        </match>
+        <match order="2">
+          <premise>intersection</premise>
+          <response>Returns a new set with only those elements common to both sets.</response>
+        </match>
+        <match order="3">
+          <premise>difference</premise>
+          <response> Returns a new set with all items from first set not in second.</response>
+        </match>
+        <match order="4">
+          <premise>add</premise>
+          <response>Adds item to the set.</response>
+        </match>
+        <match order="5">
+          <premise>remove</premise>
+          <response>erases item from the set.</response>
+        </match>
+        <match order="6">
+          <premise>clear</premise>
+          <response>Removes all elements from the set.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

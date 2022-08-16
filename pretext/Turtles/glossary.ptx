@@ -1,112 +1,121 @@
+<?xml version="1.0"?>
 <section xml:id="turtles_turtles_turtles_glossary">
-        <title>Glossary</title>
-        <glossary sorted="False">
-            
-                <gi>
-                    <title>back</title>
-                    
-                        <p><idx>back</idx>Moves the turtle backwards a specified number of units.</p>
-                    
-                </gi>
-                <gi>
-                    <title>beginfill</title>
-                    
-                        <p><idx>beginfill</idx>Begins to fill the shape indicated by the path the turtle takes after calling it.</p>
-                    
-                </gi>
-                <gi>
-                    <title>delay</title>
-                    
-                        <p><idx>delay</idx>Adds a delay at the end of the frame.</p>
-                    
-                </gi>
-                <gi>
-                    <title>endfill</title>
-                    
-                        <p><idx>endfill</idx>Finishes filling the shape the turtle has outlined since calling <c classes="code">beginfill</c>.</p>
-                    
-                </gi>
-                <gi>
-                    <title>fillcolor</title>
-                    
-                        <p><idx>fillcolor</idx>Tells the turtle what collor to fill the object it is drawing.</p>
-                    
-                </gi>
-                <gi>
-                    <title>forward</title>
-                    
-                        <p><idx>forward</idx>Tells the turtle to go forward a certin number of units.</p>
-                    
-                </gi>
-                <gi>
-                    <title>goto</title>
-                    
-                        <p><idx>goto</idx>Moves the turtle to a specified coordinate on the canvas.</p>
-                    
-                </gi>
-                <gi>
-                    <title>left</title>
-                    
-                        <p><idx>left</idx>Turns the turtle to the left a specified number of units.</p>
-                    
-                </gi>
-                <gi>
-                    <title>pencolor</title>
-                    
-                        <p><idx>pencolor</idx>Tells the turtle what color it will draw the outline as.</p>
-                    
-                </gi>
-                <gi>
-                    <title>penup</title>
-                    
-                        <p><idx>penup</idx>Tells the turtle to pick up its paintbrush.</p>
-                    
-                </gi>
-                <gi>
-                    <title>pendown</title>
-                    
-                        <p><idx>pendown</idx>Tells the turtle to put its paintbrush down.</p>
-                    
-                </gi>
-                <gi>
-                    <title>right</title>
-                    
-                        <p><idx>right</idx>Turns the turtle to the right a specified number of units.</p>
-                    
-                </gi>
-                <gi>
-                    <title>speed</title>
-                    
-                        <p><idx>speed</idx>Tells the turtle how fast to draw.</p>
-                    
-                </gi>
-                <gi>
-                    <title>undo queue</title>
-                    
-                        <p><idx>undo queue</idx>A queue of actions the turtle has previously taken.</p>
-                    
-                </gi>
-                <gi>
-                    <title>width</title>
-                    
-                        <p><idx>width</idx>Tells the turtle how wide its paintbrush should be.</p>
-                    
-                </gi>
-                <gi>
-                    <title>write</title>
-                    
-                        <p><idx>write</idx>Tells the turtle to write text at its current position.</p>
-                    
-                </gi>
-            
-        </glossary>
-        <subsection xml:id="turtles_matching">
-            <title>Matching</title>
-
-<exercise label="cturtle_dnd_glossary">
-    <statement><p>
-</p></statement>
-    
-<matches><match order="1"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="10"><premise>write some text to the canvas.</premise><response>turtle.write</response></match><match order="2"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="3"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="4"><premise>change the paintbrush color.</premise><response>turtle.pencolor</response></match><match order="5"><premise>change the paintbrush size.</premise><response>turtle.width</response></match><match order="6"><premise>change the speed</premise><response>turtle.speed</response></match><match order="7"><premise>move backward.</premise><response>turtle.back</response></match><match order="8"><premise>move forward.</premise><response>turtle.forward</response></match><match order="9"><premise>move to a specific coordinate.</premise><response>turtle.goto</response></match></matches></exercise>        </subsection>
-    </section>
-
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>back</title>
+      <p><idx>back</idx>Moves the turtle backwards a specified number of units.</p>
+    </gi>
+    <gi>
+      <title>beginfill</title>
+      <p><idx>beginfill</idx>Begins to fill the shape indicated by the path the turtle takes after calling it.</p>
+    </gi>
+    <gi>
+      <title>delay</title>
+      <p><idx>delay</idx>Adds a delay at the end of the frame.</p>
+    </gi>
+    <gi>
+      <title>endfill</title>
+      <p><idx>endfill</idx>Finishes filling the shape the turtle has outlined since calling <c classes="code">beginfill</c>.</p>
+    </gi>
+    <gi>
+      <title>fillcolor</title>
+      <p><idx>fillcolor</idx>Tells the turtle what collor to fill the object it is drawing.</p>
+    </gi>
+    <gi>
+      <title>forward</title>
+      <p><idx>forward</idx>Tells the turtle to go forward a certin number of units.</p>
+    </gi>
+    <gi>
+      <title>goto</title>
+      <p><idx>goto</idx>Moves the turtle to a specified coordinate on the canvas.</p>
+    </gi>
+    <gi>
+      <title>left</title>
+      <p><idx>left</idx>Turns the turtle to the left a specified number of units.</p>
+    </gi>
+    <gi>
+      <title>pencolor</title>
+      <p><idx>pencolor</idx>Tells the turtle what color it will draw the outline as.</p>
+    </gi>
+    <gi>
+      <title>penup</title>
+      <p><idx>penup</idx>Tells the turtle to pick up its paintbrush.</p>
+    </gi>
+    <gi>
+      <title>pendown</title>
+      <p><idx>pendown</idx>Tells the turtle to put its paintbrush down.</p>
+    </gi>
+    <gi>
+      <title>right</title>
+      <p><idx>right</idx>Turns the turtle to the right a specified number of units.</p>
+    </gi>
+    <gi>
+      <title>speed</title>
+      <p><idx>speed</idx>Tells the turtle how fast to draw.</p>
+    </gi>
+    <gi>
+      <title>undo queue</title>
+      <p><idx>undo queue</idx>A queue of actions the turtle has previously taken.</p>
+    </gi>
+    <gi>
+      <title>width</title>
+      <p><idx>width</idx>Tells the turtle how wide its paintbrush should be.</p>
+    </gi>
+    <gi>
+      <title>write</title>
+      <p><idx>write</idx>Tells the turtle to write text at its current position.</p>
+    </gi>
+  </glossary>
+  <subsection xml:id="turtles_matching">
+    <title>Matching</title>
+    <exercise label="cturtle_dnd_glossary">
+      <statement>
+        <p>
+</p>
+      </statement>
+      <matches>
+        <match order="1">
+          <premise>what color to fill drawing with.</premise>
+          <response>turtle.fillcolor</response>
+        </match>
+        <match order="10">
+          <premise>write some text to the canvas.</premise>
+          <response>turtle.write</response>
+        </match>
+        <match order="2">
+          <premise>start filling the shape.</premise>
+          <response>turtle.beginfill</response>
+        </match>
+        <match order="3">
+          <premise>stops filling the shape.</premise>
+          <response>turtle.endfill</response>
+        </match>
+        <match order="4">
+          <premise>change the paintbrush color.</premise>
+          <response>turtle.pencolor</response>
+        </match>
+        <match order="5">
+          <premise>change the paintbrush size.</premise>
+          <response>turtle.width</response>
+        </match>
+        <match order="6">
+          <premise>change the speed</premise>
+          <response>turtle.speed</response>
+        </match>
+        <match order="7">
+          <premise>move backward.</premise>
+          <response>turtle.back</response>
+        </match>
+        <match order="8">
+          <premise>move forward.</premise>
+          <response>turtle.forward</response>
+        </match>
+        <match order="9">
+          <premise>move to a specific coordinate.</premise>
+          <response>turtle.goto</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

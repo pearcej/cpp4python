@@ -1,23 +1,23 @@
+<?xml version="1.0"?>
 <section xml:id="turtles_practical-application-tessellation">
-        <title>Practical Application - Tessellation</title>
-        <p>Art takes a variety of forms, ranging from abstract to realistic,
+  <title>Practical Application - Tessellation</title>
+  <p>Art takes a variety of forms, ranging from abstract to realistic,
             and consisting of an impossibly wide variety of materials.
             Ancient Sumerians would dye and dry small pieces of clay to create mosaics.
             These mosaics were often composed of shapes and patterns that would overlap
             without any gaps in between them. This art form is known today as tessellation,
             which can be observed in any modern building that is composed of bricks,
             or any floor covered in ceramic tiles. Mosaics are defined by their interlocking shapes,
-            however, what these shapes are made of&#8210; or, the medium&#8210; varies depending on the artist.</p>
-        <p>The common mediums for this art form have changed over time,
+            however, what these shapes are made of&#x2012; or, the medium&#x2012; varies depending on the artist.</p>
+  <p>The common mediums for this art form have changed over time,
             ranging from pieces of clay to pieces of wood. More recently,
             digital mediums have been used as an effective alternative to physical materials.
             Turtles are one of many such digital mediums, and are often used to
             create images rich in repetitive features. Your task will be to create
             a mosaic-like tessellating image using turtles.</p>
-        <p>Consider the following examples.</p>
-
-    <program xml:id="cturtle_practical_example_cpp" interactive="activecode" language="cpp">
-        <input>
+  <p>Consider the following examples.</p>
+  <program xml:id="cturtle_practical_example_cpp" interactive="activecode" language="cpp">
+    <input>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -63,10 +63,9 @@ int main() {
     return 0;
 }
         </input>
-    </program>
-
-    <program xml:id="cturtle_practical_example_Python" interactive="activecode" language="Python">
-        <input>
+  </program>
+  <program xml:id="cturtle_practical_example_Python" interactive="activecode" language="Python">
+    <input>
 import turtle
 
 SQUARE_SIZE = 35
@@ -107,19 +106,20 @@ for i in range(8):
         b=0
 wn.tracer(1)
         </input>
-    </program>
-        <p>You must create a similar image with the following criteria:</p>
-        <p><ul>
-            <li>
-                <p>There must not be four edges in your chosen shape, but 3 or 5+ is fine.</p>
-            </li>
-            <li>
-                <p>There must be no more than two colors for the shapes in the image.</p>
-            </li>
-        </ul></p>
-
-    <program xml:id="cturtle_practical_prompt" interactive="activecode" language="cpp">
-        <input>
+  </program>
+  <p>You must create a similar image with the following criteria:</p>
+  <p>
+    <ul>
+      <li>
+        <p>There must not be four edges in your chosen shape, but 3 or 5+ is fine.</p>
+      </li>
+      <li>
+        <p>There must be no more than two colors for the shapes in the image.</p>
+      </li>
+    </ul>
+  </p>
+  <program xml:id="cturtle_practical_prompt" interactive="activecode" language="cpp">
+    <input>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -134,6 +134,5 @@ int main() {
     return 0;
 }
         </input>
-    </program>
-    </section>
-
+  </program>
+</section>

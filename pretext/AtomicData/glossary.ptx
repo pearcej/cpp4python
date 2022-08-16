@@ -1,56 +1,48 @@
+<?xml version="1.0"?>
 <section xml:id="atomicdata_atomicdata_atomic-data_glossary">
-        <title>Glossary</title>
-        <glossary sorted="False">
-            
-                <gi>
-                    <title>address-of</title>
-                    
-                        <p><idx>address-of</idx> the address-of operator (<c>&amp;</c>) is used to access the address of a C++ variable.</p>
-                    
-                </gi>
-                <gi>
-                    <title>atomic data type</title>
-                    
-                        <p><idx>atomic data type</idx>basic data type that cannot be broken down into any simpler data elements.</p>
-                    
-                </gi>
-                <gi>
-                    <title><c>bool</c></title>
-                    
-                        <p><idx>bool</idx>keyword for Boolean data type.</p>
-                    
-                </gi>
-                <gi>
-                    <title><c>char</c></title>
-                    
-                        <p><idx>char</idx>keyword for character data type that stores a single character.</p>
-                    
-                </gi>
-                <gi>
-                    <title>dereference</title>
-                    
-                        <p><idx>dereference</idx>follow a pointer to its referenced memory location and read the data there.</p>
-                    
-                </gi>
-                <gi>
-                    <title><c>float</c></title>
-                    
-                        <p><idx>float</idx>keyword for floating point data type.</p>
-                    
-                </gi>
-                <gi>
-                    <title><c>double</c></title>
-                    
-                        <p><idx>double</idx>keyword for double-precision floating point data type.</p>
-                    
-                </gi>
-                <gi>
-                    <title><c>int</c></title>
-                    
-                        <p><idx>int</idx>keyword for integer data type.</p>
-                    
-                </gi>
-            
-        </glossary>
-    </section>
-    
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>address-of</title>
+      <p><idx>address-of</idx> the address-of operator (<c>&amp;</c>) is used to access the address of a C++ variable.</p>
+    </gi>
+    <gi>
+      <title>atomic data type</title>
+      <p><idx>atomic data type</idx>basic data type that cannot be broken down into any simpler data elements.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>bool</c>
+      </title>
+      <p><idx>bool</idx>keyword for Boolean data type.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>char</c>
+      </title>
+      <p><idx>char</idx>keyword for character data type that stores a single character.</p>
+    </gi>
+    <gi>
+      <title>dereference</title>
+      <p><idx>dereference</idx>follow a pointer to its referenced memory location and read the data there.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>float</c>
+      </title>
+      <p><idx>float</idx>keyword for floating point data type.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>double</c>
+      </title>
+      <p><idx>double</idx>keyword for double-precision floating point data type.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>int</c>
+      </title>
+      <p><idx>int</idx>keyword for integer data type.</p>
+    </gi>
+  </glossary>
+</section>

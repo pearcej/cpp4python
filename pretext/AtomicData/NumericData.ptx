@@ -1,23 +1,24 @@
+<?xml version="1.0"?>
 <section xml:id="atomic-data_numeric-data">
-        <title>Numeric Data</title>
-        <p>Numeric C++ data types include <c>int</c> for integer, <c>float</c>
+  <title>Numeric Data</title>
+  <p>Numeric C++ data types include <c>int</c> for integer, <c>float</c>
             for floating point, <c>double</c> for double precision floating point.</p>
-        <p>The standard arithmetic operations, +, -, *, and /
+  <p>The standard arithmetic operations, +, -, *, and /
             are used with optional parentheses to force the order of
             operations away from normal operator precedence.</p>
-        <p>In Python we can use <c>//</c> to get integer division.
+  <p>In Python we can use <c>//</c> to get integer division.
             In C++, we declare all data types.
             When two integers are divided in C++, the integer portion of the
             quotient is returned and the fractional portion is removed.
             i.e. When two integers are divided, integer division is used.
             To get the whole quotient, declaring one of the numbers as a float will
             convert the entire result into floating point.</p>
-        <p>Exponentiation in C++ is done using <c>pow()</c> from the <c>cmath</c> library
+  <p>Exponentiation in C++ is done using <c>pow()</c> from the <c>cmath</c> library
             and the remainder (modulo) operator is done with <c>%</c>.</p>
-        <p>Run the following code to see that you understand each result.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="intro_1cpp" interactive="activecode" language="cpp">
+  <p>Run the following code to see that you understand each result.</p>
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="intro_1cpp" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 #include &lt;cmath&gt;
@@ -41,10 +42,10 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-            </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="intro_1py" interactive="activecode" language="python">
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="intro_1py" interactive="activecode" language="python">
         <input>
 # Function that performs a variety of math operations.
 def main():
@@ -63,114 +64,97 @@ def main():
 
 main()
         </input>
-    </program>
-            </TabNode></exercise>
-        <p>When declaring numeric variables in C++,
+      </program>
+    </TabNode>
+  </exercise>
+  <p>When declaring numeric variables in C++,
             modifiers like <c>short</c>, <c>long</c>, and <c>unsigned</c>
             can optionally be used to help
             to ensure space is used as efficiently as possible.</p>
-
-    <exercise label="mc_integer_div">
+  <exercise label="mc_integer_div">
+    <statement>
+      <p>Q-3: what is the result of dividing <c>3/2</c> in C++?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
         <statement>
-
-        <p>Q-3: what is the result of dividing <c>3/2</c> in C++?</p>
-
+          <p>1</p>
         </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>1</p>
-                </statement>
-                <feedback>
-                    <p>Right!  This is like ``3//2`` in Python.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>1.5</p>
-                </statement>
-                <feedback>
-                    <p>No. Integer division is used. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>2</p>
-                </statement>
-                <feedback>
-                    <p>No. Integer division is used. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>A run-time error will occur.</p>
-                </statement>
-                <feedback>
-                    <p>No, C++ generally will try to do as you ask.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-
-    <exercise label="mc_exponentiation">
+        <feedback>
+          <p>Right!  This is like ``3//2`` in Python.</p>
+        </feedback>
+      </choice>
+      <choice>
         <statement>
-
-        <p>Q-4: How do I raise 4 to 5th power in C++?</p>
-
+          <p>1.5</p>
         </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>``4**5``</p>
-                </statement>
-                <feedback>
-                    <p>No, ``**`` is used in Python, not C++.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>``5**4``</p>
-                </statement>
-                <feedback>
-                    <p>No, ``**`` is used in Python, not C++, and the operators are reversed.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>``4^5``</p>
-                </statement>
-                <feedback>
-                    <p>No. The ``^`` is a valid operator in C++, but it does something else.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>``pow(4, 5)``</p>
-                </statement>
-                <feedback>
-                    <p>You got it! Remember the cmath library will need to be included for pow() to work.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-    </section>
-
+        <feedback>
+          <p>No. Integer division is used. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>2</p>
+        </statement>
+        <feedback>
+          <p>No. Integer division is used. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A run-time error will occur.</p>
+        </statement>
+        <feedback>
+          <p>No, C++ generally will try to do as you ask.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>none of the above</p>
+        </statement>
+        <feedback>
+          <p>One of the above is correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mc_exponentiation">
+    <statement>
+      <p>Q-4: How do I raise 4 to 5th power in C++?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>``4**5``</p>
+        </statement>
+        <feedback>
+          <p>No, ``**`` is used in Python, not C++.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>``5**4``</p>
+        </statement>
+        <feedback>
+          <p>No, ``**`` is used in Python, not C++, and the operators are reversed.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>``4^5``</p>
+        </statement>
+        <feedback>
+          <p>No. The ``^`` is a valid operator in C++, but it does something else.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>``pow(4, 5)``</p>
+        </statement>
+        <feedback>
+          <p>You got it! Remember the cmath library will need to be included for pow() to work.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

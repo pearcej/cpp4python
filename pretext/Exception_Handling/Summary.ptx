@@ -1,47 +1,59 @@
+<?xml version="1.0"?>
 <section xml:id="exception_handling_exception_handling_exception_-handling_summary">
-        <title>Summary</title>
-        <p><ol label="1">
-            <li>
-                <p>There are two types of errors that occur while writing programs: syntax errors and logic errors</p>
-            </li>
-            <li>
-                <p>A syntax error is an error that occurs due to typing error or wrong statement that is not allowed in a language. This can be easily caught as the program does not run until this is fixed.</p>
-            </li>
-            <li>
-                <p>Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.</p>
-            </li>
-            <li>
-                <p>logic errors can be caught by using <c>try</c> and <c>catch</c> which can help pinpoint what is causing the error and avoid confusion about the problem.</p>
-            </li>
-        </ol></p>
-        <subsection xml:id="exception_-handling_check-yourself">
-            <title>Check Yourself</title>
-
-<exercise label="syntax_error">
-    <statement><p>Click on the syntax error.</p></statement>
-<feedback><p>Remember, syntax errors occur more for people learning a new language.</p></feedback>
-<areas>
-<cline><area>int age;</area>:</cline>
-<cline><area>cout &lt;&lt; "age:";</area>:</cline>
-<cline><area>cin &gt;&gt; age;</area>:</cline>
-<cline><area>if (age &gt; 18) {</area>:</cline>
-<cline><area>cout &lt;&lt; "You can vote in the U.S!";}</area>:</cline>
-<cline><area>else {</area>:</cline>
-<cline><area correct="yes">cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
-<cline>}</cline>
-</areas></exercise>
-<exercise label="logic_error">
-    <statement><p>Click on the logic error.</p></statement>
-<feedback><p>If we want the code to say when we can vote, what cases should it say when can and cannot?</p></feedback>
-<areas>
-<cline><area>int age;</area>:</cline>
-<cline><area>cout &lt;&lt; "age:";</area>:</cline>
-<cline><area>cin &gt;&gt; age;</area>:</cline>
-<cline><area correct="yes">if (age &gt; 18) {</area>:</cline>
-<cline><area>cout &lt;&lt; "You can vote in the U.S!";}</area>:</cline>
-<cline><area>else {</area>:</cline>
-<cline><area>cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
-<cline>}</cline>
-</areas></exercise>        </subsection>
-    </section>
-
+  <title>Summary</title>
+  <p>
+    <ol label="1">
+      <li>
+        <p>There are two types of errors that occur while writing programs: syntax errors and logic errors</p>
+      </li>
+      <li>
+        <p>A syntax error is an error that occurs due to typing error or wrong statement that is not allowed in a language. This can be easily caught as the program does not run until this is fixed.</p>
+      </li>
+      <li>
+        <p>Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.</p>
+      </li>
+      <li>
+        <p>logic errors can be caught by using <c>try</c> and <c>catch</c> which can help pinpoint what is causing the error and avoid confusion about the problem.</p>
+      </li>
+    </ol>
+  </p>
+  <subsection xml:id="exception_-handling_check-yourself">
+    <title>Check Yourself</title>
+    <exercise label="syntax_error">
+      <statement>
+        <p>Click on the syntax error.</p>
+      </statement>
+      <feedback>
+        <p>Remember, syntax errors occur more for people learning a new language.</p>
+      </feedback>
+      <areas>
+        <cline><area>int age;</area>:</cline>
+        <cline><area>cout &lt;&lt; "age:";</area>:</cline>
+        <cline><area>cin &gt;&gt; age;</area>:</cline>
+        <cline><area>if (age &gt; 18) {</area>:</cline>
+        <cline><area>cout &lt;&lt; "You can vote in the U.S!";}</area>:</cline>
+        <cline><area>else {</area>:</cline>
+        <cline><area correct="yes">cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
+        <cline>}</cline>
+      </areas>
+    </exercise>
+    <exercise label="logic_error">
+      <statement>
+        <p>Click on the logic error.</p>
+      </statement>
+      <feedback>
+        <p>If we want the code to say when we can vote, what cases should it say when can and cannot?</p>
+      </feedback>
+      <areas>
+        <cline><area>int age;</area>:</cline>
+        <cline><area>cout &lt;&lt; "age:";</area>:</cline>
+        <cline><area>cin &gt;&gt; age;</area>:</cline>
+        <cline><area correct="yes">if (age &gt; 18) {</area>:</cline>
+        <cline><area>cout &lt;&lt; "You can vote in the U.S!";}</area>:</cline>
+        <cline><area>else {</area>:</cline>
+        <cline><area>cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
+        <cline>}</cline>
+      </areas>
+    </exercise>
+  </subsection>
+</section>

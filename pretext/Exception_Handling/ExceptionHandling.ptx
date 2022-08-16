@@ -1,11 +1,12 @@
+<?xml version="1.0"?>
 <section xml:id="exception_-handling_exception-handling">
-        <title>Exception Handling</title>
-        <p>There are two types of errors that typically occur when writing
+  <title>Exception Handling</title>
+  <p>There are two types of errors that typically occur when writing
             programs. The first, known as a <term>syntax error</term>, simply means that the
             programmer has made a mistake in the structure of a statement or
             expression. For example, it is incorrect to write a statement in one line and
             forget the semicolon.</p>
-        <pre>int main() {
+  <pre>int main() {
     int i = 10
     return 0;
 }
@@ -15,11 +16,11 @@
     main.cpp:3:5: error: expected ',' or ';' before 'return'
          return 0;
      ^~~~~~</pre>
-        <p>In this case, the C++ compiler has found that it cannot complete
+  <p>In this case, the C++ compiler has found that it cannot complete
             the processing of this instruction since it does not conform to the
             rules of the language. Syntax errors are usually more frequent when you
             are first learning a language.</p>
-        <p>The other type of error, known as a <term>logic error</term>, denotes a situation
+  <p>The other type of error, known as a <term>logic error</term>, denotes a situation
             where the program executes but gives the wrong result. This can be due
             to an error in the underlying algorithm or an error in your translation
             of that algorithm. In some cases, logic errors lead to very bad
@@ -28,33 +29,31 @@
             In this case, the logic error leads to a <term>runtime error</term> that causes the
             program to terminate. These types of runtime errors are typically called
             <term>exceptions</term>.</p>
-        <p>Most of the time, beginning programmers simply think of exceptions as
+  <p>Most of the time, beginning programmers simply think of exceptions as
             fatal runtime errors that cause the end of execution. However, most
             programming languages provide a way to deal with these errors that will
             allow the programmer to have some type of intervention if they so
             choose. In addition, programmers can create their own exceptions if they
             detect a situation in the program execution that warrants it.</p>
-        <p>When an exception occurs, we say that it has been <q>thrown.</q> You can
+  <p>When an exception occurs, we say that it has been <q>thrown.</q> You can
             <q>catch</q> the exception that has been raised by using a <c>try</c>
             statement. For example, consider the following session that asks the
             user for an integer and then uses the division operator.
             If the user enters a second number that is not 0, then the print will show the result of division.
             However, if the user enters 0, then C++ will throw an error and return a value other than 0.</p>
-        <pre>main.cpp: In function 'int main()':
+  <pre>main.cpp: In function 'int main()':
 main.cpp:5:13: warning: division by zero [-Wdiv-by-zero]
    cout &lt;&lt; 10/0;
            ~~^~
 exit status -1</pre>
-        <p>We can handle this exception by creating a divide function that can
+  <p>We can handle this exception by creating a divide function that can
             <c>throw</c> an error. A corresponding <c>try</c> and <c>catch</c> block can <q>catch</q> the exception
             and prints a message back to the user in the event that an exception
             occurs. For example, try changing the values assigned to firstNum and secondNum
             in the code below:</p>
-        
-        <blockquote>
-
+  <blockquote>
     <program xml:id="divisionErr_cpp" interactive="activecode" language="cpp">
-        <input>
+      <input>
 // Shows exception handling using try,throw,
 // and catch in order to output
 // an error message to the console
@@ -90,20 +89,20 @@ int main() {
 }
         </input>
     </program>
-        </blockquote>
-        <p>This will catch the fact that an exception is raised by <c>div</c> and will
+  </blockquote>
+  <p>This will catch the fact that an exception is raised by <c>div</c> and will
             instead print the error back to the user.
             This means that the program will not terminate but instead will continue
             on to the next statements.</p>
-        <p>It is also possible for a programmer to use nested try and except statements,
+  <p>It is also possible for a programmer to use nested try and except statements,
             along with different thrown errors to manage what happens in their code. The program
             will continue running after the error is caught, but we can stop this by returning
             a value other than 0 in our main function. This is known as an <c>error code</c>.</p>
-        <p>The code below should be run inside of a folder, and can be used to open files.
+  <p>The code below should be run inside of a folder, and can be used to open files.
             Ideally one of the files should be called <q>file.txt</q>. The program will prompt
             the user for a filename and can catch if that file does not exist or the default
             <q>file.txt</q> does not exist. This is another useful application for Error handling.</p>
-        <pre>#include &lt;fstream&gt;
+  <pre>#include &lt;fstream&gt;
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -155,8 +154,7 @@ int main() {
 
     return 0;
 }</pre>
-        <p>There are many kinds of default exceptions that can be used in the C++ standard library.
+  <p>There are many kinds of default exceptions that can be used in the C++ standard library.
             See the C++ official documentation for a list
             of all the available exception types and for how to create your own exception type.</p>
-    </section>
-
+</section>

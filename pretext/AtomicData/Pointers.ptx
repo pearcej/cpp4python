@@ -1,33 +1,38 @@
+<?xml version="1.0"?>
 <section xml:id="atomic-data_pointers">
-        <title>Pointers</title>
-        <p>A C++ <term>pointer</term> is a variable that stores a memory address and can be used to indirectly
+  <title>Pointers</title>
+  <p>A C++ <term>pointer</term> is a variable that stores a memory address and can be used to indirectly
             access data stored at that memory location.</p>
-        <p>We know that variables in a computer program are used to label data with a
+  <p>We know that variables in a computer program are used to label data with a
             descriptive identifier so that the data can be accessed and used by that
             computer program.</p>
-        <p>Let's look at some examples of storing an integer in Python and C++.</p>
-        <p>In Python every single thing is stored as an object.
+  <p>Let's look at some examples of storing an integer in Python and C++.</p>
+  <p>In Python every single thing is stored as an object.
             Hence, a Python variable is actually a reference to an object that is stored in memory.
             Hence, each Python variable requires two memory locations:
             one to store the reference, and the other to store the variable value itself in an object.</p>
-        <p>In C++ the value of each variable is stored directly in memory without the need
+  <p>In C++ the value of each variable is stored directly in memory without the need
             for either a reference or an object. This makes access faster, but it is one of
             the reasons we need to declare each variable because different types take differing
             amounts of space in memory!</p>
-        <p>The following code declares a variable called <em>varN</em> that has in it a
+  <p>The following code declares a variable called <em>varN</em> that has in it a
             value of 100:</p>
-        <pre>// Python reference for a single integer value
+  <pre>// Python reference for a single integer value
 varN = 100</pre>
-        
-        <figure align="center" xml:id="fig-py-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.1: Python reference</caption><image source="AtomicData/Figures/python_reference.png" width="50%" alt="&quot;arrow from varN to box containing 100 object&quot;"/></figure>
-        <pre>// C++ variable declaration and assignment of an integer value
+  <figure align="center" xml:id="fig-py-reference">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.1: Python reference</caption>
+    <image source="AtomicData/Figures/python_reference.png" width="50%" alt="&quot;arrow from varN to box containing 100 object&quot;"/>
+  </figure>
+  <pre>// C++ variable declaration and assignment of an integer value
 int varN = 100;</pre>
-        <p>In C++ the results of running this code will look like the diagram below:</p>
-        
-        <figure align="center" xml:id="fig-cpp-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.2: C++ variable</caption><image source="AtomicData/Figures/cpp_var.png" width="50%" alt="&quot;Location named varN containing value of 100&quot;"/></figure>
-        <p>In each case, when we want to output the value to the console, we use the variable name
+  <p>In C++ the results of running this code will look like the diagram below:</p>
+  <figure align="center" xml:id="fig-cpp-reference">
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.2: C++ variable</caption>
+    <image source="AtomicData/Figures/cpp_var.png" width="50%" alt="&quot;Location named varN containing value of 100&quot;"/>
+  </figure>
+  <p>In each case, when we want to output the value to the console, we use the variable name
             to do so.</p>
-        <p>But, we can also identify the memory location of the variable by its address.
+  <p>But, we can also identify the memory location of the variable by its address.
             In both Python and C++, this address
             may change each time the program is run. In C++, the address will always look
             odd because it will be the actual memory address written in a hexadecimal code
@@ -35,11 +40,11 @@ int varN = 100;</pre>
             In Python it is implementation dependent,
             it is sometimes a hexadecimal code and sometimes just a count or another
             way to reference the address.</p>
-        <p>In Python we use <c>id</c> to reference the address,
+  <p>In Python we use <c>id</c> to reference the address,
             while in C++ we use the <em>address-of operator</em>, <c>&amp;</c>.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="address_cpp" interactive="activecode" language="cpp">
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="address_cpp" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -54,10 +59,10 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-            </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="address_py" interactive="activecode" language="python">
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="address_py" interactive="activecode" language="python">
         <input>
 # Outputs the value &amp; memory address of
 # variable titled varN.
@@ -68,70 +73,71 @@ def main():
 
 main()
         </input>
-    </program>
-            </TabNode></exercise>
-        <p>In both Python and C++, variables are stored in memory locations which are dependent
+      </program>
+    </TabNode>
+  </exercise>
+  <p>In both Python and C++, variables are stored in memory locations which are dependent
             upon the run itself. If you repeatedly run the above code in either C++ or Python, you may
             see the location change.</p>
-        <p>As suggested above, in Python, it is impossible to store a variable directly.
+  <p>As suggested above, in Python, it is impossible to store a variable directly.
             Instead, we must use a variable name and a reference to the data object.
             (Hence the arrow in the image.)
             In C++, variables store values directly, because they are faster to reference.</p>
-        <p>References are slower, but they are sometimes useful.
+  <p>References are slower, but they are sometimes useful.
             If in C++, we want to create a analogous reference to a memory location,
             we must use a special data type called a <term>pointer</term>.</p>
-        <subsection xml:id="atomic-data_pointer-syntax">
-            <title>Pointer Syntax</title>
-            <p>When declaring a pointer in C++ that will <q>point</q> to the memory address of some
+  <subsection xml:id="atomic-data_pointer-syntax">
+    <title>Pointer Syntax</title>
+    <p>When declaring a pointer in C++ that will <q>point</q> to the memory address of some
                 data type,
                 you will use the same rules of declaring variables and data types.
                 The key difference is that there must be an asterisk (*) between the data type and the
                 identifier.</p>
-            <pre>variableType *identifier; // syntax to declare a C++ pointer
+    <pre>variableType *identifier; // syntax to declare a C++ pointer
 int *ptrx; // example of a C++ pointer to an integer</pre>
-            <p>White space in C++ generally does not matter, so the following pointer declarations
+    <p>White space in C++ generally does not matter, so the following pointer declarations
                 are identical:</p>
-            <pre>SOMETYPE *variablename; // preferable
+    <pre>SOMETYPE *variablename; // preferable
 SOMETYPE * variablename;
 SOMETYPE* variablename;</pre>
-            <p>However, the first declaration is preferable because it is clearer to the
+    <p>However, the first declaration is preferable because it is clearer to the
                 programmer that the variable is in fact a pointer because the asterisk is closer
                 to the variable name.</p>
-            <subsubsection xml:id="atomic-data_the-address-of-operator">
-                <title>The address-of operator, <c>&amp;</c></title>
-                <p>Now that we know how to declare pointers, how do we give them the address of
+    <subsubsection xml:id="atomic-data_the-address-of-operator">
+      <title>The address-of operator, <c>&amp;</c></title>
+      <p>Now that we know how to declare pointers, how do we give them the address of
                     where the value is going to be stored? One way to do this is to have a pointer
                     refer to another variable by using the address-of operator, which is denoted by the
                     ampersand symbol, <c>&amp;</c>. The address-of operator <c>&amp;</c> does exactly what it indicates,
                     variableType varN;  // a variable to hold the value
                     namely it returns the address.</p>
-                <p>The syntax is shown below, where varN stores the value, and ptrN stores
+      <p>The syntax is shown below, where varN stores the value, and ptrN stores
                     the address of where varN is located:</p>
-                <pre>variableType *ptrN = &amp;varN;  // a variable pointing to the address of varN</pre>
-                <p>Keep in mind that when declaring a C++ pointer, the pointer needs to
+      <pre>variableType *ptrN = &amp;varN;  // a variable pointing to the address of varN</pre>
+      <p>Keep in mind that when declaring a C++ pointer, the pointer needs to
                     reference the same type as the variable or constant to which it points.</p>
-                <p>Expanding on the example above where varN has the value of 9.</p>
-                <pre>//variable declaration for a single integer value
+      <p>Expanding on the example above where varN has the value of 9.</p>
+      <pre>//variable declaration for a single integer value
 int varN = 9;
 int *ptrN;
 ptrN = &amp;varN;</pre>
-                <p>The results of running this C++ code will look like the diagram below.</p>
-                
-                <figure align="center" xml:id="id3"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.3: View into memory with pointers</caption><image source="AtomicData/Figures/new_new_point2.png" width="50%" alt="image"/></figure>
-            </subsubsection>
-        </subsection>
-        <subsection xml:id="atomic-data_accessing-values-from-pointers">
-            <title>Accessing Values from Pointers</title>
-            <p>Once you have a C++ pointer, you use the asterisk before the pointer variable,
+      <p>The results of running this C++ code will look like the diagram below.</p>
+      <figure align="center" xml:id="id3">
+        <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.3: View into memory with pointers</caption>
+        <image source="AtomicData/Figures/new_new_point2.png" width="50%" alt="image"/>
+      </figure>
+    </subsubsection>
+  </subsection>
+  <subsection xml:id="atomic-data_accessing-values-from-pointers">
+    <title>Accessing Values from Pointers</title>
+    <p>Once you have a C++ pointer, you use the asterisk before the pointer variable,
                 to <em>dereference</em> the pointer, which means go to the location pointed at by the 3.</p>
-            <pre>In other words, varN and *ptrN (note the asterisk in front!) reference the same
+    <pre>In other words, varN and *ptrN (note the asterisk in front!) reference the same
 value in the code above.</pre>
-            <p>Let's extend the example above to output the value of a variable and its address
+    <p>Let's extend the example above to output the value of a variable and its address
                 in memory:</p>
-            
-            <blockquote>
-
-    <program xml:id="firstptr" interactive="activecode" language="cpp">
+    <blockquote>
+      <program xml:id="firstptr" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -149,78 +155,67 @@ int main( ) {
     return 0;
 }
         </input>
-    </program>
-            </blockquote>
-
+      </program>
+    </blockquote>
     <exercise label="mc_pntrhlp">
-        <statement>
-
-            <p>Q-4: If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>varPntr: 9</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, the variable varN no longer equals 100 past line 7!</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>varPntr: 50</p>
-                </statement>
-                <feedback>
-                    <p>Right!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>varPntr: 150</p>
-                </statement>
-                <feedback>
-                    <p>No, the values do not add together!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>0x7ffeb9ce053c</p>
-                </statement>
-                <feedback>
-                    <p>We are dereferencing the pointer, so you would not get the address of varN. Try again!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is indeed correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
+      <statement>
+        <p>Q-4: If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>varPntr: 9</p>
+          </statement>
+          <feedback>
+            <p>Not quite, the variable varN no longer equals 100 past line 7!</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>varPntr: 50</p>
+          </statement>
+          <feedback>
+            <p>Right!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>varPntr: 150</p>
+          </statement>
+          <feedback>
+            <p>No, the values do not add together!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>0x7ffeb9ce053c</p>
+          </statement>
+          <feedback>
+            <p>We are dereferencing the pointer, so you would not get the address of varN. Try again!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>none of the above</p>
+          </statement>
+          <feedback>
+            <p>One of the above is indeed correct.</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-            <p>Compiling and running the above code will have the program output the
+    <p>Compiling and running the above code will have the program output the
                 value in varN,
                 what is in ptrN (the memory address of varN),
                 and what value is located at that
                 memory location.</p>
-            <p>The second output sentence is the address of varN, which would most likely be
+    <p>The second output sentence is the address of varN, which would most likely be
                 different if you run the program on your machine.</p>
-            <p>WARNING: What happens if you forget the ampersand
+    <p>WARNING: What happens if you forget the ampersand
                 when assigning a value to a pointer
                 and have the following instructions instead?</p>
-            
-            <blockquote>
-
-    <program xml:id="cpp_address_error1" interactive="activecode" language="cpp">
+    <blockquote>
+      <program xml:id="cpp_address_error1" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -240,39 +235,41 @@ int main( ) {
      return 0;
 }
         </input>
-    </program>
-            </blockquote>
-            <p><term>This is BAD, BAD, BAD!</term></p>
-            
-            <figure align="center" xml:id="id4"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.4: dangling pointer reference</caption><image source="AtomicData/Figures/new_point_broken.png" width="50%" alt="image"/></figure>
-            <p>If your compiler does not catch that error (the one for this class may),
+      </program>
+    </blockquote>
+    <p>
+      <term>This is BAD, BAD, BAD!</term>
+    </p>
+    <figure align="center" xml:id="id4">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.4: dangling pointer reference</caption>
+      <image source="AtomicData/Figures/new_point_broken.png" width="50%" alt="image"/>
+    </figure>
+    <p>If your compiler does not catch that error (the one for this class may),
                 the first <c>cout</c> instruction outputs</p>
-            <pre>After changing *ptrN, varN now has: 50</pre>
-            <p>which is expected because you changed where ptrN is pointing to and
+    <pre>After changing *ptrN, varN now has: 50</pre>
+    <p>which is expected because you changed where ptrN is pointing to and
                 NOT the contents of where it is pointing.</p>
-            <p>The second <c>cout</c> instruction is a disaster because
+    <p>The second <c>cout</c> instruction is a disaster because
                 (1) You don't know what is stored in location 100 in memory, and
                 (2) that location is outside of your segment (area in memory reserved
                 for your program), so the operating system will jump in with a message
                 about a <q>segmentation fault</q>. Although such an error message looks bad,
                 a <q>seg fault</q> is in fact a helpful error because unlike the elusive logical
                 errors, the reason is fairly localized.</p>
-        </subsection>
-        <subsection xml:id="atomic-data_the-null-pointer">
-            <title>The null pointer</title>
-            <p>Like <c>None</c> in Python, the null pointer (<c>nullptr</c>) in C++ points to
+  </subsection>
+  <subsection xml:id="atomic-data_the-null-pointer">
+    <title>The null pointer</title>
+    <p>Like <c>None</c> in Python, the null pointer (<c>nullptr</c>) in C++ points to
                 nothing.  Older editions of C++ also used <c>NULL</c> (all caps) or 0,
                 but we will use the keyword <c>nullptr</c> because the compiler can do
                 better error handling with the keyword.  The null pointer is often used
                 in conditions and/or in logical operations.</p>
-            <p>The following example demonstrates how the null pointer works.
+    <p>The following example demonstrates how the null pointer works.
                 The variable ptrx initially has the address of x when it is declared.
                 On the first iteration of the loop, it is assigned the value of
                 <c>nullptr</c>, which evaluates to a false value; thereby ending the loop:</p>
-            
-            <blockquote>
-
-    <program xml:id="NULLexamplecpp" interactive="activecode" language="cpp">
+    <blockquote>
+      <program xml:id="NULLexamplecpp" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -290,11 +287,10 @@ int main( ) {
     cout &lt;&lt; "Pointer ptrx points to nothing!\n";
 }
         </input>
-    </program>
-            </blockquote>
-            <p>Helpful Tip: The null pointer becomes very useful when you must test
+      </program>
+    </blockquote>
+    <p>Helpful Tip: The null pointer becomes very useful when you must test
                 the state of a pointer, such as whether the assignment to an address
                 is valid or not.</p>
-        </subsection>
-    </section>
-
+  </subsection>
+</section>

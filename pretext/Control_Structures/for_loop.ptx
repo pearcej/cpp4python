@@ -1,12 +1,12 @@
+<?xml version="1.0"?>
 <section xml:id="control_-structures_for-loops">
-        <title>For Loops</title>
-        <p>Even though the <c>while</c> type of construct is very useful in a wide variety of
+  <title>For Loops</title>
+  <p>Even though the <c>while</c> type of construct is very useful in a wide variety of
             situations, another iterative structure, the <c>for</c> statement, can be
             used to iterate across a range of values easily.
             A <c>for</c> statement allows us to write a loop that is executed a specific number of times.</p>
-
-    <program xml:id="ForLoopIterations" interactive="activecode" language="cpp">
-        <input>
+  <program xml:id="ForLoopIterations" interactive="activecode" language="cpp">
+    <input>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -16,13 +16,12 @@ int main() {
     }
  }
         </input>
-    </program>
-        <p>In the example above, the <term>hello world</term> statement is executed 10 times.</p>
-        <p>A common use of the <c>for</c> construct is to implement <term>certain</term> repetition
+  </program>
+  <p>In the example above, the <term>hello world</term> statement is executed 10 times.</p>
+  <p>A common use of the <c>for</c> construct is to implement <term>certain</term> repetition
             over a range of values.</p>
-
-    <program xml:id="rangeForLoop1" interactive="activecode" language="cpp">
-        <input>
+  <program xml:id="rangeForLoop1" interactive="activecode" language="cpp">
+    <input>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -36,13 +35,13 @@ using namespace std;
      return 0;
  }
         </input>
-    </program>
-        <p>The code will use <c>cout</c> five times.  The value of the variable <c>i</c> will
+  </program>
+  <p>The code will use <c>cout</c> five times.  The value of the variable <c>i</c> will
             start at 0 and go through the full sequence of values 0,1,2,3,4.  This
             value is then squared and printed.</p>
-        <subsection xml:id="control_-structures_check-yourself">
-            <title>Check yourself</title>
-            <pre>#include &lt;iostream&gt;
+  <subsection xml:id="control_-structures_check-yourself">
+    <title>Check yourself</title>
+    <pre>#include &lt;iostream&gt;
 using namespace std;
 
 int main() {
@@ -53,62 +52,52 @@ int main() {
 
     return 0;
 }</pre>
-
     <exercise label="mc_forloop">
-        <statement>
-
-            <p>Q-3: Using the code above please select the answer that should appear?</p>
-
-        </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>0 2 4 6</p>
-                </statement>
-                <feedback>
-                    <p>Good Job!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>0 0 0 0</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, take another look at the operation happening in the cout line</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Runtime error</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, take another look at the for loop</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>0 1 2 3</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, take another look at the operation happening in the cout line</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>all of the above</p>
-                </statement>
-                <feedback>
-                    <p/>
-                </feedback>
-            </choice>
-</choices>
-
+      <statement>
+        <p>Q-3: Using the code above please select the answer that should appear?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>0 2 4 6</p>
+          </statement>
+          <feedback>
+            <p>Good Job!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>0 0 0 0</p>
+          </statement>
+          <feedback>
+            <p>Not quite, take another look at the operation happening in the cout line</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Runtime error</p>
+          </statement>
+          <feedback>
+            <p>Not quite, take another look at the for loop</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>0 1 2 3</p>
+          </statement>
+          <feedback>
+            <p>Not quite, take another look at the operation happening in the cout line</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>all of the above</p>
+          </statement>
+          <feedback>
+            <p/>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-        </subsection>
-    </section>
-
+  </subsection>
+</section>

@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-    <xi:include href="./bookinfo.ptx"/>
-
-    <book xml:id="cpp4python" permid="cpp4p">
-        <title>C++ For Python Programmers</title>
-        <subtitle>The PreTeXt Interactive Edition</subtitle>
-        <xi:include href="./frontmatter.ptx" />  
-
-
-        <xi:include href="./IntroCpp/toctree.ptx"/>
-        <xi:include href="./AtomicData/toctree.ptx"/>
-        <xi:include href="./Control_Structures/toctree.ptx"/>
-        <xi:include href="./Functions/toctree.ptx"/>
-        <xi:include href="./CollectionData/toctree.ptx"/>
-        <xi:include href="./Input_and_Output/toctree.ptx"/>
-        <xi:include href="./Exception_Handling/toctree.ptx"/>
-        <xi:include href="./Turtles/toctree.ptx"/>
-
-        <xi:include href="./backmatter.ptx" />
-
-    </book>
+  <xi:include href="./bookinfo.ptx"/>
+  <book xml:id="cpp4python" permid="cpp4p">
+    <title>C++ For Python Programmers</title>
+    <subtitle>The PreTeXt Interactive Edition</subtitle>
+    <xi:include href="./frontmatter.ptx"/>
+    <xi:include href="./IntroCpp/toctree.ptx"/>
+    <xi:include href="./AtomicData/toctree.ptx"/>
+    <xi:include href="./Control_Structures/toctree.ptx"/>
+    <xi:include href="./Functions/toctree.ptx"/>
+    <xi:include href="./CollectionData/toctree.ptx"/>
+    <xi:include href="./Input_and_Output/toctree.ptx"/>
+    <xi:include href="./Exception_Handling/toctree.ptx"/>
+    <xi:include href="./Turtles/toctree.ptx"/>
+    <xi:include href="./backmatter.ptx"/>
+  </book>
 </pretext>

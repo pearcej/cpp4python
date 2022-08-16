@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <section xml:id="atomic-data_using-data-in-c">
-        <title>Using Data in C++</title>
-        <p>C++ requires the users specify the specific data type of each variable
+  <title>Using Data in C++</title>
+  <p>C++ requires the users specify the specific data type of each variable
             before it is used.
             The primary C++ built-in atomic data types are: integer (<c>int</c>),
             floating point (<c>float</c>), double precision floating point (<c>double</c>),
@@ -8,5 +9,4 @@
             type which holds a memory location called <c>pointer</c>. C++ also has
             collection or compound data types, which will be discussed in a future
             chapter.</p>
-    </section>
-
+</section>

@@ -1,8 +1,8 @@
+<?xml version="1.0"?>
 <section xml:id="turtles_check-yourself">
-        <title>Check Yourself</title>
-
-    <program xml:id="turtle_checkyourself_ac_1" interactive="activecode" language="cpp">
-        <input>
+  <title>Check Yourself</title>
+  <program xml:id="turtle_checkyourself_ac_1" interactive="activecode" language="cpp">
+    <input>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -23,55 +23,48 @@ int main() {
     return 0;
 }
         </input>
-    </program>
-
-    <exercise label="turtle_checkyourself_mchoice_1">
+  </program>
+  <exercise label="turtle_checkyourself_mchoice_1">
+    <statement>
+      <p>Q-2: How large would the undo queue be for the above code example?</p>
+    </statement>
+    <choices>
+      <choice>
         <statement>
-
-        <p>Q-2: How large would the undo queue be for the above code example?</p>
-
+          <p>13</p>
         </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>13</p>
-                </statement>
-                <feedback>
-                    <p>No, think about how many times fill is used...</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>10</p>
-                </statement>
-                <feedback>
-                    <p>Correct!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>8</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! Consider that almost everything a turtle does is an action, even filling.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>4</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! Consider that there are some actions in a for loop.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-        <program language="cpp"><input>
+        <feedback>
+          <p>No, think about how many times fill is used...</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>10</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>8</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Consider that almost everything a turtle does is an action, even filling.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Consider that there are some actions in a for loop.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <program language="cpp">
+    <input>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -87,82 +80,68 @@ int main() {
     scr.bye();
     return 0;
 }
-</input></program>
-
-    <exercise label="turtle_checkyourself_mchoice_2">
+</input>
+  </program>
+  <exercise label="turtle_checkyourself_mchoice_2">
+    <statement>
+      <p>Q-3: What kind of shape does the above activecode create?</p>
+    </statement>
+    <choices>
+      <choice>
         <statement>
-
-        <p>Q-3: What kind of shape does the above activecode create?</p>
-
+          <p>Circle</p>
         </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>Circle</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! Consider how many times the for-loop iterates...</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>No shape</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! The turtle's pen is always down.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Pentagon</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! Consider the angle the turtle turns every iteration.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>Star</p>
-                </statement>
-                <feedback>
-                    <p>Correct!</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-
-    <exercise label="turtle_checkyourself_mchoice_3">
+        <feedback>
+          <p>Incorrect! Consider how many times the for-loop iterates...</p>
+        </feedback>
+      </choice>
+      <choice>
         <statement>
-
-        <p>Q-4: You can have more than one turtle on one screen.</p>
-
+          <p>No shape</p>
         </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>True</p>
-                </statement>
-                <feedback>
-                    <p>Correct!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>False</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect!</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-    </section>
-
+        <feedback>
+          <p>Incorrect! The turtle's pen is always down.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Pentagon</p>
+        </statement>
+        <feedback>
+          <p>Incorrect! Consider the angle the turtle turns every iteration.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Star</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="turtle_checkyourself_mchoice_3">
+    <statement>
+      <p>Q-4: You can have more than one turtle on one screen.</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>False</p>
+        </statement>
+        <feedback>
+          <p>Incorrect!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

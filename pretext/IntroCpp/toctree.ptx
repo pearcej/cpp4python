@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <title>Introduction to C++ for Python Programmers</title>
-        <xi:include href='./welcome.ptx' />
-        <xi:include href='./introduction.ptx' />
-        <xi:include href='./whylearncpp.ptx' />
-        <xi:include href='./firstcppprogram.ptx' />
-        <xi:include href='./glossary.ptx' />
-    </chapter>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <title>Introduction to C++ for Python Programmers</title>
+  <xi:include href="./welcome.ptx"/>
+  <xi:include href="./introduction.ptx"/>
+  <xi:include href="./whylearncpp.ptx"/>
+  <xi:include href="./firstcppprogram.ptx"/>
+  <xi:include href="./glossary.ptx"/>
+</chapter>

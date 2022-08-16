@@ -1,45 +1,65 @@
+<?xml version="1.0"?>
 <section xml:id="control_structures_control_structures_control_-structures_glossary">
-        <title>Glossary</title>
-        <glossary sorted="False">
-            
-                <gi>
-                    <title><c>break</c></title>
-                    
-                        <p><idx>break</idx>Terminates the current block of code and resumes the program outside of it.</p>
-                    
-                </gi>
-                <gi>
-                    <title><c>case</c></title>
-                    
-                        <p><idx>case</idx>A condition in a switch statement for a variable to be tested against.</p>
-                    
-                </gi>
-                <gi>
-                    <title>conditional</title>
-                    
-                        <p><idx>conditional</idx>A statement that tests whether a condition is true or false</p>
-                    
-                </gi>
-                <gi>
-                    <title>loop</title>
-                    
-                        <p><idx>loop</idx>A series of instructions repeated infinitely or until a condition is met.</p>
-                    
-                </gi>
-                <gi>
-                    <title><c>switch</c></title>
-                    
-                        <p><idx>switch</idx>A statement that tests a variable against possible conditions for it.</p>
-                    
-                </gi>
-            
-        </glossary>
-        <subsection xml:id="control_-structures_matching">
-            <title>Matching</title>
-
-<exercise label="matching_ControlStructures">
-    <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>break</premise><response>Terminates the current block of code and resumes the program outside of it.</response></match><match order="2"><premise>case</premise><response>Condition in a switch statement for a variable to be tested against.</response></match><match order="3"><premise>conditional</premise><response>Statement that tests whether a condition is true or false .</response></match><match order="4"><premise>loop</premise><response>Series of instructions repeated infinitely or until a condition is met.</response></match><match order="5"><premise>switch</premise><response>Statement that tests a variable against possible conditions for it.</response></match></matches></exercise>        </subsection>
-    </section>
-
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>
+        <c>break</c>
+      </title>
+      <p><idx>break</idx>Terminates the current block of code and resumes the program outside of it.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>case</c>
+      </title>
+      <p><idx>case</idx>A condition in a switch statement for a variable to be tested against.</p>
+    </gi>
+    <gi>
+      <title>conditional</title>
+      <p><idx>conditional</idx>A statement that tests whether a condition is true or false</p>
+    </gi>
+    <gi>
+      <title>loop</title>
+      <p><idx>loop</idx>A series of instructions repeated infinitely or until a condition is met.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>switch</c>
+      </title>
+      <p><idx>switch</idx>A statement that tests a variable against possible conditions for it.</p>
+    </gi>
+  </glossary>
+  <subsection xml:id="control_-structures_matching">
+    <title>Matching</title>
+    <exercise label="matching_ControlStructures">
+      <statement>
+        <p>Drag each glossary term to its' corresponding definition.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>break</premise>
+          <response>Terminates the current block of code and resumes the program outside of it.</response>
+        </match>
+        <match order="2">
+          <premise>case</premise>
+          <response>Condition in a switch statement for a variable to be tested against.</response>
+        </match>
+        <match order="3">
+          <premise>conditional</premise>
+          <response>Statement that tests whether a condition is true or false .</response>
+        </match>
+        <match order="4">
+          <premise>loop</premise>
+          <response>Series of instructions repeated infinitely or until a condition is met.</response>
+        </match>
+        <match order="5">
+          <premise>switch</premise>
+          <response>Statement that tests a variable against possible conditions for it.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

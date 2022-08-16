@@ -1,18 +1,20 @@
+<?xml version="1.0"?>
 <section xml:id="control_structures_control_structures_control_-structures_summary">
-        <title>Summary</title>
-        <p><ol label="1">
-            <li>
-                <p>Like Python C++ also supports the <c>if-else</c> conditional statements, and they behave the same way as they do in a Python program.</p>
-            </li>
-            <li>
-                <p>Unlike Python, C++ does not support the use of the <c>elif</c> statement. However, you can get the functionality of an <c>elif</c> statement by nesting <c>if</c> and <c>else</c> statements in C++.</p>
-            </li>
-            <li>
-                <p>C++ also supports a <c>switch</c> statement that acts something like the elif statement of Python under certain conditions.</p>
-            </li>
-            <li>
-                <p>C++ supports the use of Boolean expressions in <c>if-else</c> statements.</p>
-            </li>
-        </ol></p>
-    </section>
-
+  <title>Summary</title>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Like Python C++ also supports the <c>if-else</c> conditional statements, and they behave the same way as they do in a Python program.</p>
+      </li>
+      <li>
+        <p>Unlike Python, C++ does not support the use of the <c>elif</c> statement. However, you can get the functionality of an <c>elif</c> statement by nesting <c>if</c> and <c>else</c> statements in C++.</p>
+      </li>
+      <li>
+        <p>C++ also supports a <c>switch</c> statement that acts something like the elif statement of Python under certain conditions.</p>
+      </li>
+      <li>
+        <p>C++ supports the use of Boolean expressions in <c>if-else</c> statements.</p>
+      </li>
+    </ol>
+  </p>
+</section>

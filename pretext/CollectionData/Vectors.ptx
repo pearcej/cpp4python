@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <section xml:id="collection-data_vectors">
-        <title>Vectors</title>
-        <p><term>Vectors</term> are much more similar to Python lists than arrays are.
+  <title>Vectors</title>
+  <p><term>Vectors</term> are much more similar to Python lists than arrays are.
             Vectors use a dynamically allocated array to store their elements,
             so they can change size, and they have other friendly features as well.
             Because they use a dynamically allocated array, they use contiguous storage locations
@@ -10,148 +11,141 @@
             A new element can be inserted into or deleted from any part of a vector,
             and automatic reallocation for other existing items in the vector will be applied.
             Unlike Python lists, vectors are homogeneous, so every element in the vector must be of the same type.</p>
-        <p>Vectors are a class that is available through a library called the Standard Template Library (STL), and one uses a <c>&lt; &gt;</c>
+  <p>Vectors are a class that is available through a library called the Standard Template Library (STL), and one uses a <c>&lt; &gt;</c>
             notation to indicate the data type of the elements. In order to use vectors, One
             needs to include the vector library.</p>
-        <pre>#include &lt;vector&gt;</pre>
-        
-        <table xml:id="collection-data_id1"><tabular>
-            <title><term>Common C++ Vector Operators</term></title>
-            
-                
-                
-                
-                
-                    <row header="yes">
-                        <cell>
-                            <term>Vector Operation</term>
-                        </cell>
-                        <cell>
-                            <term>Use</term>
-                        </cell>
-                        <cell>
-                            <term>Explanation</term>
-                        </cell>
-                    </row>
-                
-                
-                    <row>
-                        <cell>
-                            <c>[ ]</c>
-                        </cell>
-                        <cell>
-                            <c>myvector[i]</c>
-                        </cell>
-                        <cell>
+  <pre>#include &lt;vector&gt;</pre>
+  <table xml:id="collection-data_id1">
+    <tabular>
+      <title>
+        <term>Common C++ Vector Operators</term>
+      </title>
+      <row header="yes">
+        <cell>
+          <term>Vector Operation</term>
+        </cell>
+        <cell>
+          <term>Use</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>[ ]</c>
+        </cell>
+        <cell>
+          <c>myvector[i]</c>
+        </cell>
+        <cell>
                             access value of element at index i
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>=</c>
-                        </cell>
-                        <cell>
-                            <c>myvector[i]=value</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>=</c>
+        </cell>
+        <cell>
+          <c>myvector[i]=value</c>
+        </cell>
+        <cell>
                             assign value to element at index i
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>push_back</c>
-                        </cell>
-                        <cell>
-                            <c>myvect.push_back(item)</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>push_back</c>
+        </cell>
+        <cell>
+          <c>myvect.push_back(item)</c>
+        </cell>
+        <cell>
                             Appends item to the far end of the vector
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>pop_back</c>
-                        </cell>
-                        <cell>
-                            <c>myvect.pop_back()</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>pop_back</c>
+        </cell>
+        <cell>
+          <c>myvect.pop_back()</c>
+        </cell>
+        <cell>
                             Deletes last item (from  far end) of the vector
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>insert</c>
-                        </cell>
-                        <cell>
-                            <c>myvect.insert(i, item)</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>insert</c>
+        </cell>
+        <cell>
+          <c>myvect.insert(i, item)</c>
+        </cell>
+        <cell>
                             Inserts an item at index i
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>erase</c>
-                        </cell>
-                        <cell>
-                            <c>myvect.erase(i)</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>erase</c>
+        </cell>
+        <cell>
+          <c>myvect.erase(i)</c>
+        </cell>
+        <cell>
                             Erases an element from index i
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>size</c>
-                        </cell>
-                        <cell>
-                            <c>myvect.size()</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>size</c>
+        </cell>
+        <cell>
+          <c>myvect.size()</c>
+        </cell>
+        <cell>
                             Returns the actual size used by elements
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>capacity</c>
-                        </cell>
-                        <cell>
-                            <c>myvect.capacity()</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>capacity</c>
+        </cell>
+        <cell>
+          <c>myvect.capacity()</c>
+        </cell>
+        <cell>
                             Returns the size of allocated storage capacity
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <c>reserve</c>
-                        </cell>
-                        <cell>
-                            <c>myvect.reserve(amount)</c>
-                        </cell>
-                        <cell>
+      </row>
+      <row>
+        <cell>
+          <c>reserve</c>
+        </cell>
+        <cell>
+          <c>myvect.reserve(amount)</c>
+        </cell>
+        <cell>
                             Request a change in capacity to amount
                         </cell>
-                    </row>
-                
-            
-        </tabular></table>
-        <p>A very common programming task is to grow a vector using the <c>push_back()</c> method to append to the vector
+      </row>
+    </tabular>
+  </table>
+  <p>A very common programming task is to grow a vector using the <c>push_back()</c> method to append to the vector
             as we see in the next example.
             Because vectors can change size, vectors typically allocate some extra storage to accommodate for possible growth.
             Thus the vector typically has an actual <em>capacity</em> greater than the storage <em>size</em> strictly needed to contain its elements.</p>
-        <subsection xml:id="collection-data_iterating-through-vectors">
-            <title>Iterating through Vectors</title>
-            <p>When iterating vectors, you must first find the length of your container. You can simply call the <c>.length()</c> function.
+  <subsection xml:id="collection-data_iterating-through-vectors">
+    <title>Iterating through Vectors</title>
+    <p>When iterating vectors, you must first find the length of your container. You can simply call the <c>.length()</c> function.
                 For arrays, the number of elements can be found by getting the size in memory of the array
                 by using the <c>sizeof()</c> function, and then dividing it by the size of the first element of
                 the array using the same <c>sizeof()</c> function. Because all elements in C++ arrays are
                 the same type, they take the same amount of space and that can be used to find the number
                 of elements the Array contains!</p>
-
     <program xml:id="vectorIteration1" interactive="activecode" language="cpp">
-        <input>
+      <input>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -177,27 +171,67 @@ int main() {
 }
         </input>
     </program>
-            <p>An optional secondary version of the <c>for</c> loop has been commented out of the above code.
+    <p>An optional secondary version of the <c>for</c> loop has been commented out of the above code.
                 You can try running this in your version of C++ to see if it works, but in some older versions of C++,
                 such as C++98, it does not.</p>
-            <dl>
-                <li>
-                    <title>The above loop assigns the variable <c>index</c> to be each successive value from 0 to numsSize.</title>
-                    
-                        <p>Then, the value at that index in the array is printed to the console.</p>
-                    
-                </li>
-            </dl>
-            <subsubsection xml:id="collection-data_matching">
-                <title>Matching</title>
-
-<exercise label="matching_vectors">
-    <statement><p> Match the Vector operations with their corresponding explination.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="2"><premise>=</premise><response> Assigns value to an element.</response></match><match order="3"><premise>push_back</premise><response>Appends item to the end of the vector.</response></match><match order="4"><premise>pop_back</premise><response> Deletes last item of the vector.</response></match><match order="5"><premise>insert</premise><response>Injects an item into the vector.</response></match><match order="6"><premise>erase</premise><response>Deletes an element from the choosen index.</response></match><match order="7"><premise>size</premise><response>Returns the actual capacity used by elements.</response></match><match order="8"><premise>capacity</premise><response>Returns the ammount of allocated storage space.</response></match><match order="9"><premise>reserve</premise><response> Request a change in space to amount</response></match></matches></exercise>                <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="introvector_cpp" interactive="activecode" language="cpp">
-        <input>
+    <dl>
+      <li>
+        <title>The above loop assigns the variable <c>index</c> to be each successive value from 0 to numsSize.</title>
+        <p>Then, the value at that index in the array is printed to the console.</p>
+      </li>
+    </dl>
+    <subsubsection xml:id="collection-data_matching">
+      <title>Matching</title>
+      <exercise label="matching_vectors">
+        <statement>
+          <p> Match the Vector operations with their corresponding explination.</p>
+        </statement>
+        <feedback>
+          <p>Feedback shows incorrect matches.</p>
+        </feedback>
+        <matches>
+          <match order="1">
+            <premise>[ ]</premise>
+            <response>Accesses value of an element.</response>
+          </match>
+          <match order="2">
+            <premise>=</premise>
+            <response> Assigns value to an element.</response>
+          </match>
+          <match order="3">
+            <premise>push_back</premise>
+            <response>Appends item to the end of the vector.</response>
+          </match>
+          <match order="4">
+            <premise>pop_back</premise>
+            <response> Deletes last item of the vector.</response>
+          </match>
+          <match order="5">
+            <premise>insert</premise>
+            <response>Injects an item into the vector.</response>
+          </match>
+          <match order="6">
+            <premise>erase</premise>
+            <response>Deletes an element from the choosen index.</response>
+          </match>
+          <match order="7">
+            <premise>size</premise>
+            <response>Returns the actual capacity used by elements.</response>
+          </match>
+          <match order="8">
+            <premise>capacity</premise>
+            <response>Returns the ammount of allocated storage space.</response>
+          </match>
+          <match order="9">
+            <premise>reserve</premise>
+            <response> Request a change in space to amount</response>
+          </match>
+        </matches>
+      </exercise>
+      <exercise>
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+          <program xml:id="introvector_cpp" interactive="activecode" language="cpp">
+            <input>
 // function that uses a vector to square
 // every number from 0 to 49
 // uses the reserve operation to save space in memory
@@ -217,11 +251,11 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-                    </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="introvector_py" interactive="activecode" language="python">
-        <input>
+          </program>
+        </TabNode>
+        <TabNode tabname="Python" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+          <program xml:id="introvector_py" interactive="activecode" language="python">
+            <input>
 """Uses a list to square every
 number from 0 to 49 """
 def main():
@@ -232,17 +266,17 @@ def main():
 
 main()
         </input>
-    </program>
-                    </TabNode></exercise>
-                <p>In the above example, the use of <c>reserve</c> was optional. However, it is a good
+          </program>
+        </TabNode>
+      </exercise>
+      <p>In the above example, the use of <c>reserve</c> was optional. However, it is a good
                     idea to use it before growing a vector in this way because it will save time.
                     Because vectors are stored in underlying arrays which require contiguous memory,
                     every time the vector's size gets too large for the capacity, the entire vector must
                     be moved to a larger location in memory, and all that copying takes time.
                     In a typical implementation, the capacity is doubled each time. as in the
                     example that follows.</p>
-
-    <program xml:id="vector_no_reserve_cpp" interactive="activecode" language="cpp">
+      <program xml:id="vector_no_reserve_cpp" interactive="activecode" language="cpp">
         <input>
 // function that uses a vector to square
 // every number from 0 to 49
@@ -265,13 +299,13 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-                <p>Remembering that C++ is designed for speed, not protection,
+      </program>
+      <p>Remembering that C++ is designed for speed, not protection,
                     we will likely not be surprised by the following:</p>
-                <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="vector_errors_cpp" interactive="activecode" language="cpp">
-        <input>
+      <exercise>
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+          <program xml:id="vector_errors_cpp" interactive="activecode" language="cpp">
+            <input>
 // Note: counting always starts at 0
 // This demonstrates what happens when
 // accessing datat outside of your vector
@@ -297,11 +331,11 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-                    </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="vector_errors_py" interactive="activecode" language="python">
-        <input>
+          </program>
+        </TabNode>
+        <TabNode tabname="Python" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+          <program xml:id="vector_errors_py" interactive="activecode" language="python">
+            <input>
 """Demonstrates python's protections
 against iterating outside of a list"""
 def main():
@@ -314,112 +348,95 @@ def main():
 
 main()
         </input>
-    </program>
-                    </TabNode></exercise>
-
-    <exercise label="mc_array_vector">
+          </program>
+        </TabNode>
+      </exercise>
+      <exercise label="mc_array_vector">
         <statement>
-
-                <p>Q-8: Which of the following is the biggest difference between a C++ array and a C++ vector?</p>
-
+          <p>Q-8: Which of the following is the biggest difference between a C++ array and a C++ vector?</p>
         </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>Vectors can change size.</p>
-                </statement>
-                <feedback>
-                    <p>Right! Good job!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Vectors offer all of the features and protections of Python lists</p>
-                </statement>
-                <feedback>
-                    <p>Not all of the protections of lists are offered by vectors; one can still iterate off of either end.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Vectors don't use contiguous memory, so elements can be inserted.</p>
-                </statement>
-                <feedback>
-                    <p>No. Although elements can be inserted in vectors, they do require contiguous memory.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>more than one of the above</p>
-                </statement>
-                <feedback>
-                    <p>No. Only one of the above is correct.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is indeed correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-
-    <exercise label="mc_vector1">
+        <choices>
+          <choice correct="yes">
+            <statement>
+              <p>Vectors can change size.</p>
+            </statement>
+            <feedback>
+              <p>Right! Good job!</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>Vectors offer all of the features and protections of Python lists</p>
+            </statement>
+            <feedback>
+              <p>Not all of the protections of lists are offered by vectors; one can still iterate off of either end.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>Vectors don't use contiguous memory, so elements can be inserted.</p>
+            </statement>
+            <feedback>
+              <p>No. Although elements can be inserted in vectors, they do require contiguous memory.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>more than one of the above</p>
+            </statement>
+            <feedback>
+              <p>No. Only one of the above is correct.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>none of the above</p>
+            </statement>
+            <feedback>
+              <p>One of the above is indeed correct.</p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+      <exercise label="mc_vector1">
         <statement>
-
-                <p>Q-9: What good is the <c>reserve</c> method in a vector?</p>
-
+          <p>Q-9: What good is the <c>reserve</c> method in a vector?</p>
         </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>Nothing. It is completely optional.</p>
-                </statement>
-                <feedback>
-                    <p>It is optional but it does serve a purpose. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>Using it will save time if you know the maximum size needed.</p>
-                </statement>
-                <feedback>
-                    <p>Right!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>It is required so memory can be allocated.</p>
-                </statement>
-                <feedback>
-                    <p>It is not required.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is indeed correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-            </subsubsection>
-        </subsection>
-    </section>
-
+        <choices>
+          <choice>
+            <statement>
+              <p>Nothing. It is completely optional.</p>
+            </statement>
+            <feedback>
+              <p>It is optional but it does serve a purpose. Try again.</p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>Using it will save time if you know the maximum size needed.</p>
+            </statement>
+            <feedback>
+              <p>Right!</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>It is required so memory can be allocated.</p>
+            </statement>
+            <feedback>
+              <p>It is not required.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>none of the above</p>
+            </statement>
+            <feedback>
+              <p>One of the above is indeed correct.</p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+    </subsubsection>
+  </subsection>
+</section>

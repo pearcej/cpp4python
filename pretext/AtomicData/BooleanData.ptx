@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <section xml:id="atomic-data_boolean-data">
-        <title>Boolean Data</title>
-        <p>Boolean data types are named after George Boole who was an English mathematician,
+  <title>Boolean Data</title>
+  <p>Boolean data types are named after George Boole who was an English mathematician,
             so the word <q>Boolean</q> should be capitalized. However,
             the Boolean data type, in C++ uses the keyword <c>bool</c>
             which is not capitalized.
@@ -9,14 +10,14 @@
             Be sure to note the difference in capitalization from Python.
             In Python, these same truth values are capitalized, while in C++,
             they are lower case.</p>
-        <p>C++ uses the standard Boolean operators, but they are represented
+  <p>C++ uses the standard Boolean operators, but they are represented
             differently than in Python: <q>and</q> is given by <c>&amp;&amp;</c> , <q>or</q> is given by <c>||</c>
             , and <q>not</q> is given by <c>!</c>.
             Note that the internally stored values representing <c>true</c> and <c>false</c>
             are actually <c>1</c> and <c>0</c> respectively. Hence, we see this in output as well.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="logical_1cpp" interactive="activecode" language="cpp">
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="logical_1cpp" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -30,10 +31,10 @@ int main() {
   return 0;
 }
         </input>
-    </program>
-            </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="logical_1py" interactive="activecode" language="python">
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="logical_1py" interactive="activecode" language="python">
         <input>
 # Function that demonstrates logical operators.
 def main():
@@ -43,139 +44,134 @@ def main():
     print(True and False)
 main()
         </input>
-    </program>
-            </TabNode></exercise>
-        <p>Boolean data objects are also used as results for comparison operators
+      </program>
+    </TabNode>
+  </exercise>
+  <p>Boolean data objects are also used as results for comparison operators
             such as equality (==) and greater than (<math>&gt;</math>). In addition,
             relational operators and logical operators can be combined together to
             form complex logical questions. <xref ref="atomic-data_atomic-data_tab-relational"/> shows the relational
             and logical operators with examples shown in the session that follows.</p>
-        
-        <table xml:id="atomic-data_id1"><tabular>
-            <title><term>Table 1: C++ Relational and Logical Operators</term></title>
-            
-                
-                
-                
-                
-                    <row header="yes">
-                        <cell>
-                            <term>Operation Name</term>
-                        </cell>
-                        <cell>
-                            <term>Operator</term>
-                        </cell>
-                        <cell>
-                            <term>Explanation</term>
-                        </cell>
-                    </row>
-                
-                
-                    <row>
-                        <cell>
+  <table xml:id="atomic-data_id1">
+    <tabular>
+      <title>
+        <term>Table 1: C++ Relational and Logical Operators</term>
+      </title>
+      <row header="yes">
+        <cell>
+          <term>Operation Name</term>
+        </cell>
+        <cell>
+          <term>Operator</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
                             less than
                         </cell>
-                        <cell>
-                            <math>&lt;</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>&lt;</math>
+        </cell>
+        <cell>
                             Less than operator
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             greater than
                         </cell>
-                        <cell>
-                            <math>&gt;</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>&gt;</math>
+        </cell>
+        <cell>
                             Greater than operator
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             less than or equal
                         </cell>
-                        <cell>
-                            <math>&lt;=</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>&lt;=</math>
+        </cell>
+        <cell>
                             Less than or equal to operator
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             greater than or equal
                         </cell>
-                        <cell>
-                            <math>&gt;=</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>&gt;=</math>
+        </cell>
+        <cell>
                             Greater than or equal to operator
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             equal
                         </cell>
-                        <cell>
-                            <math>==</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>==</math>
+        </cell>
+        <cell>
                             Equality operator
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             not equal
                         </cell>
-                        <cell>
-                            <math>!=</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>!=</math>
+        </cell>
+        <cell>
                             Not equal operator
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             logical and
                         </cell>
-                        <cell>
-                            <math>&amp;&amp;</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>&amp;&amp;</math>
+        </cell>
+        <cell>
                             Both operands true for result to be true
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             logical or
                         </cell>
-                        <cell>
-                            <math>||</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>||</math>
+        </cell>
+        <cell>
                             One or the other operand is true for the result to be true
                         </cell>
-                    </row>
-                    <row>
-                        <cell>
+      </row>
+      <row>
+        <cell>
                             logical not
                         </cell>
-                        <cell>
-                            <math>!</math>
-                        </cell>
-                        <cell>
+        <cell>
+          <math>!</math>
+        </cell>
+        <cell>
                             Negates the truth value, false becomes true, true becomes false
                         </cell>
-                    </row>
-                
-            
-        </tabular></table>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="locicalcpp" interactive="activecode" language="cpp">
+      </row>
+    </tabular>
+  </table>
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="locicalcpp" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -190,10 +186,10 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-            </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="logicalpy" interactive="activecode" language="python">
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="logicalpy" interactive="activecode" language="python">
         <input>
 # Function that demonstrates relational operators.
 def main():
@@ -204,16 +200,16 @@ def main():
 
 main()
         </input>
-    </program>
-            </TabNode></exercise>
-        <p>When a C++ variable is declared, space in memory is set aside to hold
+      </program>
+    </TabNode>
+  </exercise>
+  <p>When a C++ variable is declared, space in memory is set aside to hold
             this type of value.
             A C++ variable can optionally be initialized in the declaration by
             using a combination of a declaration and an assignment statement.</p>
-        <p>Consider the following session:</p>
-
-    <program xml:id="booleanpitfall" interactive="activecode" language="cpp">
-        <input>
+  <p>Consider the following session:</p>
+  <program xml:id="booleanpitfall" interactive="activecode" language="cpp">
+    <input>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -237,8 +233,8 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-        <p>The declaration <c>int theSum = 0;</c> creates a variable called
+  </program>
+  <p>The declaration <c>int theSum = 0;</c> creates a variable called
             <c>theSum</c> and initializes it to hold the data value of <c>0</c>.
             As in Python, the right-hand side of each assignment
             statement is evaluated and the resulting data value is
@@ -252,52 +248,43 @@ int main(){
             Pitfall: C++ will often simply try to do the assignment you
             requested without
             complaining. Note what happened in the code above in the final output.</p>
-
-    <exercise label="mc_bool">
+  <exercise label="mc_bool">
+    <statement>
+      <p>Q-6: Why did theBool output a value of 1 after being set to 4?</p>
+    </statement>
+    <choices>
+      <choice>
         <statement>
-
-        <p>Q-6: Why did theBool output a value of 1 after being set to 4?</p>
-
+          <p>Setting theBool to anything other than true or false is ignored.</p>
         </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>Setting theBool to anything other than true or false is ignored.</p>
-                </statement>
-                <feedback>
-                    <p>No. Try changing the code and setting theBool to 0.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Setting theBool to anything &gt; 0 will be true and false otherwise.</p>
-                </statement>
-                <feedback>
-                    <p>No. Try changing the code and setting theBool to -4.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>false == 0 and true = !false i.e. anything that is not zero and can be converted to a Boolean is not false, thus it must be true.</p>
-                </statement>
-                <feedback>
-                    <p>Correct!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>None of the above.</p>
-                </statement>
-                <feedback>
-                    <p>Try again. One of the above is correct. You might try changing the code and rerunning.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-    </section>
-
+        <feedback>
+          <p>No. Try changing the code and setting theBool to 0.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Setting theBool to anything &gt; 0 will be true and false otherwise.</p>
+        </statement>
+        <feedback>
+          <p>No. Try changing the code and setting theBool to -4.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>false == 0 and true = !false i.e. anything that is not zero and can be converted to a Boolean is not false, thus it must be true.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Try again. One of the above is correct. You might try changing the code and rerunning.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

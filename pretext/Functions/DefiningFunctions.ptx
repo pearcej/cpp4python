@@ -1,15 +1,14 @@
+<?xml version="1.0"?>
 <section xml:id="functions_defining-c-functions">
-        <title>Defining C++ Functions</title>
-        <p>In general, we can hide the details of any computation by defining
+  <title>Defining C++ Functions</title>
+  <p>In general, we can hide the details of any computation by defining
             a function. A function definition requires a name, a group of
             parameters, a return type, and a body. It may either return a variable, value, or nothing (specified by the keyword void). For
             example, the simple function defined below returns an integer which is the double of the
             value you pass into it.</p>
-        
-        <blockquote>
-
+  <blockquote>
     <program xml:id="timesTwo" interactive="activecode" language="cpp">
-        <input>
+      <input>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -29,8 +28,8 @@ int main() {
 }
         </input>
     </program>
-        </blockquote>
-        <p>The syntax for this function definition includes the name, <c>timesTwo</c>,
+  </blockquote>
+  <p>The syntax for this function definition includes the name, <c>timesTwo</c>,
             and a parenthesized list of formal parameters and their types. For this function an <c>int</c> named <c>num</c>
             is the only formal parameter, which suggests that <c>timesTwo</c> needs only
             one piece of data to do its work. The details, hidden <q>inside the box,</q>
@@ -39,12 +38,10 @@ int main() {
             evaluate it, passing an actual parameter value, in this case, <c>3</c>.
             Note that the call to <c>timesTwo</c> returns an integer that can in turn be
             passed to another invocation.</p>
-        <p>Let us look at a similar function.</p>
-        
-        <blockquote>
-
+  <p>Let us look at a similar function.</p>
+  <blockquote>
     <program xml:id="timesTwoVoid" interactive="activecode" language="cpp">
-        <input>
+      <input>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -65,12 +62,12 @@ int main() {
 }
         </input>
     </program>
-        </blockquote>
-        <p>The <c>timesTwoVoid</c> function behaves very similarly to <c>timesTwo</c>. However, there is one key
+  </blockquote>
+  <p>The <c>timesTwoVoid</c> function behaves very similarly to <c>timesTwo</c>. However, there is one key
             difference between them. Instead of the <c>int</c> in <c>timesTwo</c>, <c>timesTwoVoid</c> has a
             <c>void</c> in front of its function definition. Unlike <c>timesTwo</c>, <c>timesTwoVoid</c> is a non-fruitful
             function meaning it does not return a value even though it can still print something out.</p>
-        <p>We could go a step further and implement our own square root function by using a well-known
+  <p>We could go a step further and implement our own square root function by using a well-known
             technique called <q>Newton's Method.</q> Newton's Method for approximating
             square roots performs an iterative computation that converges on the
             correct value. The equation
@@ -85,11 +82,11 @@ int main() {
             the implementation to use the function for its intended purpose.
             <xref ref="lst-root"/> also shows the use of the // characters as a comment
             marker. Any characters that follow the // on a line are ignored.</p>
-        
-        <p xml:id="functions_lst-root" names="lst_root"><term>Listing 1</term></p>
-
-    <program xml:id="newtonsmethod" interactive="activecode" language="cpp">
-        <input>
+  <p xml:id="functions_lst-root" names="lst_root">
+    <term>Listing 1</term>
+  </p>
+  <program xml:id="newtonsmethod" interactive="activecode" language="cpp">
+    <input>
 // returns the square root of a number as a double
 #include &lt;iostream&gt;
 using namespace std;
@@ -112,10 +109,9 @@ int main() {
       return 0;
 }
         </input>
-    </program>
-
-    <program xml:id="dogwalk" interactive="activecode" language="cpp">
-        <input>
+  </program>
+  <program xml:id="dogwalk" interactive="activecode" language="cpp">
+    <input>
 // function that retuns outputs number of steps wallked
 #include &lt;iostream&gt;
 using namespace std;
@@ -132,53 +128,44 @@ int main() {
     return 0;
 }
         </input>
-    </program>
-
-    <exercise label="dog_walker">
+  </program>
+  <exercise label="dog_walker">
+    <statement>
+      <p>Q-5: What is the correct return type of the function above <term>int main()</term>?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
         <statement>
-
-        <p>Q-5: What is the correct return type of the function above <term>int main()</term>?</p>
-
+          <p>void</p>
         </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>void</p>
-                </statement>
-                <feedback>
-                    <p>Correct, nothing is returned!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>int</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, check the value preceding the name of the function!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>dog</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, dog is not even a data type!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>dogWalk</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, that is the name of the function itself!</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-    </section>
-
+        <feedback>
+          <p>Correct, nothing is returned!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>int</p>
+        </statement>
+        <feedback>
+          <p>Not quite, check the value preceding the name of the function!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dog</p>
+        </statement>
+        <feedback>
+          <p>Not quite, dog is not even a data type!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>dogWalk</p>
+        </statement>
+        <feedback>
+          <p>Not quite, that is the name of the function itself!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

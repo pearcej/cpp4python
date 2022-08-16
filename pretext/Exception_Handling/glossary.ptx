@@ -1,32 +1,22 @@
+<?xml version="1.0"?>
 <section xml:id="exception_handling_exception_handling_exception_-handling_glossary">
-        <title>Glossary</title>
-        <glossary sorted="False">
-            
-                <gi>
-                    <title>exception</title>
-                    
-                        <p><idx>exception</idx>a response to an unusual circumstance while a program is running</p>
-                    
-                </gi>
-                <gi>
-                    <title>logic error</title>
-                    
-                        <p><idx>logic error</idx>an error in which the program/code functions, but performs incorrectly</p>
-                    
-                </gi>
-                <gi>
-                    <title>runtime error</title>
-                    
-                        <p><idx>runtime error</idx>an error that occurs when a program runs</p>
-                    
-                </gi>
-                <gi>
-                    <title>syntax error</title>
-                    
-                        <p><idx>syntax error</idx>an error in the structure of a statement or expression of code</p>
-                    
-                </gi>
-            
-        </glossary>
-    </section>
-    
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>exception</title>
+      <p><idx>exception</idx>a response to an unusual circumstance while a program is running</p>
+    </gi>
+    <gi>
+      <title>logic error</title>
+      <p><idx>logic error</idx>an error in which the program/code functions, but performs incorrectly</p>
+    </gi>
+    <gi>
+      <title>runtime error</title>
+      <p><idx>runtime error</idx>an error that occurs when a program runs</p>
+    </gi>
+    <gi>
+      <title>syntax error</title>
+      <p><idx>syntax error</idx>an error in the structure of a statement or expression of code</p>
+    </gi>
+  </glossary>
+</section>

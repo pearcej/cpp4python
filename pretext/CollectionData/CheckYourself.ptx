@@ -1,64 +1,77 @@
+<?xml version="1.0"?>
 <section xml:id="collection-data_check-yourself">
-        <title>Check Yourself</title>
-
-    <exercise label="mc_fixed">
+  <title>Check Yourself</title>
+  <exercise label="mc_fixed">
+    <statement>
+      <p>Q-1: Which C++ structure is the best choice for a group of ordered data of a fixed length?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
         <statement>
-
-        <p>Q-1: Which C++ structure is the best choice for a group of ordered data of a fixed length?</p>
-
+          <p>array</p>
         </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>array</p>
-                </statement>
-                <feedback>
-                    <p>Correct!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>hash table</p>
-                </statement>
-                <feedback>
-                    <p>No. hash tables are not ordered.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>string</p>
-                </statement>
-                <feedback>
-                    <p>A string would only work for character data. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>vector</p>
-                </statement>
-                <feedback>
-                    <p>There is a better choice given that the group is fixed length</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>more than one of the above</p>
-                </statement>
-                <feedback>
-                    <p>Only of the above is best.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-
-<exercise label="collect_data_types">
-    <statement><p>Drag each data type to its' corresponding C++ initialization syntax.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>Array</premise><response>{&#8220;What&#8221;, &#8220;am&#8221;, &#8220;I&#8221;, "am"}</response></match><match order="2"><premise>Set</premise><response>{&#8220;What&#8221;, &#8220;am&#8221;, &#8220;I&#8221;}</response></match><match order="3"><premise>String</premise><response>&#8220;What am I&#8221;</response></match><match order="4"><premise>Hash Table</premise><response>{&#8203;{&#8220;What&#8221;, &#8220;am I&#8221;}&#8203;}</response></match></matches></exercise>    </section>
-
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>hash table</p>
+        </statement>
+        <feedback>
+          <p>No. hash tables are not ordered.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>string</p>
+        </statement>
+        <feedback>
+          <p>A string would only work for character data. Try again.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>vector</p>
+        </statement>
+        <feedback>
+          <p>There is a better choice given that the group is fixed length</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>more than one of the above</p>
+        </statement>
+        <feedback>
+          <p>Only of the above is best.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="collect_data_types">
+    <statement>
+      <p>Drag each data type to its' corresponding C++ initialization syntax.</p>
+    </statement>
+    <feedback>
+      <p>Feedback shows incorrect matches.</p>
+    </feedback>
+    <matches>
+      <match order="1">
+        <premise>Array</premise>
+        <response>{&#x201C;What&#x201D;, &#x201C;am&#x201D;, &#x201C;I&#x201D;, "am"}</response>
+      </match>
+      <match order="2">
+        <premise>Set</premise>
+        <response>{&#x201C;What&#x201D;, &#x201C;am&#x201D;, &#x201C;I&#x201D;}</response>
+      </match>
+      <match order="3">
+        <premise>String</premise>
+        <response>&#x201C;What am I&#x201D;</response>
+      </match>
+      <match order="4">
+        <premise>Hash Table</premise>
+        <response>{&#x200B;{&#x201C;What&#x201D;, &#x201C;am I&#x201D;}&#x200B;}</response>
+      </match>
+    </matches>
+  </exercise>
+</section>

@@ -1,30 +1,28 @@
+<?xml version="1.0"?>
 <section xml:id="intro-cpp_let-s-look-at-a-c-program">
-        <title>Let's look at a C++ program</title>
-        <p>A time honored tradition in computer science is to write a program
+  <title>Let's look at a C++ program</title>
+  <p>A time honored tradition in computer science is to write a program
             called <q>hello world.</q> The <q>hello world</q> program is simple and easy.
             No logic errors are possible to make, so getting it to run relies only on
             understanding the syntax. Let's look at an easy version of <q>hello world</q>
             in Python:</p>
-
-    <program xml:id="hellopysimp" interactive="activecode" language="python">
-        <input>
+  <program xml:id="hellopysimp" interactive="activecode" language="python">
+    <input>
 print("Hello World!")
         </input>
-    </program>
-        <p>Now, lets look at a more <q>complicated</q> version of the <q>hello world</q> program with a
+  </program>
+  <p>Now, lets look at a more <q>complicated</q> version of the <q>hello world</q> program with a
             <c>main</c> function in Python:</p>
-
-    <program xml:id="hellopymain" interactive="activecode" language="python">
-        <input>
+  <program xml:id="hellopymain" interactive="activecode" language="python">
+    <input>
 def main():
     print("Hello World!")
 main()
         </input>
-    </program>
-        <p>Next, lets look at the same program written in C++:</p>
-
-    <program xml:id="hellocppstd" interactive="activecode" language="cpp">
-        <input>
+  </program>
+  <p>Next, lets look at the same program written in C++:</p>
+  <program xml:id="hellocppstd" interactive="activecode" language="cpp">
+    <input>
 #include &lt;iostream&gt;
 
 int main(){
@@ -33,12 +31,11 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-        <p>The above program can alternatively be written as follows to allow
+  </program>
+  <p>The above program can alternatively be written as follows to allow
             better facilitate standard input and output:</p>
-
-    <program xml:id="hellocppnamespace" interactive="activecode" language="cpp">
-        <input>
+  <program xml:id="hellocppnamespace" interactive="activecode" language="cpp">
+    <input>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -47,8 +44,8 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-        <p>What we see is that at the core there are a few similarities with the
+  </program>
+  <p>What we see is that at the core there are a few similarities with the
             complicated Python version, such as the <c>main</c> function and the
             string <q>Hello world</q>. However, in C++ there is a lot more
             stuff around the edges that make it harder to see the core of the program.
@@ -57,132 +54,157 @@ int main(){
             are some elements of C++ that will fade into the background as you
             become used to seeing them. One thing that will help you is to learn a
             little bit more about C++.</p>
-        <subsection xml:id="intro-cpp_compilation">
-            <title>Compilation</title>
-            <p>A question you may have about this little program is <q>How would I run it on
+  <subsection xml:id="intro-cpp_compilation">
+    <title>Compilation</title>
+    <p>A question you may have about this little program is <q>How would I run it on
                 my own machine?</q> Running a C++ program is not as simple as running a
                 Python program. The first big difference between C++ and Python is that
                 Python is an <em>interpreted language</em> while C++ is a <em>compiled language</em>.
                 We could run our Python programs in
                 the Python <term>interpreter</term>, and we were often quite happy to do that.
                 In C++, running programs is a two step process.</p>
-            <p>First, we must type the hello world program into a file and save that file
+    <p>First, we must type the hello world program into a file and save that file
                 using a name like <c>hello.cpp</c> Once we have saved the file we <term>compile</term>
                 it either from the command line or from an integrated development environment (IDE).
                 Only after the program is compiled, can we run it.</p>
-            <p>Now you may be wondering what good is this extra step? What does
+    <p>Now you may be wondering what good is this extra step? What does
                 compiling do for us? There are a couple of important benefits we get
                 from compiling:</p>
-            <p><ul>
-                <li>
-                    <p>Early detection of errors</p>
-                </li>
-                <li>
-                    <p>Faster program execution</p>
-                </li>
-            </ul></p>
-            <p>The job of the compiler is to turn your C++ code into language that your
+    <p>
+      <ul>
+        <li>
+          <p>Early detection of errors</p>
+        </li>
+        <li>
+          <p>Faster program execution</p>
+        </li>
+      </ul>
+    </p>
+    <p>The job of the compiler is to turn your C++ code into language that your
                 machine can understand. We call the code that the computer
                 understands <term>machine code</term>. The computer interprets the machine code
                 much like the Python interpreter interprets your Python.
                 However, since machine code is much closer to the native language of the
                 computer, it can run faster.</p>
-            <p>When the compiler does the translation it can find many different kinds
+    <p>When the compiler does the translation it can find many different kinds
                 of errors. For example if you make a typo or forget to declare a variable
                 the compiler will find these and point them out to you before you ever
                 run the program. We will look at some examples of  errors that the compiler
                 catches shortly. Chances are you may create some on your own very soon too,
                 but first let's talk about each of the statements in a C++ program.</p>
-
-<exercise label="interpreterdrag">
-    <statement><p>Match Compiler and Interpreter to the correct definition.</p></statement>
-    <feedback><p>This is feedback.</p></feedback>
-<matches><match order="1"><premise>Compiler</premise><response>generally transforms code written in a high-level language into a low-level language in order to create an executable program</response></match><match order="2"><premise>Interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been assembled into machine language</response></match></matches></exercise>        </subsection>
-        <subsection xml:id="intro-cpp_using-headers-and-libraries">
-            <title>Using headers and libraries</title>
-            <p>Preprocessor directives in C++ appear as statements preceded by the hash sign <c>#</c>.
+    <exercise label="interpreterdrag">
+      <statement>
+        <p>Match Compiler and Interpreter to the correct definition.</p>
+      </statement>
+      <feedback>
+        <p>This is feedback.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>Compiler</premise>
+          <response>generally transforms code written in a high-level language into a low-level language in order to create an executable program</response>
+        </match>
+        <match order="2">
+          <premise>Interpreter</premise>
+          <response>directly executes statements in a scripting language without requiring them to have been assembled into machine language</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+  <subsection xml:id="intro-cpp_using-headers-and-libraries">
+    <title>Using headers and libraries</title>
+    <p>Preprocessor directives in C++ appear as statements preceded by the hash sign <c>#</c>.
                 These tell the preprocessor which file, header, or library to make available to
                 the compiler. For example, <c>#include &lt;iostream&gt;</c> will make sure that
                 the <c>iostream</c> library is available at compile time.
                 Here, the term <em>header</em> is used for a type of C++ file that contains definitions
                 of functions and variables, but not the function implementations.</p>
-            <p>You can think of the <c>#include ...</c> statement in C++ as working a bit like
+    <p>You can think of the <c>#include ...</c> statement in C++ as working a bit like
                 the <c>import ...</c> statement in Python.
                 Python's <c>import</c> statement directly accesses the code written in another file
                 while the <c>#include</c> statement in C++ copies classes and functions from
                 another file.</p>
-            <p>In Python, an import statement looks like:</p>
-            <pre>import classname</pre>
-            <p>There are two ways to use <c>#include</c> in C++:</p>
-            <pre>#include &lt;libraryname&gt;
+    <p>In Python, an import statement looks like:</p>
+    <pre>import classname</pre>
+    <p>There are two ways to use <c>#include</c> in C++:</p>
+    <pre>#include &lt;libraryname&gt;
 #include "filename"</pre>
-            <p>Here the angle-brackets <c>&lt;&gt;</c> are used to include libraries or headers provided by
+    <p>Here the angle-brackets <c>&lt;&gt;</c> are used to include libraries or headers provided by
                 the implementation, such as the
                 headers in the standard library (<c>iostream</c>, <c>string</c>, etc.). The double
-                quotes <c></c> are used for headers and files not provided by the implementation.</p>
-        </subsection>
-        <subsection xml:id="intro-cpp_the-main-function">
-            <title>The main function</title>
-            <p>Unlike Python, every C++ program <term>must</term> have a <c>main</c> function which begins
+                quotes <c/> are used for headers and files not provided by the implementation.</p>
+  </subsection>
+  <subsection xml:id="intro-cpp_the-main-function">
+    <title>The main function</title>
+    <p>Unlike Python, every C++ program <term>must</term> have a <c>main</c> function which begins
                 with <c>int main()</c>. This <c>main</c> function is called implicitly instead of
                 explicitly like we must do in Python when we have a main function. This is
                 why you do not see an explicit function call invoking main.</p>
-            <p>The <c>int</c>  in <c>int main()</c> indicates that the <em>return type</em> of the <c>main</c> function will be
+    <p>The <c>int</c>  in <c>int main()</c> indicates that the <em>return type</em> of the <c>main</c> function will be
                 an integer. The final line of the <c>main</c> C++ function is typically <c>return 0</c>,
                 so you can see that the program does actually return the integer 0.
                 Here zero is returned to indicate successful completion of the <c>main</c>
                 function. In case you are wondering why an integer is returned, if you do error
                 handling in C++, instead of 0, you can alternatively return an integer error code representing
                 a specific error when and where it occurs.</p>
-            <p>C++ functions and other C++ code blocks are grouped together using the curly <c>{}</c>
+    <p>C++ functions and other C++ code blocks are grouped together using the curly <c>{}</c>
                 brackets. These curly brackets are used much like tabbing is used in Python.
                 Many people also use tabbing in C++ to indicate blocks, but tabs and other
                 whitespace (mostly) have no inherent meaning in C++.
                 Instead, the semi-colon (<c>;</c>) must be used to conclude most statements in C++.</p>
-            <p>In fact, the following program will run perfectly
+    <p>In fact, the following program will run perfectly
                 even though the lack of meaningful spacing is more difficult for humans to read.</p>
-
     <program xml:id="hellocppugly" interactive="activecode" language="cpp">
-        <input>
+      <input>
 #include &lt;iostream&gt;
 using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
         </input>
     </program>
-            <p>As you program in C++, we strongly recommend you continue to use
+    <p>As you program in C++, we strongly recommend you continue to use
                 the kind of human-readable formatting you have become used to in Python.
                 You will likely learn to appreciate this when you are debugging.</p>
-            <p>Without peeking, see if you can put the following code in the correct order.</p>
-<exercise label="pp_introcpp_order" adaptive="yes" indent="hide" language="c++"><statement>
-            <p>Correctly rearrange the code below to implement hello world in C++:</p>
-</statement>
-<blocks><block order="4">
-<cline>&amp;#x22D5include &amp;#x003Ciostream&amp;#x003E</cline>
-</block><block order="6">
-<cline>using namespace std;</cline>
-</block><block order="1">
-<cline>int main()</cline>
-<cline>{</cline>
-</block><block order="2">
-<cline>    cout &lt;&lt; "Hello World!\n";</cline>
-</block><block order="3">
-<cline>    return 0;</cline>
-</block><block order="5">
-<cline>}</cline>
-</block></blocks></exercise>        </subsection>
-        <subsection xml:id="intro-cpp_comments-in-c">
-            <title>Comments in C++</title>
-            <p>Python and C++ both support comments that are not processed by the interpreter or compiler.</p>
-            <p>Python's single line comment begins with a hash (<c>#</c>).
+    <p>Without peeking, see if you can put the following code in the correct order.</p>
+    <exercise label="pp_introcpp_order" adaptive="yes" indent="hide" language="c++">
+      <statement>
+        <p>Correctly rearrange the code below to implement hello world in C++:</p>
+      </statement>
+      <blocks>
+        <block order="4">
+          <cline>&amp;#x22D5include &amp;#x003Ciostream&amp;#x003E</cline>
+        </block>
+        <block order="6">
+          <cline>using namespace std;</cline>
+        </block>
+        <block order="1">
+          <cline>int main()</cline>
+          <cline>{</cline>
+        </block>
+        <block order="2">
+          <cline>    cout &lt;&lt; "Hello World!\n";</cline>
+        </block>
+        <block order="3">
+          <cline>    return 0;</cline>
+        </block>
+        <block order="5">
+          <cline>}</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="intro-cpp_comments-in-c">
+    <title>Comments in C++</title>
+    <p>Python and C++ both support comments that are not processed by the interpreter or compiler.</p>
+    <p>Python's single line comment begins with a hash (<c>#</c>).
                 In C++, the equivalent is two forward slashes (<c>//</c>)
                 In each case the rest of the line is treated as a comment and ignored by the
                 interpreter or compiler.</p>
-            <p>Python supports comments using triple quotes.
+    <p>Python supports comments using triple quotes.
                 Like Python, C++ also supports multi-line comments
                 beginning with
                 <c>/*</c>
                 and ending with
                 <c>*/</c>.</p>
-            <p>The triple quoted docstring in Python is often used for automatically
+    <p>The triple quoted docstring in Python is often used for automatically
                 processing documentation.
                 There is no equivalent in the C++ standard to the triple-quoted docstring in Python.
                 However, the symbol groups
@@ -195,18 +217,18 @@ using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
                 multi-line comment.
                 Certain libraries will also automatically process the text between these symbol groups,
                 as a docstring for the documentation.</p>
-            <pre>// The remainder of this line is a C++ comment which is ignored by the compiler
+    <pre>// The remainder of this line is a C++ comment which is ignored by the compiler
 
 /* This is a multi-line C++ comment that can
 span many lines, beginning and ending with the given symbols */</pre>
-        </subsection>
-        <subsection xml:id="intro-cpp_standard-output">
-            <title>Standard Output</title>
-            <p>We often have a need to interact with users, either to get data or to provide some sort of result.
+  </subsection>
+  <subsection xml:id="intro-cpp_standard-output">
+    <title>Standard Output</title>
+    <p>We often have a need to interact with users, either to get data or to provide some sort of result.
                 The C++ <c>&lt;iostream&gt;</c> library provides us with the functionality to get information
                 from the standard input as well as to output information to the standard output. This input and output is handled by what
                 is known as a <c>stream</c>.</p>
-            <p>A <c>stream</c> is essentially a channel in which data flows from the source to a destination (often called the <q>sink</q>.)
+    <p>A <c>stream</c> is essentially a channel in which data flows from the source to a destination (often called the <q>sink</q>.)
                 Output streams send data out, and the standard output stream <c>cout</c> sends character data to the screen.
                 So, <c>cout</c> stands for <q>character output</q>.
                 Much like the Python <c>print</c> statement, <c>cout</c> is used to
@@ -216,9 +238,8 @@ span many lines, beginning and ending with the given symbols */</pre>
                 The output operator is used to direct output to the designated output device or file.
                 The output operator can also be used to concatenate output, much like the <q>+</q>
                 can be used to concatenate in Python.</p>
-
     <program xml:id="hellocppducky" interactive="activecode" language="cpp">
-        <input>
+      <input>
 /* Ever heard of rubber duck debugging?
     See https://en.wikipedia.org/wiki/Rubber_duck_debugging */
 #include &lt;iostream&gt;
@@ -233,23 +254,21 @@ int main(){
 }
         </input>
     </program>
-        </subsection>
-        <subsection xml:id="intro-cpp_standard-input">
-            <title>Standard Input</title>
-            <p>In addition to being able to output to the standard output, we want to be able to take input from the user.
+  </subsection>
+  <subsection xml:id="intro-cpp_standard-input">
+    <title>Standard Input</title>
+    <p>In addition to being able to output to the standard output, we want to be able to take input from the user.
                 The command <c>cin</c> is somewhat similar to <c>cout</c> except, of course, it is used for getting character input.
                 Input streams direct data from a source, such as the keyboard or a file.
                 As you might have guessed, <c>cin</c> stands for <q>character input</q> and it makes getting input from the standard input device (usually the keyboard) relatively easy.
                 The input operator in C++ is <c>&gt;&gt;</c>.</p>
-            <p>Here is an example that uses <c>cin</c>:</p>
-
-<exercise label="cin_user_input">
-    <statement>
-            <p>The active code below is an example of what getting input from the
+    <p>Here is an example that uses <c>cin</c>:</p>
+    <exercise label="cin_user_input">
+      <statement>
+        <p>The active code below is an example of what getting input from the
                 user might look like. Feel free to change 12.4 to other values!</p>
-
-    </statement>
-    <program xml:id="cin_user_input_editor" interactive="activecode" language="cpp">
+      </statement>
+      <program xml:id="cin_user_input_editor" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -271,12 +290,12 @@ int main() {
   return 0;
 }
         </input>
-    </program>
-</exercise>
-        </subsection>
-        <subsection xml:id="intro-cpp_type-declarations">
-            <title>Type Declarations</title>
-            <p>In this example, you may note the line <c>float num</c> which declares a new variable called <c>num</c> of type <c>float</c>.
+      </program>
+    </exercise>
+  </subsection>
+  <subsection xml:id="intro-cpp_type-declarations">
+    <title>Type Declarations</title>
+    <p>In this example, you may note the line <c>float num</c> which declares a new variable called <c>num</c> of type <c>float</c>.
                 Just like functions, all variables in C++ must be declared before use, and
                 they cannot change type. This is known as <term>static typing</term>.
                 The line <c>float num</c> essentially tells the compiler to set aside sufficient space for a floating point number,
@@ -285,9 +304,8 @@ int main() {
                 Using the <c>cout</c> function, we can write instructions that will prompt the user to enter data and then
                 incorporate that data into further processing.
                 For example, in the code above, the integer input is doubled and then displayed!</p>
-            <p>We will talk more about type declarations in the section on data types, and
+    <p>We will talk more about type declarations in the section on data types, and
                 we will go into more depth on input and output later when we discuss
                 C++ streams and file handling.</p>
-        </subsection>
-    </section>
-    
+  </subsection>
+</section>

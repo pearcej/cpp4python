@@ -1,65 +1,72 @@
+<?xml version="1.0"?>
 <section xml:id="collection-data_arrays">
-        <title>Arrays</title>
-        <p><term>What is an Array?</term>
+  <title>Arrays</title>
+  <p><term>What is an Array?</term>
             An array is a data structure consisting of an ordered collection of data elements,
             of identical type in which each element can be identified by an array index.
             More technically, an array data structure is an ordered arrangement of values
             located at equally spaced addresses in contiguous computer memory.</p>
-        <p>NOTE: A C++ <term>array</term> is always stored in contiguous memory. C++ arrays can be allocated in two different ways:</p>
-            <p><ol label="1">
-                <li>
-                    <p><em>statically allocated</em> in which the array size is fixed at compile-time and cannot change</p>
-                </li>
-                <li>
-                    <p><em>dynamically allocated</em> in which pointers are used in the allocation process so the size can change at run-time</p>
-                </li>
-            </ol></p>
-        <p>In modern C++, the statically allocated array is typically used
+  <p>NOTE: A C++ <term>array</term> is always stored in contiguous memory. C++ arrays can be allocated in two different ways:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p><em>statically allocated</em> in which the array size is fixed at compile-time and cannot change</p>
+      </li>
+      <li>
+        <p><em>dynamically allocated</em> in which pointers are used in the allocation process so the size can change at run-time</p>
+      </li>
+    </ol>
+  </p>
+  <p>In modern C++, the statically allocated array is typically used
             in situations when speed is essential or where hardware constraints exist, and a data structure
             called a vector is typically used when more flexibility is required.</p>
-        <p>As a Python programmer, you might see the array as the ancestor
+  <p>As a Python programmer, you might see the array as the ancestor
             of the Python list, and you might remember that Python lists are actually implemented via
             an underlying array consisting of references.</p>
-        <p>C++ arrays are similar to Python lists except that because C++ stores variables
+  <p>C++ arrays are similar to Python lists except that because C++ stores variables
             directly, each element of a C++ array must be of identical data type.
             Like Python lists, the indices for arrays start counting with 0.</p>
-        <p>The use of arrays permits us to utilize an ordered set
+  <p>The use of arrays permits us to utilize an ordered set
             of memory locations that we can then manipulate as a single
             entity, and that at the same time gives us direct access to each
             individual component.</p>
-        <p><term>Why use an Array?</term></p>
-        <p>C++ is a language often used for real-time or low-level processing
+  <p>
+    <term>Why use an Array?</term>
+  </p>
+  <p>C++ is a language often used for real-time or low-level processing
             where speed is essential and/or there is only a fixed amount of space
             available.</p>
-        <p>The fact that array elements are stored in memory in contiguous
+  <p>The fact that array elements are stored in memory in contiguous
             memory locations making look-up via index very, very fast.
             In computing, a <term>word</term> is the unit of data used by a particular processor design,
             such as 32 or 64 bits. For example, an array of 100 integer variables, with indices 0 through 99,
-            might be stored as 100 words at memory addresses 20000, 20004, 20008, &#8230; 20396.
-            The element with index i would be located at the address 20000 + 4 &#215; i.</p>
-        <p>Statically allocated C++ arrays must be declared with both a type and a size at compile-time.</p>
-        <pre>double darray[4];
+            might be stored as 100 words at memory addresses 20000, 20004, 20008, &#x2026; 20396.
+            The element with index i would be located at the address 20000 + 4 &#xD7; i.</p>
+  <p>Statically allocated C++ arrays must be declared with both a type and a size at compile-time.</p>
+  <pre>double darray[4];
 int iarray[10];
 char arr2[3000];</pre>
-        <p>It is also possible to initialize statically allocated arrays at compile time,
+  <p>It is also possible to initialize statically allocated arrays at compile time,
             in which case the number of items determines the array's size.</p>
-        <pre>int arr[] = {1, 2, 3, 4};  // This is size 4.
+  <pre>int arr[] = {1, 2, 3, 4};  // This is size 4.
 char arr2[] = {'a', 'b', 'c'}; // This is size 3.
 string arr3[] = {"this", "is", "an", "array"}; // This is size 4.</pre>
-        <p>Note that an array with a single element is not the same type as the <term>atomic</term> type,
+  <p>Note that an array with a single element is not the same type as the <term>atomic</term> type,
             so the following are not the same.</p>
-        <pre>double darray[] = {1.2};  // must use index to access value
+  <pre>double darray[] = {1.2};  // must use index to access value
 double ddouble = 1.2;     // cannot use index to access value</pre>
-        <p><term>Be Cautious with Arrays</term></p>
-        <p>The speed and low-level control that arrays offer us
-            as programmers is powerful&#8230; and dangerous.
+  <p>
+    <term>Be Cautious with Arrays</term>
+  </p>
+  <p>The speed and low-level control that arrays offer us
+            as programmers is powerful&#x2026; and dangerous.
             As a Python programmer, using a C++ array will
             help you better understand the trade-offs of the
             protections Python offers.</p>
-        <p>Here are examples of iteration.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="listarray_cpp" interactive="activecode" language="cpp">
+  <p>Here are examples of iteration.</p>
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="listarray_cpp" interactive="activecode" language="cpp">
         <input>
 // outputs all elements in the array
 //to the console
@@ -74,10 +81,10 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-            </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="listarray_py" interactive="activecode" language="python">
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="listarray_py" interactive="activecode" language="python">
         <input>
 """Demonstrates how python protects from
 iterating past the end of a list"""
@@ -89,20 +96,21 @@ def main():
 
 main()
         </input>
-    </program>
-            </TabNode></exercise>
-        <p>The protections Python offers, however, takes time and C++ is designed for speed.
+      </program>
+    </TabNode>
+  </exercise>
+  <p>The protections Python offers, however, takes time and C++ is designed for speed.
             Python would never let you iterate beyond the end of
             a list. C++ will not only let you iterate beyond either
             end of an array, but it will let you change the values
             beyond either end of the array with sometimes catastrophic
             results.</p>
-        <p>The phrase, <q>be careful what you wish for</q> is a great one
+  <p>The phrase, <q>be careful what you wish for</q> is a great one
             to remember when programming in C++. Because C++ will
             generally try to do everything you ask for.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="array_error_cpp" interactive="activecode" language="cpp">
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="array_error_cpp" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -119,10 +127,10 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-            </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="array_error_py" interactive="activecode" language="python">
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="array_error_py" interactive="activecode" language="python">
         <input>
 """Demonstrates how python protects from
 iterating past the end of a list,
@@ -136,17 +144,18 @@ def main():
 
 main()
         </input>
-    </program>
-            </TabNode></exercise>
-        <p>The speed of C++ comes at the cost of minimal to no error checking.
+      </program>
+    </TabNode>
+  </exercise>
+  <p>The speed of C++ comes at the cost of minimal to no error checking.
             Sometimes this can have perplexing results such as in the next example.</p>
-        <p>You should use an array when you have a need for speed
+  <p>You should use an array when you have a need for speed
             or you need to work with hardware constraints.
             Otherwise, you may want to consider using another collection data type,
             the <em>vector</em>.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
-
-    <program xml:id="array_werror_cpp" interactive="activecode" language="cpp">
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="array_werror_cpp" interactive="activecode" language="cpp">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -172,10 +181,10 @@ int main(){
     return 0;
 }
         </input>
-    </program>
-            </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
-
-    <program xml:id="array_werror_py" interactive="activecode" language="python">
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="array_werror_py" interactive="activecode" language="python">
         <input>
 """Demonstrates how python protects from
 iterating past the end of a list
@@ -193,110 +202,93 @@ def main():
 
 main()
         </input>
-    </program>
-            </TabNode></exercise>
-
-    <exercise label="mc_werror">
+      </program>
+    </TabNode>
+  </exercise>
+  <exercise label="mc_werror">
+    <statement>
+      <p>Q-7: In the above example, what happened to otherdata[ ] in C++?</p>
+    </statement>
+    <choices>
+      <choice>
         <statement>
-
-        <p>Q-7: In the above example, what happened to otherdata[ ] in C++?</p>
-
+          <p>Nothing. Everything is fine.</p>
         </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>Nothing. Everything is fine.</p>
-                </statement>
-                <feedback>
-                    <p>Actually, there is a problem. Look carefully.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>All data was automatically reinitialized.</p>
-                </statement>
-                <feedback>
-                    <p>No. C++ just does what you tell it to do.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>I have no idea. Please give me a hint.</p>
-                </statement>
-                <feedback>
-                    <p>Try again. One of these is indeed correct. Look at the memory addresses.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>The first loop went out of bounds and wrote over the values in otherdata.</p>
-                </statement>
-                <feedback>
-                    <p>Right!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is indeed correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-
-    <exercise label="mc_array">
+        <feedback>
+          <p>Actually, there is a problem. Look carefully.</p>
+        </feedback>
+      </choice>
+      <choice>
         <statement>
-
-        <p>Q-8: What is the correct way to declare an array in C++?</p>
-
+          <p>All data was automatically reinitialized.</p>
         </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>int myarray(5);</p>
-                </statement>
-                <feedback>
-                    <p>Check the characters at the end of the array! Right now that is a function!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>myarray[5];</p>
-                </statement>
-                <feedback>
-                    <p>You are forgetting something important!</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>int myarray[5];</p>
-                </statement>
-                <feedback>
-                    <p>Good work!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>None of the above.</p>
-                </statement>
-                <feedback>
-                    <p>Check the characters at the end of the array!</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-    </section>
-
+        <feedback>
+          <p>No. C++ just does what you tell it to do.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>I have no idea. Please give me a hint.</p>
+        </statement>
+        <feedback>
+          <p>Try again. One of these is indeed correct. Look at the memory addresses.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The first loop went out of bounds and wrote over the values in otherdata.</p>
+        </statement>
+        <feedback>
+          <p>Right!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>none of the above</p>
+        </statement>
+        <feedback>
+          <p>One of the above is indeed correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="mc_array">
+    <statement>
+      <p>Q-8: What is the correct way to declare an array in C++?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>int myarray(5);</p>
+        </statement>
+        <feedback>
+          <p>Check the characters at the end of the array! Right now that is a function!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>myarray[5];</p>
+        </statement>
+        <feedback>
+          <p>You are forgetting something important!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>int myarray[5];</p>
+        </statement>
+        <feedback>
+          <p>Good work!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Check the characters at the end of the array!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

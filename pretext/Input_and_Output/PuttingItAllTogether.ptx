@@ -1,7 +1,8 @@
+<?xml version="1.0"?>
 <section xml:id="input_and_-output_putting-it-all-together">
-        <title>Putting it all Together</title>
-        <p>The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.</p>
-        <pre>#include &lt;cstdlib&gt;  // for the exit function
+  <title>Putting it all Together</title>
+  <p>The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.</p>
+  <pre>#include &lt;cstdlib&gt;  // for the exit function
 #include &lt;fstream&gt;  // for I/O member functions
 #include &lt;iostream&gt; // for cout
 using namespace std;
@@ -51,8 +52,7 @@ int main() {
 
     return 0;
 }</pre>
-        <raw format="html" xml:space="preserve">&lt;div&gt;
+  <raw format="html" xml:space="preserve">&lt;div&gt;
     &lt;iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
 &lt;/div&gt;</raw>
-    </section>
-
+</section>

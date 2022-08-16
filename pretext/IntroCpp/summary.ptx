@@ -1,10 +1,10 @@
+<?xml version="1.0"?>
 <section xml:id="intro-cpp_summary">
-        <title>Summary</title>
-        <p>Now that we have run our &#8220;hello world&#8221; program, lets go back and look at
+  <title>Summary</title>
+  <p>Now that we have run our &#x201C;hello world&#x201D; program, lets go back and look at
             it carefully to see what we can learn about the C++ language.</p>
-
-    <program xml:id="hellocommented" interactive="activecode" language="cpp">
-        <input>
+  <program xml:id="hellocommented" interactive="activecode" language="cpp">
+    <input>
 /* This hello world program demonstrates the C++ concepts
     of commenting, using libraries, and using output.
 */
@@ -17,22 +17,24 @@ int main(){         // main() must exist &amp; return an int
     return 0;       // 0 indicates program ended correctly.
 }
         </input>
-    </program>
-        <p>This simple example illustrates a few very important rules:</p>
-        <p><ol label="1">
-            <li>
-                <p>Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.</p>
-            </li>
-            <li>
-                <p>Every C++ program must have a function which begins as <c>int main()</c>, and ends with the statement <c>return 0;</c> when successfully
+  </program>
+  <p>This simple example illustrates a few very important rules:</p>
+  <p>
+    <ol label="1">
+      <li>
+        <p>Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.</p>
+      </li>
+      <li>
+        <p>Every C++ program must have a function which begins as <c>int main()</c>, and ends with the statement <c>return 0;</c> when successfully
                     completed.</p>
-            </li>
-            <li>
-                <p>C++ statements are ended by a semi-colon.</p>
-            </li>
-            <li>
-                <p>White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using
+      </li>
+      <li>
+        <p>C++ statements are ended by a semi-colon.</p>
+      </li>
+      <li>
+        <p>White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using
                     indentation to delineate blocks as is done in Python.</p>
-            </li>
-        </ol></p>
+      </li>
+    </ol>
+  </p>
 </section>
