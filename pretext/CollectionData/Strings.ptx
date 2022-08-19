@@ -53,8 +53,8 @@ char cstring[] = {"Hello World!"};    // C-string or char array uses double quot
   </exercise>
   <p>Because strings are sequences, all of the typical sequence operations work as you would expect.
             In addition, the string library offers a huge number of
-            methods, some of the most useful of which are shown in <xref ref="collection-data_collection-data_tab-stringmethods"/>.</p>
-  <table xml:id="collection-data_id1">
+            methods, some of the most useful of which are shown in <xref ref="collection-data_collection-data_collection-data_tab-stringmethod"/>.</p>
+  <table xml:id="collection-data_collection-data_collection-data_tab-stringmethod">
     <tabular>
       <title>
         <term>Table 4: String Methods Provided in C++</term>
@@ -182,7 +182,7 @@ char cstring[] = {"Hello World!"};    // C-string or char array uses double quot
       </row>
     </tabular>
   </table>
-  <subsection xml:id="collection-data_matching">
+  <subsection xml:id="collection-data_matching_2">
     <title>Matching</title>
     <exercise label="matching_strings">
       <statement>

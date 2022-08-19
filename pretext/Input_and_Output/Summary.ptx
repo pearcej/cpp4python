@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<section xml:id="input_and_output_input_and_output_input_and_-output_summary">
+<section xml:id="input_and_output_input_and_output_input_and_output_input_and_-output_summary">
   <title>Summary</title>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>File handling in C++ uses <c>stream</c> similar to cout and cin in <c>&lt;iosteam&gt;</c> library but is <c>&lt;fstream&gt;</c> for file stream.</p>
       </li>

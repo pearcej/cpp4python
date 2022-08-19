@@ -39,7 +39,7 @@ using namespace std;
   <p>The code will use <c>cout</c> five times.  The value of the variable <c>i</c> will
             start at 0 and go through the full sequence of values 0,1,2,3,4.  This
             value is then squared and printed.</p>
-  <subsection xml:id="control_-structures_check-yourself">
+  <subsection xml:id="control_-structures_check-yourself_2">
     <title>Check yourself</title>
     <pre>#include &lt;iostream&gt;
 using namespace std;

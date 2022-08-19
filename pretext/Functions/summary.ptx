@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<section xml:id="functions_functions_functions_summary">
+<section xml:id="functions_functions_functions_functions_summary">
   <title>Summary</title>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Like Python, C++ supports the use of functions.</p>
       </li>

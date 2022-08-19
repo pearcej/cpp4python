@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<section xml:id="exception_handling_exception_handling_exception_-handling_summary">
+<section xml:id="exception_handling_exception_handling_exception_handling_exception_-handling_summary">
   <title>Summary</title>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>There are two types of errors that occur while writing programs: syntax errors and logic errors</p>
       </li>

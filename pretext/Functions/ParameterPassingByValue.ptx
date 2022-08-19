@@ -85,7 +85,7 @@ int main( ) {
   </blockquote>
   <p>For this program <xref ref="lst-swap-inputs"/> to reverse the order of the integers the users types in, the function <c>swap_values(...)</c> must be able to change the values of the arguments. Try removing one or both of the <q>&amp;</q> &#x2018;s in this code to see what happens.</p>
   <p>Analyze the program and answer the question that involves parameter passing below:</p>
-  <program xml:id="questionexample1" interactive="activecode" language="cpp">
+  <program xml:id="lst-swap-inputs" interactive="activecode" language="cpp">
     <input>
 // demonstrates the difference between pass-by-value
 // and pass-by-reference functions.

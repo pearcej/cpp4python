@@ -139,7 +139,7 @@ main()
  }
         </input>
     </program>
-    <subsubsection xml:id="control_-structures_check-yourself">
+    <subsubsection xml:id="control_-structures_check-yourself_1">
       <title>Check Yourself</title>
       <exercise label="mc_cpp_elsecond">
         <statement>

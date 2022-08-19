@@ -75,14 +75,15 @@ int main() {
             takes a value <math>n</math> and repeatedly guesses the square root by
             making each <math>newguess</math> the <math>oldguess</math> in the subsequent
             iteration. The initial guess used here is <math>\frac {n}{2}</math>.
-            <xref ref="lst-root"/> shows a function definition that accepts a value
+            <xref ref="functions_lst-root"/> shows a function definition that accepts a value
             <math>n</math> and returns the square root of <math>n</math> after making 20
             guesses. Again, the details of Newton's Method are hidden inside the
             function definition and the user does not have to know anything about
             the implementation to use the function for its intended purpose.
-            <xref ref="lst-root"/> also shows the use of the // characters as a comment
+            <xref ref="functions_lst-root"/> also shows the use of the // characters as a comment
             marker. Any characters that follow the // on a line are ignored.</p>
   <p xml:id="functions_lst-root" names="lst_root">
+  <title> Listing 1</title>
     <term>Listing 1</term>
   </p>
   <program xml:id="newtonsmethod" interactive="activecode" language="cpp">

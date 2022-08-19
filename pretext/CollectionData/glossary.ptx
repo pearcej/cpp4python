@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="collectiondata_collectiondata_collection-data_glossary">
+<section xml:id="collectiondata_collectiondata_collectiondata_collection-data_glossary">
   <title>Glossary</title>
   <glossary sorted="False">
     <gi>
@@ -39,7 +39,7 @@
       <p><idx>word</idx>unit of data used by a particular processor design.</p>
     </gi>
   </glossary>
-  <subsection xml:id="collection-data_matching">
+  <subsection xml:id="collection-data_matching_5">
     <title>Matching</title>
     <exercise label="matching_ch5">
       <statement>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<section xml:id="control_structures_control_structures_control_-structures_summary">
+<section xml:id="control_structures_control_structures_control_structures_control_-structures_summary">
   <title>Summary</title>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Like Python C++ also supports the <c>if-else</c> conditional statements, and they behave the same way as they do in a Python program.</p>
       </li>
