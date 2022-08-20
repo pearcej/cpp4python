@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <title>Functions</title>
+  <xi:include href="./DefiningFunctions.ptx"/>
+  <xi:include href="./ParameterPassingByValue.ptx"/>
+  <xi:include href="./ArraysAsParameter.ptx"/>
+  <xi:include href="./FunctionOverloading.ptx"/>
+  <xi:include href="./summary.ptx"/>
+  <xi:include href="./glossary.ptx"/>
+</chapter>

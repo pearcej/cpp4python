@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<section xml:id="functions_functions_functions_functions_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>argument</title>
+      <p><idx>argument</idx>the data passed to parameter.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>const</c>
+      </title>
+      <p><idx>const</idx>keyword that makes a variable or value constant and unchanging.</p>
+    </gi>
+    <gi>
+      <title>function</title>
+      <p><idx>function</idx>a section of code that performs a procedure and is usually named.</p>
+    </gi>
+    <gi>
+      <title>overloading</title>
+      <p><idx>overloading</idx>specifying more than one definition for the same function name within the same scope.</p>
+    </gi>
+    <gi>
+      <title>parameter</title>
+      <p><idx>parameter</idx>a variable in a function or method definition that accepts data passed from an argument.</p>
+    </gi>
+    <gi>
+      <title>pointer</title>
+      <p><idx>pointer</idx>a value that indicates a place in a computer's memory.</p>
+    </gi>
+    <gi>
+      <title>
+        <c>void</c>
+      </title>
+      <p><idx>void</idx>Keyword indicating a function has no return value.</p>
+    </gi>
+  </glossary>
+  <subsection xml:id="functions_matching">
+    <title>Matching</title>
+    <exercise label="matching_Functions">
+      <statement>
+        <p>Drag each glossary term to its' corresponding definition.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>argument</premise>
+          <response>Data passed to parameter.</response>
+        </match>
+        <match order="2">
+          <premise>const</premise>
+          <response>indicates a variable or value is unchanging.</response>
+        </match>
+        <match order="3">
+          <premise>function </premise>
+          <response> Section of code that performs a procedure and usually is named meaningfully.</response>
+        </match>
+        <match order="4">
+          <premise>overloading</premise>
+          <response>Specifying more than one definition for the same function name.</response>
+        </match>
+        <match order="5">
+          <premise>parameter</premise>
+          <response>Variable in a function or method definition that accepts data passed from an argument.</response>
+        </match>
+        <match order="6">
+          <premise>reference</premise>
+          <response>Value that indicates an address in a computer's memory.</response>
+        </match>
+        <match order="7">
+          <premise>void</premise>
+          <response>indicates a function has no return value.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<section xml:id="collection-data_hash-tables">
+  <title>Hash Tables</title>
+  <p>If you have used a Python dictionary, then you have used a <em>hash table</em>.
+            A <term>hash table</term> is a collection of associated pairs of
+            items where each pair consists of a <em>key</em> and a <em>value</em>.
+            Hash tables are often called the more general term <em>map</em>
+            because the associated hash function <q>maps</q> the key to the value.
+            Nevertheless, it is better to use the more precise term, <em>hash table</em>
+            because other kinds of maps are sometimes implemented with a different underlying data structure.</p>
+  <p>Each hash table has a <em>hash function</em> which
+            given the key as input to the hash function
+            returns the location of the associated value as the output.
+            This makes look up fast.</p>
+  <p>In Python, the dictionary data type represents the implementation of the hash table.
+            In C++, the <em>unordered_map</em> implements the hash table, and the <c>&lt;unordered_map&gt;</c>
+            library must be included as follows:</p>
+  <pre>#include &lt;unordered_map&gt;</pre>
+  <p>The syntax for hash table access is much like we might expect
+            except that instead of using the index of the item for look-up, we
+            use the key. In both Python and C++, hash tables can be initialized with key-value pairs and
+            key-value pairs can also be added later as we see in the following example.
+            In C++, the keyword <c>first</c> is used for the key, and <c>second</c> is used for the
+            associated value.</p>
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="hashtable1_cpp" interactive="activecode" language="cpp">
+        <input>
+// Creates a hash table that maches
+// the english letter to it's spanish
+// equivalent, and outputs the size of
+// the table to the console
+#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    unordered_map&lt;string, string&gt; spnumbers;
+
+    spnumbers = { {"one", "uno"}, {"two", "dos"} };
+
+    spnumbers["three"] = "tres";
+    spnumbers["four"] = "cuatro";
+
+    cout &lt;&lt; "one is ";
+    cout &lt;&lt; spnumbers["one"] &lt;&lt; endl;
+
+    cout &lt;&lt; spnumbers.size() &lt;&lt; endl;
+}
+        </input>
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="hashtable1_py" interactive="activecode" language="python">
+        <input>
+"""Python equivalent
+of the C++ code """
+def main():
+    spnumbers = {"one":"uno","two":"dos"}
+
+    spnumbers["four"]="cuatro"
+    spnumbers["three"]="tres"
+
+    print("one is", end=" ")
+    print(spnumbers["one"])
+
+    print(len(spnumbers))
+main()
+        </input>
+      </program>
+    </TabNode>
+  </exercise>
+  <p>It is important to note that hash tables are organized by the location given
+            by the hash function rather than being in any
+            particular order with respect to the keys. This makes look-up extremely fast.
+            Hence, although it is possible to iterate through a hash table in both C++ and Python,
+            it is an odd thing to do
+            because the data is not typically stored sequentially.
+            Iterators of an <c>unordered_map</c> are
+            implemented using pointers to point to elements of the value type as we see in
+            the following example.</p>
+  <exercise>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="hashtable2_cpp" interactive="activecode" language="cpp">
+        <input>
+// Creates a hash table that maches
+// the english letter to it's spanish
+// equivalent, and outputs every item
+// in the table to the console
+#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    unordered_map&lt;string, string&gt; spnumbers;
+
+    spnumbers = { {"one","uno"},{"two","dos"},{"three","tres"},{"four","cuatro"},{"five","cinco"} };
+
+    for (auto i=spnumbers.begin(); i!=spnumbers.end(); i++ ){
+        //auto is used to automatically detect the data type when
+        //a variable is declared. Use this ONLY when declaring complex
+        //variables.
+
+        cout &lt;&lt; i-&gt;first &lt;&lt; ":";
+        cout &lt;&lt; i-&gt;second &lt;&lt; endl;
+    }
+}
+        </input>
+      </program>
+    </TabNode>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="hashtable2_py" interactive="activecode" language="python">
+        <input>
+"""Python equivalent
+of the C++ code """
+def main():
+    spnumbers = {"one":"uno","two":"dos","three":"tres","four":"cuatro","five":"cinco" }
+
+    for key in spnumbers:
+        print(key, end=":")
+        print(spnumbers[key])
+
+main()
+        </input>
+      </program>
+    </TabNode>
+  </exercise>
+  <p>Hash Tables have both methods and operators. <xref ref="collection-data_collection-data_collection-data_tab-hashopers"/>
+            describes them, and the session shows them in action.</p>
+  <table xml:id="collection-data_collection-data_tab-hashopers">
+    <tabular>
+      <title>
+        <term>Table 7: Important Hash Table Operators Provided in C++</term>
+      </title>
+      <row header="yes">
+        <cell>
+          <term>Operator</term>
+        </cell>
+        <cell>
+          <term>Use</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>[ ]</c>
+        </cell>
+        <cell>
+          <c>mymap[k]</c>
+        </cell>
+        <cell>
+                            Returns the value associated with <c>k</c>, otherwise throws error
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>count</c>
+        </cell>
+        <cell>
+          <c>mymap.count(key)</c>
+        </cell>
+        <cell>
+                            Returns <c>true</c> if key is in <c>mymap</c>, <c>false</c> otherwise
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>erase</c>
+        </cell>
+        <cell>
+          <c>mymap.erase(key)</c>
+        </cell>
+        <cell>
+                            Removes the entry from <c>mymap</c>
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>begin</c>
+        </cell>
+        <cell>
+          <c>mymap.begin()</c>
+        </cell>
+        <cell>
+                            An iterator to the first element in <c>mymap</c>
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>end</c>
+        </cell>
+        <cell>
+          <c>mymap.end()</c>
+        </cell>
+        <cell>
+                            An iterator pointing to past-the-end element of <c>mymap</c>
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <subsection xml:id="collection-data-hashtables_matching">
+    <title>Matching</title>
+    <exercise label="matching_HT">
+      <statement>
+        <p> Match the Hash Table operations with their corresponding explination.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>[ ]</premise>
+          <response>Returns the value associated with the key, otherwise throws error.</response>
+        </match>
+        <match order="2">
+          <premise>erase</premise>
+          <response>Deletes the entry from the hash table.</response>
+        </match>
+        <match order="3">
+          <premise>count</premise>
+          <response>Returns true if key is in the hash table, and false otherwise.</response>
+        </match>
+        <match order="4">
+          <premise>begin</premise>
+          <response>An iterator to the first element in the hash table.</response>
+        </match>
+        <match order="5">
+          <premise>end</premise>
+          <response>An iterator pointing to past-the-end element of the hash table.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

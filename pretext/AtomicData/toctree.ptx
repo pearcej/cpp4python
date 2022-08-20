@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <title>Atomic C++ Data Types</title>
+  <xi:include href="./UsingDataInCpp.ptx"/>
+  <xi:include href="./NumericData.ptx"/>
+  <xi:include href="./BooleanData.ptx"/>
+  <xi:include href="./CharacterData.ptx"/>
+  <xi:include href="./Pointers.ptx"/>
+  <xi:include href="./Summary.ptx"/>
+  <xi:include href="./glossary.ptx"/>
+</chapter>

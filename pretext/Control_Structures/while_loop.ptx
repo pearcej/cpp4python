@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<section xml:id="control_-structures_while-loops">
+  <title>While Loops</title>
+  <p>As we noted earlier, algorithms require two important control
+            structures: iteration and selection. Both of these are supported by
+            Python in various forms. The programmer can choose the statement that is
+            most useful for the given circumstance.</p>
+  <p>For repeating a block of code, C++ provides a standard <c>while</c> and <c>for</c> constructs.
+            The <c>while</c> construct repeats a body of code as long as a condition is true. For example,</p>
+  <pre>int counter = 1;
+while (counter &lt;= 5) {          /*Use of an interactive method until the
+                                 the loop ends   */
+    cout &lt;&lt; "Hello, world" &lt;&lt; endl;
+    counter = counter + 1;
+}
+
+Console output:
+Hello, world
+Hello, world
+Hello, world
+Hello, world
+Hello, world</pre>
+  <p>prints out the phrase <q>Hello, world</q> five times. The condition on the
+            <c>while</c> statement is evaluated at the start of each repetition. If the
+            condition is <c>true</c>, the body of the statement will execute.</p>
+  <p>The <c>while</c> statement is a very general purpose iterative structure
+            that we will use in a number of different algorithms. In many cases, a
+            compound condition will control the iteration. A fragment such as</p>
+  <pre>while ((counter &lt;= 10) &amp;&amp; (!done)) {
+...</pre>
+  <p>would cause the body of the statement to be executed only in the case
+            where both parts of the condition are satisfied due to the and operator (<c>&amp;&amp;</c>). The value of the
+            variable <c>counter</c> would need to be less than or equal to 10 and the
+            value of the variable <c>done</c> would need to be <c>false</c> (<c>not false</c>
+            is <c>true</c>) so that <c>true and true</c> results in <c>true</c>.</p>
+  <p>Here are some of the logical operators that are useful for true-false boolean statements in C++.</p>
+  <pre>and          - &amp;&amp;
+
+or           - ||
+
+not equal to - !=
+
+not          - !
+
+greater than - &gt;
+
+less than    - &lt;
+
+greater than
+or equal to  - &gt;=
+
+less than
+or equal to  - &lt;=</pre>
+  <p>These are the same as we saw in earlier chapters.</p>
+  <pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    int counter = 0;
+    while (counter &lt;= 1) {
+        cout &lt;&lt; "Hello, world!" &lt;&lt; endl;
+    }
+};</pre>
+  <exercise label="mc_whileloop">
+    <statement>
+      <p>Q-1: Using the code above please select the answer that should appear.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>"0" is written 1 time.</p>
+        </statement>
+        <feedback>
+          <p>Take a look at the cout line.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"Hello world!" is written 1 time.</p>
+        </statement>
+        <feedback>
+          <p>Take a closer look at the while loop</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>"Hello world!" is written infinitely many times.</p>
+        </statement>
+        <feedback>
+          <p>Right! because counter is never greater than one, thus making the while loop infinite.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the  above.</p>
+        </statement>
+        <feedback>
+          <p>Not quite, take another look.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

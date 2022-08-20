@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<section xml:id="turtles_turtles_turtles_turtles_summary">
+  <title>Summary</title>
+  <p>
+    <ul>
+      <li>
+        <p>Turtles, originally from the Logo programming language, is used as an educational tool. It relates to a conceptual <q>turtle</q> that runs around on a canvas and draws things.</p>
+      </li>
+      <li>
+        <p>Python's turtle is a great way to start coding, and until recently, C++ did not have the capability of such a library due to the complexity and required understanding of its syntax.</p>
+      </li>
+      <li>
+        <p>Turtles have a variety of commands that are self-describing such as <q>forward</q> or <q>back</q>. Almost everything that was available to use in Python for Turtles is also available in C++.</p>
+      </li>
+      <li>
+        <p>The two versions of the Turtle library differ mainly in syntax, such as differences in entering color codes, and the limited variety of preset shapes available in C++. However, C++ has a few extra utilities not available in Python.</p>
+      </li>
+      <li>
+        <p>Turtles provide methods to alter their inner workings, including some control over how many frames of animation are shown with <c classes="code">tracer</c> method.</p>
+      </li>
+      <li>
+        <p>Every shape created and used by Turtles are a set of coordinates. We can change the shape of our turtles by using the <c classes="code">shape</c> method to one of four default shapes, or by manually entering coordinates and creating your own.</p>
+      </li>
+    </ul>
+  </p>
+</section>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <title>Graphics in C++</title>
+  <xi:include href="./introduction.ptx"/>
+  <xi:include href="./turtle_and_turtlescreen.ptx"/>
+  <xi:include href="./geometry_shapes_stamps.ptx"/>
+  <xi:include href="./advanced_features.ptx"/>
+  <xi:include href="./differences.ptx"/>
+  <xi:include href="./pattern_application.ptx"/>
+  <xi:include href="./summary.ptx"/>
+  <xi:include href="./check_yourself.ptx"/>
+  <xi:include href="./glossary.ptx"/>
+</chapter>

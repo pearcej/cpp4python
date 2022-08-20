@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <title>Collection Data Types</title>
+  <xi:include href="./Collection.ptx"/>
+  <xi:include href="./Arrays.ptx"/>
+  <xi:include href="./Vectors.ptx"/>
+  <xi:include href="./Strings.ptx"/>
+  <xi:include href="./HashTables.ptx"/>
+  <xi:include href="./UnorderedSet.ptx"/>
+  <xi:include href="./glossary.ptx"/>
+</chapter>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<section xml:id="collectiondata_collectiondata_collectiondata_collection-data_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>array</title>
+      <p><idx>array</idx>a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.</p>
+    </gi>
+    <gi>
+      <title>collection</title>
+      <p><idx>collection</idx>a grouping of a number of data items (possibly only zero or one) that have some shared significance or need to be operated upon together.</p>
+    </gi>
+    <gi>
+      <title>hash table</title>
+      <p><idx>hash table</idx>a collection consisting of key-value pairs with an associated hash function that maps the key to the associated value.</p>
+    </gi>
+    <gi>
+      <title>const (immutable)</title>
+      <p><idx>const (immutable)</idx>unable to be modified.</p>
+    </gi>
+    <gi>
+      <title>non-const (mutable)</title>
+      <p><idx>non-const (mutable)</idx>the ability of an object to be modified.</p>
+    </gi>
+    <gi>
+      <title>set</title>
+      <p><idx>set</idx>An unordered data structure consisting of unique, immutable data values.</p>
+    </gi>
+    <gi>
+      <title>string</title>
+      <p><idx>string</idx>A sequential data structure consisting of zero or more characters.</p>
+    </gi>
+    <gi>
+      <title/>
+      <p><idx>vector</idx>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</p>
+    </gi>
+    <gi>
+      <title>word</title>
+      <p><idx>word</idx>unit of data used by a particular processor design.</p>
+    </gi>
+  </glossary>
+  <subsection xml:id="collection-data-glossary_matching">
+    <title>Matching</title>
+    <exercise label="matching_ch5">
+      <statement>
+        <p>Match the words to thier corresponding definition.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>array</premise>
+          <response>a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an index.</response>
+        </match>
+        <match order="2">
+          <premise>collection</premise>
+          <response> a grouping of a number of data items that have some shared significance or need to be operated upon together.</response>
+        </match>
+        <match order="3">
+          <premise>vector</premise>
+          <response>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</response>
+        </match>
+        <match order="4">
+          <premise>hash table</premise>
+          <response>a collection consisting of key-value pairs with an associated function that maps the key to the associated value.</response>
+        </match>
+        <match order="5">
+          <premise>set</premise>
+          <response>An unordered data structure consisting of unique, immutable data values.</response>
+        </match>
+        <match order="6">
+          <premise>string</premise>
+          <response>A sequential data structure consisting of zero or more characters.</response>
+        </match>
+        <match order="7">
+          <premise>word</premise>
+          <response>unit of data used by a particular processor design.</response>
+        </match>
+        <match order="8">
+          <premise>mutability</premise>
+          <response>able to be modified.</response>
+        </match>
+        <match order="9">
+          <premise>immutable</premise>
+          <response>unable to be modified.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

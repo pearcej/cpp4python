@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<section xml:id="introcpp_introcpp_introcpp_intro-cpp_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>
+        <title_reference>cin</title_reference>
+      </title>
+      <p><idx>cin</idx><title_reference>cin</title_reference> stands for <q>console input</q>. It is the standard input statement in C++.</p>
+    </gi>
+    <gi>
+      <title>comment</title>
+      <p><idx>comment</idx>A comment is a programmer-readable explanation  in the source code of a computer program (<c>//</c> single line comment, <c>/**/</c> Multiline comment).</p>
+    </gi>
+    <gi>
+      <title>compiler</title>
+      <p><idx>compiler</idx>A compiler generally transforms code written in a high-level programming language like C++ into a low-level programming language like machine code in order to create an executable program.</p>
+    </gi>
+    <gi>
+      <title>
+        <title_reference>cout</title_reference>
+      </title>
+      <p><idx>cout</idx><title_reference>cout</title_reference> stands for <q>console output</q>. It is the standard output statement in C++.</p>
+    </gi>
+    <gi>
+      <title>dynamically typed</title>
+      <p><idx>dynamically typed</idx>A dynamically typed programming languages is one in which variables need not necessarily be defined before they are used, and can change during execution.</p>
+    </gi>
+    <gi>
+      <title>header</title>
+      <p><idx>header</idx>Header files are library files that contain a variety of useful definitions. They are imported into any C++ program by using the pre-processor #include statement.</p>
+    </gi>
+    <gi>
+      <title>#include</title>
+      <p><idx>#include</idx>Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.</p>
+    </gi>
+    <gi>
+      <title>interpreter</title>
+      <p><idx>interpreter</idx>An interpreter directly executes statements in a scripting language without requiring them to have been compiled into machine language.</p>
+    </gi>
+    <gi>
+      <title>machine code</title>
+      <p><idx>machine code</idx>machine code is a computer program written in instructions that can be directly executed by a computer's CPU.</p>
+    </gi>
+    <gi>
+      <title>statically typed</title>
+      <p><idx>statically typed</idx>A statically typed programming languages is one in which variables must be defined before they are used and cannot change during execution.</p>
+    </gi>
+  </glossary>
+  <subsection xml:id="intro-cpp_matching">
+    <title>Matching</title>
+    <exercise label="matching_intro">
+      <statement>
+        <p>Drag each glossary term to its' corresponding definition.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>cin</premise>
+          <response>Standard input statement in C++.</response>
+        </match>
+        <match order="10">
+          <premise>statically typed</premise>
+          <response>Programming language,  in which variables must be defined before they are used and cannot change during execution.</response>
+        </match>
+        <match order="2">
+          <premise>comment</premise>
+          <response>a readable explanation  in the source code of a computer program.</response>
+        </match>
+        <match order="3">
+          <premise>compiler</premise>
+          <response>Creates an executeable program by transforming code written in a high-level programming language into a low-level programming language.</response>
+        </match>
+        <match order="4">
+          <premise>cout</premise>
+          <response>Standard output statement in C++.</response>
+        </match>
+        <match order="5">
+          <premise>dynamically typed</premise>
+          <response>Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.</response>
+        </match>
+        <match order="6">
+          <premise>header</premise>
+          <response>library files that contain a variety of useful definitions. They are imported into any C++ program by using the #include statement.</response>
+        </match>
+        <match order="7">
+          <premise>#include</premise>
+          <response>Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.</response>
+        </match>
+        <match order="8">
+          <premise>interpreter</premise>
+          <response>directly executes statements in a scripting language without requiring them to have been compiled into machine language</response>
+        </match>
+        <match order="9">
+          <premise>machine code</premise>
+          <response> a computer program written in instructions that can be directly executed by a computer's CPU.</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

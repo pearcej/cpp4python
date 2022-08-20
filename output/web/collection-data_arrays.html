@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:18-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Arrays</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="C++ For Python Programmers">
+<meta property="book:author" content="Jan L. Pearce">
+<meta property="book:author" content="Brad Miller">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body id="httlacs" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="cpp4python.html"><span class="title">C++ For Python Programmers:</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Jan L. Pearce, Brad Miller</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="collection-data_collections.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-5.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="collection-data_vectors.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="collection-data_collections.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-5.html" title="Up">Up</a><a class="next-button button toolbar-item" href="collection-data_vectors.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Reporting Typos or Other Problems</a></li>
+<li><a href="colophon.html" data-scroll="colophon" class="internal">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to C++ for Python Programmers</span></a><ul>
+<li><a href="intro-cpp_welcome-to-c-for-python-programmers.html" data-scroll="intro-cpp_welcome-to-c-for-python-programmers" class="internal">Welcome to <em class="emphasis">C++ for Python Programmers</em></a></li>
+<li><a href="introcpp_introcpp_intro-cpp_introduction.html" data-scroll="introcpp_introcpp_intro-cpp_introduction" class="internal">Introduction</a></li>
+<li><a href="intro-cpp_why-learn-another-programming-language.html" data-scroll="intro-cpp_why-learn-another-programming-language" class="internal">Why Learn Another Programming Language?</a></li>
+<li><a href="intro-cpp_let-s-look-at-a-c-program.html" data-scroll="intro-cpp_let-s-look-at-a-c-program" class="internal">Let's look at a C++ program</a></li>
+<li><a href="introcpp_introcpp_intro-cpp_glossary.html" data-scroll="introcpp_introcpp_intro-cpp_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Atomic C++ Data Types</span></a><ul>
+<li><a href="atomic-data_using-data-in-c.html" data-scroll="atomic-data_using-data-in-c" class="internal">Using Data in C++</a></li>
+<li><a href="atomic-data_numeric-data.html" data-scroll="atomic-data_numeric-data" class="internal">Numeric Data</a></li>
+<li><a href="atomic-data_boolean-data.html" data-scroll="atomic-data_boolean-data" class="internal">Boolean Data</a></li>
+<li><a href="_character-data.html" data-scroll="_character-data" class="internal">Character Data</a></li>
+<li><a href="atomic-data_pointers.html" data-scroll="atomic-data_pointers" class="internal">Pointers</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_summary.html" data-scroll="atomicdata_atomicdata_atomic-data_summary" class="internal">Summary</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_glossary.html" data-scroll="atomicdata_atomicdata_atomic-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">Control Structures</span></a><ul>
+<li><a href="control_-structures_conditionals.html" data-scroll="control_-structures_conditionals" class="internal">Conditionals</a></li>
+<li><a href="control_-structures_while-loops.html" data-scroll="control_-structures_while-loops" class="internal">While Loops</a></li>
+<li><a href="control_-structures_for-loops.html" data-scroll="control_-structures_for-loops" class="internal">For Loops</a></li>
+<li><a href="control_structures_control_structures_control_-structures_summary.html" data-scroll="control_structures_control_structures_control_-structures_summary" class="internal">Summary</a></li>
+<li><a href="control_structures_control_structures_control_-structures_glossary.html" data-scroll="control_structures_control_structures_control_-structures_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4" class="internal"><span class="codenumber">4</span> <span class="title">Functions</span></a><ul>
+<li><a href="functions_defining-c-functions.html" data-scroll="functions_defining-c-functions" class="internal">Defining C++ Functions</a></li>
+<li><a href="functions_parameter-passing-by-value-versus-by-reference.html" data-scroll="functions_parameter-passing-by-value-versus-by-reference" class="internal">Parameter Passing: by Value versus by Reference</a></li>
+<li><a href="functions_arrays-as-parameters-in-functions.html" data-scroll="functions_arrays-as-parameters-in-functions" class="internal">Arrays as Parameters in Functions</a></li>
+<li><a href="functions_function-overloading.html" data-scroll="functions_function-overloading" class="internal">Function Overloading</a></li>
+<li><a href="functions_functions_functions_summary.html" data-scroll="functions_functions_functions_summary" class="internal">Summary</a></li>
+<li><a href="functions_functions_functions_glossary.html" data-scroll="functions_functions_functions_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="codenumber">5</span> <span class="title">Collection Data Types</span></a><ul>
+<li><a href="collection-data_collections.html" data-scroll="collection-data_collections" class="internal">Collections</a></li>
+<li><a href="collection-data_arrays.html" data-scroll="collection-data_arrays" class="active">Arrays</a></li>
+<li><a href="collection-data_vectors.html" data-scroll="collection-data_vectors" class="internal">Vectors</a></li>
+<li><a href="collection-data_strings.html" data-scroll="collection-data_strings" class="internal">Strings</a></li>
+<li><a href="collection-data_hash-tables.html" data-scroll="collection-data_hash-tables" class="internal">Hash Tables</a></li>
+<li><a href="collection-data_unordered-sets.html" data-scroll="collection-data_unordered-sets" class="internal">Unordered Sets</a></li>
+<li><a href="collectiondata_collectiondata_collection-data_glossary.html" data-scroll="collectiondata_collectiondata_collection-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-6.html" data-scroll="chapter-6" class="internal"><span class="codenumber">6</span> <span class="title">Input and Output</span></a><ul>
+<li><a href="input_and_-output_file-handling.html" data-scroll="input_and_-output_file-handling" class="internal">File Handling</a></li>
+<li><a href="input_and_-output_member-functions-and-precision.html" data-scroll="input_and_-output_member-functions-and-precision" class="internal">Member Functions and Precision</a></li>
+<li><a href="input_and_-output_file-operations.html" data-scroll="input_and_-output_file-operations" class="internal">File Operations</a></li>
+<li><a href="input_and_-output_dealing-with-i-o-failures.html" data-scroll="input_and_-output_dealing-with-i-o-failures" class="internal">Dealing with I/O Failures</a></li>
+<li><a href="input_and_-output_reading-and-writing-with-file-streams.html" data-scroll="input_and_-output_reading-and-writing-with-file-streams" class="internal">Reading and Writing with File Streams</a></li>
+<li><a href="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof.html" data-scroll="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof" class="internal">The End-Of-File (EOF) for Systems that Implement eof()</a></li>
+<li><a href="input_and_-output_passing-streams-as-parameters.html" data-scroll="input_and_-output_passing-streams-as-parameters" class="internal">Passing Streams as Parameters</a></li>
+<li><a href="input_and_-output_file-names-and-c-strings.html" data-scroll="input_and_-output_file-names-and-c-strings" class="internal">File Names and C-Strings</a></li>
+<li><a href="input_and_-output_putting-it-all-together.html" data-scroll="input_and_-output_putting-it-all-together" class="internal">Putting it all Together</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_summary.html" data-scroll="input_and_output_input_and_output_input_and_-output_summary" class="internal">Summary</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_glossary.html" data-scroll="input_and_output_input_and_output_input_and_-output_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-7.html" data-scroll="chapter-7" class="internal"><span class="codenumber">7</span> <span class="title">Exception Handling</span></a><ul>
+<li><a href="exception_-handling_exception-handling.html" data-scroll="exception_-handling_exception-handling" class="internal">Exception Handling</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_summary.html" data-scroll="exception_handling_exception_handling_exception_-handling_summary" class="internal">Summary</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_glossary.html" data-scroll="exception_handling_exception_handling_exception_-handling_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-8.html" data-scroll="chapter-8" class="internal"><span class="codenumber">8</span> <span class="title">Graphics in C++</span></a><ul>
+<li><a href="turtles_turtles_turtles_introduction.html" data-scroll="turtles_turtles_turtles_introduction" class="internal">Introduction</a></li>
+<li><a href="turtles_turtle-turtlescreen.html" data-scroll="turtles_turtle-turtlescreen" class="internal">Turtle &amp; TurtleScreen</a></li>
+<li><a href="turtles_geometry-shapes-and-stamps.html" data-scroll="turtles_geometry-shapes-and-stamps" class="internal">Geometry, Shapes, and Stamps</a></li>
+<li><a href="turtles_advanced-features.html" data-scroll="turtles_advanced-features" class="internal">Advanced Features</a></li>
+<li><a href="turtles_python-s-turtle-vs-c-turtle.html" data-scroll="turtles_python-s-turtle-vs-c-turtle" class="internal">Python's turtle vs C-Turtle</a></li>
+<li><a href="turtles_practical-application-tessellation.html" data-scroll="turtles_practical-application-tessellation" class="internal">Practical Application - Tessellation</a></li>
+<li><a href="turtles_turtles_turtles_summary.html" data-scroll="turtles_turtles_turtles_summary" class="internal">Summary</a></li>
+<li><a href="turtles_check-yourself.html" data-scroll="turtles_check-yourself" class="internal">Check Yourself</a></li>
+<li><a href="turtles_turtles_turtles_glossary.html" data-scroll="turtles_turtles_turtles_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="collection-data_arrays"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Arrays</span>
+</h2>
+<p id="p-374"><dfn class="terminology">What is an Array?</dfn> An array is a data structure consisting of an ordered collection of data elements, of identical type in which each element can be identified by an array index. More technically, an array data structure is an ordered arrangement of values located at equally spaced addresses in contiguous computer memory.</p>
+<p id="p-375">NOTE: A C++ <dfn class="terminology">array</dfn> is always stored in contiguous memory. C++ arrays can be allocated in two different ways:</p>
+<blockquote class="blockquote" id="blockquote-10"><ol id="p-376" class="decimal">
+<li id="li-38"><p id="p-377"><em class="emphasis">statically allocated</em> in which the array size is fixed at compile-time and cannot change</p></li>
+<li id="li-39"><p id="p-378"><em class="emphasis">dynamically allocated</em> in which pointers are used in the allocation process so the size can change at run-time</p></li>
+</ol></blockquote>
+<p id="p-379">In modern C++, the statically allocated array is typically used in situations when speed is essential or where hardware constraints exist, and a data structure called a vector is typically used when more flexibility is required.</p>
+<p id="p-380">As a Python programmer, you might see the array as the ancestor of the Python list, and you might remember that Python lists are actually implemented via an underlying array consisting of references.</p>
+<p id="p-381">C++ arrays are similar to Python lists except that because C++ stores variables directly, each element of a C++ array must be of identical data type. Like Python lists, the indices for arrays start counting with 0.</p>
+<p id="p-382">The use of arrays permits us to utilize an ordered set of memory locations that we can then manipulate as a single entity, and that at the same time gives us direct access to each individual component.</p>
+<p id="p-383"><dfn class="terminology">Why use an Array?</dfn></p>
+<p id="p-384">C++ is a language often used for real-time or low-level processing where speed is essential and/or there is only a fixed amount of space available.</p>
+<p id="p-385">The fact that array elements are stored in memory in contiguous memory locations making look-up via index very, very fast. In computing, a <dfn class="terminology">word</dfn> is the unit of data used by a particular processor design, such as 32 or 64 bits. For example, an array of 100 integer variables, with indices 0 through 99, might be stored as 100 words at memory addresses 20000, 20004, 20008, … 20396. The element with index i would be located at the address 20000 + 4 × i.</p>
+<p id="p-386">Statically allocated C++ arrays must be declared with both a type and a size at compile-time.</p>
+<pre class="code-block tex2jax_ignore">double darray[4];
+int iarray[10];
+char arr2[3000];
+</pre>
+<p id="p-387">It is also possible to initialize statically allocated arrays at compile time, in which case the number of items determines the array's size.</p>
+<pre class="code-block tex2jax_ignore">int arr[] = {1, 2, 3, 4};  // This is size 4.
+char arr2[] = {'a', 'b', 'c'}; // This is size 3.
+string arr3[] = {"this", "is", "an", "array"}; // This is size 4.
+</pre>
+<p id="p-388">Note that an array with a single element is not the same type as the <dfn class="terminology">atomic</dfn> type, so the following are not the same.</p>
+<pre class="code-block tex2jax_ignore">double darray[] = {1.2};  // must use index to access value
+double ddouble = 1.2;     // cannot use index to access value
+</pre>
+<p id="p-389"><dfn class="terminology">Be Cautious with Arrays</dfn></p>
+<p id="p-390">The speed and low-level control that arrays offer us as programmers is powerful… and dangerous. As a Python programmer, using a C++ array will help you better understand the trade-offs of the protections Python offers.</p>
+<p id="p-391">Here are examples of iteration.</p>
+<article class="exercise exercise-like" id="exercise-28"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+</h3>
+<pre class="program"><code class="language-cpp">// outputs all elements in the array
+//to the console
+#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    int myarray[] = {2,4,6,8};
+    for (int i=0; i&lt;4; i++){
+        cout &lt;&lt; myarray[i] &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="listarray_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="listarray_py_editor" data-question_label="" data-codelens="true">"""Demonstrates how python protects from
+iterating past the end of a list"""
+
+def main():
+    mylist = [2, 4, 6, 8]
+    for i in range(8):
+        print(mylist[i])
+
+main()
+</textarea></div></div></div></article><p id="p-392">The protections Python offers, however, takes time and C++ is designed for speed. Python would never let you iterate beyond the end of a list. C++ will not only let you iterate beyond either end of an array, but it will let you change the values beyond either end of the array with sometimes catastrophic results.</p>
+<p id="p-393">The phrase, “be careful what you wish for” is a great one to remember when programming in C++. Because C++ will generally try to do everything you ask for.</p>
+<article class="exercise exercise-like" id="exercise-29"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h3>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+// demonstrates what happens when iterating
+// outside of an array in C++,
+//also outputs the location of the value in memory
+int main(){
+    int myarray[] = {2,4,6,8};
+    for (int i=0; i&lt;=8; i++){
+        cout &lt;&lt; myarray[i] &lt;&lt; endl;
+        cout &lt;&lt; "id: " &lt;&lt; &amp;myarray[i] &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="array_error_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="array_error_py_editor" data-question_label="" data-codelens="true">"""Demonstrates how python protects from
+iterating past the end of a list,
+ and shows the use of Id as the location in memory"""
+def main():
+    mylist = [2,4,6,8]
+    print(mylist)
+    for i in range(5):
+        print(mylist[i])
+        print("id: "+str(id(mylist[i])))
+
+main()
+</textarea></div></div></div></article><p id="p-394">The speed of C++ comes at the cost of minimal to no error checking. Sometimes this can have perplexing results such as in the next example.</p>
+<p id="p-395">You should use an array when you have a need for speed or you need to work with hardware constraints. Otherwise, you may want to consider using another collection data type, the <em class="emphasis">vector</em>.</p>
+<article class="exercise exercise-like" id="exercise-30"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+</h3>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+// Demonstrates how in iterating outside
+// of an arry in C++, can change data in other places
+int main(){
+    int myarray[] = {2, 4};
+    int otherdata[]={777, 777};
+    for (int i=0; i&lt;4; i++){
+        myarray[i]=0;
+        cout &lt;&lt;"myarray["&lt;&lt; i &lt;&lt; "]=";
+        cout &lt;&lt; myarray[i]&lt;&lt; endl;
+        cout &lt;&lt; "add:" &lt;&lt; &amp;myarray[i] &lt;&lt; endl;
+    }
+
+    for (int i=0; i&lt;2; i++){
+        cout &lt;&lt;"otherdata["&lt;&lt; i &lt;&lt; "]=";
+        cout &lt;&lt; otherdata[i]&lt;&lt; endl;
+        cout &lt;&lt; "add:" &lt;&lt; &amp;otherdata[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="array_werror_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="array_werror_py_editor" data-question_label="" data-codelens="true">"""Demonstrates how python protects from
+iterating past the end of a list
+and changing any other data"""
+def main():
+    mylist = [2, 4]
+    otherdata = [777, 777]
+    for i in range(4):
+        print(mylist[i])
+        print("id: "+str(id(mylist[i])))
+
+    for j in range(2):
+          print(otherdata[i])
+          print("id: "+str(id(otherdata[i])))
+
+main()
+</textarea></div></div></div></article><article class="exercise exercise-like" id="mc_werror"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
+</h3>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="mc_werror" data-multipleanswers="false">
+<p id="p-396">Q-7: In the above example, what happened to otherdata[ ] in C++?</p>
+<li data-component="answer" id="mc_werror_opt_a"><p id="p-397">Nothing. Everything is fine.</p></li>
+<li data-component="feedback" id="mc_werror_opt_a"><p id="p-398">Actually, there is a problem. Look carefully.</p></li>
+<li data-component="answer" id="mc_werror_opt_b"><p id="p-399">All data was automatically reinitialized.</p></li>
+<li data-component="feedback" id="mc_werror_opt_b"><p id="p-400">No. C++ just does what you tell it to do.</p></li>
+<li data-component="answer" id="mc_werror_opt_c"><p id="p-401">I have no idea. Please give me a hint.</p></li>
+<li data-component="feedback" id="mc_werror_opt_c"><p id="p-402">Try again. One of these is indeed correct. Look at the memory addresses.</p></li>
+<li data-component="answer" id="mc_werror_opt_d" data-correct=""><p id="p-403">The first loop went out of bounds and wrote over the values in otherdata.</p></li>
+<li data-component="feedback" id="mc_werror_opt_d"><p id="p-404">Right!</p></li>
+<li data-component="answer" id="mc_werror_opt_e"><p id="p-405">none of the above</p></li>
+<li data-component="feedback" id="mc_werror_opt_e"><p id="p-406">One of the above is indeed correct.</p></li>
+</ul></div></div></article><article class="exercise exercise-like" id="mc_array"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
+</h3>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="mc_array" data-multipleanswers="false">
+<p id="p-407">Q-8: What is the correct way to declare an array in C++?</p>
+<li data-component="answer" id="mc_array_opt_a"><p id="p-408">int myarray(5);</p></li>
+<li data-component="feedback" id="mc_array_opt_a"><p id="p-409">Check the characters at the end of the array! Right now that is a function!</p></li>
+<li data-component="answer" id="mc_array_opt_b"><p id="p-410">myarray[5];</p></li>
+<li data-component="feedback" id="mc_array_opt_b"><p id="p-411">You are forgetting something important!</p></li>
+<li data-component="answer" id="mc_array_opt_c" data-correct=""><p id="p-412">int myarray[5];</p></li>
+<li data-component="feedback" id="mc_array_opt_c"><p id="p-413">Good work!</p></li>
+<li data-component="answer" id="mc_array_opt_d"><p id="p-414">None of the above.</p></li>
+<li data-component="feedback" id="mc_array_opt_d"><p id="p-415">Check the characters at the end of the array!</p></li>
+</ul></div></div></article></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

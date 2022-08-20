@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<section xml:id="atomic-data_character-data">
+  <title>Character Data</title>
+  <p>In Python strings can be created with single or double quotes.
+            In C++ single quotes are used for the character (<c>char</c>) data type,
+            and double quotes are used for the string data type.</p>
+  <p>Consider the following code.</p>
+  <exercise>
+    <TabNode tabname="Python" tabnode_options="{'subchapter': 'CharactersData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+      <program xml:id="charpy" interactive="activecode" language="python">
+        <input>
+# Shows direct comparison of both Strings &amp; Characters in Python
+def main():
+
+    strvar = "b"
+    charvar = 'b'
+
+    print('b' == charvar)
+    print("b" == strvar)
+    print('a' == "a")
+
+main()
+        </input>
+      </program>
+    </TabNode>
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'CharactersData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <program xml:id="charcpp" interactive="activecode" language="cpp">
+        <input>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+// Demonstrates how chars and strings can not be
+// directly compared.
+int main(){
+
+    string strvar = "b";
+    char charvar = 'b';
+
+    cout &lt;&lt; ('b' == charvar) &lt;&lt; endl;
+    cout &lt;&lt; ("b" == strvar) &lt;&lt; endl;
+    //cout &lt;&lt; ('a' == "a") &lt;&lt; endl; // will error!
+
+    return 0;
+}
+        </input>
+      </program>
+    </TabNode>
+  </exercise>
+  <p>Try the following question.</p>
+  <exercise label="mc_cpp_strings">
+    <statement>
+      <p>Q-3: If I want to create a string in C++, what set of symbols may be used?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>' '</p>
+        </statement>
+        <feedback>
+          <p>No, single quotes are only used for single characters.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>" "</p>
+        </statement>
+        <feedback>
+          <p>Good job reading!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>' ' or " " may be used</p>
+        </statement>
+        <feedback>
+          <p>No. Only one set of symbols may be used.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>It depends upon the implementation.</p>
+        </statement>
+        <feedback>
+          <p>No. The implementation is consistent.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>none of the above</p>
+        </statement>
+        <feedback>
+          <p>One of the above is indeed correct.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

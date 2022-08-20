@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <title>Control Structures</title>
+  <xi:include href="./conditionals.ptx"/>
+  <xi:include href="./while_loop.ptx"/>
+  <xi:include href="./for_loop.ptx"/>
+  <xi:include href="./summary.ptx"/>
+  <xi:include href="./glossary.ptx"/>
+</chapter>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<section xml:id="input_and_output_input_and_output_input_and_output_input_and_-output_summary">
+  <title>Summary</title>
+  <p>
+    <ol marker="1">
+      <li>
+        <p>File handling in C++ uses <c>stream</c> similar to cout and cin in <c>&lt;iosteam&gt;</c> library but is <c>&lt;fstream&gt;</c> for file stream.</p>
+      </li>
+      <li>
+        <p><c>ifstream in_stream</c> creates an input stream object, in_stream, that can be used to input text from a file to C++.</p>
+      </li>
+      <li>
+        <p><c>ofstream out_stream</c> creates an output stream object,out_steam, that can be used to write text from C++ to a file.</p>
+      </li>
+      <li>
+        <p>End-of-File or <c>.eof()</c> is a method for the instance variables of fstream, input and output stream objects, and can be used to carry out a task until a file has ended or do some task after a file has ended.</p>
+      </li>
+    </ol>
+  </p>
+  <subsection xml:id="input_and_-output_check-yourself">
+    <title>Check Yourself</title>
+    <exercise label="stream_library_2">
+      <statement>
+        <p>Q-1: Which of the following are libraries for C++ input and output? (Choose all that are true.)</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>fstream</p>
+          </statement>
+          <feedback>
+            <p>Yes, fstream is library for handling file input and output.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>ifstream</p>
+          </statement>
+          <feedback>
+            <p>No, ifstream is an object type for handling input.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>ofstream</p>
+          </statement>
+          <feedback>
+            <p>No, ofstream is an object type for handling output.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>iostream</p>
+          </statement>
+          <feedback>
+            <p>Yes, iostream is a library for handling console input and output.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="dnd_streamuse">
+      <statement>
+        <p>Drag the corresponding library to what you would use it for.</p>
+      </statement>
+      <feedback>
+        <p>Which library is used for which task?</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>fstream</premise>
+          <response>I want to write to a file</response>
+        </match>
+        <match order="2">
+          <premise>iostream</premise>
+          <response>I want to write to the console</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>Q-3: Fill in the blank with the value of <c>inputn</c> when the following code runs. <var/>  </p>
+      </statement>
+      <setup>
+        <var>
+          <pre>#include &lt;fstream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+main(){
+  ifstream in_stream;
+  ofstream out_stream;
+  int inputn;
+
+  out_stream.open("anotherFile.txt");
+  out_stream &lt;&lt; 25;
+  out_stream &lt;&lt; 15 &lt;&lt; endl;
+  out_stream &lt;&lt; 101 &lt;&lt; endl;
+
+  in_stream.open("anotherFile.txt");
+  in_stream &gt;&gt; inputn;
+  cout &lt;&lt; inputn;
+  in_stream &gt;&gt; inputn;
+}</pre>
+          <condition number="[101, 101]">
+            <feedback>
+              <p>That is the correct answer! Good job!</p>
+            </feedback>
+          </condition>
+          <condition number="[25, 25]">
+            <feedback>
+              <p>No. Hint: <c>inputn</c> is changed twice.</p>
+            </feedback>
+          </condition>
+          <condition number="[2515, 2515]">
+            <feedback>
+              <p>No. Hint: <c>inputn</c> is changed twice.</p>
+            </feedback>
+          </condition>
+          <condition number="[15, 15]">
+            <feedback>
+              <p>No. Hint: note that there is no space between the first 25 and 15!</p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+  </subsection>
+</section>

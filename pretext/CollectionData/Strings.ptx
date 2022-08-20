@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<section xml:id="collection-data_strings">
+  <title>Strings</title>
+  <p><term>Strings</term> are sequential collections of zero or more characters such as letters, numbers
+            and other symbols. There are actually two types of strings in C++ . The <em>C++ string</em> or just <em>string</em> from the
+            <c>&lt;string&gt;</c> library is the more modern type, and it is very similar to the Python string class.
+            The old style <em>C-string</em> which is essentially
+            an array of <c>char</c> type. The char type itself is actually distinct from both types of strings.</p>
+  <pre>char cppchar = 'a';   // char values use single quotes
+string cppstring = "Hello World!";  // C++ strings use double quotes
+char cstring[] = {"Hello World!"};    // C-string or char array uses double quotes</pre>
+  <p>In older versions of C++, you must use a <c>char</c> array to work with filenames. In modern
+            C++ (from C++11 onward), however, you can use a C++ string for everything.
+            Since C++ strings are so much nicer and similar to Python strings, I would not recommend using C-strings.</p>
+  <exercise label="cstringquestion1_1">
+    <statement>
+      <p>Q-1: What is the correct definition of c-strings?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>An array of characters that ends with a terminating null character. i.e. \0</p>
+        </statement>
+        <feedback>
+          <p>Correct! a c-string is different from a string</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A sequential data structure consisting of zero or more characters</p>
+        </statement>
+        <feedback>
+          <p>Close, but that is the definition of a string, not a c-string</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.</p>
+        </statement>
+        <feedback>
+          <p>Sorry, thats not a string or a c-string</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</p>
+        </statement>
+        <feedback>
+          <p>No, that's a vector</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <p>Because strings are sequences, all of the typical sequence operations work as you would expect.
+            In addition, the string library offers a huge number of
+            methods, some of the most useful of which are shown in <xref ref="collection-data_collection-data_tab-stringmethods"/>.</p>
+  <table xml:id="collection-data_collection-data_tab-stringmethods">
+    <tabular>
+      <title>
+        <term>Table 4: String Methods Provided in C++</term>
+      </title>
+      <row header="yes">
+        <cell>
+          <term>Method Name</term>
+        </cell>
+        <cell>
+          <term>Use</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>[ ]</c>
+        </cell>
+        <cell>
+          <c>astring[i]</c>
+        </cell>
+        <cell>
+                            access value of character at index i
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>=</c>
+        </cell>
+        <cell>
+          <c>astring[i]=value</c>
+        </cell>
+        <cell>
+                            change value of character at index i
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>+</c>
+        </cell>
+        <cell>
+          <c>string1 + astring2</c>
+        </cell>
+        <cell>
+                            concatenate strings
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>append</c>
+        </cell>
+        <cell>
+          <c>astring.append(string)</c>
+        </cell>
+        <cell>
+                            Appends a string to the end of the string
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>push_back</c>
+        </cell>
+        <cell>
+          <c>astring.push_back(char)</c>
+        </cell>
+        <cell>
+                            Appends a character to the end of the string
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>pop_back</c>
+        </cell>
+        <cell>
+          <c>astring.pop_back()</c>
+        </cell>
+        <cell>
+                            Deletes the last character from the end of the string
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>insert</c>
+        </cell>
+        <cell>
+          <c>astring.insert(i, string)</c>
+        </cell>
+        <cell>
+                            Inserts a string at a specific index
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>erase</c>
+        </cell>
+        <cell>
+          <c>astring.erase(i, j)</c>
+        </cell>
+        <cell>
+                            Erases an element from one index to another
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>find</c>
+        </cell>
+        <cell>
+          <c>astring.find(item)</c>
+        </cell>
+        <cell>
+                            Returns the index of the first occurrence of item
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>size</c>
+        </cell>
+        <cell>
+          <c>astring.size()</c>
+        </cell>
+        <cell>
+                            Returns the size of the string
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <subsection xml:id="collection-data-strings_matching">
+    <title>Matching</title>
+    <exercise label="matching_strings">
+      <statement>
+        <p> Match the String operations with their corresponding explination.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>[ ]</premise>
+          <response>Accesses value of an element.</response>
+        </match>
+        <match order="10">
+          <premise>find</premise>
+          <response> Returns the index of the first occurrence of item.</response>
+        </match>
+        <match order="2">
+          <premise>=</premise>
+          <response> Assigns value to an element.</response>
+        </match>
+        <match order="3">
+          <premise>push_back</premise>
+          <response>Adjoins a character to the end of the string.</response>
+        </match>
+        <match order="4">
+          <premise>pop_back</premise>
+          <response>Removes the last character from the end of the string.</response>
+        </match>
+        <match order="5">
+          <premise>insert</premise>
+          <response>Injects a string at a specific index.</response>
+        </match>
+        <match order="6">
+          <premise>erase</premise>
+          <response>Deletes an element from one index to another.</response>
+        </match>
+        <match order="7">
+          <premise>size</premise>
+          <response>Returns the capacity of the string.</response>
+        </match>
+        <match order="8">
+          <premise>+</premise>
+          <response>connects strings.</response>
+        </match>
+        <match order="9">
+          <premise>append</premise>
+          <response>Adjoins a string to the end of the string.</response>
+        </match>
+      </matches>
+    </exercise>
+    <exercise>
+      <TabNode tabname="C++" tabnode_options="{'subchapter': 'Strings', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <program xml:id="introstring_cpp" interactive="activecode" language="cpp">
+          <input>
+// This function concatenates the string hello World
+// Then it says where World begins in the concatenated string
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main(){
+
+    string mystring1 = "Hello";
+    string mystring2 = "World!";
+    string mystring3;
+
+    mystring3 = mystring1 + " " + mystring2;
+    cout &lt;&lt; mystring3 &lt;&lt; endl;
+
+    cout &lt;&lt; mystring2 &lt;&lt; " begins at ";
+    cout &lt;&lt; mystring3.find(mystring2) &lt;&lt; endl;
+
+    return 0;
+}
+        </input>
+        </program>
+      </TabNode>
+      <TabNode tabname="Python" tabnode_options="{'subchapter': 'Strings', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+        <program xml:id="introstring_py" interactive="activecode" language="python">
+          <input>
+"""This does the same thing as the C++ function """
+def main():
+    mystring1 = "Hello"
+    mystring2 = "World!"
+
+    mystring3 = mystring1 + " " + mystring2
+    print(mystring3)
+
+    print(mystring2, end=" ")
+    print("begins at", end=" ")
+    print(str(mystring3.find(mystring2)))
+
+main()
+        </input>
+        </program>
+      </TabNode>
+    </exercise>
+    <p>Check your understanding by completing the following question.</p>
+    <exercise label="string_types">
+      <statement>
+        <p>Drag each data type to its' corresponding C++ initialization syntax.</p>
+      </statement>
+      <feedback>
+        <p>Feedback shows incorrect matches.</p>
+      </feedback>
+      <matches>
+        <match order="1">
+          <premise>char</premise>
+          <response>'a'</response>
+        </match>
+        <match order="2">
+          <premise>char array</premise>
+          <response>{'a'}</response>
+        </match>
+        <match order="3">
+          <premise>string</premise>
+          <response>"a"</response>
+        </match>
+      </matches>
+    </exercise>
+  </subsection>
+</section>

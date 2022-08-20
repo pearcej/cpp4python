@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:19-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="period">.</span>
+</h4>
+<pre class="program"><code class="language-cpp">// This function concatenates the string hello World
+// Then it says where World begins in the concatenated string
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main(){
+
+    string mystring1 = "Hello";
+    string mystring2 = "World!";
+    string mystring3;
+
+    mystring3 = mystring1 + " " + mystring2;
+    cout &lt;&lt; mystring3 &lt;&lt; endl;
+
+    cout &lt;&lt; mystring2 &lt;&lt; " begins at ";
+    cout &lt;&lt; mystring3.find(mystring2) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="introstring_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="introstring_py_editor" data-question_label="" data-codelens="true">"""This does the same thing as the C++ function """
+def main():
+    mystring1 = "Hello"
+    mystring2 = "World!"
+
+    mystring3 = mystring1 + " " + mystring2
+    print(mystring3)
+
+    print(mystring2, end=" ")
+    print("begins at", end=" ")
+    print(str(mystring3.find(mystring2)))
+
+main()
+</textarea></div></div></div></article><span class="incontext"><a href="collection-data_strings.html#exercise-40" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:19-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<blockquote class="blockquote">
+<h3 class="heading"><span class="type">Quotation</span></h3>
+<pre class="program"><code class="language-cpp">// Shows exception handling using try,throw,
+// and catch in order to output
+// an error message to the console
+#include &lt;iostream&gt;
+using namespace std;
+
+double div(double num1, double num2) {
+    if (num2 == 0) {
+            // If the second number is 0, throw this error
+            throw "Cannot divide by 0!\n";
+    }
+
+    return num1 / num2;
+}
+
+int main() {
+    // Get input from the user
+    float firstNum=10;
+    float secondNum=0;
+
+    try {
+            // Attempt to divide the two numbers
+            double result = div(firstNum, secondNum);
+            cout &lt;&lt; "result of division: " &lt;&lt; result &lt;&lt; endl;
+
+    }
+    catch (const char *err) {
+            // If an error is thrown, print it
+            cout &lt;&lt; err;
+    }
+
+    return 0;
+}
+</code></pre>
+</blockquote>
+<span class="incontext"><a href="exception_-handling_exception-handling.html#blockquote-12" class="internal">in-context</a></span>
+</body>
+</html>

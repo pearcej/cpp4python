@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+  <xi:include href="./titlepage.ptx"/>
+  <acknowledgement>
+    <p><url href="https://www.berea.edu/csc/faculty-and-staff/dr-jan-pearce/">Dr. Jan Pearce : </url>
+            Many thanks to Runestone for creating a very strong framework for open source computing books.
+            Many thanks also to Berea College's Labor Program for making it possible for students to
+            undergraduate students to receive funding to contribute.
+
+            Some sections of this book were originally written by Dr. Brad Miller as
+            <alert>Java for Python Programmers</alert>. These were translated to the C++ language
+            by Dr. Jan Pearce and a team of excellent students from Berea College.
+            Other sections were originally written as course web pages by Dr. Jan Pearce.
+
+            We would like to extend a special note of gratitude to
+            <url href="https://www.linkedin.com/in/jesse-walker-schadler-a4898916b">Jesse Walker-Schadler</url> 
+            who had the vision to create the <url href="https://github.com/walkerje/C-Turtle">CTurtle library</url>
+            which makes graphing in C++ particularly easy for Python programmers because it used the
+            Python Turtle library syntax, and for his excellent work in porting it to Runestone.
+        </p>
+  </acknowledgement>
+  <preface>
+    <title>
+            Reporting Typos or Other Problems
+        </title>
+    <p>
+            Thank you for your help in improving this text. If you find a typo or other problem, 
+            you can visit the <url href="https://github.com/pearcej/cpp4python/issues">Github issue tracker</url> giving as much information as needed to understand the problem. 
+            If you include the URL of the page where the problem occurred, this is especially helpful. 
+            Alternatively, you can contact the author <url href="https://www.berea.edu/csc/faculty-and-staff/dr-jan-pearce/">Jan Pearce</url> via email.
+        </p>
+  </preface>
+  <colophon xml:id="colophon">
+    <title>
+            Colophon
+        </title>
+    <image source="cc.jpg" width="30%">
+      <description>Creative Commons logo </description>
+    </image>
+    <copyright>
+      <year>2019</year>
+      <holder>Janice L. Pearce, Bradley N. Miller</holder>
+      <shortlicense>C++ for Python Programmers by Janice L. Pearce and Bradley N. Miller is licensed under a 
+             <url href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. </url>
+            </shortlicense>
+    </copyright>
+  </colophon>
+</frontmatter>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<section xml:id="input_and_-output_member-functions-and-precision">
+  <title>Member Functions and Precision</title>
+  <p>A function that is associated with a certain type of object is called a <term>member function</term> of that object. You have already used member functions <c>setf(...)</c> and <c>precision(...)</c> for formatting our output streams using <c>cout</c>. These functions are included briefly below:</p>
+  <pre>// Use cout's member function "set flags", called setf
+// The argument here means to use a fixed point rather than scientific notation
+cout.setf(ios::fixed);
+
+// Use cout's setf function again, but this time
+// The argument tells cout to show the decimal point
+cout.setf(ios::showpoint);
+
+// Use cout's member function, called Precision
+// The argument indicated to display 2 digits of precision
+cout.precision(2);</pre>
+</section>

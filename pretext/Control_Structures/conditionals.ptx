@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<section xml:id="control_-structures_conditionals">
+  <title>Conditionals</title>
+  <p>Conditional statements in Python and C++ are very similar.</p>
+  <subsection xml:id="control_-structures_simple-if">
+    <title>Simple if</title>
+    <p>In Python, we write a simple if statement in the following way:</p>
+    <pre>if condition:
+    statement1
+    statement2
+    ...</pre>
+    <p>In C++ this same pattern is simply written as:</p>
+    <pre>if (condition) {
+    statement1
+    statement2
+    ...
+}</pre>
+    <p>Once again you can see that in C++ the curly braces define a block
+                rather than indentation. In C++ the parenthesis around the condition
+                are required because <c>if</c> is technically a function that
+                evaluates to <c>true</c> or <c>false</c>.</p>
+  </subsection>
+  <subsection xml:id="control_-structures_if-else">
+    <title>if else</title>
+    <p>The if-else statement in Python looks like this:</p>
+    <pre>if condition:
+    statement1
+    statement2
+    ...
+else:
+    statement1
+    statement2
+    ...</pre>
+    <p>In C++ this is written as:</p>
+    <pre>if (condition) {
+    statement1
+    statement2
+    ...
+}
+else {
+    statement1
+    statement2
+    ...
+}</pre>
+  </subsection>
+  <subsection xml:id="control_-structures_elif">
+    <title>elif</title>
+    <p>C++ does not have an elif pattern like Python. In C++ you can get the
+                functionality of an elif statement by nesting if and else. Here is a
+                simple example in both Python and C++.</p>
+    <program xml:id="pyelif" interactive="activecode" language="python">
+      <input>
+# demonstrates if,elif, and else statements in python
+def main():
+    grade = 85
+
+    if (grade &lt; 60):
+        print('F')
+    elif (grade &lt; 70):
+        print('D')
+    elif grade &lt; 80:
+        print('C')
+    elif grade &lt; 90:
+        print('B')
+    else:
+        print('A')
+
+main()
+        </input>
+    </program>
+    <p>In C++ we have a couple of ways to write this</p>
+    <program xml:id="cppelif" interactive="activecode" language="cpp">
+      <input>
+ // Shows how to use conditional statements
+ #include &lt;iostream&gt;
+ using namespace std;
+
+ int main() {
+
+     int grade = 85;
+
+     if (grade &lt; 60) {
+       cout&lt;&lt;'F'&lt;&lt; endl;
+     }
+     else {      /* if, elif, and else statement can be used
+                     inside of themselves to allow for sub options */
+         if (grade &lt; 70) {
+             cout&lt;&lt;'D'&lt;&lt; endl;
+         }
+         else {
+             if (grade &lt; 80) {
+                 cout&lt;&lt;'C'&lt;&lt; endl;
+             }
+             else {
+                 if (grade &lt; 90) {
+                     cout&lt;&lt;'B'&lt;&lt; endl;
+                 }
+                 else {
+                     cout&lt;&lt;'A'&lt;&lt; endl;
+                 }
+             }
+         }
+     }
+     return 0;
+ }
+        </input>
+    </program>
+    <p>We can get closer to the look of the elif statement in C++ by
+                taking advantage of the
+                C++ rule that a single statement does not need to be enclosed in curly
+                braces. Since the if is the only statement used in each else we can get
+                away with the following.</p>
+    <program xml:id="cppelif2" interactive="activecode" language="cpp">
+      <input>
+ //Shows how to put conditional statements together,
+ //specfically putting "else if" after an "if" statement.
+ #include &lt;iostream&gt;
+ using namespace std;
+
+ int main() {
+
+     int grade = 85;
+
+     if (grade &lt; 60) {
+         cout&lt;&lt;'F'&lt;&lt;endl;
+     }
+     else if (grade &lt; 70) {
+         cout&lt;&lt;'D'&lt;&lt;endl;
+     }
+     else if (grade &lt; 80) {
+         cout&lt;&lt;'C'&lt;&lt;endl;
+     }
+     else if (grade &lt; 90) {
+         cout&lt;&lt;'B'&lt;&lt;endl;
+     }
+     else  cout&lt;&lt;'A'&lt;&lt;endl;
+
+     return 0;
+ }
+        </input>
+    </program>
+    <subsubsection xml:id="control_-structures-conditionals_check-yourself">
+      <title>Check Yourself</title>
+      <exercise label="mc_cpp_elsecond">
+        <statement>
+          <p>Q-4: T/F: It is necessary to have an else statement after an if statement. (Hint: Test it out in the code above.)</p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>True</p>
+            </statement>
+            <feedback>
+              <p>Not quite, try modifying the code above to test it out.</p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>False</p>
+            </statement>
+            <feedback>
+              <p>Good job!</p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+    </subsubsection>
+  </subsection>
+  <subsection xml:id="control_-structures_switch">
+    <title>switch</title>
+    <p>C++ also supports a <c>switch</c> statement that acts something like the
+                elif statement of Python under certain conditions because the statement
+                takes cases and checks the validity of the case against the code.
+                It uses cases instead of conditions and the case must be based on
+                integers or a user-defined data type called an enumerated constant.</p>
+    <p>To write the grade
+                program using a switch statement we would use the following:</p>
+    <program xml:id="cppswitch" interactive="activecode" language="cpp">
+      <input>
+ // Shows how to use a Switch statement.
+
+ #include &lt;iostream&gt;
+ using namespace std;
+
+ int main() {
+
+     int grade = 85;
+
+     int tempgrade = grade/10;
+     switch(tempgrade) {  /*switch cases allow for different options based on
+                         the value of temp grade similar to if statements*/
+     case 10:
+     case 9:
+         cout &lt;&lt; "The grade is A" &lt;&lt; endl;
+         break;
+     case 8:
+         cout &lt;&lt; "The grade is B" &lt;&lt; endl;
+         break;
+     case 7:
+         cout &lt;&lt; "The grade is C" &lt;&lt; endl;
+         break;
+     case 6:
+         cout &lt;&lt; "The grade is D" &lt;&lt; endl;
+         break;
+     default:
+         cout &lt;&lt; "The grade is F" &lt;&lt; endl;
+     }
+
+     return 0;
+ }
+        </input>
+    </program>
+    <p>Frankly, the <c>switch</c> statement is not used very often.
+                It is not as powerful as the <c>else if</c> model
+                because the switch variable can only be compared for equality with an
+                integer or something called an enumerated constant.
+                Second it is very easy to forget to put
+                in the <c>break</c> statement. Note above how cases 10 and 9 are coded together.
+                If the break statement is left out then then
+                the next alternative will be automatically executed.
+                For example if the
+                grade was 95 and the <c>break</c> was omitted from the <c>case 9:</c>
+                alternative then the program would print out both (A and B.)
+                So, you might want to just avoid it and use if&#x2026;</p>
+    <subsubsection xml:id="control_-structures_id1">
+      <title>Check Yourself</title>
+      <exercise label="mc_cpp_ifcond">
+        <statement>
+          <p>Q-6: When indicating the condition for a C++ if statement, what symbols are used?</p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>{ }</p>
+            </statement>
+            <feedback>
+              <p>No. Try again.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>[ ]</p>
+            </statement>
+            <feedback>
+              <p>No. Try again.</p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>( )</p>
+            </statement>
+            <feedback>
+              <p>Right!</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>Any set of matching braces may be used.</p>
+            </statement>
+            <feedback>
+              <p>No. Try again.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>none of the above</p>
+            </statement>
+            <feedback>
+              <p>One of the above is indeed correct.</p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+      <exercise label="mc_cpp_switch">
+        <statement>
+          <p>Q-7: When using a switch, what prevents all the cases from passing as correct?</p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>Ending statements with ;</p>
+            </statement>
+            <feedback>
+              <p>No. This is always needed.</p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>Using a break statement</p>
+            </statement>
+            <feedback>
+              <p>Good job!</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>Enclosing each cases with { }</p>
+            </statement>
+            <feedback>
+              <p>No. Try again.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>Setting a default case</p>
+            </statement>
+            <feedback>
+              <p>No. This is a good idea, but it will not help.</p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+      <exercise label="mc_cpp_and">
+        <statement>
+          <p>Q-8: What symbol is used to indicate the <q>and</q> in C++ such as in a compound condition?</p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>||</p>
+            </statement>
+            <feedback>
+              <p>No, this means "or".</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>and</p>
+            </statement>
+            <feedback>
+              <p>No, this is Python.</p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>!</p>
+            </statement>
+            <feedback>
+              <p>No, this means "not"</p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>&amp;&amp;</p>
+            </statement>
+            <feedback>
+              <p>Very good!</p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+    </subsubsection>
+  </subsection>
+</section>

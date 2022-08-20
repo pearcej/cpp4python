@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-10T16:19:17-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Pointers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="C++ For Python Programmers">
+<meta property="book:author" content="Jan L. Pearce">
+<meta property="book:author" content="Brad Miller">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body id="httlacs" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="cpp4python.html"><span class="title">C++ For Python Programmers:</span> <span class="subtitle">The PreTeXt Interactive Edition</span></a></h1>
+<p class="byline">Jan L. Pearce, Brad Miller</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="_character-data.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="atomicdata_atomicdata_atomic-data_summary.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="_character-data.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a class="next-button button toolbar-item" href="atomicdata_atomicdata_atomic-data_summary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Reporting Typos or Other Problems</a></li>
+<li><a href="colophon.html" data-scroll="colophon" class="internal">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to C++ for Python Programmers</span></a><ul>
+<li><a href="intro-cpp_welcome-to-c-for-python-programmers.html" data-scroll="intro-cpp_welcome-to-c-for-python-programmers" class="internal">Welcome to <em class="emphasis">C++ for Python Programmers</em></a></li>
+<li><a href="introcpp_introcpp_intro-cpp_introduction.html" data-scroll="introcpp_introcpp_intro-cpp_introduction" class="internal">Introduction</a></li>
+<li><a href="intro-cpp_why-learn-another-programming-language.html" data-scroll="intro-cpp_why-learn-another-programming-language" class="internal">Why Learn Another Programming Language?</a></li>
+<li><a href="intro-cpp_let-s-look-at-a-c-program.html" data-scroll="intro-cpp_let-s-look-at-a-c-program" class="internal">Let's look at a C++ program</a></li>
+<li><a href="introcpp_introcpp_intro-cpp_glossary.html" data-scroll="introcpp_introcpp_intro-cpp_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Atomic C++ Data Types</span></a><ul>
+<li><a href="atomic-data_using-data-in-c.html" data-scroll="atomic-data_using-data-in-c" class="internal">Using Data in C++</a></li>
+<li><a href="atomic-data_numeric-data.html" data-scroll="atomic-data_numeric-data" class="internal">Numeric Data</a></li>
+<li><a href="atomic-data_boolean-data.html" data-scroll="atomic-data_boolean-data" class="internal">Boolean Data</a></li>
+<li><a href="_character-data.html" data-scroll="_character-data" class="internal">Character Data</a></li>
+<li><a href="atomic-data_pointers.html" data-scroll="atomic-data_pointers" class="active">Pointers</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_summary.html" data-scroll="atomicdata_atomicdata_atomic-data_summary" class="internal">Summary</a></li>
+<li><a href="atomicdata_atomicdata_atomic-data_glossary.html" data-scroll="atomicdata_atomicdata_atomic-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">Control Structures</span></a><ul>
+<li><a href="control_-structures_conditionals.html" data-scroll="control_-structures_conditionals" class="internal">Conditionals</a></li>
+<li><a href="control_-structures_while-loops.html" data-scroll="control_-structures_while-loops" class="internal">While Loops</a></li>
+<li><a href="control_-structures_for-loops.html" data-scroll="control_-structures_for-loops" class="internal">For Loops</a></li>
+<li><a href="control_structures_control_structures_control_-structures_summary.html" data-scroll="control_structures_control_structures_control_-structures_summary" class="internal">Summary</a></li>
+<li><a href="control_structures_control_structures_control_-structures_glossary.html" data-scroll="control_structures_control_structures_control_-structures_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4" class="internal"><span class="codenumber">4</span> <span class="title">Functions</span></a><ul>
+<li><a href="functions_defining-c-functions.html" data-scroll="functions_defining-c-functions" class="internal">Defining C++ Functions</a></li>
+<li><a href="functions_parameter-passing-by-value-versus-by-reference.html" data-scroll="functions_parameter-passing-by-value-versus-by-reference" class="internal">Parameter Passing: by Value versus by Reference</a></li>
+<li><a href="functions_arrays-as-parameters-in-functions.html" data-scroll="functions_arrays-as-parameters-in-functions" class="internal">Arrays as Parameters in Functions</a></li>
+<li><a href="functions_function-overloading.html" data-scroll="functions_function-overloading" class="internal">Function Overloading</a></li>
+<li><a href="functions_functions_functions_summary.html" data-scroll="functions_functions_functions_summary" class="internal">Summary</a></li>
+<li><a href="functions_functions_functions_glossary.html" data-scroll="functions_functions_functions_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="codenumber">5</span> <span class="title">Collection Data Types</span></a><ul>
+<li><a href="collection-data_collections.html" data-scroll="collection-data_collections" class="internal">Collections</a></li>
+<li><a href="collection-data_arrays.html" data-scroll="collection-data_arrays" class="internal">Arrays</a></li>
+<li><a href="collection-data_vectors.html" data-scroll="collection-data_vectors" class="internal">Vectors</a></li>
+<li><a href="collection-data_strings.html" data-scroll="collection-data_strings" class="internal">Strings</a></li>
+<li><a href="collection-data_hash-tables.html" data-scroll="collection-data_hash-tables" class="internal">Hash Tables</a></li>
+<li><a href="collection-data_unordered-sets.html" data-scroll="collection-data_unordered-sets" class="internal">Unordered Sets</a></li>
+<li><a href="collectiondata_collectiondata_collection-data_glossary.html" data-scroll="collectiondata_collectiondata_collection-data_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-6.html" data-scroll="chapter-6" class="internal"><span class="codenumber">6</span> <span class="title">Input and Output</span></a><ul>
+<li><a href="input_and_-output_file-handling.html" data-scroll="input_and_-output_file-handling" class="internal">File Handling</a></li>
+<li><a href="input_and_-output_member-functions-and-precision.html" data-scroll="input_and_-output_member-functions-and-precision" class="internal">Member Functions and Precision</a></li>
+<li><a href="input_and_-output_file-operations.html" data-scroll="input_and_-output_file-operations" class="internal">File Operations</a></li>
+<li><a href="input_and_-output_dealing-with-i-o-failures.html" data-scroll="input_and_-output_dealing-with-i-o-failures" class="internal">Dealing with I/O Failures</a></li>
+<li><a href="input_and_-output_reading-and-writing-with-file-streams.html" data-scroll="input_and_-output_reading-and-writing-with-file-streams" class="internal">Reading and Writing with File Streams</a></li>
+<li><a href="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof.html" data-scroll="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof" class="internal">The End-Of-File (EOF) for Systems that Implement eof()</a></li>
+<li><a href="input_and_-output_passing-streams-as-parameters.html" data-scroll="input_and_-output_passing-streams-as-parameters" class="internal">Passing Streams as Parameters</a></li>
+<li><a href="input_and_-output_file-names-and-c-strings.html" data-scroll="input_and_-output_file-names-and-c-strings" class="internal">File Names and C-Strings</a></li>
+<li><a href="input_and_-output_putting-it-all-together.html" data-scroll="input_and_-output_putting-it-all-together" class="internal">Putting it all Together</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_summary.html" data-scroll="input_and_output_input_and_output_input_and_-output_summary" class="internal">Summary</a></li>
+<li><a href="input_and_output_input_and_output_input_and_-output_glossary.html" data-scroll="input_and_output_input_and_output_input_and_-output_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-7.html" data-scroll="chapter-7" class="internal"><span class="codenumber">7</span> <span class="title">Exception Handling</span></a><ul>
+<li><a href="exception_-handling_exception-handling.html" data-scroll="exception_-handling_exception-handling" class="internal">Exception Handling</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_summary.html" data-scroll="exception_handling_exception_handling_exception_-handling_summary" class="internal">Summary</a></li>
+<li><a href="exception_handling_exception_handling_exception_-handling_glossary.html" data-scroll="exception_handling_exception_handling_exception_-handling_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-8.html" data-scroll="chapter-8" class="internal"><span class="codenumber">8</span> <span class="title">Graphics in C++</span></a><ul>
+<li><a href="turtles_turtles_turtles_introduction.html" data-scroll="turtles_turtles_turtles_introduction" class="internal">Introduction</a></li>
+<li><a href="turtles_turtle-turtlescreen.html" data-scroll="turtles_turtle-turtlescreen" class="internal">Turtle &amp; TurtleScreen</a></li>
+<li><a href="turtles_geometry-shapes-and-stamps.html" data-scroll="turtles_geometry-shapes-and-stamps" class="internal">Geometry, Shapes, and Stamps</a></li>
+<li><a href="turtles_advanced-features.html" data-scroll="turtles_advanced-features" class="internal">Advanced Features</a></li>
+<li><a href="turtles_python-s-turtle-vs-c-turtle.html" data-scroll="turtles_python-s-turtle-vs-c-turtle" class="internal">Python's turtle vs C-Turtle</a></li>
+<li><a href="turtles_practical-application-tessellation.html" data-scroll="turtles_practical-application-tessellation" class="internal">Practical Application - Tessellation</a></li>
+<li><a href="turtles_turtles_turtles_summary.html" data-scroll="turtles_turtles_turtles_summary" class="internal">Summary</a></li>
+<li><a href="turtles_check-yourself.html" data-scroll="turtles_check-yourself" class="internal">Check Yourself</a></li>
+<li><a href="turtles_turtles_turtles_glossary.html" data-scroll="turtles_turtles_turtles_glossary" class="internal">Glossary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="atomic-data_pointers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Pointers</span>
+</h2>
+<p id="p-143">A C++ <dfn class="terminology">pointer</dfn> is a variable that stores a memory address and can be used to indirectly access data stored at that memory location.</p>
+<p id="p-144">We know that variables in a computer program are used to label data with a descriptive identifier so that the data can be accessed and used by that computer program.</p>
+<p id="p-145">Let's look at some examples of storing an integer in Python and C++.</p>
+<p id="p-146">In Python every single thing is stored as an object. Hence, a Python variable is actually a reference to an object that is stored in memory. Hence, each Python variable requires two memory locations: one to store the reference, and the other to store the variable value itself in an object.</p>
+<p id="p-147">In C++ the value of each variable is stored directly in memory without the need for either a reference or an object. This makes access faster, but it is one of the reasons we need to declare each variable because different types take differing amounts of space in memory!</p>
+<p id="p-148">The following code declares a variable called <em class="emphasis">varN</em> that has in it a value of 100:</p>
+<pre class="code-block tex2jax_ignore">// Python reference for a single integer value
+varN = 100
+</pre>
+<figure class="figure figure-like" id="fig-py-reference"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/AtomicData/Figures/python_reference.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.1<span class="period">.</span></span><span class="space"> </span>Figure 2.1: Python reference</figcaption></figure><pre class="code-block tex2jax_ignore">// C++ variable declaration and assignment of an integer value
+int varN = 100;
+</pre>
+<p id="p-149">In C++ the results of running this code will look like the diagram below:</p>
+<figure class="figure figure-like" id="fig-cpp-reference"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/AtomicData/Figures/cpp_var.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.2<span class="period">.</span></span><span class="space"> </span>Figure 2.2: C++ variable</figcaption></figure><p id="p-150">In each case, when we want to output the value to the console, we use the variable name to do so.</p>
+<p id="p-151">But, we can also identify the memory location of the variable by its address. In both Python and C++, this address may change each time the program is run. In C++, the address will always look odd because it will be the actual memory address written in a hexadecimal code which is a base 16 code like 0x7ffd93f25244. In Python it is implementation dependent, it is sometimes a hexadecimal code and sometimes just a count or another way to reference the address.</p>
+<p id="p-152">In Python we use <code class="code-inline tex2jax_ignore">id</code> to reference the address, while in C++ we use the <em class="emphasis">address-of operator</em>, <code class="code-inline tex2jax_ignore">&amp;</code>.</p>
+<article class="exercise exercise-like" id="exercise-13"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span>
+</h3>
+<pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+
+// outputs the value of a variable
+// as well as the memory address in C++.
+int main(){
+    int varN = 101;
+    cout &lt;&lt; varN &lt;&lt; endl;
+    cout &lt;&lt; &amp;varN &lt;&lt; endl; //outputs the memory address of variable varN
+    return 0;
+}
+</code></pre>
+<div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="address_py"><textarea data-lang="python" data-timelimit="25000" data-audio="" data-coach="true" style="visibility: hidden;" id="address_py_editor" data-question_label="" data-codelens="true"># Outputs the value &amp; memory address of
+# variable titled varN.
+def main():
+    varN = 101;
+    print(varN)
+    print(id(varN)) # ID function returns the memory address in Python.
+
+main()
+</textarea></div></div></div></article><p id="p-153">In both Python and C++, variables are stored in memory locations which are dependent upon the run itself. If you repeatedly run the above code in either C++ or Python, you may see the location change.</p>
+<p id="p-154">As suggested above, in Python, it is impossible to store a variable directly. Instead, we must use a variable name and a reference to the data object. (Hence the arrow in the image.) In C++, variables store values directly, because they are faster to reference.</p>
+<p id="p-155">References are slower, but they are sometimes useful. If in C++, we want to create a analogous reference to a memory location, we must use a special data type called a <dfn class="terminology">pointer</dfn>.</p>
+<section class="subsection" id="atomic-data_pointer-syntax"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.1</span> <span class="title">Pointer Syntax</span>
+</h3>
+<p id="p-156">When declaring a pointer in C++ that will “point” to the memory address of some data type, you will use the same rules of declaring variables and data types. The key difference is that there must be an asterisk (*) between the data type and the identifier.</p>
+<pre class="code-block tex2jax_ignore">variableType *identifier; // syntax to declare a C++ pointer
+int *ptrx; // example of a C++ pointer to an integer
+</pre>
+<p id="p-157">White space in C++ generally does not matter, so the following pointer declarations are identical:</p>
+<pre class="code-block tex2jax_ignore">SOMETYPE *variablename; // preferable
+SOMETYPE * variablename;
+SOMETYPE* variablename;
+</pre>
+<p id="p-158">However, the first declaration is preferable because it is clearer to the programmer that the variable is in fact a pointer because the asterisk is closer to the variable name.</p>
+<section class="subsubsection" id="atomic-data_the-address-of-operator"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.5.1.1</span> <span class="title">The address-of operator, <code class="code-inline tex2jax_ignore">&amp;</code></span>
+</h4>
+<p id="p-159">Now that we know how to declare pointers, how do we give them the address of where the value is going to be stored? One way to do this is to have a pointer refer to another variable by using the address-of operator, which is denoted by the ampersand symbol, <code class="code-inline tex2jax_ignore">&amp;</code>. The address-of operator <code class="code-inline tex2jax_ignore">&amp;</code> does exactly what it indicates, variableType varN;  // a variable to hold the value namely it returns the address.</p>
+<p id="p-160">The syntax is shown below, where varN stores the value, and ptrN stores the address of where varN is located:</p>
+<pre class="code-block tex2jax_ignore">variableType *ptrN = &amp;varN;  // a variable pointing to the address of varN
+</pre>
+<p id="p-161">Keep in mind that when declaring a C++ pointer, the pointer needs to reference the same type as the variable or constant to which it points.</p>
+<p id="p-162">Expanding on the example above where varN has the value of 9.</p>
+<pre class="code-block tex2jax_ignore">//variable declaration for a single integer value
+int varN = 9;
+int *ptrN;
+ptrN = &amp;varN;
+</pre>
+<p id="p-163">The results of running this C++ code will look like the diagram below.</p>
+<figure class="figure figure-like" id="id3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/AtomicData/Figures/new_new_point2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.4<span class="period">.</span></span><span class="space"> </span>Figure 2.3: View into memory with pointers</figcaption></figure></section></section><section class="subsection" id="atomic-data_accessing-values-from-pointers"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.2</span> <span class="title">Accessing Values from Pointers</span>
+</h3>
+<p id="p-164">Once you have a C++ pointer, you use the asterisk before the pointer variable, to <em class="emphasis">dereference</em> the pointer, which means go to the location pointed at by the 3.</p>
+<pre class="code-block tex2jax_ignore">In other words, varN and *ptrN (note the asterisk in front!) reference the same
+value in the code above.
+</pre>
+<p id="p-165">Let's extend the example above to output the value of a variable and its address in memory:</p>
+<blockquote class="blockquote" id="blockquote-4"><pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+// demonstrates what happens when you dereference a pointer
+int main( ) {
+    int varN = 9;
+    int *ptrN = &amp;varN; // ptrN points to varN address
+
+    cout &lt;&lt; "varN value: " &lt;&lt; varN &lt;&lt; endl;
+    cout &lt;&lt; "varN location: " &lt;&lt; ptrN &lt;&lt; endl;
+    cout &lt;&lt; "dereference ptrN: " &lt;&lt; *ptrN &lt;&lt; endl;
+
+
+    return 0;
+}
+</code></pre></blockquote>
+<article class="exercise exercise-like" id="mc_pntrhlp"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="mc_pntrhlp" data-multipleanswers="false">
+<p id="p-166">Q-4: If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
+<li data-component="answer" id="mc_pntrhlp_opt_a"><p id="p-167">varPntr: 9</p></li>
+<li data-component="feedback" id="mc_pntrhlp_opt_a"><p id="p-168">Not quite, the variable varN no longer equals 100 past line 7!</p></li>
+<li data-component="answer" id="mc_pntrhlp_opt_b" data-correct=""><p id="p-169">varPntr: 50</p></li>
+<li data-component="feedback" id="mc_pntrhlp_opt_b"><p id="p-170">Right!</p></li>
+<li data-component="answer" id="mc_pntrhlp_opt_c"><p id="p-171">varPntr: 150</p></li>
+<li data-component="feedback" id="mc_pntrhlp_opt_c"><p id="p-172">No, the values do not add together!</p></li>
+<li data-component="answer" id="mc_pntrhlp_opt_d"><p id="p-173">0x7ffeb9ce053c</p></li>
+<li data-component="feedback" id="mc_pntrhlp_opt_d"><p id="p-174">We are dereferencing the pointer, so you would not get the address of varN. Try again!</p></li>
+<li data-component="answer" id="mc_pntrhlp_opt_e"><p id="p-175">none of the above</p></li>
+<li data-component="feedback" id="mc_pntrhlp_opt_e"><p id="p-176">One of the above is indeed correct.</p></li>
+</ul></div></div></article><p id="p-177">Compiling and running the above code will have the program output the value in varN, what is in ptrN (the memory address of varN), and what value is located at that memory location.</p>
+<p id="p-178">The second output sentence is the address of varN, which would most likely be different if you run the program on your machine.</p>
+<p id="p-179">WARNING: What happens if you forget the ampersand when assigning a value to a pointer and have the following instructions instead?</p>
+<blockquote class="blockquote" id="blockquote-5"><pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main( ) {
+    int varN = 100;
+    int *ptrN = varN; // Note no ampersand,
+        // ptrN now refers to memory position 100,
+        // whatever happens to be there!
+        // You might get an error or you might not!
+
+     cout &lt;&lt; "varN value: " &lt;&lt; varN &lt;&lt; endl;
+     cout &lt;&lt; "ptrN location: " &lt;&lt; ptrN &lt;&lt; endl;
+     cout &lt;&lt; "ptrN points to varN: " &lt;&lt; endl;
+     cout &lt;&lt; "dereference ptrN: " &lt;&lt; *ptrN &lt;&lt; endl;
+
+     return 0;
+}
+</code></pre></blockquote>
+<p id="p-180"><dfn class="terminology">This is BAD, BAD, BAD!</dfn></p>
+<figure class="figure figure-like" id="id4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/AtomicData/Figures/new_point_broken.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.6<span class="period">.</span></span><span class="space"> </span>Figure 2.4: dangling pointer reference</figcaption></figure><p id="p-181">If your compiler does not catch that error (the one for this class may), the first <code class="code-inline tex2jax_ignore">cout</code> instruction outputs</p>
+<pre class="code-block tex2jax_ignore">After changing *ptrN, varN now has: 50
+</pre>
+<p id="p-182">which is expected because you changed where ptrN is pointing to and NOT the contents of where it is pointing.</p>
+<p id="p-183">The second <code class="code-inline tex2jax_ignore">cout</code> instruction is a disaster because (1) You don't know what is stored in location 100 in memory, and (2) that location is outside of your segment (area in memory reserved for your program), so the operating system will jump in with a message about a “segmentation fault”. Although such an error message looks bad, a “seg fault” is in fact a helpful error because unlike the elusive logical errors, the reason is fairly localized.</p></section><section class="subsection" id="atomic-data_the-null-pointer"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.5.3</span> <span class="title">The null pointer</span>
+</h3>
+<p id="p-184">Like <code class="code-inline tex2jax_ignore">None</code> in Python, the null pointer (<code class="code-inline tex2jax_ignore">nullptr</code>) in C++ points to nothing.  Older editions of C++ also used <code class="code-inline tex2jax_ignore">NULL</code> (all caps) or 0, but we will use the keyword <code class="code-inline tex2jax_ignore">nullptr</code> because the compiler can do better error handling with the keyword.  The null pointer is often used in conditions and/or in logical operations.</p>
+<p id="p-185">The following example demonstrates how the null pointer works. The variable ptrx initially has the address of x when it is declared. On the first iteration of the loop, it is assigned the value of <code class="code-inline tex2jax_ignore">nullptr</code>, which evaluates to a false value; thereby ending the loop:</p>
+<blockquote class="blockquote" id="blockquote-6"><pre class="program"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+//Shows the use of a Null pointer to represent "nothing".
+int main( ) {
+    int x = 12345;
+    int *ptrx = &amp;x;
+
+    while (ptrx) {
+        cout &lt;&lt; "Pointer ptrx points to " &lt;&lt; &amp;ptrx &lt;&lt; endl;
+        ptrx = nullptr;
+    }
+
+    cout &lt;&lt; "Pointer ptrx points to nothing!\n";
+}
+</code></pre></blockquote>
+<p id="p-186">Helpful Tip: The null pointer becomes very useful when you must test the state of a pointer, such as whether the assignment to an address is valid or not.</p></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

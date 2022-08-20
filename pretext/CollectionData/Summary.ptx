@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<section xml:id="collectiondata_collection-data_summary">
+  <title>Summary</title>
+  <p>
+    <ol label="1">
+      <li>
+        <p>A statically allocated C++ array is an ordered collection of one or more C++ data values of identical type stored in contiguous memory.</p>
+      </li>
+      <li>
+        <p>A vector is a dynamically allocated array with many useful methods. It is more similar to the Python list than the array.</p>
+      </li>
+      <li>
+        <p>C++ strings are a sequential collection of zero or more characters. They are very similar to Python strings.</p>
+      </li>
+      <li>
+        <p>A hash table is used to store keys-value pairs. It applies a related hash function to the key in order to compute the location of the associated value. Look-up is typically very fast.</p>
+      </li>
+      <li>
+        <p>A set is an unordered collection of unique values.</p>
+      </li>
+    </ol>
+  </p>
+</section>

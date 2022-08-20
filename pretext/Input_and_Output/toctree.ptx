@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <title>Input and Output</title>
+  <xi:include href="./FileHandling.ptx"/>
+  <xi:include href="./MemberFunctionAndPrecision.ptx"/>
+  <xi:include href="./FileOperations.ptx"/>
+  <xi:include href="./DealingWithIOFailures.ptx"/>
+  <xi:include href="./ReadingAndWritingWithFileStream.ptx"/>
+  <xi:include href="./TheEOF.ptx"/>
+  <xi:include href="./StreamsAsParameter.ptx"/>
+  <xi:include href="./FileNameAndCString.ptx"/>
+  <xi:include href="./PuttingItAllTogether.ptx"/>
+  <xi:include href="./Summary.ptx"/>
+  <xi:include href="./glossary.ptx"/>
+</chapter>
