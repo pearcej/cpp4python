@@ -39,7 +39,7 @@
       <p><idx>word</idx>unit of data used by a particular processor design.</p>
     </gi>
   </glossary>
-  <subsection xml:id="collection-data_matching">
+  <subsection xml:id="collection-data-glossary_matching">
     <title>Matching</title>
     <exercise label="matching_ch5">
       <statement>

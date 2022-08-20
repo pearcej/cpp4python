@@ -48,11 +48,11 @@ main()
     </TabNode>
   </exercise>
   <p>Boolean data objects are also used as results for comparison operators
-            such as equality (==) and greater than (<math>&gt;</math>). In addition,
+            such as equality (==) and greater than (<m>&gt;</m>). In addition,
             relational operators and logical operators can be combined together to
             form complex logical questions. <xref ref="atomic-data_atomic-data_tab-relational"/> shows the relational
             and logical operators with examples shown in the session that follows.</p>
-  <table xml:id="atomic-data_id1">
+  <table xml:id="atomic-data_atomic-data_tab-relational">
     <tabular>
       <title>
         <term>Table 1: C++ Relational and Logical Operators</term>
@@ -73,7 +73,7 @@ main()
                             less than
                         </cell>
         <cell>
-          <math>&lt;</math>
+          <m>&lt;</m>
         </cell>
         <cell>
                             Less than operator
@@ -84,7 +84,7 @@ main()
                             greater than
                         </cell>
         <cell>
-          <math>&gt;</math>
+          <m>&gt;</m>
         </cell>
         <cell>
                             Greater than operator
@@ -95,7 +95,7 @@ main()
                             less than or equal
                         </cell>
         <cell>
-          <math>&lt;=</math>
+          <m>&lt;=</m>
         </cell>
         <cell>
                             Less than or equal to operator
@@ -106,7 +106,7 @@ main()
                             greater than or equal
                         </cell>
         <cell>
-          <math>&gt;=</math>
+          <m>&gt;=</m>
         </cell>
         <cell>
                             Greater than or equal to operator
@@ -117,7 +117,7 @@ main()
                             equal
                         </cell>
         <cell>
-          <math>==</math>
+          <m>==</m>
         </cell>
         <cell>
                             Equality operator
@@ -128,7 +128,7 @@ main()
                             not equal
                         </cell>
         <cell>
-          <math>!=</math>
+          <m>!=</m>
         </cell>
         <cell>
                             Not equal operator
@@ -139,7 +139,7 @@ main()
                             logical and
                         </cell>
         <cell>
-          <math>&amp;&amp;</math>
+          <m>\&amp;\&amp;</m>
         </cell>
         <cell>
                             Both operands true for result to be true
@@ -150,7 +150,7 @@ main()
                             logical or
                         </cell>
         <cell>
-          <math>||</math>
+          <m>||</m>
         </cell>
         <cell>
                             One or the other operand is true for the result to be true
@@ -161,7 +161,7 @@ main()
                             logical not
                         </cell>
         <cell>
-          <math>!</math>
+          <m>!</m>
         </cell>
         <cell>
                             Negates the truth value, false becomes true, true becomes false

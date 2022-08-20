@@ -180,7 +180,7 @@ int main() {
         <p>Then, the value at that index in the array is printed to the console.</p>
       </li>
     </dl>
-    <subsubsection xml:id="collection-data_matching">
+    <subsubsection xml:id="collection-data-vectors_matching">
       <title>Matching</title>
       <exercise label="matching_vectors">
         <statement>
