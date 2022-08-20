@@ -33,5 +33,5 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
   <!-- Added operator \aut - TWJ 4/6/2013  -->
   <!-- Added operator \Hom - TWJ 8/19/2010 -->
   <!-- this is the default, but supresses a warning -->
-  <cross-references text="type-global"/>
+  <cross-references text="title"/>
 </docinfo>

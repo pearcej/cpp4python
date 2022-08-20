@@ -8,7 +8,7 @@
             located at equally spaced addresses in contiguous computer memory.</p>
   <p>NOTE: A C++ <term>array</term> is always stored in contiguous memory. C++ arrays can be allocated in two different ways:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p><em>statically allocated</em> in which the array size is fixed at compile-time and cannot change</p>
       </li>

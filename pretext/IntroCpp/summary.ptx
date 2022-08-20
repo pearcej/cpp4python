@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="intro-cpp_summary">
+<section xml:id="introcpp_intro-cpp_summary">
   <title>Summary</title>
   <p>Now that we have run our &#x201C;hello world&#x201D; program, lets go back and look at
             it carefully to see what we can learn about the C++ language.</p>
@@ -20,7 +20,7 @@ int main(){         // main() must exist &amp; return an int
   </program>
   <p>This simple example illustrates a few very important rules:</p>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.</p>
       </li>

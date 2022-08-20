@@ -23,7 +23,7 @@ char filename[16];</pre>
     <li>
       <title>Warnings:</title>
       <p>
-        <ol label="1">
+        <ol marker="1">
           <li>
             <p>The number of characters for a c-string must be one greater than the number of actual characters!</p>
           </li>

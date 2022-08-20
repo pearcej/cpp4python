@@ -14,7 +14,7 @@
             a variable as shown below.</p>
   <pre>set&lt;int&gt; mySet = {3, 6, 4, 78, 10}</pre>
   <p>Unordered sets support a number of methods that should be familiar to those who
-            have worked with sets in a mathematics setting. <xref ref="collection-data_collection-data_tab-setmethods"/>
+            have worked with sets in a mathematics setting. <xref ref="collection-data_collection-data_collection-data_tab-setmethods"/>
             provides a summary. Examples of their use follow.</p>
   <table xml:id="collection-data_collection-data_tab-setmethods">
     <tabular>

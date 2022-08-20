@@ -127,7 +127,7 @@ main()
       </program>
     </TabNode>
   </exercise>
-  <p>Hash Tables have both methods and operators. <xref ref="collection-data_collection-data_tab-hashopers"/>
+  <p>Hash Tables have both methods and operators. <xref ref="collection-data_collection-data_collection-data_tab-hashopers"/>
             describes them, and the session shows them in action.</p>
   <table xml:id="collection-data_collection-data_tab-hashopers">
     <tabular>

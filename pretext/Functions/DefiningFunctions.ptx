@@ -83,6 +83,7 @@ int main() {
             <xref ref="functions_lst-root" text="title"/> also shows the use of the // characters as a comment
             marker. Any characters that follow the // on a line are ignored.</p>
   <p xml:id="functions_lst-root" names="lst_root">
+  <title> Listing 1</title>
     <term>Listing 1</term>
     <title>Listing 1</title>
   </p>

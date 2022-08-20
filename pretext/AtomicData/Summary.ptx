@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<section xml:id="atomicdata_atomicdata_atomic-data_summary">
+<section xml:id="atomicdata_atomicdata_atomicdata_atomic-data_summary">
   <title>Summary</title>
   <p>
-    <ol label="1">
+    <ol marker="1">
       <li>
         <p>All variables must be declared before use in C++.</p>
       </li>
