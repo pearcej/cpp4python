@@ -70,7 +70,7 @@ Matching
    :match_5: insert|||Injects a string at a specific index. 
    :match_6: erase|||Deletes an element from one index to another.
    :match_7: size|||Returns the capacity of the string.
-   :match_8: +|||connects strings.
+   :match_8: +|||Connects strings.
    :match_9: append|||Adjoins a string to the end of the string.
    :match_10: find||| Returns the index of the first occurrence of item.
 

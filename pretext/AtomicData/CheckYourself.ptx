@@ -1,0 +1,118 @@
+    <section xml:id="_check-yourself">
+        <title>Check Yourself</title>
+
+    <exercise label="mc_characters">
+        <statement>
+
+        <p>Q-20: If I want to use the <c>char</c> type in C++, what set of symbols must be used?</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>' '</p>
+                </statement>
+                <feedback>
+                    <p>Right!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>" "</p>
+                </statement>
+                <feedback>
+                    <p>No. Double quotes are only used for strings.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>' ' or " " may be used</p>
+                </statement>
+                <feedback>
+                    <p>No. Only one set of symbols may be used.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>It depends upon the implementation.</p>
+                </statement>
+                <feedback>
+                    <p>No. The implementation is consistent.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>none of the above</p>
+                </statement>
+                <feedback>
+                    <p>One of the above is indeed correct.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+        <exercise>
+            <statement>
+    <p>Q-21:  A/an <c>___</c> is used to store a memory address in C++? <var/>  </p></statement><setup><var><condition string="^\s*pointer\s*$"><feedback><p>Right!</p></feedback></condition><condition string="^\s*variable\s*$"><feedback><p>Be more specific!</p></feedback></condition><condition string="^\s*reference\s*$"><feedback><p>That’s Python, not C++!</p></feedback></condition><condition string="^\s*default\s*$"><feedback><p>Incorrect. Please try again</p></feedback></condition></var></setup></exercise>
+    <exercise label="mc_memory">
+        <statement>
+
+        <p>Q-22: How may one reference a variable’s memory address in C++?</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>using ``&amp;``</p>
+                </statement>
+                <feedback>
+                    <p>Right! ``&amp;`` is the "address-of" operator, used to reference an address.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>using ``*``</p>
+                </statement>
+                <feedback>
+                    <p>No. ``int *p;`` defines a pointer to an integer, and ``*p`` would dereference that pointer, i.e. retrieve the data that p points to.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>using ``id``</p>
+                </statement>
+                <feedback>
+                    <p>No. This is used in Python.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>It depends upon the implementation.</p>
+                </statement>
+                <feedback>
+                    <p>No. Try again.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>none of the above</p>
+                </statement>
+                <feedback>
+                    <p>One of the above is indeed correct.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    </section>

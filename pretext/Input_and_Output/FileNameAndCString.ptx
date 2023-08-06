@@ -1,0 +1,42 @@
+<section xml:id="input_and_-output_file-names-and-c-strings">
+        <title>File Names and C-Strings</title>
+        <p>In modern versions of C++, you can use the &lt;string&gt; library for filenames,
+            but earlier versions of C++ required the use of C-strings.
+            The program above will try to open the file called <q>rawdata.txt</q> and
+            output its results to a file called <q>neat.dat</q> every time it runs,
+            which is not very flexible. Ideally, the user should be able to enter
+            filenames that the program will use instead of the same names.
+            We have previously talked about the <c>char</c> data type that allows users to store
+            and manipulate a single character at a time. A sequence of characters such as <q>myFileName.dat</q>
+            can be stored in an array of chars called a <c>c-string</c>, which can be declared as follows:</p>
+        <pre>// Syntax: char C-string_name[LEN];
+// Example:
+char filename[16];</pre>
+        <p>This declaration creates a variable called <c>filename</c> that can hold a string of
+            length up to <c>16</c>-1 characters.
+            The square brackets after the variable name indicate to the compiler the maximum
+            number of character storage that is needed for the variable.
+            A <c>\0</c> or <c>NULL</c> character terminates the C-string, without the system knowing how much of
+            the array is actually used.</p>
+        <blockquote>
+            <dl>
+                <li>
+                    <title>Warnings:</title>
+                    
+                        <p><ol label="1">
+                            <li>
+                                <p>The number of characters for a c-string must be one greater than the number of actual characters!</p>
+                            </li>
+                            <li>
+                                <p>Also, LEN must be an integer number or a declared const int, it cannot be a variable.</p>
+                            </li>
+                        </ol></p>
+                    
+                </li>
+            </dl>
+        </blockquote>
+        <p><term>C-strings</term> are an older type of string that was inherited from the C language, and people frequently refer to both types as <q>strings</q>, which can be confusing.</p>
+        <p>Typically, <title_reference>string</title_reference> from the <c>&lt;string&gt;</c> library should be used in all other cases when not
+            working with file names or when a modern version of C++ can be used.</p>
+    </section>
+

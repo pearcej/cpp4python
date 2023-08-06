@@ -1,0 +1,24 @@
+<section xml:id="functions_functions_functions_summary">
+        <title>Summary</title>
+        <p><ol label="1">
+            <li>
+                <p>Like Python, C++ supports the use of functions.</p>
+            </li>
+            <li>
+                <p>In C++, a function definition requires a name, a group of parameters, a return type, and a body.</p>
+            </li>
+            <li>
+                <p>Non-fruitful functions in C++ must contain the keyword <c>void</c> in its function definition.</p>
+            </li>
+            <li>
+                <p>You can pass variables by value as well as by reference in C++ functions. Passing by reference utilizes the use of pointers.</p>
+            </li>
+            <li>
+                <p>Pass by reference is useful when you require a function to return multiple variables.</p>
+            </li>
+            <li>
+                <p>To pass an array to a function you need to use an array parameter. The array parameter is denoted by the array variable name followed by set of square brackets ([ and ]).</p>
+            </li>
+        </ol></p>
+    </section>
+

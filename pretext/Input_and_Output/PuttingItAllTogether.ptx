@@ -1,0 +1,58 @@
+<section xml:id="input_and_-output_putting-it-all-together">
+        <title>Putting it all Together</title>
+        <p>The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.</p>
+        <pre>#include &lt;cstdlib&gt;  // for the exit function
+#include &lt;fstream&gt;  // for I/O member functions
+#include &lt;iostream&gt; // for cout
+using namespace std;
+
+int main() {
+    char in_file_name[16],
+        out_file_name[16]; // the filenames can have at most 15 chars
+    ifstream in_stream;
+    ofstream out_stream;
+
+    cout &lt;&lt; "This program will sum three numbers taken from an input\n"
+         &lt;&lt; "file and write the sum to an output file." &lt;&lt; endl;
+    cout &lt;&lt; "Enter the input file name (maximum of 15 characters):\n";
+    cin &gt;&gt; in_file_name;
+    cout &lt;&lt; "\nEnter the output file name (maximum of 15 characters):\n";
+    cin &gt;&gt; out_file_name;
+    cout &lt;&lt; endl;
+
+    // Condensed input and output file opening and checking.
+    in_stream.open(in_file_name);
+    out_stream.open(out_file_name);
+
+    if (in_stream.fail() || out_stream.fail()) {
+        cout &lt;&lt; "Input or output file opening failed.\n";
+        exit(1);
+    }
+
+    double firstn, secondn, thirdn, sum = 0.0;
+    cout &lt;&lt; "Reading numbers from the file " &lt;&lt; in_file_name &lt;&lt; endl;
+    in_stream &gt;&gt; firstn &gt;&gt; secondn &gt;&gt; thirdn;
+    sum = firstn + secondn + thirdn;
+
+    // The following set of lines will write to the screen
+    cout &lt;&lt; "The sum of the first 3 numbers from " &lt;&lt; in_file_name &lt;&lt; " is "
+         &lt;&lt; sum &lt;&lt; endl;
+
+    cout &lt;&lt; "Placing the sum into the file " &lt;&lt; out_file_name &lt;&lt; endl;
+
+    // The following set of lines will write to the output file
+    out_stream &lt;&lt; "The sum of the first 3 numbers from " &lt;&lt; in_file_name
+               &lt;&lt; " is " &lt;&lt; sum &lt;&lt; endl;
+
+    in_stream.close();
+    out_stream.close();
+
+    cout &lt;&lt; "End of Program." &lt;&lt; endl;
+
+    return 0;
+}</pre>
+        <raw format="html" xml:space="preserve">&lt;div&gt;
+    &lt;iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</raw>
+    </section>
+
