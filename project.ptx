@@ -6,33 +6,39 @@
 -->
 <project>
   <targets>
+    <target name="runestone">
+      <format>html</format>
+      <source>source/main.ptx</source>
+      <publication>publication/runestone.ptx</publication>
+      <output-dir>published/opensource</output-dir>
+    </target>
     <target name="web">
       <format>html</format>
-      <source>pretext/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <source>source/main.ptx</source>
+      <publication>publication/dev.ptx</publication>
       <output-dir>output/web</output-dir>
     </target>
-    <target name="print" pdf-method="pdflatex">
+    <target name="print" pdf-method="xelatex">
       <format>pdf</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>publication/dev.ptx</publication>
       <output-dir>output/print</output-dir>
     </target>
     <target name="print-latex">
       <format>latex</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>publication/dev.ptx</publication>
       <output-dir>output/print-latex</output-dir>
     </target>
     <target name="subset">
       <format>html</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>publication/dev.ptx</publication>
       <output-dir>output/subset</output-dir>
       <stringparam key="debug.skip-knowls" value="yes"/>
       <!-- edit this to change the section/chapter/etc. to include
            in your subset build -->
-      <xmlid-root>ch-first</xmlid-root>
+      <xmlid-root>ch_first</xmlid-root>
     </target>
   </targets>
   <executables>
@@ -44,8 +50,6 @@
       <sage>sage</sage>
       <pdfpng>convert</pdfpng>
       <pdfeps>pdftops</pdfeps>
-      <pdfcrop>pdf-crop-margins</pdfcrop>
-      <pageres>pageres</pageres>
       <node>node</node>
       <liblouis>file2brl</liblouis>
     </executables>
