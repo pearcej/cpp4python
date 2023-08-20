@@ -17,7 +17,7 @@ How to use this book
 
 - The generic version of the original runestone version book is located at `https://runestone.academy/ns/books/published/cpp4python/index.html <https://runestone.academy/ns/books/published/cpp4python/index.html>`_ 
 - Instructors who wish to use this book go to `https://runestone.academy/ <https://runestone.academy/>`_ and make an account using *cpp4python* as the base book.
-- The PreTeXt version of this book is available as well, but it is an alpha version and there are currently labelling errors as of August 2023. Use at your own risk.
+- The PreTeXt version of this book is available as *cpp4py* as well, but it is an alpha version and there are currently labelling errors as of August 2023. Use at your own risk.
 - Those wishing to report bugs or suggest improvements can do so at `https://github.com/pearcej/cpp4python/issues <https://github.com/pearcej/cpp4python/issues>`_.
 
 Licensing

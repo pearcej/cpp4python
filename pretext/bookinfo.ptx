@@ -28,7 +28,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Prefix to enhance Sage notebook contents -->
     <initialism>SB</initialism>
-    <blurb shelf="Language Transition">This is the PreTexT beta version of a short ebook that is intended to make it easy for anyone who has some background in programming in Python to transition to programming in C++. This ebook also utilizes an optional graphics module that allows graphics in C++ to utilize commands like the Turtle library in Python. </blurb>
+    <blurb shelf="Language Transition">This is the PreTeXt alpha version of a short ebook that is intended to make it easy for anyone who has some background in programming in Python to transition to programming in C++. This ebook also utilizes an optional graphics module that allows graphics in C++ to utilize commands like the Turtle library in Python. </blurb>
     <!-- Math-related macros from "macros.tex" in previous LaTeX version -->
     <!-- \notdivide replaces \notmid to avoid conflict with tikz - TWJ 5/6/2010 -->
     <!-- Added operator \gf  - TWJ 2/26/2013 -->
