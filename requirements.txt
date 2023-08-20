@@ -1,2 +1,3 @@
 runestone>=3.0.0b5
 SQLAlchemy>=1.0.8
+pretext>=1.6.0

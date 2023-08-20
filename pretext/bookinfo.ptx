@@ -2,12 +2,12 @@
 
 <!--********************************************************************
 Copyright 2015 Robert A. Beezer
-This file is part of MathBook XML.
-MathBook XML is free software: you can redistribute it and/or modify
+This file is part of Pretext.
+Pretext is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 or version 3 of the
 License (at your option).
-MathBook XML is distributed in the hope that it will be useful,
+Pretext is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -15,21 +15,20 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 <!-- This file was originally part of the book     -->
-<!-- (as copied on 2015/07/12)                     -->
 <!--                                               -->
-<!--   C++ for Python Programmers -->
-<!--                                               -->
+<!--   C++ for Python Programmers                  -->
+<!--   by Jan Pearce                               -->
 <docinfo>
 
     <!-- the other option is "long" which will produce an -->
     <!-- entire front matter section with more headings   -->
     <author-biographies length="short" />
 
-    <document-id edition="2">httlacs</document-id>
+    <document-id edition="2">cpp4py-v2</document-id>
 
     <!-- Prefix to enhance Sage notebook contents -->
     <initialism>SB</initialism>
-    <blurb shelf="introcs">The original open source intro to computer science textbook.  Great for students of all ages.</blurb>
+    <blurb shelf="Language Transition">This is the PreTexT beta version of a short ebook that is intended to make it easy for anyone who has some background in programming in Python to transition to programming in C++. This ebook also utilizes an optional graphics module that allows graphics in C++ to utilize commands like the Turtle library in Python. </blurb>
     <!-- Math-related macros from "macros.tex" in previous LaTeX version -->
     <!-- \notdivide replaces \notmid to avoid conflict with tikz - TWJ 5/6/2010 -->
     <!-- Added operator \gf  - TWJ 2/26/2013 -->
