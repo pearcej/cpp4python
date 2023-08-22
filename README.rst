@@ -12,8 +12,8 @@ Still other sections were newly written by Jan Pearce for this ebook.
 
 Special acknowledgement is due to  `Jesse Walker-Schadler <https://www.linkedin.com/in/jwwschadler/>`_ who while just a student in the Berea College Data Structures course had a vision of making graphics in C++ as easy as they are in Python both in terms of both syntax and installations.  Over the course of two summers, he realized this vision with the creation in `the open source CTurtle library <https://github.com/walkerje/C-Turtle>`_ which provides all of the C++ interactive graphics in this textbook. 
 
-How to use this book
-====================
+How to use and suggest changes to this book
+===========================================
 
 - The generic version of the original runestone version book is located at `https://runestone.academy/ns/books/published/cpp4python/index.html <https://runestone.academy/ns/books/published/cpp4python/index.html>`_ 
 - Instructors who wish to use this book go to `https://runestone.academy/ <https://runestone.academy/>`_ and make an account using *cpp4python* as the base book.
