@@ -48,6 +48,9 @@ ehthumbs_vista.db
 .Trash-*
 .nfs*
 
+# Don't track build logs
+logs/
+
 # Don't include VSCode generated files
 .vscode
 *.code-workspace
@@ -100,27 +103,11 @@ pretext/__pycache__/**
 # any file ending in ~ (backups, usually)
 *~
 
-build_info
 **/_build
 **/rsbuild
 **/build
-build/*
 published
 
 # Codespaces set-up
 
 .devcontainer.json
-
-
-# ------------------ #
-# Ignore the following (from Runestone .gitignore version)
-
-*.pyc
-__pycache__/
-
-.idea/*
-source/doctrees/*
-
-sphinx-enki-info.txt
-sphinx_settings.json
-pavement.py
