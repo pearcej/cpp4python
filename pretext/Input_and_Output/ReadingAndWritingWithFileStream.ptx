@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_reading-and-writing-with-file-streams">
+<section xml:id="io-reading-and-writing-with-file-streams">
         <title>Reading and Writing with File Streams</title>
         <p>As file I/O streams work in a similar way to <c>cin</c> and <c>cout</c>, the operators <q>&gt;&gt;</q> and <q>&lt;&lt;</q> perform the same direction of data for files, with the exact same syntax.</p>
         <p>For example, execution of the following statement will write the number 25, a line break, the number 15, and another line break into the out_stream output stream.</p>

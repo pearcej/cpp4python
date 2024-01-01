@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_member-functions-and-precision">
+<section xml:id="io-functions-and-precision">
         <title>Member Functions and Precision</title>
         <p>A function that is associated with a certain type of object is called a <term>member function</term> of that object. You have already used member functions <c>setf(...)</c> and <c>precision(...)</c> for formatting our output streams using <c>cout</c>. These functions are included briefly below:</p>
         <pre>// Use cout's member function "set flags", called setf

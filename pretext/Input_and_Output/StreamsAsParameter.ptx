@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_passing-streams-as-parameters">
+<section xml:id="io-passing-streams-as-parameters">
         <title>Passing Streams as Parameters</title>
         <p>In the above program, you see that the input and output streams are passed to the file
             via <c>pass by reference</c>. This fact may at first seem like a surprising choice

@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_dealing-with-i-o-failures">
+<section xml:id="io-dealing-with-i-o-failures">
         <title>Dealing with I/O Failures</title>
         <p>File operations, such as opening and closing files, are often a source of runtime
             errors for various reasons. Well-written programs always should include error checking

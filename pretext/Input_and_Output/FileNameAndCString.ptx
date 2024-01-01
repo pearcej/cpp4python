@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_file-names-and-c-strings">
+<section xml:id="io-file-names-and-c-strings">
         <title>File Names and C-Strings</title>
         <p>In modern versions of C++, you can use the &lt;string&gt; library for filenames,
             but earlier versions of C++ required the use of C-strings.

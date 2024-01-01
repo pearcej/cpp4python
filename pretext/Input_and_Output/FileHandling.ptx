@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_file-handling">
+<section xml:id="io-file-handling">
         <title>File Handling</title>
         <p>File handling in C++ also uses a <c>stream</c> in a similar way to the cout and cin functions of <c>&lt;iostream&gt;</c>. The library that allows for input and output of files is <c>&lt;fstream&gt;</c>.</p>
         <p>You must declare any file streams before you use them to read and write data. For example, the following statements inform the compiler to create a stream called <c>in_stream</c> that is an input-file-stream object, <c>&lt;ifstream&gt;</c>, and another called <c>out_stream</c> that is an output-file-stream object, <c>&lt;ofstream&gt;</c>.</p>

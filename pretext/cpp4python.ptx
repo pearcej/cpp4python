@@ -2,7 +2,7 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
     <xi:include href="./bookinfo.ptx"/>
 
-    <book xml:id="cpp4python" permid="cpp4py">
+    <book xml:id="cpp4py-v2" permid="cpp4py-v2">
         <title>C++ for Python Programmers</title>
         <subtitle>The PreTeXt Edition</subtitle>
         <xi:include href="./IntroCpp/toctree.ptx"/>

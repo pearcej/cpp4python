@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_the-end-of-file-eof-for-systems-that-implement-eof">
+<section xml:id="io-the-eof">
         <title>The End-Of-File (EOF) for Systems that Implement eof()</title>
         <p>So far, the assumption was that the programmer knew exactly how much data to read from
             an open file. However, it is common for a program to keep reading from a file without

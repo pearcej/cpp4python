@@ -1,4 +1,4 @@
-<section xml:id="input_and_-output_putting-it-all-together">
+<section xml:id="io-putting-it-all-together">
         <title>Putting it all Together</title>
         <p>The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.</p>
         <pre>#include &lt;cstdlib&gt;  // for the exit function
