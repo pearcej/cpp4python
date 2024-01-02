@@ -16,11 +16,13 @@
         <p>To close the file for <c>out_stream</c>, we use its <c>close()</c> function, which also adds an end-of-file marker to indicate where the end of the file is:</p>
         <pre>out_stream.close();</pre>
         <p>Answer the question below concerning the use of the <c>fstream</c> library:</p>
+<reading-questions xml:id="rqs-file-operations">
+    <title>Reading Question</title>
 
     <exercise label="stream_library_1">
         <statement>
 
-        <p>Q-1: Say you wanted to add some text to a file that already has important information on it.
+        <p>Say you wanted to add some text to a file that already has important information on it.
             Would it be a good idea to first use <c>ofstream</c> to open the file?</p>
 
         </statement>
@@ -64,5 +66,6 @@
 </choices>
 
     </exercise>
+</reading-questions>
     </section>
 
