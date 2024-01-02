@@ -14,7 +14,7 @@
             , and <q>not</q> is given by <c>!</c>.
             Note that the internally stored values representing <c>true</c> and <c>false</c>
             are actually <c>1</c> and <c>0</c> respectively. Hence, we see this in output as well.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="logical_1cpp" interactive="activecode" language="cpp">
         <input>
@@ -44,7 +44,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>Boolean data objects are also used as results for comparison operators
             such as equality (==) and greater than (<math>&gt;</math>). In addition,
             relational operators and logical operators can be combined together to
@@ -173,7 +173,7 @@ main()
                 
             
         </tabular></table>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="locicalcpp" interactive="activecode" language="cpp">
         <input>
@@ -205,7 +205,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>When a C++ variable is declared, space in memory is set aside to hold
             this type of value.
             A C++ variable can optionally be initialized in the declaration by
@@ -252,11 +252,12 @@ int main(){
             Pitfall: C++ will often simply try to do the assignment you
             requested without
             complaining. Note what happened in the code above in the final output.</p>
-
+            <reading-questions xml:id="rqs-bool-data">
+                <title>Reading Question</title>
     <exercise label="mc_bool">
         <statement>
 
-        <p>Q-6: Why did theBool output a value of 1 after being set to 4?</p>
+        <p>Why did theBool output a value of 1 after being set to 4?</p>
 
         </statement>
 <choices>
@@ -299,5 +300,6 @@ int main(){
 </choices>
 
     </exercise>
+</reading-questions>
     </section>
 

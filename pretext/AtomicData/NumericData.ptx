@@ -15,7 +15,7 @@
         <p>Exponentiation in C++ is done using <c>pow()</c> from the <c>cmath</c> library
             and the remainder (modulo) operator is done with <c>%</c>.</p>
         <p>Run the following code to see that you understand each result.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="intro_1cpp" interactive="activecode" language="cpp">
         <input>
@@ -64,16 +64,17 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>When declaring numeric variables in C++,
             modifiers like <c>short</c>, <c>long</c>, and <c>unsigned</c>
             can optionally be used to help
             to ensure space is used as efficiently as possible.</p>
-
+            <reading-questions xml:id="rqs-numeric-data">
+                <title>Reading Questions</title>
     <exercise label="mc_integer_div">
         <statement>
 
-        <p>Q-3: what is the result of dividing <c>3/2</c> in C++?</p>
+        <p>what is the result of dividing <c>3/2</c> in C++?</p>
 
         </statement>
 <choices>
@@ -129,7 +130,7 @@ main()
     <exercise label="mc_exponentiation">
         <statement>
 
-        <p>Q-4: How do I raise 4 to 5th power in C++?</p>
+        <p>How do I raise 4 to 5th power in C++?</p>
 
         </statement>
 <choices>
@@ -172,5 +173,6 @@ main()
 </choices>
 
     </exercise>
+            </reading-questions>
     </section>
 
