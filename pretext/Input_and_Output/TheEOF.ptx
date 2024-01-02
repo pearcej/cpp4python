@@ -113,11 +113,13 @@ void make_neat(
     &lt;iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
 &lt;/div&gt;</raw>
         <p>The input file <c>rawdata.txt</c> must be in the same directory (folder) as the program in order for it to open successfully. The program will create a file called <q>neat.dat</q> to output the results.</p>
-
+<reading-questions xml:id="rqs-the-eof">
+    <title>Reading Question</title>
+    
     <exercise label="eofFirst">
         <statement>
 
-        <p>Q-1: What are good use cases for EOFs in C++ programming?</p>
+        <p>What are good use cases for EOFs in C++ programming?</p>
 
         </statement>
 <choices>
@@ -160,5 +162,7 @@ void make_neat(
 </choices>
 
     </exercise>
+</reading-questions>
+
     </section>
 
