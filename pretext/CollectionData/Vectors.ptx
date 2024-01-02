@@ -17,11 +17,7 @@
         
         <table xml:id="collection-data_id1"><tabular>
             <title><term>Common C++ Vector Operators</term></title>
-            
-                
-                
-                
-                
+        
                     <row header="yes">
                         <cell>
                             <term>Vector Operation</term>
@@ -188,13 +184,7 @@ int main() {
                     
                 </li>
             </dl>
-            <subsubsection xml:id="collection-data_matching">
-                <title>Matching</title>
-
-<exercise label="matching_vectors">
-    <statement><p> Match the Vector operations with their corresponding explination.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="2"><premise>=</premise><response> Assigns value to an element.</response></match><match order="3"><premise>push_back</premise><response>Appends item to the end of the vector.</response></match><match order="4"><premise>pop_back</premise><response> Deletes last item of the vector.</response></match><match order="5"><premise>insert</premise><response>Injects an item into the vector.</response></match><match order="6"><premise>erase</premise><response>Deletes an element from the choosen index.</response></match><match order="7"><premise>size</premise><response>Returns the actual capacity used by elements.</response></match><match order="8"><premise>capacity</premise><response>Returns the ammount of allocated storage space.</response></match><match order="9"><premise>reserve</premise><response> Request a change in space to amount</response></match></matches></exercise>                <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+               <TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="introvector_cpp" interactive="activecode" language="cpp">
         <input>
@@ -233,7 +223,7 @@ def main():
 main()
         </input>
     </program>
-                    </TabNode></exercise>
+                    </TabNode>
                 <p>In the above example, the use of <c>reserve</c> was optional. However, it is a good
                     idea to use it before growing a vector in this way because it will save time.
                     Because vectors are stored in underlying arrays which require contiguous memory,
@@ -268,7 +258,7 @@ int main(){
     </program>
                 <p>Remembering that C++ is designed for speed, not protection,
                     we will likely not be surprised by the following:</p>
-                <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+                <TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="vector_errors_cpp" interactive="activecode" language="cpp">
         <input>
@@ -315,12 +305,19 @@ def main():
 main()
         </input>
     </program>
-                    </TabNode></exercise>
-
+                    </TabNode>
+                    
+                    
+                    <reading-questions xml:id="rqs-vectors">
+                        <title>Reading Questions</title>
+                    <exercise label="matching_vectors">
+                        <statement><p> Match the Vector operations with their corresponding explination.</p></statement>
+                        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+                    <matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="2"><premise>=</premise><response> Assigns value to an element.</response></match><match order="3"><premise>push_back</premise><response>Appends item to the end of the vector.</response></match><match order="4"><premise>pop_back</premise><response> Deletes last item of the vector.</response></match><match order="5"><premise>insert</premise><response>Injects an item into the vector.</response></match><match order="6"><premise>erase</premise><response>Deletes an element from the choosen index.</response></match><match order="7"><premise>size</premise><response>Returns the actual capacity used by elements.</response></match><match order="8"><premise>capacity</premise><response>Returns the ammount of allocated storage space.</response></match><match order="9"><premise>reserve</premise><response> Request a change in space to amount</response></match></matches></exercise> 
     <exercise label="mc_array_vector">
         <statement>
 
-                <p>Q-8: Which of the following is the biggest difference between a C++ array and a C++ vector?</p>
+                <p>Which of the following is the biggest difference between a C++ array and a C++ vector?</p>
 
         </statement>
 <choices>
@@ -373,10 +370,12 @@ main()
 
     </exercise>
 
+    
+    
     <exercise label="mc_vector1">
         <statement>
 
-                <p>Q-9: What good is the <c>reserve</c> method in a vector?</p>
+                <p>What good is the <c>reserve</c> method in a vector?</p>
 
         </statement>
 <choices>
@@ -419,7 +418,7 @@ main()
 </choices>
 
     </exercise>
-            </subsubsection>
+</reading-questions>
         </subsection>
     </section>
 

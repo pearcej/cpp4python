@@ -59,7 +59,7 @@ double ddouble = 1.2;     // cannot use index to access value</pre>
             help you better understand the trade-offs of the
             protections Python offers.</p>
         <p>Here are examples of iteration.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+       <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="listarray_cpp" interactive="activecode" language="cpp">
         <input>
@@ -92,7 +92,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>The protections Python offers, however, takes time and C++ is designed for speed.
             Python would never let you iterate beyond the end of
             a list. C++ will not only let you iterate beyond either
@@ -102,7 +102,7 @@ main()
         <p>The phrase, <q>be careful what you wish for</q> is a great one
             to remember when programming in C++. Because C++ will
             generally try to do everything you ask for.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+       <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="array_error_cpp" interactive="activecode" language="cpp">
         <input>
@@ -139,14 +139,14 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>The speed of C++ comes at the cost of minimal to no error checking.
             Sometimes this can have perplexing results such as in the next example.</p>
         <p>You should use an array when you have a need for speed
             or you need to work with hardware constraints.
             Otherwise, you may want to consider using another collection data type,
             the <em>vector</em>.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="array_werror_cpp" interactive="activecode" language="cpp">
         <input>
@@ -196,12 +196,15 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
+<reading-questions xml:id="rqs-arrays">
+    <title>Reading Questions</title>
+    
 
     <exercise label="mc_werror">
         <statement>
 
-        <p>Q-7: In the above example, what happened to otherdata[ ] in C++?</p>
+        <p>In the above example, what happened to otherdata[ ] in C++?</p>
 
         </statement>
 <choices>
@@ -257,7 +260,7 @@ main()
     <exercise label="mc_array">
         <statement>
 
-        <p>Q-8: What is the correct way to declare an array in C++?</p>
+        <p>What is the correct way to declare an array in C++?</p>
 
         </statement>
 <choices>
@@ -300,5 +303,7 @@ main()
 </choices>
 
     </exercise>
+        
+</reading-questions>
     </section>
 
