@@ -237,7 +237,7 @@ using namespace std;
 int main() {
 
   //declares num as a floating point number variable
-  float num;
+  float num = 12.4; // Note: cin is not currently working in activecode
 
   // Displays this text to the console
   cout &lt;&lt; "Give me a number:" &lt;&lt; endl;
