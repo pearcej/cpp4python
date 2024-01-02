@@ -156,7 +156,7 @@ using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
             <p>Correctly rearrange the code below to implement hello world in C++:</p>
 </statement>
 <blocks><block order="4">
-<cline>&amp;#x22D5include &amp;#x003Ciostream&amp;#x003E</cline>
+<cline>#include &lt;iostream&gt;</cline>
 </block><block order="6">
 <cline>using namespace std;</cline>
 </block><block order="1">
