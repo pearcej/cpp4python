@@ -4,7 +4,7 @@
             In C++ single quotes are used for the character (<c>char</c>) data type,
             and double quotes are used for the string data type.</p>
         <p>Consider the following code.</p>
-        <exercise ><TabNode tabname="Python" tabnode_options="{'subchapter': 'AtomicData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
+       <TabNode tabname="Python" tabnode_options="{'subchapter': 'AtomicData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="charpy" interactive="activecode" language="python">
         <input>
@@ -44,13 +44,14 @@ int main(){
 }
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>Try the following question.</p>
-
+<reading-questions xml:id="rqs-char-data">
+    <title>Reading Question</title>
     <exercise label="mc_cpp_strings">
         <statement>
 
-        <p>Q-13: If I want to create a string in C++, what set of symbols may be used?</p>
+        <p>If I want to create a string in C++, what set of symbols may be used?</p>
 
         </statement>
 <choices>
@@ -102,4 +103,5 @@ int main(){
 </choices>
 
     </exercise>
+</reading-questions>
     </section>

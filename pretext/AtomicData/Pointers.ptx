@@ -37,7 +37,7 @@ int varN = 100;</pre>
             way to reference the address.</p>
         <p>In Python we use <c>id</c> to reference the address,
             while in C++ we use the <em>address-of operator</em>, <c>&amp;</c>.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="address_cpp" interactive="activecode" language="cpp">
         <input>
@@ -69,7 +69,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>In both Python and C++, variables are stored in memory locations which are dependent
             upon the run itself. If you repeatedly run the above code in either C++ or Python, you may
             see the location change.</p>
@@ -152,61 +152,7 @@ int main( ) {
     </program>
             </blockquote>
 
-    <exercise label="mc_pntrhlp">
-        <statement>
-
-            <p>Q-4: If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>varPntr: 9</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, the variable varN no longer equals 100 past line 7!</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>varPntr: 50</p>
-                </statement>
-                <feedback>
-                    <p>Right!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>varPntr: 150</p>
-                </statement>
-                <feedback>
-                    <p>No, the values do not add together!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>0x7ffeb9ce053c</p>
-                </statement>
-                <feedback>
-                    <p>We are dereferencing the pointer, so you would not get the address of varN. Try again!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is indeed correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
+    
             <p>Compiling and running the above code will have the program output the
                 value in varN,
                 what is in ptrN (the memory address of varN),
@@ -295,6 +241,67 @@ int main( ) {
             <p>Helpful Tip: The null pointer becomes very useful when you must test
                 the state of a pointer, such as whether the assignment to an address
                 is valid or not.</p>
+
+
+                <reading-questions xml:id="rqs-pointers">
+                    <title>Reading Question</title>
+                    
+                    <exercise label="mc_pntrhlp">
+                        <statement>
+                
+                            <p>If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
+                
+                        </statement>
+                <choices>
+                
+                            <choice>
+                                <statement>
+                                    <p>varPntr: 9</p>
+                                </statement>
+                                <feedback>
+                                    <p>Not quite, the variable varN no longer equals 100 past line 7!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice correct="yes">
+                                <statement>
+                                    <p>varPntr: 50</p>
+                                </statement>
+                                <feedback>
+                                    <p>Right!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice>
+                                <statement>
+                                    <p>varPntr: 150</p>
+                                </statement>
+                                <feedback>
+                                    <p>No, the values do not add together!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice>
+                                <statement>
+                                    <p>0x7ffeb9ce053c</p>
+                                </statement>
+                                <feedback>
+                                    <p>We are dereferencing the pointer, so you would not get the address of varN. Try again!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice>
+                                <statement>
+                                    <p>none of the above</p>
+                                </statement>
+                                <feedback>
+                                    <p>One of the above is indeed correct.</p>
+                                </feedback>
+                            </choice>
+                </choices>
+                
+                    </exercise>
+                </reading-questions> 
         </subsection>
     </section>
 
