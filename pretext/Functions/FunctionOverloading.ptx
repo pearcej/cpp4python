@@ -11,7 +11,7 @@
             Python requires a different technique.</p>
         <p>See the following example where an optional parameter is used to accomplish the
             same task.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'FunctionOverloading', 'chapter': 'Functions', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+    <TabNode tabname="C++" tabnode_options="{'subchapter': 'FunctionOverloading', 'chapter': 'Functions', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="foverload_cpp" interactive="activecode" language="cpp">
         <input>
@@ -59,12 +59,15 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
-
+            </TabNode>
+<reading-questions xml:id="rqs-func-overloading">
+    <title>Reading Questions</title>
+    
+    
     <exercise label="foverloading">
         <statement>
 
-        <p>Q-3: What are benefits of function overloading?</p>
+        <p>What are benefits of function overloading?</p>
 
         </statement>
 <choices>
@@ -107,34 +110,38 @@ main()
 </choices>
 
     </exercise>
-        <note>
-            <title>Self Check</title>
-            <p>Here's a self check that really covers everything so far.  You may have
-                heard of the infinite monkey theorem?  The theorem states that a monkey
-                hitting keys at random on a typewriter keyboard for an infinite amount of
-                time will almost surely type a given text, such as the complete works of
-                William Shakespeare.  Well, suppose we replace a monkey with a C++ function.
-                How long do you think it would take for a C++ function to generate just one
-                sentence of Shakespeare?  The sentence we'll shoot for is:  <q>methinks it is
-                like a weasel</q></p>
-            <p>You're not going to want to run this one in the browser, so fire up your favorite
-                C++ IDE.  The way we'll simulate this is to write a function that generates a string
-                that is 28 characters long by choosing random letters from the 26 letters in the
-                alphabet plus the space.  We'll write another function that will score each
-                generated string by comparing the randomly generated string to the goal.
-                Hint: You will need to import the &lt;random&gt; library for this.</p>
-            <p>A third function will repeatedly call generate and score, then if 100% of
-                the letters are correct we are done.  If the letters are not correct then
-                we will generate a whole new string. To make it easier to follow your program's
-                progress this third function should print out the best string generated so far
-                and its score every 1000 tries.</p>
-        </note>
-        <note>
-            <title>Self Check Challenge</title>
-            <p>See if you can improve upon the program in the self check by keeping letters
-                that are correct and only modifying one character in the best string so far.
-                This is a type of algorithm in the class of &#8216;hill climbing' algorithms, that
-                is we only keep the result if it is better than the previous one.</p>
-        </note>
-    </section>
+    <exercise>
+            
+        <title>Self Check</title>
+        <p>Here's a self check that really covers everything so far.  You may have
+            heard of the infinite monkey theorem?  The theorem states that a monkey
+            hitting keys at random on a typewriter keyboard for an infinite amount of
+            time will almost surely type a given text, such as the complete works of
+            William Shakespeare.  Well, suppose we replace a monkey with a C++ function.
+            How long do you think it would take for a C++ function to generate just one
+            sentence of Shakespeare?  The sentence we'll shoot for is:  <q>methinks it is
+            like a weasel</q></p>
+        <p>You're not going to want to run this one in the browser, so fire up your favorite
+            C++ IDE.  The way we'll simulate this is to write a function that generates a string
+            that is 28 characters long by choosing random letters from the 26 letters in the
+            alphabet plus the space.  We'll write another function that will score each
+            generated string by comparing the randomly generated string to the goal.
+            Hint: You will need to import the &lt;random&gt; library for this.</p>
+        <p>A third function will repeatedly call generate and score, then if 100% of
+            the letters are correct we are done.  If the letters are not correct then
+            we will generate a whole new string. To make it easier to follow your program's
+            progress this third function should print out the best string generated so far
+            and its score every 1000 tries.</p>
+        </exercise>
+        <exercise>
+        
+    
+        <title>Self Check Challenge</title>
+        <p>See if you can improve upon the program in the self check by keeping letters
+            that are correct and only modifying one character in the best string so far.
+            This is a type of algorithm in the class of &#8216;hill climbing' algorithms, that
+            is we only keep the result if it is better than the previous one.</p>
+        </exercise>    
+</reading-questions>
+</section>
 
