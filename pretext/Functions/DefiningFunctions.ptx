@@ -133,11 +133,12 @@ int main() {
 }
         </input>
     </program>
-
+    <reading-questions xml:id="rqs-defining-functions">
+        <title>Reading Question</title>
     <exercise label="dog_walker">
         <statement>
 
-        <p>Q-5: What is the correct return type of the function above <term>int main()</term>?</p>
+        <p>What is the correct return type of the function above <term>int main()</term>?</p>
 
         </statement>
 <choices>
@@ -180,5 +181,6 @@ int main() {
 </choices>
 
     </exercise>
+</reading-questions>
     </section>
 
