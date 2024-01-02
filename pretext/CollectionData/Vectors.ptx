@@ -17,11 +17,7 @@
         
         <table xml:id="collection-data_id1"><tabular>
             <title><term>Common C++ Vector Operators</term></title>
-            
-                
-                
-                
-                
+        
                     <row header="yes">
                         <cell>
                             <term>Vector Operation</term>
@@ -188,9 +184,6 @@ int main() {
                     
                 </li>
             </dl>
-            <subsubsection xml:id="collection-data_matching">
-                <title>Matching</title>
-
                <TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="introvector_cpp" interactive="activecode" language="cpp">
@@ -426,7 +419,6 @@ main()
 
     </exercise>
 </reading-questions>
-            </subsubsection>
         </subsection>
     </section>
 

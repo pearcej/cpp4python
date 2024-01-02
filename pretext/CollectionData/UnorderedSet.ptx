@@ -140,12 +140,15 @@ return 0;
             <c>set.find(letter) == set.end()</c> section means that if <c>find</c> cannot
             find the <c>letter</c> before reaching the end of the set, then <c>letter</c>
             is not contained in the set.</p>
-        <subsection xml:id="collection-data_matching">
-            <title>Matching</title>
+
+<reading-questions xml:id="rqs-unorder-set">
+    <title>Reading Question</title>
+    
+    
 
 <exercise label="matching_us">
     <statement><p> Match the Unordered Sets operations with their corresponding explination.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>union</premise><response>Returns a new set with all elements from both sets.</response></match><match order="2"><premise>intersection</premise><response>Returns a new set with only those elements common to both sets.</response></match><match order="3"><premise>difference</premise><response> Returns a new set with all items from first set not in second.</response></match><match order="4"><premise>add</premise><response>Adds item to the set.</response></match><match order="5"><premise>remove</premise><response>erases item from the set.</response></match><match order="6"><premise>clear</premise><response>Removes all elements from the set.</response></match></matches></exercise>        </subsection>
+<matches><match order="1"><premise>union</premise><response>Returns a new set with all elements from both sets.</response></match><match order="2"><premise>intersection</premise><response>Returns a new set with only those elements common to both sets.</response></match><match order="3"><premise>difference</premise><response> Returns a new set with all items from first set not in second.</response></match><match order="4"><premise>add</premise><response>Adds item to the set.</response></match><match order="5"><premise>remove</premise><response>erases item from the set.</response></match><match order="6"><premise>clear</premise><response>Removes all elements from the set.</response></match></matches></exercise>  </reading-questions>     
     </section>
     
