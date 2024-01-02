@@ -229,7 +229,7 @@ int main(){
                 user might look like. Feel free to change 12.4 to other values!</p>
 
     </statement>
-    <program xml:id="cin_user_input_editor" interactive="activecode" language="cpp">
+    <program xml:id="cin_user_input_editor" interactive="activecode" language="cpp" stdin="12.4">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
