@@ -60,11 +60,15 @@ int main(){
         cout &lt;&lt; "Hello, world!" &lt;&lt; endl;
     }
 };</pre>
+<reading-questions xml:id="rqs-while_loop">
+    <title>Reading Question</title>
+    
+    
 
     <exercise label="mc_whileloop">
         <statement>
 
-        <p>Q-1: Using the code above please select the answer that should appear.</p>
+        <p>Using the code above please select the answer that should appear.</p>
 
         </statement>
 <choices>
@@ -107,5 +111,6 @@ int main(){
 </choices>
 
     </exercise>
+</reading-questions>
     </section>
 
