@@ -59,7 +59,7 @@ double ddouble = 1.2;     // cannot use index to access value</pre>
             help you better understand the trade-offs of the
             protections Python offers.</p>
         <p>Here are examples of iteration.</p>
-       ]<TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+       <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="listarray_cpp" interactive="activecode" language="cpp">
         <input>
