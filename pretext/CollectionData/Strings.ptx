@@ -12,52 +12,7 @@ char cstring[] = {"Hello World!"};    // C-string or char array uses double quot
             C++ (from C++11 onward), however, you can use a C++ string for everything.
             Since C++ strings are so much nicer and similar to Python strings, I would not recommend using C-strings.</p>
 
-    <exercise label="cstringquestion1_1">
-        <statement>
-
-        <p>Q-1: What is the correct definition of c-strings?</p>
-
-        </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>An array of characters that ends with a terminating null character. i.e. \0</p>
-                </statement>
-                <feedback>
-                    <p>Correct! a c-string is different from a string</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>A sequential data structure consisting of zero or more characters</p>
-                </statement>
-                <feedback>
-                    <p>Close, but that is the definition of a string, not a c-string</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>A data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.</p>
-                </statement>
-                <feedback>
-                    <p>Sorry, thats not a string or a c-string</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</p>
-                </statement>
-                <feedback>
-                    <p>No, that's a vector</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
+    
         <p>Because strings are sequences, all of the typical sequence operations work as you would expect.
             In addition, the string library offers a huge number of
             methods, some of the most useful of which are shown in <xref ref="collection-data_collection-data_tab-stringmethods"/>.</p>
@@ -195,13 +150,9 @@ char cstring[] = {"Hello World!"};    // C-string or char array uses double quot
                 
             
         </tabular></table>
-        <subsection xml:id="collection-data_matching">
-            <title>Matching</title>
+      
 
-<exercise label="matching_strings">
-    <statement><p> Match the String operations with their corresponding explination.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="10"><premise>find</premise><response> Returns the index of the first occurrence of item.</response></match><match order="2"><premise>=</premise><response> Assigns value to an element.</response></match><match order="3"><premise>push_back</premise><response>Adjoins a character to the end of the string.</response></match><match order="4"><premise>pop_back</premise><response>Removes the last character from the end of the string.</response></match><match order="5"><premise>insert</premise><response>Injects a string at a specific index.</response></match><match order="6"><premise>erase</premise><response>Deletes an element from one index to another.</response></match><match order="7"><premise>size</premise><response>Returns the capacity of the string.</response></match><match order="8"><premise>+</premise><response>connects strings.</response></match><match order="9"><premise>append</premise><response>Adjoins a string to the end of the string.</response></match></matches></exercise>            <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Strings', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+            <TabNode tabname="C++" tabnode_options="{'subchapter': 'Strings', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="introstring_cpp" interactive="activecode" language="cpp">
         <input>
@@ -246,12 +197,67 @@ def main():
 main()
         </input>
     </program>
-                </TabNode></exercise>
+                </TabNode>
             <p>Check your understanding by completing the following question.</p>
 
-<exercise label="string_types">
-    <statement><p>Drag each data type to its' corresponding C++ initialization syntax.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>char</premise><response>'a'</response></match><match order="2"><premise>char array</premise><response>{'a'}</response></match><match order="3"><premise>string</premise><response>"a"</response></match></matches></exercise>        </subsection>
+
+
+<reading-questions xml:id="rqs-strings">
+    <title>Reading Questions</title>
+    <exercise label="cstringquestion1_1">
+        <statement>
+
+        <p>What is the correct definition of c-strings?</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>An array of characters that ends with a terminating null character. i.e. \0</p>
+                </statement>
+                <feedback>
+                    <p>Correct! a c-string is different from a string</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>A sequential data structure consisting of zero or more characters</p>
+                </statement>
+                <feedback>
+                    <p>Close, but that is the definition of a string, not a c-string</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>A data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.</p>
+                </statement>
+                <feedback>
+                    <p>Sorry, thats not a string or a c-string</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</p>
+                </statement>
+                <feedback>
+                    <p>No, that's a vector</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    <exercise label="matching_strings">
+        <statement><p> Match the String operations with their corresponding explination.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="10"><premise>find</premise><response> Returns the index of the first occurrence of item.</response></match><match order="2"><premise>=</premise><response> Assigns value to an element.</response></match><match order="3"><premise>push_back</premise><response>Adjoins a character to the end of the string.</response></match><match order="4"><premise>pop_back</premise><response>Removes the last character from the end of the string.</response></match><match order="5"><premise>insert</premise><response>Injects a string at a specific index.</response></match><match order="6"><premise>erase</premise><response>Deletes an element from one index to another.</response></match><match order="7"><premise>size</premise><response>Returns the capacity of the string.</response></match><match order="8"><premise>+</premise><response>connects strings.</response></match><match order="9"><premise>append</premise><response>Adjoins a string to the end of the string.</response></match></matches></exercise>
+    <exercise label="string_types">
+        <statement><p>Drag each data type to its' corresponding C++ initialization syntax.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches><match order="1"><premise>char</premise><response>'a'</response></match><match order="2"><premise>char array</premise><response>{'a'}</response></match><match order="3"><premise>string</premise><response>"a"</response></match></matches></exercise>
+</reading-questions>
     </section>
 

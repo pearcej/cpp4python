@@ -21,7 +21,7 @@
             key-value pairs can also be added later as we see in the following example.
             In C++, the keyword <c>first</c> is used for the key, and <c>second</c> is used for the
             associated value.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="hashtable1_cpp" interactive="activecode" language="cpp">
         <input>
@@ -68,7 +68,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>It is important to note that hash tables are organized by the location given
             by the hash function rather than being in any
             particular order with respect to the keys. This makes look-up extremely fast.
@@ -78,7 +78,7 @@ main()
             Iterators of an <c>unordered_map</c> are
             implemented using pointers to point to elements of the value type as we see in
             the following example.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+       <TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="hashtable2_cpp" interactive="activecode" language="cpp">
         <input>
@@ -123,7 +123,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>Hash Tables have both methods and operators. <xref ref="collection-data_collection-data_tab-hashopers"/>
             describes them, and the session shows them in action.</p>
         
@@ -205,12 +205,14 @@ main()
                 
             
         </tabular></table>
-        <subsection xml:id="collection-data_matching">
-            <title>Matching</title>
+<reading-questions xml:id="rqs-hashtable">
+    <title>Reading Question</title>
+    
+    
 
 <exercise label="matching_HT">
     <statement><p> Match the Hash Table operations with their corresponding explination.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>[ ]</premise><response>Returns the value associated with the key, otherwise throws error.</response></match><match order="2"><premise>erase</premise><response>Deletes the entry from the hash table.</response></match><match order="3"><premise>count</premise><response>Returns true if key is in the hash table, and false otherwise.</response></match><match order="4"><premise>begin</premise><response>An iterator to the first element in the hash table.</response></match><match order="5"><premise>end</premise><response>An iterator pointing to past-the-end element of the hash table.</response></match></matches></exercise>        </subsection>
+<matches><match order="1"><premise>[ ]</premise><response>Returns the value associated with the key, otherwise throws error.</response></match><match order="2"><premise>erase</premise><response>Deletes the entry from the hash table.</response></match><match order="3"><premise>count</premise><response>Returns true if key is in the hash table, and false otherwise.</response></match><match order="4"><premise>begin</premise><response>An iterator to the first element in the hash table.</response></match><match order="5"><premise>end</premise><response>An iterator pointing to past-the-end element of the hash table.</response></match></matches></exercise>  </reading-questions>      
     </section>
 
