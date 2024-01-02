@@ -123,11 +123,15 @@ int main(){
 }
         </input>
     </program>
+<reading-questions xml:id="rqs-parameter-passing-by-value">
+    <title>Reading Questions</title>
+    
+    
 
     <exercise label="question1_1">
         <statement>
 
-        <p>Q-3: What is the difference between <term>func1</term> and <term>func2</term>? Check all that apply.</p>
+        <p>What is the difference between <term>func1</term> and <term>func2</term>? Check all that apply.</p>
 
         </statement>
 <choices>
@@ -174,7 +178,7 @@ int main(){
     <exercise label="question1_2">
         <statement>
 
-        <p>Q-4: Why does adding the <q>&amp;</q> to parameters in the <term>func</term> function cause the output to be a different result?</p>
+        <p>Why does adding the <q>&amp;</q> to parameters in the <term>func</term> function cause the output to be a different result?</p>
 
         </statement>
 <choices>
@@ -217,6 +221,7 @@ int main(){
 </choices>
 
     </exercise>
+</reading-questions>
         <transition/>
     </section>
 
