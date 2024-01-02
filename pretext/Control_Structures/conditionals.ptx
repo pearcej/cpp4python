@@ -141,38 +141,10 @@ main()
  }
         </input>
     </program>
-            <subsubsection xml:id="control_-structures_check-yourself">
-                <title>Check Yourself</title>
+            
 
-    <exercise label="mc_cpp_elsecond">
-        <statement>
+    
 
-                <p>Q-4: T/F: It is necessary to have an else statement after an if statement. (Hint: Test it out in the code above.)</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>True</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, try modifying the code above to test it out.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>False</p>
-                </statement>
-                <feedback>
-                    <p>Good job!</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-            </subsubsection>
         </subsection>
         <subsection xml:id="control_-structures_switch">
             <title>switch</title>
@@ -231,159 +203,186 @@ main()
                 grade was 95 and the <c>break</c> was omitted from the <c>case 9:</c>
                 alternative then the program would print out both (A and B.)
                 So, you might want to just avoid it and use if&#8230;</p>
-            <subsubsection xml:id="control_-structures_id1">
-                <title>Check Yourself</title>
-
-    <exercise label="mc_cpp_ifcond">
-        <statement>
-
-                <p>Q-6: When indicating the condition for a C++ if statement, what symbols are used?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>{ }</p>
-                </statement>
-                <feedback>
-                    <p>No. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>[ ]</p>
-                </statement>
-                <feedback>
-                    <p>No. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>( )</p>
-                </statement>
-                <feedback>
-                    <p>Right!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Any set of matching braces may be used.</p>
-                </statement>
-                <feedback>
-                    <p>No. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is indeed correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-
-    <exercise label="mc_cpp_switch">
-        <statement>
-
-                <p>Q-7: When using a switch, what prevents all the cases from passing as correct?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>Ending statements with ;</p>
-                </statement>
-                <feedback>
-                    <p>No. This is always needed.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>Using a break statement</p>
-                </statement>
-                <feedback>
-                    <p>Good job!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Enclosing each cases with { }</p>
-                </statement>
-                <feedback>
-                    <p>No. Try again.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>Setting a default case</p>
-                </statement>
-                <feedback>
-                    <p>No. This is a good idea, but it will not help.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-
-    <exercise label="mc_cpp_and">
-        <statement>
-
-                <p>Q-8: What symbol is used to indicate the <q>and</q> in C++ such as in a compound condition?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>||</p>
-                </statement>
-                <feedback>
-                    <p>No, this means "or".</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>and</p>
-                </statement>
-                <feedback>
-                    <p>No, this is Python.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>!</p>
-                </statement>
-                <feedback>
-                    <p>No, this means "not"</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>&amp;&amp;</p>
-                </statement>
-                <feedback>
-                    <p>Very good!</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-            </subsubsection>
+            <reading-questions xml:id="rqs-conditionals">
+                <title>Reading Questions</title>
+                <exercise label="mc_cpp_elsecond">
+                    <statement>
+            
+                            <p>T/F: It is necessary to have an else statement after an if statement. (Hint: Test it out in the code above.)</p>
+            
+                    </statement>
+            <choices>
+            
+                        <choice>
+                            <statement>
+                                <p>True</p>
+                            </statement>
+                            <feedback>
+                                <p>Not quite, try modifying the code above to test it out.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice correct="yes">
+                            <statement>
+                                <p>False</p>
+                            </statement>
+                            <feedback>
+                                <p>Good job!</p>
+                            </feedback>
+                        </choice>
+            </choices>
+            
+                </exercise>
+                <exercise label="mc_cpp_ifcond">
+                    <statement>
+            
+                            <p>When indicating the condition for a C++ if statement, what symbols are used?</p>
+            
+                    </statement>
+            <choices>
+            
+                        <choice>
+                            <statement>
+                                <p>{ }</p>
+                            </statement>
+                            <feedback>
+                                <p>No. Try again.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>[ ]</p>
+                            </statement>
+                            <feedback>
+                                <p>No. Try again.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice correct="yes">
+                            <statement>
+                                <p>( )</p>
+                            </statement>
+                            <feedback>
+                                <p>Right!</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>Any set of matching braces may be used.</p>
+                            </statement>
+                            <feedback>
+                                <p>No. Try again.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>none of the above</p>
+                            </statement>
+                            <feedback>
+                                <p>One of the above is indeed correct.</p>
+                            </feedback>
+                        </choice>
+            </choices>
+            
+                </exercise>
+                <exercise label="mc_cpp_switch">
+                    <statement>
+            
+                            <p>When using a switch, what prevents all the cases from passing as correct?</p>
+            
+                    </statement>
+            <choices>
+            
+                        <choice>
+                            <statement>
+                                <p>Ending statements with ;</p>
+                            </statement>
+                            <feedback>
+                                <p>No. This is always needed.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice correct="yes">
+                            <statement>
+                                <p>Using a break statement</p>
+                            </statement>
+                            <feedback>
+                                <p>Good job!</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>Enclosing each cases with { }</p>
+                            </statement>
+                            <feedback>
+                                <p>No. Try again.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>Setting a default case</p>
+                            </statement>
+                            <feedback>
+                                <p>No. This is a good idea, but it will not help.</p>
+                            </feedback>
+                        </choice>
+            </choices>
+            
+                </exercise>
+                <exercise label="mc_cpp_and">
+                    <statement>
+            
+                            <p>What symbol is used to indicate the <q>and</q> in C++ such as in a compound condition?</p>
+            
+                    </statement>
+            <choices>
+            
+                        <choice>
+                            <statement>
+                                <p>||</p>
+                            </statement>
+                            <feedback>
+                                <p>No, this means "or".</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>and</p>
+                            </statement>
+                            <feedback>
+                                <p>No, this is Python.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>!</p>
+                            </statement>
+                            <feedback>
+                                <p>No, this means "not"</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice correct="yes">
+                            <statement>
+                                <p>&amp;&amp;</p>
+                            </statement>
+                            <feedback>
+                                <p>Very good!</p>
+                            </feedback>
+                        </choice>
+            </choices>
+            
+                </exercise>
+            
+                
+            </reading-questions>
         </subsection>
     </section>
 

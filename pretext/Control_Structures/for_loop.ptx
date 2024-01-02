@@ -53,11 +53,12 @@ int main() {
 
     return 0;
 }</pre>
-
+<reading-questions xml:id="rqs-for_loop">
+    <title>Reading Question</title>
     <exercise label="mc_forloop">
         <statement>
 
-            <p>Q-3: Using the code above please select the answer that should appear?</p>
+            <p>Using the code above please select the answer that should appear?</p>
 
         </statement>
 <choices>
@@ -109,6 +110,7 @@ int main() {
 </choices>
 
     </exercise>
+</reading-questions>
         </subsection>
     </section>
 
