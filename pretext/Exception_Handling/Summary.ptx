@@ -14,9 +14,10 @@
                 <p>logic errors can be caught by using <c>try</c> and <c>catch</c> which can help pinpoint what is causing the error and avoid confusion about the problem.</p>
             </li>
         </ol></p>
-        <subsection xml:id="exception_-handling_check-yourself">
-            <title>Check Yourself</title>
-
+<reading-questions xml:id="rqs-summary7">
+    <title>Reading Questions</title>
+    
+    
 <exercise label="syntax_error">
     <statement><p>Click on the syntax error.</p></statement>
 <feedback><p>Remember, syntax errors occur more for people learning a new language.</p></feedback>
@@ -42,6 +43,7 @@
 <cline><area>else {</area>:</cline>
 <cline><area>cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
 <cline>}</cline>
-</areas></exercise>        </subsection>
+</areas></exercise>  </reading-questions>
+      
     </section>
 
