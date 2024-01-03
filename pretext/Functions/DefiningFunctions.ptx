@@ -74,12 +74,12 @@ int main() {
             technique called <q>Newton's Method.</q> Newton's Method for approximating
             square roots performs an iterative computation that converges on the
             correct value. The equation
-            <math>newguess = \frac {1}{2} * (oldguess + \frac {n}{oldguess})</math>
-            takes a value <math>n</math> and repeatedly guesses the square root by
-            making each <math>newguess</math> the <math>oldguess</math> in the subsequent
-            iteration. The initial guess used here is <math>\frac {n}{2}</math>.
+            <m>newguess = \frac {1}{2} * (oldguess + \frac {n}{oldguess})</m>
+            takes a value <m>n</m> and repeatedly guesses the square root by
+            making each <m>newguess</m> the <m>oldguess</m> in the subsequent
+            iteration. The initial guess used here is <m>\frac {n}{2}</m>.
             <xref ref="functions_lst-root">Listing 1</xref> shows a function definition that accepts a value
-            <math>n</math> and returns the square root of <math>n</math> after making 20
+            <m>n</m> and returns the square root of <m>n</m> after making 20
             guesses. Again, the details of Newton's Method are hidden inside the
             function definition and the user does not have to know anything about
             the implementation to use the function for its intended purpose.
