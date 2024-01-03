@@ -19,12 +19,12 @@
         <pre>// Python reference for a single integer value
 varN = 100</pre>
         
-        <figure align="center" xml:id="fig-py-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.1: Python reference</caption><image source="AtomicData/python_reference.png" width="50%" alt="&quot;arrow from varN to box containing 100 object&quot;"/></figure>
+        <figure align="center" xml:id="fig-py-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Python reference</caption><image source="AtomicData/python_reference.png" width="50%" alt="&quot;arrow from varN to box containing 100 object&quot;"/></figure>
         <pre>// C++ variable declaration and assignment of an integer value
 int varN = 100;</pre>
         <p>In C++ the results of running this code will look like the diagram below:</p>
         
-        <figure align="center" xml:id="fig-cpp-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.2: C++ variable</caption><image source="AtomicData/cpp_var.png" width="50%" alt="&quot;Location named varN containing value of 100&quot;"/></figure>
+        <figure align="center" xml:id="fig-cpp-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">C++ variable</caption><image source="AtomicData/cpp_var.png" width="50%" alt="&quot;Location named varN containing value of 100&quot;"/></figure>
         <p>In each case, when we want to output the value to the console, we use the variable name
             to do so.</p>
         <p>But, we can also identify the memory location of the variable by its address.
@@ -117,7 +117,7 @@ int *ptrN;
 ptrN = &amp;varN;</pre>
                 <p>The results of running this C++ code will look like the diagram below.</p>
                 
-                <figure align="center" xml:id="id3"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.3: View into memory with pointers</caption><image source="AtomicData/new_new_point2.png" width="50%" alt="image"/></figure>
+                <figure align="center" xml:id="id3"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">View into memory with pointers</caption><image source="AtomicData/new_new_point2.png" width="50%" alt="image"/></figure>
             </subsubsection>
         </subsection>
         <subsection xml:id="atomic-data_accessing-values-from-pointers">
@@ -190,7 +190,7 @@ int main( ) {
             </blockquote>
             <p><term>This is BAD, BAD, BAD!</term></p>
             
-            <figure align="center" xml:id="id4"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.4: dangling pointer reference</caption><image source="AtomicData/new_point_broken.png" width="50%" alt="image"/></figure>
+            <figure align="center" xml:id="id4"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Dangling pointer reference</caption><image source="AtomicData/new_point_broken.png" width="50%" alt="image"/></figure>
             <p>If your compiler does not catch that error (the one for this class may),
                 the first <c>cout</c> instruction outputs</p>
             <pre>After changing *ptrN, varN now has: 50</pre>
