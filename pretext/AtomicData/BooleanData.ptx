@@ -142,7 +142,7 @@ main()
                             logical and
                         </cell>
                         <cell>
-                            <m>&amp;&amp;</m>
+                            &amp;&amp;
                         </cell>
                         <cell>
                             Both operands true for result to be true
