@@ -278,7 +278,14 @@ int main() {
         <p>The order of operations given to a turtle is important, as some actions must be completed
             one after another. A good example of this is the <c classes="code">begin_fill</c> and <c classes="code">end_fill</c>
             pattern, which must be called in that specified order to actually fill a shape.</p>
-<exercise label="cturtle_question_3" indent="show" language="python"><statement>
+
+<reading-questions xml:id="rqs-turtle-and-turtle-screen">
+    <title>Reading Questions</title>
+    
+    
+
+
+            <exercise label="cturtle_question_3" indent="show" language="python"><statement>
         <p>Construct a program that fills a green triangle using begin_fill and end_fill
             using the example code above as a guide.</p>
 </statement>
@@ -313,5 +320,7 @@ int main() {
 <exercise label="cturtle_dnd_1">
     <statement><p>Match the turtle method descriptions to the methods they belong to.</p></statement>
     
-<matches><match order="1"><premise>turn to the left.</premise><response>turtle.left</response></match><match order="10"><premise>change the speed</premise><response>turtle.speed</response></match><match order="2"><premise>turn to the right.</premise><response>turtle.right</response></match><match order="3"><premise>pick pen up.</premise><response>turtle.penup</response></match><match order="4"><premise>put pen down.</premise><response>turtle.pendown</response></match><match order="5"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="6"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="7"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="8"><premise>change the pen color.</premise><response>turtle.pencolor</response></match><match order="9"><premise>change the pen size.</premise><response>turtle.width</response></match></matches></exercise>    </section>
+<matches><match order="1"><premise>turn to the left.</premise><response>turtle.left</response></match><match order="10"><premise>change the speed</premise><response>turtle.speed</response></match><match order="2"><premise>turn to the right.</premise><response>turtle.right</response></match><match order="3"><premise>pick pen up.</premise><response>turtle.penup</response></match><match order="4"><premise>put pen down.</premise><response>turtle.pendown</response></match><match order="5"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="6"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="7"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="8"><premise>change the pen color.</premise><response>turtle.pencolor</response></match><match order="9"><premise>change the pen size.</premise><response>turtle.width</response></match></matches></exercise>    
+</reading-questions>
+</section>
 
