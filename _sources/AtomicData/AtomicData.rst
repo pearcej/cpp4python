@@ -195,7 +195,7 @@ and logical operators with examples shown in the session that follows.
           greater than or equal     :math:`>=`                                 Greater than or equal to operator
                           equal     :math:`==`                                                 Equality operator
                       not equal     :math:`!=`                                                Not equal operator
-                    logical and     :math:`&&`                          Both operands true for result to be true
+                    logical and           `&&`                          Both operands true for result to be true
                      logical or     :math:`||`        One or the other operand is true for the result to be true
                     logical not      :math:`!`   Negates the truth value, false becomes true, true becomes false
     =========================== ============== =================================================================
