@@ -80,11 +80,12 @@ for i in range(4):
 turt.end_fill()
         </input>
     </program>
-
+<reading-questions xml:id="rqs-introduction">
+    <title>Reading Question</title>
     <exercise label="cturtle_question_1">
         <statement>
 
-            <p>Q-3: How might students benefit from having a visual representation such as C-Turtle? Check all that apply.</p>
+            <p>How might students benefit from having a visual representation such as C-Turtle? Check all that apply.</p>
 
         </statement>
 <choices>
@@ -127,6 +128,7 @@ turt.end_fill()
 </choices>
 
     </exercise>
+</reading-questions>
         </subsection>
     </section>
 

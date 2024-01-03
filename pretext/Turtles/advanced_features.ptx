@@ -107,62 +107,65 @@ int main(){
 }
 </input></program>
 
-    <exercise label="cturtle_advanced_mchoice_1">
-        <statement>
-
-        <p>Q-1: How many frames of animation does the above code create?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>3</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>6</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! Consider the tracer setting for the screen.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>1</p>
-                </statement>
-                <feedback>
-                    <p>Correct!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>12</p>
-                </statement>
-                <feedback>
-                    <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
+    
         <p>Similarly to tracer settings, every action a turtle takes is also added to the <em>undo queue</em>. This allows it to keep track
             of actions it is performing over a period of time. The queue is only allowed to grow to a certain size, starting at 100 actions total.
             This is modifiable through the <c classes="code">setundobuffer</c> method that belongs to turtles. Every action is added, even if
             the action doesn't change anything visually. This feature is comparable to the <q>undo</q> tool available in most text editors.
             Turtles can <q>undo</q> their progress with the <c classes="code">undo</c> method.</p>
-
+           
+            <reading-questions xml:id="rqs-advanced-features">
+                <title>Reading Questions</title>
+            <exercise label="cturtle_advanced_mchoice_1">
+                <statement>
+        
+                <p>How many frames of animation does the above code create?</p>
+        
+                </statement>
+        <choices>
+        
+                    <choice>
+                        <statement>
+                            <p>3</p>
+                        </statement>
+                        <feedback>
+                            <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
+                        </feedback>
+                    </choice>
+        
+                    <choice>
+                        <statement>
+                            <p>6</p>
+                        </statement>
+                        <feedback>
+                            <p>Incorrect! Consider the tracer setting for the screen.</p>
+                        </feedback>
+                    </choice>
+        
+                    <choice correct="yes">
+                        <statement>
+                            <p>1</p>
+                        </statement>
+                        <feedback>
+                            <p>Correct!</p>
+                        </feedback>
+                    </choice>
+        
+                    <choice>
+                        <statement>
+                            <p>12</p>
+                        </statement>
+                        <feedback>
+                            <p>Incorrect! Consider how many actions the turtle takes in the for loop.</p>
+                        </feedback>
+                    </choice>
+        </choices>
+        
+            </exercise>
     <exercise label="cturtle_advanced_mchoice_2">
         <statement>
 
-        <p>Q-2: How many actions will be in the turtle's undo queue for the code above?</p>
+        <p>How many actions will be in the turtle's undo queue for the code above?</p>
 
         </statement>
 <choices>
@@ -205,5 +208,9 @@ int main(){
 </choices>
 
     </exercise>
+
+        
+        
+    </reading-questions>
     </section>
 

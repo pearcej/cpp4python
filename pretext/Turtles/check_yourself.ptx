@@ -1,6 +1,9 @@
 <section xml:id="turtles_check-yourself">
         <title>Check Yourself</title>
-
+<reading-questions xml:id="rqs-check-yourself8">
+    <title>Reading Questions</title>
+    
+    
     <program xml:id="turtle_checkyourself_ac_1" interactive="activecode" language="cpp">
         <input>
 #include &lt;CTurtle.hpp&gt;
@@ -28,7 +31,7 @@ int main() {
     <exercise label="turtle_checkyourself_mchoice_1">
         <statement>
 
-        <p>Q-2: How large would the undo queue be for the above code example?</p>
+        <p>How large would the undo queue be for the above code example?</p>
 
         </statement>
 <choices>
@@ -92,7 +95,7 @@ int main() {
     <exercise label="turtle_checkyourself_mchoice_2">
         <statement>
 
-        <p>Q-3: What kind of shape does the above activecode create?</p>
+        <p>What kind of shape does the above activecode create?</p>
 
         </statement>
 <choices>
@@ -139,7 +142,7 @@ int main() {
     <exercise label="turtle_checkyourself_mchoice_3">
         <statement>
 
-        <p>Q-4: You can have more than one turtle on one screen.</p>
+        <p>You can have more than one turtle on one screen.</p>
 
         </statement>
 <choices>
@@ -164,5 +167,6 @@ int main() {
 </choices>
 
     </exercise>
+</reading-questions>
     </section>
 
