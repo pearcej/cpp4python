@@ -290,7 +290,7 @@ int main() {
             using the example code above as a guide.</p>
 </statement>
 <blocks><block order="7">
-<cline>#include &amp;#x003C&amp;#x0043&amp;#x0054&amp;#x0075&amp;#x0072&amp;#x0074&amp;#x006C&amp;#x0065.hpp&gt;</cline>
+<cline>#include &lt;CTurtle.hpp&gt;</cline>
 <cline>namespace ct = cturtle;</cline>
 </block><block order="5">
 <cline>int main(){</cline>
