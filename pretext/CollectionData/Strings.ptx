@@ -253,7 +253,18 @@ main()
     <exercise label="matching_strings">
         <statement><p> Match the String operations with their corresponding explination.</p></statement>
         <feedback><p>Feedback shows incorrect matches.</p></feedback>
-    <matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="10"><premise>find</premise><response> Returns the index of the first occurrence of item.</response></match><match order="2"><premise>=</premise><response> Assigns value to an element.</response></match><match order="3"><premise>push_back</premise><response>Adjoins a character to the end of the string.</response></match><match order="4"><premise>pop_back</premise><response>Removes the last character from the end of the string.</response></match><match order="5"><premise>insert</premise><response>Injects a string at a specific index.</response></match><match order="6"><premise>erase</premise><response>Deletes an element from one index to another.</response></match><match order="7"><premise>size</premise><response>Returns the capacity of the string.</response></match><match order="8"><premise>+</premise><response>connects strings.</response></match><match order="9"><premise>append</premise><response>Adjoins a string to the end of the string.</response></match></matches></exercise>
+    <matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="2"><premise>find</premise><response> Returns the index of the first occurrence of item.</response></match><match order="3"><premise>=</premise><response> Assigns value to an element.</response></match><match order="4"><premise>push_back</premise><response>Adjoins a character to the end of the string.</response></match><match order="5"><premise>pop_back</premise><response>Removes the last character from the end of the string.</response></match></matches></exercise>
+    <exercise label="matching_strings1">
+        <statement><p> Match the String operations with their corresponding explination.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches>
+        <match order="1"><premise>insert</premise><response>Injects a string at a specific index.</response></match><match order="2"><premise>erase</premise><response>Deletes an element from one index to another.</response></match><match order="3"><premise>size</premise><response>Returns the capacity of the string.</response></match><match order="4"><premise>+</premise><response>connects strings.</response></match><match order="5"><premise>append</premise><response>Adjoins a string to the end of the string.</response></match>
+    </matches>
+    </exercise>
+
+
+
+
     <exercise label="string_types">
         <statement><p>Drag each data type to its' corresponding C++ initialization syntax.</p></statement>
         <feedback><p>Feedback shows incorrect matches.</p></feedback>
