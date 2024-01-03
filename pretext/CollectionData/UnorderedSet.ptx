@@ -16,7 +16,7 @@
             have worked with sets in a mathematics setting. <xref ref="collection-data_collection-data_tab-setmethods"/>
             provides a summary. Examples of their use follow.</p>
         
-        <table xml:id="collection-data_id1"><tabular>
+        <table xml:id="collection-data_collection-data_tab-setmethods"><tabular>
             <title><term>Table 6: Methods Provided by Sets in C++</term></title>
             
                 
