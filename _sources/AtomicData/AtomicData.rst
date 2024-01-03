@@ -270,8 +270,8 @@ Consider the following session:
         return 0;
     }
 
-The declaration ``int theSum = 0;`` creates a variable called
-``theSum`` and initializes it to hold the data value of ``0``.
+The declaration ``int theSum = 4;`` creates a variable called
+``theSum`` and initializes it to hold the data value of ``4``.
 As in Python, the right-hand side of each assignment
 statement is evaluated and the resulting data value is
 “assigned” to the variable named on the left-hand side.

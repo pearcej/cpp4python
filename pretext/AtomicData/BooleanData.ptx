@@ -238,8 +238,8 @@ int main(){
 }
         </input>
     </program>
-        <p>The declaration <c>int theSum = 0;</c> creates a variable called
-            <c>theSum</c> and initializes it to hold the data value of <c>0</c>.
+        <p>The declaration <c>int theSum = 4;</c> creates a variable called
+            <c>theSum</c> and initializes it to hold the data value of <c>4</c>.
             As in Python, the right-hand side of each assignment
             statement is evaluated and the resulting data value is
             <q>assigned</q> to the variable named on the left-hand side.
