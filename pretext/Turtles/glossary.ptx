@@ -109,7 +109,19 @@
     <statement><p>
 </p></statement>
     
-<matches><match order="1"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="10"><premise>write some text to the canvas.</premise><response>turtle.write</response></match><match order="2"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="3"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="4"><premise>change the paintbrush color.</premise><response>turtle.pencolor</response></match><match order="5"><premise>change the paintbrush size.</premise><response>turtle.width</response></match><match order="6"><premise>change the speed</premise><response>turtle.speed</response></match><match order="7"><premise>move backward.</premise><response>turtle.back</response></match><match order="8"><premise>move forward.</premise><response>turtle.forward</response></match><match order="9"><premise>move to a specific coordinate.</premise><response>turtle.goto</response></match></matches></exercise>        </reading-questions>
+<matches><match order="1"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="10"><premise>write some text to the canvas.</premise><response>turtle.write</response></match><match order="2"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="3"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="4"><premise>change the paintbrush color.</premise><response>turtle.pencolor</response></match></matches></exercise>        
+
+<exercise label="cturtle_dnd_glossary1">
+    <statement><p>
+</p></statement>
+<matches>
+    <match order="1"><premise>change the speed</premise><response>turtle.speed</response></match><match order="2"><premise>move backward.</premise><response>turtle.back</response></match><match order="3"><premise>move forward.</premise><response>turtle.forward</response></match><match order="4"><premise>move to a specific coordinate.</premise><response>turtle.goto</response></match>
+    <match order="5"><premise>change the paintbrush size.</premise><response>turtle.width</response></match>
+</matches>
+
+</exercise>
+
+</reading-questions>
 
     </section>
 
