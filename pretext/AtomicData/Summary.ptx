@@ -17,7 +17,7 @@
                 <p>Pointers are a type of variable that stores a memory address. To declare a pointer, an  <c>*</c> is used before the variable name that is supposed to store the location.</p>
             </li>
         </ol></p>
-        <reading-questions xml:id="rqs-">
+        <reading-questions xml:id="rqs-summary2">
             <exercise label = "summary-m">
                 <statement>
 
