@@ -57,24 +57,6 @@
                     
                 </gi>
             
-        </glossary>
-<reading-questions xml:id="rqs-glossary5">
-    <title>Reading Question</title>
-
-<exercise label="matching_ch5">
-    <statement><p>Match the words to thier corresponding definition.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>string</premise><response>A sequential data structure consisting of zero or more characters.</response></match><match order="2"><premise>collection</premise><response> a grouping of a number of data items that have some shared significance or need to be operated upon together.</response></match><match order="3"><premise>vector</premise><response>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</response></match><match order="4"><premise>hash table</premise><response>a collection consisting of key-value pairs with an associated function that maps the key to the associated value.</response></match></matches></exercise>    
-
-<exercise label="matching_ch5-1">
-    <statement><p>Match the words to thier corresponding definition.</p></statement>
-    <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches>
-    <match order="1"><premise>array</premise><response>a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an index.</response></match>
-    <match order="2"><premise>word</premise><response>unit of data used by a particular processor design.</response></match><match order="3"><premise>mutability</premise><response>able to be modified.</response></match><match order="4"><premise>immutable</premise><response>unable to be modified.</response></match>
-    <match order="5"><premise>set</premise><response>An unordered data structure consisting of unique, immutable data values.</response></match>
-</matches>
-</exercise>
-</reading-questions>   
+        </glossary>  
     </section>
 

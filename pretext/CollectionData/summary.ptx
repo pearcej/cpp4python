@@ -1,7 +1,112 @@
 <section xml:id="collection-data_summary">
     <title>Summary and Reading Questions</title>
-    <p>
-        put summary here...
-    </p> 
+    <p><ol label="5">
+        <li>
+            <p>
+                A statically allocated C++ array is an ordered collection of one or more C++ data values of identical type stored in contiguous memory.
+            </p>
+        </li>
+        <li>
+            <p>
+                A vector is a dynamically allocated array with many useful methods. It is more similar to the Python list than the array.
+            </p>
+        </li>
+        <li>
+            <p>
+                C++ strings are a sequential collection of zero or more characters. They are very similar to Python strings.
+            </p>
+        </li>
+        <li>
+            <p>
+                A hash table is used to store keys-value pairs. It applies a related hash function to the key in order to compute the location of the associated value. Look-up is typically very fast.
+            </p>
+        </li>
+        <li>
+            <p>
+                A set is an unordered collection of unique values.
+            </p>
+        </li>
+    </ol></p>
+    <reading-questions xml:id="rqs-summary5">
+        <title>Reading Questions</title>
+        <exercise label="summary5-1">
+            <statement>
+    
+            <p>Which C++ structure is the best choice for a group of ordered data of a fixed length?</p>
+    
+            </statement>
+    <choices>
+    
+                <choice correct = "yes">
+                    <statement>
+                        <p>array</p>
+                    </statement>
+                    <feedback>
+                        <p>Correct!</p>
+                    </feedback>
+                </choice>
+    
+                <choice>
+                    <statement>
+                        <p>hash table</p>
+                    </statement>
+                    <feedback>
+                        <p>No. hash tables are not ordered.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>string</p>
+                    </statement>
+                    <feedback>
+                        <p> A string would only work for character data. Try again.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>vector</p>
+                    </statement>
+                    <feedback>
+                        <p> There is a better choice given that the group is fixed length.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>more than one of the above</p>
+                    </statement>
+                    <feedback>
+                        <p> Only of the above is best.
+                        </p>
+                    </feedback>
+                </choice>
+    </choices>
+        </exercise>
+    <exercise label="matching_collection-1">
+        <statement><p>Drag each data type to its' corresponding C++ initialization syntax.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+        <matches>
+        <match order="1"><premise>Array</premise><response>{“What”, “am”, “I”, "am"}</response></match><match order="2"><premise>Set</premise><response>{“What”, “am”, “I”}</response></match><match order="3"><premise>String</premise><response>“What am I”</response></match>
+        <match order="4"><premise>Hash Table</premise><response>{​{“What”, “am I”}​}</response></match>
+        </matches>
+    </exercise>
+       
+    <exercise label="matching_ch5">
+        <statement><p>Match the words to thier corresponding definition.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches><match order="1"><premise>string</premise><response>A sequential data structure consisting of zero or more characters.</response></match><match order="2"><premise>collection</premise><response> a grouping of a number of data items that have some shared significance or need to be operated upon together.</response></match><match order="3"><premise>vector</premise><response>sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.</response></match><match order="4"><premise>hash table</premise><response>a collection consisting of key-value pairs with an associated function that maps the key to the associated value.</response></match></matches></exercise>    
+    
+    <exercise label="matching_ch5-1">
+        <statement><p>Match the words to thier corresponding definition.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches>
+        <match order="1"><premise>array</premise><response>a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an index.</response></match>
+        <match order="2"><premise>word</premise><response>unit of data used by a particular processor design.</response></match><match order="3"><premise>mutability</premise><response>able to be modified.</response></match><match order="4"><premise>immutable</premise><response>unable to be modified.</response></match>
+        <match order="5"><premise>set</premise><response>An unordered data structure consisting of unique, immutable data values.</response></match>
+    </matches>
+    </exercise>  
+    </reading-questions>
 </section>
 
