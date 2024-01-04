@@ -63,37 +63,6 @@
                 
             </gi>
         
-    </glossary>
-<reading-questions xml:id="rqs-gloassary1">
-<title>Reading Questions</title>
-
-
-
-<exercise label="matching_intro">
-<statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
-<feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches>
-<match order="1"><premise>cin</premise><response>Standard input statement in C++.</response></match><match order="2"><premise>statically typed</premise><response>Programming language,  in which variables must be defined before they are used and cannot change during execution.</response></match><match order="3"><premise>comment</premise><response>a readable explanation  in the source code of a computer program.</response></match>
-</matches>
-</exercise>
-
-<exercise label="intro_matching">
-<statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
-<feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches>
-    <match order="1"><premise>dynamically typed</premise><response>Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.</response></match><match order="2"><premise>header</premise><response>library files that contain a variety of useful definitions. They are imported into any C++ program by using the #include statement.</response></match>
-    <match order="3"><premise>compiler</premise><response>Creates an executeable program by transforming code written in a high-level programming language into a low-level programming language.</response></match>
-</matches>
-</exercise>
-
-<exercise label="intro_matching2">
-<statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
-<feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches>
-    <match order="1"><premise>#include</premise><response>Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.</response></match><match order="2"><premise>interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been compiled into machine language</response></match><match order="3"><premise>machine code</premise><response> a computer program written in instructions that can be directly executed by a computer's CPU.</response></match>
-    <match order="4"><premise>cout</premise><response>Standard output statement in C++.</response></match>
-</matches>
-</exercise>
-</reading-questions>      
+    </glossary>      
 </section>
 

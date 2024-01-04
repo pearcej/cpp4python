@@ -1,7 +1,197 @@
 <section xml:id="introcpp_summary">
     <title>Summary and Reading Questions</title>
     <p>
-        put summary here...
-    </p> 
+        Now that we have run our “hello world” program, lets go back and look at it carefully to see what we can learn about the C++ language.
+     </p>
+     <program xml:id="intro_sumary" interactive="activecode" language="cpp">
+        <input>
+            /* This hello world program demonstrates the C++ concepts
+    of commenting, using libraries, and using output.
+*/
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main(){         // main() must exist &amp; return an int
+    cout &lt;&lt; "Hello World!\n";
+    return 0;       // 0 indicates program ended correctly.
+
+}
+        </input>
+    </program>
+    <p>
+        This simple example illustrates a few very important rules:
+    </p>
+    <p><ol label="1">
+        <li>
+            <p>Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.</p>
+        </li>
+        <li>
+            <p>Every C++ program must have a function which begins as <c>int main()</c>, and ends with the statement <c>return 0;</c> when successfully completed.</p>
+        </li>
+        <li>
+            <p>C++ statements are ended by a semi-colon.</p>
+        </li>
+        <li>
+            <p>White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using indentation to delineate blocks as is done in Python.</p>
+        </li>
+    </ol></p>
+    <reading-questions xml:id="rqs-summary1">
+        <title>Reading Questions</title>
+        <exercise label="summary1-1">
+            <statement>
+    
+            <p>What symbol or set of symbols will begin a comment in C++ when the comment extends only to the end of the line?</p>
+    
+            </statement>
+    <choices>
+    
+                <choice>
+                    <statement>
+                        <p>cout x;</p>
+                    </statement>
+                    <feedback>
+                        <p>Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator &lt;&lt;.</p>
+                    </feedback>
+                </choice>
+    
+                <choice>
+                    <statement>
+                        <p>output x;</p>
+                    </statement>
+                    <feedback>
+                        <p> No, output is not a C++ command or object.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>print x;</p>
+                    </statement>
+                    <feedback>
+                        <p> No, print is a Python command, but is not used in C++.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice correct ="yes">
+                    <statement>
+                        <p>none of the above</p>
+                    </statement>
+                    <feedback>
+                        <p> The correct statement would be "cout &lt;&lt; x;" or "std:cout x;" but the insertion operator is certainly needed.
+                        </p>
+                    </feedback>
+                </choice>
+    </choices>
+        </exercise>
+    <exercise label="summary1-2">
+        <statement>
+
+        <p>True or False: Both Python and C++ support multi-line comments. In both languages, they begin with <c>/* </c>and end with <c>*/</c>.</p>
+
+        </statement>
+<choices>
+            <choice>
+                <statement>
+                    <p>True</p>
+                </statement>
+                <feedback>
+                    <p>Sorry, both languages do support multi-line comments, but they look different.</p>
+                </feedback>
+            </choice>
+
+            <choice correct ="yes">
+                <statement>
+                    <p>False</p>
+                </statement>
+                <feedback>
+                    <p> Right! Python uses triple quotes while in C++ they begin with <c>/*</c> and end with <c>*/</c>.
+                    </p>
+                </feedback>
+            </choice>
+</choices>
+    </exercise>
+
+    <exercise label="summary1-3">
+        <statement>
+
+        <p>Given a variable called x. What statement will print the contents of x?</p>
+
+        </statement>
+<choices>
+            <choice>
+                <statement>
+                    <p>cout x;</p>
+                </statement>
+                <feedback>
+                    <p> Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator &lt;&lt;.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>output x;</p>
+                </statement>
+                <feedback>
+                    <p> No, output is not a C++ command or object.
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>print x;</p>
+                </statement>
+                <feedback>
+                    <p> No, print is a Python command, but is not used in C++.
+                    </p>
+                </feedback>
+            </choice>
+            <choice correct ="yes">
+                <statement>
+                    <p>none of the above</p>
+                </statement>
+                <feedback>
+                    <p> The correct statement would be "cout &lt;&lt; x;" or "std:cout x;" but the insertion operator is certainly needed.
+                    </p>
+                </feedback>
+            </choice>
+</choices>
+    </exercise>
+    
+    <exercise label = "summary1-4">
+        <statement>
+<p>What keyword from the Standard Library (std) is used in conjunction with the extraction operator to accept C++ input from the keyboard as the standard input? <var/></p></statement><setup><var>
+<condition string="cin"><feedback><p>Right! It stands for character input.</p></feedback></condition>
+<condition string="raw_input"><feedback><p>That's Python, not C++!</p> </feedback></condition>
+<condition string="input"><feedback><p>That's Python, not C++!</p> </feedback></condition>
+<condition string="scanf"><feedback><p>That's C, not C++!</p> </feedback></condition>
+<condition string="^\s*default\s*$"><feedback><p>Incorrect. Please try again.</p></feedback></condition></var></setup>
+</exercise> 
+<exercise label="matching_intro">
+    <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
+    <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches>
+    <match order="1"><premise>cin</premise><response>Standard input statement in C++.</response></match><match order="2"><premise>statically typed</premise><response>Programming language,  in which variables must be defined before they are used and cannot change during execution.</response></match><match order="3"><premise>comment</premise><response>a readable explanation  in the source code of a computer program.</response></match>
+    </matches>
+    </exercise>
+    
+    <exercise label="intro_matching">
+    <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
+    <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches>
+        <match order="1"><premise>dynamically typed</premise><response>Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.</response></match><match order="2"><premise>header</premise><response>library files that contain a variety of useful definitions. They are imported into any C++ program by using the #include statement.</response></match>
+        <match order="3"><premise>compiler</premise><response>Creates an executeable program by transforming code written in a high-level programming language into a low-level programming language.</response></match>
+    </matches>
+    </exercise>
+    
+    <exercise label="intro_matching2">
+    <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
+    <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches>
+        <match order="1"><premise>#include</premise><response>Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.</response></match><match order="2"><premise>interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been compiled into machine language</response></match><match order="3"><premise>machine code</premise><response> a computer program written in instructions that can be directly executed by a computer's CPU.</response></match>
+        <match order="4"><premise>cout</premise><response>Standard output statement in C++.</response></match>
+    </matches>
+    </exercise>
+</reading-questions>
 </section>
 
