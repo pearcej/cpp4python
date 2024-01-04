@@ -1,5 +1,5 @@
 <section xml:id="functions_functions_functions_summary">
-        <title>Summary</title>
+        <title>Summary &amp; Reading Questions</title>
         <p><ol label="1">
             <li>
                 <p>Like Python, C++ supports the use of functions.</p>
@@ -20,5 +20,22 @@
                 <p>To pass an array to a function you need to use an array parameter. The array parameter is denoted by the array variable name followed by set of square brackets ([ and ]).</p>
             </li>
         </ol></p>
+        <reading-questions xml:id="rqs-summary4">
+            <title>Reading Questions</title>
+    <exercise label="matching_Functions">
+        <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches><match order="1"><premise>argument</premise><response>Data passed to parameter.</response></match><match order="2"><premise>function </premise><response> Section of code that performs a procedure and usually is named meaningfully.</response></match><match order="3"><premise>overloading</premise><response>Specifying more than one definition for the same function name.</response></match></matches></exercise>      
+    <exercise label="matching_Functions1">
+        <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches>
+        <match order="1"><premise>parameter</premise><response>Variable in a function or method definition that accepts data passed from an argument.</response></match><match order="2"><premise>reference</premise><response>Value that indicates an address in a computer's memory.</response></match><match order="3"><premise>void</premise><response>indicates a function has no return value.</response></match>
+        <match order="4"><premise>const</premise><response>indicates a variable or value is unchanging.</response></match>
+    
+    
+    </matches>
+    </exercise>
+    </reading-questions>  
     </section>
 
