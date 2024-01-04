@@ -46,37 +46,46 @@ int main(){         // main() must exist &amp; return an int
     
                 <choice>
                     <statement>
-                        <p>cout x;</p>
+                        <p>&lt;!-</p>
                     </statement>
                     <feedback>
-                        <p>Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator &lt;&lt;.</p>
+                        <p>No, &lt;!- is used in html to begin comments, but it is not used in C++.</p>
                     </feedback>
                 </choice>
     
                 <choice>
                     <statement>
-                        <p>output x;</p>
+                        <p>⋕</p>
                     </statement>
                     <feedback>
-                        <p> No, output is not a C++ command or object.
-                        </p>
-                    </feedback>
-                </choice>
-                <choice>
-                    <statement>
-                        <p>print x;</p>
-                    </statement>
-                    <feedback>
-                        <p> No, print is a Python command, but is not used in C++.
+                        <p> No, ⋕ is used in Python for comments, but in C++ it is used for compiler directives such as loading a code library.
                         </p>
                     </feedback>
                 </choice>
                 <choice correct ="yes">
                     <statement>
+                        <p>//</p>
+                    </statement>
+                    <feedback>
+                        <p> Correct!
+                        </p>
+                    </feedback>
+                </choice>
+                <choice >
+                    <statement>
+                        <p>@</p>
+                    </statement>
+                    <feedback>
+                        <p> No, @ is not used in C++.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice >
+                    <statement>
                         <p>none of the above</p>
                     </statement>
                     <feedback>
-                        <p> The correct statement would be "cout &lt;&lt; x;" or "std:cout x;" but the insertion operator is certainly needed.
+                        <p> One of the above is correct.
                         </p>
                     </feedback>
                 </choice>
@@ -169,7 +178,8 @@ int main(){         // main() must exist &amp; return an int
     <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
     <matches>
-    <match order="1"><premise>cin</premise><response>Standard input statement in C++.</response></match><match order="2"><premise>statically typed</premise><response>Programming language,  in which variables must be defined before they are used and cannot change during execution.</response></match><match order="3"><premise>comment</premise><response>a readable explanation  in the source code of a computer program.</response></match>
+    <match order="1"><premise>dynamically typed</premise><response>Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.</response></match>
+    <match order="2"><premise>statically typed</premise><response>Programming language,  in which variables must be defined before they are used and cannot change during execution.</response></match><match order="3"><premise>comment</premise><response>a readable explanation  in the source code of a computer program.</response></match>
     </matches>
     </exercise>
     
@@ -177,8 +187,12 @@ int main(){         // main() must exist &amp; return an int
     <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
     <matches>
-        <match order="1"><premise>dynamically typed</premise><response>Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.</response></match><match order="2"><premise>header</premise><response>library files that contain a variety of useful definitions. They are imported into any C++ program by using the #include statement.</response></match>
-        <match order="3"><premise>compiler</premise><response>Creates an executeable program by transforming code written in a high-level programming language into a low-level programming language.</response></match>
+
+        <match order="1"><premise>#include</premise><response>Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.</response></match>
+        <match order="2"><premise>header</premise><response>library files that contain a variety of useful definitions. They are imported into any C++ program by using the #include statement.</response></match>
+        <match order="3"><premise>cin</premise><response>Standard input statement in C++.</response></match>
+        <match order="4"><premise>cout</premise><response>Standard output statement in C++.</response></match>
+        
     </matches>
     </exercise>
     
@@ -186,8 +200,10 @@ int main(){         // main() must exist &amp; return an int
     <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
     <matches>
-        <match order="1"><premise>#include</premise><response>Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.</response></match><match order="2"><premise>interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been compiled into machine language</response></match><match order="3"><premise>machine code</premise><response> a computer program written in instructions that can be directly executed by a computer's CPU.</response></match>
-        <match order="4"><premise>cout</premise><response>Standard output statement in C++.</response></match>
+
+        <match order="1"><premise>compiler</premise><response>Creates an executeable program by transforming code written in a high-level programming language into a low-level programming language.</response></match>
+        <match order="2"><premise>interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been compiled into machine language</response></match><match order="3"><premise>machine code</premise><response> a computer program written in instructions that can be directly executed by a computer's CPU.</response></match>
+       
     </matches>
     </exercise>
 </reading-questions>
