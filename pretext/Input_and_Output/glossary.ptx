@@ -28,16 +28,5 @@
                 </gi>
             
         </glossary>
-        <reading-questions xml:id="rqs-glossary6">
-            <title>Reading Question</title>
-            <exercise label="matching_ch6-1">
-                <statement><p>Match the words to thier corresponding definition.</p></statement>
-                <feedback><p>Feedback shows incorrect matches.</p></feedback>
-            <matches>
-                <match order="1"><premise>stream</premise><response>An abstraction that allows you to send or receive an unknown number of bytes in input or output.</response></match>
-                <match order="2"><premise>member function</premise><response>A function that's associated with a certain type of object.</response></match><match order="3"><premise>c-string</premise><response>An array of characters that ends with a terminating null character.</response></match><match order="4"><premise>End-Of-File</premise><response>A flag that lets programs know when to stop.</response></match>
-            </matches>
-            </exercise>
-        </reading-questions>
     </section>
     
