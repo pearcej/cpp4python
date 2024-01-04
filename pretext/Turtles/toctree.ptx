@@ -8,6 +8,5 @@
         <xi:include href='./differences.ptx' />
         <xi:include href='./pattern_application.ptx' />
         <xi:include href='./summary.ptx' />
-        <xi:include href='./check_yourself.ptx' />
         <xi:include href='./glossary.ptx' />
     </chapter>
