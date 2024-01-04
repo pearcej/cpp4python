@@ -52,5 +52,12 @@
                 </gi>
             
         </glossary>
+        <reading-questions xml:id="rqs-glossary2">
+            <title>Reading Question</title>
+            <exercise label="matching_ch2">
+                <statement><p> Drag each glossary term to its' corresponding definition. (Note: none of the data types are in this matching, but they are in the glossary)</p></statement>
+                <feedback><p>Feedback shows incorrect matches.</p></feedback>
+            <matches><match order="1"><premise>address-of</premise><response>(&amp;) is used to access the memory address of a C++ variable.</response></match><match order="2"><premise>atomic data type</premise><response> Data type that cannot be broken down into any simpler data elements.</response></match><match order="3"><premise>dereference</premise><response>Reads data in a pointers memory location.</response></match><match order="4"><premise>pointer</premise><response>Variables that store and manipulate memory addresses.</response></match></matches></exercise>   
+        </reading-questions>
     </section>
     
