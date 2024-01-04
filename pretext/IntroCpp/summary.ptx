@@ -131,7 +131,7 @@ int main(){         // main() must exist &amp; return an int
                     <p>cout x;</p>
                 </statement>
                 <feedback>
-                    <p> Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator &lt;&lt;.</p>
+                    <p> Partially right. The object `cout` stands for character output and you need it, but you will also need to use the insertion operator &lt;&lt;.</p>
                 </feedback>
             </choice>
 
@@ -158,7 +158,7 @@ int main(){         // main() must exist &amp; return an int
                     <p>none of the above</p>
                 </statement>
                 <feedback>
-                    <p> The correct statement would be "cout &lt;&lt; x;" or "std:cout x;" but the insertion operator is certainly needed.
+                    <p> The correct statement would be "cout &lt;&lt; x;" or "std:cout &lt;&lt; x;" but the insertion operator is certainly needed.
                     </p>
                 </feedback>
             </choice>

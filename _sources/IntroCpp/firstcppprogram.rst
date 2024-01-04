@@ -402,10 +402,10 @@ Check yourself
    :answer_c: print x;
    :answer_d: none of the above
    :correct: d
-   :feedback_a: Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator <<.
+   :feedback_a: Partially right. The object cout stands for character output and you need it, but you will also need to use the insertion operator <<.
    :feedback_b: No, output is not a C++ command or object.
    :feedback_c: No, print is a Python command, but is not used in C++.
-   :feedback_d: The correct statement would be "cout << x;" or "std:cout x;" but the insertion operator is certainly needed.
+   :feedback_d: The correct statement would be "cout << x;" or "std:cout << x;" but the insertion operator is certainly needed.
 
    Given a variable called x. What statement will print the contents of x?
 
