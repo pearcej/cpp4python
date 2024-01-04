@@ -5,17 +5,15 @@
      </p>
      <program xml:id="intro_sumary" interactive="activecode" language="cpp">
         <input>
-            /* This hello world program demonstrates the C++ concepts
+/* This hello world program demonstrates the C++ concepts
     of commenting, using libraries, and using output.
 */
 #include &lt;iostream&gt;
-#include &lt;cmath&gt;
 using namespace std;
 
 int main(){         // main() must exist &amp; return an int
     cout &lt;&lt; "Hello World!\n";
     return 0;       // 0 indicates program ended correctly.
-
 }
         </input>
     </program>
@@ -27,7 +25,7 @@ int main(){         // main() must exist &amp; return an int
             <p>Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.</p>
         </li>
         <li>
-            <p>Every C++ program must have a function which begins as <c>int main()</c>, and ends with the statement <c>return 0;</c> when successfully completed.</p>
+            <p>Every C++ program must have a function which begins as <c>int main()</c>, and ends with the statement <c>return 0;</c> which returns 0 when successfully completed.</p>
         </li>
         <li>
             <p>C++ statements are ended by a semi-colon.</p>
@@ -36,7 +34,7 @@ int main(){         // main() must exist &amp; return an int
             <p>White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using indentation to delineate blocks as is done in Python.</p>
         </li>
     </ol></p>
-    <reading-questions xml:id="rqs-summary1">
+    <reading-questions xml:id="rqs-summary-c1">
         <title>Reading Questions</title>
         <exercise label="summary1-1">
             <statement>
