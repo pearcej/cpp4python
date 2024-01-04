@@ -1,5 +1,5 @@
 <section xml:id="control_structures_control_structures_control_-structures_summary">
-        <title>Summary</title>
+        <title>Summary &amp; Reading Questions</title>
         <p><ol label="1">
             <li>
                 <p>Like Python C++ also supports the <c>if-else</c> conditional statements, and they behave the same way as they do in a Python program.</p>
@@ -14,5 +14,11 @@
                 <p>C++ supports the use of Boolean expressions in <c>if-else</c> statements.</p>
             </li>
         </ol></p>
+        <reading-questions xml:id="rqs-summary3">
+            <title>Reading Question</title>
+        <exercise label="matching_ControlStructures">
+            <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
+            <feedback><p>Feedback shows incorrect matches.</p></feedback>
+        <matches><match order="1"><premise>break</premise><response>Terminates the current block of code and resumes the program outside of it.</response></match><match order="2"><premise>case</premise><response>Condition in a switch statement for a variable to be tested against.</response></match><match order="3"><premise>conditional</premise><response>Statement that tests whether a condition is true or false .</response></match><match order="4"><premise>loop</premise><response>Series of instructions repeated infinitely or until a condition is met.</response></match><match order="5"><premise>switch</premise><response>Statement that tests a variable against possible conditions for it.</response></match></matches></exercise> </reading-questions>
     </section>
 
