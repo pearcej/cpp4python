@@ -7,5 +7,6 @@
         <xi:include href='./Strings.ptx' />
         <xi:include href='./HashTables.ptx' />
         <xi:include href='./UnorderedSet.ptx' />
+        <xi:include href='./summary.ptx' />
         <xi:include href='./glossary.ptx' />
     </chapter>
