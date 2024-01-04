@@ -1,5 +1,5 @@
 <section xml:id="exception_handling_exception_handling_exception_-handling_summary">
-        <title>Summary</title>
+        <title>Summary &amp; Reading Questions</title>
         <p><ol label="1">
             <li>
                 <p>There are two types of errors that occur while writing programs: syntax errors and logic errors</p>
@@ -43,7 +43,13 @@
 <cline><area>else {</area>:</cline>
 <cline><area>cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
 <cline>}</cline>
-</areas></exercise>  </reading-questions>
+</areas></exercise>  
+
+<exercise label="matching_ch7">
+    <statement><p>Match the words with their corresponding definition.</p></statement>
+    <feedback><p>Feedback shows incorrect matches.</p></feedback>
+<matches><match order="1"><premise>exception</premise><response>Response to an unusual circumstance while a program is running.</response></match><match order="2"><premise>logic error</premise><response> Error in which the program/code functions, but performs incorrectly.</response></match><match order="3"><premise>runtime</premise><response>Error that occurs when a program starts.</response></match><match order="4"><premise>syntax</premise><response>Error  in the structure of a statement or expression of code.</response></match></matches></exercise> 
+</reading-questions>
       
     </section>
 
