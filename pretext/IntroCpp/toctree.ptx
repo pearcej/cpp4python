@@ -16,5 +16,6 @@
         <xi:include href='./introduction.ptx' />
         <xi:include href='./whylearncpp.ptx' />
         <xi:include href='./firstcppprogram.ptx' />
+        <xi:include href='./summary.ptx' />
         <xi:include href='./glossary.ptx' />
     </chapter>
