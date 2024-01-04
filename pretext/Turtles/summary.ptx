@@ -1,5 +1,5 @@
 <section xml:id="turtles_turtles_turtles_summary">
-        <title>Summary</title>
+        <title>Summary &amp; Reading Questions</title>
         <p><ul>
             <li>
                 <p>Turtles, originally from the Logo programming language, is used as an educational tool. It relates to a conceptual <q>turtle</q> that runs around on a canvas and draws things.</p>
@@ -20,5 +20,190 @@
                 <p>Every shape created and used by Turtles are a set of coordinates. We can change the shape of our turtles by using the <c classes="code">shape</c> method to one of four default shapes, or by manually entering coordinates and creating your own.</p>
             </li>
         </ul></p>
+        <reading-questions xml:id="rqs-summary8">
+            <title>Reading Question</title>
+            
+            
+        
+        <exercise label="cturtle_dnd_summary">
+            <statement><p>
+        </p></statement>
+            
+        <matches><match order="1"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="10"><premise>write some text to the canvas.</premise><response>turtle.write</response></match><match order="2"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="3"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="4"><premise>change the paintbrush color.</premise><response>turtle.pencolor</response></match></matches></exercise>        
+        
+        <exercise label="cturtle_dnd_glossary1">
+            <statement><p>
+        </p></statement>
+        <matches>
+            <match order="1"><premise>change the speed</premise><response>turtle.speed</response></match><match order="2"><premise>move backward.</premise><response>turtle.back</response></match><match order="3"><premise>move forward.</premise><response>turtle.forward</response></match><match order="4"><premise>move to a specific coordinate.</premise><response>turtle.goto</response></match>
+            <match order="5"><premise>change the paintbrush size.</premise><response>turtle.width</response></match>
+        </matches>
+        
+        </exercise>
+        <program xml:id="turtle_checkyourself_ac_1" interactive="activecode" language="cpp">
+        <input>
+#include &lt;CTurtle.hpp&gt;
+namespace ct = cturtle;
+
+int main() {
+    ct::TurtleScreen scr;
+    ct::Turtle turtle(scr);
+
+    turtle.begin_fill();
+
+    for(int i = 0; i &lt; 4; i++){
+        turtle.forward(50);
+        turtle.right(90);
+    }
+
+    turtle.end_fill();
+
+    scr.bye();
+    return 0;
+}
+        </input>
+    </program>
+
+    <exercise label="turtle_checkyourself_mchoice_1">
+        <statement>
+
+        <p>How large would the undo queue be for the above code example?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>13</p>
+                </statement>
+                <feedback>
+                    <p>No, think about how many times fill is used...</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>10</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>8</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider that almost everything a turtle does is an action, even filling.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>4</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider that there are some actions in a for loop.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        <program language="cpp"><input>
+#include &lt;CTurtle.hpp&gt;
+namespace ct = cturtle;
+
+int main() {
+    ct::TurtleScreen scr;
+    ct::Turtle turtle(scr);
+
+    for(int i = 0; i &lt; 5; i++){
+        turtle.forward(50);
+        turtle.right(144);
+    }
+
+    scr.bye();
+    return 0;
+}
+</input></program>
+
+    <exercise label="turtle_checkyourself_mchoice_2">
+        <statement>
+
+        <p>What kind of shape does the above activecode create?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Circle</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider how many times the for-loop iterates...</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>No shape</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! The turtle's pen is always down.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Pentagon</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect! Consider the angle the turtle turns every iteration.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Star</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="turtle_checkyourself_mchoice_3">
+        <statement>
+
+        <p>You can have more than one turtle on one screen.</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>True</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>False</p>
+                </statement>
+                <feedback>
+                    <p>Incorrect!</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        </reading-questions>
+        
     </section>
 
