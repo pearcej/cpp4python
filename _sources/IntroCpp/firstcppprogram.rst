@@ -327,7 +327,7 @@ and to name this memory location ``num.``
 Then whatever the user types in will be stored in the ``num`` variable.
 Using the ``cout`` function, we can write instructions that will prompt the user to enter data and then
 incorporate that data into further processing.
-For example, in the code above, the integer input is doubled and then displayed!
+For example, in the code above, the floating point number is doubled and then displayed!.
 
 We will talk more about type declarations in the section on data types, and
 we will go into more depth on input and output later when we discuss

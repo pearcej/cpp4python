@@ -2,12 +2,14 @@
 # ensure this file is tracked
 !.gitignore
 
-# don't track unpublished builds
+# don't track unpublished builds or stage
 output
-**/output
 
 # don't track assets generated from source
 generated-assets
+
+# don't track the executables.ptx file
+executables.ptx
 
 # don't track node packages
 node_modules
@@ -16,6 +18,7 @@ node_modules
 .error_schema.log
 cli.log
 **/cli.log
+logs
 
 # don't track OS related files (windows/macos/linux)
 .DS_Store
@@ -47,9 +50,6 @@ ehthumbs_vista.db
 .fuse_hidden*
 .Trash-*
 .nfs*
-
-# Don't track build logs
-logs/
 
 # Don't include VSCode generated files
 .vscode
@@ -88,6 +88,7 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
+
 # Don't include Dropbox settings and caches
 .dropbox
 .dropbox.attr
@@ -103,11 +104,27 @@ pretext/__pycache__/**
 # any file ending in ~ (backups, usually)
 *~
 
+build_info
 **/_build
 **/rsbuild
 **/build
+build/*
 published
 
 # Codespaces set-up
-
 .devcontainer.json
+
+# ignore temp files
+temp-*
+
+# Ignore the following (from runestone .gitignore):
+
+*.pyc
+__pycache__/
+
+sphinx-enki-info.txt
+sphinx_settings.json
+pavement.py
+
+# Don't track codechat config (will be generated automatically)
+codechat_config.yaml

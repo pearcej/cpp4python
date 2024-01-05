@@ -259,11 +259,11 @@ int main() {
                 Just like functions, all variables in C++ must be declared before use, and
                 they cannot change type. This is known as <term>static typing</term>.
                 The line <c>float num</c> essentially tells the compiler to set aside sufficient space for a floating point number,
-                and to name this memory location <c>num.</c>
+                and to name this memory location <c>num</c>.
                 Then whatever the user types in will be stored in the <c>num</c> variable.
                 Using the <c>cout</c> function, we can write instructions that will prompt the user to enter data and then
                 incorporate that data into further processing.
-                For example, in the code above, the integer input is doubled and then displayed!</p>
+                For example, in the code above, the floating point number is doubled and then displayed.</p>
             <p>We will talk more about type declarations in the section on data types, and
                 we will go into more depth on input and output later when we discuss
                 C++ streams and file handling.</p>
