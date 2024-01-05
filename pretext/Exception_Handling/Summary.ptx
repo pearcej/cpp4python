@@ -26,9 +26,9 @@
 <cline><area>cout &lt;&lt; "age:";</area>:</cline>
 <cline><area>cin &gt;&gt; age;</area>:</cline>
 <cline><area>if (age &gt; 18) {</area>:</cline>
-<cline><area>cout &lt;&lt; "You can vote!";}</area>:</cline>
+<cline><area>cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area>:</cline>
 <cline><area>else {</area>:</cline>
-<cline><area correct="yes">cout &lt;&lt; You cannot vote yet.;</area>:</cline>
+<cline><area correct="yes">cout &lt;&lt; You cannot vote in all countries with an 18 year old age for voting.;</area>:</cline>
 <cline>}</cline>
 </areas></exercise>
 <exercise label="logic_error">
@@ -39,9 +39,9 @@
 <cline><area>cout &lt;&lt; "age:";</area>:</cline>
 <cline><area>cin &gt;&gt; age;</area>:</cline>
 <cline><area correct="yes">if (age &gt; 18) {</area>:</cline>
-<cline><area>cout &lt;&lt; "You can vote!";}</area>:</cline>
+<cline><area>cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area>:</cline>
 <cline><area>else {</area>:</cline>
-<cline><area>cout &lt;&lt; You cannot vote yet.;</area>:</cline>
+<cline><area>cout &lt;&lt; You cannot vote in all countries with an 18 year old age for voting.;</area>:</cline>
 <cline>}</cline>
 </areas></exercise>  
 
