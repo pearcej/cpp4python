@@ -66,7 +66,7 @@ Pictorally, we get a stream of data flowing out of the program:
 
 Because out_stream is an object of type ``<ofstream>``, connecting it to the file named "anotherFile.txt" will create that file if it does not exist. If the file "anotherFile.txt" already exists, it will be wiped and replaced with whatever is fed into the output stream.
 
-To disconnect the ``ifstream`` in_stream from whatever file it opened, we use it's ``close()`` member function:
+To disconnect the ``ifstream`` in_stream from whatever file it opened, we use its ``close()`` member function:
 
 ::
 
