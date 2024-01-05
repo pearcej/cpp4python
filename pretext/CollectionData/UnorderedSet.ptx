@@ -102,8 +102,18 @@
                             Removes all elements from the set
                         </cell>
                     </row>
+                    <row>
+                        <cell>
+                            <c>find</c>
+                        </cell>
+                        <cell>
+                            <c>aset.find(item)</c>
+                        </cell>
+                        <cell>
+                            Find item in the set
+                        </cell>
+                    </row>
                 
-            
         </tabular></table>
         <p>The code below is an example of a program that can detect if a specific char is in an unordered set.</p>
 
