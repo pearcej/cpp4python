@@ -11,7 +11,7 @@
         
         <figure align="center" xml:id="fig-read-write"><image source="Input_and_Output/Write_Open.jpg" width="50%" alt="image"/></figure>
         <p>Because out_stream is an object of type <c>&lt;ofstream&gt;</c>, connecting it to the file named <q>anotherFile.txt</q> will create that file if it does not exist. If the file <q>anotherFile.txt</q> already exists, it will be wiped and replaced with whatever is fed into the output stream.</p>
-        <p>To disconnect the <c>ifstream</c> in_stream from whatever file it opened, we use it's <c>close()</c> member function:</p>
+        <p>To disconnect the <c>ifstream</c> in_stream from whatever file it opened, we use its <c>close()</c> member function:</p>
         <pre>in_stream.close();</pre>
         <p>To close the file for <c>out_stream</c>, we use its <c>close()</c> function, which also adds an end-of-file marker to indicate where the end of the file is:</p>
         <pre>out_stream.close();</pre>
