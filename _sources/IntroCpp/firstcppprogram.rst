@@ -391,10 +391,10 @@ Check yourself
   :answer_a: True
   :answer_b: False
   :correct: b
-  :feedback_a: Sorry, both languages do support multi-line comments, but they look different.
-  :feedback_b: Right!  Python uses triple quotes while in C++ they begin with /* and end with */.
+  :feedback_a: Sorry, multi-line comments are possible in both languages, but they look different.
+  :feedback_b: Right!  In C++ multiline comments begin with /* and end with */. In Python, one could use a triple quoted string.
   
-   True or False: Both Python and C++ support multi-line comments. In both languages, they begin with ``/*`` and end with ``*/``.
+   True or False: In both Python and C++, multi-line comments begin with ``/*`` and end with ``*/``.
 
 .. mchoice:: mc_comment_out
    :answer_a: cout x;
