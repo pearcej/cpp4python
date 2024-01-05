@@ -71,7 +71,7 @@
                     </row>
                     <row>
                         <cell>
-                            <c>add</c>
+                            <c>insert</c>
                         </cell>
                         <cell>
                             <c>aset.insert(item)</c>
@@ -82,7 +82,7 @@
                     </row>
                     <row>
                         <cell>
-                            <c>remove</c>
+                            <c>erase</c>
                         </cell>
                         <cell>
                             <c>aset.erase(item)</c>
