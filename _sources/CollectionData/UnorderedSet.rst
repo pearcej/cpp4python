@@ -43,6 +43,7 @@ provides a summary. Examples of their use follow.
                  ``insert``             ``aset.insert(item)``                                             Adds item to the set
                   ``erase``              ``aset.erase(item)``                                        Removes item from the set
                    ``clear``                  ``aset.clear()``                                Removes all elements from the set
+                   ``find``                  ``aset.find(item)``                                           Find item in the set
     ======================== ================================= ================================================================
 
 The code below is an example of a program that can detect if a specific char is in an unordered set.
