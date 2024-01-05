@@ -40,8 +40,8 @@ provides a summary. Examples of their use follow.
                    ``union``                   ``set_union()``               Returns a new set with all elements from both sets
             ``intersection``            ``set_intersection()``   Returns a new set with only those elements common to both sets
               ``difference``              ``set_difference()``    Returns a new set with all items from first set not in second
-                     ``add``             ``aset.insert(item)``                                             Adds item to the set
-                  ``remove``              ``aset.erase(item)``                                        Removes item from the set
+                 ``insert``             ``aset.insert(item)``                                             Adds item to the set
+                  ``erase``              ``aset.erase(item)``                                        Removes item from the set
                    ``clear``                  ``aset.clear()``                                Removes all elements from the set
     ======================== ================================= ================================================================
 
