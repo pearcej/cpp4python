@@ -50,6 +50,7 @@ ehthumbs_vista.db
 .fuse_hidden*
 .Trash-*
 .nfs*
+.idea/*
 
 # Don't include VSCode generated files
 .vscode
