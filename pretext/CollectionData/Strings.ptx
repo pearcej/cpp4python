@@ -258,7 +258,7 @@ main()
         <statement><p> Match the String operation with their corresponding explanation.</p></statement>
         <feedback><p>Feedback shows incorrect matches.</p></feedback>
     <matches>
-        <match order="1"><premise>insert</premise><response>Injects a string at a specific index.</response></match><match order="2"><premise>erase</premise><response>Deletes an element from one index to another.</response></match><match order="3"><premise>size</premise><response>Returns the capacity of the string.</response></match><match order="4"><premise>+</premise><response>connects strings.</response></match><match order="5"><premise>append</premise><response>Adjoins a string to the end of the string.</response></match>
+        <match order="1"><premise>insert</premise><response>Injects a string at a specific index.</response></match><match order="2"><premise>erase</premise><response>Deletes an element from one index to another.</response></match><match order="3"><premise>size</premise><response>Returns the capacity of the string.</response></match><match order="4"><premise>+</premise><response>Connects strings.</response></match><match order="5"><premise>append</premise><response>Adjoins a string to the end of the string.</response></match>
     </matches>
     </exercise>
 
