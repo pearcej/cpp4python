@@ -8,7 +8,7 @@
                 <p>A syntax error is an error that occurs due to typing error or wrong statement that is not allowed in a language. This can be easily caught as the program does not run until this is fixed.</p>
             </li>
             <li>
-                <p>Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.</p>
+                <p>Logic errors are errors that happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.</p>
             </li>
             <li>
                 <p>logic errors can be caught by using <c>try</c> and <c>catch</c> which can help pinpoint what is causing the error and avoid confusion about the problem.</p>
@@ -26,22 +26,22 @@
 <cline><area>cout &lt;&lt; "age:";</area>:</cline>
 <cline><area>cin &gt;&gt; age;</area>:</cline>
 <cline><area>if (age &gt; 18) {</area>:</cline>
-<cline><area>cout &lt;&lt; "You can vote in the U.S!";}</area>:</cline>
+<cline><area>cout &lt;&lt; "You can vote!";}</area>:</cline>
 <cline><area>else {</area>:</cline>
-<cline><area correct="yes">cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
+<cline><area correct="yes">cout &lt;&lt; You cannot vote yet.</area>:</cline>
 <cline>}</cline>
 </areas></exercise>
 <exercise label="logic_error">
     <statement><p>Click on the logic error.</p></statement>
-<feedback><p>If we want the code to say when we can vote, what cases should it say when can and cannot?</p></feedback>
+<feedback><p>If we want the code to say when we are old enough to vote, what cases should it say when can and cannot?</p></feedback>
 <areas>
 <cline><area>int age;</area>:</cline>
 <cline><area>cout &lt;&lt; "age:";</area>:</cline>
 <cline><area>cin &gt;&gt; age;</area>:</cline>
 <cline><area correct="yes">if (age &gt; 18) {</area>:</cline>
-<cline><area>cout &lt;&lt; "You can vote in the U.S!";}</area>:</cline>
+<cline><area>cout &lt;&lt; "You can vote!";}</area>:</cline>
 <cline><area>else {</area>:</cline>
-<cline><area>cout &lt;&lt; You cannot vote in the U.S yet.;</area>:</cline>
+<cline><area>cout &lt;&lt; You cannot vote yet.;</area>:</cline>
 <cline>}</cline>
 </areas></exercise>  
 
