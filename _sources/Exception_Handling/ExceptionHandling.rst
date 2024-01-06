@@ -205,9 +205,9 @@ Check Yourself
     :click-incorrect:cout << "age:";:endclick:
     :click-incorrect:cin >> age;:endclick:
     :click-incorrect:if (age > 18) {:endclick:
-    :click-incorrect:cout << "You can vote in the U.S!";}:endclick:
+    :click-incorrect:cout << "You can vote in all countries with an 18 year old age for voting!";}:endclick:
     :click-incorrect:else {:endclick:
-    :click-correct:cout << You cannot vote in the U.S yet.;:endclick:
+    :click-correct:cout << You cannot vote in all countries with an 18 year old age for voting.;:endclick:
     }
 
 .. clickablearea:: logic_error
@@ -219,7 +219,7 @@ Check Yourself
     :click-incorrect:cout << "age:";:endclick:
     :click-incorrect:cin >> age;:endclick:
     :click-correct:if (age > 18) {:endclick:
-    :click-incorrect:cout << "You can vote in the U.S!";}:endclick:
+    :click-incorrect:cout << "You can vote in all countries with an 18 year old age for voting!";}:endclick:
     :click-incorrect:else {:endclick:
-    :click-incorrect:cout << You cannot vote in the U.S yet.;:endclick:
+    :click-incorrect:cout << You cannot vote in all countries with an 18 year old age for voting.;:endclick:
     }
