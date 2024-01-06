@@ -4,14 +4,16 @@
         <pre>#include &lt;cstdlib&gt;  // for the exit function
 #include &lt;fstream&gt;  // for I/O member functions
 #include &lt;iostream&gt; // for cout
-using namespace std;
+using namespace std; // To avoid writing std:: before standard library components
 
 int main() {
-    char in_file_name[16],
-        out_file_name[16]; // the filenames can have at most 15 chars
-    ifstream in_stream;
-    ofstream out_stream;
+    // Declare variables for file names and file streams
+    char in_file_name[16], // Arrays to store filenames (max 15 chars + null terminator)
+        out_file_name[16]; 
+    ifstream in_stream; // Input file stream object
+    ofstream out_stream;// Output file stream object
 
+    // Prompt the user for input and output file names
     cout &lt;&lt; "This program will sum three numbers taken from an input\n"
          &lt;&lt; "file and write the sum to an output file." &lt;&lt; endl;
     cout &lt;&lt; "Enter the input file name (maximum of 15 characters):\n";
@@ -26,10 +28,13 @@ int main() {
 
     if (in_stream.fail() || out_stream.fail()) {
         cout &lt;&lt; "Input or output file opening failed.\n";
-        exit(1);
+        exit(1); // Terminate the program with an error code
     }
 
+    // Declare variables to store numbers and their sum
     double firstn, secondn, thirdn, sum = 0.0;
+
+    // Read the first three numbers from the input file
     cout &lt;&lt; "Reading numbers from the file " &lt;&lt; in_file_name &lt;&lt; endl;
     in_stream &gt;&gt; firstn &gt;&gt; secondn &gt;&gt; thirdn;
     sum = firstn + secondn + thirdn;
@@ -44,6 +49,7 @@ int main() {
     out_stream &lt;&lt; "The sum of the first 3 numbers from " &lt;&lt; in_file_name
                &lt;&lt; " is " &lt;&lt; sum &lt;&lt; endl;
 
+    // Close the file streams
     in_stream.close();
     out_stream.close();
 
