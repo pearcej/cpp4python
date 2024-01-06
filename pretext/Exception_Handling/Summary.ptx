@@ -8,7 +8,7 @@
                 <p>A syntax error is an error that occurs due to typing error or wrong statement that is not allowed in a language. This can be easily caught as the program does not run until this is fixed.</p>
             </li>
             <li>
-                <p>Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.</p>
+                <p>Logic errors are errors that happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.</p>
             </li>
             <li>
                 <p>logic errors can be caught by using <c>try</c> and <c>catch</c> which can help pinpoint what is causing the error and avoid confusion about the problem.</p>
@@ -26,29 +26,37 @@
 <cline><area>cout &lt;&lt; "age:";</area>:</cline>
 <cline><area>cin &gt;&gt; age;</area>:</cline>
 <cline><area>if (age &gt; 18) {</area>:</cline>
+
 <cline><area>cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area>:</cline>
 <cline><area>else {</area>:</cline>
 <cline><area correct="yes">cout &lt;&lt; You cannot vote in all countries with an 18 year old age for voting.;</area>:</cline>
+
 <cline>}</cline>
 </areas></exercise>
 <exercise label="logic_error">
     <statement><p>Click on the logic error.</p></statement>
-<feedback><p>If we want the code to say when we can vote, what cases should it say when can and cannot?</p></feedback>
+<feedback><p>If we want the code to say when we are old enough to vote, what cases should it say when can and cannot?</p></feedback>
 <areas>
 <cline><area>int age;</area>:</cline>
 <cline><area>cout &lt;&lt; "age:";</area>:</cline>
 <cline><area>cin &gt;&gt; age;</area>:</cline>
 <cline><area correct="yes">if (age &gt; 18) {</area>:</cline>
+
 <cline><area>cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area>:</cline>
 <cline><area>else {</area>:</cline>
 <cline><area>cout &lt;&lt; You cannot vote in all countries with an 18 year old age for voting.;</area>:</cline>
+
 <cline>}</cline>
 </areas></exercise>  
 
 <exercise label="matching_ch7">
     <statement><p>Match the words with their corresponding definition.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches><match order="1"><premise>exception</premise><response>Response to an unusual circumstance while a program is running.</response></match><match order="2"><premise>logic error</premise><response> Error in which the program/code functions, but performs incorrectly.</response></match><match order="3"><premise>runtime</premise><response>Error that occurs when a program starts.</response></match><match order="4"><premise>syntax</premise><response>Error  in the structure of a statement or expression of code.</response></match></matches></exercise> 
+<matches>
+<match order="1"><premise>exception</premise><response>Response to an unusual circumstance while a program is running.</response></match>
+<match order="2"><premise>logic error</premise><response> Error in which the program/code functions, but performs incorrectly.</response></match>
+<match order="3"><premise>runtime error</premise><response>Error occurs when a program encounters an issue during its execution.</response></match>
+<match order="4"><premise>syntax error</premise><response>Error in the structure of a statement or expression of code.</response></match></matches></exercise> 
 </reading-questions>
       
     </section>
