@@ -251,7 +251,7 @@ main()
 
     </exercise>
     <exercise label="matching_strings">
-        <statement><p> Match the String operations with their corresponding explination.</p></statement>
+        <statement><p> Match the String operations with their corresponding explanation.</p></statement>
         <feedback><p>Feedback shows incorrect matches.</p></feedback>
     <matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="2"><premise>find</premise><response> Returns the index of the first occurrence of item.</response></match><match order="3"><premise>=</premise><response> Assigns value to an element.</response></match><match order="4"><premise>push_back</premise><response>Adjoins a character to the end of the string.</response></match><match order="5"><premise>pop_back</premise><response>Removes the last character from the end of the string.</response></match></matches></exercise>
     <exercise label="matching_strings1">
