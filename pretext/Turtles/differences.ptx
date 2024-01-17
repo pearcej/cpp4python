@@ -17,8 +17,8 @@ turtle.pencolor(red);
 turtle.pencolor({"green"});
 turtle.pencolor({"random"});
 </input></program>
-        <p>Unlike in Python, the <c classes="code">write</c> method does not allow you to specify a font nor size. This is due to the complex handling
-            and of Fonts by operating systems that is far more cumbersome to manage in C++. Furthermore, there is no <q>world</q> screen mode like
+        <p>Unlike in Python, the <c classes="code">write</c> method does not allow you to specify a font nor size. In contrast to Python, C++ finds it much more challenging to handle fonts because operating systems deal with them in a complex way.
+            Furthermore, there is no <q>world</q> screen mode like
             there is in Python. Normally, this would allow you to specify the <q>bounds</q> of your canvas (e.g, specify minimum
             and maximum coordinates for your canvas).</p>
         <p>Default shapes are also different and somewhat limited in comparison. Python offers six shapes by default, being <q>arrow</q>, <q>circle</q>,
