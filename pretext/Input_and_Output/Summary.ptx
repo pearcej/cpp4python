@@ -20,7 +20,6 @@
             
     <exercise label="stream_library_2">
         <statement>
-
             <p>Which of the following are libraries for C++ input and output? (Choose all that are true.)</p>
 
         </statement>
@@ -66,37 +65,41 @@
     </exercise>
 
 <exercise label="dnd_streamuse">
-    <statement><p>Drag the corresponding library to what you would use it for.</p></statement>
+    <statement><p>Drag the corresponding library to what you would use it for.</p>
+    </statement>
     <feedback><p>Which library is used for which task?</p></feedback>
 <matches><match order="1"><premise>fstream</premise><response>I want to write to a file</response></match><match order="2"><premise>iostream</premise><response>I want to write to the console</response></match></matches>
 </exercise>
         
 <exercise>
  <statement>
-    <p>Fill in the blank with the value of <c>inputn</c> when the following code runs. <var></var>  </p>
-
-<pre>#include &lt;fstream&gt;
-#include &lt;cstdlib&gt;
-#include &lt;iostream&gt;
-using namespace std;
-
-main(){
-  ifstream in_stream;
-  ofstream out_stream;
-  int inputn;
-
-  out_stream.open("anotherFile.txt");
-  out_stream &lt;&lt; 25;
-  out_stream &lt;&lt; 15 &lt;&lt; endl;
-  out_stream &lt;&lt; 101 &lt;&lt; endl;
-
-  in_stream.open("anotherFile.txt");
-  in_stream &gt;&gt; inputn;
-  cout &lt;&lt; inputn;
-  in_stream &gt;&gt; inputn;
-}</pre>
-</statement>
-<condition number="[101, 101]"><feedback><p>That is the correct answer! Good job!</p></feedback></condition><condition number="[25, 25]"><feedback><p>No. Hint: <c>inputn</c> is changed twice.</p></feedback></condition><condition number="[2515, 2515]"><feedback><p>No. Hint: <c>inputn</c> is changed twice.</p></feedback></condition><condition number="[15, 15]"><feedback><p>No. Hint: note that there is no space between the first 25 and 15!</p></feedback></condition>
+    <p>Fill in the blank with the value of <c>inputn</c> when the following code runs.  
+        <var/></p>
+        <pre>#include &lt;fstream&gt;
+            #include &lt;cstdlib&gt;
+            #include &lt;iostream&gt;
+            using namespace std;
+            
+            main(){
+              ifstream in_stream;
+              ofstream out_stream;
+              int inputn;
+            
+              out_stream.open("anotherFile.txt");
+              out_stream &lt;&lt; 25;
+              out_stream &lt;&lt; 15 &lt;&lt; endl;
+              out_stream &lt;&lt; 101 &lt;&lt; endl;
+            
+              in_stream.open("anotherFile.txt");
+              in_stream &gt;&gt; inputn;
+              cout &lt;&lt; inputn;
+              in_stream &gt;&gt; inputn;
+            }</pre>
+    </statement>
+    <setup>
+<var>
+<condition number="[101, 101]"><feedback><p>That is the correct answer! Good job!</p></feedback></condition><condition number="[25, 25]"><feedback><p>No. Hint: <c>inputn</c> is changed twice.</p></feedback></condition><condition number="[2515, 2515]"><feedback><p>No. Hint: <c>inputn</c> is changed twice.</p></feedback></condition><condition number="[15, 15]"><feedback><p>No. Hint: note that there is no space between the first 25 and 15!</p></feedback></condition></var>
+</setup>
 </exercise> 
 
 <exercise label="matching_ch6-1">
