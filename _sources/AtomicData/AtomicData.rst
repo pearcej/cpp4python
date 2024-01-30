@@ -523,7 +523,6 @@ Now that we know how to declare pointers, how do we give them the address of
 where the value is going to be stored? One way to do this is to have a pointer
 refer to another variable by using the address-of operator, which is denoted by the
 ampersand symbol, ``&``. The address-of operator ``&`` does exactly what it indicates,
-variableType varN;  // a variable to hold the value
 namely it returns the address.
 
 The syntax is shown below, where varN stores the value, and ptrN stores
@@ -531,6 +530,7 @@ the address of where varN is located:
 
 ::
 
+    variableType varN;  // a variable to hold the value
     variableType *ptrN = &varN;  // a variable pointing to the address of varN
 
 Keep in mind that when declaring a C++ pointer, the pointer needs to
