@@ -549,7 +549,7 @@ The results of running this C++ code will look like the diagram below.
 
 .. _fig_point2:
 
-.. figure:: Figures/new_new_point2.png
+.. figure:: Figures/new_new_point12.png
    :align: center
    :alt: image
 
