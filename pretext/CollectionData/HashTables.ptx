@@ -127,8 +127,12 @@ main()
         <p>Hash Tables have both methods and operators. <xref ref="collection-data_collection-data_tab-hashopers"/>
             describes them, and the session shows them in action.</p>
         
-        <table xml:id="collection-data_collection-data_tab-hashopers"><tabular>
-            <title><term>Table 7: Important Hash Table Operators Provided in C++</term></title>
+        <table xml:id="collection-data_collection-data_tab-hashopers">
+            
+             <title><term>Important Hash Table Operators Provided in C++</term></title>
+
+            <tabular>
+           
             
                 
                 
