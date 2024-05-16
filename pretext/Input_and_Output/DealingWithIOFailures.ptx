@@ -9,15 +9,51 @@
             A negative number means the operation failed for some reason, which the program can
             check to see if reading from a file is alright. In C++, a simple error checking mechanism
             is provided by the member function <c>fail()</c>:</p>
-        <pre>in_stream.fail();</pre>
+        <pre>in_stream.fail();</pre>r 
         <p>This function returns <c>true</c> only if the previous stream operation for in_stream
             was not successful, such as if we tried to open a non-existent file. If a failure has
             occured, in_stream may be in a corrupted state and it is best not to attempt any more
             operations with it.</p>
         <p>The following example code fragment safely quits the program entirely in case an I/O operation fails:</p>
-        <raw format="html" xml:space="preserve">&lt;div&gt;
-    &lt;iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-&lt;/div&gt;</raw>
+        
+        <pre>
+        <title>[C++]</title>
+        <p>---------------------------------------------------------------------------</p>
+        <programlisting language="cpp">
+            #include &lt;cstdlib&gt;  // For exit() function
+            #include &lt;fstream&gt;  // For file stream operations
+            #include &lt;iostream&gt; // For standard input/output stream
+
+            int main(){
+            
+                // Create an input file stream object and attempt to open "myFile.txt"
+                std::ifstream in_stream("myFile.txt");
+
+                // Check if the file failed to open
+                if (in_stream.fail()) {
+
+                    // Output an error message to the standard error stream
+                    std::cerr &lt;&lt; "Error: Unable to open file." &lt;&lt; std::endl;
+
+                    // Terminate the program with a non-zero exit status indicating an error
+                    exit(1);
+                }
+
+                // Close the file stream
+                in_stream.close();
+
+                // Return 0 to indicate successful completion of the program
+                return 0;
+            }
+        </programlisting>
+        </pre>
+
+        <p>Code output:</p>
+
+        <pre>
+            Error: Unable to open file.
+        </pre>
+
         <p>After opening the <q>myFile.txt</q> file, the <c>if</c> conditional checks to see if there was an error. If so, the program will output the apologetic error message and then exit. The <c>exit(1)</c> function from the library <c>cstdlib</c> enables the program to terminate at that point and have it return a <q>1</q> versus a <q>0</q>, indicating an Error has occurred.</p>
         <p>For more on Error Handling, see section 1.11.</p>
     </section>
