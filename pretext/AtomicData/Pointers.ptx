@@ -193,7 +193,7 @@ int main( ) {
             <figure align="center" xml:id="id4"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Dangling pointer reference</caption><image source="AtomicData/new_point_broken.png" width="50%" alt="image"/></figure>
             <p>If your compiler does not catch that error (the one for this class may),
                 the first <c>cout</c> instruction outputs</p>
-            <pre>varN value: 50</pre>
+            <pre>varN value: 100</pre>
             <p>which is expected because you changed where ptrN is pointing to and
                 NOT the contents of where it is pointing.</p>
             <p>The second <c>cout</c> instruction is a disaster because
