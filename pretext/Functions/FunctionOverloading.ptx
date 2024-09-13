@@ -74,7 +74,7 @@ main()
 
             <choice correct="yes">
                 <statement>
-                    <p>Helps keep consintency in the way your functions are named across your program.</p>
+                    <p>Helps keep consistency in the way your functions are named across your program.</p>
                 </statement>
                 <feedback>
                     <p>Take a look at the other answers as well...</p>
