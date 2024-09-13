@@ -15,8 +15,12 @@
             needs to include the vector library.</p>
         <pre>#include &lt;vector&gt;</pre>
         
-        <table xml:id="collection-data_id1"><tabular>
+        <table xml:id="collection-data_id1">
+
             <title><term>Common C++ Vector Operators</term></title>
+            
+            <tabular>
+            
         
                     <row header="yes">
                         <cell>
