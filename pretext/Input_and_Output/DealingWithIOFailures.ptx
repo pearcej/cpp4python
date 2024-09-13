@@ -9,7 +9,7 @@
             A negative number means the operation failed for some reason, which the program can
             check to see if reading from a file is alright. In C++, a simple error checking mechanism
             is provided by the member function <c>fail()</c>:</p>
-        <pre>in_stream.fail();</pre>r 
+        <pre>in_stream.fail();</pre> 
         <p>This function returns <c>true</c> only if the previous stream operation for in_stream
             was not successful, such as if we tried to open a non-existent file. If a failure has
             occured, in_stream may be in a corrupted state and it is best not to attempt any more
