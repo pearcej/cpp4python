@@ -40,7 +40,7 @@
 <cline><area correct="no">int age;</area></cline>
 <cline><area correct="no">cout &lt;&lt; "age";</area></cline>
 <cline><area correct="no">cin &gt;&gt; age;</area></cline>
-<cline><area correct="yes">if (age &gt; 18) {</area></cline>
+<cline><area correct="yes">if (age &lt; 18) {</area></cline>
 
 <cline><area correct="no">cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area></cline>
 <cline><area correct="no">else {</area></cline>
