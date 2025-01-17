@@ -26,14 +26,16 @@
             
         
         <exercise label="cturtle_dnd_summary">
-            <statement><p>
+            <statement><p> Match every turtle function name with the description of what it does.
         </p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
             
         <matches><match order="1"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="10"><premise>write some text to the canvas.</premise><response>turtle.write</response></match><match order="2"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="3"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="4"><premise>change the paintbrush color.</premise><response>turtle.pencolor</response></match></matches></exercise>        
         
         <exercise label="cturtle_dnd_glossary1">
-            <statement><p>
+            <statement><p> Match every turtle function name with the description of what it does.
         </p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
         <matches>
             <match order="1"><premise>change the speed</premise><response>turtle.speed</response></match><match order="2"><premise>move backward.</premise><response>turtle.back</response></match><match order="3"><premise>move forward.</premise><response>turtle.forward</response></match><match order="4"><premise>move to a specific coordinate.</premise><response>turtle.goto</response></match>
             <match order="5"><premise>change the paintbrush size.</premise><response>turtle.width</response></match>
