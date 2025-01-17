@@ -22,14 +22,14 @@
     <statement><p>Click on the syntax error.</p></statement>
 <feedback><p>Remember, syntax errors occur more for people learning a new language.</p></feedback>
 <areas>
-<cline><area>int age;</area>:</cline>
-<cline><area>cout &lt;&lt; "age:";</area>:</cline>
-<cline><area>cin &gt;&gt; age;</area>:</cline>
-<cline><area>if (age &gt; 18) {</area>:</cline>
+<cline><area correct="no">int age;</area></cline>
+<cline><area correct="no">cout &lt;&lt; "age";</area></cline>
+<cline><area correct="no">cin &gt;&gt; age;</area></cline>
+<cline><area correct="no">if (age &gt; 18) {</area></cline>
 
-<cline><area>cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area>:</cline>
-<cline><area>else {</area>:</cline>
-<cline><area correct="yes">cout &lt;&lt; You cannot vote in all countries with an 18 year old age for voting.;</area>:</cline>
+<cline><area correct="no">cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area></cline>
+<cline><area correct="no">else {</area></cline>
+<cline><area correct="yes">cout &lt;&lt; You cannot vote in all countries with an 18 year old age for voting.;</area></cline>
 
 <cline>}</cline>
 </areas></exercise>
@@ -37,14 +37,14 @@
     <statement><p>Click on the logic error.</p></statement>
 <feedback><p>If we want the code to say when we are old enough to vote, what cases should it say when can and cannot?</p></feedback>
 <areas>
-<cline><area>int age;</area>:</cline>
-<cline><area>cout &lt;&lt; "age:";</area>:</cline>
-<cline><area>cin &gt;&gt; age;</area>:</cline>
-<cline><area correct="yes">if (age &gt; 18) {</area>:</cline>
+<cline><area correct="no">int age;</area></cline>
+<cline><area correct="no">cout &lt;&lt; "age";</area></cline>
+<cline><area correct="no">cin &gt;&gt; age;</area></cline>
+<cline><area correct="yes">if (age &gt; 18) {</area></cline>
 
-<cline><area>cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area>:</cline>
-<cline><area>else {</area>:</cline>
-<cline><area>cout &lt;&lt; You cannot vote in all countries with an 18 year old age for voting.;</area>:</cline>
+<cline><area correct="no">cout &lt;&lt; "You can vote in all countries with an 18 year old age for voting!";}</area></cline>
+<cline><area correct="no">else {</area></cline>
+<cline><area correct="no">cout &lt;&lt; "You cannot vote in all countries with an 18 year old age for voting.";</area></cline>
 
 <cline>}</cline>
 </areas></exercise>  
