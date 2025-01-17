@@ -319,11 +319,13 @@ int main() {
 
 <exercise label="cturtle_dnd_1">
     <statement><p>Match the turtle method descriptions to the methods they belong to.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
     
 <matches><match order="1"><premise>turn to the left.</premise><response>turtle.left</response></match><match order="2"><premise>change the speed</premise><response>turtle.speed</response></match><match order="3"><premise>turn to the right.</premise><response>turtle.right</response></match><match order="4"><premise>pick pen up.</premise><response>turtle.penup</response></match><match order="5"><premise>put pen down.</premise><response>turtle.pendown</response></match></matches></exercise>   
 
 <exercise label="cturtle2">
     <statement><p>Match the turtle method descriptions to the methods they belong to.</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
 <matches>
     <match order="1"><premise>what color to fill drawing with.</premise><response>turtle.fillcolor</response></match><match order="2"><premise>start filling the shape.</premise><response>turtle.beginfill</response></match><match order="3"><premise>stops filling the shape.</premise><response>turtle.endfill</response></match><match order="4"><premise>change the pen color.</premise><response>turtle.pencolor</response></match><match order="5"><premise>change the pen size.</premise><response>turtle.width</response></match>
 </matches>
