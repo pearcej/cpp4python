@@ -1,6 +1,6 @@
 <section xml:id="collection-data_summary">
     <title>Summary and Reading Questions</title>
-    <p><ol label="5">
+    <p><ol>
         <li>
             <p>
                 A statically allocated C++ array is an ordered collection of one or more C++ data values of identical type stored in contiguous memory.
