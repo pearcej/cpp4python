@@ -1,64 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    This file provides the overall configuration for your PreTeXt
-    project. To edit the content of your document, open `source/cpp4python.ptx`
+    This file provides the overall configuration for this PreTeXt
+    project. To edit the content of this document, open `source/main.ptx`
     (default location).
 -->
-<project>
+<project ptx-version="2" source="pretext" publication="publication">
   <targets>
-    <target name="web">
-      <format>html</format>
-      <source>pretext/cpp4python.ptx</source>
-      <publication>pretext/publication-rs-for-all.xml</publication>
-      <output-dir>output/html</output-dir>
-    </target>
-    <target name="runestone">
-      <format>html</format>
-      <source>pretext/cpp4python.ptx</source>
-      <publication>pretext/publication-rs-academy.xml</publication>
-      <output-dir>published/cpp4py-v2</output-dir>
-    </target>
-    <target name="epub">
-      <format>epub</format>
-      <source>pretext/cpp4python.ptx</source>
-      <publication>pretext/publication-pub.xml</publication>
-      <output-dir>published/epub</output-dir>
-    </target>
-    <target name="latex">
-      <format>latex</format>
-      <source>pretext/cpp4python.ptx</source>
-      <publication>pretext/publication-rs-for-all.xml</publication>
-      <output-dir>output/latex</output-dir>
-    </target>
-    <target name="pdf" pdf-method="xelatex">
-      <format>pdf</format>
-      <source>pretext/cpp4python.ptx</source>
-      <publication>pretext/publication-rs-for-all.xml</publication>
-      <output-dir>output/pdf</output-dir>
-    </target>
-    <target name="subset">
-      <format>html</format>
-      <source>source/cpp4python.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/subset</output-dir>
-      <stringparam key="debug.skip-knowls" value="yes"/>
-      <!-- edit this to change the section/chapter/etc. to include
-           in your subset build -->
-      <xmlid-root>ch-first</xmlid-root>
-    </target>
+    <!-- To build this target, run `pretext build web` -->
+    <target name="web"
+      format="html"
+      source="main.ptx"
+      publication="publication.ptx" />
+
+    <target
+      name="runestone"
+      format="html"
+      source="main.ptx"
+      publication="runestone.ptx" />
+
+    <target name="pdf"
+      format="pdf"
+      source="main.ptx"
+      publication="publication.ptx" />
+
+    <target name="latex"
+      format="latex"
+      source="main.ptx"
+      publication="publication.ptx" />
+
   </targets>
-  <executables>
-    <latex>latex</latex>
-    <pdflatex>pdflatex</pdflatex>
-    <xelatex>xelatex</xelatex>
-    <pdfsvg>pdf2svg</pdfsvg>
-    <asy>asy</asy>
-    <sage>sage</sage>
-    <pdfpng>convert</pdfpng>
-    <pdfeps>pdftops</pdfeps>
-    <pdfcrop>pdf-crop-margins</pdfcrop>
-    <pageres>pageres</pageres>
-    <node>node</node>
-    <liblouis>file2brl</liblouis>
-  </executables>
 </project>
