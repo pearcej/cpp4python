@@ -212,7 +212,7 @@ int main( ) {
                 better error handling with the keyword.  The null pointer is often used
                 in conditions and/or in logical operations.</p>
             <p>The following example demonstrates how the null pointer works.
-                The variable ptrx initially has the address of x when it is declared.
+                The variable pntrN initially has the address of varN when it is declared.
                 On the first iteration of the loop, it is assigned the value of
                 <c>nullptr</c>, which evaluates to a false value; thereby ending the loop:</p>
             
@@ -225,15 +225,15 @@ using namespace std;
 
 //Shows the use of a Null pointer to represent "nothing".
 int main( ) {
-    int x = 12345;
-    int *ptrx = &amp;x;
+    int varN = 100;
+    int *pntrN = &amp;varN;
 
-    while (ptrx) {
-        cout &lt;&lt; "Pointer ptrx points to " &lt;&lt; &amp;ptrx &lt;&lt; endl;
-        ptrx = nullptr;
+    while (pntrN) {
+        cout &lt;&lt; "Pointer pntrN points to " &lt;&lt; &amp;pntrN &lt;&lt; endl;
+        pntrN = nullptr;
     }
 
-    cout &lt;&lt; "Pointer ptrx points to nothing!\n";
+    cout &lt;&lt; "Pointer pntrN points to nothing!\n";
 }
         </input>
     </program>
@@ -249,14 +249,14 @@ int main( ) {
                     <exercise label="mc_pntrhlp">
                         <statement>
                 
-                            <p>If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
+                            <p>If the lines (varN = 50;) and  (cout &lt;&lt; "ptrN: " &lt;&lt; *ptrN &lt;&lt; endl;) were inserted between lines 7 and 8, what would it cout?</p>
                 
                         </statement>
                 <choices>
                 
                             <choice>
                                 <statement>
-                                    <p>varPntr: 9</p>
+                                    <p>pntrN: 100</p>
                                 </statement>
                                 <feedback>
                                     <p>Not quite, the variable varN no longer equals 100 past line 7!</p>
@@ -265,7 +265,7 @@ int main( ) {
                 
                             <choice correct="yes">
                                 <statement>
-                                    <p>varPntr: 50</p>
+                                    <p>pntrN: 50</p>
                                 </statement>
                                 <feedback>
                                     <p>Right!</p>
@@ -274,7 +274,7 @@ int main( ) {
                 
                             <choice>
                                 <statement>
-                                    <p>varPntr: 150</p>
+                                    <p>pntrN: 150</p>
                                 </statement>
                                 <feedback>
                                     <p>No, the values do not add together!</p>
