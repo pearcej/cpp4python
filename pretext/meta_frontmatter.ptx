@@ -5,7 +5,7 @@
 
   <bibinfo>
     <author>
-      <personname>Dr. Brad Miller and Dr. Jan Pearce</personname>
+      <personname>Dr. Jan Pearce and Dr. Brad Miller</personname>
       <department>Computer Science</department>
       <institution>Berea College</institution>
     </author>
@@ -48,15 +48,9 @@
       <address>http://pretextbook.org</address>
     </website> -->
 
-  <dedication>
-    <p>
-      For Python programmers willing to dedicate time to learning C++.
-    </p>
-  </dedication>
-
   <acknowledgement>
     <p>
-      Special acknowledgement is due to Jesse Walker-Schadler who while just a student in the Berea College Data Structures course had a vision of making graphics in C++ as easy as they are in Python both in terms of both syntax and installations. Over the course of two summers, he realized this vision with the creation in the open source CTurtle library which provides all of the C++ interactive graphics in this textbook.
+      Special acknowledgement is due to <url href="https://www.linkedin.com/in/jesswwalker/" visual="https://www.linkedin.com/in/jesswwalker/">Jesse Walker-Schadler</url> who while just a student in the Berea College Data Structures course had a vision of making graphics in C++ as easy as they are in Python both in terms of both syntax and installations. Over the course of two summers, he realized this vision with the creation in <url href="https://github.com/walkerje/C-Turtle" visual="https://github.com/walkerje/C-Turtle">the open source CTurtle library</url> which provides all of the C++ interactive graphics in this textbook.
     </p>
   </acknowledgement>
 
@@ -71,13 +65,4 @@
     </p>
   </preface>
   <!-- Note: You can have more than one preface. -->
-
-  <preface xml:id="meta_frontmatter-forward">
-    <title>Forward</title>
-
-    
-
-    
-
-  </preface>
 </frontmatter>
