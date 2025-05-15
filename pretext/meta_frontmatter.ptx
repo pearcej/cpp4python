@@ -5,7 +5,7 @@
 
   <bibinfo>
     <author>
-      <personname>Dr. Jan Pearce</personname>
+      <personname>Dr. Brad Miller and Dr. Jan Pearce</personname>
       <department>Computer Science</department>
       <institution>Berea College</institution>
     </author>
@@ -50,7 +50,7 @@
 
   <dedication>
     <p>
-      For everyone who wants to learn to contribute to open source projects.
+      For Python programmers willing to dedicate time to learning C+
     </p>
   </dedication>
 
