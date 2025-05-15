@@ -56,6 +56,9 @@
 
   <acknowledgement>
     <p>
+      Special acknowledgement is due to Jesse Walker-Schadler who while just a student in the Berea College Data Structures course had a vision of making graphics in C++ as easy as they are in Python both in terms of both syntax and installations. Over the course of two summers, he realized this vision with the creation in the open source CTurtle library which provides all of the C++ interactive graphics in this textbook.
+    </p>
+    <p>
       I would like to thank <url href="https://www.berea.edu" visual="www.berea.edu">Berea College</url> for sabbatical leave support that gave me time and made this work possible. 
       I am also grateful to the software innovation lab <url href="https://www.tweag.io" visual="tweag.io">Tweag</url> for financial support and the time, recommendations, and patience of my open source mentors, Michael Gale and Georgios Karachalias whose perspectives, backgrounds, and suggestions have served to significantly improve this work.
     </p>
@@ -99,9 +102,6 @@
     </p>
     <p>    
       Portions of this book began as Java for Python Programmers by Brad Miller. These sections were translated to C++ by Jan Pearce and a team of excellent Berea College students in 2018 and early 2019. Other portions of this book began as web pages written by Jan Pearce as support for a Berea College C++ programming class. Still other sections were newly written by Jan Pearce for this ebook.
-    </p>
-    <p>
-      Special acknowledgement is due to Jesse Walker-Schadler who while just a student in the Berea College Data Structures course had a vision of making graphics in C++ as easy as they are in Python both in terms of both syntax and installations. Over the course of two summers, he realized this vision with the creation in the open source CTurtle library which provides all of the C++ interactive graphics in this textbook.
     </p>
   </preface>
   <!-- Note: You can have more than one preface. -->
