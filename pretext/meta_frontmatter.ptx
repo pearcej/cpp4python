@@ -95,7 +95,13 @@
   <!-- You should be a little careful about what you put here -->
     <!-- Avoid elements that should have a number, for example  -->
     <p>
-      This textbook is designed for instructors, formal students, and self-learners. It explains what open source software is and teaches the basic skills of open source development incrementally, through real involvement in meaningful projects.
+      This short ebook is intended to make it easy for anyone with at least some background in Python to transition to programming in C++.
+    </p>
+    <p>    
+      Portions of this book began as Java for Python Programmers by Brad Miller. These sections were translated to C++ by Jan Pearce and a team of excellent Berea College students in 2018 and early 2019. Other portions of this book began as web pages written by Jan Pearce as support for a Berea College C++ programming class. Still other sections were newly written by Jan Pearce for this ebook.
+    </p>
+    <p>
+      Special acknowledgement is due to Jesse Walker-Schadler who while just a student in the Berea College Data Structures course had a vision of making graphics in C++ as easy as they are in Python both in terms of both syntax and installations. Over the course of two summers, he realized this vision with the creation in the open source CTurtle library which provides all of the C++ interactive graphics in this textbook.
     </p>
   </preface>
   <!-- Note: You can have more than one preface. -->
