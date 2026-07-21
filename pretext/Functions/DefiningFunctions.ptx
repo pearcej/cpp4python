@@ -117,7 +117,7 @@ int main() {
 
     <program xml:id="dogwalk" interactive="activecode" language="cpp">
         <input>
-// function that retuns outputs number of steps wallked
+// function that returns outputs number of steps walked
 #include &lt;iostream&gt;
 using namespace std;
 
