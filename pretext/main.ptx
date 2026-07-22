@@ -5,6 +5,7 @@
     <book xml:id="cpp4py-v2" permid="cpp4py-v2">
         <title>C++ for Python Programmers</title>
         <subtitle>The PreTeXt Edition</subtitle>
+        <xi:include href="./meta_frontmatter.ptx" />
         <xi:include href="./IntroCpp/toctree.ptx"/>
         <xi:include href="./AtomicData/toctree.ptx"/>
         <xi:include href="./Control_Structures/toctree.ptx"/>
