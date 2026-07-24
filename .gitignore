@@ -2,6 +2,9 @@
 # ensure this file is tracked
 !.gitignore
 
+# don't track the .cache directory
+.cache/*
+
 # don't track unpublished builds or stage
 output
 
