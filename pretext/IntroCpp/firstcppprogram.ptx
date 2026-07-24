@@ -97,7 +97,13 @@ int main(){
   </subsection>
         <subsection xml:id="intro-cpp_using-headers-and-libraries">
             <title>Using headers and libraries</title>
-            <p>Preprocessor directives in C++ appear as statements preceded by the hash sign <c>#</c>.
+            <p>
+                  <notation>
+        <usage><m>\text{\#}</m></usage>
+        <description><c>#</c> begins a directive read by the preprocessor. e.g. <c>#include</c> will include a system header file in the compilation process</description>
+      </notation>
+                <term>Preprocessor directives</term><idx>preprocessor directives</idx>
+                in C++ appear as statements preceded by the hash sign <c>#</c>.
                 These tell the preprocessor which file, header, or library to make available to
                 the compiler. For example, <c>#include &lt;iostream&gt;</c> will make sure that
                 the <c>iostream</c> library is available at compile time.
