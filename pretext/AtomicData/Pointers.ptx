@@ -1,6 +1,6 @@
 <section xml:id="atomic-data_pointers">
         <title>Pointers</title>
-        <p>A C++ <term>pointer</term> is a variable that stores a memory address and can be used to indirectly
+        <p>A C++ <term>pointer</term> <idx>pointer</idx>is a variable that stores a memory address <idx>memory address</idx> and can be used to indirectly
             access data stored at that memory location.</p>
         <p>We know that variables in a computer program are used to label data with a
             descriptive identifier so that the data can be accessed and used by that
@@ -36,7 +36,7 @@ int varN = 100;</pre>
             it is sometimes a hexadecimal code and sometimes just a count or another
             way to reference the address.</p>
         <p>In Python we use <c>id</c> to reference the address,
-            while in C++ we use the <em>address-of operator</em>, <c>&amp;</c>.</p>
+            while in C++ we use the <em>address-of operator</em> <idx>address-of operator</idx>, <c>&amp;</c>.</p>
       <TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="address_cpp" interactive="activecode" language="cpp">
@@ -89,7 +89,7 @@ main()
                 identifier.</p>
             <pre>variableType *identifier; // syntax to declare a C++ pointer
 int *ptrx; // example of a C++ pointer to an integer</pre>
-            <p>White space in C++ generally does not matter, so the following pointer declarations
+            <p>White space in C++ generally does not matter, so the following pointer declarations <idx>pointer declarations</idx>
                 are identical:</p>
             <pre>SOMETYPE *variablename; // preferable
 SOMETYPE * variablename;
@@ -123,7 +123,7 @@ ptrN = &amp;varN;</pre>
         <subsection xml:id="atomic-data_accessing-values-from-pointers">
             <title>Accessing Values from Pointers</title>
             <p>Once you have a C++ pointer, you use the asterisk before the pointer variable,
-                to <em>dereference</em> the pointer, which means go to the location pointed at by the 3.</p>
+                to <em>dereference</em> <idx>dereference</idx>the pointer, which means go to the location pointed at by the 3.</p>
             <pre>In other words, varN and *ptrN (note the asterisk in front!) reference the same
 value in the code above.</pre>
             <p>Let's extend the example above to output the value of a variable and its address
@@ -200,13 +200,13 @@ int main( ) {
                 (1) You don't know what is stored in location 100 in memory, and
                 (2) that location is outside of your segment (area in memory reserved
                 for your program), so the operating system will jump in with a message
-                about a <q>segmentation fault</q>. Although such an error message looks bad,
+                about a <q>segmentation fault</q> <idx>segmentation fault</idx>. Although such an error message looks bad,
                 a <q>seg fault</q> is in fact a helpful error because unlike the elusive logical
                 errors, the reason is fairly localized.</p>
         </subsection>
         <subsection xml:id="atomic-data_the-null-pointer">
             <title>The null pointer</title>
-            <p>Like <c>None</c> in Python, the null pointer (<c>nullptr</c>) in C++ points to
+            <p>Like <c>None</c> in Python, the null pointer <idx>null pointer</idx> (<c>nullptr</c>) in C++ points to
                 nothing.  Older editions of C++ also used <c>NULL</c> (all caps) or 0,
                 but we will use the keyword <c>nullptr</c> because the compiler can do
                 better error handling with the keyword.  The null pointer is often used

@@ -1,7 +1,7 @@
 <section xml:id="atomic-data_numeric-data">
         <title>Numeric Data</title>
-        <p>Numeric C++ data types include <c>int</c> for integer, <c>float</c>
-            for floating point, <c>double</c> for double precision floating point.</p>
+        <p>Numeric C++ data types include <c>int</c> <idx>int</idx>for integer, <c>float</c> <idx>float</idx>
+            for floating point, <c>double</c> <idx>double</idx> for double precision floating point.</p>
         <p>The standard arithmetic operations, +, -, *, and /
             are used with optional parentheses to force the order of
             operations away from normal operator precedence.</p>
@@ -12,7 +12,7 @@
             i.e. When two integers are divided, integer division is used.
             To get the whole quotient, declaring one of the numbers as a float will
             convert the entire result into floating point.</p>
-        <p>Exponentiation in C++ is done using <c>pow()</c> from the <c>cmath</c> library
+        <p>Exponentiation in C++ is done using <c>pow()</c> <idx>pow()</idx> from the <c>cmath</c> <idx>cmath</idx> library
             and the remainder (modulo) operator is done with <c>%</c>.</p>
         <p>Run the following code to see that you understand each result.</p>
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">

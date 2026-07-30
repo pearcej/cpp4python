@@ -1,7 +1,7 @@
 <section xml:id="control_-structures_for-loops">
         <title>For Loops</title>
         <p>Even though the <c>while</c> type of construct is very useful in a wide variety of
-            situations, another iterative structure, the <c>for</c> statement, can be
+            situations, another iterative structure, the <c>for</c> <idx>for loop</idx> statement, can be
             used to iterate across a range of values easily.
             A <c>for</c> statement allows us to write a loop that is executed a specific number of times.</p>
 
