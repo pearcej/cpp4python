@@ -105,7 +105,7 @@ int main(){
                 <term>Preprocessor directives</term><idx>preprocessor directives</idx>
                 in C++ appear as statements preceded by the hash sign <c>#</c>.
                 These tell the preprocessor which file, header, or library to make available to
-                the compiler. For example, <c>#include &lt;iostream&gt;</c> <idx>iostream</idx> will make sure that
+                the compiler. For example, <c>#include &lt;iostream&gt;</c> <idx> <c> iostream </c> </idx> will make sure that
                 the <c>iostream</c> library is available at compile time.
                 Here, the term <em>header</em> <idx>header</idx>is used for a type of C++ file that contains definitions
                 of functions and variables, but not the function implementations.</p>
@@ -199,7 +199,7 @@ span many lines, beginning and ending with the given symbols */</pre>
                 Much like the Python <c>print</c> statement, <c>cout</c> is used to
                 print to the standard output device, which is typically your screen.
                 When <c>cout</c> is used, you will also see <c>&lt;&lt;</c> used.
-                When this odd set of symbols are used together, they are called the <q>output operator</q> <idx> output operator </idx>.
+                When this odd set of symbols are used together, they are called the <q>output operator</q> <idx> <h>output operator</h><h>&lt;&lt;</h> </idx>.
                 The output operator is used to direct output to the designated output device or file.
                 The output operator can also be used to concatenate output, much like the <q>+</q>
                 can be used to concatenate in Python.</p>
@@ -227,7 +227,7 @@ int main(){
                 The command <c>cin</c> is somewhat similar to <c>cout</c> except, of course, it is used for getting character input.
                 Input streams direct data from a source, such as the keyboard or a file.
                 As you might have guessed, <c>cin</c> <idx> <c> cin </c> </idx>stands for <q>character input</q> and it makes getting input from the standard input device (usually the keyboard) relatively easy.
-                The input operator <idx> input operator </idx> in C++ is <c>&gt;&gt;</c>.</p>
+                The input operator <idx> <h>input operator</h><h>&gt;&gt;</h> </idx> in C++ is <c>&gt;&gt;</c>.</p>
             <p>Here is an example that uses <c>cin</c>:</p>
 
     <statement>

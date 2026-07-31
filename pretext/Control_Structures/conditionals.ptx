@@ -152,7 +152,7 @@ main()
                 elif statement of Python under certain conditions because the statement
                 takes cases and checks the validity of the case against the code.
                 It uses cases instead of conditions and the case must be based on
-                integers or a user-defined data type called an enumerated constant. <idx>enumerated constant</idx></p>
+                integers or a user-defined data type called an enumerated constant. <idx> <c> enumerated constant</c> </idx></p>
             <p>To write the grade
                 program using a switch statement we would use the following:</p>
 
