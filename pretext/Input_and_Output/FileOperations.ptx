@@ -15,7 +15,7 @@
         <pre>in_stream.close();</pre>
         <p>To close the file for <c>out_stream</c>, we use its <c>close()</c> function, which also adds an end-of-file marker to indicate where the end of the file is:</p>
         <pre>out_stream.close();</pre>
-        <p>Answer the question below concerning the use of the <c>fstream</c> library:</p>  <c> fstream </c> </idx>
+        <p>Answer the question below concerning the use of the <c>fstream</c> library:</p> <idx> <c> fstream </c> </idx>
 <reading-questions xml:id="rqs-file-operations">
     <title>Reading Question</title>
 
