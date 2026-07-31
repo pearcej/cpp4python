@@ -2,7 +2,7 @@
         <title>Boolean Data</title>
         <p>Boolean <idx>Boolean</idx> data types are named after George Boole who was an English mathematician,
             so the word <q>Boolean</q> should be capitalized. However,
-            the Boolean data type, in C++ uses the keyword <c>bool</c> <idx>bool</idx>
+            the Boolean data type, in C++ uses the keyword <c>bool</c> <idx> <c> bool </c> </idx>
             which is not capitalized.
             The possible state values
             for a C++ Boolean are lower case <c>true</c> and <c>false</c>.
