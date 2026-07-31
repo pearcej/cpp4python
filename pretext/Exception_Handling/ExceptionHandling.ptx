@@ -35,7 +35,7 @@
             choose. In addition, programmers can create their own exceptions if they
             detect a situation in the program execution that warrants it.</p>
         <p>When an exception occurs, we say that it has been <q>thrown.</q><idx><c>throw</c></idx>You can
-            <q>catch</q><idx><c>catch</c></idx> the exception that has been raised by using a <c>try</c><idx><c>try statement</c></idx>
+            <q>catch</q><idx><c>catch</c></idx> the exception that has been raised by using a <idx><c>try </c>statement</idx>
             statement. For example, consider the following session that asks the
             user for an integer and then uses the division operator.
             If the user enters a second number that is not 0, then the print will show the result of division.
