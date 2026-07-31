@@ -1,7 +1,7 @@
 <section xml:id="functions_parameter-passing-by-value-versus-by-reference">
         <title>Parameter Passing: by Value versus by Reference</title>
         <p>In all of the functions we have written thus far, we have used a function calling
-            mechanism called <term>pass by value</term>.
+            mechanism called <term>pass by value</term> <idx>pass by value</idx>.
             Calling a function by value involves copying the contents of the arguments
             into the memory locations of the corresponding formal parameters.
             If the function changes
@@ -39,7 +39,7 @@ void callingFunction() { /*return type void which indicates
         <p>However, there is a problem.</p>
         <p>We have seen examples of C++ functions that return no value or a single value.
             How about when we want the function to return <term>more</term> than one value?
-            We need another function calling mechanism called <term>pass by reference</term>.
+            We need another function calling mechanism called <term>pass by reference</term> <idx>pass by reference</idx>.
             When using this mechanism, the actual location in memory referenced by the arguments are
             sent rather than the values in that location.
             To let the compiler know that you intend to use pass by reference,

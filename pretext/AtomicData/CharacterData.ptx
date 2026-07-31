@@ -1,7 +1,7 @@
     <section xml:id="_character-data">
         <title>Character Data</title>
         <p>In Python strings can be created with single or double quotes.
-            In C++ single quotes are used for the character (<c>char</c>) data type,
+            In C++ single quotes are used for the character (<c>char</c>) <idx> <c> char </c></idx> data type,
             and double quotes are used for the string data type.</p>
         <p>Consider the following code.</p>
        <TabNode tabname="Python" tabnode_options="{'subchapter': 'AtomicData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">

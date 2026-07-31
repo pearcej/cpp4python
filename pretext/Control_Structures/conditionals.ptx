@@ -106,7 +106,7 @@ main()
  }
         </input>
     </program>
-            <p>We can get closer to the look of the elif statement in C++ by
+            <p>We can get closer to the look of the elif<idx> <c> elif </c> </idx> statement in C++ by
                 taking advantage of the
                 C++ rule that a single statement does not need to be enclosed in curly
                 braces. Since the if is the only statement used in each else we can get
@@ -148,11 +148,11 @@ main()
         </subsection>
         <subsection xml:id="control_-structures_switch">
             <title>switch</title>
-            <p>C++ also supports a <c>switch</c> statement that acts something like the
+            <p>C++ also supports a <c>switch</c> <idx> <c> switch </c> </idx> statement that acts something like the
                 elif statement of Python under certain conditions because the statement
                 takes cases and checks the validity of the case against the code.
                 It uses cases instead of conditions and the case must be based on
-                integers or a user-defined data type called an enumerated constant.</p>
+                integers or a user-defined data type called an enumerated constant. <idx> <c> enumerated constant</c> </idx></p>
             <p>To write the grade
                 program using a switch statement we would use the following:</p>
 
@@ -196,7 +196,7 @@ main()
                 because the switch variable can only be compared for equality with an
                 integer or something called an enumerated constant.
                 Second it is very easy to forget to put
-                in the <c>break</c> statement. Note above how cases 10 and 9 are coded together.
+                in the <c>break</c> <idx> <c> break </c> </idx> statement. Note above how cases 10 and 9 are coded together.
                 If the break statement is left out then then
                 the next alternative will be automatically executed.
                 For example if the

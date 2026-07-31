@@ -8,7 +8,7 @@
             filenames that the program will use instead of the same names.
             We have previously talked about the <c>char</c> data type that allows users to store
             and manipulate a single character at a time. A sequence of characters such as <q>myFileName.dat</q>
-            can be stored in an array of chars called a <c>c-string</c>, which can be declared as follows:</p>
+            can be stored in an array of chars called a <c>c-string</c> <idx> <c> c-string </c> </idx>, which can be declared as follows:</p>
         <pre>// Syntax: char C-string_name[LEN];
 // Example:
 char filename[16];</pre>

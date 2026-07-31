@@ -5,7 +5,7 @@
             Python in various forms. The programmer can choose the statement that is
             most useful for the given circumstance.</p>
         <p>For repeating a block of code, C++ provides a standard <c>while</c> and <c>for</c> constructs.
-            The <c>while</c> construct repeats a body of code as long as a condition is true. For example,</p>
+            The <c>while</c> <idx> <c> while </c> </idx>construct repeats a body of code as long as a condition is true. For example,</p>
         <pre>int counter = 1;
 while (counter &lt;= 5) {          /*Use of an interactive method until the
                                  the loop ends   */
@@ -24,7 +24,7 @@ Hello, world</pre>
             condition is <c>true</c>, the body of the statement will execute.</p>
         <p>The <c>while</c> statement is a very general purpose iterative structure
             that we will use in a number of different algorithms. In many cases, a
-            compound condition will control the iteration. A fragment such as</p>
+            compound condition <idx>compound condition</idx> will control the iteration. A fragment such as</p>
         <pre>while ((counter &lt;= 10) &amp;&amp; (!done)) {
 ...</pre>
         <p>would cause the body of the statement to be executed only in the case

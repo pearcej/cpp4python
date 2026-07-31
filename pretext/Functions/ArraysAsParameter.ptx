@@ -2,7 +2,7 @@
         <title>Arrays as Parameters in Functions</title>
         <p>An array is a collection data type that is the ancestor of the Python list.
             We will discuss arrays in more detail in the next chapter.
-            Functions can be used with <term>array parameters</term> to maintain a structured design.
+            Functions can be used with <term>array parameters</term> <idx>array parameters</idx>to maintain a structured design.
             However, a formal parameter for an array is neither a call-by-value nor a call-by-reference,
             but a new type of parameter pass called an array parameter.
             In a function definition, an array parameter looks like a pass-by-value parameter
@@ -29,7 +29,7 @@
     for( count = 0; count &lt; length; count++ ) {
         total[count] = first[count] + second[count];
 };}</pre>
-        <p>Upon further examination, we can see that the first two arrays do not change values. To prevent ourselves from accidentally modifying any of these arrays, we can add the modifier <c>const</c> in the function head:</p>
+        <p>Upon further examination, we can see that the first two arrays do not change values. To prevent ourselves from accidentally modifying any of these arrays, we can add the modifier <c>const</c> <idx> <c> const </c> </idx> in the function head:</p>
         <pre>void add_lists( const int first[], const int second[], int total[], int length ) {
     //return type void which indicates that nothing is returned
     int count;

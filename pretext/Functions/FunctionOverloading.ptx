@@ -1,6 +1,6 @@
 <section xml:id="functions_function-overloading">
         <title>Function Overloading</title>
-        <p><term>Function overloading</term> is the ability to create multiple functions with identical names but different implementations.
+        <p><term>Function overloading</term> <idx>function overloading</idx> is the ability to create multiple functions with identical names but different implementations.
             Not all languages support function overloading. Python does not, for example.</p>
         <p>In C++ programming, two or more functions can have same
             name when they can be distinguished by the parameters.
