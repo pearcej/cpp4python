@@ -1,6 +1,6 @@
 <section xml:id="turtles_turtles_turtles_introduction">
         <title>Introduction</title>
-        <p>C++ is designed with the principal that speed is more important than safety and error-checking.
+        <p>C++ is designed with the principle that speed is more important than safety and error-checking.
             This differs from languages like Python, which is considerably more restrictive in regards to
             aspects such as memory allocations and resource management. C++ is translated to <q>machine language</q>
             when it is compiled, which is a step skipped by Python. Python skips this step in favor of immediate
