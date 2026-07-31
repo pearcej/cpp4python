@@ -68,7 +68,7 @@ int main() {
         </blockquote>
         <p>The <c>timesTwoVoid</c> function behaves very similarly to <c>timesTwo</c>. However, there is one key
             difference between them. Instead of the <c>int</c> in <c>timesTwo</c>, <c>timesTwoVoid</c> has a
-            <c>void</c> <idx>void</idx> in front of its function definition. Unlike <c>timesTwo</c>, <c>timesTwoVoid</c> is a non-fruitful
+            <c>void</c> <idx> <c> void </c> </idx> in front of its function definition. Unlike <c>timesTwo</c>, <c>timesTwoVoid</c> is a non-fruitful
             function <idx>non-fruitful function</idx> meaning it does not return a value even though it can still print something out.</p>
         <p>We could go a step further and implement our own square root function by using a well-known
             technique called <q>Newton's Method.</q> Newton's Method for approximating

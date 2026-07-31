@@ -29,7 +29,7 @@
     for( count = 0; count &lt; length; count++ ) {
         total[count] = first[count] + second[count];
 };}</pre>
-        <p>Upon further examination, we can see that the first two arrays do not change values. To prevent ourselves from accidentally modifying any of these arrays, we can add the modifier <c>const</c> <idx>const</idx> in the function head:</p>
+        <p>Upon further examination, we can see that the first two arrays do not change values. To prevent ourselves from accidentally modifying any of these arrays, we can add the modifier <c>const</c> <idx> <c> const </c> </idx> in the function head:</p>
         <pre>void add_lists( const int first[], const int second[], int total[], int length ) {
     //return type void which indicates that nothing is returned
     int count;
