@@ -3,7 +3,7 @@
         <p><term>Strings</term> <idx>strings</idx>are sequential collections of zero or more characters such as letters, numbers
             and other symbols. There are actually two types of strings in C++ . The <em>C++ string</em> or just <em>string</em> from the
             <c>&lt;string&gt;</c> library is the more modern type, and it is very similar to the Python string class.
-            The old style <em>C-string</em><idx>C-string</idx>which is essentially
+            The old style <em>C-string</em> which is essentially
             an array of <c>char</c> type. The char type itself is actually distinct from both types of strings.</p>
         <pre>char cppchar = 'a';   // char values use single quotes
 string cppstring = "Hello World!";  // C++ strings use double quotes
