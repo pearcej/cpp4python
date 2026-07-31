@@ -7,7 +7,7 @@
             Otherwise, they could read data from a different file that happened to be
             right after it in the hard drive, which can be disastrous.</p>
         <p>Many development environments have I/O libraries that define how the member
-            function eof() <idx>eof()</idx> works for ifstream variables to test if this flag is set to <c>true</c> or <c>false</c>. Typically, one would like to know when the EOF has not been reached, so a common way is a negative boolean value. An alternative implementation is to keep reading using the &gt;&gt; operator; if that operation was successful (i.e. there was something in the file that was read), this success is interpreted as a 1 (true).</p>
+            function eof() <idx> <c> eof() </c> </idx> works for ifstream variables to test if this flag is set to <c>true</c> or <c>false</c>. Typically, one would like to know when the EOF has not been reached, so a common way is a negative boolean value. An alternative implementation is to keep reading using the &gt;&gt; operator; if that operation was successful (i.e. there was something in the file that was read), this success is interpreted as a 1 (true).</p>
         <p>Incidentally, that is why if you forget the second equals sign in a comparison
             between a variable and a value, you are assigning the value to the variable,
             which is a successful operation, which means the condition ends up evaluating to <c>true</c>.</p>
