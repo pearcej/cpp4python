@@ -1,6 +1,6 @@
 <section xml:id="collection-data_unordered-sets">
         <title>Unordered Sets</title>
-        <p>An <term>unordered_set</term> is an unordered collection of zero or more unique C++ data values
+        <p>An <term>unordered_set</term> <idx>unordered_set</idx> is an unordered collection of zero or more unique C++ data values
             of a particular type.
             To use unordered_sets, you import <c>unordered_set</c> from the Standard template library with
             <c>#include &lt;unorderd_set&gt;</c>.</p>
