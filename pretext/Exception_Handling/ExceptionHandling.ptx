@@ -1,7 +1,7 @@
 <section xml:id="exception_-handling_exception-handling">
         <title>Exception Handling</title>
         <p>There are two types of errors that typically occur when writing
-            programs. The first, known as a <term>syntax error</term>, simply means that the
+            programs. The first, known as a <term>syntax error</term><idx>syntax error</idx>, simply means that the
             programmer has made a mistake in the structure of a statement or
             expression. For example, it is incorrect to write a statement in one line and
             forget the semicolon.</p>
@@ -19,23 +19,23 @@
             the processing of this instruction since it does not conform to the
             rules of the language. Syntax errors are usually more frequent when you
             are first learning a language.</p>
-        <p>The other type of error, known as a <term>logic error</term>, denotes a situation
+        <p>The other type of error, known as a <term>logic error</term><idx>logic error</idx>, denotes a situation
             where the program executes but gives the wrong result. This can be due
             to an error in the underlying algorithm or an error in your translation
             of that algorithm. In some cases, logic errors lead to very bad
             situations such as trying to divide by zero or trying to access an item
             in a list where the index of the item is outside the bounds of the list.
-            In this case, the logic error leads to a <term>runtime error</term> that causes the
+            In this case, the logic error leads to a <term>runtime error</term><idx>runtime error</idx> that causes the
             program to terminate. These types of runtime errors are typically called
-            <term>exceptions</term>.</p>
+            <term>exceptions</term><idx>exception</idx>.</p>
         <p>Most of the time, beginning programmers simply think of exceptions as
             fatal runtime errors that cause the end of execution. However, most
             programming languages provide a way to deal with these errors that will
             allow the programmer to have some type of intervention if they so
             choose. In addition, programmers can create their own exceptions if they
             detect a situation in the program execution that warrants it.</p>
-        <p>When an exception occurs, we say that it has been <q>thrown.</q> You can
-            <q>catch</q> the exception that has been raised by using a <c>try</c>
+        <p>When an exception occurs, we say that it has been <q>thrown.</q><idx>throw</idx>You can
+            <q>catch</q><idx>catch</idx> the exception that has been raised by using a <c>try</c><idx>try statement</idx>
             statement. For example, consider the following session that asks the
             user for an integer and then uses the division operator.
             If the user enters a second number that is not 0, then the print will show the result of division.
@@ -98,7 +98,7 @@ int main() {
         <p>It is also possible for a programmer to use nested try and except statements,
             along with different thrown errors to manage what happens in their code. The program
             will continue running after the error is caught, but we can stop this by returning
-            a value other than 0 in our main function. This is known as an <c>error code</c>.</p>
+            a value other than 0 in our main function. This is known as an <c>error code</c><idx>error code</idx>.</p>
         <p>The code below should be run inside of a folder, and can be used to open files.
             Ideally one of the files should be called <q>file.txt</q>. The program will prompt
             the user for a filename and can catch if that file does not exist or the default
