@@ -226,7 +226,7 @@ int main(){
             <p>In addition to being able to output to the standard output, we want to be able to take input from the user.
                 The command <c>cin</c> is somewhat similar to <c>cout</c> except, of course, it is used for getting character input.
                 Input streams direct data from a source, such as the keyboard or a file.
-                As you might have guessed, <c>cin</c> <idx> cin </idx>stands for <q>character input</q> and it makes getting input from the standard input device (usually the keyboard) relatively easy.
+                As you might have guessed, <c>cin</c> <idx> <c> cin </c> </idx>stands for <q>character input</q> and it makes getting input from the standard input device (usually the keyboard) relatively easy.
                 The input operator <idx> input operator </idx> in C++ is <c>&gt;&gt;</c>.</p>
             <p>Here is an example that uses <c>cin</c>:</p>
 
