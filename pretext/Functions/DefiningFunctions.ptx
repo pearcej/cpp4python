@@ -31,7 +31,7 @@ int main() {
     </program>
         </blockquote>
         <p>The syntax for this function definition includes the name, <c>timesTwo</c>,
-            and a parenthesized list of formal parameters and their types. For this function an <c>int</c> named <c>num</c>
+            and a parenthesized list of formal parameters <idx>formal parameters</idx> and their types. For this function an <c>int</c> named <c>num</c>
             is the only formal parameter, which suggests that <c>timesTwo</c> needs only
             one piece of data to do its work. The details, hidden <q>inside the box,</q>
             simply compute the result of <c>num*2</c> and return it. We can invoke or
@@ -68,8 +68,8 @@ int main() {
         </blockquote>
         <p>The <c>timesTwoVoid</c> function behaves very similarly to <c>timesTwo</c>. However, there is one key
             difference between them. Instead of the <c>int</c> in <c>timesTwo</c>, <c>timesTwoVoid</c> has a
-            <c>void</c> in front of its function definition. Unlike <c>timesTwo</c>, <c>timesTwoVoid</c> is a non-fruitful
-            function meaning it does not return a value even though it can still print something out.</p>
+            <c>void</c> <idx>void</idx> in front of its function definition. Unlike <c>timesTwo</c>, <c>timesTwoVoid</c> is a non-fruitful
+            function <idx>non-fruitful function</idx> meaning it does not return a value even though it can still print something out.</p>
         <p>We could go a step further and implement our own square root function by using a well-known
             technique called <q>Newton's Method.</q> Newton's Method for approximating
             square roots performs an iterative computation that converges on the
