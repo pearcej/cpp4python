@@ -34,9 +34,9 @@
             allow the programmer to have some type of intervention if they so
             choose. In addition, programmers can create their own exceptions if they
             detect a situation in the program execution that warrants it.</p>
-        <p>When an exception occurs, we say that it has been <q>thrown.</q><idx><c>throw</c></idx>You can
-            <q>catch</q><idx><c>catch</c></idx> the exception that has been raised by using a <idx><c>try </c>statement</idx>
-            statement. For example, consider the following session that asks the
+        <p>When an exception occurs, we say that it has been <q>thrown.</q><idx><c>throw</c></idx> You can
+            <q>catch</q><idx><c>catch</c></idx> the exception that has been raised by using a
+            <c>try</c>-<c>catch</c> statement<idx><c>try</c>-<c>catch</c> statement</idx>. For example, consider the following session that asks the
             user for an integer and then uses the division operator.
             If the user enters a second number that is not 0, then the print will show the result of division.
             However, if the user enters 0, then C++ will throw an error and return a value other than 0.</p>
@@ -95,10 +95,10 @@ int main() {
             instead print the error back to the user.
             This means that the program will not terminate but instead will continue
             on to the next statements.</p>
-        <p>It is also possible for a programmer to use nested try and except statements,
+        <p>It is also possible for a programmer to use nested <c>try</c>-<c>catch</c> statements,
             along with different thrown errors to manage what happens in their code. The program
             will continue running after the error is caught, but we can stop this by returning
-            a value other than 0 in our main function. This is known as an <c>error code</c><idx><c>error code</c></idx>.</p>
+            a value other than 0 in our main function. This is known as an error code<idx>error code</idx>.</p>
         <p>The code below should be run inside of a folder, and can be used to open files.
             Ideally one of the files should be called <q>file.txt</q>. The program will prompt
             the user for a filename and can catch if that file does not exist or the default
