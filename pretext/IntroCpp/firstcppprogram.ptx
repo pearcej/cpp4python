@@ -135,7 +135,7 @@ int main(){
                 so you can see that the program does actually return the integer 0.
                 Here zero is returned to indicate successful completion of the <c>main</c>
                 function. In case you are wondering why an integer is returned, if you do error
-                handling in C++, instead of 0, you can alternatively return an integer error code <idx>error code</idx> representing
+                handling in C++, instead of 0, you can alternatively return an integer error code representing
                 a specific error when and where it occurs.</p>
             <p>C++ functions and other C++ code blocks are grouped together using the curly <c>{}</c>
                 brackets. These curly brackets <idx> curly brackets </idx> are used much like tabbing is used in Python.
