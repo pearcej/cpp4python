@@ -30,11 +30,12 @@
             <term>exceptions</term><idx>exception</idx>.</p>
         <p>Most of the time, beginning programmers simply think of exceptions as
             fatal runtime errors that cause the end of execution. However, most
-            programming languages provide a way to deal with these errors that will
+            programming language provide a way to deal with these errors that will
             allow the programmer to have some type of intervention if they so
             choose. In addition, programmers can create their own exceptions if they
             detect a situation in the program execution that warrants it.</p>
-        <p>When an exception occurs, we say that it has been <q>thrown.</q><idx><c>throw</c></idx> You can
+        <p>When an exception occurs, we say that it has <term>thrown an error.</term>
+            <idx>throw an error</idx> You can
             <q>catch</q><idx><c>catch</c></idx> the exception that has been raised by using a
             <c>try</c>-<c>catch</c> statement<idx><c>try</c>-<c>catch</c> statement</idx>. For example, consider the following session that asks the
             user for an integer and then uses the division operator.
