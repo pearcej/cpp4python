@@ -30,7 +30,7 @@ void callingFunction() { /*return type void which indicates
             so the <c>cout</c> statement within this function produces the output:</p>
         <pre>nextVar = 20 inputVar = 4</pre>
         <p>Notice what happens when <c>functionExample(...)</c> ends and execution returns to <c>callingFunction()</c>.
-            The contents of <em>myVar</em> is <term>still the same</term>, as the location for <em>myVar</em> differs from where <em>inputVar</em>
+            The contents of <em>myVar</em> is <em>still the same</em>, as the location for <em>myVar</em> differs from where <em>inputVar</em>
             is stored. Thus, <em>myVar</em> still has the value 10, and the <c>cout</c> statement after the function call will
             produce the output:</p>
         <pre>myVar = 10</pre>

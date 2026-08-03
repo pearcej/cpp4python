@@ -21,7 +21,7 @@
     };
     return (total / length);
 }</pre>
-        <p>Array parameters look like <em>pass by value</em>, but they are effectively similar to <em>pass by reference</em> parameters. When they execute, the functions with these parameters do not make private copies of the arrays. Instead, the reference is passed to reduce the impact on memory. Arrays can therefore always be permanently changed when passed as arguments to functions.</p>
+        <p>Array parameters look like <term>pass by value</term>, but they are effectively similar to <term>pass by reference</term> parameters. When they execute, the functions with these parameters do not make private copies of the arrays. Instead, the reference is passed to reduce the impact on memory. Arrays can therefore always be permanently changed when passed as arguments to functions.</p>
         <p>After a call to the following function, each element in the third array argument is equal to the sum of the corresponding two elements in the first and second arguments:</p>
         <pre>void add_lists( int first[], int second[], int total[], int length ) {
     //return type void which indicates that nothing is returned
