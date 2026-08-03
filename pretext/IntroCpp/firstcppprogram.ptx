@@ -107,7 +107,7 @@ int main(){
                 These tell the preprocessor which file, header, or library to make available to
                 the compiler. For example, <c>#include &lt;iostream&gt;</c> <idx> <c> iostream </c> </idx> will make sure that
                 the <c>iostream</c> library is available at compile time.
-                Here, the term <em>header</em> <idx>header</idx>is used for a type of C++ file that contains definitions
+                Here, the term <term>header</term> <idx>header</idx>is used for a type of C++ file that contains definitions
                 of functions and variables, but not the function implementations.</p>
             <p>You can think of the <c>#include ...</c> <idx> <c> #include </c> </idx> statement in C++ as working a bit like
                 the <c>import ...</c> statement in Python.
@@ -130,7 +130,7 @@ int main(){
                 with <c>int main()</c>. This <c>main</c> <idx> <c> main </c> </idx> function is called implicitly instead of
                 explicitly like we must do in Python when we have a main function. This is
                 why you do not see an explicit function call invoking main.</p>
-            <p>The <c>int</c>  in <c>int main()</c> indicates that the <em>return type</em> of the <c>main</c> function will be
+            <p>The <c>int</c>  in <c>int main()</c> indicates that the <term>return type</term> of the <c>main</c> function will be
                 an integer. The final line of the <c>main</c> C++ function is typically <c>return 0</c> <idx> <c> return 0 </c> </idx>,
                 so you can see that the program does actually return the integer 0.
                 Here zero is returned to indicate successful completion of the <c>main</c>
