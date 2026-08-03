@@ -36,7 +36,7 @@ int varN = 100;</pre>
             it is sometimes a hexadecimal code and sometimes just a count or another
             way to reference the address.</p>
         <p>In Python we use <c>id</c> to reference the address,
-            while in C++ we use the <em>address-of operator</em> <idx>address-of operator</idx>, <c>&amp;</c>.</p>
+            while in C++ we use the <term>address-of operator</term> <idx>address-of operator</idx>, <c>&amp;</c>.</p>
       <TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="address_cpp" interactive="activecode" language="cpp">
@@ -123,7 +123,7 @@ ptrN = &amp;varN;</pre>
         <subsection xml:id="atomic-data_accessing-values-from-pointers">
             <title>Accessing Values from Pointers</title>
             <p>Once you have a C++ pointer, you use the asterisk before the pointer variable,
-                to <em>dereference</em> <idx>dereference</idx>the pointer, which means go to the location pointed at by the 3.</p>
+                to <term>dereference</term> <idx>dereference</idx>the pointer, which means go to the location pointed at by the 3.</p>
             <pre>In other words, varN and *ptrN (note the asterisk in front!) reference the same
 value in the code above.</pre>
             <p>Let's extend the example above to output the value of a variable and its address
