@@ -140,7 +140,7 @@
         <p>A very common programming task is to grow a vector using the <c>push_back()</c> method to append to the vector
             as we see in the next example.
             Because vectors can change size, vectors typically allocate some extra storage to accommodate for possible growth.
-            Thus the vector typically has an actual <em>capacity</em> greater than the storage <em>size</em> strictly needed to contain its elements.</p>
+            Thus the vector typically has an actual <term>capacity</term> greater than the storage <term>size</term> strictly needed to contain its elements.</p>
         <subsection xml:id="collection-data_iterating-through-vectors">
             <title>Iterating through Vectors</title>
             <p>When iterating vectors, you must first find the length of your container. You can simply call the <c>.length()</c> function.

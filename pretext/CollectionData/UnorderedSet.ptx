@@ -3,15 +3,15 @@
         <p>An <term>unordered_set</term> <idx>unordered_set</idx> is an unordered collection of zero or more unique C++ data values
             of a particular type.
             To use unordered_sets, you import <c>unordered_set</c> from the Standard template library with
-            <c>#include &lt;unorderd_set&gt;</c>.</p>
+            <c>#include &lt;unordered_set&gt;</c>.</p>
         <p>Unordered_sets allow for fast retrieval of individual elements based on their value.
             In an unordered_set, the value of an element is at the same time its key, that identifies it uniquely.
-            <c>Keys</c> are <term>immutable</term>, therefore, the elements in an <c>unordered_set</c> cannot be modified once in the container -
+            </c>Keys</c> are <term>immutable</term>, therefore, the elements in an <c>unordered_set</c> cannot be modified once in the container -
             However, they can be inserted and removed.</p>
         <p>Unordered sets do not allow duplicates and are initialized using comma-delimited
             values enclosed in curly braces. The collection can be assigned to
             a variable as shown below.</p>
-        <pre>set&lt;int&gt; mySet = {3, 6, 4, 78, 10}</pre>
+        <pre>unordered_set&lt;int&gt; mySet = {3, 6, 4, 78, 10};</pre>
         <p>Unordered sets support a number of methods that should be familiar to those who
             have worked with sets in a mathematics setting. <xref ref="collection-data_collection-data_tab-setmethods"/>
             provides a summary. Examples of their use follow.</p>
@@ -120,7 +120,7 @@
     <program xml:id="Unordered_set_example" interactive="activecode" language="cpp">
         <input>
 // Function that checks to see if a char
-// is in the unorderd set
+// is in the unordered set
 #include &lt;iostream&gt;
 #include &lt;unordered_set&gt;
 using namespace std;

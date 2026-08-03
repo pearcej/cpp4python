@@ -2,17 +2,17 @@
         <title>Hash Tables</title>
         <p>If you have used a Python dictionary, then you have used a <em>hash table</em>.
             A <term>hash table</term> <idx>hash table</idx> is a collection of associated pairs of
-            items where each pair consists of a <em>key</em> and a <em>value</em>.
-            Hash tables are often called the more general term <em>map</em>
+            items where each pair consists of a <term>key</term> and a <term>value</term>.
+            Hash tables are often called the more general term <term>map</term>
             because the associated hash function <q>maps</q> the key to the value.
-            Nevertheless, it is better to use the more precise term, <em>hash table</em>
+            Nevertheless, it is better to use the more precise term, <term>hash table</term>
             because other kinds of maps are sometimes implemented with a different underlying data structure.</p>
-        <p>Each hash table has a <em>hash function</em> <idx>hash function</idx> which
+        <p>Each hash table has a <term>hash function</term> <idx>hash function</idx> which
             given the key as input to the hash function
             returns the location of the associated value as the output.
             This makes look up fast.</p>
         <p>In Python, the dictionary data type represents the implementation of the hash table.
-            In C++, the <em>unordered_map</em> <idx>unordered_map</idx> implements the hash table, and the <c>&lt;unordered_map&gt;</c>
+            In C++, the <term>unordered_map</term> <idx>unordered_map</idx> implements the hash table, and the <c>&lt;unordered_map&gt;</c>
             library must be included as follows:</p>
         <pre>#include &lt;unordered_map&gt;</pre>
         <p>The syntax for hash table access is much like we might expect
@@ -25,8 +25,8 @@
 
     <program xml:id="hashtable1_cpp" interactive="activecode" language="cpp">
         <input>
-// Creates a hash table that maches
-// the english letter to it's spanish
+// Creates a hash table that matches
+// the English letter to its Spanish
 // equivalent, and outputs the size of
 // the table to the console
 #include &lt;iostream&gt;
@@ -82,8 +82,8 @@ main()
 
     <program xml:id="hashtable2_cpp" interactive="activecode" language="cpp">
         <input>
-// Creates a hash table that maches
-// the english letter to it's spanish
+// Creates a hash table that matches
+// the English letter to its Spanish
 // equivalent, and outputs every item
 // in the table to the console
 #include &lt;iostream&gt;
