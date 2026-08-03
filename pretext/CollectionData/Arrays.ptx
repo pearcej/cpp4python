@@ -1,6 +1,6 @@
 <section xml:id="collection-data_arrays">
         <title>Arrays</title>
-        <p><term>What is an Array?</term>
+        <p><em>What is an Array?</em>
             An array is a data structure consisting of an ordered collection of data elements,
             of identical type in which each element can be identified by an array index.
             More technically, an array data structure is an ordered arrangement of values
@@ -9,10 +9,10 @@
         <blockquote>
             <p><ol label="1">
                 <li>
-                    <p><em>statically allocated</em> in which the array size is fixed at compile-time and cannot change</p>
+                    <p><term>statically allocated</term> in which the array size is fixed at compile-time and cannot change</p>
                 </li>
                 <li>
-                    <p><em>dynamically allocated</em> <idx>dynamically allocated</idx>in which pointers are used in the allocation process so the size can change at run-time</p>
+                    <p><term>dynamically allocated</term> <idx>dynamically allocated</idx>in which pointers are used in the allocation process so the size can change at run-time</p>
                 </li>
             </ol></p>
         </blockquote>
@@ -29,7 +29,7 @@
             of memory locations that we can then manipulate as a single
             entity, and that at the same time gives us direct access to each
             individual component.</p>
-        <p><term>Why use an Array?</term></p>
+        <p><em>Why use an Array?</em></p>
         <p>C++ is a language often used for real-time or low-level processing
             where speed is essential and/or there is only a fixed amount of space
             available.</p>
@@ -52,7 +52,7 @@ string arr3[] = {"this", "is", "an", "array"}; // This is size 4.</pre>
             so the following are not the same.</p>
         <pre>double darray[] = {1.2};  // must use index to access value
 double ddouble = 1.2;     // cannot use index to access value</pre>
-        <p><term>Be Cautious with Arrays</term></p>
+        <p><em>Be Cautious with Arrays</em></p>
         <p>The speed and low-level control that arrays offer us
             as programmers is powerful&#8230; and dangerous.
             As a Python programmer, using a C++ array will
@@ -145,7 +145,7 @@ main()
         <p>You should use an array when you have a need for speed
             or you need to work with hardware constraints.
             Otherwise, you may want to consider using another collection data type,
-            the <em>vector</em>.</p>
+            the <term>vector</term>.</p>
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="array_werror_cpp" interactive="activecode" language="cpp">
