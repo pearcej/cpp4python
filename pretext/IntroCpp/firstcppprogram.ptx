@@ -275,9 +275,18 @@ int main() {
                     <title>Reading Questions</title>
                     <exercise label="interpreterdrag">
                         <statement><p>Match Compiler and Interpreter to the correct definition.</p></statement>
-                        <feedback><p>This is feedback.</p></feedback>
-                    <matches><match order="1"><premise>Compiler</premise><response>generally transforms code written in a high-level language into a low-level language in order to create an executable program</response></match><match order="2"><premise>Interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been assembled into machine language</response></match></matches></exercise>      
+                <cardsort>
+                    <match>
+                        <premise order="1">Compiler</premise>
+                        <response>generally transforms code written in a high-level language into a low-level language in order to create an executable program</response>
+                        </match>
 
+                    <match>
+                        <premise order="2">Interpreter</premise>
+                        <response>directly executes statements in a scripting language without requiring them to have been assembled into machine language</response>
+                    </match>
+                </cardsort>
+                </exercise>  
                     <exercise label="pp_introcpp_order" adaptive="yes" indent="hide" language="c++"><statement>
                         <p>Correctly rearrange the code below to implement hello world in C++:</p>
             </statement>
