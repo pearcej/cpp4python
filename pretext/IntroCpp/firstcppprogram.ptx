@@ -98,12 +98,8 @@ int main(){
         <subsection xml:id="intro-cpp_using-headers-and-libraries">
             <title>Using headers and libraries</title>
             <p>
-                  <notation>
-        <usage><m>\text{\#}</m></usage>
-        <description><c>#</c> begins a directive read by the preprocessor <idx>preprocessor</idx> . e.g. <c>#include</c> will include a system header file in the compilation process</description>
-      </notation>
                 <term>Preprocessor directives</term><idx>preprocessor directives</idx>
-                in C++ appear as statements preceded by the hash sign <c>#</c>.
+                in C++ appear as statements preceded by the hash sign <c>#</c> <idx> <c> # </c> </idx>.
                 These tell the preprocessor which file, header, or library to make available to
                 the compiler. For example, <c>#include &lt;iostream&gt;</c> <idx> <c> iostream </c> </idx> will make sure that
                 the <c>iostream</c> library is available at compile time.
@@ -119,10 +115,10 @@ int main(){
             <p>There are two ways to use <c>#include</c> in C++:</p>
             <pre>#include &lt;libraryname&gt;
 #include "filename"</pre>
-            <p>Here the angle-brackets <c>&lt;&gt;</c> are used to include libraries or headers provided by
+            <p>Here the angle-brackets <c>&lt;&gt;</c> <idx> <c> &lt;&gt; </c> </idx>are used to include libraries or headers provided by
                 the implementation, such as the
                 headers in the standard library (<c>iostream</c>, <c>string</c>, etc.). The double
-                quotes <c>"</c> are used for headers and files not provided by the implementation.</p>
+                quotes <c>"</c> <idx> <c> "" </c> </idx>are used for headers and files not provided by the implementation.</p>
         </subsection>
         <subsection xml:id="intro-cpp_the-main-function">
             <title>The main function</title>
@@ -137,11 +133,11 @@ int main(){
                 function. In case you are wondering why an integer is returned, if you do error
                 handling in C++, instead of 0, you can alternatively return an integer error code representing
                 a specific error when and where it occurs.</p>
-            <p>C++ functions and other C++ code blocks are grouped together using the curly <c>{}</c>
+            <p>C++ functions and other C++ code blocks are grouped together using the curly <c>{}</c> <idx> <c> {} </c> </idx>
                 brackets. These curly brackets <idx> curly brackets </idx> are used much like tabbing is used in Python.
                 Many people also use tabbing in C++ to indicate blocks, but tabs and other
                 whitespace (mostly) have no inherent meaning in C++.
-                Instead, the semi-colon <idx> semi-colon </idx> (<c>;</c>) must be used to conclude most statements in C++.</p>
+                Instead, the semi-colon <idx> semi-colon </idx> (<c>;</c>) <idx> <c> ; </c> </idx> must be used to conclude most statements in C++.</p>
             <p>In fact, the following program will run perfectly
                 even though the lack of meaningful spacing is more difficult for humans to read.</p>
 
@@ -160,12 +156,13 @@ using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
             <title>Comments in C++</title>
             <p>Python and C++ both support comments that are not processed by the interpreter or compiler.</p>
             <p>Python's single line comment begins with a hash (<c>#</c>).
-                In C++, the equivalent is two forward slashes (<c>//</c>)
+                In C++, the equivalent is two forward slashes (<c>//</c>) <idx> <c> // </c> </idx>
                 In each case the rest of the line is treated as a comment and ignored by the
                 interpreter or compiler.</p>
             <p>Python supports comments using triple quotes.
                 Like Python, C++ also supports multi-line comments
                 beginning with
+                <idx> <c> /* */ </c> </idx>
                 <c>/*</c>
                 and ending with
                 <c>*/</c>.</p>
@@ -173,6 +170,7 @@ using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
                 processing documentation.
                 There is no equivalent in the C++ standard to the triple-quoted docstring in Python.
                 However, the symbol groups
+                <idx> <c> /** */ </c> </idx>
                 <c>/**</c>
                 and
                 <c>*/</c>
@@ -198,7 +196,7 @@ span many lines, beginning and ending with the given symbols */</pre>
                 So, <c>cout</c> stands for <q>character output</q>.
                 Much like the Python <c>print</c> statement, <c>cout</c> is used to
                 print to the standard output device, which is typically your screen.
-                When <c>cout</c> is used, you will also see <c>&lt;&lt;</c> used.
+                When <c>cout</c> is used, you will also see <c>&lt;&lt;</c> <idx> <c> &lt;&lt; </c> </idx> used.
                 When this odd set of symbols are used together, they are called the <q>output operator</q> <idx> <h>output operator</h><h>&lt;&lt;</h> </idx>.
                 The output operator is used to direct output to the designated output device or file.
                 The output operator can also be used to concatenate output, much like the <q>+</q>
@@ -227,7 +225,7 @@ int main(){
                 The command <c>cin</c> is somewhat similar to <c>cout</c> except, of course, it is used for getting character input.
                 Input streams direct data from a source, such as the keyboard or a file.
                 As you might have guessed, <c>cin</c> <idx> <c> cin </c> </idx>stands for <q>character input</q> and it makes getting input from the standard input device (usually the keyboard) relatively easy.
-                The input operator <idx> <h>input operator</h><h>&gt;&gt;</h> </idx> in C++ is <c>&gt;&gt;</c>.</p>
+                The input operator <idx> <h>input operator</h><h>&gt;&gt;</h> </idx> in C++ is <c>&gt;&gt;</c> <idx> <c> &gt;&gt; </c> </idx>.</p>
             <p>Here is an example that uses <c>cin</c>:</p>
 
     <statement>
