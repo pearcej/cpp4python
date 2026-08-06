@@ -1,6 +1,6 @@
 <section xml:id="exception_handling_exception_handling_exception_-handling_summary">
         <title>Summary &amp; Reading Questions</title>
-        <p><ol label="1">
+        <p><ol>
             <li>
                 <p>There are two types of errors that occur while writing programs: syntax errors and logic errors</p>
             </li>

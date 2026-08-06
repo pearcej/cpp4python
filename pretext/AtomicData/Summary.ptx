@@ -1,6 +1,6 @@
 <section xml:id="atomicdata_atomicdata_atomic-data_summary">
         <title>Summary &amp; Reading Questions</title>
-        <p><ol label="1">
+        <p><ol>
             <li>
                 <p>All variables must be declared before use in C++.</p>
             </li>
