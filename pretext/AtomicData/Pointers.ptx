@@ -102,7 +102,7 @@ SOMETYPE* variablename;</pre>
                 <p>Now that we know how to declare pointers, how do we give them the address of
                     where the value is going to be stored? One way to do this is to have a pointer
                     refer to another variable by using the address-of operator, which is denoted by the
-                    ampersand symbol, <c>&amp;</c>. The address-of operator <c>&amp;</c> does exactly what it indicates,
+                    ampersand symbol, <c>&amp;</c> <idx> <c> &amp; </c> </idx>. The address-of operator <c>&amp;</c> does exactly what it indicates,
                     variableType varN;  // a variable to hold the value
                     namely it returns the address.</p>
                 <p>The syntax is shown below, where varN stores the value, and ptrN stores

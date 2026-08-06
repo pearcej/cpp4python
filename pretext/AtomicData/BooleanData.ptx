@@ -10,7 +10,7 @@
             In Python, these same truth values are capitalized, while in C++,
             they are lower case.</p>
         <p>C++ uses the standard Boolean operators, but they are represented
-            differently than in Python: <q>and</q> is given by <c>&amp;&amp;</c> , <q>or</q> is given by <c>||</c>
+            differently than in Python: <q>and</q> is given by <c>&amp;&amp;</c> <idx><c> &amp;&amp; </c></idx> , <q>or</q> is given by <c>||</c> <idx><c> || </c></idx>
             , and <q>not</q> is given by <c>!</c>.
             Note that the internally stored values representing <c>true</c> and <c>false</c>
             are actually <c>1</c> and <c>0</c> respectively. Hence, we see this in output as well.</p>
@@ -46,7 +46,7 @@ main()
     </program>
             </TabNode>
         <p>Boolean data objects are also used as results for comparison operators
-            such as equality (==) and greater than (<m>&gt;</m>). In addition,
+            such as equality (==) <idx><c> == </c></idx> and greater than (<m>&gt;</m>) <idx><c> &gt; </c></idx>. In addition,
             relational operators and logical operators can be combined together to
             form complex logical questions. <xref ref="atomic-data_id1"/> shows the relational
             and logical operators with examples shown in the session that follows.</p>
