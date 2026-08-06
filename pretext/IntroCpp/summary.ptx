@@ -20,7 +20,7 @@ int main(){         // main() must exist &amp; return an int
     <p>
         This simple example illustrates a few very important rules:
     </p>
-    <p><ol label="1">
+    <p><ol>
         <li>
             <p>Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.</p>
         </li>
