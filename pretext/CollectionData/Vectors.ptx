@@ -317,13 +317,13 @@ main()
                     <exercise label="matching_vectors">
                         <statement><p> Match the Vector operations with their corresponding explination.</p></statement>
                         <feedback><p>Feedback shows incorrect matches.</p></feedback>
-                    <matches><match order="1"><premise>[ ]</premise><response>Accesses value of an element.</response></match><match order="2"><premise>=</premise><response> Assigns value to an element.</response></match><match order="3"><premise>push_back</premise><response>Appends item to the end of the vector.</response></match><match order="4"><premise>pop_back</premise><response> Deletes last item of the vector.</response></match><match order="5"><premise>insert</premise><response>Injects an item into the vector.</response></match></matches></exercise> 
+                    <cardsort><match><premise order="1">[ ]</premise><response>Accesses value of an element.</response></match><match><premise order="2">=</premise><response> Assigns value to an element.</response></match><match><premise order="3">push_back</premise><response>Appends item to the end of the vector.</response></match><match><premise order="4">pop_back</premise><response> Deletes last item of the vector.</response></match><match><premise order="5">insert</premise><response>Injects an item into the vector.</response></match></cardsort></exercise> 
                     <exercise label="matching_vectors1">
                         <statement><p> Match the Vector operations with their corresponding explination.</p></statement>
                         <feedback><p>Feedback shows incorrect matches.</p></feedback>
-                    <matches>
-                        <match order="1"><premise>erase</premise><response>Deletes an element from the choosen index.</response></match><match order="2"><premise>size</premise><response>Returns the actual capacity used by elements.</response></match><match order="3"><premise>capacity</premise><response>Returns the ammount of allocated storage space.</response></match><match order="4"><premise>reserve</premise><response> Request a change in space to amount</response></match>
-                    </matches>
+                    <cardsort>
+                        <match><premise order="1">erase</premise><response>Deletes an element from the choosen index.</response></match><match><premise order="2">size</premise><response>Returns the actual capacity used by elements.</response></match><match><premise order="3">capacity</premise><response>Returns the ammount of allocated storage space.</response></match><match><premise order="4">reserve</premise><response> Request a change in space to amount</response></match>
+                    </cardsort>
                     </exercise>
 
 
