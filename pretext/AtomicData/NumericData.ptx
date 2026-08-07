@@ -13,7 +13,7 @@
             To get the whole quotient, declaring one of the numbers as a float will
             convert the entire result into floating point.</p>
         <p>Exponentiation in C++ is done using <c>pow()</c> <idx> <c> pow() </c> </idx> from the <c>cmath</c> <idx> <c> cmath </c> </idx> library
-            and the remainder (modulo) operator is done with <c>%</c>.</p>
+            and the remainder (modulo) operator is done with <c>%</c> <idx> <c> % </c> </idx>.</p>
         <p>Run the following code to see that you understand each result.</p>
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
