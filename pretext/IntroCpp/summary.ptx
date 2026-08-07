@@ -62,7 +62,7 @@ int main(){         // main() must exist &amp; return an int
                         </p>
                     </feedback>
                 </choice>
-                <choice correct ="yes">
+                <choice correct="yes">
                     <statement>
                         <p>//</p>
                     </statement>
@@ -178,20 +178,8 @@ int main(){         // main() must exist &amp; return an int
     <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
     <cardsort>
-        <match>
-            <premise order="1">dynamically typed</premise>
-            <response>Programming language in which variables need not necessarily be defined before they are used and can change during execution.</response>
-        </match>
-
-        <match>
-            <premise order="2">statically typed</premise>
-            <response>Programming language in which variables must be defined before they are used and cannot change during execution.</response>
-        </match>
-
-        <match>
-            <premise order="3">comment</premise>
-            <response>A readable explanation in the source code of a computer program.</response>
-        </match>
+    <match><premise order="1">dynamically typed</premise><response>Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.</response></match>
+    <match><premise order="2">statically typed</premise><response>Programming language,  in which variables must be defined before they are used and cannot change during execution.</response></match><match><premise order="3">comment</premise><response>a readable explanation  in the source code of a computer program.</response></match>
     </cardsort>
     </exercise>
     
