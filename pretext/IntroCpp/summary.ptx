@@ -177,10 +177,22 @@ int main(){         // main() must exist &amp; return an int
 <exercise label="matching_intro">
     <statement><p>Drag each glossary term to its' corresponding definition.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
-    <matches>
-    <match order="1"><premise>dynamically typed</premise><response>Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.</response></match>
-    <match order="2"><premise>statically typed</premise><response>Programming language,  in which variables must be defined before they are used and cannot change during execution.</response></match><match order="3"><premise>comment</premise><response>a readable explanation  in the source code of a computer program.</response></match>
-    </matches>
+    <cardsort>
+        <match>
+            <premise order="1">dynamically typed</premise>
+            <response>Programming language in which variables need not necessarily be defined before they are used and can change during execution.</response>
+        </match>
+
+        <match>
+            <premise order="2">statically typed</premise>
+            <response>Programming language in which variables must be defined before they are used and cannot change during execution.</response>
+        </match>
+
+        <match>
+            <premise order="3">comment</premise>
+            <response>A readable explanation in the source code of a computer program.</response>
+        </match>
+    </cardsort>
     </exercise>
     
     <exercise label="intro_matching">
