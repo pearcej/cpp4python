@@ -68,7 +68,7 @@
     <statement><p>Drag the corresponding library to what you would use it for.</p>
     </statement>
     <feedback><p>Which library is used for which task?</p></feedback>
-<matches><match order="1"><premise>fstream</premise><response>I want to write to a file</response></match><match order="2"><premise>iostream</premise><response>I want to write to the console</response></match></matches>
+<cardsort><match><premise order="1">fstream</premise><response>I want to write to a file</response></match><match><premise order="2">iostream</premise><response>I want to write to the console</response></match></cardsort>
 </exercise>
         
 <exercise>
@@ -110,11 +110,10 @@
 <exercise label="matching_ch6-1">
     <statement><p>Match the words to thier corresponding definition.</p></statement>
     <feedback><p>Feedback shows incorrect matches.</p></feedback>
-<matches>
-    <match order="1"><premise>stream</premise><response>An abstraction that allows you to send or receive an unknown number of bytes in input or output.</response></match>
-    <match order="2"><premise>member function</premise><response>A function that's associated with a certain type of object.</response></match><match order="3"><premise>c-string</premise><response>An array of characters that ends with a terminating null character.</response></match><match order="4"><premise>End-Of-File</premise><response>A flag that lets programs know when to stop.</response></match>
-</matches>
+<cardsort>
+    <match><premise order="1">stream</premise><response>An abstraction that allows you to send or receive an unknown number of bytes in input or output.</response></match>
+    <match><premise order="2">member function</premise><response>A function that's associated with a certain type of object.</response></match><match><premise order="3">c-string</premise><response>An array of characters that ends with a terminating null character.</response></match><match><premise order="4">End-Of-File</premise><response>A flag that lets programs know when to stop.</response></match>
+</cardsort>
 </exercise>
 </reading-questions>
     </section>
-
