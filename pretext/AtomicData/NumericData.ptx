@@ -18,7 +18,7 @@
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="intro_1cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 #include &lt;cmath&gt;
 using namespace std;
@@ -40,12 +40,12 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'NumericData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="intro_1py" interactive="activecode" language="python">
-        <input>
+        <code>
 # Function that performs a variety of math operations.
 def main():
 
@@ -62,7 +62,7 @@ def main():
     print(2**100)
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>When declaring numeric variables in C++,

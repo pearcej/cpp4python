@@ -40,7 +40,7 @@ int varN = 100;</pre>
       <TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="address_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -53,12 +53,12 @@ int main(){
     cout &lt;&lt; &amp;varN &lt;&lt; endl; //outputs the memory address of variable varN
     return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="address_py" interactive="activecode" language="python">
-        <input>
+        <code>
 # Outputs the value &amp; memory address of
 # variable titled varN.
 def main():
@@ -67,7 +67,7 @@ def main():
     print(id(varN)) # ID function returns the memory address in Python.
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>In both Python and C++, variables are stored in memory locations which are dependent
@@ -132,7 +132,7 @@ value in the code above.</pre>
             <blockquote>
 
     <program xml:id="firstptr" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -148,7 +148,7 @@ int main( ) {
 
     return 0;
 }
-        </input>
+        </code>
     </program>
             </blockquote>
 
@@ -167,7 +167,7 @@ int main( ) {
             <blockquote>
 
     <program xml:id="cpp_address_error1" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -185,7 +185,7 @@ int main( ) {
 
      return 0;
 }
-        </input>
+        </code>
     </program>
             </blockquote>
             <p><term>This is BAD, BAD, BAD!</term></p>
@@ -219,7 +219,7 @@ int main( ) {
             <blockquote>
 
     <program xml:id="NULLexamplecpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -235,7 +235,7 @@ int main( ) {
 
     cout &lt;&lt; "Pointer pntrN points to nothing!\n";
 }
-        </input>
+        </code>
     </program>
             </blockquote>
             <p>Helpful Tip: The null pointer becomes very useful when you must test
