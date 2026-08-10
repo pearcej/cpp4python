@@ -17,7 +17,7 @@
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="logical_1cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -29,12 +29,12 @@ int main() {
   cout &lt;&lt; (true &amp;&amp; false) &lt;&lt; endl;
   return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="logical_1py" interactive="activecode" language="python">
-        <input>
+        <code>
 # Function that demonstrates logical operators.
 def main():
     print(True)
@@ -42,7 +42,7 @@ def main():
     print(True or False)
     print(True and False)
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>Boolean data objects are also used as results for comparison operators
@@ -176,7 +176,7 @@ main()
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="locicalcpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -189,12 +189,12 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="logicalpy" interactive="activecode" language="python">
-        <input>
+        <code>
 # Function that demonstrates relational operators.
 def main():
 
@@ -203,7 +203,7 @@ def main():
     print((5 &gt;= 1) and (5 &lt;= 10))
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>When a C++ variable is declared, space in memory is set aside to hold
@@ -213,7 +213,7 @@ main()
         <p>Consider the following session:</p>
 
     <program xml:id="booleanpitfall" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -236,7 +236,7 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
         <p>The declaration <c>int theSum = 4;</c> creates a variable called
             <c>theSum</c> and initializes it to hold the data value of <c>4git</c>.
@@ -302,4 +302,3 @@ int main(){
     </exercise>
 </reading-questions>
     </section>
-

@@ -1,4 +1,4 @@
-    <section xml:id="_character-data">
+<section xml:id="_character-data">
         <title>Character Data</title>
         <p>In Python strings can be created with single or double quotes.
             In C++ single quotes are used for the character (<c>char</c>) <idx> <c> char </c></idx> data type,
@@ -7,7 +7,7 @@
        <TabNode tabname="Python" tabnode_options="{'subchapter': 'AtomicData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="charpy" interactive="activecode" language="python">
-        <input>
+        <code>
 # Shows direct comparison of both Strings &amp; Characters in Python
 def main():
 
@@ -19,12 +19,12 @@ def main():
     print('a' == "a")
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="C++" tabnode_options="{'subchapter': 'AtomicData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="charcpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
@@ -42,7 +42,7 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>Try the following question.</p>
