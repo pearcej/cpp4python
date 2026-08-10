@@ -7,24 +7,24 @@
             in Python:</p>
 
     <program xml:id="hellopysimp" interactive="activecode" language="python">
-        <input>
+        <code>
 print("Hello World!")
-        </input>
+        </code>
     </program>
         <p>Now, lets look at a more <q>complicated</q> version of the <q>hello world</q> program with a
             <c>main</c> function in Python:</p>
 
     <program xml:id="hellopymain" interactive="activecode" language="python">
-        <input>
+        <code>
 def main():
     print("Hello World!")
 main()
-        </input>
+        </code>
     </program>
         <p>Next, lets look at the same program written in C++:</p>
 
     <program xml:id="hellocppstd" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 
 int main(){
@@ -32,13 +32,13 @@ int main(){
     std::cout &lt;&lt; "Hello World!\n";
     return 0;
 }
-        </input>
+        </code>
     </program>
         <p>The above program can alternatively be written as follows to allow
             better facilitate standard input and output:</p>
 
     <program xml:id="hellocppnamespace" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -46,7 +46,7 @@ int main(){
     cout &lt;&lt; "Hello World!\n";
     return 0;
 }
-        </input>
+        </code>
     </program>
         <p>What we see is that at the core there are a few similarities with the
             complicated Python version, such as the <c>main</c> function and the
@@ -142,10 +142,10 @@ int main(){
                 even though the lack of meaningful spacing is more difficult for humans to read.</p>
 
     <program xml:id="hellocppugly" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
-        </input>
+        </code>
     </program>
             <p>As you program in C++, we strongly recommend you continue to use
                 the kind of human-readable formatting you have become used to in Python.
@@ -203,7 +203,7 @@ span many lines, beginning and ending with the given symbols */</pre>
                 can be used to concatenate in Python.</p>
 
     <program xml:id="hellocppducky" interactive="activecode" language="cpp">
-        <input>
+        <code>
 /* Ever heard of rubber duck debugging?
     See https://en.wikipedia.org/wiki/Rubber_duck_debugging */
 #include &lt;iostream&gt;
@@ -216,7 +216,7 @@ int main(){
   cout &lt;&lt; "               ( .__&gt; /" &lt;&lt; endl;
   cout &lt;&lt; "                `----' " &lt;&lt; endl;
 }
-        </input>
+        </code>
     </program>
         </subsection>
         <subsection xml:id="intro-cpp_standard-input">
@@ -234,7 +234,7 @@ int main(){
 
     </statement>
     <program xml:id="cin_user_input_editor" interactive="activecode" language="cpp" stdin="12.4">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -254,7 +254,7 @@ int main() {
 
   return 0;
 }
-        </input>
+        </code>
     </program>
         </subsection>
         <subsection xml:id="intro-cpp_type-declarations">
