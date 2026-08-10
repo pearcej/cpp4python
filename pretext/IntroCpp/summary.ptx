@@ -4,7 +4,7 @@
         Now that we have run our “hello world” program, lets go back and look at it carefully to see what we can learn about the C++ language.
      </p>
      <program xml:id="intro_sumary" interactive="activecode" language="cpp">
-        <input>
+        <code>
 /* This hello world program demonstrates the C++ concepts
     of commenting, using libraries, and using output.
 */
@@ -15,7 +15,7 @@ int main(){         // main() must exist &amp; return an int
     cout &lt;&lt; "Hello World!\n";
     return 0;       // 0 indicates program ended correctly.
 }
-        </input>
+        </code>
     </program>
     <p>
         This simple example illustrates a few very important rules:
@@ -71,7 +71,7 @@ int main(){         // main() must exist &amp; return an int
                         </p>
                     </feedback>
                 </choice>
-                <choice >
+                <choice>
                     <statement>
                         <p>@</p>
                     </statement>
@@ -80,7 +80,7 @@ int main(){         // main() must exist &amp; return an int
                         </p>
                     </feedback>
                 </choice>
-                <choice >
+                <choice>
                     <statement>
                         <p>none of the above</p>
                     </statement>
@@ -107,7 +107,7 @@ int main(){         // main() must exist &amp; return an int
                 </feedback>
             </choice>
 
-            <choice correct ="yes">
+            <choice correct="yes">
                 <statement>
                     <p>False</p>
                 </statement>
@@ -153,7 +153,7 @@ int main(){         // main() must exist &amp; return an int
                     </p>
                 </feedback>
             </choice>
-            <choice correct ="yes">
+            <choice correct="yes">
                 <statement>
                     <p>none of the above</p>
                 </statement>
@@ -165,7 +165,7 @@ int main(){         // main() must exist &amp; return an int
 </choices>
     </exercise>
     
-    <exercise label = "summary1-4">
+    <exercise label="summary1-4">
         <statement>
 <p>What keyword from the Standard Library (std) is used in conjunction with the extraction operator to accept C++ input from the keyboard as the standard input? <var/></p></statement><setup><var>
 <condition string="cin"><feedback><p>Right! It stands for character input.</p></feedback></condition>
