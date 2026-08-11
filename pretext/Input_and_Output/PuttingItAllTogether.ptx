@@ -3,7 +3,7 @@
         <p>The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.</p>
 <blockquote>
     <program language="cpp">
-        <input>
+        <code>
             #include &lt;cstdlib&gt;  // for the exit function
             #include &lt;fstream&gt;  // for I/O member functions
             #include &lt;iostream&gt; // for cout
@@ -59,7 +59,7 @@
                 cout &lt;&lt; "End of Program." &lt;&lt; endl;
 
                 return 0;
-        </input>
+        </code>
     </program>
 }</blockquote>
     </section>
