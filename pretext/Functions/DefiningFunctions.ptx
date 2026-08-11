@@ -9,7 +9,7 @@
         <blockquote>
 
     <program xml:id="timesTwo" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -27,7 +27,7 @@ int main() {
 
     return 0;
 }
-        </input>
+        </code>
     </program>
         </blockquote>
         <p>The syntax for this function definition includes the name, <c>timesTwo</c>,
@@ -44,7 +44,7 @@ int main() {
         <blockquote>
 
     <program xml:id="timesTwoVoid" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -63,7 +63,7 @@ int main() {
 
     return 0;
 }
-        </input>
+        </code>
     </program>
         </blockquote>
         <p>The <c>timesTwoVoid</c> function behaves very similarly to <c>timesTwo</c>. However, there is one key
@@ -88,7 +88,7 @@ int main() {
             
     <listing xml:id="functions_lst-root" name="lst_root">
     <program xml:id="newtonsmethod" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // returns the square root of a number as a double
 #include &lt;iostream&gt;
 using namespace std;
@@ -110,12 +110,12 @@ int main() {
 
       return 0;
 }
-        </input>
+        </code>
     </program>
     </listing>
 
     <program xml:id="dogwalk" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // function that returns the output number of steps walked
 #include &lt;iostream&gt;
 using namespace std;
@@ -131,7 +131,7 @@ int main() {
 
     return 0;
 }
-        </input>
+        </code>
     </program>
 
 
