@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <section xml:id="control_-structures_conditionals">
         <title>Conditionals</title>
         <p>Conditional statements in Python and C++ are very similar.</p>
@@ -49,7 +50,7 @@ else {
                 simple example in both Python and C++.</p>
 
     <program xml:id="pyelif" interactive="activecode" language="python">
-        <input>
+        <code>
 # demonstrates if,elif, and else statements in python
 def main():
     grade = 85
@@ -66,12 +67,12 @@ def main():
         print('A')
 
 main()
-        </input>
+        </code>
     </program>
             <p>In C++ we have a couple of ways to write this</p>
 
     <program xml:id="cppelif" interactive="activecode" language="cpp">
-        <input>
+        <code>
  // Shows how to use conditional statements
  #include &lt;iostream&gt;
  using namespace std;
@@ -104,7 +105,7 @@ main()
      }
      return 0;
  }
-        </input>
+        </code>
     </program>
             <p>We can get closer to the look of the elif<idx> <c> elif </c> </idx> statement in C++ by
                 taking advantage of the
@@ -113,7 +114,7 @@ main()
                 away with the following.</p>
 
     <program xml:id="cppelif2" interactive="activecode" language="cpp">
-        <input>
+        <code>
  //Shows how to put conditional statements together,
  //specfically putting "else if" after an "if" statement.
  #include &lt;iostream&gt;
@@ -139,7 +140,7 @@ main()
 
      return 0;
  }
-        </input>
+        </code>
     </program>
             
 
@@ -157,7 +158,7 @@ main()
                 program using a switch statement we would use the following:</p>
 
     <program xml:id="cppswitch" interactive="activecode" language="cpp">
-        <input>
+        <code>
  // Shows how to use a Switch statement.
 
  #include &lt;iostream&gt;
@@ -189,7 +190,7 @@ main()
 
      return 0;
  }
-        </input>
+        </code>
     </program>
             <p>Frankly, the <c>switch</c> statement is not used very often.
                 It is not as powerful as the <c>else if</c> model
@@ -202,7 +203,7 @@ main()
                 For example if the
                 grade was 95 and the <c>break</c> was omitted from the <c>case 9:</c>
                 alternative then the program would print out both (A and B.)
-                So, you might want to just avoid it and use if&#8230;</p>
+                So, you might want to just avoid it and use if…</p>
             <reading-questions xml:id="rqs-conditionals">
                 <title>Reading Questions</title>
                 <exercise label="mc_cpp_elsecond">
@@ -385,4 +386,3 @@ main()
             </reading-questions>
         </subsection>
     </section>
-
