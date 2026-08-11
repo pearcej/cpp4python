@@ -54,7 +54,7 @@ void callingFunction() { /*return type void which indicates
         <blockquote>
 
     <program xml:id="activepassrefcpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -81,14 +81,14 @@ int main( ) {
 
     return 0;
 }
-        </input>
+        </code>
     </program>
         </blockquote>
-        <p>For this program <xref ref="lst-swap-inputs" text="custom">Swap Inputs</xref> to reverse the order of the integers the users types in, the function <c>swap_values(...)</c> must be able to change the values of the arguments. Try removing one or both of the <q>&amp;</q> &#8216;s in this code to see what happens.</p>
+        <p>For this program <xref ref="lst-swap-inputs" text="custom">Swap Inputs</xref> to reverse the order of the integers the users types in, the function <c>swap_values(...)</c> must be able to change the values of the arguments. Try removing one or both of the <q>&amp;</q> ‘s in this code to see what happens.</p>
         <p>Analyze the program and answer the question that involves parameter passing below:</p>
         <p xml:id="lst-swap-inputs">
     <program xml:id="questionexample1" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // demonstrates the difference between pass-by-value
 // and pass-by-reference functions.
 #include &lt;iostream&gt;
@@ -121,7 +121,7 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
 </p>
 <reading-questions xml:id="rqs-parameter-passing-by-value">
