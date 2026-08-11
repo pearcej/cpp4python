@@ -155,7 +155,7 @@ char cstring[] = {"Hello World!"};    // C-string or char array uses double quot
             <TabNode tabname="C++" tabnode_options="{'subchapter': 'Strings', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="introstring_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // This function concatenates the string hello World
 // Then it says where World begins in the concatenated string
 #include &lt;iostream&gt;
@@ -176,12 +176,12 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
                 </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Strings', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="introstring_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """This does the same thing as the C++ function """
 def main():
     mystring1 = "Hello"
@@ -195,7 +195,7 @@ def main():
     print(str(mystring3.find(mystring2)))
 
 main()
-        </input>
+        </code>
     </program>
                 </TabNode>
             <p>Check your understanding by completing the following question.</p>

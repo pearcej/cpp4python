@@ -118,7 +118,7 @@
         <p>The code below is an example of a program that can detect if a specific char is in an unordered set.</p>
 
     <program xml:id="Unordered_set_example" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // Function that checks to see if a char
 // is in the unordered set
 #include &lt;iostream&gt;
@@ -143,7 +143,7 @@ charSet.insert('e');
 checker(charSet, letter);
 return 0;
 }
-        </input>
+        </code>
     </program>
         <p>the <c>find</c> method used for a conditional in <c>Checker</c> compares
             each item in the set with the given parameter until there is a match. the

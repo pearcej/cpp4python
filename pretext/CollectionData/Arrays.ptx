@@ -37,8 +37,8 @@
             memory <idx>contiguous memory</idx> locations making look-up via index very, very fast.
             In computing, a <term>word</term> <idx>word</idx> is the unit of data used by a particular processor design,
             such as 32 or 64 bits. For example, an array of 100 integer variables, with indices 0 through 99,
-            might be stored as 100 words at memory addresses 20000, 20004, 20008, &#8230; 20396.
-            The element with index i would be located at the address 20000 + 4 &#215; i.</p>
+            might be stored as 100 words at memory addresses 20000, 20004, 20008, … 20396.
+            The element with index i would be located at the address 20000 + 4 × i.</p>
         <p>Statically allocated C++ arrays must be declared with both a type and a size at compile-time.</p>
         <pre>double darray[4];
 int iarray[10];
@@ -54,7 +54,7 @@ string arr3[] = {"this", "is", "an", "array"}; // This is size 4.</pre>
 double ddouble = 1.2;     // cannot use index to access value</pre>
         <p><em>Be Cautious with Arrays</em></p>
         <p>The speed and low-level control that arrays offer us
-            as programmers is powerful&#8230; and dangerous.
+            as programmers is powerful… and dangerous.
             As a Python programmer, using a C++ array will
             help you better understand the trade-offs of the
             protections Python offers.</p>
@@ -62,7 +62,7 @@ double ddouble = 1.2;     // cannot use index to access value</pre>
        <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="listarray_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // outputs all elements in the array
 //to the console
 #include &lt;iostream&gt;
@@ -75,12 +75,12 @@ int main(){
     }
     return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="listarray_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """Demonstrates how python protects from
 iterating past the end of a list"""
 
@@ -90,7 +90,7 @@ def main():
         print(mylist[i])
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>The protections Python offers, however, takes time and C++ is designed for speed.
@@ -105,7 +105,7 @@ main()
        <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="array_error_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -120,12 +120,12 @@ int main(){
     }
     return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="array_error_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """Demonstrates how python protects from
 iterating past the end of a list,
  and shows the use of Id as the location in memory"""
@@ -137,7 +137,7 @@ def main():
         print("id: "+str(id(mylist[i])))
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>The speed of C++ comes at the cost of minimal to no error checking.
@@ -149,7 +149,7 @@ main()
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="array_werror_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -173,12 +173,12 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Arrays', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="array_werror_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """Demonstrates how python protects from
 iterating past the end of a list
 and changing any other data"""
@@ -194,7 +194,7 @@ def main():
           print("id: "+str(id(otherdata[i])))
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
 <reading-questions xml:id="rqs-arrays">

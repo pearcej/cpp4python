@@ -24,7 +24,7 @@
         <TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="hashtable1_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // Creates a hash table that matches
 // the English letter to its Spanish
 // equivalent, and outputs the size of
@@ -47,12 +47,12 @@ int main() {
 
     cout &lt;&lt; spnumbers.size() &lt;&lt; endl;
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="hashtable1_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """Python equivalent
 of the C++ code """
 def main():
@@ -66,7 +66,7 @@ def main():
 
     print(len(spnumbers))
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>It is important to note that hash tables are organized by the location given
@@ -81,7 +81,7 @@ main()
        <TabNode tabname="C++" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="hashtable2_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // Creates a hash table that matches
 // the English letter to its Spanish
 // equivalent, and outputs every item
@@ -105,12 +105,12 @@ int main() {
         cout &lt;&lt; i-&gt;second &lt;&lt; endl;
     }
 }
-        </input>
+        </code>
     </program>
             </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'HashTables', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="hashtable2_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """Python equivalent
 of the C++ code """
 def main():
@@ -121,7 +121,7 @@ def main():
         print(spnumbers[key])
 
 main()
-        </input>
+        </code>
     </program>
             </TabNode>
         <p>Hash Tables have both methods and operators. <xref ref="collection-data_collection-data_tab-hashopers"/>

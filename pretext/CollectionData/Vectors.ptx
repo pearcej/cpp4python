@@ -151,7 +151,7 @@
                 of elements the Array contains!</p>
 
     <program xml:id="vectorIteration1" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -175,7 +175,7 @@ int main() {
 
      return 0;
 }
-        </input>
+        </code>
     </program>
             <p>An optional secondary version of the <c>for</c> loop has been commented out of the above code.
                 You can try running this in your version of C++ to see if it works, but in some older versions of C++,
@@ -191,7 +191,7 @@ int main() {
                <TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="introvector_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // function that uses a vector to square
 // every number from 0 to 49
 // uses the reserve operation to save space in memory
@@ -210,12 +210,12 @@ int main(){
     }
     return 0;
 }
-        </input>
+        </code>
     </program>
                     </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="introvector_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """Uses a list to square every
 number from 0 to 49 """
 def main():
@@ -225,7 +225,7 @@ def main():
         print(intlist[i])
 
 main()
-        </input>
+        </code>
     </program>
                     </TabNode>
                 <p>In the above example, the use of <c>reserve</c> was optional. However, it is a good
@@ -237,7 +237,7 @@ main()
                     example that follows.</p>
 
     <program xml:id="vector_no_reserve_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // function that uses a vector to square
 // every number from 0 to 49
 // and does not use reserve.
@@ -258,14 +258,14 @@ int main(){
     }
     return 0;
 }
-        </input>
+        </code>
     </program>
                 <p>Remembering that C++ is designed for speed, not protection,
                     we will likely not be surprised by the following:</p>
                 <TabNode tabname="C++" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="vector_errors_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // Note: counting always starts at 0
 // This demonstrates what happens when
 // accessing datat outside of your vector
@@ -290,12 +290,12 @@ int main(){
 
     return 0;
 }
-        </input>
+        </code>
     </program>
                     </TabNode><TabNode tabname="Python" tabnode_options="{'subchapter': 'Vectors', 'chapter': 'CollectionData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'Python'}">
 
     <program xml:id="vector_errors_py" interactive="activecode" language="python">
-        <input>
+        <code>
 """Demonstrates python's protections
 against iterating outside of a list"""
 def main():
@@ -307,7 +307,7 @@ def main():
         print("intlist[" + str(i) + "]=" + str(intlist[i]))
 
 main()
-        </input>
+        </code>
     </program>
                     </TabNode>
                     
