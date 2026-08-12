@@ -28,7 +28,7 @@
             The <c>while</c> loop to scan through a file is located in the <c>make_neat(...)</c> function.</p>
 <blockquote>
     <program language="cpp"> 
-        <input>
+        <code>
             // Illustrates output formatting instructions.
             // Read all the numbers in the file rawdata.dat and write the numbers
             // to the screen and to the file neat.dat in a neatly formatted way.
@@ -89,7 +89,7 @@
                 }
             }
             // Code by Jan Pearce
-        </input>
+        </code>
     </program>
 </blockquote>
         <p>This is the <c>rawdata.txt</c> inputed into the <c>make_neat(...)</c>.</p>
