@@ -55,7 +55,7 @@ exit status -1</pre>
         <blockquote>
 
     <program xml:id="divisionErr_cpp" interactive="activecode" language="cpp">
-        <input>
+        <code>
 // Shows exception handling using try,throw,
 // and catch in order to output
 // an error message to the console
@@ -89,7 +89,7 @@ int main() {
 
     return 0;
 }
-        </input>
+        </code>
     </program>
         </blockquote>
         <p>This will catch the fact that an exception is raised by <c>div</c> and will
@@ -160,4 +160,3 @@ int main() {
             See the C++ official documentation for a list
             of all the available exception types and for how to create your own exception type.</p>
     </section>
-
