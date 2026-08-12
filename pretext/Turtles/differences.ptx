@@ -2,9 +2,9 @@
         <title>Python's turtle vs C-Turtle</title>
         <p><c classes="code">C-Turtle</c> varies from the Python <c classes="code">turtle</c> library primarily in syntax. Most of the methods
             are exactly the same between implementations, however there are a few notable differences between the two.
-            Colors, for example, must be surrounded by curly brackets (e.g, &#8216;{' and &#8216;}') when referring to them by a
+            Colors, for example, must be surrounded by curly brackets (e.g, ‘{' and ‘}') when referring to them by a
             name such as <q>red</q>, <q>green</q>, or <q>blue</q>. You can also ask for a random color by using the string <q>random</q>.</p>
-        <program language="cpp"><input>
+        <program language="cpp"><code>
 ct::Color red   = {"red"};
 ct::Color green = {"green"};
 ct::Color blue  = {"blue"};
@@ -16,7 +16,7 @@ turtle.pencolor(red);
 //And so do these.
 turtle.pencolor({"green"});
 turtle.pencolor({"random"});
-</input></program>
+</code></program>
         <p>Unlike in Python, the <c classes="code">write</c> method does not allow you to specify a font nor size. In contrast to Python, C++ finds it much more challenging to handle fonts because operating systems deal with them in a complex way.
             Furthermore, there is no <q>world</q> screen mode like
             there is in Python. Normally, this would allow you to specify the <q>bounds</q> of your canvas (e.g, specify minimum
@@ -28,17 +28,17 @@ turtle.pencolor({"random"});
             The former of the two, <c classes="code">shift</c>, simply adds to the X and Y coordinate position of the turtle. If your turtle is at coordinate
             600x, 400y and <c classes="code">shift</c> is called with coordinate 50x and -50y, the turtle's final position would be 650x, 350y. The latter
             of the two, <c classes="code">middle</c>, returns the point exactly between two other points. See the examples below.</p>
-        <program language="cpp"><input>
+        <program language="cpp"><code>
 turtle.goTo(600, 400);
 turtle.shift(50, -50);
 //Turtle position is now 650x, 350y.
-</input></program>
-        <program language="cpp"><input>
+</code></program>
+        <program language="cpp"><code>
 ct::Point a = {400, 300};
 ct::Point b = {450, 300};
 
 //Should equal the point 425x, 300y.
 ct::Point middle = ct::middle(a, b);
-</input></program>
+</code></program>
     </section>
 

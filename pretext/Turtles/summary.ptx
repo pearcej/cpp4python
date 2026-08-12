@@ -43,7 +43,7 @@
         
         </exercise>
         <program xml:id="turtle_checkyourself_ac_1" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -63,7 +63,7 @@ int main() {
     scr.bye();
     return 0;
 }
-        </input>
+        </code>
     </program>
 
     <exercise label="turtle_checkyourself_mchoice_1">
@@ -112,7 +112,7 @@ int main() {
 </choices>
 
     </exercise>
-        <program language="cpp"><input>
+        <program language="cpp"><code>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -128,7 +128,7 @@ int main() {
     scr.bye();
     return 0;
 }
-</input></program>
+</code></program>
 
     <exercise label="turtle_checkyourself_mchoice_2">
         <statement>
