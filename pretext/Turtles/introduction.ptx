@@ -44,7 +44,7 @@
                 the same thing. Try running both and comparing how the code looks between the two versions.</p>
 
     <program xml:id="cturtle_1" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -62,11 +62,11 @@ int main() {
     scr.bye();
     return 0;
 }
-        </input>
+        </code>
     </program>
 
     <program xml:id="cturtle_python_1" interactive="activecode" language="python">
-        <input>
+        <code>
 import turtle
 
 turt = turtle.Turtle()
@@ -78,7 +78,7 @@ for i in range(4):
     turt.forward(50)
     turt.right(90)
 turt.end_fill()
-        </input>
+        </code>
     </program>
 <reading-questions xml:id="rqs-introduction">
     <title>Reading Question</title>

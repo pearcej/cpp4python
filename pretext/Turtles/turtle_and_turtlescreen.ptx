@@ -2,17 +2,17 @@
         <title>Turtle &amp; TurtleScreen</title>
         <p>Turtles must exist on a <c classes="code">TurtleScreen</c> to be used. This is a significant difference from
             Python, as you are required to create your own screen <em>before</em> creating a <c classes="code">Turtle</c> object.</p>
-        <program language="cpp"><input>
+        <program language="cpp"><code>
 ct::TurtleScreen screen;
 ct::Turtle turtle(screen);
 //Notice how the Screen is given to our Turtle when we create it.
-</input></program>
+</code></program>
         <p>Closing a <c classes="code">TurtleScreen</c> works exactly how it does in Python. For this chapter, only <c classes="code">bye</c> is used.
             Calling it is not completely necessary, as it is also called automatically if it, or an equivalent method, hasn't been called.
             When working outside of the textbook, the <c classes="code">exitonclick</c> method is also available.</p>
-        <program language="cpp"><input>
+        <program language="cpp"><code>
 screen.bye();
-</input></program>
+</code></program>
         <p>Turtles are based on the following premise: <q>There is a turtle on a canvas with a colored pen
             attached to their tail.</q> In this case, the <em>canvas</em> is a <c classes="code">TurtleScreen</c>. This Turtle will
             follow any command you give it, which consist of telling it to go certain directions, what color
@@ -232,7 +232,7 @@ screen.bye();
         <p>Consider the following annotated example.</p>
 
     <program xml:id="cturtle_4" interactive="activecode" language="cpp">
-        <input>
+        <code>
 #include &lt;CTurtle.hpp&gt;
 namespace ct = cturtle;
 
@@ -270,7 +270,7 @@ int main() {
     screen.bye();
     return 0;
 }
-        </input>
+        </code>
     </program>
         <p>The expected output would be a purple square in the center of the turtle's canvas.
             If you have experience with Turtles in Python, a lot of what you see in the example should look
@@ -334,4 +334,3 @@ int main() {
 
 </reading-questions>
 </section>
-
