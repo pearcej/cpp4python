@@ -1,6 +1,7 @@
 <section xml:id="atomic-data_pointers">
         <title>Pointers</title>
-        <p>A C++ <term>pointer</term> <idx>pointer</idx>is a variable that stores a memory address <idx>memory address</idx> and can be used to indirectly
+        <introduction>
+<p>A C++ <term>pointer</term> <idx>pointer</idx>is a variable that stores a memory address <idx>memory address</idx> and can be used to indirectly
             access data stored at that memory location.</p>
         <p>We know that variables in a computer program are used to label data with a
             descriptive identifier so that the data can be accessed and used by that
@@ -80,9 +81,11 @@ main()
         <p>References are slower, but they are sometimes useful.
             If in C++, we want to create a analogous reference to a memory location,
             we must use a special data type called a <term>pointer</term>.</p>
-        <subsection xml:id="atomic-data_pointer-syntax">
+        </introduction>
+<subsection xml:id="atomic-data_pointer-syntax">
             <title>Pointer Syntax</title>
-            <p>When declaring a pointer in C++ that will <q>point</q> to the memory address of some
+            <introduction>
+<p>When declaring a pointer in C++ that will <q>point</q> to the memory address of some
                 data type,
                 you will use the same rules of declaring variables and data types.
                 The key difference is that there must be an asterisk (*) between the data type and the
@@ -97,7 +100,8 @@ SOMETYPE* variablename;</pre>
             <p>However, the first declaration is preferable because it is clearer to the
                 programmer that the variable is in fact a pointer because the asterisk is closer
                 to the variable name.</p>
-            <subsubsection xml:id="atomic-data_the-address-of-operator">
+            </introduction>
+<subsubsection xml:id="atomic-data_the-address-of-operator">
                 <title>The address-of operator, <c>&amp;</c></title>
                 <p>Now that we know how to declare pointers, how do we give them the address of
                     where the value is going to be stored? One way to do this is to have a pointer
@@ -304,4 +308,3 @@ int main( ) {
                 </reading-questions> 
         </subsection>
     </section>
-
