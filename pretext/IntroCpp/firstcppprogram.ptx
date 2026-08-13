@@ -1,6 +1,7 @@
 <section xml:id="intro-cpp_let-s-look-at-a-c-program">
         <title>Let's look at a C++ program</title>
-        <p>A time honored tradition in computer science is to write a program
+        <introduction>
+<p>A time honored tradition in computer science is to write a program
             called <q>hello world.</q> The <q>hello world</q> program is simple and easy.
             No logic errors are possible to make, so getting it to run relies only on
             understanding the syntax. Let's look at an easy version of <q>hello world</q>
@@ -57,7 +58,8 @@ int main(){
             are some elements of C++ that will fade into the background as you
             become used to seeing them. One thing that will help you is to learn a
             little bit more about C++.</p>
-        <subsection xml:id="intro-cpp_compilation">
+        </introduction>
+<subsection xml:id="intro-cpp_compilation">
             <title>Compilation</title>
             <p>A question you may have about this little program is <q>How would I run it on
                 my own machine?</q> Running a C++ program is not as simple as running a
@@ -312,4 +314,3 @@ int main() {
 
         </subsection>
     </section>
-    

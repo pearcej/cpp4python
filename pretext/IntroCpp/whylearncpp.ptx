@@ -1,6 +1,7 @@
 <section xml:id="intro-cpp_why-learn-another-programming-language">
         <title>Why Learn Another Programming Language?</title>
-        <p>Python is a great language for beginning programming for several reasons.
+        <introduction>
+<p>Python is a great language for beginning programming for several reasons.
             First, the syntax is both sparse and clear. Second, the underlying model of
             how objects and variables work is very consistent. Third, you can write
             powerful and interesting programs without a lot of work. However, Python
@@ -31,7 +32,8 @@
             conditionals, and functions. And there are other language features that are unique. If
             you know what is common in most languages, then in learning a new language, you need only
             to focus on what is different from the languages you already know.</p>
-        <subsection xml:id="intro-cpp_why-learn-c-why-not-java-or-javascript">
+        </introduction>
+<subsection xml:id="intro-cpp_why-learn-c-why-not-java-or-javascript">
             <title>Why Learn C++? Why not Java or Javascript?</title>
             <blockquote>
                 <p><ul>
@@ -72,4 +74,3 @@
             </blockquote>
         </subsection>
     </section>
-
