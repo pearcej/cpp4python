@@ -1,8 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <section xml:id="control_-structures_conditionals">
         <title>Conditionals</title>
-        <p>Conditional statements in Python and C++ are very similar.</p>
-        <subsection xml:id="control_-structures_simple-if">
+        <introduction>
+<p>Conditional statements in Python and C++ are very similar.</p>
+        </introduction>
+<subsection xml:id="control_-structures_simple-if">
             <title>Simple if</title>
             <p>In Python, we write a simple if statement in the following way:</p>
             <pre>if condition:
