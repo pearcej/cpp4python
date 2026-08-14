@@ -244,7 +244,7 @@ int main( ) {
 
 
                 <reading-questions xml:id="rqs-pointers">
-                    <title>Reading Question</title>
+                    <title>Reading Questions</title>
                     
                     <exercise label="mc_pntrhlp">
                         <statement>
@@ -301,6 +301,53 @@ int main( ) {
                 </choices>
                 
                     </exercise>
+
+                      <exercise xml:id="cpp-pointers-parsons-exercise" label="cpp-pointers-parsons">
+    <statement>
+        <p>
+            Construct a C++ program that stores an integer in <c>varN</c>, makes a pointer 
+            <c>ptrN</c> point to it, and then uses the pointer to print the value. 
+            Drag the blocks into the correct order on the right.
+        </p>
+    </statement>
+    <blocks>
+        <block order="1">
+            <cline>#include &lt;iostream&gt;</cline>
+            <cline>using namespace std;</cline>
+        </block>
+
+        <block order="2">
+            <cline>int main() {</cline>
+        </block>
+
+        <block order="3">
+            <cline>    int varN = 9;</cline>
+        </block>
+
+        <block order="4">
+            <choice correct="yes">
+                <cline>    int *ptrN = &amp;varN;</cline>
+            </choice>
+            <choice correct="no">
+                <cline>    int *ptrN = varN;</cline>
+            </choice>
+        </block>
+
+        <block order="5">
+            <choice correct="yes">
+                <cline>    cout &lt;&lt; *ptrN &lt;&lt; endl;</cline>
+            </choice>
+            <choice correct="no">
+                <cline>    cout &lt;&lt; ptrN &lt;&lt; endl;</cline>
+            </choice>
+        </block>
+
+        <block order="6">
+            <cline>    return 0;</cline>
+            <cline>}</cline>
+        </block>
+    </blocks>
+</exercise>
                 </reading-questions> 
         </subsection>
     </section>
