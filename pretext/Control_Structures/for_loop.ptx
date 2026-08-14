@@ -111,6 +111,47 @@ int main() {
 </choices>
 
     </exercise>
+
+    <exercise xml:id="cpp-for-loop-parsons-exercise" label="cpp-for-loop-parsons">
+    <statement>
+        <p>
+            Construct a C++ program that uses a for loop to print the squares of the numbers 
+            0 through 4, each followed by a space. Drag the blocks into the correct order on the right.
+        </p>
+    </statement>
+    <blocks>
+        <block order="1">
+            <cline>#include &lt;iostream&gt;</cline>
+            <cline>using namespace std;</cline>
+        </block>
+
+        <block order="2">
+            <cline>int main() {</cline>
+        </block>
+
+        <block order="3">
+            <choice correct="yes">
+                <cline>    for (int i = 0; i &lt; 5; i++) {</cline>
+            </choice>
+            <choice correct="no">
+                <cline>    for (int i = 0; i &lt; 5; i--) {</cline>
+            </choice>
+        </block>
+
+        <block order="4">
+            <cline>        cout &lt;&lt; i*i &lt;&lt; " ";</cline>
+        </block>
+
+        <block order="5">
+            <cline>    }</cline>
+        </block>
+
+        <block order="6">
+            <cline>    return 0;</cline>
+            <cline>}</cline>
+        </block>
+    </blocks>
+</exercise>
 </reading-questions>
         </subsection>
     </section>
