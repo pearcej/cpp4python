@@ -298,7 +298,53 @@ int main(){
                 </feedback>
             </choice>
 </choices>
-
     </exercise>
+
+    <exercise label="cpp_boolean_logical_parsons">
+    <statement>
+        <p>
+            Rearrange  the blocks to create a C++ function <c>checkCondition</c> that takes two integers, <c>score</c> and <c>lives</c>. It should return a <c>bool</c> value indicating if <c>score</c> is greater than or equal to <c>100</c> <strong>AND</strong> <c>lives</c> is strictly greater than <c>0</c>.
+        </p>
+    </statement>
+    <blocks>
+        <block order="1">
+            <choice correct="yes">
+                <cline>bool checkCondition(int score, int lives) {</cline>
+            </choice>
+            <choice correct="no">
+                <cline>Boolean checkCondition(int score, int lives) {</cline>
+            </choice>
+        </block>
+
+        <block order="2">
+            <choice correct="yes">
+                <cline>    bool isValid = (score &gt;= 100) &amp;&amp; (lives &gt; 0);</cline>
+            </choice>
+            <choice correct="no">
+                <cline>    bool isValid = (score &gt;= 100) and (lives &gt; 0);</cline>
+            </choice>
+        </block>
+
+        <block order="3">
+            <choice correct="yes">
+                <cline>    if (isValid) {</cline>
+                <cline>        return true;</cline>
+                <cline>    }</cline>
+            </choice>
+            <choice correct="no">
+                <cline>    if (isValid) {</cline>
+                <cline>        return True;</cline>
+                <cline>    }</cline>
+            </choice>
+        </block>
+
+        <block order="4">
+            <cline>    return false;</cline>
+            <cline>}</cline>
+        </block>
+    </blocks>
+</exercise>
+
+   
 </reading-questions>
     </section>
