@@ -1,6 +1,7 @@
 <section xml:id="turtles_turtles_turtles_introduction">
         <title>Introduction</title>
-        <p>C++ is designed with the principle that speed is more important than safety and error-checking.
+        <introduction>
+<p>C++ is designed with the principle that speed is more important than safety and error-checking.
             This differs from languages like Python, which is considerably more restrictive in regards to
             aspects such as memory allocations and resource management. C++ is translated to <q>machine language</q>
             when it is compiled, which is a step skipped by Python. Python skips this step in favor of immediate
@@ -12,7 +13,8 @@
             allows C++ to communicate better with other components of your computer, such as your graphics processing unit, or <q>GPU</q>.
             This is one of many reasons C++ is considered an industry standard for high-performance graphics applications, such as
             video games or software used for visual effects in movies.</p>
-        <subsection xml:id="turtles_what-are-turtles">
+        </introduction>
+<subsection xml:id="turtles_what-are-turtles">
             <title>What are Turtles?</title>
             <p>Turtle graphics are a popular and simple way for introducing programming to beginners.
                 It was part of the original Logo programming language developed by
@@ -131,4 +133,3 @@ turt.end_fill()
 </reading-questions>
         </subsection>
     </section>
-
