@@ -141,7 +141,61 @@ main()
             that are correct and only modifying one character in the best string so far.
             This is a type of algorithm in the class of ‘hill climbing' algorithms, that
             is we only keep the result if it is better than the previous one.</p>
-        </exercise>    
+        </exercise>  
+
+        <exercise xml:id="cpp-overloading-parsons-exercise" label="cpp-overloading-parsons">
+    <statement>
+        <p>
+            Construct a C++ program that overloads a function called <c>myfunct</c> so it works 
+            with either one or two integer parameters. Drag the blocks into the correct order on the right.
+        </p>
+    </statement>
+    <blocks>
+        <block order="1">
+            <cline>#include &lt;iostream&gt;</cline>
+            <cline>using namespace std;</cline>
+        </block>
+
+        <block order="2">
+            <choice correct="yes">
+                <cline>void myfunct(int n) {</cline>
+                <cline>    cout &lt;&lt; "1 parameter: " &lt;&lt; n &lt;&lt; endl;</cline>
+                <cline>}</cline>
+            </choice>
+            <choice correct="no">
+                <cline>void myfunct(int n) {</cline>
+                <cline>    cout &lt;&lt; "1 parameter: " &lt;&lt; n &lt;&lt; endl;</cline>
+            </choice>
+        </block>
+
+        <block order="3">
+            <choice correct="yes">
+                <cline>void myfunct(int n, int m) {</cline>
+                <cline>    cout &lt;&lt; "2 parameters: " &lt;&lt; n &lt;&lt; " and " &lt;&lt; m &lt;&lt; endl;</cline>
+                <cline>}</cline>
+            </choice>
+            <choice correct="no">
+                <cline>void myfunct(int n) {</cline>
+                <cline>    cout &lt;&lt; "2 parameters: " &lt;&lt; n &lt;&lt; " and " &lt;&lt; m &lt;&lt; endl;</cline>
+                <cline>}</cline>
+            </choice>
+        </block>
+
+        <block order="4">
+            <cline>int main() {</cline>
+        </block>
+
+        <block order="5">
+            <cline>    myfunct(4);</cline>
+            <cline>    myfunct(5, 6);</cline>
+        </block>
+
+        <block order="6">
+            <cline>    return 0;</cline>
+            <cline>}</cline>
+        </block>
+    </blocks>
+</exercise>  
 </reading-questions>
 </section>
 
